@@ -56,8 +56,10 @@ menu:
     url:               /about/
   - title:             Projects
     url:               /docs/
-  - title:             Resume
+  - title:             Example
     url:               /example/
+  - title:             Resume
+    url:               /resume.pdf
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -108,7 +110,7 @@ remote_theme: hydecorp/hydejack@v9.0.4
 # ----------------------------------------------------------------------------------------
  
 # Sidebar image and theme color of the site.
-accent_image:          /images/maracas.jpg
+accent_image:          /images/maracas3.jpg
 # accent_image:          /assets/img/sidebar-bg.jpg
 accent_color:          rgb(79,177,186)
 
