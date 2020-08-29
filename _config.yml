@@ -32,7 +32,7 @@ description:           >
   with a focus on personal sites that are meant to impress.
 
 # A shorter description for the sidebar.
-tagline:               Change `tagline` in `_config.yml`
+tagline:               Software Engineer with a love for robotics, diving, the ocean, baking, and an extremely curious mind!
 
 # A list of keywords for your blog
 keywords:              []
@@ -52,12 +52,12 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             Example
-    url:               /example/
-  - title:             Documentation
-    url:               /docs/
   - title:             About
     url:               /about/
+  - title:             Projects
+    url:               /docs/
+  - title:             Resume
+    url:               /example/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -108,7 +108,8 @@ remote_theme: hydecorp/hydejack@v9.0.4
 # ----------------------------------------------------------------------------------------
  
 # Sidebar image and theme color of the site.
-accent_image:          /assets/img/sidebar-bg.jpg
+accent_image:          /assets/img/maracas.jpg
+# accent_image:          /assets/img/sidebar-bg.jpg
 accent_color:          rgb(79,177,186)
 
 # This is used for the `theme-color` meta tag,
