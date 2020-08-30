@@ -9,13 +9,9 @@ sitemap: false
 
 A list of all my experience to date!
 
-<details><summary><h2 id="header">Work Experience</h2></summary>
+<details><summary markdown='span'><h2 id="header">Work Experience</h2></summary>
 {% include experience_all.md %}
 </details>
-
-
-## Work Experience
-
 
 
 ## Volunteer Experience
