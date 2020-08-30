@@ -39,7 +39,7 @@ keywords:              []
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  /images/logo_test.png
+logo:                  /images/gs.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
@@ -58,7 +58,8 @@ menu:
   - title:             Projects
     url:               /example/
   - title:             Resume
-    url:               (https://gabrielasewdhan.github.io/portfolio/Resume/GabrielaSewdhan_Resume.pdf){:target="_blank"}
+    url:               Resume/GabrielaSewdhan_Resume.pdf
+    # (https://gabrielasewdhan.github.io/portfolio/Resume/GabrielaSewdhan_Resume.pdf){:target="_blank"}
 
     # [link](url){:target="_blank"}
 
