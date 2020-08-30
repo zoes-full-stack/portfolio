@@ -33,19 +33,21 @@ Languages
 <tr>
 <td>
 
-### Other Skills
-- Project and Team Management
-- SCRUM and Agile Methodologies
-- Web and App Development
-- Machine Learning and A.I based Predictions
-- Data Visualisation
-- Mathematical Skills in Algebra, Statistics and Probability
+<h3> Other Skills </h3>
+<ul>
+    <li>Project and Team Management</li>
+    <li>SCRUM and Agile Methodologies</li>
+    <li>Web and App Development</li>
+    <li>Machine Learning and A.I based Predictions</li>
+    <li>Data Visualisation</li>
+    <li>Mathematical Skills in Algebra, Statistics and Probability</li>
+</ul>
 
 </td>
 <td>
 
-**English:** &nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
-**German:**  &nbsp;<span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
+<strong>English:</strong> &nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
+<strong>German:</strong> &nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> 
 
 </td>
 </tr>
