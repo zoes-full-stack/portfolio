@@ -16,13 +16,11 @@ A list of all my experience to date!
 
 
 
-<details>
-  <summary><h2 id="header">Work Experience</h2>
+<details><summary><h2 id="header">Work Experience</h2>
 </summary>
+{% include experience_all.md %}
 
-  <h2 id="header">Header</h2>
-
-  **Data Scientist and Software Developer** at **Telecommunication Services of Trinidad and Tobago Limited (TSTT)**
+  <!-- **Data Scientist and Software Developer** at **Telecommunication Services of Trinidad and Tobago Limited (TSTT)**
 {:.note title="November 2019 - September 2020"}
 
 - Performed extensive analysis on team productivity data
@@ -31,7 +29,7 @@ A list of all my experience to date!
 - Helped develop dataset to better understand customer behaviour.
 - Employed Machine Learning Models to improve customer retention.
 - Built recommender system to recommend and personalize bundles for long-term profit optimization.
-- Conducted Bi-weekly Programming and Data Science workshops.
+- Conducted Bi-weekly Programming and Data Science workshops. -->
 
 </details>
 
