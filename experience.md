@@ -15,6 +15,15 @@ A list of all my experience to date!
 {:toc}
 
 
+<details><summary markdown='span'>Collapsed Block\n</summary>\n\n## Header\n</details>" | kramdown --parse-block-html
+<details>
+  <summary>Collapsed Block
+</summary>
+
+  <h2 id="header">Header</h2>
+</details>
+
+
 ## Work Experience
 
 <details><summary>CLICK ME</summary>
