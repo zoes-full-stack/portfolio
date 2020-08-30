@@ -2,15 +2,19 @@
 
 #### Frontend Engineering: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
 `Python`| `GIT` | `C++` | `Ubuntu` |
+{:.faded}
 
 #### Machine Learning: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
-Python | GIT | C++ | Ubuntu |
+`Python`| `GIT` | `C++` | `Ubuntu` |
+{:.faded}
 
 #### Data Analysis: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
-Python | GIT | C++ | Ubuntu |
+`Python`| `GIT` | `C++` | `Ubuntu` |
+{:.faded}
 
 #### Backend Engineering: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
-Python | GIT | C++ | Ubuntu |
+`Python`| `GIT` | `C++` | `Ubuntu` |
+{:.faded}
 
 
 Python | GIT | C++ | Ubuntu | Javascript | React Native | OpenCV | ROS | SQL | Amazon Web Services | PHP 
