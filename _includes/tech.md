@@ -1,4 +1,4 @@
-Here are some technologies I have recently been implementing:
+Here are some technologies I have recently been dabbling in:
         
 |:-----------------------------------------------------------------|:-------------------:|:-----------------------------------------------------------------|:-------------------:|
 | [Python](https://www.python.org/){:target="_blank"}              | &#x2714;            | [React Native](https://reactnative.dev/){:target="_blank"}       | &#x2714;            |
