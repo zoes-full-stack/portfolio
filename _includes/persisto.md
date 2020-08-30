@@ -42,4 +42,4 @@ print(Duties)
 
 Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
-![](images/gabie3.png)  |  ![](images/gabieicon_128.png)
+![](/images/gabie3.png)  |  ![](/images/gabieicon_128.png)
