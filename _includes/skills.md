@@ -12,8 +12,8 @@ Python | GIT | C++ | Ubuntu | Javascript | React Native | OpenCV | ROS | SQL | A
 
 ### Languages 
 
-**English:** &nbsp; :star::star::star: <br>
-**German:**  &nbsp; :star:
+<!-- **English:** &nbsp; :star::star::star: <br>
+**German:**  &nbsp; :star: -->
 
-<span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
-<span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
+**English:** &nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
+**German:**  &nbsp;<span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
