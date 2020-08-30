@@ -18,10 +18,14 @@ August - October 2018
    - Sub item 2
 - Item 4
 
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
 
 ```python
-# Software Engineer and Data Scientist @ Persisto Labs
-# August - October 2018
+"Software Engineer and Data Scientist @ Persisto Labs"
+August - October 2018
 
 Duties = [
 "Performed..................", 
@@ -30,4 +34,8 @@ Duties = [
 ]
 
 print(Duties)
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
 ```
