@@ -17,7 +17,20 @@ A list of all my experience to date!
 
 ## Work Experience
 
+<details><summary>CLICK ME</summary>
+<p>
+
 {% include experience_all.md %}
+
+#### yes, even hidden code blocks!
+
+```python
+print("hello world!")
+```
+
+</p>
+</details>
+
 
 
 ## Volunteer Experience
