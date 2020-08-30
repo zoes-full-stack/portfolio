@@ -11,9 +11,11 @@ redirect_from:
 
 # About
 
-:house_with_garden: 'Trinidad'
-:calling: '1(868)496-5529
-:e-mail: 'gabiems13@gmail.com'
+:house_with_garden: Trinidad & Tobago
+:calling: 1(868)496-5529
+:email: gabiems13@gmail.com
+
+&nbsp;
 
 <!--author-->
 
