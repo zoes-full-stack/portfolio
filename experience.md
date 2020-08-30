@@ -9,8 +9,8 @@ sitemap: false
 
 A list of all my experience to date.
 
-1. this list will be replaced by the table of contents
-{:toc}
+<!-- 1. this list will be replaced by the table of contents
+{:toc} -->
 
 ## Work Experience
 
@@ -23,12 +23,21 @@ Click me to view!
 
 ## Volunteer Experience
 
+<details><summary markdown='span'> 
+Click me to view!
+</summary>
 {% include volunteer.md %}
 
+</details> 
 
 ## Research Experience
 
+<details><summary markdown='span'> 
+Click me to view!
+</summary>
 {% include research.md %}
+
+</details> 
 
 {:.heading.flip-title}Go Back to [About](about.md) OR Continue with [Projects](scripts.md){:.heading.flip-title}
 {:.read-more}
