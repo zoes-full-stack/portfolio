@@ -12,5 +12,5 @@ Python | GIT | C++ | Ubuntu | Javascript | React Native | OpenCV | ROS | SQL | A
 
 ### Languages 
 
-**English:** <br> :star::star::star:
-**German:**  <br> :star:
+**English:** &nbsp; :star::star::star:
+**German:**  &nbsp; :star:
