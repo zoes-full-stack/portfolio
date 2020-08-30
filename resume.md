@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: page
 image: /assets/img/blog/hydejack-9.jpg
 description: >
   Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
@@ -11,19 +11,11 @@ redirect_from:
 
 # Resume
 
-<!--author-->
-
-## Hydejack
-
-A boutique Jekyll theme for hackers, nerds, and academics.  
-{:.lead}
-
-1. this list will be replaced by the toc
-{:toc .large-only}
+> Download Resume — [Here!](Resume/GabrielaSewdhan_Resume.pdf){:target="_blank"}.
 
 ![Screenshot](Resume/GabrielaSewdhan_Resume-1.png){:.lead width="1920" height="1080" loading="lazy"}
 
-Hydejack's cover page on a variety of screens.
+Gabriela Sewdhan's Resume.
 {:.figcaption}
 
 
