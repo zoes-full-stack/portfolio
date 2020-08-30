@@ -58,9 +58,9 @@ menu:
   - title:             Projects
     url:               /example/
   - title:             Resume
-    url:               <a href="https://gabrielasewdhan.github.io/portfolio/Resume/GabrielaSewdhan_Resume.pdf" target="_blank"></a>
-    
-    # https://gabrielasewdhan.github.io/portfolio/Resume/GabrielaSewdhan_Resume.pdf
+    url{:target="_blank"}:               https://gabrielasewdhan.github.io/portfolio/Resume/GabrielaSewdhan_Resume.pdf
+
+    # [link](url){:target="_blank"}
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -111,7 +111,7 @@ remote_theme: hydecorp/hydejack@v9.0.4
 # ----------------------------------------------------------------------------------------
  
 # Sidebar image and theme color of the site.
-accent_image:          /images/bg.jpg
+accent_image:          /images/bg1.jpg
 # accent_image:          /assets/img/sidebar-bg.jpg
 accent_color:          rgb(79,177,186)
 
