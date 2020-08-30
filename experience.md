@@ -7,15 +7,19 @@ hide_description: true
 sitemap: false
 ---
 
-A list of all my experience to date!
+A list of all my experience to date.
+
+1. this list will be replaced by the table of contents
+{:toc}
+
+## Work Experience
 
 <details><summary markdown='span'> 
-This is an H2
--------------
+Click me to view!
 </summary>
 {% include experience_all.md %}
 
-</details> | kramdown --parse-block-html
+</details> 
 
 ## Volunteer Experience
 
