@@ -8,19 +8,25 @@ Gabie:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    I'm a software engineer and data scientist based in Trinidad. I am deeply passionated about
-    building solutions that can contribute to a better life via software development and
-    robotics, exploration and solving issues related to the environment with a focus on marine environs.
-    I have experience in building apps, websites, algorithmic solutions, machine learning models and everything in between.
+
+  Hi! I'm Gabriela Sewdhan, a software engineer and data scientist based in Trinidad.
+
+  I am deeply passionated about building solutions that can contribute to a better life via software development and
+  robotics, exploration and solving issues related to the environment with a focus on marine environs.
+
+  I have a bachelor's degree in Psychology and Computer Science from the University of the West Indies and have kept myself busy with
+  projects, research, and internships throughout my degrees.
+
+  I have experience in building apps, websites, algorithmic solutions, machine learning models and everything in between.
     
-    Open `_data/authors.yml` to edit this text.
+  Open `_data/authors.yml` to edit this text.
 
   # This photo will be used in the about section
   picture:
-    path:            /images/gabie2.png
+    path:            /images/gabieicon_128.png
     # srcset is optional, but can be used to provide higher res versions for retina displays
     srcset:
-      1x:            https://placehold.it/128x128
+      1x:            /images/gabieicon_128.png
       2x:            https://placehold.it/256x256
 
   # Social media icons in sidebar
