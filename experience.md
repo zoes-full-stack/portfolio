@@ -9,14 +9,12 @@ hide_description: true
 sitemap: false
 ---
 
-Hydejack offers a few additional features to markup your content.
-Don't worry, these are merely CSS classes added with kramdown's `{:...}` syntax,
-so that your content remains compatible with other Jekyll themes.
+A list of all my experience to date!
 
 1. this list will be replaced by the table of contents
 {:toc}
 
-For an introduction to markdown in general, see [Mastering Markdown][mm] and [kramdown Syntax][ksyn].
+Everything is Awesome!
 {:.note}
 
 ## Work Experience
@@ -31,4 +29,7 @@ For an introduction to markdown in general, see [Mastering Markdown][mm] and [kr
 
 ## Research Experience
 
-{% include volunteer.md %}
+{% include research.md %}
+
+Continue with [Projects](scripts.md){:.heading.flip-title}
+{:.read-more}
