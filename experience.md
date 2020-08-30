@@ -29,5 +29,5 @@ A list of all my experience to date!
 
 {% include research.md %}
 
-Go Back to [About](about.md) {:.heading.flip-title} OR Continue with [Projects](scripts.md){:.heading.flip-title}
+{:.heading.flip-title}Go Back to [About](about.md) OR Continue with [Projects](scripts.md){:.heading.flip-title}
 {:.read-more}
