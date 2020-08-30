@@ -39,3 +39,7 @@ print(Duties)
 - [ ] Update the website
 - [ ] Contact the media
 ```
+
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](images/gabie3.png)  |  ![](images/gabieicon_128.png)
