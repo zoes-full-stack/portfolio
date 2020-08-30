@@ -9,7 +9,7 @@ redirect_from:
   - /download/
 ---
 
-# About
+# Resume
 
 <!--author-->
 
@@ -21,7 +21,7 @@ A boutique Jekyll theme for hackers, nerds, and academics.
 1. this list will be replaced by the toc
 {:toc .large-only}
 
-![Screenshot](assets/img/blog/hydejack-9.jpg){:.lead width="1920" height="1080" loading="lazy"}
+![Screenshot](Resume/GabrielaSewdhan_Resume-1.png){:.lead width="1920" height="1080" loading="lazy"}
 
 Hydejack's cover page on a variety of screens.
 {:.figcaption}
