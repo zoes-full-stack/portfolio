@@ -9,9 +9,6 @@ sitemap: false
 
 A list of all my experience to date!
 
-1. this list will be replaced by the table of contents
-{:toc}
-
 <details><summary><h2 id="header">Work Experience</h2></summary>
 {% include experience_all.md %}
 </details>
