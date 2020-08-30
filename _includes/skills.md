@@ -16,9 +16,6 @@
 `Python`| `GIT` | `C++` | `Ubuntu` |
 {:.faded}
 
-
-Python | GIT | C++ | Ubuntu | Javascript | React Native | OpenCV | ROS | SQL | Amazon Web Services | PHP 
-
 ### Other Skills &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Languages
 - Project and Team Management &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; **English:** &nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
 - SCRUM and Agile Methodologies &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; **German:**  &nbsp;<span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
