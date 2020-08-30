@@ -1,7 +1,7 @@
 ### Programming Languages and Tools
 
 #### Frontend Engineering: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
-Python | GIT | C++ | Ubuntu |
+`Python`| `GIT` | `C++` | `Ubuntu` |
 
 #### Machine Learning: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
 Python | GIT | C++ | Ubuntu |
@@ -17,7 +17,7 @@ Python | GIT | C++ | Ubuntu | Javascript | React Native | OpenCV | ROS | SQL | A
 
 ### Other Skills &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Languages
 - Project and Team Management &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; **English:** &nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
-- SCRUM and Agile Methodologies &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; **German:**  &nbsp;<span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
+- SCRUM and Agile Methodologies &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; **German:**  &nbsp;<span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
 - Web and App Development
 - Machine Learning and A.I based Predictions
 - Data Visualisation
@@ -27,37 +27,3 @@ Python | GIT | C++ | Ubuntu | Javascript | React Native | OpenCV | ROS | SQL | A
 
 **English:** &nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
 **German:**  &nbsp;<span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
-
-
-
-<table>
-<tr>
-<th>
-Other Skills
-</th>
-<th>
-Languages
-</th>
-</tr>
-
-<tr>
-<td>
-
-<ul>
-    <li>Project and Team Management</li>
-    <li>SCRUM and Agile Methodologies</li>
-    <li>Web and App Development</li>
-    <li>Machine Learning and A.I based Predictions</li>
-    <li>Data Visualisation</li>
-    <li>Mathematical Skills in Algebra, Statistics and Probability</li>
-</ul>
-
-</td>
-<td>
-
-<strong>English:</strong> &nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
-<strong>German:</strong> &nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> 
-
-</td>
-</tr>
-</table>
