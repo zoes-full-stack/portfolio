@@ -2,9 +2,9 @@
 
 Python | GIT | C++ | Ubuntu | Javascript | React Native | OpenCV | ROS | SQL | Amazon Web Services | PHP 
 
-### Other Skills                                                &nbsp; ### Languages
-- Project and Team Management                                   &nbsp; **English:** &nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
-- SCRUM and Agile Methodologies                                 &nbsp; **German:**  &nbsp;<span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
+### Other Skills &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Languages
+- Project and Team Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **English:** &nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
+- SCRUM and Agile Methodologies &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **German:**  &nbsp;<span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
 - Web and App Development
 - Machine Learning and A.I based Predictions
 - Data Visualisation
