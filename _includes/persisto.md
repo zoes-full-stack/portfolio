@@ -17,3 +17,17 @@ August - October 2018
    - Sub item 1
    - Sub item 2
 - Item 4
+
+
+```python
+# Software Engineer and Data Scientist @ Persisto Labs
+# August - October 2018
+
+Duties = [
+"Performed..................", 
+"banana", 
+"cherry"
+]
+
+print(Duties)
+```
