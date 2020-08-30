@@ -1,11 +1,11 @@
 **Software Developer and Data Scientist** at **Persisto Labs**
+{:.note title="August - October 2018"}
 
 - Developed various software modules with a stringent and well-documented Git workflow.
 - Worked on deploying these micro-services to Amazon Web Services.
 - Gained practical experience in Cloud infrastructure and deployment and React Native app development.
 - Created a chat-bot using Amazon Lex.
 
-{:.note title="August - October 2018"}
 
 
 > ### Software Engineer and Data Scientist **@ Persisto Labs**
