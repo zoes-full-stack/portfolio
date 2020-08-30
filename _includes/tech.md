@@ -1,6 +1,5 @@
-    Here are some technologies I have recently been implementing:
+Here are some technologies I have recently been implementing:
         
-    |                                                                  |                     |
     |:-----------------------------------------------------------------|:-------------------:|
     | [Python](https://www.python.org/){:target="_blank"}              | &#x2714;            |
     | [GoLang](https://golang.org/){:target="_blank"}                  | &#x2714;            |
