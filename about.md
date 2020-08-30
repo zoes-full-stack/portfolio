@@ -11,6 +11,10 @@ redirect_from:
 
 # About
 
+:house_with_garden: 'Trinidad'
+:calling: '1(868)496-5529
+:e-mail: 'gabiems13@gmail.com'
+
 <!--author-->
 
 ## Recent Technologies
