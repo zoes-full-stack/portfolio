@@ -58,7 +58,7 @@ menu:
   - title:             Projects
     url:               /example/
   - title:             Resume
-    url{:target="_blank"}:               https://gabrielasewdhan.github.io/portfolio/Resume/GabrielaSewdhan_Resume.pdf
+    url:               (https://gabrielasewdhan.github.io/portfolio/Resume/GabrielaSewdhan_Resume.pdf){:target="_blank"}
 
     # [link](url){:target="_blank"}
 
