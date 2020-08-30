@@ -1,4 +1,4 @@
-**Researcher** at **TTLAB**
+**Researcher and Staff** at [TTLAB](http://lab.tt/){:target="_blank"}
 {:.note title="November 2019 - _Present_"}
 
 - Personalised Plans
