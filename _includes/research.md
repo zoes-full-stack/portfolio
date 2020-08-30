@@ -27,35 +27,19 @@
 - Created a chat-bot using Amazon Lex.
 
 
-**Mentor** at **The University of the West Indies, St. Augustine**
+**Programming Mentor** at **The University of the West Indies, St. Augustine**
 {:.note title="July - August 2018"}
 
 - Guided and aided in teaching the fundamentals of programming and creativity, using Scratch.
 
 
+**Robotics Senior Mentor** at **U.W.I, Department of Computing and Information Technology (DCIT)**
+{:.note title="July 2017/2018"}
 
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
-
-
-```python
-"Software Engineer and Data Scientist @ Persisto Labs"
-August - October 2018
-
-Duties = [
-"Performed..................", 
-"banana", 
-"cherry"
-]
-
-print(Duties)
-
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
-```
-
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![](/images/gabie3.png)  |  ![](/images/gabieicon_128.png)
+- Assisted in organizing the camp
+- Contributed to the code
+- Help mentor students in programming a raspberry pi robot.
+    - Inceptionv3 for image recognition
+    - Epspeak for voice
+    - Distance sensors to measure distance.
+    - Maze Solving (to be written...)

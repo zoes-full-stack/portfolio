@@ -54,7 +54,7 @@ menu:
   - title:             About
     url:               /about/
   - title:             Experience
-    url:               /docs/
+    url:               /experience/ # /docs/
   - title:             Projects
     url:               /example/
   - title:             Resume
