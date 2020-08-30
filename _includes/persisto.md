@@ -1,4 +1,5 @@
-August - October 2018
+Software Engineer and Data Scientist **@ Persisto Labs**
+
 
 - Item 1
 - Item 2
@@ -6,8 +7,7 @@ August - October 2018
    - Sub item 1
    - Sub item 2
 - Item 4
-
-{:.note title="Software Engineer and Data Scientist **@ Persisto Labs**"}
+{:.note title="August - October 2018"}
 
 
 > ### Software Engineer and Data Scientist **@ Persisto Labs**
