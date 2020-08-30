@@ -18,7 +18,6 @@ A list of all my experience to date!
 ## Work Experience
 
 <details><summary>CLICK ME</summary>
-<p>
 
 {% include experience_all.md %}
 
@@ -28,7 +27,6 @@ A list of all my experience to date!
 print("hello world!")
 ```
 
-</p>
 </details>
 
 
