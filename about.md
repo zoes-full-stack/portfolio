@@ -13,9 +13,11 @@ redirect_from:
 
 <!--author-->
 
+## Recent Technologies
+
 {% include tech.md %}
 
-## Hydejack
+## Experience
 
 A boutique Jekyll theme for hackers, nerds, and academics.  
 {:.lead}
