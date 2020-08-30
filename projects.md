@@ -90,5 +90,5 @@ hydejack:
 ```
 
 
-Continue with [Build](build.md){:.heading.flip-title}
+Continue with [Resume](resume.md){:.heading.flip-title}
 {:.read-more}

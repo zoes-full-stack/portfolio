@@ -1,5 +1,3 @@
-### Programming Languages and Tools
-
 #### Frontend Engineering: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
 `Python`| `GIT` | `C++` | `Ubuntu` |
 {:.faded}

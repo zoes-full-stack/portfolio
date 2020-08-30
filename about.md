@@ -22,11 +22,9 @@ redirect_from:
 
 {% include tech.md %}
 
-## SkillSet
-
-{% include skills.md %}
-
 ## Interest
+
+![200x200](https://placehold.it/200x200 "Small example image") &emsp; ![200x200](https://placehold.it/200x200 "Small example image")
 
 A boutique Jekyll theme for hackers, nerds, and academics.  
 {:.lead}
