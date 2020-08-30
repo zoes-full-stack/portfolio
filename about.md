@@ -19,6 +19,8 @@ redirect_from:
 
 ## Experience
 
+{% include persisto.md %}
+
 A boutique Jekyll theme for hackers, nerds, and academics.  
 {:.lead}
 
