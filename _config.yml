@@ -58,7 +58,9 @@ menu:
   - title:             Projects
     url:               /example/
   - title:             Resume
-    url:               https://gabrielasewdhan.github.io/portfolio/Resume/GabrielaSewdhan_Resume.pdf
+    url:               <a href="https://gabrielasewdhan.github.io/portfolio/Resume/GabrielaSewdhan_Resume.pdf" target="_blank"></a>
+    
+    # https://gabrielasewdhan.github.io/portfolio/Resume/GabrielaSewdhan_Resume.pdf
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
