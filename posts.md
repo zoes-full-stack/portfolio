@@ -7,8 +7,3 @@ description: >
 grouped: true
 ---
 
-
-# About
-fekwjrgnekwjg
-ergnwekjgne
-gjnewrkn
