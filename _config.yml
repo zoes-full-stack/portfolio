@@ -58,7 +58,7 @@ menu:
   - title:             Experience
     url:               /experience/ # /docs/
   - title:             Projects
-    url:               /projects/ # /example/
+    url:               /example/ # /projects/
   - title:             Resume
     url:               /resume/
     # /Resume/GabrielaSewdhan_Resume.pdf
