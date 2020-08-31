@@ -39,5 +39,5 @@ Click me to view!
 
 </details> 
 
-Continue with [Projects](/example.md){:.heading.flip-title}
+Continue with [Projects](./example.md){:.heading.flip-title}
 {:.read-more}
