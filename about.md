@@ -24,18 +24,18 @@ redirect_from:
 
 ## Interest
 
-![robotics](images/icons/robot.png){:width="100" height="100" loading="lazy"} &emsp; 
-![coding](images/icons/coding.png){:width="100" height="100" loading="lazy"} &emsp; 
-![nasa](images/icons/nasa2.png){:width="100" height="100" loading="lazy"} &emsp; 
-![astronomy](images/icons/astronomy.jpg){:width="100" height="100" loading="lazy"} &emsp; 
-![ocean](images/icons/ocean.png){:width="100" height="100" loading="lazy"}
+![robotics](images/icons/robot.png){:width="50" height="50" loading="lazy"} &emsp; 
+![coding](images/icons/coding.png){:width="10" height="10" loading="lazy"} &emsp; 
+![nasa](images/icons/nasa2.png){:width="30" height="30" loading="lazy"} &emsp; 
+![astronomy](images/icons/astronomy.jpg){:width="10" height="10" loading="lazy"} &emsp; 
+![ocean](images/icons/ocean.png){:width="30" height="30" loading="lazy"}
 
-Robotics &emsp; Coding &emsp; NASA &emsp; Astronomy &emsp; Ocean Conservation
+`Robotics` &emsp; `Coding` &emsp; `NASA` &emsp; `Astronomy` &emsp; `Ocean Conservation`
 
-![diving](images/icons/diving.png){:width="100" height="100" loading="lazy"} &emsp; 
-![hiking](images/icons/hiking.jpg){:width="100" height="100" loading="lazy"} &emsp; 
-![music](images/icons/music.png){:width="100" height="100" loading="lazy"} &emsp; 
-![baking](images/icons/baking.png){:width="100" height="100" loading="lazy"} &emsp; 
+![diving](images/icons/diving.png){:width="10" height="10" loading="lazy"} &emsp; 
+![hiking](images/icons/hiking.jpg){:width="10" height="10" loading="lazy"} &emsp; 
+![music](images/icons/music.png){:width="10" height="10" loading="lazy"} &emsp; 
+![baking](images/icons/baking.png){:width="30" height="30" loading="lazy"} &emsp; 
 
 
 A boutique Jekyll theme for hackers, nerds, and academics.  
