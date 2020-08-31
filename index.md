@@ -1,12 +1,13 @@
 ---
 layout: page
-image: /assets/img/blog/hydejack-9.jpg
 description: >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+The official Hydejack blog. Version updates, example content and how-to guides on how to blog with Jekyll.
+last_modified_at: 2018-08-03
+no_link_title: false
+no_excerpt: false
+hide_image: false
+cover: true
 hide_description: true
-redirect_from:
-  - /download/
 ---
 
 Continue with [Skills](skillset.md){:.heading.flip-title}
