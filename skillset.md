@@ -14,7 +14,7 @@ sitemap: false
 <!-- My Skillset -->
 <script>
   document.getElementById('skillset').addEventListener('display-skills', function() {
-    <!-- <List of My Skills> -->
+    // <List of My Skills>
   });
 </script>
 ```
