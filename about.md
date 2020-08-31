@@ -24,7 +24,7 @@ redirect_from:
 
 ## Interest
 
-![200x200](https://placehold.it/200x200 "Small example image") &emsp; ![200x200](https://placehold.it/200x200 "Small example image")
+![200x200](/images/icons/robot.png "Small example image") &emsp; ![200x200](/images/icons/coding.png "Small example image")
 
 A boutique Jekyll theme for hackers, nerds, and academics.  
 {:.lead}
