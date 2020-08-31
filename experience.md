@@ -39,5 +39,5 @@ Click me to view!
 
 </details> 
 
-{:.heading.flip-title}Go Back to [About](about.md) OR Continue with [Projects](scripts.md){:.heading.flip-title}
+Go Back to [About](about.md) OR Continue with [Projects](projects.md){:.heading.flip-title}
 {:.read-more}
