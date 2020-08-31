@@ -24,9 +24,9 @@ redirect_from:
 
 ## Interest
 
-![200x200](images/icons/robot.png "Small example image") &emsp; ![200x200](images/icons/coding.png "Small example image")
+![200x200](images/icons/robot.png) &emsp; ![200x200](images/icons/coding.png)
 
-![w3m Screenshot](assets/img/blog/w3m.png){:width="1920" height="1260" loading="lazy"}
+![w3m Screenshot](images/icons/robot.png){:width="200" height="200" loading="lazy"}
 
 A boutique Jekyll theme for hackers, nerds, and academics.  
 {:.lead}
@@ -34,7 +34,7 @@ A boutique Jekyll theme for hackers, nerds, and academics.
 1. this list will be replaced by the toc
 {:toc .large-only}
 
-![Screenshot](images/icons/coding.png){:.lead width="1920" height="1080" loading="lazy"}
+![Screenshot](assets/img/blog/w3m.png){:.lead width="1920" height="1080" loading="lazy"}
 
 Hydejack's cover page on a variety of screens.
 {:.figcaption}
