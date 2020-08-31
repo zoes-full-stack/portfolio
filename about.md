@@ -24,18 +24,20 @@ redirect_from:
 
 ## Interest
 
-![robotics](images/icons/robot.png){:width="60" height="60" loading="lazy"} &emsp; 
+![robotics](images/icons/robot.png){:width="75" height="75" loading="lazy"} &emsp; 
 ![coding](images/icons/coding.png){:width="60" height="60" loading="lazy"} &emsp; 
-![nasa](images/icons/nasa2.png){:width="60" height="60" loading="lazy"} &emsp; 
+![nasa](images/icons/nasa2.png){:width="70" height="70" loading="lazy"} &emsp; 
 ![astronomy](images/icons/astronomy.jpg){:width="60" height="60" loading="lazy"} &emsp; 
-![ocean](images/icons/ocean.png){:width="60" height="60" loading="lazy"}
+![ocean](images/icons/ocean.png){:width="75" height="75" loading="lazy"}
 
 `Robotics` &emsp; `Coding` &emsp; `NASA` &emsp; `Astronomy` &emsp; `Ocean Conservation`
 
-![diving](images/icons/diving.png){:width="60" height="60" loading="lazy"} &emsp; 
+![diving](images/icons/diving.png){:width="65" height="65" loading="lazy"} &emsp; 
 ![hiking](images/icons/hiking.jpg){:width="60" height="60" loading="lazy"} &emsp; 
 ![music](images/icons/music.png){:width="60" height="60" loading="lazy"} &emsp; 
-![baking](images/icons/baking.png){:width="60" height="60" loading="lazy"} &emsp; 
+![baking](images/icons/baking.png){:width="70" height="70" loading="lazy"} &emsp; 
+
+`Diving` &emsp; `Hiking` &emsp; `Music` &emsp; `Baking`
 
 
 A boutique Jekyll theme for hackers, nerds, and academics.  
