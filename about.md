@@ -27,7 +27,7 @@ redirect_from:
 ![coding](images/icons/coding.png){:width="60" height="60" loading="lazy"} &emsp;
 ![nasa](images/icons/nasa2.png){:width="70" height="70" loading="lazy"} &emsp; 
 ![astronomy](images/icons/astronomy.jpg){:width="60" height="60" loading="lazy"} &emsp; 
-![gaming](images/icons/gaming.jpg){:width="70" height="70" loading="lazy"}
+![gaming](images/icons/gaming.jpg){:width="60" height="60" loading="lazy"}
 
 `Robotics` &emsp; `Coding` &emsp;&emsp; `NASA` &emsp; `Astronomy` &emsp; `Gaming and Game Development`
 
