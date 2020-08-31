@@ -20,3 +20,6 @@ description: >
 # DON'T USE THIS SETTING IN YOUR CATEGORIES!
 sitemap: false
 ---
+
+Continue with [Resume](resume.md){:.heading.flip-title}
+{:.read-more}
