@@ -24,7 +24,9 @@ redirect_from:
 
 ## Interest
 
-![200x200](/images/icons/robot.png "Small example image") &emsp; ![200x200](/images/icons/coding.png "Small example image")
+![200x200](images/icons/robot.png "Small example image") &emsp; ![200x200](images/icons/coding.png "Small example image")
+
+![w3m Screenshot](assets/img/blog/w3m.png){:width="1920" height="1260" loading="lazy"}
 
 A boutique Jekyll theme for hackers, nerds, and academics.  
 {:.lead}
