@@ -10,7 +10,7 @@
 `Javascript`| `HTML` | `React Native and Expo` | `Ionic Framework` | `ReactJS` | `PreactJS` | `Django`
 {:.faded}
 
-#### Data Science: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
+#### Data Science: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
 `Pandas`| `Numpy` | `Seaborn` | `Plotly` | `Sci-kit Learn` | `Regression Models` | `Classification Models`
 {:.faded}
 
