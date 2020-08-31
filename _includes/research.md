@@ -1,16 +1,16 @@
 **Researcher and Staff** at [TTLAB](http://lab.tt/){:target="_blank"}
 {:.note title="November 2019 - _Present_"}
 
-- Personalised Plans
-- Traffic Flow Data
+- Creating Optimal Personalised Prepaid Plans for TSTT Prepaid Customers
+- Monitoring and Analysing Traffic Flow Data via Google Maps and Waze
 
 &nbsp;
 
 **Research Assistant** at **U.W.I, Department of Computing and Information Technology (DCIT)**
 {:.note title="March 2018 - May 2020"}
 
-- Dr. Mohammed - rasperry pi - plant
-- Kyle - EVALING
+- rasperry pi - plant under **Dr. Phaedra Mohammed**.
+- EvaLing - Evaluating and Developing Speech Recognition for Caribbean Dialect under **Mr. Kyle DeFreitas**.    
 
 &nbsp;
 

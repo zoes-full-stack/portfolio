@@ -1,18 +1,23 @@
+#### Robotics Software Engineering: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+`Python` | `C++` | `Ubuntu`| `ROS` | `OpenCV` | `GoLang` | `Algorithm Design` | `Software Testing` | `Programming with Raspberry Pi and Arduino`
+{:.faded}
+
+#### Backend Engineering: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+`NodeJS`| `SQL` | `Serverless` | `Amazon Web Services` | `EC2` | `Amazon Lex` | `CloudFormation`
+{:.faded}
+
 #### Frontend Engineering: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
-`Python`| `GIT` | `C++` | `Ubuntu` |
+`Javascript`| `HTML` | `React Native and Expo` | `Ionic Framework` | `ReactJS` | `PreactJS` | `Django`
 {:.faded}
 
-#### Machine Learning: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
-`Python`| `GIT` | `C++` | `Ubuntu` |
+#### Data Science: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
+`Pandas`| `Numpy` | `Seaborn` | `Plotly` | `Sci-kit Learn` | `Regression Models` | `Classification Models`
 {:.faded}
 
-#### Data Analysis: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
-`Python`| `GIT` | `C++` | `Ubuntu` |
+#### Artificial Intelligence: &emsp; <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
+`TensorFlow` 
 {:.faded}
 
-#### Backend Engineering: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
-`Python`| `GIT` | `C++` | `Ubuntu` |
-{:.faded}
 
 ### Other Skills &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Languages
 - Project and Team Management &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; **English:** &nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>

@@ -11,10 +11,10 @@ sitemap: false
 ## SkillSet
 
 ```html
-<!-- file: `_includes/my-scripts.html` -->
+<!-- My Skillset -->
 <script>
-  document.getElementById('_pushState').addEventListener('hy-push-state-load', function() {
-    // <your init code>
+  document.getElementById('skillset').addEventListener('a-list-of-my-skills', function() {
+    // <Display Skills>
   });
 </script>
 ```

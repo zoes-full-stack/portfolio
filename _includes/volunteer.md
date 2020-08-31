@@ -3,8 +3,8 @@
 
 - Assisted in organizing the camp
 - Contributed to the code
-- Help mentor students in programming a raspberry pi robot.
+- Help mentor students in programming a raspberry pi robot via:
     - Inceptionv3 for image recognition
     - Epspeak for voice
     - Distance sensors to measure distance.
-    - Maze Solving (to be written...)
+    - End-Goal - Using the above to solve mazes. 
