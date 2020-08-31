@@ -25,40 +25,19 @@ redirect_from:
 ## Interest
 
 ![robotics](images/icons/robot.png){:width="100" height="100" loading="lazy"} &emsp; 
-Robotics
-{:.figcaption}
 
 ![coding](images/icons/coding.png){:width="100" height="100" loading="lazy"} &emsp; 
-Coding
-{:.figcaption}
-
 ![nasa](images/icons/nasa2.png){:width="100" height="100" loading="lazy"} &emsp; 
-NASA
-{:.figcaption}
 
 ![astronomy](images/icons/astronomy.jpg){:width="100" height="100" loading="lazy"} &emsp; 
-Astronomy
-{:.figcaption}
 
 ![ocean](images/icons/ocean.png){:width="100" height="100" loading="lazy"} &emsp; 
-Ocean Conservation
-{:.figcaption}
 
 ![diving](images/icons/diving.png){:width="100" height="100" loading="lazy"} &emsp; 
-Diving
-{:.figcaption}
 
 ![hiking](images/icons/hiking.jpg){:width="100" height="100" loading="lazy"} &emsp; 
-Hiking
-{:.figcaption}
-
 ![music](images/icons/music.png){:width="100" height="100" loading="lazy"} &emsp; 
-Music
-{:.figcaption}
-
 ![baking](images/icons/baking.png){:width="100" height="100" loading="lazy"} &emsp; 
-Baking
-{:.figcaption}
 
 ![w3m Screenshot](images/icons/robot.png){:width="200" height="200" loading="lazy"}
 
