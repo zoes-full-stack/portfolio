@@ -13,8 +13,8 @@ sitemap: false
 ```html
 <!-- My Skillset -->
 <script>
-  document.getElementById('skillset').addEventListener('a-list-of-my-skills', function() {
-    // <Display Skills>
+  document.getElementById('skillset').addEventListener('display-skills', function() {
+    <!-- <List of My Skills> -->
   });
 </script>
 ```
