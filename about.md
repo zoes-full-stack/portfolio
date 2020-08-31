@@ -24,20 +24,18 @@ redirect_from:
 
 ## Interest
 
-![robotics](images/icons/robot.png){:width="100" height="100" loading="lazy"} &emsp; 
+![robotics](images/icons/robot.png){:.lead width="100" height="100" loading="lazy"} &emsp; 
+![coding](images/icons/coding.png){:.lead width="100" height="100" loading="lazy"} &emsp; 
+![nasa](images/icons/nasa2.png){:.lead width="100" height="100" loading="lazy"} &emsp; 
+![astronomy](images/icons/astronomy.jpg){:.lead width="100" height="100" loading="lazy"} &emsp; 
+![ocean](images/icons/ocean.png){:.lead width="100" height="100" loading="lazy"} &emsp; 
 
-![coding](images/icons/coding.png){:width="100" height="100" loading="lazy"} &emsp; 
-![nasa](images/icons/nasa2.png){:width="100" height="100" loading="lazy"} &emsp; 
-
-![astronomy](images/icons/astronomy.jpg){:width="100" height="100" loading="lazy"} &emsp; 
-
-![ocean](images/icons/ocean.png){:width="100" height="100" loading="lazy"} &emsp; 
-
-![diving](images/icons/diving.png){:width="100" height="100" loading="lazy"} &emsp; 
-
-![hiking](images/icons/hiking.jpg){:width="100" height="100" loading="lazy"} &emsp; 
-![music](images/icons/music.png){:width="100" height="100" loading="lazy"} &emsp; 
-![baking](images/icons/baking.png){:width="100" height="100" loading="lazy"} &emsp; 
+![diving](images/icons/diving.png){:.lead width="100" height="100" loading="lazy"} &emsp; 
+![hiking](images/icons/hiking.jpg){:.lead width="100" height="100" loading="lazy"} &emsp; 
+![music](images/icons/music.png){:.lead width="100" height="100" loading="lazy"} &emsp; 
+![baking](images/icons/baking.png){:.lead width="100" height="100" loading="lazy"} &emsp; 
+Baking
+{:.figcaption}
 
 ![w3m Screenshot](images/icons/robot.png){:width="200" height="200" loading="lazy"}
 
