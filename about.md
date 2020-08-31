@@ -21,7 +21,7 @@ redirect_from:
 
 {% include tech.md %}
 
-## Interest
+## Interests
 
 ![robotics](images/icons/robot.png){:width="75" height="75" loading="lazy"} &emsp; 
 ![coding](images/icons/coding.png){:width="60" height="60" loading="lazy"} &emsp;
