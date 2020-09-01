@@ -21,7 +21,7 @@ sitemap: false
           <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%" loading="lazy">
         </a>
         <div class="container">
-          <h4 id="quickrental" class="read-more"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">QuickRental</a></h4>
+          <h4 id="quickrental"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">QuickRental</a> <span>&#8594;</span></h4>
           <p class = "faded"><small>Catering to all your apartment needs! </small></p>
         </div>
     </div>
