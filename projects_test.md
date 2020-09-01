@@ -18,7 +18,7 @@ sitemap: false
         <a href="../projectlist/2019-31-05-QuickRental/">
           <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%" loading="lazy">
         </a>
-        <div class="container">
+        <div class="container img__description">
           <h4 id="quickrental"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">QuickRental</a> <a href="#quickrental" class="permalink"> <span class="sr-only">Permalink</span> <span class="content-hash"></span> </a> </h4>
           <p class = "faded"><small>Catering to all your apartment needs in one spot! </small></p>
         </div>
@@ -30,7 +30,7 @@ sitemap: false
         <a href="../projectlist/2019-31-05-QuickRental/">
           <img src="../images/projects/antiplasti/antiplasti.jpg" alt="AntiPlasti" style="width:100%" loading="lazy">
         </a>
-        <div class="container">
+        <div class="container img__description">
           <h4 id="antiplasti"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">AntiPlasti</a> <a href="#antiplasti" class="permalink"> <span class="sr-only">Permalink</span> <span class="content-hash"></span> </a> </h4>
           <p class = "faded"><small>Saving Marine Environment one small step at a time</small></p>
         </div>
