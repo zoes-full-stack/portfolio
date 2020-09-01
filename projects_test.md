@@ -85,9 +85,7 @@ sitemap: false
 
 </div>
 
-<!-- <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%"> -->
-
-<div class="something" markdown="0">
+<!-- <div class="something" markdown="0">
 
   <h2>2019</h2>
 
@@ -102,7 +100,7 @@ sitemap: false
           <p>Architect & Engineer</p>
       </div>
   </div>
-</div>
+</div> -->
 
 ## 2019
 *** 
