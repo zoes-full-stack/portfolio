@@ -24,7 +24,6 @@
 }
 
 .card {
-  position: relative;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: transform 0.3s;
@@ -46,49 +45,42 @@
   -webkit-transform: translateY(-5px);
 }
 
-// .container {
-//   padding: 2px 16px;
+
+// .btn_read {  position: absolute;
+//   bottom: 0;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   background: rgba(0, 0, 0, 0.2);
+//   color: #fff;
+//   visibility: hidden;
+//   opacity: 0;
+//   border-radius: 5px;
+
+//   /* transition effect. not necessary */
+//   transition: opacity .2s, visibility .2s;
 // }
 
-.img__wrap {
-  position: relative;
-}
-
-.btn_read {  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.2);
-  color: #fff;
-  visibility: hidden;
-  opacity: 0;
-  border-radius: 5px;
-
-  /* transition effect. not necessary */
-  transition: opacity .2s, visibility .2s;
-}
-
-.btn, .card_btn {
-  cursor: pointer;
-  bottom: 8px;
-  // margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.65rem;
-  font-weight: bold;
-  letter-spacing: 0.025rem;
-  text-transform: uppercase;
-  color: white;
-  background-color: black;
-  border: none;
-  border-radius: 2px;
-}
+// .btn, .card_btn {
+//   cursor: pointer;
+//   bottom: 8px;
+//   // margin-top: 1.5rem;
+//   padding: 0.75rem 1.5rem;
+//   font-size: 0.65rem;
+//   font-weight: bold;
+//   letter-spacing: 0.025rem;
+//   text-transform: uppercase;
+//   color: white;
+//   background-color: black;
+//   border: none;
+//   border-radius: 2px;
+// }
 
 
-.card:hover .btn_read {
-  visibility: visible;
-  opacity: 1;
-}
+// .card:hover .btn_read {
+//   visibility: visible;
+//   opacity: 1;
+// }
 
 // .avatar {
 //   border-radius: 5px 5px 0 0;
