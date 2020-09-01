@@ -24,7 +24,7 @@ sitemap: false
 ```
 
 <div class="something" markdown="1">
-  ## Heading 2
+  <h3>wee</h3>
   Some **bold** text.
 </div>
 
