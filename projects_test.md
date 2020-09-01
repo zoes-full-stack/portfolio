@@ -33,9 +33,9 @@ sitemap: false
   </h3>
   31st May
 
-  <div class="card">
+  <div class="card" markdown="1">
       <img src="images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%">
-      <div class="container">
+      <div class="container" markdown="1">
           <h4><b>John Doe</b></h4>
           <p>Architect & Engineer</p>
       </div>
