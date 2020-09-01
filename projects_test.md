@@ -12,6 +12,8 @@ sitemap: false
 
 <h2>2019</h2>
 
+<p class="read-more">Continue with <a href="/portfolio/resume/" class="heading flip-title">Resume</a></p>
+
 <div class="row" markdown="0">
   <div class="column">
     <div class="card">
@@ -19,7 +21,7 @@ sitemap: false
           <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%" loading="lazy">
         </a>
         <div class="container">
-          <h4 id="quickrental"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">QuickRental</a> <a href="#quickrental" class="permalink"> <span class="sr-only">Permalink</span> <span class="content-hash"></span> </a> </h4> {:.read-more}
+          <h4 id="quickrental" class="read-more"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">QuickRental</a> <a href="#quickrental" class="permalink"> <span class="sr-only">Permalink</span> <span class="content-hash"></span> </a> </h4>
           <p class = "faded"><small>Catering to all your apartment needs! </small></p>
         </div>
     </div>
@@ -31,7 +33,7 @@ sitemap: false
           <img src="../images/projects/antiplasti/antiplasti.jpg" alt="AntiPlasti" style="width:100%" loading="lazy">
         </a>
         <div class="container">
-          <h4 id="antiplasti"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">AntiPlasti</a> <a href="#antiplasti" class="permalink"> <span class="sr-only">Permalink</span> <span class="content-hash"></span> </a> </h4>
+          <h4 id="antiplasti" class="read-more"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">AntiPlasti</a> <a href="#antiplasti" class="permalink"> <span class="sr-only">Permalink</span> <span class="content-hash"></span> </a> </h4>
           <p class = "faded"><small>Taking one small step at a time.</small></p>
         </div>
     </div>
