@@ -10,13 +10,13 @@ sitemap: false
 
 <div class="card" markdown="0">
     <img src="images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%">
-      <div class="container" markdown="1">
+      <div class="container" markdown="0">
         <h4><b>John Doe</b></h4>
           <p>Architect & Engineer</p>
       </div>
 </div>
 
-<div class="something" markdown="1">
+<div class="something" markdown="0">
   <h3>wee</h3>
   Some **bold** text.
 
@@ -26,9 +26,9 @@ sitemap: false
   </h3>
   31st May
 
-  <div class="card" markdown="1">
+  <div class="card" markdown="0">
       <img src="images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%">
-      <div class="container" markdown="1">
+      <div class="container" markdown="0">
           <h4><b>John Doe</b></h4>
           <p>Architect & Engineer</p>
       </div>
