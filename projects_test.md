@@ -10,13 +10,13 @@ sitemap: false
 
 ## 2019
 <!-- GIFs -->
-![Quickrental](/images/projects/details.gif "Project-Quickrental")
+![Quickrental](images/projects/details.gif "Project-Quickrental")
 QuickRental Project
 {:.figure}
 
 ### QuickRental 31st May
 
-![Quickrental](/assets/img/MarineGEO_logo.png "Project-Quickrental")
+![Quickrental](assets/img/MarineGEO_logo.png "Project-Quickrental")
 
 Continue with [Resume](resume.md){:.heading.flip-title}
 {:.read-more}
