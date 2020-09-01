@@ -23,7 +23,7 @@ sitemap: false
           <p class = "faded"><small>Catering to all your apartment needs in one spot! </small></p>
         </div>
         <div class="btn_read">
-        <button class="card_btn">Read More...</button>
+          <button class="card_btn">Read More...</button>
         </div>
     </div>
   </div>
