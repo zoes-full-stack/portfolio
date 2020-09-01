@@ -23,6 +23,11 @@ sitemap: false
 </pre>
 ```
 
+<div class="something" markdown="1">
+  ## Heading 2
+  Some **bold** text.
+</div>
+
 ## 2019
 *** 
 ### [QuickRental](../projectlist/2019-31-05-QuickRental/){:.heading.flip-title} &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; AntiPlasti
