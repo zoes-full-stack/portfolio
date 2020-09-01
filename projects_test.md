@@ -9,14 +9,12 @@ sitemap: false
 ---
 
 ## 2019
-
 ***
-
 ### QuickRental 31st May
 <!-- GIFs -->
-![Quickrental](images/projects/details.gif){:width="80" height="144" loading="lazy"}}
-QuickRental Project
-{:.figure}
+![Quickrental](images/projects/details.gif){:width="100" height="180" loading="lazy"}}
+
+#### QuickRental Project
 
 
 Continue with [Resume](resume.md){:.heading.flip-title}
