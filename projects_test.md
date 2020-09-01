@@ -14,8 +14,8 @@ sitemap: false
 31st May &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; 10th Feb
 {:.faded}
 <!-- GIFs -->
-![Quickrental](images/projects/quickrental/quickrental_icon.gif bordered){:width="300" height="300" loading="lazy"} &emsp;&nbsp;
-![AntiPlasti](images/projects/antiplasti/antiplasti.jpg bordered){:width="300" height="300" loading="lazy"}
+![Quickrental](images/projects/quickrental/quickrental_icon.gif# quickrental bordered){:width="300" height="300" loading="lazy"} &emsp;&nbsp;
+![AntiPlasti](images/projects/antiplasti/antiplasti.jpg# anti bordered){:width="300" height="300" loading="lazy"}
 
 <!-- https://github.com/quickrentalteam -->
 <!-- https://github.com/antiplasti -->
@@ -26,8 +26,8 @@ sitemap: false
 22nd Dec &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; July 2017/2018
 {:.faded}
 <!-- GIFs -->
-![PiDronics](images/projects/pidronics/pidronics.gif){:width="300" height="300" loading="lazy"} &emsp;&nbsp;
-![DCIT](images/projects/dcit_bootcamp/dcitsquare.jpg){:width="300" height="300" loading="lazy"}
+![PiDronics](images/projects/pidronics/pidronics.gif# pidronics bordered){:width="300" height="300" loading="lazy"} &emsp;&nbsp;
+![DCIT](images/projects/dcit_bootcamp/dcitsquare.jpg# dcit bordered){:width="300" height="300" loading="lazy"}
 
 <!-- https://github.com/PiDronics -->
 
@@ -37,7 +37,7 @@ sitemap: false
 31st October 
 {:.faded}
 <!-- GIFs -->
-![Quickrental](images/projects/metOracle/weather.gif){:width="300" height="300" loading="lazy"} 
+![MetOracle](images/projects/metOracle/weather.gif# metoracle bordered){:width="300" height="300" loading="lazy"} 
 
 <!-- https://github.com/irontarkus95/MET-Oracle-lstm-time-series-weather-prediction -->
 
