@@ -3,6 +3,20 @@
   text-shadow: rgba(0, 0, 0, 0.25) 0.1rem 0.1rem 0.15rem;
 }
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
 hr, .hr { margin-top: 0px; margin-bottom: 0px; margin:0; padding: 0; padding-bottom: 0; }
 
 // img[src*="#thumbnail"] {
