@@ -79,6 +79,8 @@ sitemap: false
           </div>
       </div>
     </div>
+    <div class="column">
+    </div>
   </div>
 
 </div>
