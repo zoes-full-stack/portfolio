@@ -18,7 +18,11 @@ sitemap: false
         <a href="../projectlist/2019-31-05-QuickRental/">
           <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%" loading="lazy">
         </a>
-        <div class="container img__description">
+        <div class="img_desc_hide container">
+          <h4 id="quickrental"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">QuickRental</a> <a href="#quickrental" class="permalink"> <span class="sr-only">Permalink</span> <span class="content-hash"></span> </a> </h4>
+          <p class = "faded"><small>Catering to all your apartment needs in one spot! </small></p>
+        </div>
+        <div class="img__description container">
           <h4 id="quickrental"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">QuickRental</a> <a href="#quickrental" class="permalink"> <span class="sr-only">Permalink</span> <span class="content-hash"></span> </a> </h4>
           <p class = "faded"><small>Catering to all your apartment needs in one spot! </small></p>
         </div>
