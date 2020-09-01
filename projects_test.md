@@ -15,7 +15,7 @@ sitemap: false
 {:.faded}
 <!-- GIFs -->
 ![Quickrental](images/projects/quickrental_icon.gif){:width="300" height="300" loading="lazy"} &emsp;&nbsp;
-![AntiPlasti](images/projects/antiplasti.jpg){:width="300" height="500" loading="lazy"}
+![AntiPlasti](images/projects/antiplasti.jpg){:width="300" height="300" loading="lazy"}
 
 <!-- https://github.com/quickrentalteam -->
 <!-- https://github.com/antiplasti -->
