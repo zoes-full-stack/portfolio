@@ -15,6 +15,7 @@ sitemap: false
 {:.faded}
 <!-- GIFs -->
 [![Quickrental](images/projects/quickrental/quickrental_icon.gif# quickrental bordered){:width="300" height="300" loading="lazy"}](../projectlist/2019-31-05-QuickRental/) &emsp;&nbsp;
+Some Text
 ![AntiPlasti](images/projects/antiplasti/antiplasti.jpg# anti bordered){:width="300" height="300" loading="lazy"}
 
 <!-- ![Quickrental](images/projects/quickrental/quickrental_icon.gif# quickrental bordered){:width="300" height="300" loading="lazy"} &emsp;&nbsp; -->
