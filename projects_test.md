@@ -14,20 +14,20 @@ sitemap: false
 31st May &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; 10th Feb
 {:.faded}
 <!-- GIFs -->
-![Quickrental](images/projects/quickrental_icon.gif){:width="300" height="300" loading="lazy"} &emsp;&nbsp;
-![AntiPlasti](images/projects/antiplasti.jpg){:width="300" height="300" loading="lazy"}
+![Quickrental](images/projects/quickrental/quickrental_icon.gif){:width="300" height="300" loading="lazy"} &emsp;&nbsp;
+![AntiPlasti](images/projects/antiplasti/antiplasti.jpg){:width="300" height="300" loading="lazy"}
 
 <!-- https://github.com/quickrentalteam -->
 <!-- https://github.com/antiplasti -->
 
 ## 2018
 *** 
-### PiDronics &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; DCIT BootCamp
+### PiDronics &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; DCIT BootCamp
 22nd Dec &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; July 2017/2018
 {:.faded}
 <!-- GIFs -->
 ![PiDronics](images/projects/pidronics/pidronics.gif){:width="300" height="300" loading="lazy"} &emsp;&nbsp;
-![DCIT](images/projects/dcit_bootcamp/dcit.jpg){:width="300" height="300" loading="lazy"}
+![DCIT](images/projects/dcit_bootcamp/dcitsquare.jpg){:width="300" height="300" loading="lazy"}
 
 <!-- https://github.com/PiDronics -->
 
