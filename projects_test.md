@@ -10,15 +10,15 @@ sitemap: false
 
 ## 2019
 ***
-### QuickRental 
-31st May
+### QuickRental &emsp;&nbsp; AntiPlasti
+31st May &emsp;&nbsp; 10th Feb
 {:.faded}
 <!-- GIFs -->
-![Quickrental](images/projects/quickrental_icon.gif){:width="300" height="300" loading="lazy"} 
+![Quickrental](images/projects/quickrental_icon.gif){:width="300" height="300" loading="lazy"} &emsp;&nbsp;
 
 <!-- https://github.com/quickrentalteam -->
 
-![AntiPlasti](images/projects/antiplasti.jpg){:width="300" height="300" loading="lazy"}
+![AntiPlasti](images/projects/antiplasti.jpg){:width="300" height="500" loading="lazy"}
 
 <!-- https://github.com/antiplasti -->
 
