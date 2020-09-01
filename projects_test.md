@@ -11,13 +11,11 @@ sitemap: false
 <!-- https://stackoverflow.com/questions/28030858/jekyll-include-html-partial-inside-markdown-file -->
 
 <h2>2019</h2>
-<!-- 
-<h3 id="quickrental"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">QuickRental</a> <a href="#quickrental" class="permalink"> <span class="sr-only">Permalink</span> <span class="content-hash"></span> </a> </h3> -->
 
 <div class="card" markdown="0">
-    <a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title"><img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%" loading="lazy"></a>
+    <a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title"><img class="avatar" src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%" loading="lazy"></a>
       <div class="container" markdown="0">
-      <h3 id="quickrental"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">QuickRental</a> <a href="#quickrental" class="permalink"> <span class="sr-only">Permalink</span> <span class="content-hash"></span> </a> </h3>
+      <h4 id="quickrental"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">QuickRental</a> <a href="#quickrental" class="permalink"> <span class="sr-only">Permalink</span> <span class="content-hash"></span> </a> </h4>
         <p class = "faded"><small>QuickRental - Catering to all your apartment needs in one spot! </small></p>
       </div>
 </div>
