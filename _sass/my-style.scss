@@ -150,7 +150,7 @@ img[src~="bordered"]:hover {
   // }
 }
 
-.content {
+.container {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -165,13 +165,13 @@ img[src~="bordered"]:hover {
   }
 }
 
-.title {
+.title_card {
   font-size: 1.3rem;
   font-weight: bold;
   line-height: 1.2;
 }
 
-.copy {
+.copy_card {
   font-family: var(--font-serif);
   font-size: 1.125rem;
   font-style: italic;
