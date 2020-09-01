@@ -14,8 +14,8 @@ sitemap: false
 31st May &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; 10th Feb
 {:.faded}
 <!-- GIFs -->
-![Quickrental](images/projects/quickrental/quickrental_icon.gif){:width="300" height="300" loading="lazy"} &emsp;&nbsp;
-![AntiPlasti](images/projects/antiplasti/antiplasti.jpg){:width="300" height="300" loading="lazy"}
+![Quickrental](images/projects/quickrental/quickrental_icon.gif#thumbnail){:width="300" height="300" loading="lazy"} &emsp;&nbsp;
+![AntiPlasti](images/projects/antiplasti/antiplasti.jpg#thumbnail){:width="300" height="300" loading="lazy"}
 
 <!-- https://github.com/quickrentalteam -->
 <!-- https://github.com/antiplasti -->
