@@ -8,13 +8,19 @@ hide_description: true
 sitemap: false
 ---
 
+<!-- https://stackoverflow.com/questions/28030858/jekyll-include-html-partial-inside-markdown-file -->
+
+<h2>2019</h2>
+
 <div class="card" markdown="0">
-    <img src="../images/projects/quickrental/apartmentapp2.png" alt="Quickrental" style="width:100%">
+    <a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title"><img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" width="300" height="300" loading="lazy"></a>
       <div class="container" markdown="0">
-        <h4><b>John Doe</b></h4>
-          <p>Architect & Engineer</p>
+        <h4><b>QuickRental</b></h4>
+        <p>QuickRental - Catering to all your apartment needs in one spot! </p>
       </div>
 </div>
+
+<!-- <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%"> -->
 
 <div class="something" markdown="0">
   <h3>wee</h3>
