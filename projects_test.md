@@ -12,7 +12,7 @@ sitemap: false
 ***
 ### QuickRental 31st May
 <!-- GIFs -->
-![Quickrental](images/projects/details.gif){:width="100" height="180" loading="lazy"}}
+![Quickrental](images/projects/quickrental_icon.gif){:width="200" height="200" loading="lazy"}}
 
 #### QuickRental Project
 
