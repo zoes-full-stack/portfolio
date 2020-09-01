@@ -38,8 +38,8 @@ span {
 }
 
 @media screen and (max-width: 600px) {
-  .card {
-    width: 100%;
+  .column {
+    flex: 100%;
     display: block;
     margin-bottom: 20px;
   }
