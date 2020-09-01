@@ -56,7 +56,7 @@ sitemap: false
   <div class="card" markdown="0">
       <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%">
       <div class="container" markdown="0">
-          <h4><b>John Doe</b></h4>
+          <h4 class="read-more"><b>John Doe</b></h4>
           <p>Architect & Engineer</p>
       </div>
   </div>
