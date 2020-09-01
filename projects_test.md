@@ -14,8 +14,8 @@ sitemap: false
 31st May &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; 10th Feb
 {:.faded}
 <!-- GIFs -->
-[![Quickrental](images/projects/quickrental/quickrental_icon.gif# quickrental bordered){:width="300" height="300" loading="lazy"}](../projectlist/2019-31-05-QuickRental/){:.heading.flip-title} &emsp;&nbsp;
-![AntiPlasti](images/projects/antiplasti/antiplasti.jpg# anti bordered){:width="300" height="300" loading="lazy"}
+[![Quickrental](images/projects/quickrental/quickrental_icon.gif# quickrental bordered){:width="300" height="300" loading="lazy"}](../projectlist/2019-31-05-QuickRental/){:.heading.flip-title}*Fig. 2: The minimum dominating set of a graph* &emsp;&nbsp;
+![AntiPlasti](images/projects/antiplasti/antiplasti.jpg# anti bordered){:width="300" height="300" loading="lazy"}*Fig. 2: The minimum dominating set of a graph*
 
 <!-- ![Quickrental](images/projects/quickrental/quickrental_icon.gif# quickrental bordered){:width="300" height="300" loading="lazy"} &emsp;&nbsp; -->
 <!-- https://github.com/quickrentalteam -->
@@ -23,7 +23,7 @@ sitemap: false
 
 ## 2018
 *** 
-### PiDronics &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; DCIT BootCamp
+### PiDronics &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; DCIT Robotics BootCamp
 22nd Dec &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; July 2017/2018
 {:.faded}
 <!-- GIFs -->
