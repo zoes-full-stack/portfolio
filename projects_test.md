@@ -27,7 +27,7 @@ sitemap: false
   31st May
 
   <div class="card" markdown="0">
-      <img src="../images/projects/quickrental/apartmentapp2.png" alt="Quickrental" style="width:100%">
+      <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%">
       <div class="container" markdown="0">
           <h4><b>John Doe</b></h4>
           <p>Architect & Engineer</p>
