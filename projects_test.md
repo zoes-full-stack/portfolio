@@ -8,7 +8,7 @@ hide_description: true
 sitemap: false
 ---
 
-<div class="card" markdown="1">
+<div class="card" markdown="0">
     <img src="images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%">
       <div class="container" markdown="1">
         <h4><b>John Doe</b></h4>
