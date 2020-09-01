@@ -48,7 +48,7 @@ sitemap: false
           </a>
           <div class="container">
             <h4 id="pidronics"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">PiDronics</a> <span>&#8594;</span></h4>
-            <p class = "faded"><small>Autonomous Hydroponics Monitoring System</small></p>
+            <p class = "faded"><small>Autonomous Hydroponics Tracking System</small></p>
           </div>
       </div>
     </div>
