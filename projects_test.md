@@ -8,20 +8,13 @@ hide_description: true
 sitemap: false
 ---
 
-```html
-<h2>Example of code</h2>
-
-<pre>
-    <div class="container">
-        <div class="block two first">
-            <h2>Your title</h2>
-            <div class="wrap">
-            //Your content
-            </div>
-        </div>
+<div class="card">
+    <img src="images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%">
+    <div class="container" markdown="1">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
     </div>
-</pre>
-```
+</div>
 
 <div class="something" markdown="1">
   <h3>wee</h3>
