@@ -10,17 +10,13 @@ sitemap: false
 
 ## 2019
 *** 
-### QuickRental &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; AntiPlasti
+### [QuickRental](../projectlist/2019-31-05-QuickRental/) &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; AntiPlasti
 31st May &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; 10th Feb
 {:.faded}
 <!-- GIFs -->
 [![Quickrental](images/projects/quickrental/quickrental_icon.gif# quickrental bordered){:width="300" height="300" loading="lazy"}](../projectlist/2019-31-05-QuickRental/) &emsp;&nbsp;
-Gabriela Sewdhan's Resume.
-{:.figcaption}
-
 ![AntiPlasti](images/projects/antiplasti/antiplasti.jpg# anti bordered){:width="300" height="300" loading="lazy"}
-Gabriela Sewdhan's Resume.
-{:.figcaption}
+
 <!-- ![Quickrental](images/projects/quickrental/quickrental_icon.gif# quickrental bordered){:width="300" height="300" loading="lazy"} &emsp;&nbsp; -->
 <!-- https://github.com/quickrentalteam -->
 <!-- https://github.com/antiplasti -->
