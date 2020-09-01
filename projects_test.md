@@ -12,14 +12,33 @@ sitemap: false
 
 <h2>2019</h2>
 
-<div class="card" markdown="0">
-    <a href="../projectlist/2019-31-05-QuickRental/">
-      <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" class="avatar" style="width:100%" loading="lazy">
-    </a>
-      <div class="container" markdown="0">
-      <h4 id="quickrental"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">QuickRental</a> <a href="#quickrental" class="permalink"> <span class="sr-only">Permalink</span> <span class="content-hash"></span> </a> </h4>
-        <p class = "faded"><small>QuickRental - Catering to all your apartment needs in one spot! </small></p>
-      </div>
+<div class="row" markdown="0">
+  <div class="column">
+    <div class="card">
+        <a href="../projectlist/2019-31-05-QuickRental/">
+          <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" class="avatar" style="width:100%" loading="lazy">
+        </a>
+        <div class="container">
+          <h4 id="quickrental"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">QuickRental</a> <a href="#quickrental" class="permalink"> <span class="sr-only">Permalink</span> <span class="content-hash"></span> </a> </h4>
+          <p class = "faded"><small>Catering to all your apartment needs in one spot! </small></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+        <a href="../projectlist/2019-31-05-QuickRental/">
+          <img src="../images/projects/antiplasti/antiplasti.jpg" alt="AntiPlasti" class="avatar" style="width:100%" loading="lazy">
+        </a>
+        <div class="container">
+          <h4 id="antiplasti"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">QuickRental</a> <a href="#antiplasti" class="permalink"> <span class="sr-only">Permalink</span> <span class="content-hash"></span> </a> </h4>
+          <p class = "faded"><small>Saving Marine Environment one small step at a time</small></p>
+        </div>
+    </div>
+  </div>
+
+  
+
 </div>
 
 <!-- <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%"> -->
