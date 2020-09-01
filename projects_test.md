@@ -17,8 +17,7 @@ sitemap: false
 [![Quickrental](images/projects/quickrental/quickrental_icon.gif# quickrental bordered){:width="300" height="300" loading="lazy"}](../projectlist/2019-31-05-QuickRental/){:.heading.flip-title} &emsp;&nbsp;
 ![AntiPlasti](images/projects/antiplasti/antiplasti.jpg# anti bordered){:width="300" height="300" loading="lazy"}
 
-`Affordable, Speedy, Easy, Apartment Rental Search` &emsp;&emsp;&nbsp; `Saving Marine Environment`
-{:.faded}
+`Affordable, Speedy, Easy, Apartment Rental Search` &emsp;&nbsp; `Saving Marine Environment`
 <!-- ![Quickrental](images/projects/quickrental/quickrental_icon.gif# quickrental bordered){:width="300" height="300" loading="lazy"} &emsp;&nbsp; -->
 <!-- https://github.com/quickrentalteam -->
 <!-- https://github.com/antiplasti -->
