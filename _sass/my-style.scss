@@ -50,11 +50,9 @@
   position: relative;
 }
 
-.btn_read {  position: absolute;
+.btn_read {  
+  position: absolute;
   bottom: 8px;
-  top: 0;
-  left: 0;
-  right: 0;
   background: rgba(0, 0, 0, 0.4);
   color: #fff;
   visibility: hidden;
@@ -75,6 +73,7 @@
   color: white;
   background-color: black;
   border: none;
+  border-radius: 2px;
 }
 
 
@@ -83,10 +82,10 @@
   opacity: 1;
 }
 
-// .avatar {
-//   border-radius: 5px 5px 0 0;
-//   border: 0px;
-// }
+.avatar {
+  border: none;
+  border-radius: 5px 5px 0 0;
+}
 
 hr, .hr { margin-top: 0px; margin-bottom: 0px; margin:0; padding: 0; padding-bottom: 0; }
 
