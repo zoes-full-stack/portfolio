@@ -13,10 +13,8 @@ sitemap: false
 <h2>2019</h2>
 
 <div class="card" markdown="0">
-    <a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-project">
-      <div class="avatar">
-        <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" class="flip-project-img" style="width:100%" loading="lazy">
-      </div>
+    <a href="../projectlist/2019-31-05-QuickRental/">
+      <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" class="avatar" style="width:100%" loading="lazy">
     </a>
       <div class="container" markdown="0">
       <h4 id="quickrental"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">QuickRental</a> <a href="#quickrental" class="permalink"> <span class="sr-only">Permalink</span> <span class="content-hash"></span> </a> </h4>
