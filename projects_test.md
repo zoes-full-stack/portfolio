@@ -26,6 +26,20 @@ sitemap: false
 <div class="something" markdown="1">
   <h3>wee</h3>
   Some **bold** text.
+
+  <h2>2019</h2>
+
+  <h3>Quickrental
+  </h3>
+  31st May
+
+  <div class="card">
+      <img src="images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%">
+      <div class="container">
+          <h4><b>John Doe</b></h4>
+          <p>Architect & Engineer</p>
+      </div>
+  </div>
 </div>
 
 ## 2019
