@@ -31,7 +31,7 @@ sitemap: false
             <img src="../images/projects/antiplasti/antiplasti.jpg" alt="AntiPlasti" style="width:100%" loading="lazy">
           </a>
           <div class="container">
-            <h4 id="antiplasti"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">AntiPlasti</a><span>&#8594;</span></h4>
+            <h4 id="antiplasti"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">AntiPlasti</a> <span>&#8594;</span></h4>
             <p class = "faded"><small>Taking one small step at a time</small></p>
           </div>
       </div>
@@ -58,7 +58,7 @@ sitemap: false
             <img src="../images/projects/dcit_bootcamp/dcitsquare.jpg" alt="BootCamp" style="width:100%" loading="lazy">
           </a>
           <div class="container">
-            <h4 id="bootcamp"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">DCIT Robotics Bootcamp</a><span>&#8594;</span></h4>
+            <h4 id="bootcamp"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">DCIT Robotics Bootcamp</a> <span>&#8594;</span></h4>
             <p class = "faded"><small>Meet Curie :3</small></p>
           </div>
       </div>
