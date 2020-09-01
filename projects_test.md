@@ -15,10 +15,10 @@ sitemap: false
 <div class="card" markdown="0">
     <a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title"><img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%" loading="lazy"></a>
       <div class="container" markdown="0">
+      <a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">
         <h4><b>QuickRental</b></h4>
-        <a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">
-          <p class = "faded"><small>QuickRental - Catering to all your apartment needs in one spot! </small></p>
-        </a>
+      </a>
+        <p class = "faded"><small>QuickRental - Catering to all your apartment needs in one spot! </small></p>
       </div>
 </div>
 
