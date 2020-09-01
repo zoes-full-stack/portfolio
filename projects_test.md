@@ -16,7 +16,7 @@ QuickRental Project
 
 ### QuickRental 31st May
 
-![Quickrental](assets/img/MarineGEO_logo.png "Project-Quickrental")
+![Quickrental](images/icons/robot.png "Project-Quickrental")
 
 Continue with [Resume](resume.md){:.heading.flip-title}
 {:.read-more}
