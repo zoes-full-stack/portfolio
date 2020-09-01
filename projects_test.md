@@ -11,6 +11,17 @@ sitemap: false
 <!-- https://stackoverflow.com/questions/28030858/jekyll-include-html-partial-inside-markdown-file -->
 
 <h2>2019</h2>
+<div class="row" markdown="0">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Column 1</h2>
+    <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 2</h2>
+    <p>Some text..</p>
+  </div>
+</div>
+
 
 <div class="row" markdown="0">
   <div class="column">

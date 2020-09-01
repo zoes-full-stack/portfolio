@@ -21,7 +21,6 @@
 .column {
   flex: 50%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
 }
 
 .card {
@@ -43,13 +42,13 @@
 }
 
 .container {
-  padding: 2px 2px;
+  padding: 1px 2px;
 }
 
-.avatar {
-  border-radius: 5px 5px 0 0;
-  border: 0px;
-}
+// .avatar {
+//   border-radius: 5px 5px 0 0;
+//   border: 0px;
+// }
 
 hr, .hr { margin-top: 0px; margin-bottom: 0px; margin:0; padding: 0; padding-bottom: 0; }
 
