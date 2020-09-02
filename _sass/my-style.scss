@@ -23,7 +23,7 @@ span {
 
 /* Create two equal columns that sits next to each other */
 .column {
-  flex: 50%;
+  flex: 100%;
   padding: 16px;
 }
 
@@ -34,7 +34,7 @@ span {
   // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   // transition: 0.3s;
   border-radius: 5px;
-  width: 100%;
+  width: 75%;
 }
 
 @media screen and (max-width: 600px) {
