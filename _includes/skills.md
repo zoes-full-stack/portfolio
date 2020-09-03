@@ -83,7 +83,7 @@
             <code class="language-plaintext highlighter-rouge">Amazon Lex</code> |
             <code class="language-plaintext highlighter-rouge">CloudFormation</code> 
     </p>
-    <h4>Frontend Engineering: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
+    <h4>Frontend Engineering: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span></h4>
     <p class="faded">
             <code class="language-plaintext highlighter-rouge">React Native and Expo</code>| 
             <code class="language-plaintext highlighter-rouge">Javascript</code> | 
@@ -105,10 +105,10 @@
                     <li>Mathematical Skills in Algebra, Statistics and Probability</li>
                 </ul>
         </div>
-        <div class="column_skills">
+        <div class="column_skills class='indent_skill'">
             <h3>Languages</h3>
-            <b class='indent_skill'>English:</b> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
-            <b class='indent_skill'>German: </b> <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
+            <b>English:</b> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
+            <b>German: </b> <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
         </div>
     </div>
 </div>
