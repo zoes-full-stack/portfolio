@@ -40,7 +40,7 @@ redirect_from:
 `Diving` &emsp;&nbsp; `Hiking` &emsp;&nbsp; `Music` &emsp;&nbsp; `Baking` &emsp; `Ocean Conservation`
 
 
-## Beautiful Math
+<!-- ## Beautiful Math
 They say math is beautiful — and with **Hydejack**'s [math support][math] it's guaranteed to also look beautiful:
 
 $$
@@ -62,7 +62,11 @@ $$
 $$
 
 Hydejack uses KaTeX to efficiently render math.
-{:.figcaption}
+{:.figcaption} -->
+
+&nbsp;
+&nbsp;
+&nbsp;
 
 Continue with [Skills](skillset.md){:.heading.flip-title}
 {:.read-more}

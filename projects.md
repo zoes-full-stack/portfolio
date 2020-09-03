@@ -21,5 +21,16 @@ description: >
 sitemap: false
 ---
 
+&nbsp;
+&nbsp;
+&nbsp;
+
 Continue with [Resume](resume.md){:.heading.flip-title}
 {:.read-more}
+
+
+<!-- List of Projects 
+Have image cards side by side, when clicked, go to 
+2019 - QuickRental, AntiPlasti
+2018 - PiDronics, maybe DCIT Robotics compilations?
+2017 - METOracle -->

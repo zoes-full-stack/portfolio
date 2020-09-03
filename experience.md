@@ -39,5 +39,8 @@ Click me to view!
 
 </details> 
 
+&nbsp;
+&nbsp;
+&nbsp;
 Continue with [Projects](projects.md){:.heading.flip-title}
 {:.read-more}

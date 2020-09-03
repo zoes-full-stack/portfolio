@@ -115,6 +115,9 @@ sitemap: false
 <!-- https://github.com/PiDronics -->
 
 <!-- https://github.com/irontarkus95/MET-Oracle-lstm-time-series-weather-prediction -->
+&nbsp;
+&nbsp;
+&nbsp;
 
 Continue with [Resume](resume.md){:.heading.flip-title}
 {:.read-more}
