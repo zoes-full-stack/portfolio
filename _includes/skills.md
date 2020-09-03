@@ -34,10 +34,10 @@
 
 <div markdown="0">
     <div class="row_project">
-        <div class="column_code">
+        <div class="column_code3">
             <h2>SkillSet</h2>
         </div>
-        <div class="column_code2">
+        <div class="column_code4">
             <pre class="highlight">
                 <code>
                     <span class="c">&lt;!-- My Skillset --&gt;</span>
