@@ -37,7 +37,7 @@
         <div class="column_code">
             <h2>SkillSet</h2>
         </div>
-        <div class="column_code">
+        <div class="column_code2">
             <pre class="highlight">
                 <code>
                     <span class="c">&lt;!-- My Skillset --&gt;</span>
@@ -132,7 +132,7 @@
             <code class="language-plaintext highlighter-rouge">Ionic Framework</code>
     </p>
     <div class="row_project">
-        <div class="column_skills">
+        <div class="column_code2">
             <h3>Other Skills</h3>
                 <ul>
                     <li>Project and Team Management</li>
@@ -143,7 +143,7 @@
                     <li>Mathematical Skills in Algebra, Statistics and Probability</li>
                 </ul>
         </div>
-        <div class="column_skills">
+        <div class="column_code">
             <h3>Languages</h3>
             <b>English:</b> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
             <b>German: </b> <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
