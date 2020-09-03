@@ -3,7 +3,6 @@
 
 - Creating Optimal Personalised Prepaid Plans for TSTT Prepaid Customers
 - Monitoring and Analysing Traffic Flow Data via Google Maps and Waze
-
 &nbsp;
 <hr>
 &nbsp;
@@ -13,7 +12,6 @@
 
 - rasperry pi - plant under **Dr. Phaedra Mohammed**.
 - EvaLing - Evaluating and Developing Speech Recognition for Caribbean Dialect under **Mr. Kyle DeFreitas**.    
-
 &nbsp;
 <hr>
 &nbsp;
