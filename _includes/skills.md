@@ -33,7 +33,7 @@
 {:.faded}
 
 <div markdown="0">
-    <h4>Python Skills: </h4> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+    <h4>Python Skills: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
     <div class='indent_skill'>
         <h6>Data Science: </h6> 
         <p class="faded">
@@ -45,15 +45,28 @@
             <code class="language-plaintext highlighter-rouge">Regression Models</code> | 
             <code class="language-plaintext highlighter-rouge">Classification Models</code>
         </p>
+        <h6 class='indent_skill'>Image Processing: </h6> 
+        <p class="faded">
+            <code class="language-plaintext highlighter-rouge">OpenCV</code>
+        </p>
+        <h6 class='indent_skill'>Artificial Intelligence: </h6> 
+        <p class="faded">
+            <code class="language-plaintext highlighter-rouge">TensorFlow</code>| 
+            <code class="language-plaintext highlighter-rouge">Keras</code> | 
+            <code class="language-plaintext highlighter-rouge">Object Detection (Mask RCNN)</code> | 
+            <code class="language-plaintext highlighter-rouge">GoLang</code> | 
+        </p>
+        <h6 class='indent_skill'>Robotics Programming: </h6> 
+        <p class="faded">
+            <code class="language-plaintext highlighter-rouge">ROS</code>| 
+            <code class="language-plaintext highlighter-rouge">Programming with Raspberry Pi and Arduino</code> 
+        </p>
     </div>
-    <h6 class='indent_skill'>Image Processing: </h6> 
-    <h6 class='indent_skill'>Artificial Intelligence: </h6> 
-    <h6 class='indent_skill'>Robotics Programming: </h6> 
-    <h4>Other Software Engineering Skills: </h4> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
-    <h4>Backend Engineering: </h4> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
-    <h4>Frontend Engineering: </h4> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+    <h4>Other Software Engineering Skills: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4> 
+    <h4>Backend Engineering: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
+    <h4>Frontend Engineering: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
     <div class="row_project">
-        <div class="column_project">
+        <div class="column_skills">
             <h3>Other Skills</h3>
                 <ul>
                     <li>Project and Team Management</li>
@@ -64,7 +77,7 @@
                     <li>Mathematical Skills in Algebra, Statistics and Probability</li>
                 </ul>
         </div>
-        <div class="column_project">
+        <div class="column_skills">
             <h3>Languages</h3>
             <b>English</b> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
             <b>German</b> <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
