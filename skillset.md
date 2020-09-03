@@ -10,6 +10,11 @@ sitemap: false
 
 ## SkillSet
 
+```python
+skillset = ["Coding", "Baking", "Being Awesome"]
+print(skillset)
+```
+
 ```html
 <!-- My Skillset -->
 <script>
