@@ -38,12 +38,8 @@
             <h2>SkillSet</h2>
         </div>
         <div class="column_code4">
-        <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- My Skillset --&gt;</span>
-<span class="nt">&lt;script&gt;</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">skillset</span><span class="dl">'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">display-skills</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// </span><span class="o">&lt;</span><span class="nx">List</span> <span class="k">of</span> <span class="nx">My</span> <span class="nx">Skills</span><span class="o">&gt;</span>
-  <span class="p">});</span>
-<span class="nt">&lt;/script&gt;</span>
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">skillset</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Coding"</span><span class="p">,</span> <span class="s">"Baking"</span><span class="p">,</span> <span class="s">"Being Awesome"</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">skillset</span><span class="p">)</span>
 </code></pre></div></div>
         </div>
     </div>
