@@ -1,6 +1,28 @@
-#### Robotics Software Engineering: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
-`Python` | `C++` | `Ubuntu`| `ROS` | `OpenCV` | `GoLang` | `Algorithm Design` | `Software Testing` | `Programming with Raspberry Pi and Arduino`
+#### Python Skills: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+
+###### Data Science: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
+`Pandas`| `Numpy` | `Seaborn` | `Plotly` | `Sci-kit Learn` | `Regression Models` | `Classification Models`
 {:.faded}
+
+###### Image Processing: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
+`OpenCV`
+{:.faded}
+
+###### Artificial Intelligence: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+`TensorFlow`| `Keras`| `Object Detection (Mask RCNN)` | `GoLang`
+{:.faded}
+
+###### Robotics Programming: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+`ROS`| `Programming with Raspberry Pi and Arduino`
+{:.faded}
+
+#### Other Software Engineering Skills: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+`C++` | `Ubuntu`| `GoLang` | `Algorithm Design` | `Software Testing` | `GIT`
+{:.faded}
+
+<!-- #### Robotics Software Engineering: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+`Python` | `C++` | `Ubuntu`| `ROS` | `OpenCV` | `GoLang` | `Algorithm Design` | `Software Testing` | `Programming with Raspberry Pi and Arduino`
+{:.faded} -->
 
 #### Backend Engineering: &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
 `NodeJS`| `SQL` | `Serverless` | `Amazon Web Services` | `EC2` | `Amazon Lex` | `CloudFormation`
@@ -10,13 +32,6 @@
 `Javascript`| `HTML` | `React Native and Expo` | `Ionic Framework` | `ReactJS` | `PreactJS` | `Django`
 {:.faded}
 
-#### Data Science: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
-`Pandas`| `Numpy` | `Seaborn` | `Plotly` | `Sci-kit Learn` | `Regression Models` | `Classification Models`
-{:.faded}
-
-#### Artificial Intelligence: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
-`TensorFlow`| `Keras`| `Object Detection (Mask RCNN)`
-{:.faded}
 
 <div markdown="0">
     <div class="row_project">
