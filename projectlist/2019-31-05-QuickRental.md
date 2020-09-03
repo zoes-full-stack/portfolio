@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: QuickRental
 image: /images/projects/quickrental/apartmentapp2.png
 description: >
