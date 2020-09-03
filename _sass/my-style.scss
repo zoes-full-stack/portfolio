@@ -25,6 +25,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .row_project {
+  display: block;
+}
   .column_project {
     flex: 100%;
     display: block;
