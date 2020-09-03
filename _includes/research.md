@@ -23,3 +23,5 @@
 
 - Examining the Psychological Well-being of Cancer Survivors &nbsp; [_May 2016_] <br>
 **Supervisor**: Dr. Jannel Phillip
+&nbsp;
+<hr>

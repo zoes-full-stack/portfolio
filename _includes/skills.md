@@ -105,7 +105,7 @@
                     <li>Mathematical Skills in Algebra, Statistics and Probability</li>
                 </ul>
         </div>
-        <div class="column_skills class='indent_skill'">
+        <div class="column_skills indent_skill">
             <h3>Languages</h3>
             <b>English:</b> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
             <b>German: </b> <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>

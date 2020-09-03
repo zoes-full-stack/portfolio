@@ -8,3 +8,5 @@
     - Epspeak for voice
     - Distance sensors to measure distance.
     - End-Goal - Using the above to solve mazes. 
+&nbsp;
+<hr>
