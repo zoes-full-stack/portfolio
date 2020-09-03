@@ -15,7 +15,7 @@ sitemap: false
   <hr>
   <div class="row_project">
     <div class="column_project">
-      <p class = "faded">31st May</p>
+      <p class = "faded"><small>31st May</small></p>
       <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%" loading="lazy">
@@ -27,7 +27,7 @@ sitemap: false
       </div>
     </div>
     <div class="column_project">
-      <p class = "faded">10th Feb</p>
+      <p class = "faded"><small>10th Feb</small></p>
       <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/antiplasti/antiplasti.jpg" alt="AntiPlasti" style="width:100%" loading="lazy">
@@ -44,7 +44,7 @@ sitemap: false
   <hr>
   <div class="row_project">
     <div class="column_project">
-      22nd Dec
+      <p class = "faded">22nd Dec</p>
       <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/pidronics/pidronics.gif" alt="PiDronics" style="width:100%" loading="lazy">
@@ -56,7 +56,7 @@ sitemap: false
       </div>
     </div>
     <div class="column_project">
-      July 2017/2018
+      <p class = "faded">July 2017/2018</p>
       <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/dcit_bootcamp/dcitsquare.jpg" alt="BootCamp" style="width:100%" loading="lazy">
