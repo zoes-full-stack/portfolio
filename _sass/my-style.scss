@@ -1,3 +1,11 @@
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
 .dl-table {
   a {
     @supports ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
@@ -35,14 +43,6 @@ span {
   // transition: 0.3s;
   border-radius: 5px;
   width: 75%;
-}
-
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
 }
 
 .container {
