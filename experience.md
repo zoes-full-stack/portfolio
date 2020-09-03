@@ -21,14 +21,14 @@ Click me to view!
 
 </details> 
 
-## Volunteer Experience
+<!-- ## Volunteer Experience
 
 <details><summary markdown='span'> 
 Click me to view!
 </summary>
 {% include volunteer.md %}
 
-</details> 
+</details>  -->
 
 ## Research Experience
 

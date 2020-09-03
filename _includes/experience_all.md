@@ -9,6 +9,7 @@
 - Built recommender system to recommend and personalize bundles for long-term profit optimization.
 - Conducted Bi-weekly Programming and Data Science workshops.
 
+<hr>
 &nbsp;
 
 **Software Tester and Developer** at **U.W.I, Department of Computing and Information Technology (DCIT)**
@@ -18,6 +19,7 @@
 - Implemented new features via PHP, XAMPP and MS SQL Server.
 - Gained further experience in Agile and SCRUM Methodologies.
 
+<hr>
 &nbsp;
 
 **Software Developer and Data Scientist** at **Persisto Labs**
@@ -28,9 +30,24 @@
 - Gained practical experience in Cloud infrastructure and deployment and React Native app development.
 - Created a chat-bot using Amazon Lex.
 
+<hr>
 &nbsp;
 
 **Programming Mentor** at **The University of the West Indies, St. Augustine**
 {:.note title="July - August 2018"}
 
 - Guided and aided in teaching the fundamentals of programming and creativity, using Scratch.
+
+<hr>
+&nbsp;
+
+**Robotics Senior Mentor** at **U.W.I, Department of Computing and Information Technology (DCIT)**
+{:.note title="July 2017/2018"}
+
+- Assisted in organizing the camp
+- Contributed to the code
+- Help mentor students in programming a raspberry pi robot via:
+    - Inceptionv3 for image recognition
+    - Epspeak for voice
+    - Distance sensors to measure distance.
+    - End-Goal - Using the above to solve mazes. 
