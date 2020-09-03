@@ -1,5 +1,5 @@
 // @media screen and (max-width: 600px) {
-//   .column {
+//   .column_project {
 //     flex: 100%;
 //     display: block;
 //     margin-bottom: 20px;
@@ -9,7 +9,7 @@
 @media handheld and (orientation: landscape), 
   screen and (max-width: 1000px) {
 
-  .column {
+  .column_project {
     flex: 100%;
     display: block;
     margin-bottom: 20px;
@@ -36,12 +36,12 @@ span {
   content: "\2192";
 }
 
-.row {
+.row_project {
   display: flex;
 }
 
 /* Create two equal columns that sits next to each other */
-.column {
+.column_project {
   flex: 50%;
   padding: 16px;
 }

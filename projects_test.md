@@ -13,8 +13,8 @@ sitemap: false
 <div markdown="0">
   <h2>2019</h2>
   <hr>
-  <div class="row">
-    <div class="column">
+  <div class="row_project">
+    <div class="column_project">
       <div class="card">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%" loading="lazy">
@@ -25,7 +25,7 @@ sitemap: false
           </div>
       </div>
     </div>
-    <div class="column">
+    <div class="column_project">
       <div class="card">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/antiplasti/antiplasti.jpg" alt="AntiPlasti" style="width:100%" loading="lazy">
@@ -40,8 +40,8 @@ sitemap: false
 
   <h2>2018</h2>
   <hr>
-  <div class="row">
-    <div class="column">
+  <div class="row_project">
+    <div class="column_project">
       <div class="card">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/pidronics/pidronics.gif" alt="PiDronics" style="width:100%" loading="lazy">
@@ -52,7 +52,7 @@ sitemap: false
           </div>
       </div>
     </div>
-    <div class="column">
+    <div class="column_project">
       <div class="card">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/dcit_bootcamp/dcitsquare.jpg" alt="BootCamp" style="width:100%" loading="lazy">
@@ -67,8 +67,8 @@ sitemap: false
 
   <h2>2017</h2>
   <hr>
-  <div class="row">
-    <div class="column">
+  <div class="row_project">
+    <div class="column_project">
       <div class="card">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/metOracle/weather.gif" alt="MetOracle" style="width:100%" loading="lazy">
@@ -79,7 +79,7 @@ sitemap: false
           </div>
       </div>
     </div>
-    <div class="column">
+    <div class="column_project">
     </div>
   </div>
 
