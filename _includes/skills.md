@@ -14,18 +14,38 @@
 `Pandas`| `Numpy` | `Seaborn` | `Plotly` | `Sci-kit Learn` | `Regression Models` | `Classification Models`
 {:.faded}
 
-#### Artificial Intelligence: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
-`TensorFlow` 
+#### Artificial Intelligence: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+`TensorFlow`| `Keras`| `Object Detection (Mask RCNN)`
 {:.faded}
 
-
+<div markdown="0">
+    <div class="row_project">
+        <div class="column_project">
+            <h3>Other Skills</h3>
+                <ul>
+                    <li>Project and Team Management</li>
+                    <li>SCRUM and Agile Methodologies</li>
+                    <li>Web and App Development</li>
+                    <li>Machine Learning and A.I based Predictions</li>
+                    <li>Data Visualisation</li>
+                    <li>Mathematical Skills in Algebra, Statistics and Probability</li>
+                </ul>
+        </div>
+        <div class="column_project">
+            <h3>Languages</h3>
+            <b>English</b> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
+            <b>German</b> <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
+        </div>
+    </div>
+</div>
+<!--   
 ### Other Skills &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Languages
 - Project and Team Management &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; **English:** &nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
 - SCRUM and Agile Methodologies &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; **German:**  &nbsp;<span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
 - Web and App Development
 - Machine Learning and A.I based Predictions
 - Data Visualisation
-- Mathematical Skills in Algebra, Statistics and Probability
+- Mathematical Skills in Algebra, Statistics and Probability -->
 
 <!-- ### Languages 
 
