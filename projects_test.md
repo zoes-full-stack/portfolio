@@ -10,7 +10,7 @@ sitemap: false
 
 <!-- https://stackoverflow.com/questions/28030858/jekyll-include-html-partial-inside-markdown-file -->
 
-<meta name="viewport" content="width-device-width, initial scale=1.0">
+<meta name="viewport" content="width=device-width, initial scale=1.0">
 
 <div markdown="0">
   <h2>2019</h2>
