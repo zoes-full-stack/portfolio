@@ -15,22 +15,22 @@ sitemap: false
   <hr>
   <div class="row_project">
     <div class="column_project">
-      <div class="card">
+      <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%" loading="lazy">
           </a>
-          <div class="container">
+          <div class="container_project">
             <h4 id="quickrental"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">QuickRental</a> <span>&#8594;</span></h4>
             <p class = "faded"><small>Catering to all your apartment needs</small></p>
           </div>
       </div>
     </div>
     <div class="column_project">
-      <div class="card">
+      <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/antiplasti/antiplasti.jpg" alt="AntiPlasti" style="width:100%" loading="lazy">
           </a>
-          <div class="container">
+          <div class="container_project">
             <h4 id="antiplasti"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">AntiPlasti</a> <span>&#8594;</span></h4>
             <p class = "faded"><small>Taking one small step at a time</small></p>
           </div>
@@ -42,22 +42,22 @@ sitemap: false
   <hr>
   <div class="row_project">
     <div class="column_project">
-      <div class="card">
+      <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/pidronics/pidronics.gif" alt="PiDronics" style="width:100%" loading="lazy">
           </a>
-          <div class="container">
+          <div class="container_project">
             <h4 id="pidronics"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">PiDronics</a> <span>&#8594;</span></h4>
             <p class = "faded"><small>Autonomous Hydroponics Tracking System</small></p>
           </div>
       </div>
     </div>
     <div class="column_project">
-      <div class="card">
+      <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/dcit_bootcamp/dcitsquare.jpg" alt="BootCamp" style="width:100%" loading="lazy">
           </a>
-          <div class="container">
+          <div class="container_project">
             <h4 id="bootcamp"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">DCIT Robotics Bootcamp</a> <span>&#8594;</span></h4>
             <p class = "faded"><small>Meet Curie :3</small></p>
           </div>
@@ -69,11 +69,11 @@ sitemap: false
   <hr>
   <div class="row_project">
     <div class="column_project">
-      <div class="card">
+      <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/metOracle/weather.gif" alt="MetOracle" style="width:100%" loading="lazy">
           </a>
-          <div class="container">
+          <div class="container_project">
             <h4 id="metoracle"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">MetOracle</a> <span>&#8594;</span></h4>
             <p class = "faded"><small>Weather Prediction to Improve Smart City Resilience</small></p>
           </div>
