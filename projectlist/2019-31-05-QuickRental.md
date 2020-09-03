@@ -88,18 +88,15 @@ The Free Version of Hydejack is now availabe on [RubyGems](https://rubygems.org/
 and for the first time also on [GitHub Packages](https://github.com/hydecorp/hydejack/packages). 
 The source code is available on [GitHub](https://github.com/hydecorp/hydejack) as always.
 
-The PRO Version is scheduled to release on July 7th on Gumroad. Pre-Orders are open now:
 
-<div class="gumroad-product-embed" data-gumroad-product-id="nuOluY"><a href="https://quick-rental-project-website.herokuapp.com/">Loading…</a></div>
-
-
+<!-- 
 
 [^1]: If you are a fan of the old two-column layout, or don't like modern design tropes such as mega headlines, Hydejack lets you revert these changes on a case-by-case basis via configuration options.
 
 [^2]:
       Search was mainly tested for English and German. Please let me know about issues in other languages. 
       While I've tried to find a multi-language solution, most showed drastically worse  results for the English base case.
-      If you're technically inclined, you can adopt the code located in `_includes/js/search-worker.js` to your needs.
+      If you're technically inclined, you can adopt the code located in `_includes/js/search-worker.js` to your needs. -->
 
 <div markdown="0">
   <hr class="dingbat related">
