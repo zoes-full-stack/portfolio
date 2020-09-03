@@ -1,9 +1,20 @@
-@media screen and (max-width: 600px) {
+// @media screen and (max-width: 600px) {
+//   .column {
+//     flex: 100%;
+//     display: block;
+//     margin-bottom: 20px;
+//   }
+// }
+
+@media handheld and (orientation: landscape), 
+  screen and (max-width: 1000px) {
+
   .column {
     flex: 100%;
     display: block;
     margin-bottom: 20px;
   }
+
 }
 
 .dl-table {
@@ -33,14 +44,6 @@ span {
 .column {
   flex: 50%;
   padding: 16px;
-
-  @media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
 }
 
 .card {
