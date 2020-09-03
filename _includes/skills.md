@@ -32,8 +32,26 @@
 `Javascript`| `HTML` | `React Native and Expo` | `Ionic Framework` | `ReactJS` | `PreactJS` | `Django`
 {:.faded}
 
-
 <div markdown="0">
+    <h4>Python Skills: </h4> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+    <div class='indent_skill'>
+        <h6>Data Science: </h6> 
+        <p class="faded">
+            <code class="language-plaintext highlighter-rouge">Pandas</code>| 
+            <code class="language-plaintext highlighter-rouge">Numpy</code> | 
+            <code class="language-plaintext highlighter-rouge">Seaborn</code> | 
+            <code class="language-plaintext highlighter-rouge">Plotly</code> | 
+            <code class="language-plaintext highlighter-rouge">Sci-kit Learn</code> | 
+            <code class="language-plaintext highlighter-rouge">Regression Models</code> | 
+            <code class="language-plaintext highlighter-rouge">Classification Models</code>
+        </p>
+    </div>
+    <h6 class='indent_skill'>Image Processing: </h6> 
+    <h6 class='indent_skill'>Artificial Intelligence: </h6> 
+    <h6 class='indent_skill'>Robotics Programming: </h6> 
+    <h4>Other Software Engineering Skills: </h4> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+    <h4>Backend Engineering: </h4> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+    <h4>Frontend Engineering: </h4> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
     <div class="row_project">
         <div class="column_project">
             <h3>Other Skills</h3>
@@ -48,7 +66,7 @@
         </div>
         <div class="column_project">
             <h3>Languages</h3>
-            <b>English</b> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
+            <b>English</b> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
             <b>German</b> <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
         </div>
     </div>
