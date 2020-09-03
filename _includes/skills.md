@@ -35,7 +35,7 @@
 <div markdown="0">
     <h4>Python Skills: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
     <div class='indent_skill'>
-        <h6>Data Science: </h6> 
+        <h6>Data Science</h6> 
         <p class="faded">
             <code class="language-plaintext highlighter-rouge">Pandas</code>| 
             <code class="language-plaintext highlighter-rouge">Numpy</code> | 
@@ -45,18 +45,18 @@
             <code class="language-plaintext highlighter-rouge">Regression Models</code> | 
             <code class="language-plaintext highlighter-rouge">Classification Models</code>
         </p>
-        <h6 class='indent_skill'>Image Processing: </h6> 
+        <h6 class='indent_skill'>Image Processing</h6> 
         <p class="faded">
             <code class="language-plaintext highlighter-rouge">OpenCV</code>
         </p>
-        <h6 class='indent_skill'>Artificial Intelligence: </h6> 
+        <h6 class='indent_skill'>Artificial Intelligence</h6> 
         <p class="faded">
             <code class="language-plaintext highlighter-rouge">TensorFlow</code>| 
             <code class="language-plaintext highlighter-rouge">Keras</code> | 
             <code class="language-plaintext highlighter-rouge">Object Detection (Mask RCNN)</code> | 
             <code class="language-plaintext highlighter-rouge">GoLang</code> | 
         </p>
-        <h6 class='indent_skill'>Robotics Programming: </h6> 
+        <h6 class='indent_skill'>Robotics Programming</h6> 
         <p class="faded">
             <code class="language-plaintext highlighter-rouge">ROS</code>| 
             <code class="language-plaintext highlighter-rouge">Programming with Raspberry Pi and Arduino</code> 
