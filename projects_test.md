@@ -15,6 +15,7 @@ sitemap: false
   <hr>
   <div class="row_project">
     <div class="column_project">
+      <p class = "faded">31st May</p>
       <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%" loading="lazy">
@@ -26,6 +27,7 @@ sitemap: false
       </div>
     </div>
     <div class="column_project">
+      <p class = "faded">10th Feb</p>
       <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/antiplasti/antiplasti.jpg" alt="AntiPlasti" style="width:100%" loading="lazy">
@@ -42,6 +44,7 @@ sitemap: false
   <hr>
   <div class="row_project">
     <div class="column_project">
+      22nd Dec
       <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/pidronics/pidronics.gif" alt="PiDronics" style="width:100%" loading="lazy">
@@ -53,6 +56,7 @@ sitemap: false
       </div>
     </div>
     <div class="column_project">
+      July 2017/2018
       <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/dcit_bootcamp/dcitsquare.jpg" alt="BootCamp" style="width:100%" loading="lazy">
@@ -69,6 +73,7 @@ sitemap: false
   <hr>
   <div class="row_project">
     <div class="column_project">
+      <p class = "faded">31st October</p>
       <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/metOracle/weather.gif" alt="MetOracle" style="width:100%" loading="lazy">
@@ -102,38 +107,10 @@ sitemap: false
   </div>
 </div> -->
 
-## 2019
-*** 
-### [QuickRental](../projectlist/2019-31-05-QuickRental/){:.heading.flip-title} &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; AntiPlasti
-31st May &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; 10th Feb
-{:.faded}
-<!-- GIFs -->
-[![Quickrental](images/projects/quickrental/quickrental_icon.gif# quickrental bordered){:width="300" height="300" loading="lazy"}](../projectlist/2019-31-05-QuickRental/){:.heading.flip-title} &emsp;&nbsp;
-![AntiPlasti](images/projects/antiplasti/antiplasti.jpg# anti bordered){:width="300" height="300" loading="lazy"}
-
-`Affordable, Speedy, Easy, Apartment Rental Search` &emsp;&nbsp; `Saving Marine Environment`
 <!-- ![Quickrental](images/projects/quickrental/quickrental_icon.gif# quickrental bordered){:width="300" height="300" loading="lazy"} &emsp;&nbsp; -->
 <!-- https://github.com/quickrentalteam -->
 <!-- https://github.com/antiplasti -->
-
-## 2018
-*** 
-### PiDronics &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; DCIT Robotics BootCamp
-22nd Dec &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; July 2017/2018
-{:.faded}
-<!-- GIFs -->
-![PiDronics](images/projects/pidronics/pidronics.gif# pidronics bordered){:width="300" height="300" loading="lazy"} &emsp;&nbsp;
-![DCIT](images/projects/dcit_bootcamp/dcitsquare.jpg# dcit bordered){:width="300" height="300" loading="lazy"}
-
 <!-- https://github.com/PiDronics -->
-
-## 2017
-*** 
-### METOracle 
-31st October 
-{:.faded}
-<!-- GIFs -->
-![MetOracle](images/projects/metOracle/weather.gif# metoracle bordered){:width="300" height="300" loading="lazy"} 
 
 <!-- https://github.com/irontarkus95/MET-Oracle-lstm-time-series-weather-prediction -->
 
