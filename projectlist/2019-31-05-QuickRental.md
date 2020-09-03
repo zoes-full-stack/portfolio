@@ -87,4 +87,28 @@ The PRO Version is scheduled to release on July 7th on Gumroad. Pre-Orders are o
       While I've tried to find a multi-language solution, most showed drastically worse  results for the English base case.
       If you're technically inclined, you can adopt the code located in `_includes/js/search-worker.js` to your needs.
 
-
+<div markdown="0">
+  <hr class="dingbat related">
+    ::after
+  </hr>
+  <aside class="about related mt4 mb4" role="complementary">
+    <div class="author mt4"> 
+      <img src="/portfolio/images/gabieicon_128.png" srcset="/portfolio/images/gabieicon_128.png 1x,/portfolio/images/gabieicon_256.png 2x" alt="<Gabriela> <Sewdhan>" class="avatar" width="120" height="120" loading="lazy" style="opacity: 0;">
+      <h2 class="page-title hr-bottom"> About</h2>
+      <p>Gabriela Sewdhan: curious software engineer and robotics enthusiast based in Trinidad.</p>
+      <div class="sidebar-social"> <span class="sr-only">Social:</span>
+        <ul>
+          <li> 
+            <a href="https://www.linkedin.com/in/gabriela-sewdhan-3ba495120" title="LinkedIn" class="no-mark-external"> <span class="icon-linkedin2"></span> <span class="sr-only">LinkedIn</span> </a>
+          </li>
+          <li> 
+            <a href="https://github.com/GabrielaSewdhan" title="GitHub" class="no-mark-external"> <span class="icon-github"></span> <span class="sr-only">GitHub</span> </a>
+          </li>
+          <li> 
+            <a href="mailto:gabiems13@gmail.com" title="Email" class="no-mark-external"> <span class="icon-mail"></span> <span class="sr-only">Email</span> </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+</div>

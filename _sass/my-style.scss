@@ -90,8 +90,20 @@ span {
   padding: 16px;
 }
 
+.column_skills {
+  float: left;
+  width: 50%;
+  padding-right: 32px;
+}
+
+
 @media screen and (max-width: 600px) {
   .column_project {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+    .column_skills {
     width: 100%;
     display: block;
     margin-bottom: 20px;
@@ -109,12 +121,6 @@ span {
 //   }
 // }
 
-
-.column_skills {
-  float: left;
-  width: 50%;
-  padding-right: 32px;
-}
 
 .card_project {
   text-align: center;
