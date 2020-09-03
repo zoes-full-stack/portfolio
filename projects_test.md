@@ -44,7 +44,7 @@ sitemap: false
   <hr>
   <div class="row_project">
     <div class="column_project">
-      <p class = "faded">22nd Dec</p>
+      <p class = "faded"><small>22nd Dec</small></p>
       <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/pidronics/pidronics.gif" alt="PiDronics" style="width:100%" loading="lazy">
@@ -56,7 +56,7 @@ sitemap: false
       </div>
     </div>
     <div class="column_project">
-      <p class = "faded">July 2017/2018</p>
+      <p class = "faded"><small>July 2017/2018</small></p>
       <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/dcit_bootcamp/dcitsquare.jpg" alt="BootCamp" style="width:100%" loading="lazy">
@@ -73,7 +73,7 @@ sitemap: false
   <hr>
   <div class="row_project">
     <div class="column_project">
-      <p class = "faded">31st October</p>
+      <p class = "faded"><small>31st October</small></p>
       <div class="card_project">
           <a href="../projectlist/2019-31-05-QuickRental/">
             <img src="../images/projects/metOracle/weather.gif" alt="MetOracle" style="width:100%" loading="lazy">
