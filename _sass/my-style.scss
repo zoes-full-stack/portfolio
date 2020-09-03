@@ -36,17 +36,15 @@
 }
 
 
-
 /* Float four columns side by side */
 .column {
   float: left;
-  flex: 25%;
+  width: 25%;
   padding: 0 10px;
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {
-display: block;}
+.row {margin: 0 -5px;}
 
 /* Clear floats after the columns */
 .row:after {
@@ -58,7 +56,7 @@ display: block;}
 /* Responsive columns */
 @media screen and (max-width: 600px) {
   .column {
-    flex: 100%;
+    width: 100%;
     display: block;
     margin-bottom: 20px;
   }
@@ -89,6 +87,7 @@ span {
 
 /* Create two equal columns that sits next to each other */
 .column_project {
+  float: left;
   width: 50%;
   padding: 16px;
 }
