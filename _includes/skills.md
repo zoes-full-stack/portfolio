@@ -144,9 +144,9 @@
                 </ul>
         </div>
         <div class="column_skills">
-            <h3 class="indent_skill">Languages</h3>
-            <b class="indent_skill">English:</b> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
-            <b class="indent_skill">German: </b> <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
+            <h3>Languages</h3>
+            <b>English:</b> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
+            <b>German: </b> <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
         </div>
     </div>
 </div>
