@@ -1,4 +1,4 @@
-#### Python Skills: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+<!-- #### Python Skills: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
 
 ###### Data Science: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
 `Pandas`| `Numpy` | `Seaborn` | `Plotly` | `Sci-kit Learn` | `Regression Models` | `Classification Models`
@@ -18,21 +18,59 @@
 
 #### Other Software Engineering Skills: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
 `C++` | `Ubuntu`| `GoLang` | `Algorithm Design` | `Software Testing` | `GIT`
-{:.faded}
+{:.faded} -->
 
 <!-- #### Robotics Software Engineering: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
 `Python` | `C++` | `Ubuntu`| `ROS` | `OpenCV` | `GoLang` | `Algorithm Design` | `Software Testing` | `Programming with Raspberry Pi and Arduino`
 {:.faded} -->
 
-#### Backend Engineering: &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+<!-- #### Backend Engineering: &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
 `NodeJS`| `SQL` | `Serverless` | `Amazon Web Services` | `EC2` | `Amazon Lex` | `CloudFormation`
 {:.faded}
 
 #### Frontend Engineering: &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
 `Javascript`| `HTML` | `React Native and Expo` | `Ionic Framework` | `ReactJS` | `PreactJS` | `Django`
-{:.faded}
+{:.faded} -->
 
 <div markdown="0">
+    <div class="row_project">
+        <div class="column_skills">
+            <h2>SkillSet</h2>
+        </div>
+        <div class="column_skills">
+            <pre class="highlight">
+                <code>
+                    <span class="c">&lt;!-- My Skillset --&gt;</span>
+                    <span class="nt">&lt;script&gt;</span>
+                    <span class="nb">document</span>
+                    <span class="p">.</span>
+                    <span class="nx">getElementById</span>
+                    <span class="p">(</span><span class="dl">'</span>
+                    <span class="s1">skillset</span>
+                    <span class="dl">'</span>
+                    <span class="p">).</span>
+                    <span class="nx">addEventListener</span>
+                    <span class="p">(</span>
+                    <span class="dl">'</span>
+                    <span class="s1">display-skills</span>
+                    <span class="dl">'</span>
+                    <span class="p">,</span> 
+                    <span class="kd">function</span>
+                    <span class="p">()</span> 
+                    <span class="p">{</span>
+                    <span class="c1">// </span>
+                    <span class="o">&lt;</span>
+                    <span class="nx">List</span> 
+                    <span class="k">of</span> 
+                    <span class="nx">My</span> 
+                    <span class="nx">Skills</span>
+                    <span class="o">&gt;</span>
+                    <span class="p">});</span>
+                    <span class="nt">&lt;/script&gt;</span>
+                </code>
+            </pre>
+        </div>
+    </div>
     <h4>Python Skills: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
     <div class='indent_skill'>
         <h6>Data Science</h6> 
