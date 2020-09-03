@@ -89,11 +89,9 @@ The PRO Version is scheduled to release on July 7th on Gumroad. Pre-Orders are o
 
 <div markdown="0">
   <hr class="dingbat related">
-    ::after
-  </hr>
   <aside class="about related mt4 mb4" role="complementary">
     <div class="author mt4"> 
-      <img src="/portfolio/images/gabieicon_128.png" srcset="/portfolio/images/gabieicon_128.png 1x,/portfolio/images/gabieicon_256.png 2x" alt="<Gabriela> <Sewdhan>" class="avatar" width="120" height="120" loading="lazy" style="opacity: 0;">
+      <img src="../images/gabieicon_128.png" srcset="../images/gabieicon_128.png 1x,../images/gabieicon_256.png 2x" alt="<Gabriela> <Sewdhan>" class="avatar" width="120" height="120" loading="lazy" style="opacity: 0;">
       <h2 class="page-title hr-bottom"> About</h2>
       <p>Gabriela Sewdhan: curious software engineer and robotics enthusiast based in Trinidad.</p>
       <div class="sidebar-social"> <span class="sr-only">Social:</span>
