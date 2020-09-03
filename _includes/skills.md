@@ -54,7 +54,7 @@
             <code class="language-plaintext highlighter-rouge">TensorFlow</code>| 
             <code class="language-plaintext highlighter-rouge">Keras</code> | 
             <code class="language-plaintext highlighter-rouge">Object Detection (Mask RCNN)</code> | 
-            <code class="language-plaintext highlighter-rouge">GoLang</code> | 
+            <code class="language-plaintext highlighter-rouge">GoLang</code> 
         </p>
         <h6 class='indent_skill'>Robotics Programming</h6> 
         <p class="faded">
@@ -63,8 +63,40 @@
         </p>
     </div>
     <h4>Other Software Engineering Skills: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4> 
+    <p class="faded">
+            <code class="language-plaintext highlighter-rouge">C++</code>| 
+            <code class="language-plaintext highlighter-rouge">Ubuntu</code> | 
+            <code class="language-plaintext highlighter-rouge">Java</code>|
+            <code class="language-plaintext highlighter-rouge">GoLang</code> | 
+            <code class="language-plaintext highlighter-rouge">Algorithm Design</code> | 
+            <code class="language-plaintext highlighter-rouge">Software Testing</code> | 
+            <code class="language-plaintext highlighter-rouge">GIT</code> | 
+            <code class="language-plaintext highlighter-rouge">Android SDK</code> 
+    </p>
     <h4>Backend Engineering: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
+    <p class="faded">
+            <code class="language-plaintext highlighter-rouge">Nodejs</code>| 
+            <code class="language-plaintext highlighter-rouge">SQL</code> | 
+            <code class="language-plaintext highlighter-rouge">Serverless</code> |
+            <code class="language-plaintext highlighter-rouge">Amazon Web Services</code> |
+            <code class="language-plaintext highlighter-rouge">EC2</code> |
+            <code class="language-plaintext highlighter-rouge">Amazon Lex</code> |
+            <code class="language-plaintext highlighter-rouge">CloudFormation</code> 
+    </p>
     <h4>Frontend Engineering: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
+    <p class="faded">
+            <code class="language-plaintext highlighter-rouge">React Native and Expo</code>| 
+            <code class="language-plaintext highlighter-rouge">Javascript</code> | 
+            <code class="language-plaintext highlighter-rouge">HTML&CSS</code> | 
+            <code class="language-plaintext highlighter-rouge">ReactJS</code> | 
+            <code class="language-plaintext highlighter-rouge">PreactJS</code> | 
+            <code class="language-plaintext highlighter-rouge">Django</code> | 
+            <code class="language-plaintext highlighter-rouge">Ionic Framework</code>
+    </p>
+
+
+    `Javascript`| `HTML` | `React Native and Expo` | `Ionic Framework` | `ReactJS` | `PreactJS` | `Django`
+
     <div class="row_project">
         <div class="column_skills">
             <h3>Other Skills</h3>
