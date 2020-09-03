@@ -93,10 +93,6 @@
             <code class="language-plaintext highlighter-rouge">Django</code> | 
             <code class="language-plaintext highlighter-rouge">Ionic Framework</code>
     </p>
-
-
-    `Javascript`| `HTML` | `React Native and Expo` | `Ionic Framework` | `ReactJS` | `PreactJS` | `Django`
-
     <div class="row_project">
         <div class="column_skills">
             <h3>Other Skills</h3>
