@@ -8,21 +8,12 @@ hide_description: true
 sitemap: false
 ---
 
-## SkillSet
+<!-- ## SkillSet
 
 ```python
-skillset = ["Coding", "Baking", "Being Awesome"]
+skillset = ["Coding", "Baking", "Being"]
 print(skillset)
-```
-
-```html
-<!-- My Skillset -->
-<script>
-  document.getElementById('skillset').addEventListener('display-skills', function() {
-    // <List of My Skills>
-  });
-</script>
-```
+``` -->
 
 {% include skills.md %}
 
