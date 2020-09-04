@@ -8,17 +8,16 @@ sitemap: false
 <div markdown="0">
   <header>
     <!-- <h1 class="post-title flip-project-title"> QuickRental</h1> -->
-    <!-- <div class ="row_project">
-      <div class="post-date column_project_l"> 
-        <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
+    <div class ="row_project">
+      <div class="column_project_l">
+        <div class="post-date"> 
+          <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
+        </div>
       </div>
       <div class="column_project_l2">
         <a href="https://quick-rental-project-website.herokuapp.com/index.html" target="_blank" class="external heading flip-title">Website</a> |
         <a href="https://github.com/quickrentalteam" target="_blank" class="external heading flip-title">Source Code</a>
       </div>
-    </div> -->
-    <div class="post-date"> 
-      <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
     </div>
     <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
       <img src="/portfolio/images/projects/quickrental/apartmentapp2.png" alt="QuickRental" width="864" height="486" loading="lazy">
