@@ -1,8 +1,4 @@
 ---
-layout: page
-title: QuickRental
-image: /images/projects/quickrental/apartmentapp2.png
-description: >
 # hide_description: true
 sitemap: false
 ---
