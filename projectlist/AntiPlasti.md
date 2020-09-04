@@ -84,13 +84,13 @@ Maybe just glance at it to confirm that it is indeed a pretty long list.
       <div class="sidebar-social"> <span class="sr-only">Social:</span>
         <ul>
           <li> 
-            <a href="https://www.linkedin.com/in/gabriela-sewdhan-3ba495120" title="LinkedIn" class="no-mark-external"> <span class="icon-linkedin2"></span> <span class="sr-only">LinkedIn</span> </a>
+            <a href="https://www.linkedin.com/in/gabriela-sewdhan-3ba495120" target="_blank" title="LinkedIn" class="no-mark-external"> <span class="icon-linkedin2"></span> <span class="sr-only">LinkedIn</span> </a>
           </li>
           <li> 
-            <a href="https://github.com/GabrielaSewdhan" title="GitHub" class="no-mark-external"> <span class="icon-github"></span> <span class="sr-only">GitHub</span> </a>
+            <a href="https://github.com/GabrielaSewdhan" target="_blank" title="GitHub" class="no-mark-external"> <span class="icon-github"></span> <span class="sr-only">GitHub</span> </a>
           </li>
           <li> 
-            <a href="mailto:gabiems13@gmail.com" title="Email" class="no-mark-external"> <span class="icon-mail"></span> <span class="sr-only">Email</span> </a>
+            <a href="mailto:gabiems13@gmail.com" target="_blank" title="Email" class="no-mark-external"> <span class="icon-mail"></span> <span class="sr-only">Email</span> </a>
           </li>
         </ul>
       </div>
@@ -106,7 +106,7 @@ Maybe just glance at it to confirm that it is indeed a pretty long list.
         <a href="/portfolio/projectlist/PiDronics/" class="flip-title"><span>PiDronics - Automated Hydroponics Monitoring System</span></a> <time class="faded fine" datetime="2018-06-01T00:00:00+00:00">22 Dec 2018</time>
       </li>
       <li class="h4"> 
-        <a href="/portfolio/projectlist/dcitCamp-2017-2018/" class="flip-title"><span>Robotics BootCamp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">July 2017/2018</time>
+        <a href="/portfolio/projectlist/dcitCamp-2017-2018/" class="flip-title"><span>DCIT Robotics BootCamp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">July 2017/2018</time>
       </li>
       <li class="h4"> 
         <a href="/portfolio/projectlist/MetOracle/" class="flip-title"><span>MetOracle</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">31 Oct 2017</time>
