@@ -8,8 +8,8 @@ sitemap: false
 <div markdown="0">
   <header>
     <!-- <h1 class="post-title flip-project-title"> QuickRental</h1> -->
-    <div class ="row">
-      <div class="column_project_l">
+    <div class ="row_project">
+      <div class="column_project">
         <div class="post-date"> 
           <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
         </div>
