@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: QuickRental
 image: /images/projects/quickrental/apartmentapp2.png
 description: >
@@ -12,7 +12,7 @@ sitemap: false
 <!-- <p class="note" title="Attention">A custom label.</p> -->
 <div markdown="0">
   <header>
-    <!-- <h1 class="post-title flip-project-title"> QuickRental</h1> -->
+    <h1 class="post-title flip-project-title"> QuickRental</h1>
     <div class="post-date"> 
       <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
     </div>
