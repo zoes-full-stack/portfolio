@@ -1,6 +1,5 @@
 ---
-layout: page
-sitemap: false
+permalink: /QuickRental
 ---
 
 <!-- <p class="note" title="Attention">A custom label.</p> -->
