@@ -92,13 +92,13 @@ span {
 
 .column_project_l {
   float: left;
-  flex: 50%;
+  width: 50%;
   padding-top: 7px;
 }
 
 .column_project_l2 {
   float: right;
-  flex: 50%;
+  width: 50%;
   padding-top: 2px;
 }
 
@@ -139,7 +139,37 @@ span {
     display: block;
     margin-bottom: 20px;
   }
-    .column_skills {
+  .column_skills {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .column_code {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .column_code2 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .column_code3 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .column_code4 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .column_project_l {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .column_project_l2 {
     width: 100%;
     display: block;
     margin-bottom: 20px;
