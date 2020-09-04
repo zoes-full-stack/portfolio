@@ -32,8 +32,7 @@
 `Javascript`| `HTML` | `React Native and Expo` | `Ionic Framework` | `ReactJS` | `PreactJS` | `Django`
 {:.faded} -->
 
-<div markdown="0">
-    <div class="row_project">
+<!-- <div class="row_project">
         <div class="column_code3">
             <h2>SkillSet</h2>
         </div>
@@ -42,7 +41,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">skillset</span><span class="p">)</span>
 </code></pre></div></div>
         </div>
-    </div>
+    </div> -->
+
+<div markdown="0">
     <h4>Python Skills: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
     <div class='indent_skill'>
         <h6>Data Science</h6> 
