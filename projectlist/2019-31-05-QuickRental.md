@@ -1,6 +1,5 @@
 ---
 layout: page
-title: QuickRental
 image: /images/projects/quickrental/apartmentapp2.png
 description: >
   Version 9 is the most complete version of Hydejack yet.
@@ -12,9 +11,9 @@ sitemap: false
 <!-- <p class="note" title="Attention">A custom label.</p> -->
 <div markdown="0">
   <header>
-    <!-- <h1 class="post-title flip-project-title"> QuickRental</h1> -->
+    <h1 class="post-title flip-project-title"> QuickRental</h1>
     <div class="post-date"> 
-      <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/project_test/" class="flip-title">Projects</a>
+      <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
     </div>
     <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
       <img src="/portfolio/images/projects/quickrental/apartmentapp2.png" alt="QuickRental" width="864" height="486" loading="lazy">
