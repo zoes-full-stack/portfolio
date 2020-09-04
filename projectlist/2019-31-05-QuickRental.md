@@ -17,7 +17,7 @@ sitemap: false
         <a href="https://github.com/quickrentalteam" target="_blank" class="external heading flip-title">Source Code</a>
       </div>
     </div> -->
-    <div class="post-date column_project_l"> 
+    <div class="post-date"> 
       <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
     </div>
     <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
