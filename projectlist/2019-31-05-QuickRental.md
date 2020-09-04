@@ -1,5 +1,5 @@
 ---
-permalink: /QuickRental
+permalink: /2019-31-05-QuickRental
 ---
 
 <!-- <p class="note" title="Attention">A custom label.</p> -->
