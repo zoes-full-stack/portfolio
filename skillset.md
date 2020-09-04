@@ -16,9 +16,9 @@ sitemap: false
         <h1 class="post-title flip-project-title"> Skills</h1>
       </div>
       <div class="column_code4">
-          <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">skillset</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Coding"</span><span class="p">,</span> <span class="s">"Baking"</span><span class="p">,</span> <span class="s">"Being Awesome"</span><span class="p">]</span>
-  <span class="k">print</span><span class="p">(</span><span class="n">skillset</span><span class="p">)</span>
-  </code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">skillset</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Coding"</span><span class="p">,</span> <span class="s">"Baking"</span><span class="p">,</span> <span class="s">"Being Awesome"</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">skillset</span><span class="p">)</span>
+</code></pre></div></div>
       </div>
     </div>
   </header>
