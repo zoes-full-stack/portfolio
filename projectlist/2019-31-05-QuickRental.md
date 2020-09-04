@@ -8,7 +8,7 @@ sitemap: false
 <div markdown="0">
   <header>
     <!-- <h1 class="post-title flip-project-title"> QuickRental</h1> -->
-    <div class ="row_project">
+    <!-- <div class ="row_project">
       <div class="post-date column_project_l"> 
         <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
       </div>
@@ -16,6 +16,9 @@ sitemap: false
         <a href="https://quick-rental-project-website.herokuapp.com/index.html" target="_blank" class="external heading flip-title">Website</a> |
         <a href="https://github.com/quickrentalteam" target="_blank" class="external heading flip-title">Source Code</a>
       </div>
+    </div> -->
+    <div class="post-date column_project_l"> 
+      <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
     </div>
     <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
       <img src="/portfolio/images/projects/quickrental/apartmentapp2.png" alt="QuickRental" width="864" height="486" loading="lazy">
@@ -64,12 +67,10 @@ Ever since the introduction of Dark Mode, link styles have been a bit of an issu
 | No Hydejack Branding          |                | &#x2714;            |
 | License                       | [GPL-3.0][lic] | [PRO]               |
 | Source                        | [GitHub][src]  | Included            |
-| __Price__ / Upgrade           | __Free__       | __$99__ / $39 [^22] |
-| | [__Download__][kit] <br/>-- or --<br/> [__Deploy to Netlify__][nfy] | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
 {:.stretch-table.dl-table}
  
 
-## …and much more
+## Future Implementation
 
 Other noteworthy changes include:
 - Support for Jekyll 4
@@ -118,21 +119,17 @@ Maybe just glance at it to confirm that it is indeed a pretty long list.
     <h2 class="hr-bottom">Other Projects</h2>
     <ul class="related-posts">
       <li class="h4"> 
-        <a href="/portfolio/example/2020-07-03-introducing-hydejack-9/" class="flip-title"><span>AntiPlasti - Conserving the Oceans (something)</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">03 Jul 2020</time>
+        <a href="/portfolio/example/2020-07-03-introducing-hydejack-9/" class="flip-title"><span>AntiPlasti - Conserving the Oceans (something)</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">10 Feb 2019</time>
       </li>
       <li class="h4"> 
-        <a href="/portfolio/example/2018-06-01-example-content-iii/" class="flip-title"><span>PiDronics - Automated Hydroponics Monitoring System</span></a> <time class="faded fine" datetime="2018-06-01T00:00:00+00:00">01 Jun 2018</time>
+        <a href="/portfolio/example/2018-06-01-example-content-iii/" class="flip-title"><span>PiDronics - Automated Hydroponics Monitoring System</span></a> <time class="faded fine" datetime="2018-06-01T00:00:00+00:00">22 Dec 2018</time>
       </li>
       <li class="h4"> 
-        <a href="/portfolio/example/2017-11-23-example-content-ii/" class="flip-title"><span>Robotics BootCamp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">23 Nov 2017</time>
+        <a href="/portfolio/example/2017-11-23-example-content-ii/" class="flip-title"><span>Robotics BootCamp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">July 2017/2018</time>
       </li>
       <li class="h4"> 
-        <a href="/portfolio/example/2017-11-23-example-content-ii/" class="flip-title"><span>MetOracle</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">23 Nov 2017</time>
+        <a href="/portfolio/example/2017-11-23-example-content-ii/" class="flip-title"><span>MetOracle</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">31 Oct 2017</time>
       </li>
     </ul>
   </aside>
 </div>
-
-
-
-## Other Projects
