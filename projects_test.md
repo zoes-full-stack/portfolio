@@ -113,7 +113,9 @@ sitemap: false
 <!-- ![Quickrental](images/projects/quickrental/quickrental_icon.gif# quickrental bordered){:width="300" height="300" loading="lazy"} &emsp;&nbsp; -->
 <!-- https://github.com/quickrentalteam -->
 <!-- https://github.com/antiplasti -->
-<!-- https://github.com/PiDronics -->
+<!-- https://github.com/PiDronics 
+https://comp3613-pisynthesis.firebaseapp.com/
+-->
 
 <!-- https://github.com/irontarkus95/MET-Oracle-lstm-time-series-weather-prediction -->
 &nbsp;
