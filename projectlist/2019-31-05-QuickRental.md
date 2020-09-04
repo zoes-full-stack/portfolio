@@ -15,8 +15,8 @@ sitemap: false
         </div>
       </div>
       <div class="column_project_l2">
-        <a href="https://quick-rental-project-website.herokuapp.com/index.html" target="_blank" class="external heading flip-title">Website</a>
-        <a href="https://github.com/quickrentalteam" target="_blank" class="external heading flip-title">Source Code</a>
+        <a href="https://quick-rental-project-website.herokuapp.com/index.html" target="_blank" class="external">Website</a>
+        <a href="https://github.com/quickrentalteam" target="_blank" class="external">Source Code</a>
       </div>
     </div>
     <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
