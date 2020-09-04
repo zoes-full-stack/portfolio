@@ -20,7 +20,7 @@ sitemap: false
     <div class="column_project">
       <p class = "faded"><small>31st May</small></p>
       <div class="card_project">
-          <a href="../projectlist/2019-31-05-QuickRental/">
+          <a href="../projectlist/QuickRental/">
             <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%" loading="lazy">
           </a>
           <div class="container_project">
