@@ -3,7 +3,7 @@ layout: page
 title: QuickRental
 sitemap: false
 ---
-
+<!-- <a class="external" href="https://hydejack.com/" property="sameAs">Website</a> -->
 <!-- <p class="note" title="Attention">A custom label.</p> -->
 <div markdown="0">
   <header>
@@ -15,8 +15,8 @@ sitemap: false
         </div>
       </div>
       <div class="column_project2">
-        <a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">Website</a>
-        <a href="https://github.com/quickrentalteam" class="heading flip-title">Source Code</a>
+        <a href="../projectlist/2019-31-05-QuickRental/" class="external heading flip-title">Website</a>
+        <a href="https://github.com/quickrentalteam" class="external heading flip-title">Source Code</a>
       </div>
     </div>
     <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
