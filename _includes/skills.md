@@ -43,15 +43,7 @@
 </code></pre></div></div>
         </div>
     </div>
-    <div class="row_project">
-        <div class="column_code3">
-            <h4>Python Skills: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
-        </div>
-        <div class="column_code4">
-            <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">skillset</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Coding"</span><span class="p">,</span> <span class="s">"Baking"</span><span class="p">,</span> <span class="s">"Being Awesome"</span><span class="p">]</span>
-</code></pre></div>
-        </div>
-    </div>
+    <h4>Python Skills: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
     <div class='indent_skill'>
         <h6>Data Science</h6> 
         <p class="faded">
