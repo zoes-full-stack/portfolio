@@ -9,7 +9,6 @@ sitemap: false
 ---
 
 <div markdown="0">
-  <article class="page" role="article">
   <header>
     <div class ="row_project">
       <div class="column_code3">
@@ -22,7 +21,7 @@ sitemap: false
       </div>
     </div>
   </header>
-  </article>
+  <hr>
 </div>
 
 <!-- ## SkillSet
