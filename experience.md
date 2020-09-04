@@ -42,5 +42,5 @@ Click me to view!
 &nbsp;
 &nbsp;
 &nbsp;
-Continue with [Projects](projects.md){:.heading.flip-title}
+Continue with [Projects](projects_test.md){:.heading.flip-title}
 {:.read-more}
