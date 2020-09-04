@@ -8,8 +8,16 @@ sitemap: false
 <div markdown="0">
   <header>
     <!-- <h1 class="post-title flip-project-title"> QuickRental</h1> -->
-    <div class="post-date"> 
-      <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
+    <div class ="row">
+      <div class="column_project">
+        <div class="post-date"> 
+          <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
+        </div>
+      </div>
+      <div class="column_project2">
+        <a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">Website</a>
+        <a href="https://github.com/quickrentalteam" class="heading flip-title">Source Code</a>
+      </div>
     </div>
     <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
       <img src="/portfolio/images/projects/quickrental/apartmentapp2.png" alt="QuickRental" width="864" height="486" loading="lazy">
