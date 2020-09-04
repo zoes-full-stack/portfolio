@@ -3,8 +3,6 @@ layout: page
 title: QuickRental
 image: /images/projects/quickrental/apartmentapp2.png
 description: >
-  Version 9 is the most complete version of Hydejack yet.
-  Modernized design, big headlines, and big new features.
 hide_description: true
 sitemap: false
 ---
