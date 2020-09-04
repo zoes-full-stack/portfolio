@@ -15,6 +15,10 @@ skillset = ["Coding", "Baking", "Being"]
 print(skillset)
 ``` -->
 
+```c++
+L.insert(iterator, num_of_elements, element);
+```
+
 {% include skills.md %}
 
 &nbsp;
