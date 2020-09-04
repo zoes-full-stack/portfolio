@@ -1,6 +1,7 @@
 ---
 layout: page
 title: QuickRental
+permalink: /QuickRental
 sitemap: false
 ---
 <!-- <a class="external" href="https://hydejack.com/" property="sameAs">Website</a> -->
@@ -26,7 +27,6 @@ sitemap: false
   </header>
 </div>
 
-<!-- <header><h1 class="post-title flip-project-title" style="opacity: 1;"> Introducing Hydejack 9</h1><div class="post-date"> <time datetime="2020-07-03T00:00:00+00:00">03 Jul 2020</time> in <a href="/portfolio/example/" class="flip-title">Projects</a></div><div class="lead aspect-ratio sixteen-nine flip-project-img"> <img src="/portfolio/assets/img/blog/hydejack-9.jpg" alt="Introducing Hydejack 9" width="864" height="486" loading="lazy" style="opacity: 0;"></div><p class="note-sm"> Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.</p></header> -->
 
 Convienient, efficient and quick yet thorough apartment searching. All you need in just one place!
 {:.lead}
@@ -80,17 +80,7 @@ Other noteworthy changes include:
 
 Read the the [CHANGELOG](../../CHANGELOG.md){:.heading.flip-title} for the full scope of features and improvements made in Hydejack 9.
 Maybe just glance at it to confirm that it is indeed a pretty long list.
- 
 
-
-<!-- 
-
-[^1]: If you are a fan of the old two-column layout, or don't like modern design tropes such as mega headlines, Hydejack lets you revert these changes on a case-by-case basis via configuration options.
-
-[^2]:
-      Search was mainly tested for English and German. Please let me know about issues in other languages. 
-      While I've tried to find a multi-language solution, most showed drastically worse  results for the English base case.
-      If you're technically inclined, you can adopt the code located in `_includes/js/search-worker.js` to your needs. -->
 
 <div markdown="0">
   <hr class="dingbat related">
@@ -98,7 +88,7 @@ Maybe just glance at it to confirm that it is indeed a pretty long list.
     <div class="author mt4"> 
       <img src="/portfolio/images/gabieicon_128.png" srcset="/portfolio/images/gabieicon_128.png 1x,/portfolio/images/gabieicon_256.png 2x" alt="<Gabriela> <Sewdhan>" class="avatar" width="120" height="120" loading="lazy" style="opacity: 0;">
       <h2 class="page-title hr-bottom"> About</h2>
-      <p>Gabriela Sewdhan: curious software engineer and robotics enthusiast based in Trinidad.</p>
+      <p>Gabriela Sewdhan: software engineer, robotics enthusiast and baker based in Trinidad.</p>
       <div class="sidebar-social"> <span class="sr-only">Social:</span>
         <ul>
           <li> 
