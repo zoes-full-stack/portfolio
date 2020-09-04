@@ -9,10 +9,8 @@ sitemap: false
   <header>
     <!-- <h1 class="post-title flip-project-title"> QuickRental</h1> -->
     <div class ="row_project">
-      <div class="column_project_l">
-        <div class="post-date"> 
-          <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
-        </div>
+      <div class="post-date column_project_l"> 
+        <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
       </div>
       <div class="column_project_l2">
         <a href="https://quick-rental-project-website.herokuapp.com/index.html" target="_blank" class="external heading flip-title">Website</a> |
@@ -34,7 +32,7 @@ Convienient, efficient and quick yet thorough apartment searching. All you need 
 [Modernized](#linking-in-style) [design](#whats-in-the-cards), [big headlines](#ready-for-the-big-screen), big new features: [Built-In Search](#built-in-search), [Sticky Table of Contents](#sticky-table-of-contents), and [Auto-Hiding Navbar](#auto-hiding-navbar). That [and more](#and-much-more) is Hydejack 9.
 
 - Table of Contents
-{:toc .large-only}
+{:toc}
 
 ## About
 
