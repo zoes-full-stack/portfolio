@@ -1,30 +1,26 @@
 ---
 layout: page
 title: QuickRental
-image: /images/projects/quickrental/apartmentapp2.png
-description: > 
-  
-hide_description: false
 sitemap: false
 ---
 
 <!-- <p class="note" title="Attention">A custom label.</p> -->
 <div markdown="0">
   <header>
-    <h1 class="post-title flip-project-title"> QuickRental</h1>
+    <!-- <h1 class="post-title flip-project-title"> QuickRental</h1> -->
     <div class="post-date"> 
       <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
     </div>
     <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
       <img src="/portfolio/images/projects/quickrental/apartmentapp2.png" alt="QuickRental" width="864" height="486" loading="lazy">
     </div>
-    <p class="note-sm" title="QuickRental"> Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.</p>
+    <p class="note-sm" title="QuickRental"> Project intro goes here...</p>
   </header>
 </div>
 
 <!-- <header><h1 class="post-title flip-project-title" style="opacity: 1;"> Introducing Hydejack 9</h1><div class="post-date"> <time datetime="2020-07-03T00:00:00+00:00">03 Jul 2020</time> in <a href="/portfolio/example/" class="flip-title">Projects</a></div><div class="lead aspect-ratio sixteen-nine flip-project-img"> <img src="/portfolio/assets/img/blog/hydejack-9.jpg" alt="Introducing Hydejack 9" width="864" height="486" loading="lazy" style="opacity: 0;"></div><p class="note-sm"> Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.</p></header> -->
 
-Version 9 is the most complete version of Hydejack yet.
+Convienient, efficient and quick yet thorough apartment searching. All you need in just one place!
 {:.lead}
 
 [Modernized](#linking-in-style) [design](#whats-in-the-cards), [big headlines](#ready-for-the-big-screen), big new features: [Built-In Search](#built-in-search), [Sticky Table of Contents](#sticky-table-of-contents), and [Auto-Hiding Navbar](#auto-hiding-navbar). That [and more](#and-much-more) is Hydejack 9.
