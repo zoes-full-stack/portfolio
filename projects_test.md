@@ -24,7 +24,7 @@ sitemap: false
             <img src="../images/projects/quickrental/quickrental_icon.gif" alt="Quickrental" style="width:100%" loading="lazy">
           </a>
           <div class="container_project">
-            <h4 id="quickrental"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">QuickRental</a> <span>&#8594;</span></h4>
+            <h4 id="quickrental"><a href="../projectlist/QuickRental/" class="heading flip-title">QuickRental</a> <span>&#8594;</span></h4>
             <p class = "faded"><small>Catering to all your apartment needs</small></p>
           </div>
       </div>
@@ -32,11 +32,11 @@ sitemap: false
     <div class="column_project">
       <p class = "faded"><small>10th Feb</small></p>
       <div class="card_project">
-          <a href="../projectlist/2019-31-05-QuickRental/">
+          <a href="../projectlist/AntiPlasti/">
             <img src="../images/projects/antiplasti/antiplasti.jpg" alt="AntiPlasti" style="width:100%" loading="lazy">
           </a>
           <div class="container_project">
-            <h4 id="antiplasti"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">AntiPlasti</a> <span>&#8594;</span></h4>
+            <h4 id="antiplasti"><a href="../projectlist/AntiPlasti/" class="heading flip-title">AntiPlasti</a> <span>&#8594;</span></h4>
             <p class = "faded"><small>Taking one small step at a time</small></p>
           </div>
       </div>
@@ -53,7 +53,7 @@ sitemap: false
             <img src="../images/projects/pidronics/pidronics.gif" alt="PiDronics" style="width:100%" loading="lazy">
           </a>
           <div class="container_project">
-            <h4 id="pidronics"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">PiDronics</a> <span>&#8594;</span></h4>
+            <h4 id="pidronics"><a href="../projectlist/PiDronics/" class="heading flip-title">PiDronics</a> <span>&#8594;</span></h4>
             <p class = "faded"><small>Autonomous Hydroponics Tracking System</small></p>
           </div>
       </div>
@@ -65,7 +65,7 @@ sitemap: false
             <img src="../images/projects/dcit_bootcamp/dcitsquare.jpg" alt="BootCamp" style="width:100%" loading="lazy">
           </a>
           <div class="container_project">
-            <h4 id="bootcamp"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">DCIT Robotics Bootcamp</a> <span>&#8594;</span></h4>
+            <h4 id="bootcamp"><a href="../projectlist/dcitCamp-2017-2018/" class="heading flip-title">DCIT Robotics Bootcamp</a> <span>&#8594;</span></h4>
             <p class = "faded"><small>Meet Curie :3</small></p>
           </div>
       </div>
@@ -82,7 +82,7 @@ sitemap: false
             <img src="../images/projects/metOracle/weather.gif" alt="MetOracle" style="width:100%" loading="lazy">
           </a>
           <div class="container_project">
-            <h4 id="metoracle"><a href="../projectlist/2019-31-05-QuickRental/" class="heading flip-title">MetOracle</a> <span>&#8594;</span></h4>
+            <h4 id="metoracle"><a href="../projectlist/MetOracle/" class="heading flip-title">MetOracle</a> <span>&#8594;</span></h4>
             <p class = "faded"><small>Weather Prediction to Improve Smart City Resilience</small></p>
           </div>
       </div>

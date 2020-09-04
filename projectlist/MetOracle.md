@@ -1,29 +1,27 @@
 ---
 layout: page
-title: QuickRental
-permalink: /QuickRental
+title: DCIT Robotics BootCamp
 sitemap: false
 ---
-<!-- <a class="external" href="https://hydejack.com/" property="sameAs">Website</a> -->
-<!-- <p class="note" title="Attention">A custom label.</p> -->
+
+
 <div markdown="0">
   <header>
-    <!-- <h1 class="post-title flip-project-title"> QuickRental</h1> -->
     <div class ="row_project">
       <div class="column_project_l">
         <div class="post-date"> 
-          <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
+          <time datetime="2020-05-31T00:00:00+00:00">31 October 2017</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
         </div>
       </div>
       <div class="column_project_l2">
-        <a href="https://quick-rental-project-website.herokuapp.com/index.html" target="_blank" class="external heading flip-title">Website</a> |
-        <a href="https://github.com/quickrentalteam" target="_blank" class="external heading flip-title">Source Code</a>
+        <a href="https://comp3613-pisynthesis.firebaseapp.com/" target="_blank" class="external heading flip-title">MetOracle</a> |
+        <a href="https://github.com/irontarkus95/MET-Oracle-lstm-time-series-weather-prediction" target="_blank" class="external heading flip-title">Source Code</a>
       </div>
     </div>
     <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
-      <img src="/portfolio/images/projects/quickrental/apartmentapp2.png" alt="QuickRental" width="864" height="486" loading="lazy">
+      <img src="/portfolio/images/projects/metOracle/weather.gif" alt="metoracle" width="864" height="486" loading="lazy">
     </div>
-    <p class="note-sm" title="QuickRental"> Project intro goes here...</p>
+    <p class="note-sm" title="metoracle"> Project intro goes here...</p>
   </header>
 </div>
 
@@ -36,11 +34,6 @@ About can go here?
 
 - Table of Contents
 {:toc .large-only}
-
-<!-- ## About
-
-About Project goes here ....
-Ever since the introduction of Dark Mode, link styles have been a bit of an issue. Specifically, finding an accent color that worked on both light and dark backgrounds was the problem. With Hydejack 9, the [link style](#linking-in-style) has been revamped so that legibility is no longer tied to the choice of accent_color, giving you much more freedom in creating a unique design flavor for your site. -->
 
 ## Technologies Used
 `React Native with Expo` | `Javascript` | `HTML` | `CSS` | `Firebase Database`
@@ -108,16 +101,16 @@ Maybe just glance at it to confirm that it is indeed a pretty long list.
     <h2 class="hr-bottom">Other Projects</h2>
     <ul class="related-posts">
       <li class="h4"> 
-        <a href="/portfolio/example/2020-07-03-introducing-hydejack-9/" class="flip-title"><span>AntiPlasti - Conserving the Oceans (something)</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">10 Feb 2019</time>
+        <a href="/portfolio/projectlist/QuickRental/" class="flip-title"><span>QuickRental - Appartment Rental App (something)</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">31 May 2019</time>
       </li>
       <li class="h4"> 
-        <a href="/portfolio/example/2018-06-01-example-content-iii/" class="flip-title"><span>PiDronics - Automated Hydroponics Monitoring System</span></a> <time class="faded fine" datetime="2018-06-01T00:00:00+00:00">22 Dec 2018</time>
+        <a href="/portfolio/projectlist/AntiPlasti/" class="flip-title"><span>AntiPlasti</span></a> <time class="faded fine" datetime="2018-06-01T00:00:00+00:00">10 Feb 2019</time>
       </li>
       <li class="h4"> 
-        <a href="/portfolio/example/2017-11-23-example-content-ii/" class="flip-title"><span>Robotics BootCamp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">July 2017/2018</time>
+        <a href="/portfolio/projectlist/PiDronics/" class="flip-title"><span>PiDronics - Automated Hydroponics Monitoring System</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">22 Dec 2018</time>
       </li>
       <li class="h4"> 
-        <a href="/portfolio/example/2017-11-23-example-content-ii/" class="flip-title"><span>MetOracle</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">31 Oct 2017</time>
+        <a href="/portfolio/projectlist/dcitCamp-2017-2018/" class="flip-title"><span>DCIT Robotics BootCamp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">July 2017/2018</time>
       </li>
     </ul>
   </aside>
