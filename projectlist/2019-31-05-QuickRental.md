@@ -11,18 +11,16 @@ sitemap: false
 
 <!-- <p class="note" title="Attention">A custom label.</p> -->
 <div markdown="0">
-<header>
-<!-- <h1 class="post-title flip-project-title"> QuickRental</h1> -->
-<div class="post-date"> <time datetime=""></time></div><div class="lead aspect-ratio sixteen-nine flip-project-img"> <img src="/portfolio/images/projects/quickrental/apartmentapp2.png" alt="QuickRental" width="864" height="486" loading="lazy"></div><p class="note-sm" title="QuickRental"> Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.</p></header>
-</div>
-
-<div markdown="1">
-
-  ## Heading 2
-  Some **bold** text.
-
-  ## why wont you work?
-
+  <header>
+    <!-- <h1 class="post-title flip-project-title"> QuickRental</h1> -->
+    <div class="post-date"> 
+      <time datetime=""></time>
+    </div>
+    <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
+      <img src="/portfolio/images/projects/quickrental/apartmentapp2.png" alt="QuickRental" width="864" height="486" loading="lazy">
+    </div>
+    <p class="note-sm" title="QuickRental"> Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.</p>
+  </header>
 </div>
 
 Version 9 is the most complete version of Hydejack yet.
