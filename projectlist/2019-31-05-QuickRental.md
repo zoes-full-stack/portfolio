@@ -9,7 +9,7 @@ sitemap: false
   <header>
     <!-- <h1 class="post-title flip-project-title"> QuickRental</h1> -->
     <div class ="row_project">
-      <div class="column_project">
+      <div class="column_project_l">
         <div class="post-date"> 
           <time datetime="2020-05-31T00:00:00+00:00">31 May 2020</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
         </div>
@@ -36,9 +36,38 @@ Convienient, efficient and quick yet thorough apartment searching. All you need 
 - Table of Contents
 {:toc .large-only}
 
-## Linking in Style
+## About
 
+About Project goes here ....
 Ever since the introduction of Dark Mode, link styles have been a bit of an issue. Specifically, finding an accent color that worked on both light and dark backgrounds was the problem. With Hydejack 9, the [link style](#linking-in-style) has been revamped so that legibility is no longer tied to the choice of accent_color, giving you much more freedom in creating a unique design flavor for your site.
+
+## Technologies Used
+`React Native with Expo` | `Javascript` | `HTML` | `CSS` | `Firebase Database`
+{:.faded}
+
+## Features
+
+|                               | Free           | PRO                 |
+|:------------------------------|:--------------:|:-------------------:|
+| [Blog]                        | &#x2714;       | &#x2714;            |
+| [Features]                    | &#x2714;       | &#x2714;            |
+| [Documentation][docs]         | &#x2714;       | &#x2714;            |
+| [Portfolio]                   |                | &#x2714;            |
+| Printable [Resume]            |                | &#x2714;            |
+| [Dark Mode][dark]             |                | &#x2714;            |
+| [Built-In Search][search]     |                | &#x2714;            |
+| [Custom Forms][forms]         |                | &#x2714;            |
+| [Newsletter Box][news]        |                | &#x2714;            |
+| [Grid layout][grid]           |                | &#x2714;            |
+| [Offline Support][ofln]       |                | &#x2714;            |
+| Table of Contents[^21]        |                | &#x2714;            |
+| Cookie Banner                 |                | &#x2714;            |
+| No Hydejack Branding          |                | &#x2714;            |
+| License                       | [GPL-3.0][lic] | [PRO]               |
+| Source                        | [GitHub][src]  | Included            |
+| __Price__ / Upgrade           | __Free__       | __$99__ / $39 [^22] |
+| | [__Download__][kit] <br/>-- or --<br/> [__Deploy to Netlify__][nfy] | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
+{:.stretch-table.dl-table}
  
 ## Ready for the Big Screen
 
