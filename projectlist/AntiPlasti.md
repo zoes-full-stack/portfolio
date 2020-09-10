@@ -43,9 +43,9 @@ This project was developed alongside team members [Michael Ali](https://www.link
 
 ## How does it work?
 There are three parts to this system. 
-- The image recognition model was built to  detect plastics, glass, paper, rubbish, metal and cardboard in the ocean. 
-- Digital Ocean is used as a server to install the necessary requirements, and train the image recognition model. 
-- A raspberry pi, mounted with a camera, wrapped in a buoy, uses the server to send images and calls on the image recognition model to detect oceanic pollution. 
+- The [image recognition model](https://github.com/antiplasti/Plastic-Detection-Model) was built to  detect plastics, glass, paper, rubbish, metal and cardboard in the ocean. 
+- [Digital Ocean](https://github.com/antiplasti/Anti-Plasti-System) is used as a server to install the necessary requirements, and train the image recognition model. 
+- A [raspberry pi](), mounted with a camera, wrapped in a buoy, uses the server to send images and calls on the image recognition model to detect oceanic pollution. 
 
 The image and location of that pollution is sent to the AntiPlasti web app via the Firebase Database. This will notify the government and community where the pollution occurs and result in the removal of this pollution leading to cleaner, safer areas and also reducing climate change via reducing the emission of greenhouse gases from the breakdown of plastics.
 
@@ -53,16 +53,16 @@ The image and location of that pollution is sent to the AntiPlasti web app via t
 
 |                               | Completed      | To Do               |
 |:------------------------------|:--------------:|:-------------------:|
-| [Image Detection]             | &#x2714;       |                     |
-| [Oceanic Pollution Monitoring]| &#x2714;       |                     |
-| [Location Detection][docs]    | &#x2714;       |                     |
-| [Google Maps][docs]           | &#x2714;       |                     |
-| [Push Notification]           | &#x2714;       |                     |
+| Image Detection               | &#x2714;       |                     |
+| Oceanic Pollution Monitoring  | &#x2714;       |                     |
+| Location Detection            | &#x2714;       |                     |
+| Google Maps                   | &#x2714;       |                     |
+| Push Notification             | &#x2714;       |                     |
 | Complete end-to-end app       |                | &#x2714;            |
 | Testing                       |                | &#x2714;            |
 | Deployment                    |                | &#x2714;            |
 | No Hydejack Branding          |                | &#x2714;            |
-| Source                        | [GitHub](https://github.com/antiplasti){:target="_blank"}   | Included            |
+| Source                        | [GitHub](https://github.com/antiplasti){:target="_blank"}   |                   |
 {:.stretch-table.dl-table}
  
 

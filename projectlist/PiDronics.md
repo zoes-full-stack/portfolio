@@ -29,24 +29,17 @@ sitemap: false
 We aim to ease farmer's lives by building an automatic hydroponics system that takes little to no prior knowledge to use and with a low cost of entry.
 {:.lead}
 
-Raspberry pi sensor data for hydroponic plants such as pH, temperature, humidity, nutrient solution and dissolved oxygen. This repository will include the code for pulling the sensor data to the web app/site, determining if the data is at optimum levels and if not, the systems such as sun lamps, oxygen pumps, sprinklers etc will be triggered to act and get the humidity/temperature/pH/dissolved oxygen/nutrient solution to an optimum level.
+Hydroponics is a compact and efficient alternative to soil agriculture. One of the major challenges faced by hydroponics farmers is measuring important values from their system and making the necessary adjustments. This is time consuming and sometimes can be costly. 
 
-Hydroponics is a compact and efficient alternative to soil agriculture. One of the major challenges faced by hydroponics farmers is measuring important values from their system and making the necessary adjustments. This is time consuming and sometimes can be costly. This application simply grabs sensor data from a hydroponics loop and displays it in a clean, intuitive interface. Some of the readings taken are as follows:
+Our main goals are:
+- To make hydroponics easier for farmers
+- To help farmers better understand the needs of their crops
+- To encourage more people to get involved in hydroponics
 
-Water temperature
-Nutrient concentration
-Dissolved Oxygen
-Humidity of the air
-pH of water
-
-Goals
-To make hydroponics easier for farmers
-To help farmers better understand the needs of their crops
-To encourage more people to get involved in hydroponics
 About can go here?
 [Modernized](#linking-in-style) [design](#whats-in-the-cards), [big headlines](#ready-for-the-big-screen), big new features: [Built-In Search](#built-in-search), [Sticky Table of Contents](#sticky-table-of-contents), and [Auto-Hiding Navbar](#auto-hiding-navbar). That [and more](#and-much-more) is Hydejack 9.
 
-This project was developed alongside team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/){:target="_blank"}{:.heading.flip-title}, [Qarun Bissoondial](https://www.linkedin.com/in/qarun-qadir-bissoondial/){:target="_blank"}{:.heading.flip-title} and [Kristan Birbalsingh](https://www.linkedin.com/in/kristan-birbalsingh/){:target="_blank"}{:.heading.flip-title} for the DadliHack 2.0 Hackathon.
+This project was developed alongside team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/){:target="_blank"}{:.heading.flip-title}, [Qarun Bissoondial](https://www.linkedin.com/in/qarun-qadir-bissoondial/){:target="_blank"}{:.heading.flip-title} and [Kristan Birbalsingh](https://www.linkedin.com/in/kristan-birbalsingh/){:target="_blank"}{:.heading.flip-title}.
 
 - Table of Contents
 {:toc .large-only}
@@ -59,6 +52,18 @@ This project was developed alongside team members [Michael Ali](https://www.link
 ## Hardware Used 
 `Raspberry Pi` | `Temperature Sensor` | `Humidity Sensor` |`pH Sensor` | `Dissolved Oxygen Sensor` 
 {:.faded}
+
+## How does it work?
+The PiDronics application simply grabs sensor data from a hydroponics loop and displays it in a clean, intuitive interface. Some of the readings taken are as follows:
+
+- Water temperature
+- Nutrient concentration
+- Dissolved Oxygen
+- Humidity of the air
+- pH of water
+
+The data taken from these sensors are pushed to the web app/site, to determine if the data is at optimum levels. If not, the systems such as sun lamps, oxygen pumps, sprinklers etc will be triggered to act and get the humidity/temperature/pH/dissolved oxygen/nutrient solution to an optimum level.
+
 
 ## Features
 
