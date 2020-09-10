@@ -72,20 +72,21 @@ The user interface would enable users to find apartments, townhouses and homes f
 | Push Notification System                |           | &#x2714;|
 | Graph Database to support social Network|           | &#x2714;|
 | Interactive Tutorial Screen             |           | &#x2714;|
+| Deployment to Android and iOS           |           | &#x2714;|
 | Source                                  | [GitHub](https://github.com/quickrentalteam){:target="_blank"} 
 {:.stretch-table.dl-table}
  
 
-## Future Implementation
+## Full Implementation
 
-Other noteworthy changes include:
-- Support for Jekyll 4
-- Choice between MathJax and KaTeX for math rendering
-- Use of `jekyll-include-cache` for drastically improved page building speeds
+View Our:
+- [Project Website](https://quick-rental-project-website.herokuapp.com/final-report.html){:target="_blank"}{:.heading.flip-title} OR
+- [Project Document](https://docs.google.com/document/d/1x6pquztfBMKPRq7Z2c1AhgS2I1rwo8vd65kQ-VqxPWY/edit?usp=sharing){:target="_blank"}{:.heading.flip-title} for the full scope of features and improvements made in QuickRental 
+- [Project Video](https://youtu.be/WOppO_66oSE){:target="_blank"}{:.heading.flip-title} for an overview and demo of QuickRental!
 - New variables configuration file — adjust content width, sidebar width, font size, etc...
 - ...and the option to disable grouping projects by year.
 
-View our [Project Website](https://quick-rental-project-website.herokuapp.com/videos.html){:target="_blank"}{:.heading.flip-title} for the full scope of features and improvements made in QuickRental.
+View our [Project Website](https://quick-rental-project-website.herokuapp.com/final-report.html){:target="_blank"}{:.heading.flip-title} or our [Project Document](https://docs.google.com/document/d/1x6pquztfBMKPRq7Z2c1AhgS2I1rwo8vd65kQ-VqxPWY/edit?usp=sharing){:target="_blank"}{:.heading.flip-title} for the full scope of features and improvements made in QuickRental 
 Or view our [Project Video](https://youtu.be/WOppO_66oSE){:target="_blank"}{:.heading.flip-title}
 Maybe just glance at it to confirm that it is indeed a pretty long list.
 
