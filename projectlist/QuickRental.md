@@ -35,6 +35,8 @@ About can go here?
 
 This is an all-in-one mobile app solution for students of the University of the West Indies (UWI) who are seeking rental accommodation near to campus called QuickRental. This project endeavors to enhance the lives of students at the UWI by making it easier to decide on which housing would be best for them to rent.
 
+This project was developed as a final year project at the University of the West Indies with team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/), [Kady Seecharan](https://www.linkedin.com/in/kady-seecharan-a7a03a1a0/) and [Ishmael Mohammed](https://www.linkedin.com/in/ishmael-mohammed-00567918a/)!
+
 - Table of Contents
 {:toc .large-only}
 
@@ -86,7 +88,8 @@ Other noteworthy changes include:
 - New variables configuration file — adjust content width, sidebar width, font size, etc...
 - ...and the option to disable grouping projects by year.
 
-Read the the [CHANGELOG](../../CHANGELOG.md){:.heading.flip-title} for the full scope of features and improvements made in Hydejack 9.
+Read the the [CHANGELOG](https://quick-rental-project-website.herokuapp.com/videos.html){:.heading.flip-title} for the full scope of features and improvements made in QuickRental.
+Or view our [final project video](https://youtu.be/WOppO_66oSE)!
 Maybe just glance at it to confirm that it is indeed a pretty long list.
 
 
