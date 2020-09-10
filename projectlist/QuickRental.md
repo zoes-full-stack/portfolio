@@ -33,6 +33,8 @@ Convienient, efficient and quick yet thorough apartment searching. All you need 
 About can go here?
 [Modernized](#linking-in-style) [design](#whats-in-the-cards), [big headlines](#ready-for-the-big-screen), big new features: [Built-In Search](#built-in-search), [Sticky Table of Contents](#sticky-table-of-contents), and [Auto-Hiding Navbar](#auto-hiding-navbar). That [and more](#and-much-more) is Hydejack 9.
 
+This is an all-in-one mobile app solution for students of the University of the West Indies (UWI) who are seeking rental accommodation near to campus called QuickRental. This project endeavors to enhance the lives of students at the UWI by making it easier to decide on which housing would be best for them to rent.
+
 - Table of Contents
 {:toc .large-only}
 
@@ -45,26 +47,27 @@ Ever since the introduction of Dark Mode, link styles have been a bit of an issu
 `React Native with Expo` | `Javascript` | `HTML` | `CSS` | `Firebase Database`
 {:.faded}
 
+## How does it work?
+The user interface would enable users to find apartments, townhouses and homes for rent using GPS location and mapping, check real-time availability, price ranges, type of apartment, be it double room or studio etc. and read reviews submitted by other renters to gain insights about properties as well as view a virtual tour of the complex and neighborhood information for each listing. The app will enable live chat with the landlord for more details. In addition, it is key for landlords to be able to use out app to post their listings and updates.
+
 ## Features
 
-|                               | Free           | PRO                 |
-|:------------------------------|:--------------:|:-------------------:|
-| [Blog]                        | &#x2714;       | &#x2714;            |
-| [Features]                    | &#x2714;       | &#x2714;            |
-| [Documentation][docs]         | &#x2714;       | &#x2714;            |
-| [Portfolio]                   |                | &#x2714;            |
-| Printable [Resume]            |                | &#x2714;            |
-| [Dark Mode][dark]             |                | &#x2714;            |
-| [Built-In Search][search]     |                | &#x2714;            |
-| [Custom Forms][forms]         |                | &#x2714;            |
-| [Newsletter Box][news]        |                | &#x2714;            |
-| [Grid layout][grid]           |                | &#x2714;            |
-| [Offline Support][ofln]       |                | &#x2714;            |
-| Table of Contents[^21]        |                | &#x2714;            |
-| Cookie Banner                 |                | &#x2714;            |
-| No Hydejack Branding          |                | &#x2714;            |
-| License                       | [GPL-3.0][lic] | [PRO]               |
-| Source                        | [GitHub][src]  | Included            |
+|                                       | Free           | To Do               |
+|:--------------------------------------|:--------------:|:-------------------:|
+| [Authentication]                      | &#x2714;       | &#x2714;            |
+| [Advanced Apartment Filter and Query] | &#x2714;       | &#x2714;            |
+| [User/Landlord Account Management]    | &#x2714;       | &#x2714;            |
+| [CRUD Apartment]                      | &#x2714;       | &#x2714;            |
+| [Bookmark System]                     | &#x2714;       | &#x2714;            |
+| [Built-in Map System][dark]           | &#x2714;       | &#x2714;            |
+| [Message System][dark]                | &#x2714;       | &#x2714;            |
+| [Review System][search]               | &#x2714;       | &#x2714;            |
+| [Comment System][forms]               | &#x2714;       | &#x2714;            |
+| [Live Chat]                           | &#x2714;       | &#x2714;            |
+| [List layout]                         | &#x2714;       | &#x2714;            |
+| [Card Layout]                         | &#x2714;       | &#x2714;            |
+| No Hydejack Branding                  | &#x2714;       | &#x2714;            |
+| Source                                | [GitHub]["https://github.com/quickrentalteam"] |
 {:.stretch-table.dl-table}
  
 
