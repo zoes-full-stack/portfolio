@@ -32,7 +32,7 @@ Convienient, efficient and quick yet thorough apartment searching. All you need 
 
 This is an all-in-one mobile app solution for students of the University of the West Indies (UWI) who are seeking rental accommodation near to campus called QuickRental. This project endeavors to enhance the lives of students at the UWI by making it easier to decide on which housing would be best for them to rent.
 
-This project was developed as a final year project at the University of the West Indies with team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/){:.heading.flip-title}, [Kady Seecharan](https://www.linkedin.com/in/kady-seecharan-a7a03a1a0/){:.heading.flip-title} and [Ishmael Mohammed](https://www.linkedin.com/in/ishmael-mohammed-00567918a/){:.heading.flip-title}!
+This project was developed as a final year project at the University of the West Indies with team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/){:target="_blank"}{:.heading.flip-title}, [Kady Seecharan](https://www.linkedin.com/in/kady-seecharan-a7a03a1a0/){:target="_blank"}{:.heading.flip-title} and [Ishmael Mohammed](https://www.linkedin.com/in/ishmael-mohammed-00567918a/){:target="_blank"}{:.heading.flip-title}!
 
 - Table of Contents
 {:toc .large-only}
@@ -72,7 +72,7 @@ The user interface would enable users to find apartments, townhouses and homes f
 | Push Notification System              |         | &#x2714;|
 | Graph Database to support social Network|         | &#x2714;|
 | Interactive Tutorial Screen           |         | &#x2714;|
-| Source                                | [GitHub](https://github.com/quickrentalteam){:target="_blank"}| |
+| Source                                | [GitHub](https://github.com/quickrentalteam) |
 <!-- {:.stretch-table.dl-table} -->
  
 
