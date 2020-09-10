@@ -73,7 +73,7 @@ The user interface would enable users to find apartments, townhouses and homes f
 | Graph Database to support social Network|         | &#x2714;|
 | Interactive Tutorial Screen             |         | &#x2714;|
 | Source                                  | [GitHub](https://github.com/quickrentalteam) |
-<!-- {:.stretch-table.dl-table} -->
+{:.stretch-table.dl-table}
  
 
 ## Future Implementation
