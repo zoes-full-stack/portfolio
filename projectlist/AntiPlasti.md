@@ -25,11 +25,12 @@ sitemap: false
 </div>
 
 
-Convienient, efficient and quick yet thorough apartment searching. All you need in just one place!
+Reducing the plastics surrounding islands, along with weather prediction, resulting in climate change resilience and environment well-being, one step at a time.
 {:.lead}
 
 About can go here?
 [Modernized](#linking-in-style) [design](#whats-in-the-cards), [big headlines](#ready-for-the-big-screen), big new features: [Built-In Search](#built-in-search), [Sticky Table of Contents](#sticky-table-of-contents), and [Auto-Hiding Navbar](#auto-hiding-navbar). That [and more](#and-much-more) is Hydejack 9.
+
 
 - Table of Contents
 {:toc .large-only}
@@ -37,6 +38,15 @@ About can go here?
 ## Technologies Used
 `React Native with Expo` | `Javascript` | `HTML` | `CSS` | `Firebase Database`
 {:.faded}
+
+
+## How does it work?
+The user interface would enable users to find apartments, townhouses and homes for rent using GPS location and mapping, check real-time availability, price ranges, type of apartment, be it double room or studio etc. and read reviews submitted by other renters to gain insights about properties as well as view a virtual tour of the complex and neighborhood information for each listing. The app will enable live chat with the landlord for more details. In addition, it is key for landlords to be able to use out app to post their listings and updates.
+
+Image Recognition Model to detect plastics, glass, paper, rubbish, metal and cardboard. This is used to detect these pollution in the ocean to allow the eradication of these materials, helping marine life, fishermen, tourism and making the world resilient to climate change.
+
+Digital Ocean is used as a server to install the necessary requirements, and train the image recognition model. A raspberry pi, mounted with a camera, wrapped in a buoy, then calls on that server and is used to detect ocean pollution and push the location of that pollution to the Anti Plasti app via Firebase. This will notify the government and community where the pollution occurs and result in the removal of this pollution leading to cleaner, safer areas and also reducing climate change via reducing the emission of greenhouse gases from the breakdown of plastics.
+
 
 ## Features
 
