@@ -26,52 +26,66 @@ sitemap: false
 </div>
 
 
-Convienient, efficient and quick yet thorough apartment searching. All you need in just one place!
+We aim to ease farmer's lives by building an automatic hydroponics system that takes little to no prior knowledge to use and with a low cost of entry.
 {:.lead}
 
+Raspberry pi sensor data for hydroponic plants such as pH, temperature, humidity, nutrient solution and dissolved oxygen. This repository will include the code for pulling the sensor data to the web app/site, determining if the data is at optimum levels and if not, the systems such as sun lamps, oxygen pumps, sprinklers etc will be triggered to act and get the humidity/temperature/pH/dissolved oxygen/nutrient solution to an optimum level.
+
+Hydroponics is a compact and efficient alternative to soil agriculture. One of the major challenges faced by hydroponics farmers is measuring important values from their system and making the necessary adjustments. This is time consuming and sometimes can be costly. This application simply grabs sensor data from a hydroponics loop and displays it in a clean, intuitive interface. Some of the readings taken are as follows:
+
+Water temperature
+Nutrient concentration
+Dissolved Oxygen
+Humidity of the air
+pH of water
+
+Goals
+To make hydroponics easier for farmers
+To help farmers better understand the needs of their crops
+To encourage more people to get involved in hydroponics
 About can go here?
 [Modernized](#linking-in-style) [design](#whats-in-the-cards), [big headlines](#ready-for-the-big-screen), big new features: [Built-In Search](#built-in-search), [Sticky Table of Contents](#sticky-table-of-contents), and [Auto-Hiding Navbar](#auto-hiding-navbar). That [and more](#and-much-more) is Hydejack 9.
+
+This project was developed alongside team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/){:target="_blank"}{:.heading.flip-title}, [Qarun Bissoondial](https://www.linkedin.com/in/qarun-qadir-bissoondial/){:target="_blank"}{:.heading.flip-title} and [Kristan Birbalsingh](https://www.linkedin.com/in/kristan-birbalsingh/){:target="_blank"}{:.heading.flip-title} for the DadliHack 2.0 Hackathon.
 
 - Table of Contents
 {:toc .large-only}
 
 ## Technologies Used
-`React Native with Expo` | `Javascript` | `HTML` | `CSS` | `Firebase Database`
+`Python` | `Shell` | `Nodejs` | `Javascript` |`HTML` | `CSS` | `Firebase Database`
+{:.faded}
+
+<!-- get rest of sensors -->
+## Hardware Used 
+`Raspberry Pi` | `Temperature Sensor` | `Humidity Sensor` |`pH Sensor` | `Dissolved Oxygen Sensor` 
 {:.faded}
 
 ## Features
 
-|                               | Free           | PRO                 |
-|:------------------------------|:--------------:|:-------------------:|
-| [Blog]                        | &#x2714;       | &#x2714;            |
-| [Features]                    | &#x2714;       | &#x2714;            |
-| [Documentation][docs]         | &#x2714;       | &#x2714;            |
-| [Portfolio]                   |                | &#x2714;            |
-| Printable [Resume]            |                | &#x2714;            |
-| [Dark Mode][dark]             |                | &#x2714;            |
-| [Built-In Search][search]     |                | &#x2714;            |
-| [Custom Forms][forms]         |                | &#x2714;            |
-| [Newsletter Box][news]        |                | &#x2714;            |
-| [Grid layout][grid]           |                | &#x2714;            |
-| [Offline Support][ofln]       |                | &#x2714;            |
-| Table of Contents[^21]        |                | &#x2714;            |
-| Cookie Banner                 |                | &#x2714;            |
-| No Hydejack Branding          |                | &#x2714;            |
-| License                       | [GPL-3.0][lic] | [PRO]               |
-| Source                        | [GitHub][src]  | Included            |
+|                                       | Completed      | To Do               |
+|:--------------------------------------|:--------------:|:-------------------:|
+| Authentication                        | &#x2714;       |                     |
+| Hydroponics Remote Monitoring System  | &#x2714;       |                     |
+| CRUD Farm System & Sensors            | &#x2714;       |                     |
+| Plant Disease Recognition             | &#x2714;       |                     |
+| Educational Tool                      | &#x2714;       |                     |
+| Dashboard                             | &#x2714;       |                     |
+| Time Series Graphs                    | &#x2714;       |                     |
+| Live Video Monitoring                 |                | &#x2714;            |
+| Note System                           |                | &#x2714;            |
+| Reporting System                      |                | &#x2714;            |
+| Notification System                   |                | &#x2714;            |
+| Multiple Sensor Implementation        |                |                     |
+| Source                                | [GitHub](https://github.com/PiDronics){:target="_blank"}  | Included            |
 {:.stretch-table.dl-table}
  
 
-## Future Implementation
+## Full Implementation
 
-Other noteworthy changes include:
-- Support for Jekyll 4
-- Choice between MathJax and KaTeX for math rendering
-- Use of `jekyll-include-cache` for drastically improved page building speeds
-- New variables configuration file — adjust content width, sidebar width, font size, etc...
-- ...and the option to disable grouping projects by year.
-
-Read the the [CHANGELOG](../../CHANGELOG.md){:.heading.flip-title} for the full scope of features and improvements made in Hydejack 9.
+See Our
+- [PRODUCT MANUAL](https://docs.google.com/document/d/1FWLsea7MBdXaazkmk156T1Quhn5-B72oxn0frQKcgs8/edit?usp=sharing) to understand the usage of the system.
+- [PIDRONICS WEBBAPP](https://comp3613-pisynthesis.firebaseapp.com/) for a demo of the system.
+- [PROJECT DOCUMENT]() for detailed features and information.
 Maybe just glance at it to confirm that it is indeed a pretty long list.
 
 

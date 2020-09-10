@@ -30,7 +30,7 @@ Reducing the plastics surrounding islands, along with weather prediction, result
 About can go here?
 [Modernized](#linking-in-style) [design](#whats-in-the-cards), [big headlines](#ready-for-the-big-screen), big new features: [Built-In Search](#built-in-search), [Sticky Table of Contents](#sticky-table-of-contents), and [Auto-Hiding Navbar](#auto-hiding-navbar). That [and more](#and-much-more) is Hydejack 9.
 
-This project was developed alongside team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/){:target="_blank"}{:.heading.flip-title} and [Qarun Bissoondial](https://www.linkedin.com/in/qarun-qadir-bissoondial/){:target="_blank"}{:.heading.flip-title}!
+This project was developed alongside team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/){:target="_blank"}{:.heading.flip-title} and [Qarun Bissoondial](https://www.linkedin.com/in/qarun-qadir-bissoondial/){:target="_blank"}{:.heading.flip-title} for the DadliHack 2.0 Hackathon.
 
 
 - Table of Contents
@@ -42,7 +42,12 @@ This project was developed alongside team members [Michael Ali](https://www.link
 
 
 ## How does it work?
-There are three parts to this system. The image recognition model was built to  detect plastics, glass, paper, rubbish, metal and cardboard in the ocean. Digital Ocean is used as a server to install the necessary requirements, and train the image recognition model. A raspberry pi, mounted with a camera, wrapped in a buoy, uses the server to send images and calls on the image recognition model to detect oceanic pollution. The image and location of that pollution is sent to the AntiPlasti web app via the Firebase Database. This will notify the government and community where the pollution occurs and result in the removal of this pollution leading to cleaner, safer areas and also reducing climate change via reducing the emission of greenhouse gases from the breakdown of plastics.
+There are three parts to this system. 
+- The image recognition model was built to  detect plastics, glass, paper, rubbish, metal and cardboard in the ocean. 
+- Digital Ocean is used as a server to install the necessary requirements, and train the image recognition model. 
+- A raspberry pi, mounted with a camera, wrapped in a buoy, uses the server to send images and calls on the image recognition model to detect oceanic pollution. 
+
+The image and location of that pollution is sent to the AntiPlasti web app via the Firebase Database. This will notify the government and community where the pollution occurs and result in the removal of this pollution leading to cleaner, safer areas and also reducing climate change via reducing the emission of greenhouse gases from the breakdown of plastics.
 
 ## Features
 
