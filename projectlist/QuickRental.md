@@ -75,7 +75,7 @@ The user interface would enable users to find apartments, townhouses and homes f
 | Source                                  | [GitHub](https://github.com/quickrentalteam){:target="_blank"} 
 
 
-<!-- {:.stretch-table.dl-table} -->
+{:.stretch-table.dl-table}
  
 
 ## Future Implementation
