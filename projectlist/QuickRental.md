@@ -30,12 +30,9 @@ sitemap: false
 Convienient, efficient and quick yet thorough apartment searching. All you need in just one place!
 {:.lead}
 
-About can go here?
-[Modernized](#linking-in-style) [design](#whats-in-the-cards), [big headlines](#ready-for-the-big-screen), big new features: [Built-In Search](#built-in-search), [Sticky Table of Contents](#sticky-table-of-contents), and [Auto-Hiding Navbar](#auto-hiding-navbar). That [and more](#and-much-more) is Hydejack 9.
-
 This is an all-in-one mobile app solution for students of the University of the West Indies (UWI) who are seeking rental accommodation near to campus called QuickRental. This project endeavors to enhance the lives of students at the UWI by making it easier to decide on which housing would be best for them to rent.
 
-This project was developed as a final year project at the University of the West Indies with team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/), [Kady Seecharan](https://www.linkedin.com/in/kady-seecharan-a7a03a1a0/) and [Ishmael Mohammed](https://www.linkedin.com/in/ishmael-mohammed-00567918a/)!
+This project was developed as a final year project at the University of the West Indies with team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/){:.heading.flip-title}, [Kady Seecharan](https://www.linkedin.com/in/kady-seecharan-a7a03a1a0/){:.heading.flip-title} and [Ishmael Mohammed](https://www.linkedin.com/in/ishmael-mohammed-00567918a/){:.heading.flip-title}!
 
 - Table of Contents
 {:toc .large-only}
@@ -47,7 +44,7 @@ Ever since the introduction of Dark Mode, link styles have been a bit of an issu
 
 ## Technologies Used
 `React Native with Expo` | `Javascript` | `HTML` | `CSS` | `Firebase Database`
-{:.faded}
+<!-- {:.faded} -->
 
 ## How does it work?
 The user interface would enable users to find apartments, townhouses and homes for rent using GPS location and mapping, check real-time availability, price ranges, type of apartment, be it double room or studio etc. and read reviews submitted by other renters to gain insights about properties as well as view a virtual tour of the complex and neighborhood information for each listing. The app will enable live chat with the landlord for more details. In addition, it is key for landlords to be able to use out app to post their listings and updates.
@@ -75,8 +72,8 @@ The user interface would enable users to find apartments, townhouses and homes f
 | Push Notification System              |         | &#x2714;|
 | Graph Database to support social Network|         | &#x2714;|
 | Interactive Tutorial Screen           |         | &#x2714;|
-| Source                                | [GitHub](https://github.com/quickrentalteam) |
-{:.stretch-table.dl-table}
+| Source                                | [GitHub](https://github.com/quickrentalteam){:target="_blank"} |
+<!-- {:.stretch-table.dl-table} -->
  
 
 ## Future Implementation
@@ -88,8 +85,8 @@ Other noteworthy changes include:
 - New variables configuration file — adjust content width, sidebar width, font size, etc...
 - ...and the option to disable grouping projects by year.
 
-Read the the [CHANGELOG](https://quick-rental-project-website.herokuapp.com/videos.html){:.heading.flip-title} for the full scope of features and improvements made in QuickRental.
-Or view our [final project video](https://youtu.be/WOppO_66oSE)!
+View our [Project Website](https://quick-rental-project-website.herokuapp.com/videos.html){:target="_blank"}{:.heading.flip-title} for the full scope of features and improvements made in QuickRental.
+Or view our [Project Video](https://youtu.be/WOppO_66oSE){:target="_blank"}{:.heading.flip-title}
 Maybe just glance at it to confirm that it is indeed a pretty long list.
 
 
