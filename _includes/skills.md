@@ -101,7 +101,7 @@
                 <ul>
                     <li>Project and Team Management</li>
                     <li>SCRUM and Agile Methodologies</li>
-                    <li>Game Development...</li>
+                    <li>Game Development (C++, C#)</li>
                     <li>Mathematical Skills in Algebra, Statistics and Probability</li>
                 </ul>
         </div>

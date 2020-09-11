@@ -18,12 +18,16 @@
 <hr>
 &nbsp;
 
-**Research Papers** at **U.W.I, Department of Computing and Information Technology (DCIT)**
+**Publications**
+
+**U.W.I, Department of Computing and Information Technology**
 
 - Optimising Personalised Prepaid Cellular Plans &nbsp; [_May 2020_] <br>
 **Supervisor**: Professor Patrick Hosein
 
+**U.W.I, Department of Behavioural Sciences**
+
 - Examining the Psychological Well-being of Cancer Survivors &nbsp; [_May 2016_] <br>
-**Supervisor**: Dr. Jannel Phillip
+**Supervisor**: Dr. Jannel Phillips
 &nbsp;
 <hr>
