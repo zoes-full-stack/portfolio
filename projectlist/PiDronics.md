@@ -119,7 +119,7 @@ Maybe just glance at it to confirm that it is indeed a pretty long list.
     <h2 class="hr-bottom">Other Projects</h2>
     <ul class="related-posts">
       <li class="h4"> 
-        <a href="/portfolio/projectlist/QuickRental/" class="flip-title"><span>QuickRental - Appartment Rental App (something)</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">31 May 2019</time>
+        <a href="/portfolio/projectlist/QuickRental/" class="flip-title"><span>QuickRental</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">31 May 2019</time>
       </li>
       <li class="h4"> 
         <a href="/portfolio/projectlist/AntiPlasti/" class="flip-title"><span>AntiPlasti</span></a> <time class="faded fine" datetime="2018-06-01T00:00:00+00:00">10 Feb 2019</time>
