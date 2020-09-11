@@ -14,7 +14,7 @@ sitemap: false
         </div>
       </div>
       <div class="column_project_l2">
-        <a href="https://comp3613-pisynthesis.firebaseapp.com/" target="_blank" class="external heading flip-title">MetOracle</a> |
+        <!-- <a href="https://comp3613-pisynthesis.firebaseapp.com/" target="_blank" class="external heading flip-title">MetOracle</a> | -->
         <a href="https://github.com/irontarkus95/MET-Oracle-lstm-time-series-weather-prediction" target="_blank" class="external heading flip-title">Source Code</a>
       </div>
     </div>
