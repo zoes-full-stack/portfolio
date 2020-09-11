@@ -37,17 +37,19 @@ This project was developed as a final year project at the University of the West
 - Table of Contents
 {:toc .large-only}
 
-<!-- ## About
-
-About Project goes here ....
-Ever since the introduction of Dark Mode, link styles have been a bit of an issue. Specifically, finding an accent color that worked on both light and dark backgrounds was the problem. With Hydejack 9, the [link style](#linking-in-style) has been revamped so that legibility is no longer tied to the choice of accent_color, giving you much more freedom in creating a unique design flavor for your site. -->
 
 ## Technologies Used
 `React Native with Expo` | `Javascript` | `HTML` | `CSS` | `Firebase Database`
 <!-- {:.faded} -->
 
 ## How does it work?
-The user interface would enable users to find apartments, townhouses and homes for rent using GPS location and mapping, check real-time availability, price ranges, type of apartment, be it double room or studio etc. and read reviews submitted by other renters to gain insights about properties as well as view a virtual tour of the complex and neighborhood information for each listing. The app will enable live chat with the landlord for more details. In addition, it is key for landlords to be able to use out app to post their listings and updates.
+The user interface would enable users to:
+- Find apartments, townhouses and homes for rent using GPS location and mapping
+- Check real-time availability, price ranges, type of apartment, be it double room or studio etc.
+- Read reviews submitted by other renters to gain insights about properties.
+- View a virtual tour of the complex and neighborhood information for each listing. 
+- Enable live chat with the landlord for more details. 
+- Post apartment listings and updates as a landlord.
 
 ## Features
 
