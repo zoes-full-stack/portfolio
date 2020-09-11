@@ -27,15 +27,12 @@ sitemap: false
 Reducing the plastics surrounding islands, along with weather prediction, resulting in climate change resilience and environment well-being, one step at a time.
 {:.lead}
 
-About can go here?
-[Modernized](#linking-in-style) [design](#whats-in-the-cards), [big headlines](#ready-for-the-big-screen), big new features: [Built-In Search](#built-in-search), [Sticky Table of Contents](#sticky-table-of-contents), and [Auto-Hiding Navbar](#auto-hiding-navbar). That [and more](#and-much-more) is Hydejack 9.
-
 This project was developed alongside team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/){:target="_blank"}{:.heading.flip-title} and [Qarun Bissoondial](https://www.linkedin.com/in/qarun-qadir-bissoondial/){:target="_blank"}{:.heading.flip-title} for the DadliHack 2.0 Hackathon.
 
 
 ## Technologies and Hardware Used
 `Python` | `Digital Ocean` | `Raspberry Pi` |  `Nodejs` | `Reactjs` | `Firebase Database` | `Javascript` | `HTML` | `CSS`
-{:.faded}
+<!-- {:.faded} -->
 
 
 ## How does it work?
@@ -44,7 +41,7 @@ There are three parts to this system.
 - [Digital Ocean](https://github.com/antiplasti/Anti-Plasti-System) is used as a server to install the necessary requirements, and train the image recognition model. 
 - A [raspberry pi](), mounted with a camera, wrapped in a buoy, uses the server to send images and calls on the image recognition model to detect oceanic pollution. 
 
-The image and location of that pollution is sent to the AntiPlasti web app via the Firebase Database. This will notify the government and community where the pollution occurs and result in the removal of this pollution leading to cleaner, safer areas and also reducing climate change via reducing the emission of greenhouse gases from the breakdown of plastics.
+The image and location of that pollution is sent to the **AntiPlasti** web app via the **Firebase Database**. This will notify the government and community where the pollution occurs and result in the removal of this pollution leading to cleaner, safer areas and also reducing climate change via reducing the emission of greenhouse gases from the breakdown of plastics.
 
 ## Features
 
@@ -58,7 +55,6 @@ The image and location of that pollution is sent to the AntiPlasti web app via t
 | Complete end-to-end app       |                | &#x2714;            |
 | Testing                       |                | &#x2714;            |
 | Deployment                    |                | &#x2714;            |
-| No Hydejack Branding          |                | &#x2714;            |
 | Source                        | [GitHub](https://github.com/antiplasti){:target="_blank"}   |                   |
 {:.stretch-table.dl-table}
  

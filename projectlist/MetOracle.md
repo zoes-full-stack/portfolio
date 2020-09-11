@@ -41,13 +41,13 @@ Within Trinidad and Tobago, there has been a severe problem concerning flooding 
 
 People may know of Global Warming, and attribute every hot day to it, but we have found a way to show the quantifiable effects of global warming in order to raise awareness, and to more accurately predict the changes in weather to better prepare farmers, city planners and everyday citizens. 
 
-Our main goals are:
+**Our main goals are:**
 - To prepare our city planners and everyday citizens for the trials ahead due to the extreme weather events that result from climate change.
 
 
 ## Technologies Used
 `Python` | `C` | `Tensorflow` | `Google Maps API` | `JavaScript` | `HTML` | `CSS` | `Firebase Database`
-{:.faded}
+<!-- {:.faded} -->
 
 
 ## How does it work?

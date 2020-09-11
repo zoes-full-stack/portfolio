@@ -85,9 +85,9 @@ The data taken from these sensors are pushed to the web app/site, to determine i
 ## Full Implementation
 
 See Our
-- [PRODUCT MANUAL](https://docs.google.com/document/d/1FWLsea7MBdXaazkmk156T1Quhn5-B72oxn0frQKcgs8/edit?usp=sharing) to understand the usage of the system.
-- [PIDRONICS WEBBAPP](https://comp3613-pisynthesis.firebaseapp.com/) for a demo of the system.
-- [PROJECT DOCUMENT]() for detailed features and information.
+- [PRODUCT MANUAL](https://docs.google.com/document/d/1FWLsea7MBdXaazkmk156T1Quhn5-B72oxn0frQKcgs8/edit?usp=sharing){:target="_blank"}{:.heading.flip-title} to understand the usage of the system.
+- [PIDRONICS WEB BAPP](https://comp3613-pisynthesis.firebaseapp.com/){:target="_blank"}{:.heading.flip-title} for a demo of the system.
+- [PROJECT DOCUMENT](https://docs.google.com/document/d/19n-Tqvua5BX2gGXPMfhZQK4Tw7byQBMCGW686ZdKLPQ/edit?usp=sharing){:target="_blank"}{:.heading.flip-title} for detailed features and information.
 Maybe just glance at it to confirm that it is indeed a pretty long list.
 
 ### Updates Coming Soon...
