@@ -10,7 +10,7 @@ sitemap: false
     <div class ="row_project">
       <div class="column_project_l">
         <div class="post-date"> 
-          <time datetime="2020-05-31T00:00:00+00:00">22 Dec 2018</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
+          <time datetime="2020-05-31T00:00:00+00:00">22 Dec 2018</time> in <a href="/projects/" class="flip-title">Projects</a>
         </div>
       </div>
       <div class="column_project_l2">
@@ -19,7 +19,7 @@ sitemap: false
       </div>
     </div>
     <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
-      <img src="/portfolio/images/projects/pidronics/pidronics_large.png" alt="PiDronics" width="864" height="486" loading="lazy">
+      <img src="/images/projects/pidronics/pidronics_large.png" alt="PiDronics" width="864" height="486" loading="lazy">
     </div>
     <p class="note-sm" title="PiDronics"> PiDronics: Automated Hydroponics Monitoring System</p>
   </header>
@@ -97,7 +97,7 @@ Maybe just glance at it to confirm that it is indeed a pretty long list.
   <hr class="dingbat related">
   <aside class="about related mt4 mb4" role="complementary">
     <div class="author mt4"> 
-      <img src="/portfolio/images/gabieicon_128.png" srcset="/portfolio/images/gabieicon_128.png 1x,/portfolio/images/gabieicon_256.png 2x" alt="<Gabriela> <Sewdhan>" class="avatar" width="120" height="120" loading="lazy" style="opacity: 0;">
+      <img src="/images/gabieicon_128.png" srcset="/images/gabieicon_128.png 1x,/images/gabieicon_256.png 2x" alt="<Gabriela> <Sewdhan>" class="avatar" width="120" height="120" loading="lazy" style="opacity: 0;">
       <h2 class="page-title hr-bottom"> About</h2>
       <p>Gabriela Sewdhan: software engineer, robotics enthusiast and baker based in Trinidad.</p>
       <div class="sidebar-social"> <span class="sr-only">Social:</span>
@@ -119,16 +119,16 @@ Maybe just glance at it to confirm that it is indeed a pretty long list.
     <h2 class="hr-bottom">Other Projects</h2>
     <ul class="related-posts">
       <li class="h4"> 
-        <a href="/portfolio/projectlist/QuickRental/" class="flip-title"><span>QuickRental</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">31 May 2019</time>
+        <a href="/projectlist/QuickRental/" class="flip-title"><span>QuickRental</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">31 May 2019</time>
       </li>
       <li class="h4"> 
-        <a href="/portfolio/projectlist/AntiPlasti/" class="flip-title"><span>AntiPlasti</span></a> <time class="faded fine" datetime="2018-06-01T00:00:00+00:00">10 Feb 2019</time>
+        <a href="/projectlist/AntiPlasti/" class="flip-title"><span>AntiPlasti</span></a> <time class="faded fine" datetime="2018-06-01T00:00:00+00:00">10 Feb 2019</time>
       </li>
       <li class="h4"> 
-        <a href="/portfolio/projectlist/dcitCamp-2017-2018/" class="flip-title"><span>DCIT Robotics BootCamp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">July 2017/2018</time>
+        <a href="/projectlist/dcitCamp-2017-2018/" class="flip-title"><span>DCIT Robotics BootCamp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">July 2017/2018</time>
       </li>
       <li class="h4"> 
-        <a href="/portfolio/projectlist/MetOracle/" class="flip-title"><span>MetOracle</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">31 Oct 2017</time>
+        <a href="/projectlist/MetOracle/" class="flip-title"><span>MetOracle</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">31 Oct 2017</time>
       </li>
     </ul>
   </aside>

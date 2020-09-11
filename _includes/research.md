@@ -10,7 +10,7 @@
 **Research Assistant** at **U.W.I, Department of Computing and Information Technology (DCIT)**
 {:.note title="March 2018 - May 2019"}
 
-- rasperry pi - plant under 
+- Measuring the environmental effects on plants via visual through a camera and sensor readings through humidity, temperature and pH sensors. 
 **Supervisor**: Dr. Phaedra Mohammed
 - EvaLing - Evaluating and Developing Speech Recognition for Caribbean Dialect 
 **Supervisor**: Mr. Kyle DeFreitas    
@@ -31,5 +31,3 @@
 **Supervisor**: Dr. Jannel Phillips
 &nbsp;
 <hr>
-
-sensor data (humidy, temp, pH, camera) in plant, studying if changes in environment would affect plant visually
