@@ -45,10 +45,6 @@ Our main goals are:
 - To prepare our city planners and everyday citizens for the trials ahead due to the extreme weather events that result from climate change.
 
 
-- Table of Contents
-{:toc .large-only}
-
-
 ## Technologies Used
 `Python` | `C` | `Tensorflow` | `Google Maps API` | `JavaScript` | `HTML` | `CSS` | `Firebase Database`
 {:.faded}

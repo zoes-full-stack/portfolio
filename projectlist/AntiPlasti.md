@@ -33,9 +33,6 @@ About can go here?
 This project was developed alongside team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/){:target="_blank"}{:.heading.flip-title} and [Qarun Bissoondial](https://www.linkedin.com/in/qarun-qadir-bissoondial/){:target="_blank"}{:.heading.flip-title} for the DadliHack 2.0 Hackathon.
 
 
-- Table of Contents
-{:toc .large-only}
-
 ## Technologies and Hardware Used
 `Python` | `Digital Ocean` | `Raspberry Pi` |  `Nodejs` | `Reactjs` | `Firebase Database` | `Javascript` | `HTML` | `CSS`
 {:.faded}
