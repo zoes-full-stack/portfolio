@@ -116,10 +116,10 @@ Maybe just glance at it to confirm that it is indeed a pretty long list.
     <h2 class="hr-bottom">Other Projects</h2>
     <ul class="related-posts">
       <li class="h4">
-        <a href="/portfolio/projectlist/AntiPlasti/" class="flip-title"><span>AntiPlasti - Conserving the Oceans (something)</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">10 Feb 2019</time>
+        <a href="/portfolio/projectlist/AntiPlasti/" class="flip-title"><span>AntiPlasti</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">10 Feb 2019</time>
       </li>
       <li class="h4"> 
-        <a href="/portfolio/projectlist/PiDronics/" class="flip-title"><span>PiDronics - Automated Hydroponics Monitoring System</span></a> <time class="faded fine" datetime="2018-06-01T00:00:00+00:00">22 Dec 2018</time>
+        <a href="/portfolio/projectlist/PiDronics/" class="flip-title"><span>PiDronics</span></a> <time class="faded fine" datetime="2018-06-01T00:00:00+00:00">22 Dec 2018</time>
       </li>
       <li class="h4"> 
         <a href="/portfolio/projectlist/dcitCamp-2017-2018/" class="flip-title"><span>DCIT Robotics BootCamp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">July 2017/2018</time>
