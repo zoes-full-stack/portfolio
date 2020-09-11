@@ -36,9 +36,6 @@ Our main goals are:
 - To help farmers better understand the needs of their crops
 - To encourage more people to get involved in hydroponics
 
-About can go here?
-[Modernized](#linking-in-style) [design](#whats-in-the-cards), [big headlines](#ready-for-the-big-screen), big new features: [Built-In Search](#built-in-search), [Sticky Table of Contents](#sticky-table-of-contents), and [Auto-Hiding Navbar](#auto-hiding-navbar). That [and more](#and-much-more) is Hydejack 9.
-
 This project was developed alongside team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/){:target="_blank"}{:.heading.flip-title}, [Qarun Bissoondial](https://www.linkedin.com/in/qarun-qadir-bissoondial/){:target="_blank"}{:.heading.flip-title} and [Kristan Birbalsingh](https://www.linkedin.com/in/kristan-birbalsingh/){:target="_blank"}{:.heading.flip-title}.
 
 - Table of Contents
@@ -92,6 +89,8 @@ See Our
 - [PIDRONICS WEBBAPP](https://comp3613-pisynthesis.firebaseapp.com/) for a demo of the system.
 - [PROJECT DOCUMENT]() for detailed features and information.
 Maybe just glance at it to confirm that it is indeed a pretty long list.
+
+### Updates Coming Soon...
 
 
 <div markdown="0">

@@ -66,17 +66,7 @@ The image and location of that pollution is sent to the AntiPlasti web app via t
 {:.stretch-table.dl-table}
  
 
-## Future Implementation
-
-Other noteworthy changes include:
-- Support for Jekyll 4
-- Choice between MathJax and KaTeX for math rendering
-- Use of `jekyll-include-cache` for drastically improved page building speeds
-- New variables configuration file — adjust content width, sidebar width, font size, etc...
-- ...and the option to disable grouping projects by year.
-
-Read the the [CHANGELOG](../../CHANGELOG.md){:.heading.flip-title} for the full scope of features and improvements made in Hydejack 9.
-Maybe just glance at it to confirm that it is indeed a pretty long list.
+### Updates Coming Soon...
 
 
 <div markdown="0">
