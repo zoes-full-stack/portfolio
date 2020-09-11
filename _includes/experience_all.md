@@ -1,8 +1,9 @@
 **Data Scientist and Software Developer** at **Telecommunication Services of Trinidad and Tobago Limited (TSTT)**
 {:.note title="November 2019 - September 2020"}
 
-- Performed extensive analysis on team productivity data
-    - Helped develop a Figure Of Metric (FOM) measurement and dashboard for productivity during COVID-19.
+- Performed extensive analysis on team and organisation productivity data
+    - Helped develop a Figure Of Metric (FOM) measurement and mathematical model
+    - Helped develop a Productivity Dashboard  during COVID-19.
 - Developed an Admin interface for managing users, roles and permissions.
 - Helped develop dataset to better understand customer behaviour.
 - Employed Machine Learning Models to improve customer retention.
@@ -26,9 +27,11 @@
 {:.note title="August - October 2018"}
 
 - Developed various software modules with a stringent and well-documented Git workflow.
+    - New users were automatically searched through a database of blacklisted individuals before confirmation.
+    - I no member :(
 - Worked on deploying these micro-services to Amazon Web Services.
 - Gained practical experience in Cloud infrastructure and deployment and React Native app development.
-- Created a chat-bot using Amazon Lex.
+- Created a chat-bot using Amazon Lex for support services.
 &nbsp;
 <hr>
 &nbsp;
@@ -45,7 +48,7 @@
 {:.note title="July 2017/2018"}
 
 - Assisted in organizing the camp
-- Contributed to the code
+- Contributed to the code development
 - Help mentor students in programming a raspberry pi robot via:
     - Inceptionv3 for image recognition
     - Epspeak for voice

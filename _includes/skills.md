@@ -36,7 +36,7 @@
 <div markdown="0">
     <h4>Python Skills: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
     <div class='indent_skill'>
-        <h6>Data Science</h6> 
+        <h6>Data Science and Data Visualisation</h6> 
         <p class="faded">
             <code class="language-plaintext highlighter-rouge">Pandas</code>| 
             <code class="language-plaintext highlighter-rouge">Numpy</code> | 
@@ -55,6 +55,7 @@
             <code class="language-plaintext highlighter-rouge">TensorFlow</code>| 
             <code class="language-plaintext highlighter-rouge">Keras</code> | 
             <code class="language-plaintext highlighter-rouge">Object Detection (Mask RCNN)</code> | 
+            <code class="language-plaintext highlighter-rouge">pyTorch</code>| 
             <code class="language-plaintext highlighter-rouge">GoLang</code> 
         </p>
         <h6 class='indent_skill'>Robotics Programming</h6> 
@@ -74,7 +75,7 @@
             <code class="language-plaintext highlighter-rouge">GIT</code> | 
             <code class="language-plaintext highlighter-rouge">Android SDK</code> 
     </p>
-    <h4>Backend Engineering: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
+    <h4>Backend Engineering: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span></h4>
     <p class="faded">
             <code class="language-plaintext highlighter-rouge">Nodejs</code>| 
             <code class="language-plaintext highlighter-rouge">SQL</code> | 
@@ -84,7 +85,7 @@
             <code class="language-plaintext highlighter-rouge">Amazon Lex</code> |
             <code class="language-plaintext highlighter-rouge">CloudFormation</code> 
     </p>
-    <h4>Frontend Engineering: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span></h4>
+    <h4>Frontend Engineering: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
     <p class="faded">
             <code class="language-plaintext highlighter-rouge">React Native and Expo</code>| 
             <code class="language-plaintext highlighter-rouge">Javascript</code> | 
@@ -100,9 +101,7 @@
                 <ul>
                     <li>Project and Team Management</li>
                     <li>SCRUM and Agile Methodologies</li>
-                    <li>Web and App Development</li>
-                    <li>Machine Learning and A.I based Predictions</li>
-                    <li>Data Visualisation</li>
+                    <li>Game Development...</li>
                     <li>Mathematical Skills in Algebra, Statistics and Probability</li>
                 </ul>
         </div>

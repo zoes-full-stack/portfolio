@@ -10,8 +10,10 @@
 **Research Assistant** at **U.W.I, Department of Computing and Information Technology (DCIT)**
 {:.note title="March 2018 - May 2019"}
 
-- rasperry pi - plant under **Dr. Phaedra Mohammed**.
-- EvaLing - Evaluating and Developing Speech Recognition for Caribbean Dialect under **Mr. Kyle DeFreitas**.    
+- rasperry pi - plant under 
+**Supervisor**: Dr. Phaedra Mohammed
+- EvaLing - Evaluating and Developing Speech Recognition for Caribbean Dialect 
+**Supervisor**: Mr. Kyle DeFreitas    
 &nbsp;
 <hr>
 &nbsp;
