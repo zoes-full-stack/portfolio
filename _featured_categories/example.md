@@ -3,7 +3,7 @@
 layout: list
 
 # The title of the tag's page.
-title: Example
+title: Projects
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
 slug: example
@@ -20,3 +20,6 @@ description: >
 # DON'T USE THIS SETTING IN YOUR CATEGORIES!
 sitemap: false
 ---
+
+Continue with [Resume](resume.md){:.heading.flip-title}
+{:.read-more}
