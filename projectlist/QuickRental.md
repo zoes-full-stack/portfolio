@@ -87,7 +87,7 @@ View Our:
 - [Project Video](https://youtu.be/WOppO_66oSE){:target="_blank"}{:.heading.flip-title} for an overview and demo of QuickRental!
 Maybe just glance at it to confirm that it is indeed a pretty long list.
 
-### Updates Coming Soon...
+### Updates Coming Soon... :relaxed:
 
 
 <div markdown="0">

@@ -39,7 +39,7 @@ This project was developed alongside team members [Michael Ali](https://www.link
 There are three parts to this system. 
 - The [image recognition model](https://github.com/antiplasti/Plastic-Detection-Model){:target="_blank"}{:.heading.flip-title} was built to  detect plastics, glass, paper, rubbish, metal and cardboard in the ocean. 
 - [Digital Ocean](https://github.com/antiplasti/Anti-Plasti-System){:target="_blank"}{:.heading.flip-title} is used as a server to install the necessary requirements, and train the image recognition model. 
-- A [raspberry pi](), mounted with a camera, wrapped in a buoy, uses the server to send images and calls on the image recognition model to detect oceanic pollution. 
+- A **raspberry pi**, mounted with a camera, wrapped in a buoy, uses the server to send images and calls on the image recognition model to detect oceanic pollution. 
 
 The image and location of that pollution is sent to the **AntiPlasti** web app via the **Firebase Database**. 
 
@@ -61,7 +61,7 @@ This will notify the government and community where the pollution occurs and res
 {:.stretch-table.dl-table}
  
 
-### Updates Coming Soon...
+### Updates Coming Soon... :relaxed:
 
 
 <div markdown="0">

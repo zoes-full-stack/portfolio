@@ -90,7 +90,7 @@ See Our
 - [PROJECT DOCUMENT](https://docs.google.com/document/d/19n-Tqvua5BX2gGXPMfhZQK4Tw7byQBMCGW686ZdKLPQ/edit?usp=sharing){:target="_blank"}{:.heading.flip-title} for detailed features and information.
 Maybe just glance at it to confirm that it is indeed a pretty long list.
 
-### Updates Coming Soon...
+### Updates Coming Soon... :relaxed:
 
 
 <div markdown="0">

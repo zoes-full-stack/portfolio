@@ -26,7 +26,7 @@ sitemap: false
 </div>
 
 
-MET-Oracle: Aiding in the Prediction and Preparation for Adverse Weather Conditions due to Global Warming
+**MET-Oracle**: Aiding in the Prediction and Preparation for Adverse Weather Conditions due to Global Warming
 {:.lead}
 
 
@@ -41,8 +41,8 @@ Within Trinidad and Tobago, there has been a severe problem concerning flooding 
 
 People may know of Global Warming, and attribute every hot day to it, but we have found a way to show the quantifiable effects of global warming in order to raise awareness, and to more accurately predict the changes in weather to better prepare farmers, city planners and everyday citizens. 
 
-**Our main goals are:**
-- To prepare our city planners and everyday citizens for the trials ahead due to the extreme weather events that result from climate change.
+**Our Main Goal**
+To prepare our city planners and everyday citizens for the trials ahead due to the extreme weather events that result from climate change.
 
 
 ## Technologies Used
@@ -78,7 +78,7 @@ People may know of Global Warming, and attribute every hot day to it, but we hav
 - It was planned to use neural networks and supplied river levels to predict and help prepare for flooding, however, it was not feasible in the timeframe. 
 - In addition, Google Cloud Computing was the first choice for implementing the neural network so that users can directly interact with the model. For example, being able to enter a future date and then shown both curve plots and a geographical representation. Google Cloud has a free solution which we hoped and prepared to implement, however, our credit cards were refused during signup.
 
-### Updates Coming Soon...
+### Updates Coming Soon... :relaxed:
 
 <div markdown="0">
   <hr class="dingbat related">
