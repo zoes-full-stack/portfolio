@@ -29,51 +29,56 @@ sitemap: false
 Convienient, efficient and quick yet thorough apartment searching. All you need in just one place!
 {:.lead}
 
-About can go here?
-[Modernized](#linking-in-style) [design](#whats-in-the-cards), [big headlines](#ready-for-the-big-screen), big new features: [Built-In Search](#built-in-search), [Sticky Table of Contents](#sticky-table-of-contents), and [Auto-Hiding Navbar](#auto-hiding-navbar). That [and more](#and-much-more) is Hydejack 9.
+Within Trinidad and Tobago, there has been a severe problem concerning flooding in many boroughs and water shortages due to droughts. This is due to poor planning from a lack of awareness to the changes in our country's climate due to climate change. 
+
+People may know of Global Warming, and attribute every hot day to it, but we have found a way to show the quantifiable effects of global warming in order to raise awareness, and to more accurately predict the changes in weather to better prepare farmers, city planners and everyday citizens. 
+
+Our main goals are:
+- To prepare our city planners and everyday citizens for the trials ahead due to the extreme weather events that result from climate change.
+
+**MET-Oracle** is a tool to improve the lives of citizens and increase infrastructure's resilience, in Trinidad and Tobago, by helping us predict and prepare for adverse weather conditions brought on by Global Warming, and quantifying the effect it will have on our country's climate. It is a linear regression model built in Python using Tensorflow and our web interface uses the Google Maps API.
+
+This project was developed alongside team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/){:target="_blank"}{:.heading.flip-title} and [Qarun Bissoondial](https://www.linkedin.com/in/qarun-qadir-bissoondial/){:target="_blank"}{:.heading.flip-title}.
+
 
 - Table of Contents
 {:toc .large-only}
 
+
 ## Technologies Used
-`React Native with Expo` | `Javascript` | `HTML` | `CSS` | `Firebase Database`
+`Python` | `C` | `Tensorflow` | `Google Maps API` | `JavaScript` | `HTML` | `CSS` | `Firebase Database`
 {:.faded}
+
+
+## How does it work?
+Our implementation uses AI, in the form of a model using **tensorflow**, as well as an **array of sensors** at strategic locations to better understand the long term effects that global warming will have on our country's climate and thus to adequately prepare. 
+
+A **central server** collects predictions from tensorflow and real-time data from sensors and makes a comparison between the two values. 
+
+Once they are within a margin of error and the data follows a particular weather pattern, the pi receives a response from the server and takes appropriate action. 
+
+A **web app** is also used to view the real-time data at a particular sensor.
+
+As this system grows and continues to improve over time, the accuracy and reliability will also increase and will better be able to benefit Trinidad and Tobago from an infrastructural and economic standpoint.
+
 
 ## Features
 
-|                               | Free           | PRO                 |
+|                               | Completed      | To Do               |
 |:------------------------------|:--------------:|:-------------------:|
-| [Blog]                        | &#x2714;       | &#x2714;            |
-| [Features]                    | &#x2714;       | &#x2714;            |
-| [Documentation][docs]         | &#x2714;       | &#x2714;            |
-| [Portfolio]                   |                | &#x2714;            |
-| Printable [Resume]            |                | &#x2714;            |
-| [Dark Mode][dark]             |                | &#x2714;            |
-| [Built-In Search][search]     |                | &#x2714;            |
-| [Custom Forms][forms]         |                | &#x2714;            |
-| [Newsletter Box][news]        |                | &#x2714;            |
-| [Grid layout][grid]           |                | &#x2714;            |
-| [Offline Support][ofln]       |                | &#x2714;            |
-| Table of Contents[^21]        |                | &#x2714;            |
-| Cookie Banner                 |                | &#x2714;            |
-| No Hydejack Branding          |                | &#x2714;            |
-| License                       | [GPL-3.0][lic] | [PRO]               |
-| Source                        | [GitHub][src]  | Included            |
+| Web Scraping                  | &#x2714;       |                     |
+| Weather Prediction            | &#x2714;       |                     |
+| Live Graph Data               | &#x2714;       |                     |
+| Monitoring WebApp             | &#x2714;       |                     |
+| Source                        | [GitHub](https://github.com/irontarkus95/MET-Oracle-lstm-time-series-weather-prediction){:target="_blank"}  |             |
 {:.stretch-table.dl-table}
  
-
 ## Future Implementation
 
-Other noteworthy changes include:
-- Support for Jekyll 4
-- Choice between MathJax and KaTeX for math rendering
-- Use of `jekyll-include-cache` for drastically improved page building speeds
-- New variables configuration file — adjust content width, sidebar width, font size, etc...
-- ...and the option to disable grouping projects by year.
+= It was planned to use neural networks and supplied river levels to predict and help prepare for flooding, however, it was not feasible in the timeframe. 
+- In addition, Google Cloud Computing was the first choice for implementing the neural network so that users can directly interact with the model. For example, being able to enter a future date and then shown both curve plots and a geographical representation. Google Cloud has a free solution which we hoped and prepared to implement, however, our credit cards were refused during signup.
 
-Read the the [CHANGELOG](../../CHANGELOG.md){:.heading.flip-title} for the full scope of features and improvements made in Hydejack 9.
-Maybe just glance at it to confirm that it is indeed a pretty long list.
-
+### Updates Coming Soon...
 
 <div markdown="0">
   <hr class="dingbat related">
