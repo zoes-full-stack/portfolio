@@ -42,7 +42,7 @@ Within Trinidad and Tobago, there has been a severe problem concerning flooding 
 People may know of Global Warming, and attribute every hot day to it, but we have found a way to show the quantifiable effects of global warming in order to raise awareness, and to more accurately predict the changes in weather to better prepare farmers, city planners and everyday citizens. 
 
 **Our Main Goal**
-To prepare our city planners and everyday citizens for the trials ahead due to the extreme weather events that result from climate change.
+  To prepare our city planners and everyday citizens for the trials ahead due to the extreme weather events that result from climate change.
 
 
 ## Technologies Used
@@ -59,7 +59,7 @@ To prepare our city planners and everyday citizens for the trials ahead due to t
 
 - A **web app** is also used to view the real-time data at a particular sensor.
 
-- As this system grows and continues to improve over time, the accuracy and reliability will also increase and will better be able to benefit Trinidad and Tobago from an infrastructural and economic standpoint.
+As this system grows and continues to improve over time, the accuracy and reliability will also increase and will better be able to benefit Trinidad and Tobago from an infrastructural and economic standpoint.
 
 
 ## Features

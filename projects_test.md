@@ -62,7 +62,7 @@ sitemap: false
       <p class = "faded"><small>July 2017/2018</small></p>
       <div class="card_project">
           <a href="../projectlist/dcitCamp-2017-2018/">
-            <img src="../images/projects/dcit_bootcamp/dcit_square_curie.jpg" alt="BootCamp" style="width:100%" loading="lazy">
+            <img src="../images/projects/dcit_bootcamp/dcit_square_curie.png" alt="BootCamp" style="width:100%" loading="lazy">
           </a>
           <div class="container_project">
             <h4 id="bootcamp"><a href="../projectlist/dcitCamp-2017-2018/" class="heading flip-title">DCIT Robotics Bootcamp</a> <span>&#8594;</span></h4>
