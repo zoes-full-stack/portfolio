@@ -68,5 +68,5 @@ Hydejack uses KaTeX to efficiently render math.
 &nbsp;
 &nbsp;
 
-Continue with [Skills](skillset.md){:.heading.flip-title}
+Continue with [Skills](skills.md){:.heading.flip-title}
 {:.read-more}

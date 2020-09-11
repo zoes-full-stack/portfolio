@@ -47,7 +47,7 @@ let array = calendars.map(item => item.id);
         data={[{key: 'Skills'}]} />
 ``` -->
 
-{% include skills.md %}
+{% include skillset.md %}
 
 &nbsp;
 &nbsp;

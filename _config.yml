@@ -55,11 +55,11 @@ menu:
   - title:             About
     url:               /about/
   - title:             Skills
-    url:               /skillset/
+    url:               /skills/
   - title:             Experience
-    url:               /experience/ # /docs/
+    url:               /experience/ 
   - title:             Projects
-    url:               /projects_test/ # /example/
+    url:               /projects/ 
   - title:             Resume
     url:               /resume/
     # /Resume/GabrielaSewdhan_Resume.pdf
