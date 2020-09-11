@@ -5,7 +5,7 @@
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
 
-url:                   https://gabrielasewdhan.github.io/portfolio
+url:                   http://gabrielazoe.me/
 
 
 # IMPORTANT: Set The "base URL" of your site.
@@ -14,7 +14,7 @@ url:                   https://gabrielasewdhan.github.io/portfolio
 # Use the empty string '' otherwise.
 # For GitHub project sites, this is usually the name of the project,
 # e.g. `/hydejack`.
-baseurl:               '/portfolio'
+baseurl:               ''
 
 
 # General settings
