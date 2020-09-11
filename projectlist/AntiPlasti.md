@@ -49,14 +49,13 @@ This will notify the government and community where the pollution occurs and res
 
 |                               | Completed      | To Do               |
 |:------------------------------|:--------------:|:-------------------:|
-| Image Detection               | &#x2714;       |                     |
+| Object Detection              | &#x2714;       |                     |
 | Oceanic Pollution Monitoring  | &#x2714;       |                     |
-| Location Detection            | &#x2714;       |                     |
-| Google Maps                   | &#x2714;       |                     |
-| Push Notification             | &#x2714;       |                     |
-| Complete end-to-end app       |                | &#x2714;            |
-| Testing                       |                | &#x2714;            |
-| Deployment                    |                | &#x2714;            |
+| Location Tracking             | &#x2714;       |                     |
+| Google Maps Integration       | &#x2714;       |                     |
+| Push Notifications            | &#x2714;       |                     |
+| Testing                       | &#x2714;       |                     |
+| Physical Deployment           |                | &#x2714;            |
 | Source                        | [GitHub](https://github.com/antiplasti){:target="_blank"}   |                   |
 {:.stretch-table.dl-table}
  

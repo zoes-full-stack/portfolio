@@ -31,3 +31,5 @@
 **Supervisor**: Dr. Jannel Phillips
 &nbsp;
 <hr>
+
+sensor data (humidy, temp, pH, camera) in plant, studying if changes in environment would affect plant visually

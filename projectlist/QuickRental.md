@@ -58,11 +58,11 @@ The user interface would enable users to:
 | Authentication                          | &#x2714;  |         |
 | Advanced Apartment Filter and Query     | &#x2714;  |         |
 | User/Landlord Account Management        | &#x2714;  |         |
-| CRUD Apartment                          | &#x2714;  |         |
+| CRUD Apartment Functionality            | &#x2714;  |         |
 | Bookmark System                         | &#x2714;  |         |
 | Built-in Map System                     | &#x2714;  |         |
 | Message System                          | &#x2714;  |         |
-| Review System]                          | &#x2714;  |         |
+| Review System                           | &#x2714;  |         |
 | Comment System                          | &#x2714;  |         |
 | Live Chat                               | &#x2714;  |         |
 | List Layout                             | &#x2714;  |         |
@@ -74,7 +74,6 @@ The user interface would enable users to:
 | Push Notification System                |           | &#x2714;|
 | Graph Database to support social Network|           | &#x2714;|
 | Interactive Tutorial Screen             |           | &#x2714;|
-| Deployment to Android and iOS           |           | &#x2714;|
 | Source                                  | [GitHub](https://github.com/quickrentalteam){:target="_blank"} 
 {:.stretch-table.dl-table}
  
