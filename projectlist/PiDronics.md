@@ -21,7 +21,7 @@ sitemap: false
     <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
       <img src="/portfolio/images/projects/pidronics/pidronics_large.png" alt="PiDronics" width="864" height="486" loading="lazy">
     </div>
-    <p class="note-sm" title="PiDronics"> Project intro goes here...</p>
+    <p class="note-sm" title="PiDronics"> PiDronics: Automated Hydroponic Monitoring System</p>
   </header>
 </div>
 

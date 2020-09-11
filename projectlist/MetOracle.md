@@ -21,12 +21,12 @@ sitemap: false
     <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
       <img src="/portfolio/images/projects/metOracle/weather.gif" alt="metoracle" width="864" height="486" loading="lazy">
     </div>
-    <p class="note-sm" title="metoracle"> Project intro goes here...</p>
+    <p class="note-sm" title="metoracle"> MET-Oracle: Weather Prediction to Improve Smart City Resilience </p>
   </header>
 </div>
 
 
-Convienient, efficient and quick yet thorough apartment searching. All you need in just one place!
+MET-Oracle: Aiding in the Prediction and Preparation for Adverse Weather Conditions due to Global Warming
 {:.lead}
 
 Within Trinidad and Tobago, there has been a severe problem concerning flooding in many boroughs and water shortages due to droughts. This is due to poor planning from a lack of awareness to the changes in our country's climate due to climate change. 
