@@ -83,7 +83,8 @@
             <code class="language-plaintext highlighter-rouge">Amazon Web Services</code> |
             <code class="language-plaintext highlighter-rouge">EC2</code> |
             <code class="language-plaintext highlighter-rouge">Amazon Lex</code> |
-            <code class="language-plaintext highlighter-rouge">CloudFormation</code> 
+            <code class="language-plaintext highlighter-rouge">CloudFormation</code> |
+            <code class="language-plaintext highlighter-rouge">PHP</code>
     </p>
     <h4>Frontend Engineering: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
     <p class="faded">
