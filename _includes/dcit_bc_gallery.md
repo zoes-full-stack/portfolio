@@ -17,16 +17,16 @@
         </div>
         <div class="row_img">
             <div class="column_img">
-                <img src="/images/projects/dcit_bootcamp/project_page/dcit14.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                <img src="/images/projects/dcit_bootcamp/project_page/dcit14.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
             </div>
             <div class="column_img">
-                <img src="/images/projects/dcit_bootcamp/project_page/dcit13.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                <img src="/images/projects/dcit_bootcamp/project_page/dcit13.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
             </div>
             <div class="column_img">
-                <img src="/images/projects/dcit_bootcamp/dcit_hi.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                <img src="/images/projects/dcit_bootcamp/dcit_hi.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
             </div>
             <div class="column_img">
-                <img src="/images/projects/dcit_bootcamp/project_page/dcit8.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                <img src="/images/projects/dcit_bootcamp/project_page/dcit15.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
             </div>
         </div>
         <div id="myModal" class="modal">
