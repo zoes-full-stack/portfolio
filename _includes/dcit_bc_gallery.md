@@ -85,7 +85,7 @@ function showSlides(n) {
 
 <script>
 var modal = document.getElementById('myModal');
-var page = document.getElementById('_main');
+var page = document.getElementsByClassName("content");
 
 window.onclick = function(event) {
   if (event.target == page) {
@@ -93,6 +93,8 @@ window.onclick = function(event) {
   }
 }
 </script>
+
+<!-- var page = document.getElementById('_main'); -->
 
  <!-- <div class="column_img">
             <img class="gallery demo cursor" src="i/images/projects/dcit_bootcamp/dcit_curie.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
