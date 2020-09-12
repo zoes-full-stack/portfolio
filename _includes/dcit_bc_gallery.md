@@ -2,18 +2,32 @@
 <div markdown="0">
     <div class ="border_img">
         <div class="row_img">
-        <div class="column_img">
-            <img src="/images/projects/dcit_bootcamp/dcit_curie_square.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            <div class="column_img">
+                <img src="/images/projects/dcit_bootcamp/project_page/dcit.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="column_img">
+                <img src="/images/projects/dcit_bootcamp/project_page/dcit16.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+            </div>
+            <div class="column_img">
+                <img src="/images/projects/dcit_bootcamp/project_page/dcit8.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+            </div>
+            <div class="column_img">
+                <img src="/images/projects/dcit_bootcamp/project_page/dcit10.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+            </div>
         </div>
-        <div class="column_img">
-            <img src="/images/projects/dcit_bootcamp/dcit_curie_square.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-        </div>
-        <div class="column_img">
-            <img src="/images/projects/dcit_bootcamp/dcit_curie_square.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-        </div>
-        <div class="column_img">
-            <img src="/images/projects/dcit_bootcamp/dcit_curie_square.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-        </div>
+        <div class="row_img">
+            <div class="column_img">
+                <img src="/images/projects/dcit_bootcamp/project_page/dcit14.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="column_img">
+                <img src="/images/projects/dcit_bootcamp/project_page/dcit13.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+            </div>
+            <div class="column_img">
+                <img src="/images/projects/dcit_bootcamp/dcit_hi.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+            </div>
+            <div class="column_img">
+                <img src="/images/projects/dcit_bootcamp/project_page/dcit8.jpg" class="gallery" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+            </div>
         </div>
         <div id="myModal" class="modal">
         <span class="close cursor" onclick="closeModal()">&times;</span>
