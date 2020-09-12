@@ -20,19 +20,19 @@
         <div class="modal-content">
             <div class="mySlides">
             <div class="numbertext">1 / 4</div>
-            <img src="/images/projects/dcit_bootcamp/dcit_curie.jpg" class="gallery" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/dcit_curie.jpg" alt="Nature hehe sunrise" class="gallery demo" style="width:100%">
             </div>
             <div class="mySlides">
             <div class="numbertext">2 / 4</div>
-            <img src="/images/projects/dcit_bootcamp/dcit_curie.jpg" class="gallery" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/dcit_curie.jpg" alt="Nature wee sunrise" class="gallery demo" style="width:100%">
             </div>
             <div class="mySlides">
             <div class="numbertext">3 / 4</div>
-            <img src="/images/projects/dcit_bootcamp/dcit_curie.jpg" class="gallery" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/dcit_curie.jpg" alt="Nature test sunrise" class="gallery demo" style="width:100%">
             </div>
             <div class="mySlides">
             <div class="numbertext">4 / 4</div>
-            <img src="/images/projects/dcit_bootcamp/dcit_curie.jpg" class="gallery" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/dcit_curie.jpg" alt="Nature and sunrise" class="gallery demo" style="width:100%">
             </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
