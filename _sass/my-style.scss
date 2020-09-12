@@ -272,13 +272,21 @@ img[src~="bordered"]:hover {
 }
 
 /* Modal Content */
+// .modal-content {
+//     position: relative;
+//     background-color: #fefefe;
+//     margin: auto;
+//     padding: 0;
+//     width: 75%;
+//     /* height: 50%; */
+//     max-width: 800px;
+// }
+
 .modal-content {
     position: relative;
-    background-color: #fefefe;
     margin: auto;
     padding: 0;
-    width: 75%;
-    /* height: 50%; */
+    width: 100%;
     max-width: 800px;
 }
 
