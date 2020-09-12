@@ -65,14 +65,14 @@ function closeModal() {
   document.getElementById("myModal").style.display = "none";
 }
 
-var modal = document.getElementById('myModal');
+// var modal = document.getElementById('myModal');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
 
 var slideIndex = 1;
 showSlides(slideIndex);
