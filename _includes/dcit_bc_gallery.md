@@ -85,9 +85,10 @@ function showSlides(n) {
 
 <script>
 var modal = document.getElementById('myModal');
+var page = document.getElementById('_main');
 
 window.onclick = function(event) {
-  if (event.target == modal) {
+  if (event.target == page) {
     modal.style.display = "none";
   }
 }
