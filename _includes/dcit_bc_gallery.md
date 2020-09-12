@@ -33,20 +33,36 @@
         <span class="close cursor" onclick="closeModal()">&times;</span>
         <div class="modal-content">
             <div class="mySlides">
-            <div class="numbertext">1 / 4</div>
-            <img src="/images/projects/dcit_bootcamp/dcit_curie.jpg" alt="Nature hehe sunrise" class="gallery demo" style="width:100%">
+            <div class="numbertext">1 / 8</div>
+            <img src="/images/projects/dcit_bootcamp/project_page/dcit.jpg" alt="Curie the Bot!" class="gallery demo" style="width:100%">
             </div>
             <div class="mySlides">
-            <div class="numbertext">2 / 4</div>
-            <img src="/images/projects/dcit_bootcamp/dcit_curie.jpg" alt="Nature wee sunrise" class="gallery demo" style="width:100%">
+            <div class="numbertext">2 / 8</div>
+            <img src="/images/projects/dcit_bootcamp/project_page/dcit16.jpg" alt="Bob the Bot!" class="gallery demo" style="width:100%">
             </div>
             <div class="mySlides">
-            <div class="numbertext">3 / 4</div>
-            <img src="/images/projects/dcit_bootcamp/dcit_curie.jpg" alt="Nature test sunrise" class="gallery demo" style="width:100%">
+            <div class="numbertext">3 / 8</div>
+            <img src="/images/projects/dcit_bootcamp/project_page/dcit8.jpg" alt="Make way for the Bot King" class="gallery demo" style="width:100%">
             </div>
             <div class="mySlides">
-            <div class="numbertext">4 / 4</div>
-            <img src="/images/projects/dcit_bootcamp/dcit_curie.jpg" alt="Nature and sunrise" class="gallery demo" style="width:100%">
+            <div class="numbertext">4 / 8</div>
+            <img src="/images/projects/dcit_bootcamp/project_page/dcit10.jpg" alt="Oh Hi Mark!" class="gallery demo" style="width:100%">
+            </div>
+            <div class="mySlides">
+            <div class="numbertext">5 / 8</div>
+            <img src="/images/projects/dcit_bootcamp/project_page/dcit14.jpg" alt="Bots ready for battle!" class="gallery demo" style="width:100%">
+            </div>
+            <div class="mySlides">
+            <div class="numbertext">6 / 8</div>
+            <img src="/images/projects/dcit_bootcamp/project_page/dcit13.jpg" alt="Top View of the bot army!" class="gallery demo" style="width:100%">
+            </div>
+            <div class="mySlides">
+            <div class="numbertext">7 / 8</div>
+            <img src="/images/projects/dcit_bootcamp/dcit_hi.jpg" alt="Curie :3" class="gallery demo" style="width:100%">
+            </div>
+            <div class="mySlides">
+            <div class="numbertext">8 / 8</div>
+            <img src="/images/projects/dcit_bootcamp/project_page/dcit15.jpg" alt="Bot Army" class="gallery demo" style="width:100%">
             </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
