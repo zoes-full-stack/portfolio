@@ -39,7 +39,7 @@
             <div class="caption-container">
             <p id="caption"></p>
             </div>
-            <div class="column_img">
+            <!-- <div class="column_img">
             <img class="gallery demo cursor" src="i/images/projects/dcit_bootcamp/dcit_curie.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
             </div>
             <div class="column_img">
@@ -50,7 +50,7 @@
             </div>
             <div class="column_img">
             <img class="gallery demo cursor" src="/images/projects/dcit_bootcamp/dcit_curie.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-            </div>
+            </div> -->
         </div>
         </div>
     </div>
