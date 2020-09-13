@@ -56,7 +56,7 @@ This will notify the government and community where the pollution occurs and res
 | Push Notifications            | &#x2714;       |                     |
 | Testing                       | &#x2714;       |                     |
 | Physical Deployment           |                | &#x2714;            |
-| Source                        | [GitHub](https://github.com/antiplasti){:target="_blank"}   |                   |
+| Source Code                   | [GitHub](https://github.com/antiplasti){:target="_blank"}{:.heading.flip-title}   |                   |
 {:.stretch-table.dl-table}
  
 

@@ -78,7 +78,7 @@ The data taken from these sensors are pushed to the web app/site, to determine i
 | Reporting System                      |                | &#x2714;            |
 | Notification System                   |                | &#x2714;            |
 | Multiple Sensor Implementation        |                |                     |
-| Source                                | [GitHub](https://github.com/PiDronics){:target="_blank"}  | Included            |
+| Source Code                           | [GitHub](https://github.com/PiDronics){:target="_blank"}{:.heading.flip-title}  |             |
 {:.stretch-table.dl-table}
  
 

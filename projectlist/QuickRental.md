@@ -74,7 +74,7 @@ The user interface would enable users to:
 | Push Notification System                |           | &#x2714;|
 | Graph Database to support social Network|           | &#x2714;|
 | Interactive Tutorial Screen             |           | &#x2714;|
-| Source                                  | [GitHub](https://github.com/quickrentalteam){:target="_blank"} 
+| Source Code                             | [GitHub](https://github.com/quickrentalteam){:target="_blank"}{:.heading.flip-title} 
 {:.stretch-table.dl-table}
  
 

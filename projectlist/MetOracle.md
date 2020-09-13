@@ -71,7 +71,7 @@ As this system grows and continues to improve over time, the accuracy and reliab
 | Live Graph Data               | &#x2714;       |                     
 | Monitoring Web App            | &#x2714;       |                     
 | Model using Particulate Date  | &#x2714;       |                     
-| Source                        | [GitHub](https://github.com/irontarkus95/MET-Oracle-lstm-time-series-weather-prediction){:target="_blank"}  |             |
+| Source Code                   | [GitHub](https://github.com/irontarkus95/MET-Oracle-lstm-time-series-weather-prediction){:target="_blank"}{:.heading.flip-title}  |             |
 {:.stretch-table.dl-table}
  
 ## Future Implementation
