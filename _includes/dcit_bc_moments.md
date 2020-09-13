@@ -146,9 +146,15 @@ function showSlides_mentor(n) {
 <script>
 var modal_mentors = document.getElementById('mentors_modal');
 
-window.onclick = function(event_mentors) {
+window.addEventListener("click", function(event_mentors) {
+    if (event_mentors.target == modal_mentors) {
+    modal_mentors.style.display = "none";
+  }
+});
+</script>
+
+<!-- window.onclick = function(event_mentors) {
   if (event_mentors.target == modal_mentors) {
     modal_mentors.style.display = "none";
   }
-}
-</script>
+} -->
