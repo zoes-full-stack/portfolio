@@ -8,8 +8,8 @@
         </iframe>
         <iframe class="mySlides_vid" style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/bot_humans.mp4">
         </iframe>
-        <button class="prev" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="next" onclick="plusDivs(1)">&#10095;</button>
+        <button class="prev_vid" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="next_vid" onclick="plusDivs(1)">&#10095;</button>
     </div>
 </div>
 
