@@ -13,5 +13,8 @@ A site for my skills, experience, projects and resume! :D
 ### Running via GitHub Pages
 1. Clone repository (git users), or [download] and unzip.
 2. Open terminal, `cd` into root directory (where `_config.yml` is located)
+3. Open the `_config.yml` file and set the url to https://<username>.github.io 
+4. Push changes through terminal.
+5. Open <https://<username>.github.io>
 
 [^1]: Requires Bundler. Install with `gem install bundler`.
