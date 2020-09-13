@@ -269,12 +269,12 @@ img[src~="bordered"]:hover {
     position: fixed;
     z-index: 1;
     padding-top: 70px;
-    right: 20%;
+    right: 15%;
     top: 15%;
-    width: 60%;
-    height: 85%;
+    width: 55%;
+    height: 80%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.6);
 }
 
 /* Modal Content */
@@ -292,7 +292,7 @@ img[src~="bordered"]:hover {
     position: relative;
     margin: auto;
     padding: 0;
-    width: 77%;
+    width: 67%;
     max-width: 800px;
 }
 
