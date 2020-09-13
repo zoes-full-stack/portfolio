@@ -270,11 +270,11 @@ img[src~="bordered"]:hover {
     z-index: 1;
     padding-top: 70px;
     right: 15%;
-    top: 15%;
+    top: 11%;
     width: 55%;
     height: 80%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.8);
 }
 
 /* Modal Content */
@@ -387,16 +387,16 @@ img[src~="bordered"]:hover {
 }
 
 .demo {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .demo_mentors {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .active,
 .demo:hover {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .gallery.hover-shadow {
