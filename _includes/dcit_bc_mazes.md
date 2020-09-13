@@ -5,7 +5,7 @@
                 <source src="/images/projects/dcit_bootcamp/videos/phaedra_motivation.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <p class="caption-container">Motivational words from Dr. Phaedra Mohammed about starting a Robotics Career.</p>
+            <p class="caption-container">Motivational words from Dr. Phaedra Mohammed (DCIT Robotics Bootcamp Organiser and Co-ordinator) about starting a Robotics Career.</p>
         </div>
         <div class="mySlides_vid">
             <video style="width:100%" loading="lazy" controls>
