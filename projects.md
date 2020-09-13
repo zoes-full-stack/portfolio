@@ -9,8 +9,8 @@ sitemap: false
 ---
 
 <!-- https://stackoverflow.com/questions/28030858/jekyll-include-html-partial-inside-markdown-file -->
-
-<!-- <meta name="viewport" content="width=device-width, initial scale=1.0"> -->
+Click on Card or Name of Project to view Project Details!
+{:.note}
 
 <div markdown="0">
   <meta name="viewport" content="width=device-width, initial scale=1.0">
