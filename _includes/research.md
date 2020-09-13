@@ -22,7 +22,7 @@
 
 **U.W.I, Department of Computing and Information Technology**
 
-- [Optimising Personalised Prepaid Cellular Plans](/Research/oppcp_paper.pdf){:target="_blank"} &nbsp; [_May 2020_] <br>
+- [Optimising Personalised Prepaid Cellular Plans](/Research/oppcp_paper.pdf){:target="_blank"}{:.heading.flip-title} &nbsp; [_May 2020_] <br>
 **Supervisor**: Professor Patrick Hosein
 
 **U.W.I, Department of Behavioural Sciences**
