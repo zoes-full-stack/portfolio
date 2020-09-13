@@ -42,7 +42,7 @@
             </div>
             <div class="mySlides">
             <div class="numbertext">3 / 8</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit_hi.jpg" alt="Make way for the Bot King" class="gallery demo" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/project_page/dcit_hi.jpg" alt="Curie the Curious Bot :)" class="gallery demo" style="width:100%">
             </div>
             <div class="mySlides">
             <div class="numbertext">4 / 8</div>
@@ -54,15 +54,15 @@
             </div>
             <div class="mySlides">
             <div class="numbertext">6 / 8</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/bob.jpg" alt="Top View of the bot army!" class="gallery demo" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/project_page/bob.jpg" alt="Make way for the first Bot for the BootCamp, Bob!" class="gallery demo" style="width:100%">
             </div>
             <div class="mySlides">
             <div class="numbertext">7 / 8</div>
-            <img src="/images/projects/dcit_bootcamp/dcit8.jpg" alt="Curie :3" class="gallery demo" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/dcit8.jpg" alt="Make way for the Bot King" class="gallery demo" style="width:100%">
             </div>
             <div class="mySlides">
             <div class="numbertext">8 / 8</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit15.jpg" alt="Bot Army" class="gallery demo" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/project_page/dcit15.jpg" alt="Bot Army!" class="gallery demo" style="width:100%">
             </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
