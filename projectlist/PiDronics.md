@@ -48,7 +48,7 @@ This project was developed alongside team members [Michael Ali](https://www.link
 <!-- get rest of sensors -->
 ## Hardware Used 
 `Raspberry Pi` | `Temperature Sensor` | `Humidity Sensor` |`pH Sensor` | `Dissolved Oxygen Sensor` 
-{:.faded}
+<!-- {:.faded} -->
 
 ## How does it work?
 The PiDronics application simply grabs sensor data from a hydroponics loop and displays it in a clean, intuitive interface. Some of the readings taken are as follows:

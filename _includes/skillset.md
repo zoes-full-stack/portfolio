@@ -37,7 +37,7 @@
     <h4>Python Skills: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
     <div class='indent_skill'>
         <h6>Data Science and Data Visualisation</h6> 
-        <p class="faded">
+        <p>
             <code class="language-plaintext highlighter-rouge">Pandas</code>| 
             <code class="language-plaintext highlighter-rouge">Numpy</code> | 
             <code class="language-plaintext highlighter-rouge">Seaborn</code> | 
@@ -47,11 +47,11 @@
             <code class="language-plaintext highlighter-rouge">Classification Models</code>
         </p>
         <h6 class='indent_skill'>Image Processing</h6> 
-        <p class="faded">
+        <p>
             <code class="language-plaintext highlighter-rouge">OpenCV</code>
         </p>
         <h6 class='indent_skill'>Artificial Intelligence</h6> 
-        <p class="faded">
+        <p>
             <code class="language-plaintext highlighter-rouge">TensorFlow</code>| 
             <code class="language-plaintext highlighter-rouge">Keras</code> | 
             <code class="language-plaintext highlighter-rouge">Object Detection (Mask RCNN)</code> | 
@@ -59,24 +59,23 @@
             <code class="language-plaintext highlighter-rouge">GoLang</code> 
         </p>
         <h6 class='indent_skill'>Robotics Programming</h6> 
-        <p class="faded">
+        <p>
             <code class="language-plaintext highlighter-rouge">ROS</code>| 
             <code class="language-plaintext highlighter-rouge">Programming with Raspberry Pi and Arduino</code> 
         </p>
     </div>
     <h4>Other Software Engineering Skills: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4> 
-    <p class="faded">
+    <p>
             <code class="language-plaintext highlighter-rouge">C++</code>| 
             <code class="language-plaintext highlighter-rouge">Ubuntu</code> | 
             <code class="language-plaintext highlighter-rouge">Java</code>|
-            <code class="language-plaintext highlighter-rouge">GoLang</code> | 
             <code class="language-plaintext highlighter-rouge">Algorithm Design</code> | 
             <code class="language-plaintext highlighter-rouge">Software Testing</code> | 
             <code class="language-plaintext highlighter-rouge">GIT</code> | 
             <code class="language-plaintext highlighter-rouge">Android SDK</code> 
     </p>
     <h4>Backend Engineering: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span></h4>
-    <p class="faded">
+    <p>
             <code class="language-plaintext highlighter-rouge">Nodejs</code>| 
             <code class="language-plaintext highlighter-rouge">SQL</code> | 
             <code class="language-plaintext highlighter-rouge">Serverless</code> |
@@ -87,7 +86,7 @@
             <code class="language-plaintext highlighter-rouge">PHP</code>
     </p>
     <h4>Frontend Engineering: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
-    <p class="faded">
+    <p>
             <code class="language-plaintext highlighter-rouge">React Native and Expo</code>| 
             <code class="language-plaintext highlighter-rouge">Javascript</code> | 
             <code class="language-plaintext highlighter-rouge">HTML&CSS</code> | 
@@ -113,6 +112,8 @@
         </div>
     </div>
 </div>
+
+<!-- <p class="faded"> -->
 <!--   
 ### Other Skills &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Languages
 - Project and Team Management &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; **English:** &nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
