@@ -1,4 +1,4 @@
-**Researcher and Staff** at [TTLAB](http://lab.tt/){:target="_blank"}
+**Researcher and Staff** at [TTLAB](http://lab.tt/){:target="_blank"}{:.heading.flip-title}
 {:.note title="November 2019 - _Present_"}
 
 - Creating Optimal Personalised Prepaid Plans for TSTT Prepaid Customers
@@ -18,7 +18,7 @@
 <hr>
 &nbsp;
 
-**Publications**
+**Research Papers**
 
 **U.W.I, Department of Computing and Information Technology**
 

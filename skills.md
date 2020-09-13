@@ -24,29 +24,6 @@ sitemap: false
   <hr>
 </div>
 
-<!-- ## SkillSet
-
-```python
-skillset = ["Coding", "Baking", "Being"]
-print(skillset)
-``` -->
-
-<!-- ```cpp
-L.insert(iterator, num_of_elements, element);
-``` -->
-
-<!-- Backend -->
-<!-- ```js
-let array = calendars.map(item => item.id);
-``` -->
-
-<!-- Frontend -->
-
-<!-- ```js
-<FlatList
-        data={[{key: 'Skills'}]} />
-``` -->
-
 {% include skillset.md %}
 
 &nbsp;
