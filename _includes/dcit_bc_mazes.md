@@ -1,6 +1,3 @@
-
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
 <div markdown="0">
     <div class="slideshow-container">
         <iframe class="mySlides_vid" style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/maze_success.mp4">
