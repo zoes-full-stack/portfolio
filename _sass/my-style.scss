@@ -446,9 +446,11 @@ img[src~="bordered"]:hover {
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev_vid, .next_vid {font-size: 11px}
-  
-  .modal {
+  .prev_vid, .next_vid {font-size: 17px}
+}
+
+@media only screen and (max-width:700px) {
+    .modal {
       // right: 15%;
       // top: 11%;
       width: 100%;
@@ -458,14 +460,14 @@ img[src~="bordered"]:hover {
 
   .modal-content {
       width: 90%;
-      max-width: 200px;
+      max-width: 600px;
   }
 
   /* The Close Button */
   .close {
     // top: 10px;
     // right: 25px;
-    font-size: 11px;
+    font-size: 25px;
     font-weight: bold;
   }
 }
