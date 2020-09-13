@@ -274,7 +274,7 @@ img[src~="bordered"]:hover {
     width: 55%;
     height: 80%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.7);
 }
 
 /* Modal Content */
@@ -387,16 +387,16 @@ img[src~="bordered"]:hover {
 }
 
 .demo {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 .demo_mentors {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 .active,
 .demo:hover {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 .gallery.hover-shadow {
