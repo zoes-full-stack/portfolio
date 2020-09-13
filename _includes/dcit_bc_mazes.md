@@ -1,13 +1,21 @@
 <div markdown="0">
     <div class="slideshow-container">
-        <iframe class="mySlides_vid" style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/maze_success.mp4">
-        </iframe>
-        <iframe class="mySlides_vid" style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/maze_success2.mp4">
-        </iframe>
-        <iframe class="mySlides_vid" style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/creating_path.mp4">
-        </iframe>
-        <iframe class="mySlides_vid" style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/bot_humans.mp4">
-        </iframe>
+        <video class="mySlides_vid" width="320" height="240" controls>
+            <source src="/images/projects/dcit_bootcamp/videos/maze_success.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video class="mySlides_vid" width="320" height="240" controls>
+            <source src="/images/projects/dcit_bootcamp/videos/maze_success2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video class="mySlides_vid" width="320" height="240" controls>
+            <source src="/images/projects/dcit_bootcamp/videos/creating_path.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video class="mySlides_vid" width="320" height="240" controls>
+            <source src="/images/projects/dcit_bootcamp/videos/bot_humans.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <button class="prev_vid" onclick="plusDivs(-1)">&#10094;</button>
         <button class="next_vid" onclick="plusDivs(1)">&#10095;</button>
     </div>
