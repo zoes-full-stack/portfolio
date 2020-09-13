@@ -7,7 +7,7 @@ hide_description: true
 
 # Resume
 
-> Download Resume — [Here!](Resume/GabrielaSewdhan_Resume.pdf){:target="_blank"}
+> Download Resume — [Here!](Resume/GabrielaSewdhan_Resume.pdf){:target="_blank"}{:.flip-title}
 {:.lead}
 
 ### Or View PDF Here
