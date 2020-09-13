@@ -9,7 +9,7 @@ sitemap: false
 ---
 
 <!-- https://stackoverflow.com/questions/28030858/jekyll-include-html-partial-inside-markdown-file -->
-Click on Card or Name of Project to view Project Details!
+**Click on Card or Name of Project to view Project Details!**
 {:.note}
 
 <div markdown="0">
