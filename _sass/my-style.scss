@@ -321,6 +321,10 @@ img[src~="bordered"]:hover {
   display: none;
 }
 
+.mySlides_mentors {
+  display: none;
+}
+
 .cursor {
   cursor: pointer;
 }
@@ -377,6 +381,10 @@ img[src~="bordered"]:hover {
 }
 
 .demo {
+  opacity: 0.9;
+}
+
+.demo_mentors {
   opacity: 0.9;
 }
 
