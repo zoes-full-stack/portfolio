@@ -3,13 +3,13 @@
     <div class ="border_img">
         <div class="row_img">
             <div class="column_img">
-                <img src="/images/projects/dcit_bootcamp/project_page/dcit19.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_mentors();currentSlide_mentors(1)" class="hover-shadow cursor">
+                <img src="/images/projects/dcit_bootcamp/project_page/dcit21.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_mentors();currentSlide_mentors(1)" class="hover-shadow cursor">
             </div>
             <div class="column_img">
                 <img src="/images/projects/dcit_bootcamp/project_page/dcit20.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_mentors();currentSlide_mentors(2)" class="hover-shadow cursor">
             </div>
             <div class="column_img">
-                <img src="/images/projects/dcit_bootcamp/project_page/dcit21.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_mentors();currentSlide_mentors(3)" class="hover-shadow cursor">
+                <img src="/images/projects/dcit_bootcamp/project_page/group2018_2.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_mentors();currentSlide_mentors(3)" class="hover-shadow cursor">
             </div>
             <div class="column_img">
                 <img src="/images/projects/dcit_bootcamp/project_page/dcit22.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_mentors();currentSlide_mentors(4)" class="hover-shadow cursor">
@@ -48,15 +48,15 @@
         <div class="modal-content">
             <div class="mySlides_mentors">
             <div class="numbertext">1 / 12</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit19.jpg" alt="DCIT Bootcamp 2017 :)" class="gallery demo_mentors" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/project_page/dcit21.jpg" alt="DCIT Bootcamp Organisers, Mentors and Students 2017 :)" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">2 / 12</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit20.jpg" alt="DCIT Bootcamp 2017 :)" class="gallery demo_mentors" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/project_page/dcit20.jpg" alt="DCIT Bootcamp Organisers, Mentors and Students 2017 :)" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">3 / 12</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit21.jpg" alt="DCIT Bootcamp 2017 :)" class="gallery demo_mentors" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/project_page/group2018_2.jpg" alt="DCIT Bootcamp Mentors and Students 2018 :)" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">4 / 12</div>
@@ -68,19 +68,19 @@
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">6 / 12</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit3.jpg" alt="Mrs. Phaedra Mohammed and the Mentors Enjoying robotics class! " class="gallery demo_mentors" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/project_page/dcit3.jpg" alt="Dr. Phaedra Mohammed and the Mentors Enjoying robotics class! " class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">7 / 12</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit9.jpg" alt="Mentor Michael Ali, hard at work." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/project_page/dcit9.jpg" alt="Mentor, Michael Ali, hard at work." class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">8 / 12</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit6.jpg" alt="Mentor Sanjay Santookee demonstrating parts of the bot." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/project_page/dcit6.jpg" alt="Mentor, Sanjay Santookee demonstrating parts of the bot." class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">9 / 12</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit7.jpg" alt="Mentor Raeanne Ramharrack demonstrating the workings of the bot." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/project_page/dcit7.jpg" alt="Mentor, Raeanne Ramharrack demonstrating the workings of the bot." class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">10 / 12</div>
