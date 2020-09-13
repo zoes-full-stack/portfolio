@@ -64,13 +64,13 @@ As this system grows and continues to improve over time, the accuracy and reliab
 
 ## Features
 
-|                               | Completed      | To Do               |
-|:------------------------------|:--------------:|:-------------------:|
-| Web Scraping                  | &#x2714;       |                     |
-| Weather Prediction            | &#x2714;       |                     |
-| Live Graph Data               | &#x2714;       |                     |
-| Monitoring Web App            | &#x2714;       |                     |
-| Model using Particulate Date  | &#x2714;       |                     |
+|                               | Completed      |           
+|:------------------------------|:--------------:|
+| Web Scraping                  | &#x2714;       |                     
+| Weather Prediction            | &#x2714;       |                     
+| Live Graph Data               | &#x2714;       |                     
+| Monitoring Web App            | &#x2714;       |                     
+| Model using Particulate Date  | &#x2714;       |                     
 | Source                        | [GitHub](https://github.com/irontarkus95/MET-Oracle-lstm-time-series-weather-prediction){:target="_blank"}  |             |
 {:.stretch-table.dl-table}
  
