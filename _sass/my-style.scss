@@ -444,5 +444,5 @@ img[src~="bordered"]:hover {
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next {font-size: 11px}
+  .prev_vid, .next_vid {font-size: 11px}
 }
