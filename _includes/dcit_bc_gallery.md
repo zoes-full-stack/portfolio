@@ -9,7 +9,7 @@
                 <img src="/images/projects/dcit_bootcamp/project_page/dcit16.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
             </div>
             <div class="column_img">
-                <img src="/images/projects/dcit_bootcamp/project_page/dcit_hi.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                <img src="/images/projects/dcit_bootcamp/dcit_hi.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
             </div>
             <div class="column_img">
                 <img src="/images/projects/dcit_bootcamp/project_page/dcit10.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
@@ -23,7 +23,7 @@
                 <img src="/images/projects/dcit_bootcamp/project_page/bob.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
             </div>
             <div class="column_img">
-                <img src="/images/projects/dcit_bootcamp/dcit8.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+                <img src="/images/projects/dcit_bootcamp/project_page/dcit8.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
             </div>
             <div class="column_img">
                 <img src="/images/projects/dcit_bootcamp/project_page/dcit15.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
@@ -42,7 +42,7 @@
             </div>
             <div class="mySlides">
             <div class="numbertext">3 / 8</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit_hi.jpg" alt="Curie the Curious Bot :)" class="gallery demo" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/dcit_hi.jpg" alt="Curie the Curious Bot :)" class="gallery demo" style="width:100%">
             </div>
             <div class="mySlides">
             <div class="numbertext">4 / 8</div>
@@ -58,7 +58,7 @@
             </div>
             <div class="mySlides">
             <div class="numbertext">7 / 8</div>
-            <img src="/images/projects/dcit_bootcamp/dcit8.jpg" alt="Make way for the Bot King" class="gallery demo" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/project_page/dcit8.jpg" alt="Make way for the Bot King" class="gallery demo" style="width:100%">
             </div>
             <div class="mySlides">
             <div class="numbertext">8 / 8</div>
