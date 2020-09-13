@@ -43,7 +43,7 @@ This project was developed alongside team members [Michael Ali](https://www.link
 
 ## Technologies Used
 `Python` | `Shell` | `Nodejs` | `Javascript` |`HTML` | `CSS` | `Firebase Database`
-{:.faded}
+<!-- {:.faded} -->
 
 <!-- get rest of sensors -->
 ## Hardware Used 
