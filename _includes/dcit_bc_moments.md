@@ -146,22 +146,9 @@ function showSlides_mentor(n) {
 <script>
 var modal_mentors = document.getElementById('mentors_modal');
 
-window.onclick = function(event) {
-  if (event.target == modal_mentors) {
+window.onclick = function(event_mentors) {
+  if (event_mentors.target == modal_mentors) {
     modal_mentors.style.display = "none";
   }
 }
 </script>
-
- <!-- <div class="column_img">
-            <img class="gallery demo cursor" src="i/images/projects/dcit_bootcamp/dcit_curie.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
-            </div>
-            <div class="column_img">
-            <img class="gallery demo cursor" src="/images/projects/dcit_bootcamp/dcit_curie.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
-            </div>
-            <div class="column_img">
-            <img class="gallery demo cursor" src="/images/projects/dcit_bootcamp/dcit_curie.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-            </div>
-            <div class="column_img">
-            <img class="gallery demo cursor" src="/images/projects/dcit_bootcamp/dcit_curie.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-            </div> -->
