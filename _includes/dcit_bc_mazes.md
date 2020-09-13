@@ -1,18 +1,18 @@
 <div markdown="0">
     <div class="slideshow-container">
-        <video class="mySlides_vid" width="320" height="240" controls>
+        <video class="mySlides_vid" style="width:100%" loading="lazy" controls>
             <source src="/images/projects/dcit_bootcamp/videos/maze_success.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <video class="mySlides_vid" width="320" height="240" controls>
+        <video class="mySlides_vid" style="width:100%" loading="lazy" controls>
             <source src="/images/projects/dcit_bootcamp/videos/maze_success2.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <video class="mySlides_vid" width="320" height="240" controls>
+        <video class="mySlides_vid" style="width:100%" loading="lazy" controls>
             <source src="/images/projects/dcit_bootcamp/videos/creating_path.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <video class="mySlides_vid" width="320" height="240" controls>
+        <video class="mySlides_vid" style="width:100%" loading="lazy" controls>
             <source src="/images/projects/dcit_bootcamp/videos/bot_humans.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
