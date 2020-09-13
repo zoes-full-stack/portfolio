@@ -3,19 +3,19 @@
     <div class ="border_img">
         <div class="row_img">
             <div class="column_img">
-                <iframe class="gallery" width="420" height="315" loading="lazy" src="/images/projects/dcit_bootcamp/videos/maze_success.mp4" class="hover-shadow cursor">
+                <iframe class="gallery" style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/maze_success.mp4" class="hover-shadow cursor">
                 </iframe>
             </div>
             <div class="column_img">
-                <iframe class="gallery" width="420" height="315" loading="lazy" src="/images/projects/dcit_bootcamp/videos/maze_success2.mp4" class="hover-shadow cursor">
+                <iframe class="gallery" style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/maze_success2.mp4" class="hover-shadow cursor">
                 </iframe>
             </div>
             <div class="column_img">
-                <iframe class="gallery" width="420" height="315" loading="lazy" src="/images/projects/dcit_bootcamp/videos/creating_path.mp4" class="hover-shadow cursor">
+                <iframe class="gallery" style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/creating_path.mp4" class="hover-shadow cursor">
                 </iframe>
             </div>
             <div class="column_img">
-                <iframe class="gallery" width="420" height="315" loading="lazy" src="/images/projects/dcit_bootcamp/videos/bot_humans.mp4" class="hover-shadow cursor">
+                <iframe class="gallery" style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/bot_humans.mp4" class="hover-shadow cursor">
                 </iframe>
             </div>
         </div>
