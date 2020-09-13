@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <div markdown="0">
-    <div class="w3-content w3-display-container">
+    <div class="slideshow-container">
         <iframe class="mySlides_vid" style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/maze_success.mp4">
         </iframe>
         <iframe class="mySlides_vid" style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/maze_success2.mp4">
@@ -11,8 +11,8 @@
         </iframe>
         <iframe class="mySlides_vid" style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/bot_humans.mp4">
         </iframe>
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        <button class="prev" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="next" onclick="plusDivs(1)">&#10095;</button>
     </div>
 </div>
 
@@ -35,28 +35,3 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
 }
 </script>
-
-    <!-- <div class ="border_img">
-        <div class="row_img">
-            <div class="column_vid">
-                <iframe style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/maze_success.mp4">
-                </iframe>
-            </div>
-            <div class="column_vid">
-                <iframe style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/maze_success2.mp4">
-                </iframe>
-            </div>
-        </div>
-    </div>
-    <div class ="border_img">
-        <div class="row_img">
-            <div class="column_vid">
-                <iframe style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/creating_path.mp4">
-                </iframe>
-            </div>
-            <div class="column_vid">
-                <iframe style="width:100%" loading="lazy" src="/images/projects/dcit_bootcamp/videos/bot_humans.mp4">
-                </iframe>
-            </div>
-        </div>
-    </div> -->
