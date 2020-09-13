@@ -54,7 +54,7 @@
             </div>
             <div class="mySlides">
             <div class="numbertext">6 / 8</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/bob.jpg" alt="Make way for the first Bot for the BootCamp, Bob!" class="gallery demo" style="width:100%">
+            <img src="/images/projects/dcit_bootcamp/project_page/bob.jpg" alt="Make way for the first Bot for the BootCamp, Bob!" class="gallery demo" style="width:100%, height:100%">
             </div>
             <div class="mySlides">
             <div class="numbertext">7 / 8</div>
