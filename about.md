@@ -37,7 +37,7 @@ redirect_from:
 ![baking](images/icons/baking.png){:width="70" height="70" loading="lazy"} &emsp; 
 ![ocean](images/icons/ocean.png){:width="75" height="75" loading="lazy"}
 
-`Diving` &emsp;&nbsp; `Hiking` &emsp;&nbsp; `Music` &emsp;&nbsp; [`Baking`](baking.md){:.heading.flip-title} &emsp; `Ocean Conservation`
+`Diving` &emsp;&nbsp; `Hiking` &emsp;&nbsp; `Music` &emsp;&nbsp;&nbsp; [`Baking`](baking.md){:.heading.flip-title} &emsp; `Ocean Conservation`
 
 
 <!-- ## Beautiful Math
