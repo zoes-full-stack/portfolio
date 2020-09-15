@@ -91,7 +91,7 @@
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">3 / 21</div>
-            <img src="/images/baking/choc_snow.jpg" alt="White Chocolate SnowMen" class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/choc_snow.jpg" alt="White Chocolate Snow Men" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">4 / 21</div>
@@ -115,55 +115,55 @@
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">9 / 21</div>
-            <img src="/images/baking/mom_cake4.jpg" alt="Mother's Day Chocolate Cake" class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/mom_cake4.jpg" alt="Mother's Day Chocolate Cake with Chocolate Ganache Side Drip" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">10 / 21</div>
-            <img src="/images/baking/dad_cake3.jpg" alt="Father's Day Red Velvet with Cream Cheese Cake" class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/dad_cake3.jpg" alt="Father's Day Red Velvet and Coffee Cake with Coffee Cream Cheese Icing" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">11 / 21</div>
-            <img src="/images/baking/bday_cake.jpg" alt="Birthday Red Velvet with Cream Cheese Cake for My Soulmate" class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/bday_cake.jpg" alt="Dark Soul's Themed Birthday Red Velvet with Cream Cheese Icing Cake for My S/O" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">12 / 21</div>
-            <img src="/images/baking/bday_cake2.jpg" alt="Birthday Red Velvet with Cream Cheese Cake for My Soulmate" class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/bday_cake2.jpg" alt="Dark Soul's Themed Birthday Red Velvet with Cream Cheese Icing Cake for My S/O" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">13 / 21</div>
-            <img src="/images/baking/christmas_newy_cake.jpg" alt="Students Discussing Algorithms and Code." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/christmas_newy_cake.jpg" alt="Christmas/New Years Red Velvet with Cream Cheese Icing Cake" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">14 / 21</div>
-            <img src="/images/baking/ann_cake3.jpg" alt="Students Discussing Algorithms and Code." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/ann_cake3.jpg" alt="Anniversary Red Velvet Cake with Cream Cheese Icing" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">15 / 21</div>
-            <img src="/images/baking/ann_cake.jpg" alt="Students Discussing Algorithms and Code." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/ann_cake.jpg" alt="Anniversary Red Velvet Cake with Cream Cheese Icing" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">16 / 21</div>
-            <img src="/images/baking/dad_cake2.jpg" alt="Students Discussing Algorithms and Code." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/dad_cake2.jpg" alt="Father's Day Red Velvet Cake with Cream Cheese Icing" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">17 / 21</div>
-            <img src="/images/baking/mom_cake3.jpg" alt="Students Discussing Algorithms and Code." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/mom_cake3.jpg" alt="Mother's Day Chocolate Cake with Chocolate ButterCream and Ganache" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">18 / 21</div>
-            <img src="/images/baking/ann_cake2.jpg" alt="Students Discussing Algorithms and Code." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/ann_cake2.jpg" alt="Lord of the Rings Themed Birthday Cake for my S/O" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">19 / 21</div>
-            <img src="/images/baking/cupcake.jpg" alt="Students Discussing Algorithms and Code." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/cupcake.jpg" alt="Cute Red Velvet Cupcake" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">20 / 21</div>
-            <img src="/images/baking/cookies2.jpg" alt="Students Discussing Algorithms and Code." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/cookies2.jpg" alt="Chewy Chocolate Chip Cookies" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">21 / 21</div>
-            <img src="/images/baking/cookies.jpg" alt="Students Discussing Algorithms and Code." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/cookies.jpg" alt="Chewy Chocolate Chip and Cinnamon Cookies" class="gallery demo_mentors" style="width:100%">
             </div>
             <a class="prev" onclick="plusSlides_baking(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides_baking(1)">&#10095;</a>
