@@ -12,7 +12,7 @@ redirect_from:
 # About
 
 :house_with_garden: **Trinidad & Tobago** &nbsp;
-:calling: **1(868)496-5529** &nbsp;
+:calling: **1 (868) 496-5529** &nbsp;
 :email: [**gabiems13@gmail.com**](mailto:gabiems13@gmail.com)
 
 <!--author-->
