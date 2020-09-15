@@ -1,7 +1,7 @@
 
 <div markdown="0">
     <div class ="border_img">
-        <div class="row_img">
+        <div class="row_baking">
             <div class="column_baking">
                 <img src="/images/projects/dcit_bootcamp/project_page/dcit21.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(1)" class="hover-shadow cursor">
             </div>
@@ -12,7 +12,7 @@
                 <img src="/images/baking/choc_snow.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(3)" class="hover-shadow cursor">
             </div>
         </div>
-        <div class="row_img">
+        <div class="row_baking">
             <div class="column_baking">
                 <img src="/images/baking/dad_cake.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(4)" class="hover-shadow cursor">
             </div>
@@ -23,7 +23,7 @@
                 <img src="/images/baking/meringues.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(6)" class="hover-shadow cursor">
             </div>
         </div>
-        <div class="row_img">
+        <div class="row_baking">
             <div class="column_baking">
                 <img src="/images/baking/mom_cake.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(7)" class="hover-shadow cursor">
             </div>
@@ -34,7 +34,7 @@
                 <img src="/images/baking/mom_cake4.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(9)" class="hover-shadow cursor">
             </div>
         </div>
-        <div class="row_img">
+        <div class="row_baking">
             <div class="column_baking">
                 <img src="/images/baking/dad_cake3.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(10)" class="hover-shadow cursor">
             </div>
@@ -45,7 +45,7 @@
                 <img src="/images/baking/bday_cake2.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(12)" class="hover-shadow cursor">
             </div>
         </div>
-        <div class="row_img">
+        <div class="row_baking">
             <div class="column_baking">
                 <img src="/images/baking/christmas_newy_cake.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(13)" class="hover-shadow cursor">
             </div>
@@ -56,7 +56,7 @@
                 <img src="/images/baking/ann_cake3.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(15)" class="hover-shadow cursor">
             </div>
         </div>
-        <div class="row_img">
+        <div class="row_baking">
             <div class="column_baking">
                 <img src="/images/baking/ann_cake4.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(16)" class="hover-shadow cursor">
             </div>
@@ -67,7 +67,7 @@
                 <img src="/images/baking/dad_cake2.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(18)" class="hover-shadow cursor">
             </div>
         </div>
-        <div class="row_img">
+        <div class="row_baking">
             <div class="column_baking">
                 <img src="/images/baking/mom_cake3.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(19)" class="hover-shadow cursor">
             </div>
@@ -78,7 +78,7 @@
                 <img src="/images/baking/cupcake.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(21)" class="hover-shadow cursor">
             </div>
         </div>
-        <div class="row_img">
+        <div class="row_baking">
             <div class="column_baking">
                 <img src="/images/baking/brownies2.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(22)" class="hover-shadow cursor">
             </div>
@@ -98,47 +98,47 @@
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">2 / 24</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit20.jpg" alt="DCIT Bootcamp Organisers, Mentors and Students 2017 :)" class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/brownies.jpg" alt="Fudgy Brownies with Crackly Top" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">3 / 24</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/group2018_2.jpg" alt="DCIT Bootcamp Mentors and Students 2018 :)" class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/choc_snow.jpg" alt="White Chocolate SnowMen" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">4 / 24</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit22.jpg" alt="It's me!" class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/dad_cake.jpg" alt="Father's Day Red Velvet Cake with Cream Cheese Icing" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">5 / 24</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit1.jpg" alt="Mentors, Michael Ali and Me!" class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/cactus_cake.jpg" alt="Cactus Chocolate Cupcake with Peanut Butter Icing" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">6 / 24</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit3.jpg" alt="Dr. Phaedra Mohammed and the Mentors Enjoying robotics class! " class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/meringues.jpg" alt="Pink Meringues!" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">7 / 24</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit9.jpg" alt="Mentor, Michael Ali, hard at work." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/mom_cake.jpg" alt="Mother's Day Chocolate Cake" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">8 / 24</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit6.jpg" alt="Mentor, Sanjay Santookee demonstrating parts of the bot." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/mom_cake2.jpg" alt="Mother's Day Chocolate Cake" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">9 / 24</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit7.jpg" alt="Mentor, Raeanne Ramharrack demonstrating the workings of the bot." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/mom_cake4.jpg" alt="Mother's Day Chocolate Cake" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">10 / 24</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit4.jpg" alt="Dr. Permanand Mohan introducing the field of Robotics!" class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/dad_cake3.jpg" alt="Father's Day Red Velvet with Cream Cheese Cake" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">11 / 24</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit2.jpg" alt="Student fully focused on coding." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/bday_cake.jpg" alt="Birthday Red Velvet with Cream Cheese Cake for My Soulmate" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">12 / 24</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit12.jpg" alt="Students Discussing Algorithms and Code." class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/bday_cake2.jpg" alt="Birthday Red Velvet with Cream Cheese Cake for My Soulmate" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">13 / 24</div>

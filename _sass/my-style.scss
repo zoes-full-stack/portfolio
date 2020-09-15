@@ -259,6 +259,16 @@ img[src~="bordered"]:hover {
   width: 25%;
 }
 
+.row_baking > .column_baking {
+  padding: 0 8px 8px;
+}
+
+.row_baking:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .column_baking {
   float: left;
   width: 33%;
