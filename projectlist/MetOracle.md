@@ -116,7 +116,7 @@ As this system grows and continues to improve over time, the accuracy and reliab
         <a href="/projectlist/PiDronics/" class="flip-title"><span>PiDronics</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">22 Dec 2018</time>
       </li>
       <li class="h4"> 
-        <a href="/projectlist/dcitCamp-2017-2018/" class="flip-title"><span>DCIT Robotics BootCamp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">July 2017/2018</time>
+        <a href="/projectlist/dcitCamp-2017-2018/" class="flip-title"><span>DCIT Robotics Boot Camp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">July 2017/2018</time>
       </li>
     </ul>
   </aside>

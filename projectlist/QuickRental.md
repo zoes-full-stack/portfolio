@@ -121,7 +121,7 @@ Maybe just glance at it to confirm that it is indeed a pretty long list.
         <a href="/projectlist/PiDronics/" class="flip-title"><span>PiDronics</span></a> <time class="faded fine" datetime="2018-06-01T00:00:00+00:00">22 Dec 2018</time>
       </li>
       <li class="h4"> 
-        <a href="/projectlist/dcitCamp-2017-2018/" class="flip-title"><span>DCIT Robotics BootCamp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">July 2017/2018</time>
+        <a href="/projectlist/dcitCamp-2017-2018/" class="flip-title"><span>DCIT Robotics Boot Camp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">July 2017/2018</time>
       </li>
       <li class="h4"> 
         <a href="/projectlist/MetOracle/" class="flip-title"><span>MetOracle</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">31 Oct 2017</time>
