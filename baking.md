@@ -1,9 +1,10 @@
 ---
 layout: page
-title: Treats I've Made!
+title: Baking
 sitemap: false
 ---
 
+## Treats I've Made!
 
 {% include desserts.md %}
 
