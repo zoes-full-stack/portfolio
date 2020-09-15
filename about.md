@@ -26,26 +26,37 @@ redirect_from:
 <!-- <p><img src="/images/icons/robot.png" alt="robotics" width="75" height="75" loading="lazy" style="opacity: 0;"> &emsp; <img src="/images/icons/coding.png" alt="coding" width="60" height="60" loading="lazy" style="opacity: 0;"> &emsp; <img src="/images/icons/nasa2.png" alt="nasa" width="70" height="70" loading="lazy" style="opacity: 0;"> &emsp; <img src="/images/icons/astronomy.png" alt="astronomy" width="60" height="60" loading="lazy" style="opacity: 0;"> &emsp; <img src="/images/icons/gaming.png" alt="gaming" width="60" height="60" loading="lazy" style="opacity: 0;"></p> -->
 
 <div markdown="0">
-  <img src="/images/icons/robot.png" alt="robotics" width="75" height="75" loading="lazy" style="opacity: 0;">
-  <div class="center_align">
-    <p>Robotics</p>
-  </div>
-  <img src="/images/icons/coding.png" alt="coding" width="60" height="60" loading="lazy" style="opacity: 0;">
-  <div class="center_align">
-    <p>Coding</p>
-  </div>
-  <img src="/images/icons/nasa2.png" alt="nasa" width="70" height="70" loading="lazy" style="opacity: 0;">
-  <div class="center_align">
-    <p>NASA</p>
-  </div>
-  <img src="/images/icons/astronomy.png" alt="robotics" width="60" height="60" loading="lazy" style="opacity: 0;">
-  <div class="center_align">
-    <p>Astronomy</p>
-  </div>
-  <img src="/images/icons/gaming.png" alt="robotics" width="60" height="60" loading="lazy" style="opacity: 0;">
-  <div class="center_align">
-    <p>Gaming and Game Development</p>
-  </div>
+  <div class="row_baking">
+    <div class="column_icons">
+      <img src="/images/icons/robot.png" alt="robotics" width="75" height="75" loading="lazy" style="opacity: 0;">
+      <div class="center_align">
+        <p>Robotics</p>
+      </div>
+    </div>
+    <div class="column_icons">
+      <img src="/images/icons/coding.png" alt="coding" width="60" height="60" loading="lazy" style="opacity: 0;">
+      <div class="center_align">
+        <p>Coding</p>
+      </div>
+    </div>
+    <div class="column_icons">
+      <img src="/images/icons/nasa2.png" alt="nasa" width="70" height="70" loading="lazy" style="opacity: 0;">
+      <div class="center_align">
+        <p>NASA</p>
+      </div>
+    </div>
+    <div class="column_icons">
+      <img src="/images/icons/astronomy.png" alt="robotics" width="60" height="60" loading="lazy" style="opacity: 0;">
+      <div class="center_align">
+        <p>Astronomy</p>
+      </div>
+    </div>
+    <div class="column_icons">
+      <img src="/images/icons/gaming.png" alt="robotics" width="60" height="60" loading="lazy" style="opacity: 0;">
+      <div class="center_align">
+        <p>Gaming and Game Development</p>
+      </div>
+    </div>
 </div>
 
 ![robotics](images/icons/robot.png){:width="75" height="75" loading="lazy"} &emsp; 
