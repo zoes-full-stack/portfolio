@@ -78,9 +78,9 @@
                 <img src="/images/baking/cookies.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(21)" class="hover-shadow cursor">
             </div>
         </div>
-        <div id="baking_modal" class="modal">
+        <div id="baking_modal" class="modal_baking">
         <span class="close cursor" onclick="closeModal_baking()">&times;</span>
-        <div class="modal-content">
+        <div class="modal-content_baking">
             <div class="mySlides_mentors">
             <div class="numbertext">1 / 21</div>
             <img src="/images/baking/dad_cake.jpg" alt="Father's Day Red Velvet with Cream Cheese Icing Cake" class="gallery demo_mentors" style="width:100%">

@@ -292,6 +292,26 @@ img[src~="bordered"]:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
+.modal_baking {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 70px;
+    right: 20%;
+    top: 13%;
+    width: 45%;
+    height: 80%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content_baking {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 55%;
+    max-width: 800px;
+}
 /* Modal Content */
 // .modal-content {
 //     position: relative;
