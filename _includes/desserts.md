@@ -3,7 +3,7 @@
     <div class ="border_img">
         <div class="row_baking">
             <div class="column_baking">
-                <img src="/images/projects/dcit_bootcamp/project_page/dcit21.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(1)" class="hover-shadow cursor">
+                <img src="/images/baking/dad_cake.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(4)" class="hover-shadow cursor">
             </div>
             <div class="column_baking">
                 <img src="/images/baking/brownies.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(2)" class="hover-shadow cursor">
@@ -14,13 +14,13 @@
         </div>
         <div class="row_baking">
             <div class="column_baking">
-                <img src="/images/baking/dad_cake.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(4)" class="hover-shadow cursor">
-            </div>
-            <div class="column_baking">
                 <img src="/images/baking/cactus_cake.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(5)" class="hover-shadow cursor">
             </div>
             <div class="column_baking">
                 <img src="/images/baking/meringues.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(6)" class="hover-shadow cursor">
+            </div>
+            <div class="column_baking">
+                <img src="/images/baking/brownies2.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(22)" class="hover-shadow cursor">
             </div>
         </div>
         <div class="row_baking">
@@ -50,37 +50,26 @@
                 <img src="/images/baking/christmas_newy_cake.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(13)" class="hover-shadow cursor">
             </div>
             <div class="column_baking">
-                <img src="/images/baking/christmas_cake.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(14)" class="hover-shadow cursor">
-            </div>
-            <div class="column_baking">
                 <img src="/images/baking/ann_cake3.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(15)" class="hover-shadow cursor">
-            </div>
-        </div>
-        <div class="row_baking">
-            <div class="column_baking">
-                <img src="/images/baking/ann_cake4.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(16)" class="hover-shadow cursor">
             </div>
             <div class="column_baking">
                 <img src="/images/baking/ann_cake.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(17)" class="hover-shadow cursor">
             </div>
+        </div>
+        <div class="row_baking">
             <div class="column_baking">
                 <img src="/images/baking/dad_cake2.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(18)" class="hover-shadow cursor">
             </div>
-        </div>
-        <div class="row_baking">
             <div class="column_baking">
                 <img src="/images/baking/mom_cake3.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(19)" class="hover-shadow cursor">
             </div>
             <div class="column_baking">
                 <img src="/images/baking/ann_cake2.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(20)" class="hover-shadow cursor">
             </div>
-            <div class="column_baking">
-                <img src="/images/baking/cupcake.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(21)" class="hover-shadow cursor">
-            </div>
         </div>
         <div class="row_baking">
             <div class="column_baking">
-                <img src="/images/baking/brownies2.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(22)" class="hover-shadow cursor">
+                <img src="/images/baking/cupcake.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(21)" class="hover-shadow cursor">
             </div>
             <div class="column_baking">
                 <img src="/images/baking/cookies2.jpg" class="gallery" style="width:100%" loading="lazy" onclick="openModal_baking();currentSlide_baking(23)" class="hover-shadow cursor">
