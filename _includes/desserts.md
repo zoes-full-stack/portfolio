@@ -147,7 +147,7 @@
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">17 / 21</div>
-            <img src="/images/baking/mom_cake3.jpg" alt="Mother's Day Chocolate Cake with Chocolate ButterCream and Ganache" class="gallery demo_mentors" style="width:100%">
+            <img src="/images/baking/mom_cake3.jpg" alt="Mother's Day Chocolate Cake with Chocolate Buttercream and Ganache" class="gallery demo_mentors" style="width:100%">
             </div>
             <div class="mySlides_mentors">
             <div class="numbertext">18 / 21</div>
