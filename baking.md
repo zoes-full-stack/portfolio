@@ -9,4 +9,4 @@ sitemap: false
 
 ## Want More?
 
-Check Out My [Baking Instagram](https://www.instagram.com/gs_sweet_inventions/){:target="_blank"}{:.heading.flip-title} Page! :relaxed: :cake:
+Check Out My [Baking Instagram](https://www.instagram.com/gs_sweet_inventions/){:target="_blank"}{:.heading.flip-title} Page (To be Updated Soon)! :relaxed: :cake:
