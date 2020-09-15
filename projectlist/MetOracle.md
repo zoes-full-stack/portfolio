@@ -10,16 +10,16 @@ sitemap: false
     <div class ="row_project">
       <div class="column_project_l">
         <div class="post-date"> 
-          <time datetime="2020-05-31T00:00:00+00:00">31 October 2017</time> in <a href="/portfolio/projects_test/" class="flip-title">Projects</a>
+          <time datetime="2020-05-31T00:00:00+00:00">31 October 2017</time> in <a href="/projects/" class="flip-title">Projects</a>
         </div>
       </div>
       <div class="column_project_l2">
-        <a href="https://comp3613-pisynthesis.firebaseapp.com/" target="_blank" class="external heading flip-title">MetOracle</a> |
+        <!-- <a href="https://comp3613-pisynthesis.firebaseapp.com/" target="_blank" class="external heading flip-title">MetOracle</a> | -->
         <a href="https://github.com/irontarkus95/MET-Oracle-lstm-time-series-weather-prediction" target="_blank" class="external heading flip-title">Source Code</a>
       </div>
     </div>
     <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
-      <img src="/portfolio/images/projects/metOracle/weather.gif" alt="metoracle" width="864" height="486" loading="lazy">
+      <img src="/images/projects/metOracle/weather.gif" alt="metoracle" width="864" height="486" loading="lazy">
     </div>
     <p class="note-sm" title="metoracle"> MET-Oracle: Weather Prediction to Improve Smart City Resilience </p>
   </header>
@@ -64,20 +64,20 @@ As this system grows and continues to improve over time, the accuracy and reliab
 
 ## Features
 
-|                               | Completed      | To Do               |
-|:------------------------------|:--------------:|:-------------------:|
-| Web Scraping                  | &#x2714;       |                     |
-| Weather Prediction            | &#x2714;       |                     |
-| Live Graph Data               | &#x2714;       |                     |
-| Monitoring Web App            | &#x2714;       |                     |
-| Model using Particulate Date  | &#x2714;       |                     |
-| Source                        | [GitHub](https://github.com/irontarkus95/MET-Oracle-lstm-time-series-weather-prediction){:target="_blank"}  |             |
+|                               | Completed      |           
+|:------------------------------|:--------------:|
+| Web Scraping                  | &#x2714;       |                     
+| Weather Prediction            | &#x2714;       |                     
+| Live Graph Data               | &#x2714;       |                     
+| Monitoring Web App            | &#x2714;       |                     
+| Model using Particulate Date  | &#x2714;       |                     
+| Source Code                   | [GitHub](https://github.com/irontarkus95/MET-Oracle-lstm-time-series-weather-prediction){:target="_blank"}{:.heading.flip-title}  |             |
 {:.stretch-table.dl-table}
  
 ## Future Implementation
 
 - It was planned to use neural networks and supplied river levels to predict and help prepare for flooding, however, it was not feasible in the timeframe. 
-- In addition, Google Cloud Computing was the first choice for implementing the neural network so that users can directly interact with the model. For example, being able to enter a future date and then shown both curve plots and a geographical representation. Google Cloud has a free solution which we hoped and prepared to implement, however, our credit cards were refused during signup.
+- In addition, Google Cloud Computing was the first choice for implementing the neural network so that users can directly interact with the model. For example, being able to enter a future date and then shown both curve plots and a geographical representation. 
 
 ### Updates Coming Soon... :relaxed:
 
@@ -85,7 +85,7 @@ As this system grows and continues to improve over time, the accuracy and reliab
   <hr class="dingbat related">
   <aside class="about related mt4 mb4" role="complementary">
     <div class="author mt4"> 
-      <img src="/portfolio/images/gabieicon_128.png" srcset="/portfolio/images/gabieicon_128.png 1x,/portfolio/images/gabieicon_256.png 2x" alt="<Gabriela> <Sewdhan>" class="avatar" width="120" height="120" loading="lazy" style="opacity: 0;">
+      <img src="/images/gabieicon_128.png" srcset="/images/gabieicon_128.png 1x,/images/gabieicon_256.png 2x" alt="<Gabriela> <Sewdhan>" class="avatar" width="120" height="120" loading="lazy" style="opacity: 0;">
       <h2 class="page-title hr-bottom"> About</h2>
       <p>Gabriela Sewdhan: software engineer, robotics enthusiast and baker based in Trinidad.</p>
       <div class="sidebar-social"> <span class="sr-only">Social:</span>
@@ -107,16 +107,16 @@ As this system grows and continues to improve over time, the accuracy and reliab
     <h2 class="hr-bottom">Other Projects</h2>
     <ul class="related-posts">
       <li class="h4"> 
-        <a href="/portfolio/projectlist/QuickRental/" class="flip-title"><span>QuickRental</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">31 May 2019</time>
+        <a href="/projectlist/QuickRental/" class="flip-title"><span>QuickRental</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">31 May 2019</time>
       </li>
       <li class="h4"> 
-        <a href="/portfolio/projectlist/AntiPlasti/" class="flip-title"><span>AntiPlasti</span></a> <time class="faded fine" datetime="2018-06-01T00:00:00+00:00">10 Feb 2019</time>
+        <a href="/projectlist/AntiPlasti/" class="flip-title"><span>AntiPlasti</span></a> <time class="faded fine" datetime="2018-06-01T00:00:00+00:00">10 Feb 2019</time>
       </li>
       <li class="h4"> 
-        <a href="/portfolio/projectlist/PiDronics/" class="flip-title"><span>PiDronics</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">22 Dec 2018</time>
+        <a href="/projectlist/PiDronics/" class="flip-title"><span>PiDronics</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">22 Dec 2018</time>
       </li>
       <li class="h4"> 
-        <a href="/portfolio/projectlist/dcitCamp-2017-2018/" class="flip-title"><span>DCIT Robotics BootCamp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">July 2017/2018</time>
+        <a href="/projectlist/dcitCamp-2017-2018/" class="flip-title"><span>DCIT Robotics Boot Camp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">July 2017/2018</time>
       </li>
     </ul>
   </aside>

@@ -162,6 +162,7 @@ span {
     width: 100%;
     display: block;
     margin-top: 0px;
+    margin-left: -5px;
   }
   .column_project_l {
     width: 100%;
@@ -235,4 +236,287 @@ img[src~="bordered"]:hover {
   -ms-transform: translateY(-5px);
   -o-transform: translateY(-5px);
   -webkit-transform: translateY(-5px);
+}
+
+// For gallery on dcit bootcamp page
+
+.border_img {
+  box-sizing: border-box;
+}
+
+.row_img > .column_img {
+  padding: 0 8px 8px;
+}
+
+.row_img:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column_img {
+  float: left;
+  width: 25%;
+}
+
+.row_baking > .column_baking {
+  padding: 0 4px 8px;
+}
+
+.row_baking:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column_baking {
+  float: left;
+  width: 33%;
+}
+
+.column_vid {
+  float: left;
+  width: 50%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 70px;
+    right: 15%;
+    top: 11%;
+    width: 55%;
+    height: 80%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal_baking {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 70px;
+    right: 20%;
+    top: 13%;
+    width: 45%;
+    height: 80%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content_baking {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 55%;
+    max-width: 800px;
+}
+/* Modal Content */
+// .modal-content {
+//     position: relative;
+//     background-color: #fefefe;
+//     margin: auto;
+//     padding: 0;
+//     width: 75%;
+//     /* height: 50%; */
+//     max-width: 800px;
+// }
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 67%;
+    max-width: 800px;
+}
+
+// .modal-content {
+//   position: relative;
+//   background-color: #fefefe;
+//   margin: auto;
+//   padding: 0;
+//   width: 50%;
+//   height: 50%;
+//   max-width: 800px;
+// }
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides_mentors {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #ffffff;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+// img
+.gallery {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 4px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.9;
+}
+
+.demo_mentors {
+  opacity: 0.9;
+}
+
+.active,
+.demo:hover {
+  opacity: 0.9;
+}
+
+.gallery.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+// Video Sliders
+.mySlides_vid {display:none;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev_vid, .next_vid {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next_vid {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev_vid:hover, .next_vid:hover {
+  background-color: rgb(82, 73, 73);
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev_vid, .next_vid {font-size: 17px}
+}
+
+@media only screen and (max-width:700px) {
+  .modal {
+    right: 0%;
+    // top: 5%;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .modal-content {
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .modal_baking {
+    right: 0%;
+    // top: 5%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal-content_baking {
+    width: 90%;
+    max-width: 600px;
+  }
+
+  /* The Close Button */
+  .close {
+    // top: 10px;
+    // right: 25px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .prev_vid, .next_vid {font-size: 13px}
 }

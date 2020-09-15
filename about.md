@@ -12,7 +12,7 @@ redirect_from:
 # About
 
 :house_with_garden: **Trinidad & Tobago** &nbsp;
-:calling: **1(868)496-5529** &nbsp;
+:calling: **1 (868) 496-5529** &nbsp;
 :email: [**gabiems13@gmail.com**](mailto:gabiems13@gmail.com)
 
 <!--author-->
@@ -26,8 +26,8 @@ redirect_from:
 ![robotics](images/icons/robot.png){:width="75" height="75" loading="lazy"} &emsp; 
 ![coding](images/icons/coding.png){:width="60" height="60" loading="lazy"} &emsp;
 ![nasa](images/icons/nasa2.png){:width="70" height="70" loading="lazy"} &emsp; 
-![astronomy](images/icons/astronomy.jpg){:width="60" height="60" loading="lazy"} &emsp; 
-![gaming](images/icons/gaming.jpg){:width="60" height="60" loading="lazy"}
+![astronomy](images/icons/astronomy.png){:width="60" height="60" loading="lazy"} &emsp; 
+![gaming](images/icons/gaming.png){:width="60" height="60" loading="lazy"}
 
 `Robotics` &emsp; `Coding` &emsp;&emsp; `NASA` &emsp; `Astronomy` &emsp; `Gaming and Game Development`
 
@@ -37,7 +37,7 @@ redirect_from:
 ![baking](images/icons/baking.png){:width="70" height="70" loading="lazy"} &emsp; 
 ![ocean](images/icons/ocean.png){:width="75" height="75" loading="lazy"}
 
-`Diving` &emsp;&nbsp; `Hiking` &emsp;&nbsp; `Music` &emsp;&nbsp; `Baking` &emsp; `Ocean Conservation`
+`Diving` &emsp;&nbsp; `Hiking` &emsp;&nbsp; `Music` &emsp;&nbsp;&nbsp; [`Baking`](baking.md){:target="_blank"} &emsp; `Ocean Conservation`
 
 
 <!-- ## Beautiful Math
@@ -68,5 +68,5 @@ Hydejack uses KaTeX to efficiently render math.
 &nbsp;
 &nbsp;
 
-Continue with [Skills](skillset.md){:.heading.flip-title}
+Continue with [Skills](skills.md){:.heading.flip-title}
 {:.read-more}

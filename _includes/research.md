@@ -1,4 +1,4 @@
-**Researcher and Staff** at [TTLAB](http://lab.tt/){:target="_blank"}
+**Researcher and Staff** at [TTLAB](http://lab.tt/){:target="_blank"}{:.heading.flip-title}
 {:.note title="November 2019 - _Present_"}
 
 - Creating Optimal Personalised Prepaid Plans for TSTT Prepaid Customers
@@ -10,7 +10,7 @@
 **Research Assistant** at **U.W.I, Department of Computing and Information Technology (DCIT)**
 {:.note title="March 2018 - May 2019"}
 
-- rasperry pi - plant under 
+- Measuring the environmental effects on plants via visual through a camera and sensor readings through humidity, temperature and pH sensors. 
 **Supervisor**: Dr. Phaedra Mohammed
 - EvaLing - Evaluating and Developing Speech Recognition for Caribbean Dialect 
 **Supervisor**: Mr. Kyle DeFreitas    
@@ -18,11 +18,11 @@
 <hr>
 &nbsp;
 
-**Publications**
+**Research Papers**
 
 **U.W.I, Department of Computing and Information Technology**
 
-- Optimising Personalised Prepaid Cellular Plans &nbsp; [_May 2020_] <br>
+- [Optimising Personalised Prepaid Cellular Plans](/Research/oppcp_paper.pdf){:target="_blank"}{:.flip-title} &nbsp; [_May 2020_] <br>
 **Supervisor**: Professor Patrick Hosein
 
 **U.W.I, Department of Behavioural Sciences**
@@ -31,5 +31,3 @@
 **Supervisor**: Dr. Jannel Phillips
 &nbsp;
 <hr>
-
-sensor data (humidy, temp, pH, camera) in plant, studying if changes in environment would affect plant visually
