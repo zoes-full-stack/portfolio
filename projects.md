@@ -65,7 +65,7 @@ sitemap: false
             <img src="../images/projects/dcit_bootcamp/dcit_curie_square.jpg" alt="BootCamp" style="width:100%" loading="lazy">
           </a>
           <div class="container_project">
-            <h4 id="bootcamp"><a href="../projectlist/dcitCamp-2017-2018/" class="heading flip-title">DCIT Robotics Bootcamp</a> <span>&#8594;</span></h4>
+            <h4 id="bootcamp"><a href="../projectlist/dcitCamp-2017-2018/" class="heading flip-title">DCIT Robotics BootCamp</a> <span>&#8594;</span></h4>
             <p class = "faded"><small>Meet Curie :3</small></p>
           </div>
       </div>
