@@ -19,7 +19,7 @@ sitemap: false
       </div>
     </div>
     <div class="lead aspect-ratio flip-project-img"> 
-      <video width="864" height="500" loading="lazy" playsinline autoplay loop>
+      <video width="864" height="500" autoplay loop muted playsinline>
         <source src="/images/projects/pidronics/PiDronics_intro.mp4" type="video/mp4">
         <!-- <source src="movie.ogg" type="video/ogg"> -->
         Your browser does not support the video tag.
