@@ -14,12 +14,17 @@ sitemap: false
         </div>
       </div>
       <div class="column_project_l2">
-        <a href="https://comp3613-pisynthesis.firebaseapp.com/" target="_blank" class="external heading flip-title">PiDronics WebApp</a> |
+        <a href="https://pidronics.firebaseapp.com/" target="_blank" class="external heading flip-title">PiDronics WebApp</a> |
         <a href="https://github.com/PiDronics" target="_blank" class="external heading flip-title">Source Code</a>
       </div>
     </div>
     <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
-      <img src="/images/projects/pidronics/pidronics_large.png" alt="PiDronics" width="864" height="486" loading="lazy">
+      <video width="864" height="486" loading="lazy" controls loop>
+        <source src="/images/projects/pidronics/PiDronics_intro.mp4" type="video/mp4">
+        <!-- <source src="movie.ogg" type="video/ogg"> -->
+        Your browser does not support the video tag.
+      </video>
+      <!-- <img src="/images/projects/pidronics/pidronics_large.png" alt="PiDronics" width="864" height="486" loading="lazy"> -->
     </div>
     <p class="note-sm" title="PiDronics"> PiDronics: Automated Hydroponics Monitoring System</p>
   </header>
@@ -42,12 +47,12 @@ This project was developed alongside team members [Michael Ali](https://www.link
 {:toc .large-only}
 
 ## Technologies Used
-`Python` | `Shell` | `Nodejs` | `Javascript` |`HTML` | `CSS` | `Firebase Database`
+`Python` | `Shell` | `Reactjs` | `Javascript` |`HTML` | `CSS` | `Firebase Database`
 <!-- {:.faded} -->
 
 <!-- get rest of sensors -->
 ## Hardware Used 
-`Raspberry Pi` | `Temperature Sensor` | `Humidity Sensor` |`pH Sensor` | `Dissolved Oxygen Sensor` 
+`Raspberry Pi` | `Temperature Sensor` | `Humidity Sensor` |`pH Sensor` 
 <!-- {:.faded} -->
 
 ## How does it work?
@@ -85,8 +90,9 @@ The data taken from these sensors are pushed to the web app/site, to determine i
 ## Full Implementation
 
 See Our
+- [Project Video](https://youtu.be/EED9S3SFkr0){:target="_blank"}{:.heading.flip-title}. Audio to be added soon!
 - [Product Manual](https://docs.google.com/document/d/1FWLsea7MBdXaazkmk156T1Quhn5-B72oxn0frQKcgs8/edit?usp=sharing){:target="_blank"}{:.heading.flip-title} to understand the usage of the system.
-- [PiDronics Web App](https://comp3613-pisynthesis.firebaseapp.com/){:target="_blank"}{:.heading.flip-title} for a demo of the system.
+- [PiDronics Web App](https://pidronics.firebaseapp.com/){:target="_blank"}{:.heading.flip-title} for a demo of the system.
 - [Project Document](https://docs.google.com/document/d/19n-Tqvua5BX2gGXPMfhZQK4Tw7byQBMCGW686ZdKLPQ/edit?usp=sharing){:target="_blank"}{:.heading.flip-title} for detailed features and information.
 Maybe just glance at it to confirm that it is indeed a pretty long list.
 
