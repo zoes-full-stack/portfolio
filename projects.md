@@ -51,11 +51,11 @@ sitemap: false
       <div class="card_project">
           <a href="../projectlist/PiDronics/">
               <video style="width:100%" loading="lazy" autoplay loop>
-                <source src="/images/projects/pidronics/PiDronics_intro.mp4" type="video/mp4">
+                <source src="/images/projects/pidronics/pidronics_about.mp4" type="video/mp4">
                 <!-- <source src="movie.ogg" type="video/ogg"> -->
                 Your browser does not support the video tag.
               </video>
-            <img src="../images/projects/pidronics/pidronics.gif" alt="PiDronics" style="width:100%" loading="lazy">
+            <!-- <img src="../images/projects/pidronics/pidronics.gif" alt="PiDronics" style="width:100%" loading="lazy"> -->
           </a>
           <div class="container_project">
             <h4 id="pidronics"><a href="../projectlist/PiDronics/" class="heading flip-title">PiDronics</a> <span>&#8594;</span></h4>
