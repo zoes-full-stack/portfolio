@@ -50,6 +50,11 @@ sitemap: false
       <p class = "faded"><small>22nd Dec</small></p>
       <div class="card_project">
           <a href="../projectlist/PiDronics/">
+              <video style="width:100%" loading="lazy" autoplay loop>
+                <source src="/images/projects/pidronics/PiDronics_intro.mp4" type="video/mp4">
+                <!-- <source src="movie.ogg" type="video/ogg"> -->
+                Your browser does not support the video tag.
+              </video>
             <img src="../images/projects/pidronics/pidronics.gif" alt="PiDronics" style="width:100%" loading="lazy">
           </a>
           <div class="container_project">
