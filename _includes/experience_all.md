@@ -1,5 +1,5 @@
 **Data Scientist and Software Developer** at **Telecommunication Services of Trinidad and Tobago Limited (TSTT)**
-{:.note title="November 2019 - September 2020"}
+{:.note title="November 2019 - October 2020"}
 
 - Performed extensive analysis on team and organisation productivity data
     - Helped develop a Figure Of Metric (FOM) measurement and mathematical model
