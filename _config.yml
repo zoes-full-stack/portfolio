@@ -62,6 +62,8 @@ menu:
     url:               /projects/ 
   - title:             Resume
     url:               /resume/
+  - title:             Baking
+    url:               /baking/
     # /Resume/GabrielaSewdhan_Resume.pdf
     # (https://gabrielasewdhan.github.io/portfolio/Resume/GabrielaSewdhan_Resume.pdf){:target="_blank"}
 
