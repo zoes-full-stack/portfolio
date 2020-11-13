@@ -84,7 +84,6 @@ View Our:
 - [Project Website](https://quick-rental-project-website.herokuapp.com/final-report.html){:target="_blank"}{:.heading.flip-title} OR
 - [Project Document](https://docs.google.com/document/d/1x6pquztfBMKPRq7Z2c1AhgS2I1rwo8vd65kQ-VqxPWY/edit?usp=sharing){:target="_blank"}{:.heading.flip-title} for the full scope of features and improvements made in QuickRental 
 - [Project Video](https://youtu.be/WOppO_66oSE){:target="_blank"}{:.heading.flip-title} for an overview and demo of QuickRental!
-Maybe just glance at it to confirm that it is indeed a pretty long list.
 
 ### Updates Coming Soon... :relaxed:
 

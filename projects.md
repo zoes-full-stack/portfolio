@@ -55,7 +55,6 @@ sitemap: false
                 <!-- <source src="movie.ogg" type="video/ogg"> -->
                 Your browser does not support the video tag.
               </video>
-            <!-- <img src="../images/projects/pidronics/pidronics.gif" alt="PiDronics" style="width:100%" loading="lazy"> -->
           </a>
           <div class="container_project">
             <h4 id="pidronics"><a href="../projectlist/PiDronics/" class="heading flip-title">PiDronics</a> <span>&#8594;</span></h4>
