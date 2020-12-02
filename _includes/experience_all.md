@@ -1,14 +1,13 @@
-**Data Scientist and Software Developer** at **Telecommunication Services of Trinidad and Tobago Limited (TSTT)**
+**Data Scientist and Software Engineer** at **Telecommunication Services of Trinidad and Tobago Limited (TSTT)**
 {:.note title="November 2019 - October 2020"}
 
-- Performed extensive analysis on team and organisation productivity data
-    - Helped develop a Figure Of Metric (FOM) measurement and mathematical model
-    - Helped develop a Productivity Dashboard  during COVID-19.
-- Developed an Admin interface for managing users, roles and permissions.
-- Helped develop dataset to better understand customer behaviour.
-- Employed Machine Learning Models to improve customer retention.
-- Built recommender system to recommend and personalize bundles for long-term profit optimization.
-- Conducted Bi-weekly Programming and Data Science workshops.
+-	Developed an Admin interface for managing users, roles and permissions. 
+-	Performed extensive analysis on team and organisation productivity data via aiding in the development of a Figure of Metric (FOM) measurement, mathematical model, and a Productivity Dashboard during COVID-19. 
+-	Worked closely with the stakeholders in designing and developing the look and functionality of these interfaces to fully meet their requirements.
+-	Employed a recommender system to improve customer retention and long-term profit optimization via recommending and creating personalizing bundles. 
+-	Extensively used Agile Methodology, Version Control (Git) and Continuous Integration.
+-	Conducted Bi-weekly Programming and Data Science workshops.
+
 &nbsp;
 <hr>
 &nbsp;
