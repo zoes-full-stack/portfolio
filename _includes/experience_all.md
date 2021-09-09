@@ -1,3 +1,43 @@
+**Associate Software Engineer** at **Virtana**
+{:.note title="August 2021 - Present"}
+
+-   Broke down shell scripts into one unit
+-   Improved efficiency and user-friendlyness of error reports for bots
+-   Extensively used Google's code style guide, Agile Methodology, Gerrit and Version Control (Git).
+
+&nbsp;
+<hr>
+&nbsp;
+
+**Software Engineer Intern** at **Virtana**
+{:.note title="May 2021 - August 2021"}
+
+-	Calibrated cameras and explored camera intrinsics and object extrinsics.
+-   Estimated the pose of individual AprilTags and an AprilGroup attached to a dodecahedron.
+-   Used optical flow to track the movement of the AprilGroup object.
+-   Calibrated the tip of a pen attached to the AprilGroup object.
+-   Used PyQtGraph to obtain a live graph drawing via tracked poses of the AprilGroup object.
+-	Extensively used Google's code style guide, Agile Methodology and Version Control (Git).
+-   [Github Link](https://github.com/Virtana/accurate-aprilgroup-tracking/tree/feature/pentip-calibration){:target="_blank"}
+
+&nbsp;
+<hr>
+&nbsp;
+
+**Junior Developer** at **SCG Growth Partners**
+{:.note title="January 2021 - May 2021"}
+
+-	Maintained and developed new Wordpress pages for [Beacon](https://beacon.co.tt/?modal-link=%2Fcallback-popup){:target="_blank"} website with added security.
+-   Ensured form data were correctly passed to the backend via python development.
+-   Worked closely with the design and development team to develop
+    - New insurance forms for [Tatil](https://tatil.co.tt/){:target="_blank"} using React and MobX.
+    - Revise the current website into a more minimal and user-friendly one using Wordpress.
+-	Extensively used Agile Methodology, Version Control (Git) and Continuous Integration.
+
+&nbsp;
+<hr>
+&nbsp;
+
 **Data Scientist and Software Engineer** at **Telecommunication Services of Trinidad and Tobago Limited (TSTT)**
 {:.note title="November 2019 - October 2020"}
 

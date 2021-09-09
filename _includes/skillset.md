@@ -56,25 +56,26 @@
             <code class="language-plaintext highlighter-rouge">Keras</code> | 
             <code class="language-plaintext highlighter-rouge">Object Detection (Mask RCNN)</code> | 
             <code class="language-plaintext highlighter-rouge">pyTorch</code>| 
-            <code class="language-plaintext highlighter-rouge">GoLang</code> 
         </p>
         <h6 class='indent_skill'>Robotics Programming</h6> 
         <p>
+            <code class="language-plaintext highlighter-rouge">GoLang</code> 
             <code class="language-plaintext highlighter-rouge">ROS</code>| 
             <code class="language-plaintext highlighter-rouge">Programming with Raspberry Pi and Arduino</code> 
         </p>
     </div>
     <h4>Other Software Engineering Skills: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4> 
     <p>
+            <code class="language-plaintext highlighter-rouge">Bash</code>| 
             <code class="language-plaintext highlighter-rouge">C++</code>| 
-            <code class="language-plaintext highlighter-rouge">Ubuntu</code> | 
+            <code class="language-plaintext highlighter-rouge">Linux</code> | 
             <code class="language-plaintext highlighter-rouge">Java</code>|
             <code class="language-plaintext highlighter-rouge">Algorithm Design</code> | 
             <code class="language-plaintext highlighter-rouge">Software Testing</code> | 
             <code class="language-plaintext highlighter-rouge">GIT</code> | 
             <code class="language-plaintext highlighter-rouge">Android SDK</code> 
     </p>
-    <h4>Backend Engineering: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span></h4>
+    <h4>Backend Engineering: <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span></h4>
     <p>
             <code class="language-plaintext highlighter-rouge">Nodejs</code>| 
             <code class="language-plaintext highlighter-rouge">SQL</code> | 

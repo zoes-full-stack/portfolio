@@ -20,9 +20,10 @@
 
 **Research Papers**
 
-**U.W.I, Department of Computing and Information Technology**
+**[TTLAB](https://lab.tt/)**
 
-- [Optimising Personalised Prepaid Cellular Plans](/Research/oppcp_paper.pdf){:target="_blank"}{:.flip-title} &nbsp; [_May 2020_] <br>
+- [Soft-Churn: Optimal Switching between Prepaid Data Subscription on E-SIM Support Smartphones](/Research/soft_churn_optimal_switching_between_prepaid_data_subscription_on_ESIM_support_smartphones.pdf){:target="_blank"}{:.flip-title} &nbsp; [_May 2020_] <br>
+- [Research Poster](https://i.imgur.com/2harbr1.jpg){:target="_blank"} <br>
 **Supervisor**: Professor Patrick Hosein
 
 **U.W.I, Department of Behavioural Sciences**
