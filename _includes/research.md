@@ -10,9 +10,9 @@
 **Research Assistant** at **U.W.I, Department of Computing and Information Technology (DCIT)**
 {:.note title="March 2018 - May 2019"}
 
-- Measuring the environmental effects on plants via visual through a camera and sensor readings through humidity, temperature and pH sensors. 
+- Measuring the environmental effects on plants via visual through a camera and sensor readings through humidity, temperature and pH sensors. <br>
 **Supervisor**: Dr. Phaedra Mohammed
-- EvaLing - Evaluating and Developing Speech Recognition for Caribbean Dialect 
+- EvaLing - Evaluating and Developing Speech Recognition for Caribbean Dialect <br>
 **Supervisor**: Mr. Kyle DeFreitas    
 &nbsp;
 <hr>
