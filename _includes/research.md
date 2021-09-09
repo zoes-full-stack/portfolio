@@ -1,5 +1,5 @@
 **Researcher and Staff** at [TTLAB](http://lab.tt/){:target="_blank"}{:.heading.flip-title}
-{:.note title="November 2019 - _Present_"}
+{:.note title="November 2019 - Present"}
 
 - Creating Optimal Personalised Prepaid Plans for TSTT Prepaid Customers
 - Monitoring and Analysing Traffic Flow Data via Google Maps and Waze
