@@ -4,7 +4,6 @@
 -   Broke down shell scripts into one unit
 -   Improved efficiency and user-friendlyness of error reports for bots
 -   Extensively used Google's code style guide, Agile Methodology, Gerrit and Version Control (Git).
-
 &nbsp;
 <hr>
 &nbsp;
@@ -19,21 +18,20 @@
 -   Used PyQtGraph to obtain a live graph drawing via tracked poses of the AprilGroup object.
 -	Extensively used Google's code style guide, Agile Methodology and Version Control (Git).
 -   [Github Link](https://github.com/Virtana/accurate-aprilgroup-tracking/tree/feature/pentip-calibration){:target="_blank"}
-
 &nbsp;
 <hr>
 &nbsp;
 
-**Junior Developer** at **SCG Growth Partners**
+**Junior Software Developer** at **SCG Growth Partners**
 {:.note title="January 2021 - May 2021"}
 
--	Maintained and developed new Wordpress pages for [Beacon](https://beacon.co.tt/?modal-link=%2Fcallback-popup){:target="_blank"} website with added security.
--   Ensured form data were correctly passed to the backend via python development.
--   Worked closely with the design and development team to develop
-    - New insurance forms for [Tatil](https://tatil.co.tt/){:target="_blank"} using React and MobX.
-    - Revise the current website into a more minimal and user-friendly one using Wordpress.
--	Extensively used Agile Methodology, Version Control (Git) and Continuous Integration.
-
+-	Develop React Apps to be integrated into a WordPress Site for [Tatil](https://tatil.co.tt/){:target="_blank"}. 
+-   Explored Formik, Yup and MobX technologies.
+-   Developed WordPress custom theme.
+-   Added content to python and Django back-end for Insurance Quotations.
+-   Added page templates to existing WordPress site ([Beacon](https://beacon.co.tt/?modal-link=%2Fcallback-popup)).
+-   Strong Git and Scrum workflow.
+-   Gained important workflow ethic and process from peers.
 &nbsp;
 <hr>
 &nbsp;
@@ -47,7 +45,6 @@
 -	Employed a recommender system to improve customer retention and long-term profit optimization via recommending and creating personalizing bundles. 
 -	Extensively used Agile Methodology, Version Control (Git) and Continuous Integration.
 -	Conducted Bi-weekly Programming and Data Science workshops.
-
 &nbsp;
 <hr>
 &nbsp;

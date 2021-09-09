@@ -59,7 +59,7 @@
         </p>
         <h6 class='indent_skill'>Robotics Programming</h6> 
         <p>
-            <code class="language-plaintext highlighter-rouge">GoLang</code> 
+            <code class="language-plaintext highlighter-rouge">GoLang</code>|
             <code class="language-plaintext highlighter-rouge">ROS</code>| 
             <code class="language-plaintext highlighter-rouge">Programming with Raspberry Pi and Arduino</code> 
         </p>
