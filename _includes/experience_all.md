@@ -11,14 +11,28 @@
 &nbsp;
 
 **Associate Software Engineer** at **Virtana**
-{:.note title="August 2021 - November 2022"}
+{:.note title="August 2021 - August 2022"}
 
--   Broke down shell scripts into one unit
--   Improved efficiency and user-friendlyness of error reports for bots
--   Extensively used Google's code style guide, Agile Methodology, Gerrit and Version Control (Git).
+BizOps 
+-   Aided in client billing. 
+-   Used Xero to process invoices and check balance sheets and Profit and Loss statements. 
+-   Explored Fathom for financial forecasting. 
+-   Automated BizOps invoicing processes via python scripts.
+ 
+Software Engineering 
+-   Comprehensive exercise in software engineering best practices. 
+-   Created thorough design docs and workflows prior to executing tasks to ensure efficacy. 
+-   Designed and executed on-host calibration through UI via C# front-end and Python/GoLang back-end. 
+-   Performed Gerrit ChangeList/Code Review. 
+-   Heavy use of GoLang and Python to contribute to the infrastructure, functionality and scalability of large scale robotics tasks. 
+-   Conducted thorough research, documentation and controlled experiments on a fresh topic involving emerging technologies. 
+-   Was able to swiftly and comprehensively grasp new technologies and paradigms required to efficiently contribute to the company despite lacking prior foundations.
+-   Extensively used Google’s code style guide, Agile Methodology and Version Control (Git).
 &nbsp;
 <hr>
 &nbsp;
+
+
 
 **Software Engineer Intern** at **Virtana**
 {:.note title="May 2021 - August 2021"}
