@@ -6,7 +6,6 @@
 -   Design and develop high-end frontends, microservices and automation systems with strong emphasis on emotional design and usability.
 -   Build reusable design systems, internal tooling and scalable infrastructure to support client growth.
 -   Collaborate closely with founders and mission-driven organizations to translate abstract vision into functional, high-clarity digital outcomes.
-
 &nbsp;
 <hr>
 &nbsp;
