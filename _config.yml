@@ -31,7 +31,7 @@ description:           >
   Personal Porfolio to demonstrate experience, projects developed and skills.
 
 # A shorter description for the sidebar.
-tagline:               Software Engineer with a love for robotics, diving, the ocean, baking, and an extremely curious mind!
+tagline:               Software Engineer with a love for design, robotics, diving, the ocean, baking, neuroscience, psychology, and an extremely curious mind!
 
 # A list of keywords for your blog
 keywords:              []
@@ -46,7 +46,7 @@ logo:                  /assets/icons/gicon-512x512.png
 author:
   # Used by `jekyll-feed`:
   name:                <Gabriela> <Sewdhan>
-  email:               <gabiems13@gmail.com>
+  email:               <gabbysewdhan@gmail.com>
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
@@ -80,7 +80,7 @@ menu:
 #     url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2020. All rights reserved.
+copyright:             © 2025. Gabriela Sewdhan. All rights reserved.
 
 # Format of the permalinks
 permalink:             /:categories/:year-:month-:day-:title/
