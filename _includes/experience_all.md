@@ -1,5 +1,18 @@
+**Co-Founder, Director & Lead Creative Technologist** at **Scarlet Creative**
+{:.note title="February 2023 - Present"}
+
+-   Co-founded a creative software studio delivering intelligent, human-centered digital experiences.
+-   Lead full-stack engineering, creative direction and technical architecture for interactive products and AI-enabled tools.
+-   Design and develop high-end frontends, microservices and automation systems with strong emphasis on emotional design and usability.
+-   Build reusable design systems, internal tooling and scalable infrastructure to support client growth.
+-   Collaborate closely with founders and mission-driven organizations to translate abstract vision into functional, high-clarity digital outcomes.
+
+&nbsp;
+<hr>
+&nbsp;
+
 **Associate Software Engineer** at **Virtana**
-{:.note title="August 2021 - Present"}
+{:.note title="August 2021 - November 2022"}
 
 -   Broke down shell scripts into one unit
 -   Improved efficiency and user-friendlyness of error reports for bots

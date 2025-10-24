@@ -13,7 +13,7 @@ redirect_from:
 
 :house_with_garden: **Trinidad & Tobago** &nbsp;
 :calling: **1 (868) 496-5529** &nbsp;
-:email: [**gabiems13@gmail.com**](mailto:gabiems13@gmail.com)
+:email: [**gabbysewdhan@gmail.com**](mailto:gabbysewdhan@gmail.com)
 
 <!--author-->
 
@@ -23,21 +23,23 @@ redirect_from:
 
 ## Interests
 
+![design](images/icons/designer.png){:width="75" height="75" loading="lazy"} &emsp; 
 ![robotics](images/icons/robot.png){:width="75" height="75" loading="lazy"} &emsp; 
 ![coding](images/icons/coding.png){:width="60" height="60" loading="lazy"} &emsp;
 ![nasa](images/icons/nasa2.png){:width="70" height="70" loading="lazy"} &emsp; 
 ![astronomy](images/icons/astronomy.png){:width="60" height="60" loading="lazy"} &emsp; 
 ![gaming](images/icons/gaming.png){:width="60" height="60" loading="lazy"}
 
-`Robotics` &emsp; `Coding` &emsp;&emsp; `NASA` &emsp; `Astronomy` &emsp; `Gaming and Game Development`
+`Graphic Design` &emsp; `Robotics` &emsp; `Coding` &emsp;&emsp; `NASA` &emsp; `Astronomy` &emsp; `Gaming and Game Development`
 
+![meditation](images/icons/meditation.png){:width="75" height="75" loading="lazy"} &emsp; 
 ![diving](images/icons/diving.png){:width="65" height="65" loading="lazy"} &emsp; 
 ![hiking](images/icons/hiking.jpg){:width="60" height="60" loading="lazy"} &emsp; 
 ![music](images/icons/music.png){:width="60" height="60" loading="lazy"} &emsp; 
 ![baking](images/icons/baking.png){:width="70" height="70" loading="lazy"} &emsp; 
 ![ocean](images/icons/ocean.png){:width="75" height="75" loading="lazy"}
 
-`Diving` &emsp;&nbsp; `Hiking` &emsp;&nbsp; `Music` &emsp;&nbsp;&nbsp; [`Baking`](baking.md){:target="_blank"} &emsp; `Ocean Conservation`
+`Neditation` &emsp;&nbsp; `Diving` &emsp;&nbsp; `Hiking` &emsp;&nbsp; `Music` &emsp;&nbsp;&nbsp; [`Baking`](baking.md){:target="_blank"} &emsp; `Ocean Conservation`
 
 
 <!-- ## Beautiful Math
