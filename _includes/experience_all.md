@@ -13,13 +13,13 @@
 **Associate Software Engineer** at **Virtana**
 {:.note title="August 2021 - August 2022"}
 
-BizOps 
+***BizOps***
 -   Aided in client billing. 
 -   Used Xero to process invoices and check balance sheets and Profit and Loss statements. 
 -   Explored Fathom for financial forecasting. 
 -   Automated BizOps invoicing processes via python scripts.
  
-Software Engineering 
+***Software Engineering***
 -   Comprehensive exercise in software engineering best practices. 
 -   Created thorough design docs and workflows prior to executing tasks to ensure efficacy. 
 -   Designed and executed on-host calibration through UI via C# front-end and Python/GoLang back-end. 
@@ -31,8 +31,6 @@ Software Engineering
 &nbsp;
 <hr>
 &nbsp;
-
-
 
 **Software Engineer Intern** at **Virtana**
 {:.note title="May 2021 - August 2021"}
