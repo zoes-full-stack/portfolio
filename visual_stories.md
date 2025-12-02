@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Graphic Design & Canva
+title: Visual Stories
 sitemap: false
 ---
 
