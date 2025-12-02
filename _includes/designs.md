@@ -23,30 +23,23 @@
       </div>
 
     <div class="column_designs">
-        <img src="/images/Canva/Scarlet Most Creative.png"
-             class="gallery" style="width:100%" loading="lazy"
-             onclick="openModal_canva();currentSlide_canva(3)">
-        <p class="faded"><small>Scarlet Creative: playful piece celebrating creativity</small></p>
-      </div>
-
-    <div class="column_designs">
         <img src="/images/Canva/Facebook Profile Photo (720 x 720px).png"
              class="gallery" style="width:100%" loading="lazy"
-             onclick="openModal_canva();currentSlide_canva(4)">
+             onclick="openModal_canva();currentSlide_canva(3)">
         <p class="faded"><small>Scarlet profile icon: circular avatar for social platforms</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Scarlet Cover Photo (830 x 360 px).png"
              class="gallery" style="width:100%" loading="lazy"
-             onclick="openModal_canva();currentSlide_canva(5)">
+             onclick="openModal_canva();currentSlide_canva(4)">
         <p class="faded"><small>Scarlet cover photo: banner artwork for social and site headers</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Scarlet Creative Software.png"
              class="gallery" style="width:100%" loading="lazy"
-             onclick="openModal_canva();currentSlide_canva(6)">
+             onclick="openModal_canva();currentSlide_canva(5)">
         <p class="faded"><small>Scarlet Creative Software: clean brand graphic for our studio</small></p>
       </div>
     </div>
@@ -59,21 +52,21 @@
       <div class="column_designs">
         <img src="/images/Canva/freedom_and_trust.png"
              class="gallery" style="width:100%" loading="lazy"
-             onclick="openModal_canva();currentSlide_canva(7)">
+             onclick="openModal_canva();currentSlide_canva(6)">
         <p class="faded"><small>Freedom & Trust: gentle message piece about safety and openness</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Scarlet - Happy Divali.png"
              class="gallery" style="width:100%" loading="lazy"
-             onclick="openModal_canva();currentSlide_canva(8)">
+             onclick="openModal_canva();currentSlide_canva(7)">
         <p class="faded"><small>Happy Divali: festive Scarlet greeting celebrating light</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Scarlet Beach.png"
              class="gallery" style="width:100%" loading="lazy"
-             onclick="openModal_canva();currentSlide_canva(9)">
+             onclick="openModal_canva();currentSlide_canva(8)">
         <p class="faded"><small>Scarlet Beach: seaside scene with the Scarlet bird taking a break</small></p>
       </div>
     </div>
@@ -82,8 +75,15 @@
       <div class="column_designs">
         <img src="/images/Canva/Scarlet Creative Let Go.gif"
              class="gallery" style="width:100%" loading="lazy"
-             onclick="openModal_canva();currentSlide_canva(10)">
+             onclick="openModal_canva();currentSlide_canva(9)">
         <p class="faded"><small>Let Go: looping animation about release, flow, and softness</small></p>
+      </div>
+
+      <div class="column_designs">
+          <img src="/images/Canva/Scarlet Most Creative.png"
+              class="gallery" style="width:100%" loading="lazy"
+              onclick="openModal_canva();currentSlide_canva(10)">
+          <p class="faded"><small>Scarlet Creative: playful piece celebrating creativity</small></p>
       </div>
 
       <div class="column_designs">
@@ -180,57 +180,57 @@
 
         <div class="mySlides_canva">
           <div class="numbertext">3 / 19</div>
-          <img src="/images/Canva/Scarlet Most Creative.png"
-               alt="Scarlet Most Creative – playful piece celebrating creativity."
-               class="gallery demo_canva" style="width:100%">
-        </div>
-
-        <div class="mySlides_canva">
-          <div class="numbertext">4 / 19</div>
           <img src="/images/Canva/Facebook Profile Photo (720 x 720px).png"
                alt="Scarlet profile icon: circular avatar for social platforms."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">5 / 19</div>
+          <div class="numbertext">4 / 19</div>
           <img src="/images/Canva/Scarlet Cover Photo (830 x 360 px).png"
                alt="Scarlet cover photo: banner artwork for social and site headers."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">6 / 19</div>
+          <div class="numbertext">5 / 19</div>
           <img src="/images/Canva/Scarlet Creative Software.png"
                alt="Scarlet Creative Software: clean brand graphic for the studio."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">7 / 19</div>
+          <div class="numbertext">6 / 19</div>
           <img src="/images/Canva/freedom_and_trust.png"
                alt="Freedom & Trust: gentle message piece about safety and openness."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">8 / 19</div>
+          <div class="numbertext">7 / 19</div>
           <img src="/images/Canva/Scarlet - Happy Divali.png"
                alt="Happy Divali: festive Scarlet greeting celebrating light."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">9 / 19</div>
+          <div class="numbertext">8 / 19</div>
           <img src="/images/Canva/Scarlet Beach.png"
                alt="Scarlet Beach: seaside scene with the Scarlet bird taking a break."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">10 / 19</div>
+          <div class="numbertext">9 / 19</div>
           <img src="/images/Canva/Scarlet Creative Let Go.gif"
                alt="Let Go: looping animation about release, flow, and softness."
+               class="gallery demo_canva" style="width:100%">
+        </div>
+
+        <div class="mySlides_canva">
+          <div class="numbertext">10 / 19</div>
+          <img src="/images/Canva/Scarlet Most Creative.png"
+               alt="Scarlet Most Creative – playful piece celebrating creativity."
                class="gallery demo_canva" style="width:100%">
         </div>
 
@@ -307,6 +307,83 @@
     </div>
   </div>
 </div>
+
+<h2>Documents & Written Work</h2>
+<hr>
+<p><strong>A few deeper dives into the systems, stories, and impact work I help lead at Scarlet Creative.</strong></p>
+
+<div markdown="0">
+  <div class="row_project">
+
+    <!-- Card 1: Company Portfolio for NGOs -->
+    <div class="column_project">
+      <div class="card_project">
+
+        <a href="/assets/docs/Scarlet_Creative_Company_Portfolio.pdf"
+           target="_blank" rel="noopener">
+          <img src="/assets/img/Scarlet_Creative_Company_Profile_Contact_Thumbnail.jpg"
+               alt="Scarlet Creative – Company Portfolio"
+               style="width:100%" loading="lazy">
+        </a>
+
+        <div class="container_project">
+          <h4 class="heading flip-title">
+            Scarlet Creative – Company Portfolio
+          </h4>
+          <p class="faded">
+            <small>
+              A 60+ page, illustration-led portfolio sharing our story, values,
+              services, case studies, and team.
+            </small>
+          </p>
+          <p>
+            <a href="/assets/docs/Scarlet_Creative_Company_Portfolio.pdf"
+               target="_blank" rel="noopener">
+              View portfolio (PDF) &rarr;
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: General Company Profile -->
+    <div class="column_project">
+      <div class="card_project">
+
+        <a href="/assets/docs/Scarlet_Creative_Software_Company_Profile.pdf"
+           target="_blank" rel="noopener">
+          <img src="/assets/img/Scarlet_Creative_Company_Profile_Thumbnail.jpg"
+               alt="Scarlet Creative – Company Profile"
+               style="width:100%" loading="lazy">
+        </a>
+
+        <div class="container_project">
+          <h4 class="heading flip-title">
+            Scarlet Creative – Company Profile
+          </h4>
+          <p class="faded">
+            <small>
+              A concise 15-page profile introducing who we are, what we do,
+              key projects, our tech stack, and the sectors we serve across the
+              Caribbean and worldwide.
+            </small>
+          </p>
+          <p>
+            <a href="/assets/docs/Scarlet_Creative_Software_Company_Profile.pdf"
+               target="_blank" rel="noopener">
+              View profile (PDF) &rarr;
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional: third column left empty for 3-column layout balance -->
+    <div class="column_project"></div>
+
+  </div>
+</div>
+
 
 <script>
   function openModal_canva() {
