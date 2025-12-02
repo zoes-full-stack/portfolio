@@ -569,3 +569,48 @@ img[src~="bordered"]:hover {
 
   .prev_vid, .next_vid {font-size: 13px}
 }
+
+  .interests-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 1.2rem 1rem;
+    margin-top: 0.75rem;
+  }
+
+.interest {
+  width: 90px;           /* controls how many per row */
+  text-align: center;
+  margin: 0;
+}
+
+.interest img {
+  max-width: 75px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.interest figcaption {
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  white-space: normal;
+}
+
+.interest a {
+  text-decoration: underline blue wavy 3px;
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  .interest {
+    width: 100px;        /* slightly wider on desktop */
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .interests-grid {
+    justify-content: center;
+  }
+}

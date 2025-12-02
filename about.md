@@ -23,24 +23,73 @@ redirect_from:
 
 ## Interests
 
-![design](images/icons/designer.png){:width="75" height="75" loading="lazy"} &emsp; 
-![robotics](images/icons/robot.png){:width="75" height="75" loading="lazy"} &emsp; 
-![coding](images/icons/coding.png){:width="60" height="60" loading="lazy"} &emsp;
-![nasa](images/icons/nasa2.png){:width="70" height="70" loading="lazy"} &emsp; 
-![astronomy](images/icons/astronomy.png){:width="60" height="60" loading="lazy"} &emsp; 
-![gaming](images/icons/gaming.png){:width="60" height="60" loading="lazy"}
+<div markdown="0" class="interests-grid">
 
-[`Graphic Design`](visual_stories.md){:target="_blank"} &emsp; `Robotics` &emsp; `Coding` &emsp;&emsp; `NASA` &emsp; `Astronomy` &emsp; `Gaming and Game Development`
+  <figure class="interest">
+    <a href="visual_stories.md" target="_blank">
+      <img src="/images/icons/designer.png" alt="Graphic Design" loading="lazy">
+      <figcaption>Graphic Design</figcaption>
+    </a>
+  </figure>
 
-![meditation](images/icons/meditation.png){:width="75" height="75" loading="lazy"} &emsp; 
-![diving](images/icons/diving.png){:width="65" height="65" loading="lazy"} &emsp; 
-![hiking](images/icons/hiking.jpg){:width="60" height="60" loading="lazy"} &emsp; 
-![music](images/icons/music.png){:width="60" height="60" loading="lazy"} &emsp; 
-![baking](images/icons/baking.png){:width="70" height="70" loading="lazy"} &emsp; 
-![ocean](images/icons/ocean.png){:width="75" height="75" loading="lazy"}
+  <figure class="interest">
+    <img src="/images/icons/robot.png" alt="Robotics" loading="lazy">
+    <figcaption>Robotics</figcaption>
+  </figure>
 
-`Meditation` &emsp;&nbsp; `Diving` &emsp;&nbsp; `Hiking` &emsp;&nbsp; `Music` &emsp;&nbsp;&nbsp; [`Baking`](baking.md){:target="_blank"} &emsp; `Ocean Conservation`
+  <figure class="interest">
+    <img src="/images/icons/coding.png" alt="Coding" loading="lazy">
+    <figcaption>Coding</figcaption>
+  </figure>
 
+  <figure class="interest">
+    <img src="/images/icons/nasa2.png" alt="NASA" loading="lazy">
+    <figcaption>NASA</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/astronomy.png" alt="Astronomy" loading="lazy">
+    <figcaption>Astronomy</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/gaming.png" alt="Gaming and Game Dev" loading="lazy">
+    <figcaption>Gaming &amp; Game Dev</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/meditation.png" alt="Meditation" loading="lazy">
+    <figcaption>Meditation</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/diving.png" alt="Diving" loading="lazy">
+    <figcaption>Diving</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/hiking.jpg" alt="Hiking" loading="lazy">
+    <figcaption>Hiking</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/music.png" alt="Music" loading="lazy">
+    <figcaption>Music</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <a href="baking.md" target="_blank">
+      <img src="/images/icons/baking.png" alt="Baking" loading="lazy">
+      <figcaption>Baking</figcaption>
+    </a>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/ocean.png" alt="Ocean Conservation" loading="lazy">
+    <figcaption>Ocean Conservation</figcaption>
+  </figure>
+
+</div>
 
 <!-- ## Beautiful Math
 They say math is beautiful — and with **Hydejack**'s [math support][math] it's guaranteed to also look beautiful:
