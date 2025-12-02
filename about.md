@@ -30,7 +30,7 @@ redirect_from:
 ![astronomy](images/icons/astronomy.png){:width="60" height="60" loading="lazy"} &emsp; 
 ![gaming](images/icons/gaming.png){:width="60" height="60" loading="lazy"}
 
-[`Graphic Design`](graphic_design.md){:target="_blank"} &emsp; `Robotics` &emsp; `Coding` &emsp;&emsp; `NASA` &emsp; `Astronomy` &emsp; `Gaming and Game Development`
+[`Graphic Design`](visual_stories.md){:target="_blank"} &emsp; `Robotics` &emsp; `Coding` &emsp;&emsp; `NASA` &emsp; `Astronomy` &emsp; `Gaming and Game Development`
 
 ![meditation](images/icons/meditation.png){:width="75" height="75" loading="lazy"} &emsp; 
 ![diving](images/icons/diving.png){:width="65" height="65" loading="lazy"} &emsp; 
