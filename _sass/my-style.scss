@@ -214,10 +214,12 @@ span {
   -webkit-transform: translateY(-5px);
 }
 
-// .avatar {
-//   border-radius: 5px 5px 0 0;
-//   border: 0px;
-// }
+.content .avatar {
+  margin-top: 0.5rem !important;
+  margin-right: 0.5rem !important;
+  // border-radius: 5px 5px 0 0;
+  // border: 0px;
+}
 
 hr, .hr { margin-top: 0px; margin-bottom: 0px; margin:0; padding: 0; padding-bottom: 0; }
 
@@ -522,6 +524,16 @@ img[src~="bordered"]:hover {
 }
 
 @media only screen and (max-width:700px) {
+
+  .card_project {
+    width: 100%;
+  }
+
+  .column_designs {
+    float: center;
+    width: 100%;
+  }
+
   .modal {
     right: 0%;
     // top: 5%;
