@@ -30,7 +30,7 @@ redirect_from:
 ![astronomy](images/icons/astronomy.png){:width="60" height="60" loading="lazy"} &emsp; 
 ![gaming](images/icons/gaming.png){:width="60" height="60" loading="lazy"}
 
-`Graphic Design` &emsp; `Robotics` &emsp; `Coding` &emsp;&emsp; `NASA` &emsp; `Astronomy` &emsp; `Gaming and Game Development`
+[`Graphic Design`](graphic_design.md){:target="_blank"} &emsp; `Robotics` &emsp; `Coding` &emsp;&emsp; `NASA` &emsp; `Astronomy` &emsp; `Gaming and Game Development`
 
 ![meditation](images/icons/meditation.png){:width="75" height="75" loading="lazy"} &emsp; 
 ![diving](images/icons/diving.png){:width="65" height="65" loading="lazy"} &emsp; 
@@ -39,7 +39,7 @@ redirect_from:
 ![baking](images/icons/baking.png){:width="70" height="70" loading="lazy"} &emsp; 
 ![ocean](images/icons/ocean.png){:width="75" height="75" loading="lazy"}
 
-`Neditation` &emsp;&nbsp; `Diving` &emsp;&nbsp; `Hiking` &emsp;&nbsp; `Music` &emsp;&nbsp;&nbsp; [`Baking`](baking.md){:target="_blank"} &emsp; `Ocean Conservation`
+`Meditation` &emsp;&nbsp; `Diving` &emsp;&nbsp; `Hiking` &emsp;&nbsp; `Music` &emsp;&nbsp;&nbsp; [`Baking`](baking.md){:target="_blank"} &emsp; `Ocean Conservation`
 
 
 <!-- ## Beautiful Math

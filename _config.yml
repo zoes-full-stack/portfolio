@@ -63,6 +63,8 @@ menu:
     url:               /projects/ 
   - title:             Resume
     url:               /resume/
+  - title:             Creative Work
+    url:               /graphic_design/
   - title:             Baking
     url:               /baking/
     # /Resume/GabrielaSewdhan_Resume.pdf
