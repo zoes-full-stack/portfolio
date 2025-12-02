@@ -26,7 +26,7 @@ redirect_from:
 <div markdown="0" class="interests-grid">
 
   <figure class="interest">
-    <a href="/visual_stories.md" target="_blank">
+    <a href="/visual_stories/" target="_blank">
       <img src="/images/icons/designer.png" alt="Graphic Design" loading="lazy">
       <figcaption>Graphic Design</figcaption>
     </a>
@@ -78,7 +78,7 @@ redirect_from:
   </figure>
 
   <figure class="interest">
-    <a href="/baking.md" target="_blank">
+    <a href="/baking/" target="_blank">
       <img src="/images/icons/baking.png" alt="Baking" loading="lazy">
       <figcaption>Baking</figcaption>
     </a>
