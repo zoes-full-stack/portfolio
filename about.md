@@ -33,6 +33,43 @@ redirect_from:
   </figure>
 
   <figure class="interest">
+    <img src="/images/icons/music.png" alt="Music" loading="lazy">
+    <figcaption>Singing &amp; Music</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/meditation.png" alt="Meditation" loading="lazy">
+    <figcaption>Meditation</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/gaming.png" alt="Gaming and Game Dev" loading="lazy">
+    <figcaption>Gaming &amp; Game Dev</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/diving.png" alt="Diving" loading="lazy">
+    <figcaption>Diving</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/hiking.jpg" alt="Hiking" loading="lazy">
+    <figcaption>Hiking</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <a href="/baking/" target="_blank">
+      <img src="/images/icons/baking.png" alt="Baking" loading="lazy">
+      <figcaption>Baking</figcaption>
+    </a>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/ocean.png" alt="Ocean Conservation" loading="lazy">
+    <figcaption>Ocean Conservation</figcaption>
+  </figure>
+
+  <figure class="interest">
     <img src="/images/icons/robot.png" alt="Robotics" loading="lazy">
     <figcaption>Robotics</figcaption>
   </figure>
@@ -50,43 +87,6 @@ redirect_from:
   <figure class="interest">
     <img src="/images/icons/astronomy.png" alt="Astronomy" loading="lazy">
     <figcaption>Astronomy</figcaption>
-  </figure>
-
-  <figure class="interest">
-    <img src="/images/icons/gaming.png" alt="Gaming and Game Dev" loading="lazy">
-    <figcaption>Gaming &amp; Game Dev</figcaption>
-  </figure>
-
-  <figure class="interest">
-    <img src="/images/icons/meditation.png" alt="Meditation" loading="lazy">
-    <figcaption>Meditation</figcaption>
-  </figure>
-
-  <figure class="interest">
-    <img src="/images/icons/diving.png" alt="Diving" loading="lazy">
-    <figcaption>Diving</figcaption>
-  </figure>
-
-  <figure class="interest">
-    <img src="/images/icons/hiking.jpg" alt="Hiking" loading="lazy">
-    <figcaption>Hiking</figcaption>
-  </figure>
-
-  <figure class="interest">
-    <img src="/images/icons/music.png" alt="Music" loading="lazy">
-    <figcaption>Music</figcaption>
-  </figure>
-
-  <figure class="interest">
-    <a href="/baking/" target="_blank">
-      <img src="/images/icons/baking.png" alt="Baking" loading="lazy">
-      <figcaption>Baking</figcaption>
-    </a>
-  </figure>
-
-  <figure class="interest">
-    <img src="/images/icons/ocean.png" alt="Ocean Conservation" loading="lazy">
-    <figcaption>Ocean Conservation</figcaption>
   </figure>
 
 </div>

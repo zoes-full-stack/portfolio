@@ -14,6 +14,54 @@ sitemap: false
 
 <div markdown="0">
   <meta name="viewport" content="width=device-width, initial scale=1.0">
+
+
+  <h2>2025</h2>
+  <hr>
+
+  <div class="row_project">
+    <div class="column_project">
+      <p class="faded"><small>December</small></p>
+      <div class="card_project">
+        <a href="../projectlist/TaskBook/">
+          <img src="../images/projects/taskbook/taskbook_cover.jpg" alt="TaskBook" style="width:100%" loading="lazy">
+        </a>
+        <div class="container_project">
+          <h4 id="taskbook"><a href="../projectlist/TaskBook/" class="heading flip-title">TaskBook</a> <span>&#8594;</span></h4>
+          <p class="faded"><small>Scheduling + reminders that feel calm and automatic</small></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column_project">
+      <p class="faded"><small>November</small></p>
+      <div class="card_project">
+        <a href="../projectlist/FormStudio/">
+          <img src="../images/projects/formstudio/formstudio_cover.jpg" alt="FormStudio" style="width:100%" loading="lazy">
+        </a>
+        <div class="container_project">
+          <h4 id="formstudio"><a href="../projectlist/FormStudio/" class="heading flip-title">FormStudio</a> <span>&#8594;</span></h4>
+          <p class="faded"><small>A form builder designed for real workflows</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row_project">
+    <div class="column_project">
+      <p class="faded"><small>October</small></p>
+      <div class="card_project">
+        <a href="../projectlist/MercadoBolt/">
+          <img src="../images/projects/mercadoBolt/MercadoBolt.gif" alt="MercadoBolt" style="width:100%" loading="lazy">
+        </a>
+        <div class="container_project">
+          <h4 id="mercadobolt"><a href="../projectlist/MercadoBolt/" class="heading flip-title">MercadoBolt</a> <span>&#8594;</span></h4>
+          <p class="faded"><small>Marketplace design for trust, escrow, and verified vendors</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <h2>2019</h2>
   <hr>
   <div class="row_project">
