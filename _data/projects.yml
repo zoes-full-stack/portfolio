@@ -1,0 +1,102 @@
+# _data/projects.yml
+
+# --- Featured (accordion) ---
+- title: TaskBook
+  slug: TaskBook
+  url: /projectlist/TaskBook/
+  img: /images/projects/taskbook/taskbook_cover.png
+  category: product_ui
+  featured: true
+  blurb: "Scheduling + reminders that feel calm and automatic."
+  panel_label: "Ecommerce"
+  proof: "Concept → MVP in 3 months · 95% less manual scheduling"
+  tags: ["Flutter", "Firebase", "Cloud Functions", "Twilio"]
+
+- title: FormStudio
+  slug: FormStudio
+  url: /projectlist/FormStudio/
+  img: /images/projects/formstudio/formstudio_cover.png
+  category: product_ui
+  featured: true
+  blurb: "A form builder designed for real workflows."
+  panel_label: "Ecommerce"
+  proof: "Drag-and-drop · Instant reporting for NGOs"
+  tags: ["Vue", "Zapier", "Google Workspace"]
+
+- title: MercadoBolt
+  slug: MercadoBolt
+  url: /projectlist/MercadoBolt/
+  img: /images/projects/mercadoBolt/MercadoBolt.gif
+  category: product_ui
+  featured: true
+  blurb: "E-commerce ecosystem for trusted local delivery."
+  panel_label: "Ecommerce"
+  proof: "Verified vendors · Escrow-ready flows"
+  tags: ["FlutterFlow", "Firebase", "Cloud Functions"]
+
+- title: Virtana Robotics Systems
+  slug: VirtanaRobotics
+  url: /projectlist/VirtanaRobotics/
+  img: /images/projects/apriltags/apriltags_cover.png
+  category: engineering
+  featured: true
+  blurb: "Robotics calibration + pose tracking with real-time visual feedback."
+  panel_label: "Ecommerce"
+  proof: "Calibration workflows · Pose tracking pipeline"
+  tags: ["C#", "Python/Go", "Pose Tracking"]
+
+# --- Compact list projects ---
+- title: QuickRental
+  slug: QuickRental
+  url: /projectlist/QuickRental/
+  img: /images/projects/quickrental/quickrental_icon.gif
+  category: web
+  featured: false
+  blurb: "Catering to all your apartment needs."
+  panel_label: "Ecommerce"
+  proof: "Full-stack student build"
+  tags: ["Web", "UX"]
+
+- title: AntiPlasti
+  slug: AntiPlasti
+  url: /projectlist/AntiPlasti/
+  img: /images/projects/antiplasti/antiplasti.jpg
+  category: branding
+  featured: false
+  blurb: "Taking one small step at a time."
+  panel_label: "Ecommerce"
+  proof: "Campaign + visual storytelling"
+  tags: ["Branding", "Design"]
+
+- title: PiDronics
+  slug: PiDronics
+  url: /projectlist/PiDronics/
+  img: /images/projects/pidronics/pidronics_about.gif
+  category: engineering
+  featured: false
+  blurb: "Autonomous hydroponics tracking system."
+  panel_label: "Ecommerce"
+  proof: "Robotics + monitoring"
+  tags: ["IoT", "Systems"]
+
+- title: DCIT Robotics Boot Camp
+  slug: dcitCamp-2017-2018
+  url: /projectlist/dcitCamp-2017-2018/
+  img: /images/projects/dcit_bootcamp/dcit_curie_square.jpg
+  category: engineering
+  featured: false
+  blurb: "Meet Curie :3"
+  panel_label: "Ecommerce"
+  proof: "Teaching + robotics prototyping"
+  tags: ["Robotics", "Education"]
+
+- title: MetOracle
+  slug: MetOracle
+  url: /projectlist/MetOracle/
+  img: /images/projects/metOracle/weather.gif
+  category: engineering
+  featured: false
+  blurb: "Weather prediction for smart-city resilience."
+  panel_label: "Ecommerce"
+  proof: "Time-series forecasting"
+  tags: ["ML", "Data"]
