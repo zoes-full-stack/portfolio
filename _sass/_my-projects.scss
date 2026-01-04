@@ -27,14 +27,27 @@ $r: 16px;
 @mixin motion($props...) { transition: $props; }
 @mixin reduce-motion { @media (prefers-reduced-motion: reduce) { @content; } }
 
-
 .projects {
   .featured-stage {
     .stage {
       position: relative;
+      // keep it within your content column
+      width: 100%;
+      max-width: 1040px;     // match .p-section max-width (or remove if already constrained)
+      margin: 0 auto;
+
+      // cinematic shape, but do NOT let it become a full-page hero
+      aspect-ratio: 21 / 9;
+
+      // // critical: cap the height
+      // height: clamp(240px, 38vh, 420px);
+
+      // if aspect-ratio + height are both set, height wins, aspect-ratio helps layout/cropping
+      // optional: ensure it never grows beyond this
+      max-height: 420px;
+
       border-radius: $r;
       overflow: hidden;
-      height: clamp(360px, 65vh, 640px);
 
       border: 1px solid rgba(74, 163, 255, 0.22);
       background: linear-gradient(180deg, rgba(11,16,32,0.75), rgba(11,16,32,0.35));
@@ -42,6 +55,18 @@ $r: 16px;
         0 18px 45px rgba(0,0,0,0.22),
         0 0 0 1px rgba(255,255,255,0.04) inset;
     }
+    // .stage {
+    //   position: relative;
+    //   border-radius: $r;
+    //   overflow: hidden;
+    //   height: clamp(360px, 65vh, 640px);
+
+    //   border: 1px solid rgba(74, 163, 255, 0.22);
+    //   background: linear-gradient(180deg, rgba(11,16,32,0.75), rgba(11,16,32,0.35));
+    //   box-shadow:
+    //     0 18px 45px rgba(0,0,0,0.22),
+    //     0 0 0 1px rgba(255,255,255,0.04) inset;
+    // }
 
     // Big clickable hit-area uses current active url
     .stage__hit {
@@ -166,8 +191,14 @@ $r: 16px;
     // Mobile comfort
     @media (max-width: 700px) {
       .stage {
-        height: clamp(420px, 70vh, 700px);
+        // on phones, wide ratios get too short, so adjust
+        aspect-ratio: 16 / 10;
+        height: clamp(320px, 52vh, 520px);
+        max-height: 520px;
       }
+      // .stage {
+      //   height: clamp(420px, 70vh, 700px);
+      // }
       .stage__titles {
         justify-content: flex-start;
       }
