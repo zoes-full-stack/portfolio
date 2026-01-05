@@ -7,10 +7,10 @@
   img: /images/projects/taskbook/taskbook_cover.png
   category: product_ui
   featured: true
-  blurb: "Scheduling + reminders that feel calm and automatic."
-  panel_label: "Ecommerce"
-  proof: "Concept → MVP in 3 months · 95% less manual scheduling"
-  tags: ["Flutter", "Firebase", "Cloud Functions", "Twilio"]
+  blurb: "Automatic scheduling, confirmations & reminders · User-friendly communication & feedback · Dashboard · Data Analytics · Admin & Technician's View"
+  panel_label: "Saas"
+  proof: "95% less manual scheduling"
+  tags: ["Flutter", "Firebase", "Google Cloud Functions", "Twilio", "Gmail API"]
 
 - title: FormStudio
   slug: FormStudio
@@ -19,9 +19,9 @@
   category: product_ui
   featured: true
   blurb: "A form builder designed for real workflows."
-  panel_label: "Ecommerce"
-  proof: "Drag-and-drop · Instant reporting for NGOs"
-  tags: ["Vue", "Zapier", "Google Workspace"]
+  panel_label: "Saas"
+  proof: "Drag-and-drop · Instant reporting · Signatures & Integrations"
+  tags: ["Vue", "Zapier", "Google Cloud Functions"]
 
 - title: MercadoBolt
   slug: MercadoBolt
@@ -29,22 +29,25 @@
   img: /images/projects/mercadoBolt/MercadoBolt.gif
   category: product_ui
   featured: true
-  blurb: "E-commerce ecosystem for trusted local delivery."
+  blurb: "E-commerce ecosystem for trusted local delivery of goods & services."
   panel_label: "Ecommerce"
   proof: "Verified vendors · Escrow-ready flows"
-  tags: ["FlutterFlow", "Firebase", "Cloud Functions"]
+  tags: ["Flutter", "Firebase", "Google Cloud Functions"]
 
-- title: Virtana Robotics Systems
+- title: Apriltag Tracking
   slug: VirtanaRobotics
   url: /projectlist/VirtanaRobotics/
   img: /images/projects/apriltags/apriltags_cover.png
   category: engineering
   featured: true
-  blurb: "Robotics calibration + pose tracking with real-time visual feedback."
-  panel_label: "Ecommerce"
+  blurb: "Apritag calibration + pose tracking with real-time visual feedback."
+  panel_label: "Engineering"
   proof: "Calibration workflows · Pose tracking pipeline"
-  tags: ["C#", "Python/Go", "Pose Tracking"]
+  tags: ["C#", "Python", "Go", "April Tags", "Pose Tracking"]
 
+# TODO: From Scarlet/FlowGenius - UnityStaff (not sure), NDA: Spartan, Top Broker Consulting, ELDT Nation, Simon Group USA
+# TODO: From SCG - Tatil, Beacon
+# Can handle design and math heavy coding - advertise me as that
 # --- Compact list projects ---
 - title: QuickRental
   slug: QuickRental
@@ -61,12 +64,12 @@
   slug: AntiPlasti
   url: /projectlist/AntiPlasti/
   img: /images/projects/antiplasti/antiplasti.jpg
-  category: branding
+  category: engineering
   featured: false
-  blurb: "Taking one small step at a time."
-  panel_label: "Ecommerce"
-  proof: "Campaign + visual storytelling"
-  tags: ["Branding", "Design"]
+  blurb: "AI powered plastic detection in the oceans"
+  panel_label: "Machine Learning"
+  proof: "Detects plastic with [to_add]% accuracy"
+  tags: ["AI", "Machine Learning", "Python"]
 
 - title: PiDronics
   slug: PiDronics
@@ -75,20 +78,20 @@
   category: engineering
   featured: false
   blurb: "Autonomous hydroponics tracking system."
-  panel_label: "Ecommerce"
+  panel_label: "Automomous Hydroponics"
   proof: "Robotics + monitoring"
-  tags: ["IoT", "Systems"]
+  tags: ["IoT", "Systems", "Python"]
 
 - title: DCIT Robotics Boot Camp
   slug: dcitCamp-2017-2018
   url: /projectlist/dcitCamp-2017-2018/
   img: /images/projects/dcit_bootcamp/dcit_curie_square.jpg
-  category: engineering
+  category: mentoring
   featured: false
   blurb: "Meet Curie :3"
-  panel_label: "Ecommerce"
+  panel_label: "Mentoring"
   proof: "Teaching + robotics prototyping"
-  tags: ["Robotics", "Education"]
+  tags: ["Robotics", "Education", "Python"]
 
 - title: MetOracle
   slug: MetOracle
@@ -97,6 +100,6 @@
   category: engineering
   featured: false
   blurb: "Weather prediction for smart-city resilience."
-  panel_label: "Ecommerce"
+  panel_label: "Machine Learning Prediction"
   proof: "Time-series forecasting"
-  tags: ["ML", "Data"]
+  tags: ["Machine Learning", "Data", "Python"]
