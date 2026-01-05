@@ -633,6 +633,8 @@ img[src~="bordered"]:hover {
   position: relative;
 }
 
+// Hiding Navbar
+#_navbar { display: none; }
 
 // Projects (Portfolio) CSS 
 @import "my-projects";

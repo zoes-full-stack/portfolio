@@ -83,7 +83,7 @@ menu:
 #     url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2025. Gabriela Sewdhan. All rights reserved.
+copyright:            © 2026 Gabriela Sewdhan. Made with tea, curiosity, and a lot of tabs open ☕
 
 # Format of the permalinks
 permalink:             /:categories/:year-:month-:day-:title/
@@ -252,11 +252,11 @@ hydejack:
 
   # Set to `true` if you do not want parts of the css inlined in <head/>
   # This will increase site build speed dramatically!
-  no_inline_css:       false
+  no_inline_css:       true # CHANGED
 
   # Set to `true` if you don't intend on changing the accent color on a per-page basis. 
   # This will increase site build speed!
-  no_page_style:       false
+  no_page_style:       true # CHANGED
 
   # Code blocks and tables "break" the layout by spanning the full available width.
   # Set this to true if you want them to be the same width as other content.
