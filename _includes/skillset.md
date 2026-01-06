@@ -66,11 +66,14 @@
     <code class="language-plaintext highlighter-rouge">Delight with restraint</code>
 </p>
 
-<h4>Systems, Automation & Backend
+<h4>Systems, Robotics & Backend
     <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
 </h4>
 <p>
+    <code class="language-plaintext highlighter-rouge">Unity</code> |
+    <code class="language-plaintext highlighter-rouge">C#</code> |
     <code class="language-plaintext highlighter-rouge">Python</code> |
+    <code class="language-plaintext highlighter-rouge">Golang</code> |
     <code class="language-plaintext highlighter-rouge">REST APIs</code> |
     <code class="language-plaintext highlighter-rouge">SQL (PostgreSQL / MySQL)</code> |
     <code class="language-plaintext highlighter-rouge">Firebase / Firestore</code> |
