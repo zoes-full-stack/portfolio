@@ -1132,5 +1132,240 @@ img[src~="bordered"]:hover {
   .bean-ui .fab-menu .menu-open-button { cursor: pointer; }
 }
 
+// Contact Me Bubble
+
+:root{
+  --bubbleTiming: cubic-bezier(0.5,0.15,0.25,1.75);
+
+  /* Blue palette */
+  --b-hi: hsl(195 90% 98%);  /* highlight */
+  --b-1:  hsl(195 85% 78%);  /* top gloss */
+  --b-2:  hsl(200 75% 56%);  /* mid */
+  --b-3:  hsl(208 70% 40%);  /* deep */
+  --ink:  hsl(210 35% 18%);  /* text/lines */
+}
+
+/* CTA layout */
+.cta-bubble{
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.cta-text{
+  font-size: 1.05rem;
+  margin-bottom: .75rem;
+}
+
+.cta-bubble-wrap{
+  display: grid;
+  gap: .65rem;
+  place-items: center;
+}
+
+.cta-sub{
+  opacity: .8;
+  font-size: .95rem;
+}
+
+/* Bubble CTA wrapper */
+.bubble-cta{
+  display: grid;
+  place-items: center;
+  position: relative;
+  animation: float 4s ease-in-out infinite;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide the checkbox visually but keep it for :checked if you want later */
+.bubble-cta .bubble{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* The visible bubble is the LINK */
+.bubble-cta .bubble-link{
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  font-weight: 800;
+
+  width: auto;
+  height: 4.6rem;
+  border-radius: 999px;
+
+  position: relative;
+  transform-style: preserve-3d;
+  transition-property: box-shadow, transform, width, height;
+  transition-duration: .2s, .2s, .2s, .2s;
+  transition-timing-function: ease-in-out, ease-in-out, var(--bubbleTiming), var(--bubbleTiming);
+  will-change: transform;
+
+  /* bubble shine + depth */
+  background-image:
+    radial-gradient(8% 8% at 22% 28%, #fff 45%, transparent 50%),
+    radial-gradient(8% 8% at 23% 27%, #fff 45%, transparent 50%),
+    radial-gradient(8% 8% at 24% 26%, #fff 45%, transparent 50%),
+    radial-gradient(8% 8% at 25% 25%, #fff 45%, transparent 50%),
+    radial-gradient(8% 8% at 26% 24%, #fff 45%, transparent 50%),
+    radial-gradient(8% 8% at 27% 23%, #fff 45%, transparent 50%),
+    radial-gradient(8% 8% at 28% 22%, #fff 45%, transparent 50%);
+    
+  color: var(--ink);
+
+  box-shadow:
+    0 -0.06em 0.1em var(--b-hi) inset,
+    0 -0.15em 0.4em var(--b-3) inset,
+    0 0.05em 0.05em var(--b-3) inset,
+    0.05em 0 0.1em var(--b-hi) inset,
+    -0.05em 0 0.1em var(--b-hi) inset,
+    0 0.1em 0.4em var(--b-2) inset;
+}
+
+/* bubble “button base” */
+.bubble-cta .bubble-link::before{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  width: 2.6rem;
+  height: 1.7rem;
+  transform: translate3d(-50%,-50%,-1px);
+  border-radius: 999px;
+  box-shadow: 0 0 0 .55rem #fff inset;
+  filter: drop-shadow(.65rem .65rem 4px rgba(0,0,0,.2));
+  z-index: -1;
+}
+
+/* bubble shadow */
+.bubble-cta .bubble-link::after{
+  content:"";
+  position:absolute;
+  top:.65rem;
+  left:.65rem;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0,0,-1px);
+  border-radius: 999px;
+  filter: blur(4px);
+  background:
+    radial-gradient(100% 100% at center, transparent 35%, rgba(0,0,0,.2) 48%, transparent 50%);
+  z-index: -2;
+}
+
+/* text inside bubble */
+.bubble-label{
+  letter-spacing: .2px;
+  text-align: center;
+  user-select: none;
+  font-size: 1rem;
+  line-height: 1.1;
+  padding: 0 1.5rem 0 1.5rem;
+  white-space: nowrap;
+}
+
+/* interactions */
+.bubble-cta .bubble-link:focus,
+.bubble-cta .bubble-link:hover{
+  transform: scale(1.1);
+  outline: none;
+}
+
+.bubble-cta .bubble-link:active{
+  width: auto;
+  height: 4rem;
+}
+
+.bubble-cta .bubble-link:focus::before,
+.bubble-cta .bubble-link:hover::before{
+  filter: drop-shadow(.8rem .8rem 4px rgba(0,0,0,.2));
+}
+
+.bubble-cta .bubble-link:focus::after,
+.bubble-cta .bubble-link:hover::after{
+  transform: translate3d(.15rem,.15rem,-1px);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .bubble-cta{ animation: none; }
+  .bubble-cta .bubble-link,
+  .bubble-cta .bubble-link::before,
+  .bubble-cta .bubble-link::after{
+    transition-duration: 0s;
+  }
+  .bubble-cta .bubble-link:hover,
+  .bubble-cta .bubble-link:focus{
+    transform: scale(1);
+  }
+  .bubble-cta .bubble-link:active{
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
+
+/* float anim */
+@keyframes float{
+  from, to { transform: translate(0,3%); }
+  25% { transform: translate(-3%,0); }
+  50% { transform: translate(0,-3%); }
+  75% { transform: translate(3%,0); }
+}
+
+// Story Navigation
+
+.story-nav{
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.story-nav__meta{
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+  opacity: 0.9;
+}
+
+.story-nav__step{ font-size: 0.95rem; opacity: 0.8; }
+.story-nav__title{ font-weight: 700; }
+
+.story-nav__actions{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.story-nav__back{
+  text-decoration: none;
+  opacity: 0.75;
+}
+.story-nav__back:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+
+// Markdown stie navigation
+
+.page-back{
+  display:inline-block;
+  margin-top:.75rem;
+  opacity:.85;
+  text-decoration:none;
+}
+.page-back:hover{ opacity:1; text-decoration:underline; }
+
+.page-next {
+  margin-top: 1.5rem;
+}
+
 // Projects (Portfolio) CSS 
 @import "my-projects";

@@ -1,15 +1,12 @@
 ---
 layout: about
-image: /assets/img/blog/hydejack-9.jpg
+title: About
+guide: About
+image:
 description: >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+  More about me
 hide_description: true
-redirect_from:
-  - /download/
 ---
-
-# About
 
 :house_with_garden: **Trinidad & Tobago** &nbsp;
 :calling: **1 (868) 496-5529** &nbsp;
@@ -118,6 +115,8 @@ Hydejack uses KaTeX to efficiently render math.
 &nbsp;
 &nbsp;
 &nbsp;
+<hr class="faded"/>
 
-Continue with [Skills](skills.md){:.heading.flip-title}
-{:.read-more}
+Continue with [Skills ↪](/skills/){:.heading.flip-title}
+{:.page-next}
+[↩ Back to Welcome](/){:.page-back}

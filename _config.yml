@@ -53,18 +53,18 @@ author:
 
 # Add links to the sidebar.
 menu:
+  - title:             Work
+    url:               /work/
+  - title:             Experience
+    url:               /experience/
+  - title:             Skills
+    url:               /skills/ 
+  - title:             CV
+    url:               /cv/ 
   - title:             About
     url:               /about/
-  - title:             Skills
-    url:               /skills/
-  - title:             Experience
-    url:               /experience/ 
-  - title:             Projects
-    url:               /projects/ 
-  - title:             Resume
-    url:               /resume/
-  - title:             Visual Stories
-    url:               /visual_stories/
+  - title:             Experiments
+    url:               /experiments/
   - title:             Baking
     url:               /baking/
     # /Resume/GabrielaSewdhan_Resume.pdf

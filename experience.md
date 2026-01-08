@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Experience
+guide: Experience
 description: >
   Work, Volunteer and Research Experience
 hide_description: true
@@ -45,3 +46,7 @@ Click me to view!
 
 Continue with [Projects](projects.md){:.heading.flip-title}
 {:.read-more}
+
+Continue with [Skills ↪](/skills/){:.heading.flip-title}
+{:.page-next}
+[↩ Back to Welcome](/){:.page-back}

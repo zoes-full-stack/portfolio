@@ -1,0 +1,25 @@
+# _data/menuguide.yml
+
+- title: Welcome
+  step: 0
+  next: About
+
+- title: About
+  step: 1
+  next: Skills
+
+- title: Skills
+  step: 2
+  next: Experience
+
+- title: Experience
+  step: 3
+  next: Portfolio
+
+- title: Portfolio
+  step: 4
+  next: Resume
+
+- title: Resume
+  step: 5
+  next: Contact

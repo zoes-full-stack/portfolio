@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Visual Stories
+title: Experiments
 sitemap: false
 ---
 
