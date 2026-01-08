@@ -877,6 +877,14 @@ img[src~="bordered"]:hover {
   transform-origin: top center;
 }
 
+  .magical-bean-text-desktop {
+    display: block;
+  }
+
+  .magical-bean-text-mobile {
+    display: none;
+  }
+
 
 /* ================================
    Radial Menu (Words version)
@@ -913,7 +921,8 @@ img[src~="bordered"]:hover {
   text-align: center;
 
   transform: translate3d(0, 0, 0);
-  transition: transform ease-out 200ms;
+  transition: transform 520ms cubic-bezier(.2,.9,.2,1);
+  will-change: transform;
   box-sizing: border-box;
 }
 
@@ -1004,7 +1013,8 @@ img[src~="bordered"]:hover {
 
 /* Bloom easing */
 .fab-menu .menu-open:checked ~ .menu-item {
-  transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+  transition-timing-function: cubic-bezier(.2,.9,.2,1);
+  transition-duration: 620ms;
 }
 
 /* Bloom UNDER the hub */
@@ -1014,6 +1024,13 @@ img[src~="bordered"]:hover {
 .fab-menu .menu-open:checked ~ .menu-item:nth-child(6) { transform: translate3d(0, 224px, 0); }
 .fab-menu .menu-open:checked ~ .menu-item:nth-child(7) { transform: translate3d(-98px, 168px, 0); }
 .fab-menu .menu-open:checked ~ .menu-item:nth-child(8) { transform: translate3d(-98px, 58px, 0); }
+
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(3) { transition-delay: 0ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(4) { transition-delay: 40ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(5) { transition-delay: 80ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(6) { transition-delay: 120ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(7) { transition-delay: 160ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(8) { transition-delay: 200ms; }
 
 /* Colors */
 .fab-menu .blue { background-color: #669AE1; }
@@ -1032,6 +1049,14 @@ img[src~="bordered"]:hover {
     width: 300px;
     height: 300px;
     bottom: -14px;
+  }
+
+  .magical-bean-text-desktop {
+    display: none;
+  }
+
+  .magical-bean-text-mobile {
+    display: block;
   }
 }
 

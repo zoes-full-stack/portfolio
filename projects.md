@@ -13,11 +13,7 @@ sitemap: false
 
   <p class="note"><strong>Tip:</strong> Click any card to open the case study.</p>
 
-  <!-- {% include projects-featured.html %} -->
-  {% include projects-featured-stage.html %}
-  {% include projects-featured-cards.html %}
-  {% include projects-featured-panels.html %}
-  {% include project-categories.html %}
+  {% include project-grid.html %}
 
   <p class="read-more">
     Continue with <a href="{{ '/resume/' | relative_url }}" class="heading flip-title">Resume</a>

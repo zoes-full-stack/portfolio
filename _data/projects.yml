@@ -21,7 +21,7 @@
   blurb: "A form builder designed for real workflows."
   panel_label: "Saas"
   proof: "Drag-and-drop · Instant reporting · Signatures & Integrations"
-  tags: ["Vue", "Zapier", "Google Cloud Functions"]
+  tags: ["Vue3", "Zapier", "Google Cloud Functions"]
 
 - title: MercadoBolt
   slug: MercadoBolt
