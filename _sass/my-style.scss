@@ -659,6 +659,7 @@ img[src~="bordered"]:hover {
 .magical-bean-section.bean-stage{
   padding-top: 50px;
   padding-bottom: 320px; /* space for radial buttons so they don't overlap page text */
+  // transition: padding-bottom 420ms ease;
 }
 
 #magical-bean-container {
@@ -884,6 +885,15 @@ img[src~="bordered"]:hover {
   .magical-bean-text-mobile {
     display: none;
   }
+
+// /* On desktop hover/focus: give the menu space */
+// @media (hover:hover) and (pointer:fine){
+//   .magical-bean-section.bean-stage.bean-ui:hover,
+//   .magical-bean-section.bean-stage.bean-ui:focus-within{
+//     padding-bottom: 320px;
+//     // transition: padding-bottom 350ms ease;
+//   }
+// }
 
 
 /* ================================
@@ -1144,6 +1154,62 @@ img[src~="bordered"]:hover {
   --b-3:  hsl(208 70% 40%);  /* deep */
   --ink:  hsl(210 35% 18%);  /* text/lines */
 }
+
+/* ================================
+   Waves under the bean
+   ================================ */
+
+/* sits at the bottom of the section */
+.bean-waves{
+  position: absolute;
+  left: -42px;
+  right: -42px;
+  bottom: 0;             /* hides any seam */
+  width: auto;
+  height: 280px;            /* controls how “tall” the waves feel */
+  overflow: hidden;
+  z-index: 1;               /* behind bean (z=2) but above bg container (z=0) */
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.bean-waves svg{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Use your palette: deep sea + lighter foam layers */
+.bean-waves .wave{
+  transform-origin: center;
+  animation: waveSlide 10s linear infinite;
+}
+
+.bean-waves .wave1{
+  fill: rgba(255,255,255,0.10);
+  animation-duration: 14s;
+}
+.bean-waves .wave2{
+  fill: rgba(79,177,186,0.18); /* matches your accent */
+  animation-duration: 11s;
+  animation-direction: reverse;
+}
+.bean-waves .wave3{
+  fill: rgba(255,255,255,0.06);
+  animation-duration: 18s;
+}
+
+/* subtle horizontal drift */
+@keyframes waveSlide{
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-4%); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .bean-waves .wave{ animation: none; }
+}
+
 
 /* CTA layout */
 .cta-bubble{
