@@ -117,6 +117,6 @@ Hydejack uses KaTeX to efficiently render math.
 &nbsp;
 <hr class="faded"/>
 
-Continue with [Skills ↪](/skills/){:.heading.flip-title}
+Continue with [Experiments ↪](/experiments/){:.heading.flip-title}
 {:.page-next}
-[↩ Back to Welcome](/){:.page-back}
+[↩ Back to CV](/cv/){:.page-back}

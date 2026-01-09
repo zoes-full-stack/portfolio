@@ -16,13 +16,14 @@ sitemap: false
 
   {% include project-grid.html %}
 
-  <p class="read-more">
-    Check out <a href="{{ '/visual_stories/' | relative_url }}" class="heading flip-title">Illustrations</a>
+    <p class="read-more">
+    Check out <a href="{{ '/experiments/' | relative_url }}" class="heading flip-title">Experimenting With Graphic & Motion Design</a>
   </p>
-  <p class="read-more">
-    View <a href="{{ '/resume/' | relative_url }}" class="heading flip-title">Resume</a>
-  </p>
+
 </div>
 
-{% include story-nav.html %}
+<hr class="faded"/>
+Continue with [Experience ↪](/experience/){:.heading.flip-title}
+{:.page-next}
+[↩ Back to Welcome](/){:.page-back}
 

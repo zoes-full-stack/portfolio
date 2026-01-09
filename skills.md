@@ -25,8 +25,9 @@ sitemap: false
 &nbsp;
 &nbsp;
 
-Continue with [Experience](experience.md){:.heading.flip-title}
-{:.read-more}
+<hr class="faded"/>
 
-{% include story-nav.html %}
+Continue with [CV ↪](/cv/){:.heading.flip-title}
+{:.page-next}
+[↩ Back to Experience](/experience/){:.page-back}
 

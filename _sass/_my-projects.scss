@@ -607,9 +607,6 @@ $r: 16px;
   display:none;
 }
 
-
-
-
 // Project Cards with details
 
 @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500|Jost:400,500,600&display=swap");
@@ -993,3 +990,331 @@ $r: 16px;
   font-family: "Jost", sans-serif;
   transition: 0.3s;
 }
+
+
+
+// wee
+
+/* =========================
+   Projects: clean corner cards
+   Inspired by https://codepen.io/kristen17/pen/pomgrKp
+   ========================= */
+
+.projects-wrap{
+  --card-r: 20px;
+  --shadow: 0 10px 28px rgba(0,0,0,.10);
+  --shadow2: 0 6px 16px rgba(0,0,0,.10);
+  --ring: 0 0 0 4px rgba(79,177,186,.22);
+  --ink: rgba(20,26,30,.92);
+  --muted: rgba(20,26,30,.62);
+  --surface: rgba(255,255,255,.96);
+  --stroke: rgba(0,0,0,.08);
+  --pill: rgba(0,0,0,.06);
+}
+
+/* Grid */
+.projects-wrap .projects-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+/* Card shell */
+.projects-wrap .p-card{
+  border-radius: var(--card-r);
+  background: transparent;
+}
+.projects-wrap .p-card.is-hidden{ display:none; }
+
+.projects-wrap .p-card__link{
+  display:block;
+  text-decoration:none;
+  color: inherit;
+  border-radius: var(--card-r);
+  outline: none;
+}
+
+/* Focus state: clean and obvious */
+.projects-wrap .p-card__link:focus-visible{
+  box-shadow: var(--ring);
+  border-radius: var(--card-r);
+}
+
+/* Media block: bigger image + “cut corner” */
+.projects-wrap .p-card__media{
+  position: relative;
+  border-radius: var(--card-r);
+  border-bottom-right-radius: 0; /* key “cut” */
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: #fff;
+  aspect-ratio: 16 / 10;       /* makes images consistent + larger */
+}
+
+/* Image fill */
+.projects-wrap .p-card__media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display:block;
+  transform: scale(1.02);
+  transition: transform 260ms ease, filter 260ms ease;
+}
+
+/* Badge */
+.projects-wrap .p-badge{
+  position:absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 10px;
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.65);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+/* The colored corner “quarter circle” */
+.projects-wrap .p-corner{
+  position:absolute;
+  right: -6px;
+  bottom: -6px;
+  width: 52px;
+  height: 52px;
+  background: #ffffff;
+  border-top-left-radius: 50%;
+  pointer-events:none;
+}
+
+/* Two little “notch” tricks (mimics the pen’s illusion) */
+.projects-wrap .p-corner::before{
+  content:"";
+  position:absolute;
+  bottom: 6px;
+  left: -20px;
+  width: 20px;
+  height: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 5px 5px 0 5px #fff; /* makes a clean carve */
+}
+.projects-wrap .p-corner::after{
+  content:"";
+  position:absolute;
+  top: -20px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 5px 5px 0 5px #ffffff;
+}
+
+/* Inner circle icon */
+.projects-wrap .p-corner__icon{
+  position:absolute;
+  inset: 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 999px;
+  background: rgba(20,20,20,.85);
+  color:#fff;
+  font-size: 18px;
+  box-shadow: var(--shadow2);
+  transform: scale(1);
+  transition: transform 220ms ease;
+}
+
+/* Body */
+.projects-wrap .p-card__body{
+  background: var(--surface);
+  border-radius: 0 0 var(--card-r) var(--card-r);
+  padding: 14px 14px 16px;
+}
+
+/* Top line */
+.projects-wrap .p-card__topline{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.projects-wrap .p-pill{
+  font-weight: 700;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.06);
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+.projects-wrap .p-proof{
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Title + blurb */
+.projects-wrap .p-card__title{
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.projects-wrap .p-card__blurb{
+  margin: 8px 0 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Tags */
+.projects-wrap .p-tags{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.projects-wrap .p-tag{
+  font-size: 12px;
+  font-weight: 650;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--pill);
+  border: 1px solid rgba(0,0,0,.06);
+  color: rgba(20,26,30,.80);
+}
+
+/* Hover polish */
+@media (hover:hover){
+  .projects-wrap .p-card__link:hover .p-card__media img{
+    transform: scale(1.06);
+    filter: saturate(1.05) contrast(1.02);
+  }
+  .projects-wrap .p-card__link:hover .p-corner__icon{
+    transform: scale(1.08);
+  }
+}
+
+/* Category -> corner colors (match your YAML categories) */
+.projects-wrap .p-card[data-category="product_ui"]{ --corner:#70b3b1; }
+.projects-wrap .p-card[data-category="engineering"]{ --corner:#d05fa2; }
+.projects-wrap .p-card[data-category="web"]{ --corner:#d3b19a; }
+.projects-wrap .p-card[data-category="mentoring"]{ --corner:#669AE1; }
+
+/* Filters: keep them clean to match */
+.projects-wrap .projects-filters{
+  background: rgba(255,255,255,.65);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 18px;
+  backdrop-filter: blur(8px);
+}
+.projects-wrap .filter-top{
+  display:flex;
+  gap: 14px;
+  align-items:center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.projects-wrap .project-search{
+  width: min(520px, 72vw);
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(255,255,255,.9);
+  outline: none;
+}
+.projects-wrap .project-search:focus{
+  box-shadow: var(--ring);
+  border-color: rgba(79,177,186,.35);
+}
+
+.projects-wrap .filter-row{
+  margin-top: 12px;
+  display:flex;
+  gap: 12px;
+  align-items:flex-start;
+  flex-wrap: wrap;
+}
+.projects-wrap .filter-label{
+  font-weight: 700;
+  font-size: 12px;
+  color: rgba(20,26,30,.70);
+  padding-top: 8px;
+  min-width: 70px;
+}
+.projects-wrap .filter-pills{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.projects-wrap .pill{
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(255,255,255,.82);
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+}
+.projects-wrap .pill.is-active{
+  border-color: rgba(79,177,186,.55);
+  box-shadow: 0 0 0 3px rgba(79,177,186,.18);
+}
+.projects-wrap .pill:focus-visible{
+  outline: none;
+  box-shadow: var(--ring);
+}
+
+/* Base tag pill */
+.projects-wrap .p-tag{
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 10px;         /* more “clean label” than full-pill */
+  background: rgba(0,0,0,.06);
+  color: rgba(20,26,30,.85);
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+.projects-wrap .projects-grid > .p-card{
+  grid-column: auto !important;
+}
+
+.projects-wrap .projects-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 980px){
+  .projects-wrap .projects-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .projects-wrap .projects-grid > .p-card{
+    grid-column: auto !important;
+  }
+}
+
+@media (max-width: 640px){
+  .projects-wrap .projects-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Color-coded tags (examples) */
+.projects-wrap .p-tag[data-tag="flutter"]{ background:#D7F0FF; border-color:#BFE6FF; }
+.projects-wrap .p-tag[data-tag="firebase"]{ background:#FFF2D6; border-color:#FFE1A6; }
+.projects-wrap .p-tag[data-tag="google-cloud-functions"]{ background:#E6F3FF; border-color:#CFE7FF; }
+.projects-wrap .p-tag[data-tag="twilio"]{ background:#FFE3E9; border-color:#FFC1D0; }
+.projects-wrap .p-tag[data-tag="vue"]{ background:#DFF7EA; border-color:#BDEED6; }
+.projects-wrap .p-tag[data-tag="zapier"]{ background:#FFE7D9; border-color:#FFC9A7; }
+.projects-wrap .p-tag[data-tag="python"]{ background:#E9E6FF; border-color:#D1CBFF; }
+.projects-wrap .p-tag[data-tag="c#"]{ background:#F1E6FF; border-color:#DEC6FF; }
+
+/* Optional: keep labels from stretching too wide */
+.projects-wrap .p-tags{ display:flex; flex-wrap:wrap; gap:10px; }
+
+

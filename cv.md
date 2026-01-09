@@ -18,5 +18,9 @@ hide_description: true
 My CV :D
 {:.figcaption}
 
-{% include story-nav.html %}
+<hr class="faded"/>
+
+Continue with [About ↪](/about/){:.heading.flip-title}
+{:.page-next}
+[↩ Back to Skills](/skills/){:.page-back}
 

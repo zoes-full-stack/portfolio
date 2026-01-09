@@ -95,6 +95,9 @@
             {% if p.featured %}
               <span class="p-badge">Featured</span>
             {% endif %}
+            <span class="p-corner" aria-hidden="true">
+              <span class="p-corner__icon">↗</span>
+            </span>
           </div>
 
           <div class="p-card__body">
@@ -114,7 +117,7 @@
 
             <div class="p-tags">
               {% for t in p.tags %}
-                <span class="p-tag">{{ t }}</span>
+                <span class="p-tag" data-tag="{{ t | downcase | replace:' ','-' }}">{{ t }}</span>
               {% endfor %}
             </div>
           </div>
