@@ -9,15 +9,15 @@ Gabie:
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
 
-    Hi! I’m Gabby; a creator, developer, and co-owner of Scarlet Creative, based in Trinidad & Tobago.
+    Hi! I’m Gabby; a creator + developer (and co-owner of Scarlet Creative) based in Trinidad & Tobago.
 
     I’m deeply passionate about helping people feel less overwhelmed, more supported, and more able to do the work that matters to them.
 
     A lot of my perspective comes from navigating my own hard seasons and wanting to make things gentler for others. **I care about giving a voice to the voiceless, raising awareness, and bringing communities together to help revive the Earth and our shared humanity.**
 
-    My favourite areas to dive into are **design, human–computer interaction, using art for storytelling, psychology, software engineering, and neuroscience**. I’m fascinated by how our brains work, how we process emotion and information, and how we can design systems that feel kinder and more intuitive.
+    My favourite areas to dive into are **design (UI/UX, graphic, motion), human–computer interaction, using art for storytelling, psychology, software engineering, neuroscience, mycology and botany**. I’m fascinated by how our brains work, how we process emotion and information, and how we can design systems that feel kinder and more intuitive.
 
-    I’m also a water-baby. I adore the ocean; its mystery, its ecosystems, and the stories it holds. **I’m especially drawn to projects that touch environmental care, marine life, or protecting the spaces that keep us alive.**
+    I’m also a water-baby. I adore the ocean; its mystery, its ecosystems, and the stories it holds.
 
     **I help NGOs and growing businesses build:**
 
@@ -27,11 +27,11 @@ Gabie:
 
   # This photo will be used in the about section
   picture:
-    path:            /images/gabieicon_128.png
+    path:            /images/gabie-artic.png
     # srcset is optional, but can be used to provide higher res versions for retina displays
     srcset:
-      1x:            /images/gabieicon_128.png
-      2x:            /images/gabieicon_256.png
+      1x:            /images/gabie-artic.png
+      2x:            /images/gabie-artic.png
 
   # Social media icons in sidebar
   # Comment/uncommet to show/hide

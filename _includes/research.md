@@ -1,21 +1,21 @@
-**Researcher and Staff** at [TTLAB](http://lab.tt/){:target="_blank"}{:.heading.flip-title}
+**Researcher and Staff** at [TTLAB](http://lab.tt/){:target="_blank"}{:.heading.flip-title}  
 {:.note title="November 2019 - Present"}
 
-- Creating Optimal Personalised Prepaid Plans for TSTT Prepaid Customers
-- Monitoring and Analysing Traffic Flow Data via Google Maps and Waze
-&nbsp;
-<hr>
+- **Personalised Prepaid Plans [TSTT](https://www.tstt.co.tt/):** Researching and designing models for optimal, personalised prepaid data plans for TSTT customers (focused on retention, value, and better-fit offerings).
+- **Traffic Flow Intelligence:** Monitoring and analysing traffic flow patterns using Google Maps and Waze data to better understand movement trends and real-world behaviour.  
+&nbsp;  
+<hr>  
 &nbsp;
 
-**Research Assistant** at **U.W.I, Department of Computing and Information Technology (DCIT)**
+**Research Assistant** at **U.W.I, Department of Computing and Information Technology (DCIT)**  
 {:.note title="March 2018 - May 2019"}
 
-- Measuring the environmental effects on plants via visual through a camera and sensor readings through humidity, temperature and pH sensors. <br>
-**Supervisor**: Dr. Phaedra Mohammed
-- EvaLing - Evaluating and Developing Speech Recognition for Caribbean Dialect <br>
-**Supervisor**: Mr. Kyle DeFreitas    
-&nbsp;
-<hr>
+- **Plant Environment Monitoring:** Measured environmental effects on plants using computer vision + sensor readings (humidity, temperature, and pH) to track conditions and patterns over time.  
+  **Supervisor**: Dr. Phaedra Mohammed  
+- **EvaLing (Caribbean Speech Recognition):** Supported research evaluating and developing speech recognition for Caribbean dialect, with focus on improving accuracy and inclusivity.  
+  **Supervisor**: Mr. Kyle DeFreitas  
+&nbsp;  
+<hr>  
 &nbsp;
 
 **Research Papers**
@@ -24,11 +24,12 @@
 
 - [Soft-Churn: Optimal Switching between Prepaid Data Subscription on E-SIM Support Smartphones](/Research/soft_churn_optimal_switching_between_prepaid_data_subscription_on_ESIM_support_smartphones.pdf){:target="_blank"}{:.flip-title} &nbsp; [_May 2020_] <br>
 - [Research Poster](https://i.imgur.com/2harbr1.jpg){:target="_blank"} <br>
-**Supervisor**: Professor Patrick Hosein
+**Supervisor**: Professor Patrick Hosein  
+&nbsp;  
 
 **U.W.I, Department of Behavioural Sciences**
 
-- Examining the Psychological Well-being of Cancer Survivors &nbsp; [_May 2016_] <br>
-**Supervisor**: Dr. Jannel Phillips
-&nbsp;
+- Examined psychological well-being of cancer survivors &nbsp; [_May 2016_] <br>
+**Supervisor**: Dr. Jannel Phillips  
+&nbsp;  
 <hr>

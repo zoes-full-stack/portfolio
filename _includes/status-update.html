@@ -1,0 +1,26 @@
+{%- assign label = include.label | default: "Status update" -%}
+{%- assign tone  = include.tone  | default: "ocean" -%}
+
+<div class="status-update status-update--{{ tone }}" role="note">
+  <div class="status-update__top">
+    <span class="status-update__badge">{{ label }}</span>
+
+    {%- if include.date -%}
+      <time class="status-update__date" datetime="{{ include.date }}">{{ include.date }}</time>
+    {%- endif -%}
+  </div>
+
+  {%- if include.title -%}
+    <div class="status-update__title">{{ include.title }}</div>
+  {%- endif -%}
+
+  <div class="status-update__body">
+    {{ include.body }}
+  </div>
+
+  {%- if include.href and include.cta -%}
+    <a class="status-update__cta" href="{{ include.href | relative_url }}">
+      {{ include.cta }} <span aria-hidden="true">→</span>
+    </a>
+  {%- endif -%}
+</div>

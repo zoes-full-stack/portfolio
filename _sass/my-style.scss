@@ -9,6 +9,10 @@
 
 // }
 
+.mt-30 {
+  margin-top: 30px;
+}
+
 .dl-table {
   a {
     @supports ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
@@ -199,7 +203,7 @@ span {
   // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   // transition: 0.3s;
   border-radius: 5px;
-  width: 75%;
+  width: 90%;
 }
 
 .container_project {
@@ -614,3 +618,827 @@ img[src~="bordered"]:hover {
     justify-content: center;
   }
 }
+
+// SIDEBAR
+/* bioluminescence overlay ONLY */
+#sidebar-biolume {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;               /* above sidebar bg */
+  // opacity: 0.95;
+  // mix-blend-mode: screen;   /* glow = light */
+}
+
+/* make sure the container we mount into can position absolute children */
+#_sidebar {
+  position: relative;
+}
+
+// Hiding Navbar On Desktop (Keep on Mobile for Usability)
+@media (min-width: 768px) {
+  #_navbar { display: none; }
+}
+
+// Magical Bean holding menu
+
+/* ================================
+   Magical Bean (Card + Bean + Face)
+   ================================ */
+
+.magical-bean-section {
+  width: 100%;
+  min-height: 50vh;
+  background-color: #163442;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden; /* keeps rounded corners clean */
+}
+
+/* Optional helper class (recommended) to give room for menu bloom */
+.magical-bean-section.bean-stage{
+  padding-top: 50px;
+  padding-bottom: 320px; /* space for radial buttons so they don't overlap page text */
+  // transition: padding-bottom 420ms ease;
+}
+
+#magical-bean-container {
+  z-index: 0;
+  position: absolute;
+  inset: 0;
+  background-color: transparent;
+  transition: background-color 1.2s ease-in-out;
+}
+
+/* Bean body */
+#magical-bean {
+  cursor: pointer;
+  margin: 0;
+  background-color: #beecf4;
+  width: min(520px, 55%);
+  height: min(520px, 50%);
+  aspect-ratio: 1 / 0.7;
+  border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
+  transition: background-color 600ms ease-in;
+  position: relative; /* face + arms + holder anchor */
+  z-index: 2;
+}
+
+/* Face parts */
+#eye1, #eye2, #smile {
+  border-width: 0.4vw;
+  border-style: solid;
+  position: absolute;
+  box-sizing: border-box;
+  transition: all 600ms ease-in;
+}
+
+/* Face (resting) */
+#eye1, #eye2 {
+  top: 38%;
+  width: 10%;
+  height: 2%;
+  border-color: transparent transparent #3D550C transparent;
+  border-radius: 40%;
+}
+
+#eye1 { left: 38%; }
+#eye2 { left: 52%; }
+
+#smile {
+  top: 42%;
+  left: 50%;
+  width: 14%;
+  height: 10%;
+  transform: translateX(-50%);
+  border-color: transparent transparent #30550C transparent;
+  border-radius: 50%;
+}
+
+/* ================================
+   Subtle blush cheeks
+   ================================ */
+
+/* Create two cheeks */
+#magical-bean::marker { content: ""; } /* harmless, ignore if your editor nags */
+
+#magical-bean .cheek { display:none; } /* in case you add later */
+
+/* Use pseudo-elements so no HTML needed */
+#magical-bean::before,
+#magical-bean::after{
+  /* (you already use ::before/::after for arms)
+     so we CAN'T use them for cheeks here */
+}
+
+/* Cheeks live on the smile element */
+#smile::before,
+#smile::after{
+  content:"";
+  position:absolute;
+  width: 40px;
+  height: 22px;
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 450ms ease, transform 450ms ease, filter 450ms ease;
+
+  /* blush color + softness */
+  background: radial-gradient(circle at 40% 40%,
+    rgba(255, 120, 150, 0.45),
+    rgba(255, 120, 150, 0.10) 55%,
+    rgba(255, 120, 150, 0) 75%);
+  filter: blur(0.2px);
+  pointer-events: none;
+}
+
+/* Position cheeks relative to the smile */
+#smile::before{
+  left: -54px;   /* tweak for spacing */
+  top: 35px;
+}
+
+#smile::after{
+  right: -54px;
+  top: 35px;
+}
+
+/* On bean hover, cheeks appear */
+#magical-bean:hover #smile::before,
+#magical-bean:hover #smile::after{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Hover expression */
+#magical-bean:hover {
+  background-color: #ffb04c;
+}
+
+#magical-bean:hover #smile {
+  top: 32%;
+  width: 28%;
+  height: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  transition: all 650ms ease-out;
+}
+
+#magical-bean:hover #eye1,
+#magical-bean:hover #eye2 {
+  top: 30%;
+  width: 10%;
+  height: 18%;
+  border-radius: 50%;
+  transition: all 600ms ease-in;
+}
+
+#magical-bean:hover #eye1 { left: 36%; }
+#magical-bean:hover #eye2 { left: 54%; }
+
+/* Background tint on hover */
+#magical-bean:hover + #magical-bean-container {
+  background-color: #f5e9b7;
+}
+
+
+/* ================================
+   Arms (pseudo-elements, click-safe)
+   ================================ */
+
+#magical-bean::before,
+#magical-bean::after{
+  content:"";
+  position: absolute;
+  bottom: -38px;
+  width: 160px;
+  height: 70px;
+  background: inherit;
+  border-radius: 999px;
+  z-index: 20;                 /* visible above menu */
+  pointer-events: none;        /* ✅ never block clicking */
+  box-shadow: 0 14px 22px rgba(0,0,0,0.10);
+  filter: brightness(0.98);
+  pointer-events: none;
+}
+
+/* Left arm */
+#magical-bean::before{
+  left: 6%;
+  transform: rotate(12deg);
+  transform-origin: right center;
+  clip-path: polygon(0 8%, 92% 0, 100% 50%, 92% 100%, 0 92%);
+  background:
+    radial-gradient(circle at 92% 55%, rgba(0,0,0,0.05) 0 22px, transparent 23px),
+    inherit;
+}
+
+/* Right arm */
+#magical-bean::after{
+  right: 6%;
+  transform: rotate(-12deg);
+  transform-origin: left center;
+  clip-path: polygon(8% 0, 100% 8%, 100% 92%, 8% 100%, 0 50%);
+  background:
+    radial-gradient(circle at 8% 55%, rgba(0,0,0,0.05) 0 22px, transparent 23px),
+    inherit;
+}
+
+
+/* ================================
+   Bean Menu Dock (inside bean)
+   ================================ */
+
+#magical-bean .bean-hold{
+  position: absolute;
+  left: 50%;
+  top: 100%;                 /* anchor at the bean's bottom */
+  bottom: auto;              /* important */
+  transform: translateX(-50%) translateY(-64px); /* pull up into the hands */
+  z-index: 6;
+  width: 280px;
+  height: 280px;
+  pointer-events: none;      /* holder doesn't block clicks */
+}
+
+/* allow clicks only on the menu elements */
+#magical-bean .bean-hold .fab-menu,
+#magical-bean .bean-hold .fab-menu *{
+  pointer-events: auto;
+}
+
+/* hub sits near top of holder so items bloom downward */
+#magical-bean .bean-hold .fab-menu{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) scale(0.92);
+  transform-origin: top center;
+}
+
+  .magical-bean-text-desktop {
+    display: block;
+  }
+
+  .magical-bean-text-mobile {
+    display: none;
+  }
+
+// /* On desktop hover/focus: give the menu space */
+// @media (hover:hover) and (pointer:fine){
+//   .magical-bean-section.bean-stage.bean-ui:hover,
+//   .magical-bean-section.bean-stage.bean-ui:focus-within{
+//     padding-bottom: 320px;
+//     // transition: padding-bottom 350ms ease;
+//   }
+// }
+
+
+/* ================================
+   Radial Menu (Words version)
+   ================================ */
+
+.fab-menu {
+  position: relative; /* ✅ REQUIRED for absolute children */
+  width: 92px;
+  height: 92px;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Hide checkbox */
+.fab-menu .menu-open {
+  display: none;
+}
+
+.fab-menu .menu-item,
+.fab-menu .menu-open-button {
+  background: #EEEEEE;
+  border-radius: 999px;
+  width: 92px;
+  height: 92px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: 0;
+  translate: -50% 0;
+
+  color: #FFFFFF;
+  text-align: center;
+
+  transform: translate3d(0, 0, 0);
+  transition: transform 520ms cubic-bezier(.2,.9,.2,1);
+  will-change: transform;
+  box-sizing: border-box;
+}
+
+/* Hamburger button */
+.fab-menu .menu-open-button {
+  background: #EEEEEE;
+  z-index: 999; /* ✅ stay on top */
+  cursor: pointer;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 400ms;
+  transform: scale(1.06) translate3d(0, 0, 0);
+  position: absolute;
+}
+
+/* Bigger hitbox */
+.fab-menu .menu-open-button::after{
+  content:"";
+  position:absolute;
+  inset:-12px;
+  border-radius:999px;
+  pointer-events: none;
+}
+
+.fab-menu .menu-open-button:hover {
+  transform: scale(1.12) translate3d(0, 0, 0);
+}
+
+/* Hamburger lines */
+.fab-menu .lines {
+  width: 26px;
+  height: 3px;
+  background: #596778;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -13px;
+  margin-top: -1.5px;
+  transition: transform 200ms;
+}
+
+.fab-menu .line-1 { transform: translate3d(0, -9px, 0); }
+.fab-menu .line-2 { transform: translate3d(0, 0, 0); }
+.fab-menu .line-3 { transform: translate3d(0, 9px, 0); }
+
+.fab-menu .menu-open:checked + .menu-open-button .line-1 {
+  transform: translate3d(0, 0, 0) rotate(45deg);
+}
+.fab-menu .menu-open:checked + .menu-open-button .line-2 {
+  transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+.fab-menu .menu-open:checked + .menu-open-button .line-3 {
+  transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.fab-menu .menu-open:checked + .menu-open-button {
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transform: scale(0.98) translate3d(0, 0, 0);
+}
+
+/* Menu items with WORDS */
+.fab-menu .menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+  z-index: 10;
+}
+
+.fab-menu .menu-text {
+  display: block;
+  padding: 0 10px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.1;
+  text-align: center;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+  letter-spacing: 0.2px;
+}
+
+/* Slight hover polish */
+.fab-menu .menu-item:hover {
+  filter: brightness(1.05);
+}
+
+/* Bloom easing */
+.fab-menu .menu-open:checked ~ .menu-item {
+  transition-timing-function: cubic-bezier(.2,.9,.2,1);
+  transition-duration: 620ms;
+}
+
+/* Bloom UNDER the hub */
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(3) { transform: translate3d(0, 112px, 0); }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(4) { transform: translate3d(98px, 58px, 0); }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(5) { transform: translate3d(98px, 168px, 0); }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(6) { transform: translate3d(0, 224px, 0); }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(7) { transform: translate3d(-98px, 168px, 0); }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(8) { transform: translate3d(-98px, 58px, 0); }
+
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(3) { transition-delay: 0ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(4) { transition-delay: 40ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(5) { transition-delay: 80ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(6) { transition-delay: 120ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(7) { transition-delay: 160ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(8) { transition-delay: 200ms; }
+
+/* Colors */
+.fab-menu .blue { background-color: #669AE1; }
+.fab-menu .green { background-color: #70CC72; }
+.fab-menu .red { background-color: #FE4365; }
+.fab-menu .purple { background-color: #C49CDE; }
+.fab-menu .orange { background-color: #FC913A; }
+.fab-menu .lightblue { background-color: #62C2E4; }
+
+/* Mobile: keep it comfy */
+@media (max-width: 700px) {
+  .magical-bean-section.bean-stage{
+    padding-bottom: 320px;
+  }
+  #magical-bean .bean-hold{
+    width: 300px;
+    height: 300px;
+    bottom: -14px;
+  }
+
+  .magical-bean-text-desktop {
+    display: none;
+  }
+
+  .magical-bean-text-mobile {
+    display: block;
+  }
+}
+
+/* ==========================================
+   Open menu on hover anywhere in the stage
+   (desktop), keep checkbox for mobile/touch
+   ========================================== */
+
+.bean-ui { cursor: default; }
+.bean-ui:hover #magical-bean { filter: brightness(1.02); }
+
+@media (hover: hover) and (pointer: fine) {
+
+  /* "Open state" triggers: hover stage, hover menu area, keyboard focus */
+  .bean-ui:hover .fab-menu .menu-item,
+  .bean-ui:focus-within .fab-menu .menu-item,
+  .bean-ui .bean-hold:hover .fab-menu .menu-item {
+    transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+  }
+
+  /* Bloom UNDER the hub */
+  .bean-ui:hover .fab-menu .menu-item:nth-child(3),
+  .bean-ui:focus-within .fab-menu .menu-item:nth-child(3),
+  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(3) { transform: translate3d(0, 112px, 0); }
+
+  .bean-ui:hover .fab-menu .menu-item:nth-child(4),
+  .bean-ui:focus-within .fab-menu .menu-item:nth-child(4),
+  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(4) { transform: translate3d(98px, 58px, 0); }
+
+  .bean-ui:hover .fab-menu .menu-item:nth-child(5),
+  .bean-ui:focus-within .fab-menu .menu-item:nth-child(5),
+  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(5) { transform: translate3d(98px, 168px, 0); }
+
+  .bean-ui:hover .fab-menu .menu-item:nth-child(6),
+  .bean-ui:focus-within .fab-menu .menu-item:nth-child(6),
+  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(6) { transform: translate3d(0, 224px, 0); }
+
+  .bean-ui:hover .fab-menu .menu-item:nth-child(7),
+  .bean-ui:focus-within .fab-menu .menu-item:nth-child(7),
+  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(7) { transform: translate3d(-98px, 168px, 0); }
+
+  .bean-ui:hover .fab-menu .menu-item:nth-child(8),
+  .bean-ui:focus-within .fab-menu .menu-item:nth-child(8),
+  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(8) { transform: translate3d(-98px, 58px, 0); }
+
+  /* Hub squash + turn into "X" while open */
+  .bean-ui:hover .fab-menu .menu-open-button,
+  .bean-ui:focus-within .fab-menu .menu-open-button,
+  .bean-ui .bean-hold:hover .fab-menu .menu-open-button {
+    transform: scale(0.98) translate3d(0, 0, 0);
+    transition-timing-function: linear;
+    transition-duration: 200ms;
+  }
+
+  .bean-ui:hover .fab-menu .line-1,
+  .bean-ui:focus-within .fab-menu .line-1,
+  .bean-ui .bean-hold:hover .fab-menu .line-1 { transform: translate3d(0, 0, 0) rotate(45deg); }
+
+  .bean-ui:hover .fab-menu .line-2,
+  .bean-ui:focus-within .fab-menu .line-2,
+  .bean-ui .bean-hold:hover .fab-menu .line-2 { transform: translate3d(0, 0, 0) scale(0.1, 1); }
+
+  .bean-ui:hover .fab-menu .line-3,
+  .bean-ui:focus-within .fab-menu .line-3,
+  .bean-ui .bean-hold:hover .fab-menu .line-3 { transform: translate3d(0, 0, 0) rotate(-45deg); }
+
+  /* Optional: make the hub not "toggle" on desktop (hover handles it) */
+  .bean-ui .fab-menu .menu-open-button { cursor: default; }
+}
+
+/* Still allow click/tap toggle on touch devices */
+@media (hover: none), (pointer: coarse) {
+  .bean-ui .fab-menu .menu-open-button { cursor: pointer; }
+}
+
+// Contact Me Bubble
+
+:root{
+  --bubbleTiming: cubic-bezier(0.5,0.15,0.25,1.75);
+
+  /* Blue palette */
+  --b-hi: hsl(195 90% 98%);  /* highlight */
+  --b-1:  hsl(195 85% 78%);  /* top gloss */
+  --b-2:  hsl(200 75% 56%);  /* mid */
+  --b-3:  hsl(208 70% 40%);  /* deep */
+  --ink:  hsl(210 35% 18%);  /* text/lines */
+}
+
+/* ================================
+   Waves under the bean
+   ================================ */
+
+/* sits at the bottom of the section */
+.bean-waves{
+  position: absolute;
+  left: -42px;
+  right: -42px;
+  bottom: 0;             /* hides any seam */
+  width: auto;
+  height: 280px;            /* controls how “tall” the waves feel */
+  overflow: hidden;
+  z-index: 1;               /* behind bean (z=2) but above bg container (z=0) */
+  pointer-events: none;
+  opacity: 0.9;
+  transform: scaleX(1.01); transform-origin: left bottom;
+}
+
+.bean-waves svg{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Use your palette: deep sea + lighter foam layers */
+.bean-waves .wave{
+  transform-origin: center;
+  animation: waveSlide 10s linear infinite;
+}
+
+.bean-waves .wave1{
+  fill: rgba(255,255,255,0.10);
+  animation-duration: 14s;
+}
+.bean-waves .wave2{
+  fill: rgba(79,177,186,0.18); /* matches your accent */
+  animation-duration: 11s;
+  animation-direction: reverse;
+}
+.bean-waves .wave3{
+  fill: rgba(255,255,255,0.06);
+  animation-duration: 18s;
+}
+
+/* subtle horizontal drift */
+@keyframes waveSlide{
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-4%); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .bean-waves .wave{ animation: none; }
+}
+
+
+/* CTA layout */
+.cta-bubble{
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.cta-text{
+  font-size: 1.05rem;
+  margin-bottom: .75rem;
+}
+
+.cta-bubble-wrap{
+  display: grid;
+  gap: .65rem;
+  place-items: center;
+}
+
+.cta-sub{
+  opacity: .8;
+  font-size: .95rem;
+}
+
+/* Bubble CTA wrapper */
+.bubble-cta{
+  display: grid;
+  place-items: center;
+  position: relative;
+  animation: float 4s ease-in-out infinite;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide the checkbox visually but keep it for :checked if you want later */
+.bubble-cta .bubble{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* The visible bubble is the LINK */
+.bubble-cta .bubble-link{
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  font-weight: 800;
+
+  width: auto;
+  height: 4.6rem;
+  border-radius: 999px;
+
+  position: relative;
+  transform-style: preserve-3d;
+  transition-property: box-shadow, transform, width, height;
+  transition-duration: .2s, .2s, .2s, .2s;
+  transition-timing-function: ease-in-out, ease-in-out, var(--bubbleTiming), var(--bubbleTiming);
+  will-change: transform;
+
+  /* bubble shine + depth */
+  background-image:
+    radial-gradient(8% 8% at 22% 28%, #fff 45%, transparent 50%),
+    radial-gradient(8% 8% at 23% 27%, #fff 45%, transparent 50%),
+    radial-gradient(8% 8% at 24% 26%, #fff 45%, transparent 50%),
+    radial-gradient(8% 8% at 25% 25%, #fff 45%, transparent 50%),
+    radial-gradient(8% 8% at 26% 24%, #fff 45%, transparent 50%),
+    radial-gradient(8% 8% at 27% 23%, #fff 45%, transparent 50%),
+    radial-gradient(8% 8% at 28% 22%, #fff 45%, transparent 50%);
+    
+  color: var(--ink);
+
+  box-shadow:
+    0 -0.06em 0.1em var(--b-hi) inset,
+    0 -0.15em 0.4em var(--b-3) inset,
+    0 0.05em 0.05em var(--b-3) inset,
+    0.05em 0 0.1em var(--b-hi) inset,
+    -0.05em 0 0.1em var(--b-hi) inset,
+    0 0.1em 0.4em var(--b-2) inset;
+}
+
+/* bubble “button base” */
+.bubble-cta .bubble-link::before{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  width: 2.6rem;
+  height: 1.7rem;
+  transform: translate3d(-50%,-50%,-1px);
+  border-radius: 999px;
+  box-shadow: 0 0 0 .55rem #fff inset;
+  filter: drop-shadow(.65rem .65rem 4px rgba(0,0,0,.2));
+  z-index: -1;
+}
+
+/* bubble shadow */
+.bubble-cta .bubble-link::after{
+  content:"";
+  position:absolute;
+  top:.65rem;
+  left:.65rem;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0,0,-1px);
+  border-radius: 999px;
+  filter: blur(4px);
+  background:
+    radial-gradient(100% 100% at center, transparent 35%, rgba(0,0,0,.2) 48%, transparent 50%);
+  z-index: -2;
+}
+
+/* text inside bubble */
+.bubble-label{
+  letter-spacing: .2px;
+  text-align: center;
+  user-select: none;
+  font-size: 1rem;
+  line-height: 1.1;
+  padding: 0 1.5rem 0 1.5rem;
+  white-space: nowrap;
+}
+
+/* interactions */
+.bubble-cta .bubble-link:focus,
+.bubble-cta .bubble-link:hover{
+  transform: scale(1.1);
+  outline: none;
+}
+
+.bubble-cta .bubble-link:active{
+  width: auto;
+  height: 4rem;
+}
+
+.bubble-cta .bubble-link:focus::before,
+.bubble-cta .bubble-link:hover::before{
+  filter: drop-shadow(.8rem .8rem 4px rgba(0,0,0,.2));
+}
+
+.bubble-cta .bubble-link:focus::after,
+.bubble-cta .bubble-link:hover::after{
+  transform: translate3d(.15rem,.15rem,-1px);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .bubble-cta{ animation: none; }
+  .bubble-cta .bubble-link,
+  .bubble-cta .bubble-link::before,
+  .bubble-cta .bubble-link::after{
+    transition-duration: 0s;
+  }
+  .bubble-cta .bubble-link:hover,
+  .bubble-cta .bubble-link:focus{
+    transform: scale(1);
+  }
+  .bubble-cta .bubble-link:active{
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
+
+/* float anim */
+@keyframes float{
+  from, to { transform: translate(0,3%); }
+  25% { transform: translate(-3%,0); }
+  50% { transform: translate(0,-3%); }
+  75% { transform: translate(3%,0); }
+}
+
+// Story Navigation
+
+.story-nav{
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.story-nav__meta{
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+  opacity: 0.9;
+}
+
+.story-nav__step{ font-size: 0.95rem; opacity: 0.8; }
+.story-nav__title{ font-weight: 700; }
+
+.story-nav__actions{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.story-nav__back{
+  text-decoration: none;
+  opacity: 0.75;
+}
+.story-nav__back:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+
+// Markdown stie navigation
+
+.page-back{
+  display:inline-block;
+  margin-top:.75rem;
+  opacity:.85;
+  text-decoration:none;
+}
+.page-back:hover{ opacity:1; text-decoration:underline; }
+
+.page-next {
+  margin-top: 1.5rem;
+}
+
+// Projects (Portfolio) CSS 
+@import "my-projects";

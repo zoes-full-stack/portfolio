@@ -1,15 +1,12 @@
 ---
 layout: about
-image: /assets/img/blog/hydejack-9.jpg
+title: About
+guide: About
+image:
 description: >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+  More about me
 hide_description: true
-redirect_from:
-  - /download/
 ---
-
-# About
 
 :house_with_garden: **Trinidad & Tobago** &nbsp;
 :calling: **1 (868) 496-5529** &nbsp;
@@ -26,10 +23,47 @@ redirect_from:
 <div markdown="0" class="interests-grid">
 
   <figure class="interest">
-    <a href="/visual_stories/" target="_blank">
-      <img src="/images/icons/designer.png" alt="Graphic Design" loading="lazy">
-      <figcaption>Graphic Design</figcaption>
+    <a href="/experiments/" target="_blank">
+      <img src="/images/icons/designer.png" alt="Visual Experiments" loading="lazy">
+      <figcaption>Visual Experiments</figcaption>
     </a>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/music.png" alt="Music" loading="lazy">
+    <figcaption>Singing &amp; Music</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/meditation.png" alt="Meditation" loading="lazy">
+    <figcaption>Meditation</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/gaming.png" alt="Gaming and Game Dev" loading="lazy">
+    <figcaption>Gaming &amp; Game Dev</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/diving.png" alt="Diving" loading="lazy">
+    <figcaption>Diving</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/hiking.jpg" alt="Hiking" loading="lazy">
+    <figcaption>Hiking</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <a href="/baking/" target="_blank">
+      <img src="/images/icons/baking.png" alt="Baking" loading="lazy">
+      <figcaption>Baking</figcaption>
+    </a>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/ocean.png" alt="Ocean Conservation" loading="lazy">
+    <figcaption>Ocean Conservation</figcaption>
   </figure>
 
   <figure class="interest">
@@ -50,43 +84,6 @@ redirect_from:
   <figure class="interest">
     <img src="/images/icons/astronomy.png" alt="Astronomy" loading="lazy">
     <figcaption>Astronomy</figcaption>
-  </figure>
-
-  <figure class="interest">
-    <img src="/images/icons/gaming.png" alt="Gaming and Game Dev" loading="lazy">
-    <figcaption>Gaming &amp; Game Dev</figcaption>
-  </figure>
-
-  <figure class="interest">
-    <img src="/images/icons/meditation.png" alt="Meditation" loading="lazy">
-    <figcaption>Meditation</figcaption>
-  </figure>
-
-  <figure class="interest">
-    <img src="/images/icons/diving.png" alt="Diving" loading="lazy">
-    <figcaption>Diving</figcaption>
-  </figure>
-
-  <figure class="interest">
-    <img src="/images/icons/hiking.jpg" alt="Hiking" loading="lazy">
-    <figcaption>Hiking</figcaption>
-  </figure>
-
-  <figure class="interest">
-    <img src="/images/icons/music.png" alt="Music" loading="lazy">
-    <figcaption>Music</figcaption>
-  </figure>
-
-  <figure class="interest">
-    <a href="/baking/" target="_blank">
-      <img src="/images/icons/baking.png" alt="Baking" loading="lazy">
-      <figcaption>Baking</figcaption>
-    </a>
-  </figure>
-
-  <figure class="interest">
-    <img src="/images/icons/ocean.png" alt="Ocean Conservation" loading="lazy">
-    <figcaption>Ocean Conservation</figcaption>
   </figure>
 
 </div>
@@ -118,6 +115,8 @@ Hydejack uses KaTeX to efficiently render math.
 &nbsp;
 &nbsp;
 &nbsp;
+<hr class="faded"/>
 
-Continue with [Skills](skills.md){:.heading.flip-title}
-{:.read-more}
+Continue with [Experiments ↪](/experiments/){:.heading.flip-title}
+{:.page-next}
+[↩ Back to CV](/cv/){:.page-back}

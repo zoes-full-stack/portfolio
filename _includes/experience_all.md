@@ -1,123 +1,124 @@
-**Co-Founder, Director & Lead Creative Technologist** at **Scarlet Creative**
-{:.note title="February 2023 - Present"}
+**Co-Founder, Director & Lead Creative Technologist** at **Scarlet Creative**  
+{:.note title="September 2022 - Present"}
 
--   Co-founded a creative software studio delivering intelligent, human-centered digital experiences.
--   Lead full-stack engineering, creative direction and technical architecture for interactive products and AI-enabled tools.
--   Design and develop high-end frontends, microservices and automation systems with strong emphasis on emotional design and usability.
--   Build reusable design systems, internal tooling and scalable infrastructure to support client growth.
--   Collaborate closely with founders and mission-driven organizations to translate abstract vision into functional, high-clarity digital outcomes.
-&nbsp;
-<hr>
+- Co-founded a creative software studio delivering intelligent, human-centered digital experiences.
+- Lead full-stack engineering, creative direction and technical architecture for interactive products and AI-enabled tools.
+- Design and develop high-end frontends, microservices and automation systems with strong emphasis on emotional design and usability.
+- Build reusable design systems, internal tooling and scalable infrastructure to support client growth.
+- Collaborate closely with founders and mission-driven organizations to translate abstract vision into functional, high-clarity digital outcomes.
+- **Impact:** Reduced manual workload by up to **70–95%** through thoughtful automation + high-clarity UX.  
+&nbsp;  
+<hr>  
 &nbsp;
 
-**Associate Software Engineer** at **Virtana**
+**Associate Software Engineer** at **Virtana**  
 {:.note title="August 2021 - August 2022"}
 
 ***BizOps***
--   Aided in client billing. 
--   Used Xero to process invoices and check balance sheets and Profit and Loss statements. 
--   Explored Fathom for financial forecasting. 
--   Automated BizOps invoicing processes via python scripts.
- 
+- Aided in client billing.
+- Used Xero to process invoices and check balance sheets and Profit and Loss statements.
+- Explored Fathom for financial forecasting.
+- Automated BizOps invoicing processes via python scripts.
+
 ***Software Engineering***
--   Comprehensive exercise in software engineering best practices. 
--   Created thorough design docs and workflows prior to executing tasks to ensure efficacy. 
--   Designed and executed on-host calibration through UI via C# front-end and Python/GoLang back-end. 
--   Performed Gerrit ChangeList/Code Review. 
--   Heavy use of GoLang and Python to contribute to the infrastructure, functionality and scalability of large scale robotics tasks. 
--   Conducted thorough research, documentation and controlled experiments on a fresh topic involving emerging technologies. 
--   Was able to swiftly and comprehensively grasp new technologies and paradigms required to efficiently contribute to the company despite lacking prior foundations.
--   Extensively used Google’s code style guide, Agile Methodology and Version Control (Git).
-&nbsp;
-<hr>
+- Comprehensive exercise in software engineering best practices.
+- Created thorough design docs and workflows prior to executing tasks to ensure efficacy.
+- Designed and executed on-host calibration through UI via C# front-end and Python/GoLang back-end.
+- Performed Gerrit ChangeList/Code Review.
+- Heavy use of GoLang and Python to contribute to the infrastructure, functionality and scalability of large scale robotics tasks.
+- Conducted thorough research, documentation and controlled experiments on a fresh topic involving emerging technologies.
+- Was able to swiftly and comprehensively grasp new technologies and paradigms required to efficiently contribute to the company despite lacking prior foundations.
+- Extensively used Google’s code style guide, Agile Methodology and Version Control (Git).  
+&nbsp;  
+<hr>  
 &nbsp;
 
-**Software Engineer Intern** at **Virtana**
+**Software Engineer Intern** at **Virtana**  
 {:.note title="May 2021 - August 2021"}
 
--	Calibrated cameras and explored camera intrinsics and object extrinsics.
--   Estimated the pose of individual AprilTags and an AprilGroup attached to a dodecahedron.
--   Used optical flow to track the movement of the AprilGroup object.
--   Calibrated the tip of a pen attached to the AprilGroup object.
--   Used PyQtGraph to obtain a live graph drawing via tracked poses of the AprilGroup object.
--	Extensively used Google's code style guide, Agile Methodology and Version Control (Git).
--   [Github Link](https://github.com/Virtana/accurate-aprilgroup-tracking/tree/feature/pentip-calibration){:target="_blank"}
-&nbsp;
-<hr>
+- Calibrated cameras and explored camera intrinsics and object extrinsics.
+- Estimated the pose of individual AprilTags and an AprilGroup attached to a dodecahedron.
+- Used optical flow to track the movement of the AprilGroup object.
+- Calibrated the tip of a pen attached to the AprilGroup object.
+- Used PyQtGraph to obtain a live graph drawing via tracked poses of the AprilGroup object.
+- Extensively used Google's code style guide, Agile Methodology and Version Control (Git).
+- [Github Link](https://github.com/Virtana/accurate-aprilgroup-tracking/tree/feature/pentip-calibration){:target="_blank"}  
+&nbsp;  
+<hr>  
 &nbsp;
 
-**Junior Software Developer** at **SCG Growth Partners**
+**Junior Software Developer** at **SCG Growth Partners**  
 {:.note title="January 2021 - May 2021"}
 
--	Develop React Apps to be integrated into a WordPress Site for [Tatil](https://tatil.co.tt/){:target="_blank"}. 
--   Explored Formik, Yup and MobX technologies.
--   Developed WordPress custom theme.
--   Added content to python and Django back-end for Insurance Quotations.
--   Added page templates to existing WordPress site ([Beacon](https://beacon.co.tt/?modal-link=%2Fcallback-popup)).
--   Strong Git and Scrum workflow.
--   Gained important workflow ethic and process from peers.
-&nbsp;
-<hr>
+- Develop React Apps to be integrated into a WordPress Site for [Tatil](https://tatil.co.tt/){:target="_blank"}.
+- Explored Formik, Yup and MobX technologies.
+- Developed WordPress custom theme.
+- Added content to python and Django back-end for Insurance Quotations.
+- Added page templates to existing WordPress site ([Beacon](https://beacon.co.tt/?modal-link=%2Fcallback-popup)).
+- Strong Git and Scrum workflow.
+- Gained important workflow ethic and process from peers.  
+&nbsp;  
+<hr>  
 &nbsp;
 
-**Data Scientist and Software Engineer** at **Telecommunication Services of Trinidad and Tobago Limited (TSTT)**
+**Data Scientist and Software Engineer** at **Telecommunication Services of Trinidad and Tobago Limited (TSTT)**  
 {:.note title="November 2019 - October 2020"}
 
--	Developed an Admin interface for managing users, roles and permissions. 
--	Performed extensive analysis on team and organisation productivity data via aiding in the development of a Figure of Metric (FOM) measurement, mathematical model, and a Productivity Dashboard during COVID-19. 
--	Worked closely with the stakeholders in designing and developing the look and functionality of these interfaces to fully meet their requirements.
--	Employed a recommender system to improve customer retention and long-term profit optimization via recommending and creating personalizing bundles. 
--	Extensively used Agile Methodology, Version Control (Git) and Continuous Integration.
--	Conducted Bi-weekly Programming and Data Science workshops.
-&nbsp;
-<hr>
+- Developed an Admin interface for managing users, roles and permissions.
+- Performed extensive analysis on team and organisation productivity data via aiding in the development of a Figure of Metric (FOM) measurement, mathematical model, and a Productivity Dashboard during COVID-19.
+- Worked closely with the stakeholders in designing and developing the look and functionality of these interfaces to fully meet their requirements.
+- Employed a recommender system to improve customer retention and long-term profit optimization via recommending and creating personalizing bundles.
+- Extensively used Agile Methodology, Version Control (Git) and Continuous Integration.
+- Conducted Bi-weekly Programming and Data Science workshops.  
+&nbsp;  
+<hr>  
 &nbsp;
 
-**Software Tester and Developer** at **U.W.I, Department of Computing and Information Technology (DCIT)**
+**Software Tester and Developer** at **U.W.I, Department of Computing and Information Technology (DCIT)**  
 {:.note title="July - August 2019"}
 
 - Fully Tested an existing system called the UWI ETC (Engaging the Community) according to Campus IT Services standards.
 - Implemented new features via PHP, XAMPP and MS SQL Server.
-    - Added a volunteer tracking system to track the hours and activities completed.
-    - Added a page for organisations to add an event to the system.
+  - Added a volunteer tracking system to track the hours and activities completed.
+  - Added a page for organisations to add an event to the system.
 - Gained further experience in Agile and SCRUM Methodologies.
 - Trained end-users online using Big Blue button.
-- Continuously met with stakeholders to obtain user requirements and feedback on the development of the system.
-&nbsp;
-<hr>
+- Continuously met with stakeholders to obtain user requirements and feedback on the development of the system.  
+&nbsp;  
+<hr>  
 &nbsp;
 
-**Software Developer and Data Scientist** at **Persisto Labs**
+**Software Developer and Data Scientist** at **Persisto Labs**  
 {:.note title="August - October 2018"}
 
 - Developed various software modules with a stringent and well-documented Git workflow.
-    - Scraped sites for blacklisted individuals and stored them into DynamoDB.
-    - New users were automatically searched via ElasticSearch through the database of blacklisted individuals before confirmation.
-    - Created a dispute resolution system for buyers and sellers.
+  - Scraped sites for blacklisted individuals and stored them into DynamoDB.
+  - New users were automatically searched via ElasticSearch through the database of blacklisted individuals before confirmation.
+  - Created a dispute resolution system for buyers and sellers.
 - Worked on deploying these micro-services to Amazon Web Services.
 - Gained practical experience in Cloud infrastructure and deployment and React Native app development.
-- Created a chat-bot using Amazon Lex for support services.
-&nbsp;
-<hr>
+- Created a chat-bot using Amazon Lex for support services.  
+&nbsp;  
+<hr>  
 &nbsp;
 
-**Programming Mentor** at **The University of the West Indies, St. Augustine**
+**Programming Mentor** at **The University of the West Indies, St. Augustine**  
 {:.note title="July - August 2018"}
 
-- Guided and aided in teaching the fundamentals of programming and creativity, using Scratch.
-&nbsp;
-<hr>
+- Guided and aided in teaching the fundamentals of programming and creativity, using Scratch.  
+&nbsp;  
+<hr>  
 &nbsp;
 
-**Robotics Senior Mentor** at **U.W.I, Department of Computing and Information Technology (DCIT)**
+**Robotics Senior Mentor** at **U.W.I, Department of Computing and Information Technology (DCIT)**  
 {:.note title="July 2017/2018"}
 
 - Assisted in organizing the camp
 - Contributed to the code development
 - Help mentor students in programming a raspberry pi robot via:
-    - Inceptionv3 for image recognition
-    - Epspeak for voice
-    - Distance sensors to measure distance.
-    - End-Goal - Using the above to solve mazes. 
-&nbsp;
+  - Inceptionv3 for image recognition
+  - Epspeak for voice
+  - Distance sensors to measure distance.
+  - End-Goal - Using the above to solve mazes.  
+&nbsp;  
 <hr>

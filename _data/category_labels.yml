@@ -1,0 +1,10 @@
+- key: all
+  label: "All"
+- key: product_engineering
+  label: "Product Engineering"
+- key: software_engineering
+  label: "Software Engineering"
+- key: mentoring
+  label: "Mentoring"
+- key: web
+  label: "Web"

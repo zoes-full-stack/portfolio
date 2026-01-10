@@ -1,0 +1,98 @@
+{%- comment -%}
+  Story nav include
+  - Finds current item by page.guide (recommended) or page.title
+  - Computes prev/next from the ordered YAML list
+  - Resolves URLs by matching site.pages title, with fallbacks
+{%- endcomment -%}
+
+{%- assign guide = site.data.menuguide -%}
+{%- assign current_title = page.guide | default: page.title -%}
+
+{%- assign current_index = nil -%}
+{%- assign current_item = nil -%}
+
+{%- for item in guide -%}
+  {%- if item.title == current_title -%}
+    {%- assign current_index = forloop.index0 -%}
+    {%- assign current_item = item -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if current_item == nil -%}
+  {%- comment -%}If no match, do nothing (silent fail){%- endcomment -%}
+{%- else -%}
+
+  {%- assign total = guide | size -%}
+  {%- assign last_step = total | minus: 1 -%}
+
+  {%- assign prev_index = current_index | minus: 1 -%}
+  {%- assign next_index = current_index | plus: 1 -%}
+
+  {%- assign prev_item = nil -%}
+  {%- assign next_item = nil -%}
+
+  {%- if prev_index >= 0 -%}
+    {%- assign prev_item = guide[prev_index] -%}
+  {%- endif -%}
+
+  {%- if next_index < total -%}
+    {%- assign next_item = guide[next_index] -%}
+  {%- endif -%}
+
+  {%- comment -%}Helper to resolve a URL from a guide item title{%- endcomment -%}
+  {%- capture prev_url -%}
+    {%- if prev_item -%}
+      {%- if prev_item.title == "Welcome" -%}
+        {{ "/" | relative_url }}
+      {%- else -%}
+        {%- assign p = site.pages | where: "title", prev_item.title | first -%}
+        {%- if p and p.url -%}
+          {{ p.url | relative_url }}
+        {%- else -%}
+          {{ "/" | append: prev_item.title | downcase | append: "/" | relative_url }}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endcapture -%}
+
+  {%- capture next_url -%}
+    {%- if next_item -%}
+      {%- if next_item.title == "Welcome" -%}
+        {{ "/" | relative_url }}
+      {%- else -%}
+        {%- assign n = site.pages | where: "title", next_item.title | first -%}
+        {%- if n and n.url -%}
+          {{ n.url | relative_url }}
+        {%- else -%}
+          {{ "/" | append: next_item.title | downcase | append: "/" | relative_url }}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endcapture -%}
+
+<nav class="story-nav" aria-label="Guided path">
+<div class="story-nav__meta">
+    {%- if current_item.step == 0 -%}
+    <span class="story-nav__step">Start</span>
+    {%- else -%}
+    <span class="story-nav__step">Step {{ current_item.step }} of {{ last_step }}</span>
+    {%- endif -%}
+    <span class="story-nav__title">{{ current_item.title }}</span>
+</div>
+
+<div class="story-nav__actions">
+    {%- if prev_item -%}
+    <a class="story-nav__back" href="{{ prev_url | strip }}">
+        ← <span class="heading flip-title">{{ prev_item.title }}</span>
+    </a>
+    {%- endif -%}
+
+    {%- if next_item -%}
+    <a class="story-nav__next read-more" href="{{ next_url | strip }}">
+        Continue → <span class="heading flip-title">{{ next_item.title }}</span>
+    </a>
+    {%- endif -%}
+</div>
+</nav>
+
+{%- endif -%}
