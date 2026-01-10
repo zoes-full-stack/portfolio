@@ -1145,7 +1145,7 @@ img[src~="bordered"]:hover {
 
 /* Still allow click/tap toggle on touch devices */
 @media (hover: none), (pointer: coarse) {
-  .bean-ui .fab-menu .menu-open-button { cursor: pointer; }
+  .bean-ui .bean-hold .fab-menu .menu-open-button { cursor: pointer; }
 }
 
 // Contact Me Bubble
