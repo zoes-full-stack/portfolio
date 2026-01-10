@@ -637,8 +637,10 @@ img[src~="bordered"]:hover {
   position: relative;
 }
 
-// Hiding Navbar
-#_navbar { display: none; }
+// Hiding Navbar On Desktop (Keep on Mobile for Usability)
+@media (min-width: 768px) {
+  #_navbar { display: none; }
+}
 
 // Magical Bean holding menu
 
