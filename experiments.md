@@ -9,4 +9,5 @@ sitemap: false
 
 <hr class="faded"/>
 
-[↩ Back to About](/about/){:.page-back}
+[↩ Back to About](/about/){:.page-back} <br>
+[↩ View Work](/work/){:.page-back}

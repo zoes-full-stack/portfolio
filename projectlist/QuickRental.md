@@ -3,8 +3,7 @@ layout: page
 title: QuickRental
 sitemap: false
 ---
-<!-- <a class="external" href="https://hydejack.com/" property="sameAs">Website</a> -->
-<!-- <p class="note" title="Attention">A custom label.</p> -->
+
 <div markdown="0">
   <header>
     <!-- <h1 class="post-title flip-project-title"> QuickRental</h1> -->
@@ -15,7 +14,6 @@ sitemap: false
         </div>
       </div>
       <div class="column_project_l2">
-        <a href="https://quick-rental-project-website.herokuapp.com/index.html" target="_blank" class="external heading flip-title">Info Website</a> |
         <a href="https://github.com/quickrentalteam" target="_blank" class="external heading flip-title">Source Code</a>
       </div>
     </div>
@@ -81,38 +79,17 @@ The user interface would enable users to:
 ## Full Implementation
 
 View Our:
-- [Project Website](https://quick-rental-project-website.herokuapp.com/final-report.html){:target="_blank"}{:.heading.flip-title} OR
 - [Project Document](https://docs.google.com/document/d/1x6pquztfBMKPRq7Z2c1AhgS2I1rwo8vd65kQ-VqxPWY/edit?usp=sharing){:target="_blank"}{:.heading.flip-title} for the full scope of features and improvements made in QuickRental 
 - [Project Video](https://youtu.be/WOppO_66oSE){:target="_blank"}{:.heading.flip-title} for an overview and demo of QuickRental!
 
-### Updates Coming Soon... :relaxed:
-
 
 <div markdown="0">
-  <hr class="dingbat related">
-  <aside class="about related mt4 mb4" role="complementary">
-    <div class="author mt4"> 
-      <img src="/images/gabieicon_128.png" srcset="/images/gabieicon_128.png 1x,/images/gabieicon_256.png 2x" alt="<Gabriela> <Sewdhan>" class="avatar" width="120" height="120" loading="lazy" style="opacity: 0;">
-      <h2 class="page-title hr-bottom"> About</h2>
-      <p>Gabriela Sewdhan: software engineer, robotics enthusiast and baker based in Trinidad.</p>
-      <div class="sidebar-social"> <span class="sr-only">Social:</span>
-        <ul>
-          <li> 
-            <a href="https://www.linkedin.com/in/gabriela-sewdhan-3ba495120" target="_blank" title="LinkedIn" class="no-mark-external"> <span class="icon-linkedin2"></span> <span class="sr-only">LinkedIn</span> </a>
-          </li>
-          <li> 
-            <a href="https://github.com/GabrielaSewdhan" target="_blank" title="GitHub" class="no-mark-external"> <span class="icon-github"></span> <span class="sr-only">GitHub</span> </a>
-          </li>
-          <li> 
-            <a href="mailto:gabiems13@gmail.com" target="_blank" title="Email" class="no-mark-external"> <span class="icon-mail"></span> <span class="sr-only">Email</span> </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </aside>
   <aside class="related mb4" role="complementary">
     <h2 class="hr-bottom">Other Projects</h2>
     <ul class="related-posts">
+      <li class="h4"> 
+        <a href="/projectlist/AccurateAprilGroupTracking/" class="flip-title"><span>Accurate AprilGroup Tracking</span></a> <time class="faded fine" datetime="2021-05-30T00:00:00+00:00">May 2021</time>
+      </li>
       <li class="h4">
         <a href="/projectlist/AntiPlasti/" class="flip-title"><span>AntiPlasti</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">10 Feb 2019</time>
       </li>

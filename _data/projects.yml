@@ -1,47 +1,47 @@
 # _data/projects.yml
 
-# --- Featured (accordion) ---
-- title: TaskBook
-  slug: TaskBook
-  url: /projectlist/TaskBook/
-  img: /images/projects/taskbook/taskbook_cover.png
-  category: product_ui
-  featured: true
-  blurb: "A scheduling assistant that turns messy installs into calm, confirmed plans."
-  panel_label: "Saas"
-  proof: "95% less manual scheduling"
-  tags: ["Flutter", "Firebase", "Google Cloud Functions", "Twilio", "Gmail API"]
+# --- Featured ---
+# - title: TaskBook
+#   slug: TaskBook
+#   url: /projectlist/TaskBook/
+#   img: /images/projects/taskbook/taskbook_cover.png
+#   category: product_engineering
+#   featured: true
+#   blurb: "A scheduling assistant that turns messy installs into calm, confirmed plans."
+#   panel_label: "Saas"
+#   proof: "95% less manual scheduling"
+#   tags: ["Flutter", "Firebase", "Google Cloud Functions", "Twilio", "Gmail API"]
 
-- title: FormStudio
-  slug: FormStudio
-  url: /projectlist/FormStudio/
-  img: /images/projects/formstudio/formstudio_cover.png
-  category: product_ui
-  featured: true
-  blurb: "Forms that turn submissions into action: assign, notify, approve, and track."
-  panel_label: "Saas"
-  proof: "Routing · alerts · dashboards"
-  tags: ["Vue3", "Zapier", "Google Cloud Functions"]
+# - title: FormStudio
+#   slug: FormStudio
+#   url: /projectlist/FormStudio/
+#   img: /images/projects/formstudio/formstudio_cover.png
+#   category: product_engineering
+#   featured: true
+#   blurb: "Forms that turn submissions into action: assign, notify, approve, and track."
+#   panel_label: "Saas"
+#   proof: "Routing · alerts · dashboards"
+#   tags: ["Vue3", "Zapier", "Google Cloud Functions"]
 
-- title: MercadoBolt
-  slug: MercadoBolt
-  url: /projectlist/MercadoBolt/
-  img: /images/projects/mercadoBolt/MercadoBolt.gif
-  category: product_ui
-  featured: true
-  blurb: "A trusted marketplace for local goods and services, designed to reduce scams and stress."
-  panel_label: "Ecommerce"
-  proof: "KYC-ready · escrow flows · safer selling"
-  tags: ["Flutter", "Firebase", "Google Cloud Functions"]
+# - title: MercadoBolt
+#   slug: MercadoBolt
+#   url: /projectlist/MercadoBolt/
+#   img: /images/projects/mercadoBolt/MercadoBolt.gif
+#   category: product_engineering
+#   featured: true
+#   blurb: "A trusted marketplace for local goods and services, designed to reduce scams and stress."
+#   panel_label: "Ecommerce"
+#   proof: "KYC-ready · escrow flows · safer selling"
+#   tags: ["Flutter", "Firebase", "Google Cloud Functions"]
 
 - title: Apriltag Tracking
-  slug: VirtanaRobotics
-  url: /projectlist/VirtanaRobotics/
-  img: /images/projects/apriltags/apriltags_cover.png
-  category: engineering
-  featured: true
+  slug: RigidAprilTagBundleTracking
+  url: /projectlist/RigidAprilTagBundleTracking/
+  img: /images/projects/apriltags/apriltags_cover.jpg
+  category: software_engineering
+  featured: true 
   blurb: "High-accuracy AprilTag tracking with calibration tools and live pose feedback."
-  panel_label: "Engineering"
+  panel_label: "Robotics"
   proof: "Calibration + optical flow + pose refinement"
   tags: ["C#", "Python", "Go", "April Tags", "Pose Tracking"]
 
@@ -49,20 +49,20 @@
 - title: QuickRental
   slug: QuickRental
   url: /projectlist/QuickRental/
-  img: /images/projects/quickrental/quickrental_icon.gif
-  category: web
+  img: /images/projects/quickrental/apartmentapp2.png
+  category: product_engineering
   featured: false
   blurb: "A cozy, practical rental web app built end-to-end."
-  panel_label: "Ecommerce"
+  panel_label: "Web Development"
   proof: "Full-stack student build"
-  tags: ["Web", "UX"]
+  tags: ["Web", "UI/UX"]
 
 - title: AntiPlasti
   slug: AntiPlasti
   url: /projectlist/AntiPlasti/
   img: /images/projects/antiplasti/antiplasti.jpg
-  category: engineering
-  featured: false
+  category: software_engineering
+  featured: true
   blurb: "A computer vision concept for spotting ocean plastic from imagery."
   panel_label: "Machine Learning"
   proof: "Prototype detection pipeline"
@@ -71,13 +71,13 @@
 - title: PiDronics
   slug: PiDronics
   url: /projectlist/PiDronics/
-  img: /images/projects/pidronics/pidronics_about.gif
-  category: engineering
-  featured: false
+  img: /images/projects/pidronics/pidronics_img.png
+  category: product_engineering
+  featured: true
   blurb: "A hydroponics system that watches plants and logs the details for you."
   panel_label: "Automomous Hydroponics"
   proof: "Sensors + automation + monitoring"
-  tags: ["IoT", "Systems", "Python"]
+  tags: ["IoT", "Systems", "Python", "Web", "UI/UX"]
 
 - title: DCIT Robotics Boot Camp
   slug: dcitCamp-2017-2018
@@ -94,7 +94,7 @@
   slug: MetOracle
   url: /projectlist/MetOracle/
   img: /images/projects/metOracle/weather.gif
-  category: engineering
+  category: software_engineering
   featured: false
   blurb: "A forecasting project exploring weather trends for smarter city planning."
   panel_label: "Machine Learning Prediction"

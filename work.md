@@ -8,7 +8,6 @@ hide_description: true
 sitemap: false
 ---
 
-
 <div class="projects" markdown="0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,11 +15,23 @@ sitemap: false
 
   {% include project-grid.html %}
 
-    <p class="read-more">
-    Check out <a href="{{ '/experiments/' | relative_url }}" class="heading flip-title">Experimenting With Graphic & Motion Design</a>
-  </p>
-
 </div>
+
+<br>
+
+{::nomarkdown}
+{% include status-update.html
+  label="Status update"
+  tone="ocean"
+  title="Portfolio in progress"
+  date="2026-01-10"
+  body="More Project Stories coming soon."
+  href="/experiments/"
+  cta="See Visual Experiments"
+%}
+{:/nomarkdown}
+
+<br>
 
 <hr class="faded"/>
 Continue with [Experience ↪](/experience/){:.heading.flip-title}

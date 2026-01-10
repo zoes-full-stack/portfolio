@@ -1297,11 +1297,10 @@ $r: 16px;
   }
 }
 
-/* Category -> corner colors (match your YAML categories) */
-.projects-wrap .p-card[data-category="product_ui"]{ --corner:#70b3b1; }
-.projects-wrap .p-card[data-category="engineering"]{ --corner:#d05fa2; }
-.projects-wrap .p-card[data-category="web"]{ --corner:#d3b19a; }
-.projects-wrap .p-card[data-category="mentoring"]{ --corner:#669AE1; }
+/* Category -> corner colors */
+.projects-wrap .p-card[data-category="product_engineering"]{ --corner:#70CC72; }
+.projects-wrap .p-card[data-category="software_engineering"]{ --corner:#62C2E4; }
+.projects-wrap .p-card[data-category="mentoring"]{ --corner:#C49CDE; }
 
 /* Filters: keep them clean to match */
 .projects-wrap .projects-filters{
@@ -1319,17 +1318,225 @@ $r: 16px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.projects-wrap .project-search{
-  width: min(520px, 72vw);
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(0,0,0,.10);
-  background: rgba(255,255,255,.9);
-  outline: none;
+
+/* Search bar: match watery pill style */
+.projects-wrap .search-wrap{
+  flex: 1 1 320px;
+  position: relative;
 }
+
+/* Input base */
+.projects-wrap .project-search{
+  width: 100%;
+  border: 1px solid rgba(0,0,0,.12);
+  background: rgba(255,255,255,.82);
+  border-radius: 999px;
+  padding: .65rem 1.05rem;
+  outline: none;
+
+  color: rgba(22,52,66,.92);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.70) inset,
+    0 -1px 0 rgba(0,0,0,.03) inset;
+
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    border-color .18s ease,
+    background .18s ease,
+    filter .18s ease;
+}
+
+/* Watery shimmer layers (same idea as pills) */
+.projects-wrap .search-wrap::before{
+  content:"";
+  position:absolute;
+  inset: 2px;
+  border-radius: 999px;
+  pointer-events:none;
+  opacity: .55;
+
+  background:
+    radial-gradient(140% 120% at 20% 0%,
+      rgba(255,255,255,.85) 0%,
+      rgba(255,255,255,.25) 35%,
+      rgba(79,177,186,.10) 62%,
+      rgba(79,177,186,0) 75%),
+    linear-gradient(135deg,
+      rgba(255,255,255,.35),
+      rgba(79,177,186,.10) 45%,
+      rgba(255,255,255,.25));
+
+  transform: translateX(-18%);
+  transition: transform .55s ease, opacity .25s ease;
+}
+
+.projects-wrap .search-wrap::after{
+  content:"";
+  position:absolute;
+  left:-20%;
+  top: 62%;
+  width: 140%;
+  height: 1px;
+  border-radius: 999px;
+  pointer-events:none;
+  opacity:.22;
+
+  background: linear-gradient(90deg,
+    rgba(79,177,186,0),
+    rgba(79,177,186,.55),
+    rgba(79,177,186,0));
+
+  transform: translateX(0);
+  transition: transform .55s ease, opacity .25s ease;
+}
+
+/* Hover polish */
+@media (hover:hover){
+  .projects-wrap .project-search:hover{
+    transform: translateY(-1px);
+    filter: saturate(1.02);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.78) inset,
+      0 -1px 0 rgba(0,0,0,.03) inset,
+      0 10px 18px rgba(22,52,66,.06);
+  }
+  .projects-wrap .search-wrap:hover::before{
+    transform: translateX(10%);
+    opacity: .65;
+  }
+  .projects-wrap .search-wrap:hover::after{
+    transform: translateX(14%);
+    opacity: .32;
+  }
+}
+
+/* Focus: your ring + slightly clearer water */
 .projects-wrap .project-search:focus{
+  background: rgba(255,255,255,.92);
+  border-color: rgba(79,177,186,.45);
   box-shadow: var(--ring);
-  border-color: rgba(79,177,186,.35);
+}
+
+/* Optional: match placeholder tone */
+.projects-wrap .project-search::placeholder{
+  color: rgba(22,52,66,.55);
+}
+
+/* Search bar: match watery pill style */
+.projects-wrap .search-wrap{
+  flex: 1 1 320px;
+  position: relative;
+  border-radius: 999px;
+}
+
+/* Input base */
+.projects-wrap .project-search{
+  width: 100%;
+  border: 1px solid rgba(0,0,0,.12);
+  background: rgba(255,255,255,.82);
+  border-radius: 999px;
+  padding: .65rem 1.05rem;
+  padding-left: 2.1rem; 
+  outline: none;
+
+  color: rgba(22,52,66,.92);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.70) inset,
+    0 -1px 0 rgba(0,0,0,.03) inset;
+
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    border-color .18s ease,
+    background .18s ease,
+    filter .18s ease;
+}
+
+/* Watery shimmer layers (same idea as pills) */
+.projects-wrap .search-wrap::before{
+  content:"";
+  position:absolute;
+  inset: 2px;
+  border-radius: 999px;
+  pointer-events:none;
+  opacity: .55;
+
+  background:
+    radial-gradient(140% 120% at 20% 0%,
+      rgba(255,255,255,.85) 0%,
+      rgba(255,255,255,.25) 35%,
+      rgba(79,177,186,.10) 62%,
+      rgba(79,177,186,0) 75%),
+    linear-gradient(135deg,
+      rgba(255,255,255,.35),
+      rgba(79,177,186,.10) 45%,
+      rgba(255,255,255,.25));
+
+  transform: translateX(-18%);
+  transition: transform .55s ease, opacity .25s ease;
+}
+
+.projects-wrap .search-wrap::after{
+  content:"";
+  position:absolute;
+  left:-20%;
+  top: 64%;
+  width: 140%;
+  height: 6px;
+  border-radius: 999px;
+  pointer-events:none;
+  opacity:.14;
+  filter: blur(2px);
+
+  background: linear-gradient(90deg,
+    rgba(79,177,186,0),
+    rgba(79,177,186,.55),
+    rgba(79,177,186,0));
+
+  transform: translateX(0);
+  transition: transform .55s ease, opacity .25s ease;
+}
+
+/* Hover polish */
+@media (hover:hover){
+  .projects-wrap .project-search:hover{
+    transform: translateY(-1px);
+    filter: saturate(1.02);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.78) inset,
+      0 -1px 0 rgba(0,0,0,.03) inset,
+      0 10px 18px rgba(22,52,66,.06);
+  }
+  .projects-wrap .search-wrap:hover::before{
+    transform: translateX(10%);
+    opacity: .65;
+  }
+  .projects-wrap .search-wrap:hover::after{
+    transform: translateX(14%);
+    opacity: .32;
+  }
+}
+
+/* Focus: your ring + slightly clearer water */
+.projects-wrap .project-search:focus{
+  background: rgba(255,255,255,.92);
+  border-color: rgba(79,177,186,.45);
+  box-shadow: var(--ring);
+}
+
+/* Optional: match placeholder tone */
+.projects-wrap .project-search::placeholder{
+  color: rgba(22,52,66,.55);
+}
+
+.projects-wrap .search-icon{
+  position:absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: .55;
+  pointer-events:none;
 }
 
 .projects-wrap .filter-row{
@@ -1351,19 +1558,127 @@ $r: 16px;
   flex-wrap: wrap;
   gap: 8px;
 }
+// .projects-wrap .pill{
+//   border: 1px solid rgba(0,0,0,.10);
+//   background: rgba(255,255,255,.82);
+//   border-radius: 999px;
+//   font-weight: 700;
+//   font-size: 12px;
+//   cursor: pointer;
+// }
+// .projects-wrap .pill.is-active{
+//   border-color: rgba(79,177,186,.55);
+//   box-shadow: 0 0 0 3px rgba(79,177,186,.18);
+// }
+// .projects-wrap .pill:focus-visible{
+//   outline: none;
+//   box-shadow: var(--ring);
+// }
+
+/* Watery pills (keeps your base look, adds ocean gloss) */
 .projects-wrap .pill{
   border: 1px solid rgba(0,0,0,.10);
   background: rgba(255,255,255,.82);
-  padding: 8px 10px;
   border-radius: 999px;
   font-weight: 700;
   font-size: 12px;
   cursor: pointer;
+
+  padding: 8px 12px;
+  position: relative;
+  overflow: hidden; /* needed for the shimmer layer */
+  color: rgba(22,52,66,.92);
+
+  /* “water” depth + soft sheen */
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.65) inset,
+    0 -1px 0 rgba(0,0,0,.03) inset;
+
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    border-color .18s ease,
+    background .18s ease,
+    filter .18s ease;
 }
+
+/* Shimmer film */
+.projects-wrap .pill::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  pointer-events:none;
+  opacity:.55;
+
+  /* watery highlight + slight aqua tint */
+  background:
+    radial-gradient(140% 120% at 20% 0%,
+      rgba(255,255,255,.85) 0%,
+      rgba(255,255,255,.25) 35%,
+      rgba(79,177,186,.10) 62%,
+      rgba(79,177,186,0) 75%),
+    linear-gradient(135deg,
+      rgba(255,255,255,.35),
+      rgba(79,177,186,.10) 45%,
+      rgba(255,255,255,.25));
+
+  transform: translateX(-22%);
+  transition: transform .55s ease, opacity .25s ease;
+}
+
+/* A tiny “wave line” */
+.projects-wrap .pill::after{
+  content:"";
+  position:absolute;
+  left:-30%;
+  top: 55%;
+  width: 160%;
+  height: 1px;
+  pointer-events:none;
+  opacity:.28;
+  background: linear-gradient(90deg,
+    rgba(79,177,186,0),
+    rgba(79,177,186,.55),
+    rgba(79,177,186,0));
+  transform: translateX(0);
+  transition: transform .55s ease, opacity .25s ease;
+}
+
+@media (hover:hover){
+  .projects-wrap .pill:hover{
+    transform: translateY(-1px);
+    filter: saturate(1.02);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.75) inset,
+      0 -1px 0 rgba(0,0,0,.03) inset,
+      0 10px 18px rgba(22,52,66,.08);
+  }
+  .projects-wrap .pill:hover::before{
+    transform: translateX(12%); /* shimmer slides like a little current */
+    opacity:.65;
+  }
+  .projects-wrap .pill:hover::after{
+    transform: translateX(18%);
+    opacity:.40;
+  }
+}
+
+/* Active: same as yours + watery glow */
 .projects-wrap .pill.is-active{
   border-color: rgba(79,177,186,.55);
-  box-shadow: 0 0 0 3px rgba(79,177,186,.18);
+
+  background: rgba(255,255,255,.92);
+  box-shadow:
+    0 0 0 3px rgba(79,177,186,.18),
+    0 1px 0 rgba(255,255,255,.70) inset,
+    0 -1px 0 rgba(0,0,0,.03) inset;
 }
+
+.projects-wrap .pill.is-active::before{
+  opacity:.75;
+}
+
+/* Focus (keep your ring) */
 .projects-wrap .pill:focus-visible{
   outline: none;
   box-shadow: var(--ring);
@@ -1404,17 +1719,178 @@ $r: 16px;
   }
 }
 
-/* Color-coded tags (examples) */
-.projects-wrap .p-tag[data-tag="flutter"]{ background:#D7F0FF; border-color:#BFE6FF; }
-.projects-wrap .p-tag[data-tag="firebase"]{ background:#FFF2D6; border-color:#FFE1A6; }
-.projects-wrap .p-tag[data-tag="google-cloud-functions"]{ background:#E6F3FF; border-color:#CFE7FF; }
-.projects-wrap .p-tag[data-tag="twilio"]{ background:#FFE3E9; border-color:#FFC1D0; }
-.projects-wrap .p-tag[data-tag="vue"]{ background:#DFF7EA; border-color:#BDEED6; }
-.projects-wrap .p-tag[data-tag="zapier"]{ background:#FFE7D9; border-color:#FFC9A7; }
-.projects-wrap .p-tag[data-tag="python"]{ background:#E9E6FF; border-color:#D1CBFF; }
-.projects-wrap .p-tag[data-tag="c#"]{ background:#F1E6FF; border-color:#DEC6FF; }
+// Tag colours
+/* ===== Ocean palette tag colors (all distinct, ocean-themed) ===== */
+
+/* Deep tech / infra */
+.projects-wrap .p-tag[data-tag="google-cloud-functions"]{ background:#CFEFFF; border-color:#8ED3F5; } /* sky-lagoon */
+.projects-wrap .p-tag[data-tag="firebase"]{              background:#E2FFF7; border-color:#9EEBD7; } /* seafoam */
+.projects-wrap .p-tag[data-tag="gmail-api"]{             background:#E7F0FF; border-color:#A9C4FF; } /* tide-blue */
+.projects-wrap .p-tag[data-tag="twilio"]{                background:#FFE6E9; border-color:#FFB6C2; } /* coral pink */
+
+/* Languages */
+.projects-wrap .p-tag[data-tag="flutter"]{               background:#E6FAFF; border-color:#98E4F7; } /* bright reef */
+.projects-wrap .p-tag[data-tag="python"]{                background:#F1ECFF; border-color:#CBB9FF; } /* jellyfish violet */
+.projects-wrap .p-tag[data-tag="c#"]{                    background:#EAE8FF; border-color:#BDB7FF; } /* dusk-lilac */
+.projects-wrap .p-tag[data-tag="go"]{                    background:#E6FFF2; border-color:#A7F0CD; } /* mint current */
+.projects-wrap .p-tag[data-tag="vue3"]{                  background:#E8FFF0; border-color:#B5F1C6; } /* kelp-spring */
+
+/* Concepts */
+.projects-wrap .p-tag[data-tag="machine-learning"]{      background:#FFF1E0; border-color:#FFD1A3; } /* sandbar */
+.projects-wrap .p-tag[data-tag="ai"]{                    background:#E8FBF7; border-color:#9BE5D8; } /* sea-glass */
+.projects-wrap .p-tag[data-tag="data"]{                  background:#E9F5FF; border-color:#A8D8FF; } /* shallow-blue */
+.projects-wrap .p-tag[data-tag="pose-tracking"]{         background:#F2F7FF; border-color:#BFD7FF; } /* drift-ice blue */
+.projects-wrap .p-tag[data-tag="april-tags"]{            background:#F8EDFF; border-color:#E0B6FF; } /* anemone violet */
+
+/* Domains */
+.projects-wrap .p-tag[data-tag="robotics"]{              background:#E9FFF7; border-color:#A7F3D7; } /* reef mint */
+.projects-wrap .p-tag[data-tag="iot"]{                   background:#E7FFF0; border-color:#A6F0B9; } /* sea lettuce */
+.projects-wrap .p-tag[data-tag="systems"]{               background:#EAF3F9; border-color:#B7D2E6; } /* foggy sea */
+.projects-wrap .p-tag[data-tag="web"]{                   background:#DFF4FF; border-color:#93D6FF; } /* ocean-sky */
+.projects-wrap .p-tag[data-tag="ux"]{                    background:#FFF6E6; border-color:#FFD9A8; } /* shell */
+.projects-wrap .p-tag[data-tag="education"]{             background:#FFF0F2; border-color:#FFB9C5; } /* soft coral */
+
+/* Optional: keep text readable on pastels */
+.projects-wrap .p-tag{
+  color: rgba(22,52,66,.88);
+  box-shadow: 0 1px 0 rgba(255,255,255,.65) inset;
+}
+
+@media (hover:hover){
+  .projects-wrap .p-tag:hover{
+    transform: translateY(-1px);
+    filter: saturate(1.03);
+  }
+}
+
+
 
 /* Optional: keep labels from stretching too wide */
 .projects-wrap .p-tags{ display:flex; flex-wrap:wrap; gap:10px; }
 
+
+// Project Status Update
+
+/* =============== Status Update (Ocean) =============== */
+
+.status-update{
+  --su-ink: rgba(22,52,66,.92);
+  --su-muted: rgba(22,52,66,.65);
+  --su-stroke: rgba(22,52,66,.10);
+  --su-glow: rgba(79,177,186,.22);
+
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--su-stroke);
+  padding: 14px 14px 12px;
+  background: rgba(255,255,255,.84);
+  color: var(--su-ink);
+}
+
+.status-update::before{
+  /* watery shimmer layer */
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background:
+    radial-gradient(closest-side at 30% 35%, rgba(79,177,186,.18), transparent 55%),
+    radial-gradient(closest-side at 70% 65%, rgba(120,210,255,.14), transparent 60%),
+    linear-gradient(120deg, rgba(255,255,255,.65), rgba(255,255,255,.25));
+  filter: blur(10px);
+  transform: rotate(8deg);
+  pointer-events:none;
+}
+
+.status-update::after{
+  /* soft wave lines */
+  content:"";
+  position:absolute;
+  left:-10%;
+  right:-10%;
+  bottom:-22px;
+  height: 60px;
+  // background:
+  //   radial-gradient(60px 18px at 8% 40%, rgba(79,177,186,.22) 40%, transparent 42%) repeat-x,
+  //   radial-gradient(80px 20px at 12% 70%, rgba(79,177,186,.14) 40%, transparent 42%) repeat-x;
+  // background-size: 120px 40px, 160px 44px;
+  opacity: .55;
+  pointer-events:none;
+}
+
+.status-update__top{
+  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.status-update__badge{
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: .02em;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(79,177,186,.14);
+  border: 1px solid rgba(79,177,186,.22);
+  box-shadow: 0 0 0 3px rgba(79,177,186,.10);
+}
+
+.status-update__date{
+  font-size: 12px;
+  color: var(--su-muted);
+  background: rgba(255,255,255,.6);
+  border: 1px solid rgba(0,0,0,.06);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.status-update__title{
+  position: relative;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.status-update__body{
+  position: relative;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--su-muted);
+  padding-right: 6px;
+}
+
+.status-update__cta{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-weight: 800;
+  font-size: 13px;
+  text-decoration: none;
+  color: rgba(22,52,66,.92);
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(79,177,186,.18);
+  box-shadow: 0 0 0 3px rgba(79,177,186,.10);
+}
+
+.status-update__cta:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(0,0,0,.08), 0 0 0 3px rgba(79,177,186,.12);
+}
+
+.status-update__cta:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(79,177,186,.24);
+}
+
+/* Optional tones (if you want variants later) */
+.status-update--ocean{ }
+.status-update--reef .status-update__badge{ background: rgba(116,214,175,.16); border-color: rgba(116,214,175,.28); box-shadow: 0 0 0 3px rgba(116,214,175,.12); }
+.status-update--deep .status-update__badge{ background: rgba(120,160,255,.16); border-color: rgba(120,160,255,.28); box-shadow: 0 0 0 3px rgba(120,160,255,.12); }
 

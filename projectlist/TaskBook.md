@@ -60,31 +60,7 @@ Add screenshots or prototypes here:
 - Reminder / confirmation states
 - KPI dashboard overview
 
-### Updates Coming Soon... :relaxed:
-
 <div markdown="0">
-  <hr class="dingbat related">
-  <aside class="about related mt4 mb4" role="complementary">
-    <div class="author mt4">
-      <img src="/images/gabieicon_128.png" srcset="/images/gabieicon_128.png 1x,/images/gabieicon_256.png 2x" alt="<Gabriela> <Sewdhan>" class="avatar" width="120" height="120" loading="lazy" style="opacity: 0;">
-      <h2 class="page-title hr-bottom"> About</h2>
-      <p>Aspiring designer creating soft, playful digital experiences that make people pause and feel something.</p>
-      <div class="sidebar-social"> <span class="sr-only">Social:</span>
-        <ul>
-          <li>
-            <a href="https://www.linkedin.com/in/gabriela-sewdhan-3ba495120" target="_blank" title="LinkedIn" class="no-mark-external"> <span class="icon-linkedin2"></span> <span class="sr-only">LinkedIn</span> </a>
-          </li>
-          <li>
-            <a href="https://github.com/GabrielaSewdhan" target="_blank" title="GitHub" class="no-mark-external"> <span class="icon-github"></span> <span class="sr-only">GitHub</span> </a>
-          </li>
-          <li>
-            <a href="mailto:gabiems13@gmail.com" target="_blank" title="Email" class="no-mark-external"> <span class="icon-mail"></span> <span class="sr-only">Email</span> </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </aside>
-
   <aside class="related mb4" role="complementary">
     <h2 class="hr-bottom">Other Projects</h2>
     <ul class="related-posts">

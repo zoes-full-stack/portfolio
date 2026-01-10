@@ -22,6 +22,7 @@
     <div class="filter-top">
       <div class="search-wrap">
         <label class="sr-only" for="projectSearch">Search projects</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
         <input id="projectSearch" class="project-search" type="search"
                placeholder="Search projects (title, blurb, tags)…" autocomplete="off" />
       </div>
@@ -37,16 +38,26 @@
     <div class="filter-row">
       <span class="filter-label">Category</span>
       <div class="filter-pills" data-filter-group="category">
-        <button class="pill is-active" type="button" data-filter="all">All</button>
+        {% assign used_cat_pipe = "" %}
+        {% for p in projects %}
+          {% assign used_cat_pipe = used_cat_pipe | append: p.category | append: "|" %}
+        {% endfor %}
+        {% assign used_categories = used_cat_pipe | split:"|" | uniq %}
 
-        {% for c in categories %}
-          {% if c != "" %}
-            <button class="pill" type="button" data-filter="{{ c | downcase | replace:' ','-' }}">
-              {{ c | replace:'_',' ' | capitalize }}
-            </button>
+        {% for item in site.data.category_labels %}
+          {% assign key = item.key %}
+          {% assign label = item.label %}
+
+          {% if key == "all" %}
+            <button class="pill is-active" type="button" data-filter="all">{{ label }}</button>
+          {% else %}
+            {% if used_categories contains key %}
+              <button class="pill" type="button" data-filter="{{ key }}">{{ label }}</button>
+            {% endif %}
           {% endif %}
         {% endfor %}
       </div>
+
     </div>
 
     <!-- <div class="filter-row">
