@@ -14,12 +14,16 @@ sitemap: false
         </div>
       </div>
       <div class="column_project_l2">
-        <a href="https://comp3613-pisynthesis.firebaseapp.com/" target="_blank" class="external heading flip-title">PiDronics WebApp</a> |
+        <a href="https://pidronics.firebaseapp.com/" target="_blank" class="external heading flip-title">PiDronics WebApp</a> |
         <a href="https://github.com/PiDronics" target="_blank" class="external heading flip-title">Source Code</a>
       </div>
     </div>
-    <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
-      <img src="/images/projects/pidronics/pidronics_large.png" alt="PiDronics" width="864" height="486" loading="lazy">
+    <div class="lead aspect-ratio flip-project-img"> 
+      <video width="864" height="500" poster="/images/projects/pidronics/pidronics_img.png" autoplay loop muted playsinline>
+        <source src="/images/projects/pidronics/PiDronics_intro.mp4" type="video/mp4">
+        <!-- <source src="movie.ogg" type="video/ogg"> -->
+        Your browser does not support the video tag.
+      </video>
     </div>
     <p class="note-sm" title="PiDronics"> PiDronics: Automated Hydroponics Monitoring System</p>
   </header>
@@ -42,12 +46,12 @@ This project was developed alongside team members [Michael Ali](https://www.link
 {:toc .large-only}
 
 ## Technologies Used
-`Python` | `Shell` | `Nodejs` | `Javascript` |`HTML` | `CSS` | `Firebase Database`
+`Python` | `Shell` | `Reactjs` | `Javascript` |`HTML` | `CSS` | `Firebase Database`
 <!-- {:.faded} -->
 
 <!-- get rest of sensors -->
 ## Hardware Used 
-`Raspberry Pi` | `Temperature Sensor` | `Humidity Sensor` |`pH Sensor` | `Dissolved Oxygen Sensor` 
+`Raspberry Pi` | `Temperature Sensor` | `Humidity Sensor` |`pH Sensor` 
 <!-- {:.faded} -->
 
 ## How does it work?
@@ -85,39 +89,20 @@ The data taken from these sensors are pushed to the web app/site, to determine i
 ## Full Implementation
 
 See Our
+- [Project Video](https://youtu.be/EED9S3SFkr0){:target="_blank"}{:.heading.flip-title}. Audio to be added soon!
 - [Product Manual](https://docs.google.com/document/d/1FWLsea7MBdXaazkmk156T1Quhn5-B72oxn0frQKcgs8/edit?usp=sharing){:target="_blank"}{:.heading.flip-title} to understand the usage of the system.
-- [PiDronics Web App](https://comp3613-pisynthesis.firebaseapp.com/){:target="_blank"}{:.heading.flip-title} for a demo of the system.
+- [PiDronics Web App](https://pidronics.firebaseapp.com/){:target="_blank"}{:.heading.flip-title} for a demo of the system.
 - [Project Document](https://docs.google.com/document/d/19n-Tqvua5BX2gGXPMfhZQK4Tw7byQBMCGW686ZdKLPQ/edit?usp=sharing){:target="_blank"}{:.heading.flip-title} for detailed features and information.
 Maybe just glance at it to confirm that it is indeed a pretty long list.
 
-### Updates Coming Soon... :relaxed:
-
 
 <div markdown="0">
-  <hr class="dingbat related">
-  <aside class="about related mt4 mb4" role="complementary">
-    <div class="author mt4"> 
-      <img src="/images/gabieicon_128.png" srcset="/images/gabieicon_128.png 1x,/images/gabieicon_256.png 2x" alt="<Gabriela> <Sewdhan>" class="avatar" width="120" height="120" loading="lazy" style="opacity: 0;">
-      <h2 class="page-title hr-bottom"> About</h2>
-      <p>Gabriela Sewdhan: software engineer, robotics enthusiast and baker based in Trinidad.</p>
-      <div class="sidebar-social"> <span class="sr-only">Social:</span>
-        <ul>
-          <li> 
-            <a href="https://www.linkedin.com/in/gabriela-sewdhan-3ba495120" target="_blank" title="LinkedIn" class="no-mark-external"> <span class="icon-linkedin2"></span> <span class="sr-only">LinkedIn</span> </a>
-          </li>
-          <li> 
-            <a href="https://github.com/GabrielaSewdhan" target="_blank" title="GitHub" class="no-mark-external"> <span class="icon-github"></span> <span class="sr-only">GitHub</span> </a>
-          </li>
-          <li> 
-            <a href="mailto:gabiems13@gmail.com" target="_blank" title="Email" class="no-mark-external"> <span class="icon-mail"></span> <span class="sr-only">Email</span> </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </aside>
   <aside class="related mb4" role="complementary">
     <h2 class="hr-bottom">Other Projects</h2>
     <ul class="related-posts">
+      <li class="h4"> 
+        <a href="/projectlist/AccurateAprilGroupTracking/" class="flip-title"><span>Accurate AprilGroup Tracking</span></a> <time class="faded fine" datetime="2021-05-30T00:00:00+00:00">May 2021</time>
+      </li>
       <li class="h4"> 
         <a href="/projectlist/QuickRental/" class="flip-title"><span>QuickRental</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">31 May 2019</time>
       </li>

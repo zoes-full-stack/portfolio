@@ -1,0 +1,255 @@
+<div class="projects-wrap">
+
+  {% assign projects = site.data.projects %}
+
+  {%- comment -%} Collect unique categories and tags {%- endcomment -%}
+  {% assign cat_pipe = "" %}
+  {% assign tag_pipe = "" %}
+
+  {% for p in projects %}
+    {% assign cat_pipe = cat_pipe | append: p.category | append: "|" %}
+    {% for t in p.tags %}
+      {% assign tag_pipe = tag_pipe | append: t | append: "|" %}
+    {% endfor %}
+  {% endfor %}
+
+  {% assign categories = cat_pipe | split:"|" | uniq | sort %}
+  {% assign tags = tag_pipe | split:"|" | uniq | sort %}
+
+  <!-- FILTER BAR -->
+  <div class="projects-filters" aria-label="Project filters">
+
+    <div class="filter-top">
+      <div class="search-wrap">
+        <label class="sr-only" for="projectSearch">Search projects</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="projectSearch" class="project-search" type="search"
+               placeholder="Search projects (title, blurb, tags)…" autocomplete="off" />
+      </div>
+
+      <label class="featured-toggle" for="featuredOnly">
+        <input type="checkbox" id="featuredOnly" />
+        <span class="featured-toggle__box" aria-hidden="true"></span>
+        <span class="featured-toggle__text">Featured only</span>
+      </label>
+
+    </div>
+
+    <div class="filter-row">
+      <span class="filter-label">Category</span>
+      <div class="filter-pills" data-filter-group="category">
+        {% assign used_cat_pipe = "" %}
+        {% for p in projects %}
+          {% assign used_cat_pipe = used_cat_pipe | append: p.category | append: "|" %}
+        {% endfor %}
+        {% assign used_categories = used_cat_pipe | split:"|" | uniq %}
+
+        {% for item in site.data.category_labels %}
+          {% assign key = item.key %}
+          {% assign label = item.label %}
+
+          {% if key == "all" %}
+            <button class="pill is-active" type="button" data-filter="all">{{ label }}</button>
+          {% else %}
+            {% if used_categories contains key %}
+              <button class="pill" type="button" data-filter="{{ key }}">{{ label }}</button>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+    </div>
+
+    <!-- <div class="filter-row">
+      <span class="filter-label">Tags</span>
+      <div class="filter-pills" data-filter-group="tag" id="tagPills">
+        <button class="pill is-active" type="button" data-filter="all" data-role="clear-tags">All</button>
+
+        {% for t in tags %}
+          {% if t != "" %}
+            <button class="pill" type="button" data-filter="{{ t | downcase | replace:' ','-' }}">
+              {{ t }}
+            </button>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <span class="filter-hint">Tip: click multiple tags ✨</span>
+    </div> -->
+
+  </div>
+
+  <!-- GRID -->
+  <div class="projects-grid" id="projectsGrid">
+    {% for p in projects %}
+
+      {% assign tag_slugs = "" %}
+      {% assign search_blob = "" %}
+
+      {% assign search_blob = search_blob | append: p.title | append: " " %}
+      {% if p.blurb %}{% assign search_blob = search_blob | append: p.blurb | append: " " %}{% endif %}
+      {% if p.panel_label %}{% assign search_blob = search_blob | append: p.panel_label | append: " " %}{% endif %}
+      {% if p.proof %}{% assign search_blob = search_blob | append: p.proof | append: " " %}{% endif %}
+
+      {% for t in p.tags %}
+        {% assign tag_slugs = tag_slugs | append: (t | downcase | replace:' ','-') | append:" " %}
+        {% assign search_blob = search_blob | append: t | append: " " %}
+      {% endfor %}
+
+      <article
+        class="p-card"
+        data-category="{{ p.category | downcase | replace:' ','-' }}"
+        data-tags="{{ tag_slugs | strip }}"
+        data-featured="{{ p.featured | default: false }}"
+        data-search="{{ search_blob | strip | downcase | escape }}"
+      >
+        <a class="p-card__link" href="{{ p.url | relative_url }}">
+          <div class="p-card__media">
+            <img src="{{ p.img | relative_url }}" alt="{{ p.title }} cover" loading="lazy">
+            {% if p.featured %}
+              <span class="p-badge">Featured</span>
+            {% endif %}
+            <span class="p-corner" aria-hidden="true">
+              <span class="p-corner__icon">↗</span>
+            </span>
+          </div>
+
+          <div class="p-card__body">
+            <div class="p-card__topline">
+              {% if p.panel_label %}
+                <span class="p-pill">{{ p.panel_label }}</span>
+              {% endif %}
+              {% if p.proof %}
+                <span class="p-proof">{{ p.proof }}</span>
+              {% endif %}
+            </div>
+
+            <h3 class="p-card__title">{{ p.title }}</h3>
+            {% if p.blurb %}
+              <p class="p-card__blurb">{{ p.blurb }}</p>
+            {% endif %}
+
+            <div class="p-tags">
+              {% for t in p.tags %}
+                <span class="p-tag" data-tag="{{ t | downcase | replace:' ','-' }}">{{ t }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </a>
+      </article>
+
+    {% endfor %}
+  </div>
+
+</div>
+
+<script>
+(() => {
+  const grid = document.getElementById("projectsGrid");
+  if (!grid) return;
+
+  const cards = Array.from(grid.querySelectorAll(".p-card"));
+
+  const categoryGroup = document.querySelector('[data-filter-group="category"]');
+  const tagGroup = document.querySelector('[data-filter-group="tag"]');
+
+  const searchInput = document.getElementById("projectSearch");
+  const featuredOnly = document.getElementById("featuredOnly");
+
+  const state = {
+    category: "all",
+    tags: new Set(),      // multi-select
+    search: "",
+    featured: false
+  };
+
+  const setActiveSingle = (groupEl, btn) => {
+    groupEl.querySelectorAll(".pill").forEach(b => b.classList.remove("is-active"));
+    btn.classList.add("is-active");
+  };
+
+  const syncTagPills = () => {
+    const pills = Array.from(tagGroup.querySelectorAll(".pill"));
+    const allBtn = pills.find(p => p.dataset.filter === "all");
+    const tagBtns = pills.filter(p => p.dataset.filter !== "all");
+
+    tagBtns.forEach(btn => {
+      btn.classList.toggle("is-active", state.tags.has(btn.dataset.filter));
+    });
+
+    // "All" is active when no tags selected
+    if (allBtn) allBtn.classList.toggle("is-active", state.tags.size === 0);
+  };
+
+  const apply = () => {
+    const q = state.search.trim().toLowerCase();
+
+    cards.forEach(card => {
+      const cat = card.dataset.category || "";
+      const tags = (card.dataset.tags || "").split(/\s+/).filter(Boolean);
+      const featured = (card.dataset.featured || "false") === "true";
+      const haystack = card.dataset.search || "";
+
+      const okCat = state.category === "all" || cat === state.category;
+
+      // Tag match mode: ANY selected tag
+      // Change to "ALL" by replacing .some with .every
+      const okTags = state.tags.size === 0 || tags.some(t => state.tags.has(t));
+
+      const okFeatured = !state.featured || featured;
+      const okSearch = !q || haystack.includes(q);
+
+      card.classList.toggle("is-hidden", !(okCat && okTags && okFeatured && okSearch));
+    });
+  };
+
+  // Category (single-select)
+  categoryGroup?.querySelectorAll(".pill").forEach(btn => {
+    btn.addEventListener("click", () => {
+      state.category = btn.dataset.filter;
+      setActiveSingle(categoryGroup, btn);
+      apply();
+    });
+  });
+
+  // Tags (multi-select)
+  tagGroup?.querySelectorAll(".pill").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const f = btn.dataset.filter;
+
+      if (f === "all") {
+        state.tags.clear();
+        syncTagPills();
+        apply();
+        return;
+      }
+
+      if (state.tags.has(f)) state.tags.delete(f);
+      else state.tags.add(f);
+
+      syncTagPills();
+      apply();
+    });
+  });
+
+  // Search (debounced)
+  let t = null;
+  searchInput?.addEventListener("input", () => {
+    clearTimeout(t);
+    t = setTimeout(() => {
+      state.search = searchInput.value || "";
+      apply();
+    }, 120);
+  });
+
+  // Featured toggle
+  featuredOnly?.addEventListener("change", () => {
+    state.featured = !!featuredOnly.checked;
+    apply();
+  });
+
+  // Init
+  syncTagPills();
+  apply();
+})();
+</script>
+

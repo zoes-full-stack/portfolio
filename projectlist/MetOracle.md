@@ -79,33 +79,13 @@ As this system grows and continues to improve over time, the accuracy and reliab
 - It was planned to use neural networks and supplied river levels to predict and help prepare for flooding, however, it was not feasible in the timeframe. 
 - In addition, Google Cloud Computing was the first choice for implementing the neural network so that users can directly interact with the model. For example, being able to enter a future date and then shown both curve plots and a geographical representation. 
 
-### Updates Coming Soon... :relaxed:
-
 <div markdown="0">
-  <hr class="dingbat related">
-  <aside class="about related mt4 mb4" role="complementary">
-    <div class="author mt4"> 
-      <img src="/images/gabieicon_128.png" srcset="/images/gabieicon_128.png 1x,/images/gabieicon_256.png 2x" alt="<Gabriela> <Sewdhan>" class="avatar" width="120" height="120" loading="lazy" style="opacity: 0;">
-      <h2 class="page-title hr-bottom"> About</h2>
-      <p>Gabriela Sewdhan: software engineer, robotics enthusiast and baker based in Trinidad.</p>
-      <div class="sidebar-social"> <span class="sr-only">Social:</span>
-        <ul>
-          <li> 
-            <a href="https://www.linkedin.com/in/gabriela-sewdhan-3ba495120" target="_blank" title="LinkedIn" class="no-mark-external"> <span class="icon-linkedin2"></span> <span class="sr-only">LinkedIn</span> </a>
-          </li>
-          <li> 
-            <a href="https://github.com/GabrielaSewdhan" target="_blank" title="GitHub" class="no-mark-external"> <span class="icon-github"></span> <span class="sr-only">GitHub</span> </a>
-          </li>
-          <li> 
-            <a href="mailto:gabiems13@gmail.com" target="_blank" title="Email" class="no-mark-external"> <span class="icon-mail"></span> <span class="sr-only">Email</span> </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </aside>
   <aside class="related mb4" role="complementary">
     <h2 class="hr-bottom">Other Projects</h2>
     <ul class="related-posts">
+      <li class="h4"> 
+        <a href="/projectlist/AccurateAprilGroupTracking/" class="flip-title"><span>Accurate AprilGroup Tracking</span></a> <time class="faded fine" datetime="2021-05-30T00:00:00+00:00">May 2021</time>
+      </li>
       <li class="h4"> 
         <a href="/projectlist/QuickRental/" class="flip-title"><span>QuickRental</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">31 May 2019</time>
       </li>

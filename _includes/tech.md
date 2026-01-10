@@ -1,9 +1,8 @@
 Here are some technologies I have recently been dabbling in:
         
 |:-----------------------------------------------------------------|:-------------------:|:-----------------------------------------------------------------|:-------------------:|:--------------------|:-----------------:|
-| [Python](https://www.python.org/){:target="_blank"}              | &#x2714;            | [React Native](https://reactnative.dev/){:target="_blank"}       | &#x2714;            | [GoLang](https://golang.org/){:target="_blank"}                  | &#x2714; 
-| [OpenCV](https://opencv.org/){:target="_blank"}                  | &#x2714;            | [C++](http://www.cplusplus.com/doc/tutorial/){:target="_blank"}  | &#x2714;            | [ROS](https://www.ros.org/){:target="_blank"}                    | &#x2714;            |
-
+| [Rive](https://rive.app/){:target="_blank"}              | &#x2714;| [Adobe Photoshop](https://www.adobe.com/products/photoshop.html){:target="_blank"}              | &#x2714;            | [Adobe Illustrator](https://www.adobe.com/products/illustrator.html){:target="_blank"}       | &#x2714;            |  
+| [Figma](https://www.figma.com/){:target="_blank"}                  | &#x2714;            | [Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve){:target="_blank"}  | &#x2714;            | [Adobe AfterEffects](https://www.adobe.com/products/aftereffects.html){:target="_blank"}                    | &#x2714;            |
 
 <!-- | [OpenCV](https://opencv.org/){:target="_blank"}                  | &#x2714;            |
 | [ROS](https://www.ros.org/){:target="_blank"}                    | &#x2714;            | -->

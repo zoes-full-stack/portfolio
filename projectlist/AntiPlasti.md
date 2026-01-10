@@ -1,11 +1,21 @@
 ---
 layout: page
 title: AntiPlasti
+liquid: true
 sitemap: false
 ---
 
+{::nomarkdown}
+{% include status-update.html
+  label="Status update"
+  tone="ocean"
+  title="WiseOceans update"
+  date="2026-01-10"
+  body='My team and I have picked this project back up with <a href="https://wiseoceans.com/" target="_blank" rel="noopener">WiseOceans</a>. Updates coming soon ✅'
+%}
+{:/nomarkdown}
 
-<div markdown="0">
+<div markdown="0" class="mt-30">
   <header>
     <div class ="row_project">
       <div class="column_project_l">
@@ -58,36 +68,14 @@ This will notify the government and community where the pollution occurs and res
 | Physical Deployment           |                | &#x2714;            |
 | Source Code                   | [GitHub](https://github.com/antiplasti){:target="_blank"}{:.heading.flip-title}   |                   |
 {:.stretch-table.dl-table}
- 
-
-### Updates Coming Soon... :relaxed:
-
 
 <div markdown="0">
-  <hr class="dingbat related">
-  <aside class="about related mt4 mb4" role="complementary">
-    <div class="author mt4"> 
-      <img src="/images/gabieicon_128.png" srcset="/images/gabieicon_128.png 1x,/images/gabieicon_256.png 2x" alt="<Gabriela> <Sewdhan>" class="avatar" width="120" height="120" loading="lazy" style="opacity: 0;">
-      <h2 class="page-title hr-bottom"> About</h2>
-      <p>Gabriela Sewdhan: software engineer, robotics enthusiast and baker based in Trinidad.</p>
-      <div class="sidebar-social"> <span class="sr-only">Social:</span>
-        <ul>
-          <li> 
-            <a href="https://www.linkedin.com/in/gabriela-sewdhan-3ba495120" target="_blank" title="LinkedIn" class="no-mark-external"> <span class="icon-linkedin2"></span> <span class="sr-only">LinkedIn</span> </a>
-          </li>
-          <li> 
-            <a href="https://github.com/GabrielaSewdhan" target="_blank" title="GitHub" class="no-mark-external"> <span class="icon-github"></span> <span class="sr-only">GitHub</span> </a>
-          </li>
-          <li> 
-            <a href="mailto:gabiems13@gmail.com" target="_blank" title="Email" class="no-mark-external"> <span class="icon-mail"></span> <span class="sr-only">Email</span> </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </aside>
   <aside class="related mb4" role="complementary">
     <h2 class="hr-bottom">Other Projects</h2>
     <ul class="related-posts">
+      <li class="h4"> 
+        <a href="/projectlist/AccurateAprilGroupTracking/" class="flip-title"><span>Accurate AprilGroup Tracking</span></a> <time class="faded fine" datetime="2021-05-30T00:00:00+00:00">May 2021</time>
+      </li>
       <li class="h4"> 
         <a href="/projectlist/QuickRental/" class="flip-title"><span>QuickRental</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">31 May 2019</time>
       </li>
@@ -95,7 +83,7 @@ This will notify the government and community where the pollution occurs and res
         <a href="/projectlist/PiDronics/" class="flip-title"><span>PiDronics</span></a> <time class="faded fine" datetime="2018-06-01T00:00:00+00:00">22 Dec 2018</time>
       </li>
       <li class="h4"> 
-        <a href="/projectlist/dcitCamp-2017-2018/" class="flip-title"><span>DCIT Robotics BootCamp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">July 2017/2018</time>
+        <a href="/projectlist/dcitCamp-2017-2018/" class="flip-title"><span>DCIT Robotics Boot Camp</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">July 2017/2018</time>
       </li>
       <li class="h4"> 
         <a href="/projectlist/MetOracle/" class="flip-title"><span>MetOracle</span></a> <time class="faded fine" datetime="2017-11-23T00:00:00+00:00">31 Oct 2017</time>

@@ -9,23 +9,29 @@ Gabie:
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
 
-    Hi! I'm Gabriela Sewdhan, a software engineer and data scientist based in Trinidad.
+    Hi! I’m Gabby; a creator + developer (and co-owner of Scarlet Creative) based in Trinidad & Tobago.
 
-    I am deeply passionated about building solutions that can contribute to a better life via software development and
-    robotics, exploration and solving issues related to the environment with a focus on marine environs.
+    I’m deeply passionate about helping people feel less overwhelmed, more supported, and more able to do the work that matters to them.
 
-    I have a bachelor's degree in **Computer Science** and **Psychology** from the **University of the West Indies, St. Augustine**
-    and have kept myself busy with projects, research, and internships throughout my degrees.
+    A lot of my perspective comes from navigating my own hard seasons and wanting to make things gentler for others. **I care about giving a voice to the voiceless, raising awareness, and bringing communities together to help revive the Earth and our shared humanity.**
 
-    I have experience in building apps, websites, algorithmic solutions, machine learning models and everything in between.
+    My favourite areas to dive into are **design (UI/UX, graphic, motion), human–computer interaction, using art for storytelling, psychology, software engineering, neuroscience, mycology and botany**. I’m fascinated by how our brains work, how we process emotion and information, and how we can design systems that feel kinder and more intuitive.
+
+    I’m also a water-baby. I adore the ocean; its mystery, its ecosystems, and the stories it holds.
+
+    **I help NGOs and growing businesses build:**
+
+    * Human-centred brands and interfaces
+    * Thoughtful automation and AI tools
+    * Systems that feel calm, clear, and kind to use
 
   # This photo will be used in the about section
   picture:
-    path:            /images/gabieicon_128.png
+    path:            /images/gabie-artic.png
     # srcset is optional, but can be used to provide higher res versions for retina displays
     srcset:
-      1x:            /images/gabieicon_128.png
-      2x:            /images/gabieicon_256.png
+      1x:            /images/gabie-artic.png
+      2x:            /images/gabie-artic.png
 
   # Social media icons in sidebar
   # Comment/uncommet to show/hide
@@ -33,8 +39,8 @@ Gabie:
   social:
     # twitter:         <username>
     linkedin:        gabriela-sewdhan-3ba495120
-    github:          GabrielaSewdhan
-    email:           gabiems13@gmail.com
+    github:          zoes-full-stack
+    email:           gabbysewdhan@gmail.com
     # rss:             https://<url>/feed.xml
     # facebook:        <username>
     # google:          <number>

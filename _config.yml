@@ -33,10 +33,10 @@ description:           >
   Personal Porfolio to demonstrate experience, projects developed and skills.
 
 # A shorter description for the sidebar.
-tagline:               Software Engineer with a love for robotics, diving, the ocean, baking, and an extremely curious mind!
+tagline:               Design + Build + Mind
 
 # A list of keywords for your blog
-keywords:              []
+keywords:              ["creative process","design mindset","gentle productivity","calm interfaces","emotional design","storytelling","micro moments","rhythm in design","neuroscience and design","psychology and design","meditation","ocean","botany","mycology"]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
@@ -48,22 +48,27 @@ logo:                  /assets/icons/gicon-512x512.png
 author:
   # Used by `jekyll-feed`:
   name:                <Gabriela> <Sewdhan>
-  email:               <gabiems13@gmail.com>
+  email:               <gabbysewdhan@gmail.com>
+  # github:              <zoes-full-stack>
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
 # Add links to the sidebar.
 menu:
+  - title:             Work
+    url:               /work/
+  - title:             Experience
+    url:               /experience/
+  - title:             Skills
+    url:               /skills/ 
+  - title:             CV
+    url:               /cv/ 
   - title:             About
     url:               /about/
-  - title:             Skills
-    url:               /skills/
-  - title:             Experience
-    url:               /experience/ 
-  - title:             Projects
-    url:               /projects/ 
-  - title:             Resume
-    url:               /resume/
+  - title:             Experiments
+    url:               /experiments/
+  # - title:             Baking
+  #   url:               /baking/
     # /Resume/GabrielaSewdhan_Resume.pdf
     # (https://gabrielasewdhan.github.io/portfolio/Resume/GabrielaSewdhan_Resume.pdf){:target="_blank"}
 
@@ -80,7 +85,7 @@ menu:
 #     url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2020. All rights reserved.
+copyright:            © 2026 Gabriela Sewdhan. Made with tea, curiosity, and a lot of tabs open ☕
 
 # Format of the permalinks
 permalink:             /:categories/:year-:month-:day-:title/
@@ -118,7 +123,12 @@ remote_theme: hydecorp/hydejack@v9.0.4
 # ----------------------------------------------------------------------------------------
  
 # Sidebar image and theme color of the site.
-accent_image:          /images/bg_sidebar.jpg
+accent_image:
+  background: "linear-gradient(180deg, rgba(5,10,24,1) 0%, rgba(6,18,40,1) 55%, rgba(2,6,16,1) 100%)"
+
+# accent_image:          /images/bg_sidebar.jpg
+# accent_image:
+#     background: 'linear-gradient(to bottom, rgba(35,62,76,1) 0%,rgba(60,146,158,1) 50%,rgba(213,213,212,1) 100%) #4fb1ba'
 # accent_image:          /assets/img/sidebar-bg.jpg
 accent_color:          rgb(79,177,186)
 
@@ -244,11 +254,11 @@ hydejack:
 
   # Set to `true` if you do not want parts of the css inlined in <head/>
   # This will increase site build speed dramatically!
-  no_inline_css:       false
+  no_inline_css:       true # CHANGED
 
   # Set to `true` if you don't intend on changing the accent color on a per-page basis. 
   # This will increase site build speed!
-  no_page_style:       false
+  no_page_style:       true # CHANGED
 
   # Code blocks and tables "break" the layout by spanning the full available width.
   # Set this to true if you want them to be the same width as other content.
@@ -292,7 +302,7 @@ hydejack:
   # Note that dark mode only works in the PRO version of Hydejack.
   dark_mode:
     # Set to `true` to always use the dark theme.
-    always:            false
+    always:            true
 
     # Set to `true` to use the dark theme based on visitors' preference (OS setting).
     dynamic:           true
@@ -304,15 +314,15 @@ hydejack:
   # ----------------
   # This is an _experimental_ feature.
   # Only use if you know what Service Workers are and how they can impact your site!
-  # offline:
-  #   enabled:           false
-  #   cache_version:     7
-  #   precache_assets:
-  #     - /assets/img/swipe.svg
-
   offline:
-    enabled: true
-    cache_version: 1
+    enabled:           false
+    cache_version:     7
+    precache_assets:
+      - /assets/img/swipe.svg
+
+  # offline:
+  #   enabled: true
+  #   cache_version: 1
 
 
 
@@ -373,9 +383,8 @@ plugins:
 
 # Used on index and about sites
 # social:
-#   name:                <firstname> <lastname>
+#   name:                <Gabriela> <Sewdhan>
 #   links:
-#     - https://twitter.com/<username>
 #     - https://github.com/<username>
 
 

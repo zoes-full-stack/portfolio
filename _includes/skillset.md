@@ -1,129 +1,143 @@
-<!-- #### Python Skills: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
-
-###### Data Science: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
-`Pandas`| `Numpy` | `Seaborn` | `Plotly` | `Sci-kit Learn` | `Regression Models` | `Classification Models`
-{:.faded}
-
-###### Image Processing: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
-`OpenCV`
-{:.faded}
-
-###### Artificial Intelligence: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
-`TensorFlow`| `Keras`| `Object Detection (Mask RCNN)` | `GoLang`
-{:.faded}
-
-###### Robotics Programming: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
-`ROS`| `Programming with Raspberry Pi and Arduino`
-{:.faded}
-
-#### Other Software Engineering Skills: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
-`C++` | `Ubuntu`| `GoLang` | `Algorithm Design` | `Software Testing` | `GIT`
-{:.faded} -->
-
-<!-- #### Robotics Software Engineering: &emsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
-`Python` | `C++` | `Ubuntu`| `ROS` | `OpenCV` | `GoLang` | `Algorithm Design` | `Software Testing` | `Programming with Raspberry Pi and Arduino`
-{:.faded} -->
-
-<!-- #### Backend Engineering: &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
-`NodeJS`| `SQL` | `Serverless` | `Amazon Web Services` | `EC2` | `Amazon Lex` | `CloudFormation`
-{:.faded}
-
-#### Frontend Engineering: &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
-`Javascript`| `HTML` | `React Native and Expo` | `Ionic Framework` | `ReactJS` | `PreactJS` | `Django`
-{:.faded} -->
-
-
 <div markdown="0">
-    <h4>Python Skills: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
-    <div class='indent_skill'>
-        <h6>Data Science and Data Visualisation</h6> 
-        <p>
-            <code class="language-plaintext highlighter-rouge">Pandas</code>| 
-            <code class="language-plaintext highlighter-rouge">Numpy</code> | 
-            <code class="language-plaintext highlighter-rouge">Seaborn</code> | 
-            <code class="language-plaintext highlighter-rouge">Plotly</code> | 
-            <code class="language-plaintext highlighter-rouge">Sci-kit Learn</code> | 
-            <code class="language-plaintext highlighter-rouge">Regression Models</code> | 
-            <code class="language-plaintext highlighter-rouge">Classification Models</code>
-        </p>
-        <h6 class='indent_skill'>Image Processing</h6> 
-        <p>
-            <code class="language-plaintext highlighter-rouge">OpenCV</code>
-        </p>
-        <h6 class='indent_skill'>Artificial Intelligence</h6> 
-        <p>
-            <code class="language-plaintext highlighter-rouge">TensorFlow</code>| 
-            <code class="language-plaintext highlighter-rouge">Keras</code> | 
-            <code class="language-plaintext highlighter-rouge">Object Detection (Mask RCNN)</code> | 
-            <code class="language-plaintext highlighter-rouge">pyTorch</code>| 
-            <code class="language-plaintext highlighter-rouge">GoLang</code> 
-        </p>
-        <h6 class='indent_skill'>Robotics Programming</h6> 
-        <p>
-            <code class="language-plaintext highlighter-rouge">ROS</code>| 
-            <code class="language-plaintext highlighter-rouge">Programming with Raspberry Pi and Arduino</code> 
-        </p>
+
+<h4>Product Design & UX
+    <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+</h4>
+<p>
+    <code class="language-plaintext highlighter-rouge">User Flows</code> |
+    <code class="language-plaintext highlighter-rouge">Wireframing</code> |
+    <!-- <code class="language-plaintext highlighter-rouge">Prototyping</code> | -->
+    <code class="language-plaintext highlighter-rouge">Information Architecture</code> |
+    <code class="language-plaintext highlighter-rouge">Interaction Design</code> |
+    <code class="language-plaintext highlighter-rouge">Design Systems</code> |
+    <code class="language-plaintext highlighter-rouge">Accessibility (a11y)</code> |
+    <code class="language-plaintext highlighter-rouge">UX Writing & Microcopy</code>
+    
+</p>
+
+<h4>UI, Visual & Graphic Design
+    <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+</h4>
+<p>
+    <code class="language-plaintext highlighter-rouge">Layout & Composition</code> |
+    <code class="language-plaintext highlighter-rouge">Typography</code> |
+    <code class="language-plaintext highlighter-rouge">Color & Contrast</code> |
+    <code class="language-plaintext highlighter-rouge">Visual Hierarchy</code> |
+    <code class="language-plaintext highlighter-rouge">Brand-friendly UI</code> |
+    <code class="language-plaintext highlighter-rouge">Illustration & Visual Storytelling</code> |
+    <code class="language-plaintext highlighter-rouge">Canva</code> |
+    <code class="language-plaintext highlighter-rouge">Figma</code> |
+    <code class="language-plaintext highlighter-rouge">Adobe Photoshop</code>
+</p>
+
+<h4>Web Platforms & CMS
+    <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+</h4>
+<p>
+    <code class="language-plaintext highlighter-rouge">Webflow</code> |
+    <code class="language-plaintext highlighter-rouge">WordPress</code> |
+    <code class="language-plaintext highlighter-rouge">Wix</code> |
+    <code class="language-plaintext highlighter-rouge">Squarespace</code> |
+    <code class="language-plaintext highlighter-rouge">SEO & Analytics</code>
+</p>
+
+<h4>Frontend (Design → Build)
+    <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+</h4>
+<p>
+    <code class="language-plaintext highlighter-rouge">HTML & CSS</code> |
+    <code class="language-plaintext highlighter-rouge">JavaScript</code> |
+    <code class="language-plaintext highlighter-rouge">ReactJS</code> |
+    <!-- <code class="language-plaintext highlighter-rouge">Vue.js</code> | -->
+    <code class="language-plaintext highlighter-rouge">Responsive Design</code> |
+    <code class="language-plaintext highlighter-rouge">Accessibility (a11y)</code> |
+    <code class="language-plaintext highlighter-rouge">Design QA</code>
+</p>
+
+<h4>Motion & Micro-interactions
+    <span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
+</h4>
+<p>
+    <code class="language-plaintext highlighter-rouge">Rive</code> |
+    <code class="language-plaintext highlighter-rouge">After Effects</code> |
+    <code class="language-plaintext highlighter-rouge">Motion Principles</code> |
+    <code class="language-plaintext highlighter-rouge">Micro-interactions</code> |
+    <code class="language-plaintext highlighter-rouge">UI Animation</code> |
+    <code class="language-plaintext highlighter-rouge">Delight with restraint</code>
+</p>
+
+<h4>Systems, Robotics & Backend
+    <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+</h4>
+<p>
+    <code class="language-plaintext highlighter-rouge">Unity</code> |
+    <code class="language-plaintext highlighter-rouge">C#</code> |
+    <code class="language-plaintext highlighter-rouge">Python</code> |
+    <code class="language-plaintext highlighter-rouge">Golang</code> |
+    <code class="language-plaintext highlighter-rouge">REST APIs</code> |
+    <code class="language-plaintext highlighter-rouge">SQL (PostgreSQL / MySQL)</code> |
+    <code class="language-plaintext highlighter-rouge">Firebase / Firestore</code> |
+    <code class="language-plaintext highlighter-rouge">Google Cloud Functions</code> |
+    <code class="language-plaintext highlighter-rouge">Serverless Architectures</code> |
+    <code class="language-plaintext highlighter-rouge">Webhooks</code>
+</p>
+
+<h4>Automation & DevOps
+    <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+</h4>
+<p>
+    <code class="language-plaintext highlighter-rouge">Zapier</code> |
+    <code class="language-plaintext highlighter-rouge">n8n</code> |
+    <code class="language-plaintext highlighter-rouge">GoHighLevel</code> |
+    <code class="language-plaintext highlighter-rouge">Git & GitHub</code> |
+    <code class="language-plaintext highlighter-rouge">Google Cloud</code>
+</p>
+
+<h4>Data, AI & Analytics
+    <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
+</h4>
+<div class="indent_skill">
+    <h6>Data & Visualisation</h6>
+    <p>
+        <code class="language-plaintext highlighter-rouge">Pandas</code> |
+        <code class="language-plaintext highlighter-rouge">NumPy</code> |
+        <code class="language-plaintext highlighter-rouge">Plotly</code>
+    </p>
+    <!-- <h6>AI & LLM Workflows</h6>
+    <p>
+        <code class="language-plaintext highlighter-rouge">LLM Integration</code> |
+        <code class="language-plaintext highlighter-rouge">Prompt Design</code> |
+        <code class="language-plaintext highlighter-rouge">Retrieval-Augmented Generation (RAG)</code> |
+        <code class="language-plaintext highlighter-rouge">Text & Data Pipelines</code>
+    </p> -->
+</div>
+
+<div class="row_project">
+    <div class="column_code2">
+        <h3>Creative Interests</h3>
+        <ul>
+            <li><strong>Audio & Voice:</strong> Incorporating music and singing into web and game projects.</li>
+            <li><strong>Game Design:</strong> Creating concepts, logic, and art for interactive experiences.</li>
+            <li><strong>Logic Puzzles:</strong> A love for "connecting the dots" and solving complex system issues.</li>
+        </ul>
+        <h3>Management</h3>
+        <ul>
+            <li>Project & Team Management (Agile)</li>
+            <li>Mentoring & Facilitation</li>
+            <li>Clear Documentation & Communication</li>
+        </ul>
     </div>
-    <h4>Other Software Engineering Skills: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4> 
-    <p>
-            <code class="language-plaintext highlighter-rouge">C++</code>| 
-            <code class="language-plaintext highlighter-rouge">Ubuntu</code> | 
-            <code class="language-plaintext highlighter-rouge">Java</code>|
-            <code class="language-plaintext highlighter-rouge">Algorithm Design</code> | 
-            <code class="language-plaintext highlighter-rouge">Software Testing</code> | 
-            <code class="language-plaintext highlighter-rouge">GIT</code> | 
-            <code class="language-plaintext highlighter-rouge">Android SDK</code> 
-    </p>
-    <h4>Backend Engineering: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span></h4>
-    <p>
-            <code class="language-plaintext highlighter-rouge">Nodejs</code>| 
-            <code class="language-plaintext highlighter-rouge">SQL</code> | 
-            <code class="language-plaintext highlighter-rouge">Serverless</code> |
-            <code class="language-plaintext highlighter-rouge">Amazon Web Services</code> |
-            <code class="language-plaintext highlighter-rouge">EC2</code> |
-            <code class="language-plaintext highlighter-rouge">Amazon Lex</code> |
-            <code class="language-plaintext highlighter-rouge">CloudFormation</code> |
-            <code class="language-plaintext highlighter-rouge">PHP</code>
-    </p>
-    <h4>Frontend Engineering: <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span></h4>
-    <p>
-            <code class="language-plaintext highlighter-rouge">React Native and Expo</code>| 
-            <code class="language-plaintext highlighter-rouge">Javascript</code> | 
-            <code class="language-plaintext highlighter-rouge">HTML&CSS</code> | 
-            <code class="language-plaintext highlighter-rouge">ReactJS</code> | 
-            <code class="language-plaintext highlighter-rouge">PreactJS</code> | 
-            <code class="language-plaintext highlighter-rouge">Django</code> | 
-            <code class="language-plaintext highlighter-rouge">Ionic Framework</code>
-    </p>
-    <div class="row_project">
-        <div class="column_code2">
-            <h3>Other Skills</h3>
-                <ul>
-                    <li>Project and Team Management</li>
-                    <li>SCRUM and Agile Methodologies</li>
-                    <li>Game Development (C++, C#)</li>
-                    <li>Mathematical Skills in Algebra, Statistics and Probability</li>
-                </ul>
-        </div>
-        <div class="column_code">
-            <h3>Languages</h3>
-            <b>English:</b> <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
-            <b>German: </b> <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
-        </div>
+    <div class="column_code">
+        <h3>Languages</h3>
+        <b>English:</b>
+        <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
+        <br>
+        <b>Spanish:</b>
+        <span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
+        <!-- <br>
+        <b>German:</b>
+        <span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span> -->
     </div>
 </div>
 
-<!-- <p class="faded"> -->
-<!--   
-### Other Skills &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Languages
-- Project and Team Management &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; **English:** &nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
-- SCRUM and Agile Methodologies &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; **German:**  &nbsp;<span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
-- Web and App Development
-- Machine Learning and A.I based Predictions
-- Data Visualisation
-- Mathematical Skills in Algebra, Statistics and Probability -->
-
-<!-- ### Languages 
-
-**English:** &nbsp; <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span> <br>
-**German:**  &nbsp;<span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span> -->
+</div>
