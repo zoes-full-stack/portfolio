@@ -23,9 +23,9 @@ hide_description: true
 <div markdown="0" class="interests-grid">
 
   <figure class="interest">
-    <a href="/visual_stories/" target="_blank">
-      <img src="/images/icons/designer.png" alt="Graphic Design" loading="lazy">
-      <figcaption>Graphic Design</figcaption>
+    <a href="/experiments/" target="_blank">
+      <img src="/images/icons/designer.png" alt="Visual Experiments" loading="lazy">
+      <figcaption>Visual Experiments</figcaption>
     </a>
   </figure>
 

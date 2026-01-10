@@ -106,6 +106,14 @@
                 onclick="openModal_canva();currentSlide_canva(13)">
             <p class="faded"><small>Taking the First Step, a small encouragement to begin, even gently</small></p>
         </div>
+        
+        <div class="column_designs">
+            <img src="/images/Canva/Scarlet_Christmas.gif"
+                class="gallery" style="width:100%" loading="lazy"
+                onclick="openModal_canva();currentSlide_canva(14)">
+            <p class="faded"><small>Christmas!</small></p>
+        </div>
+
     </div>
 
     <!-- GROUP 3: Personal Illustrations & Mood Pieces -->
@@ -116,21 +124,21 @@
         <div class="column_designs">
             <img src="/images/Canva/Personal/Let_Go_Flow_Growth.gif"
                 class="gallery" style="width:100%" loading="lazy"
-                onclick="openModal_canva();currentSlide_canva(14)">
+                onclick="openModal_canva();currentSlide_canva(15)">
             <p class="faded"><small>Let Go and Flow like Water</small></p>
         </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Personal/its_ok_to_not_be_ok.gif"
              class="gallery" style="width:100%" loading="lazy"
-             onclick="openModal_canva();currentSlide_canva(15)">
+             onclick="openModal_canva();currentSlide_canva(16)">
         <p class="faded"><small>It's Okay to not be Okay</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Personal/Care_Compassion_Growth.jpg"
              class="gallery" style="width:100%" loading="lazy"
-             onclick="openModal_canva();currentSlide_canva(16)">
+             onclick="openModal_canva();currentSlide_canva(17)">
         <p class="faded"><small>Care, Compassion & Growth, nurturing illustration about healing</small></p>
       </div>
     </div>
@@ -139,22 +147,64 @@
       <div class="column_designs">
         <img src="/images/Canva/Personal/Be_Kind.jpg"
              class="gallery" style="width:100%" loading="lazy"
-             onclick="openModal_canva();currentSlide_canva(17)">
+             onclick="openModal_canva();currentSlide_canva(18)">
         <p class="faded"><small>Be Kind. A reminder piece centred on softness and compassion</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Personal/Cosy_And_Warm.jpg"
              class="gallery" style="width:100%" loading="lazy"
-             onclick="openModal_canva();currentSlide_canva(18)">
+             onclick="openModal_canva();currentSlide_canva(19)">
         <p class="faded"><small>Cosy & Warm, safe little world of blankets, light, and rest</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Personal/Floating_Meditation.gif"
              class="gallery" style="width:100%" loading="lazy"
-             onclick="openModal_canva();currentSlide_canva(19)">
-        <p class="faded"><small>Floating In Space, Meditating</small></p>
+             onclick="openModal_canva();currentSlide_canva(20)">
+        <p class="faded"><small>Floating In Space, Meditating using sounds and breathing. Colourful plasma at the top and bottom edges</small></p>
+      </div>
+
+      <div class="column_designs">
+        <img src="/images/Canva/Personal/Let_The_Light_Shine_Through.gif"
+             class="gallery" style="width:100%" loading="lazy"
+             onclick="openModal_canva();currentSlide_canva(21)">
+        <p class="faded"><small>Let the light shine through</small></p>
+      </div>
+
+      <div class="column_designs">
+        <img src="/images/Canva/Personal/Space_Adventure.gif"
+             class="gallery" style="width:100%" loading="lazy"
+             onclick="openModal_canva();currentSlide_canva(22)">
+        <p class="faded"><small>Space Adventure</small></p>
+      </div>
+
+      <div class="column_designs">
+        <img src="/images/Canva/Personal/The_Meet_Up.gif"
+             class="gallery" style="width:100%" loading="lazy"
+             onclick="openModal_canva();currentSlide_canva(23)">
+        <p class="faded"><small>The Meet Up</small></p>
+      </div>
+
+      <div class="column_designs">
+        <img src="/images/Canva/Personal/Where_Have_I_Ended_Up.gif"
+             class="gallery" style="width:100%" loading="lazy"
+             onclick="openModal_canva();currentSlide_canva(24)">
+        <p class="faded"><small>Where Have I Ended Up?</small></p>
+      </div>
+
+      <div class="column_designs">
+        <img src="/images/Canva/Personal/You_Are_Enough.gif"
+             class="gallery" style="width:100%" loading="lazy"
+             onclick="openModal_canva();currentSlide_canva(25)">
+        <p class="faded"><small>You Are Enough <3</small></p>
+      </div>
+
+      <div class="column_designs">
+        <img src="/images/Canva/Personal/Reveal.gif"
+             class="gallery" style="width:100%" loading="lazy"
+             onclick="openModal_canva();currentSlide_canva(26)">
+        <p class="faded"><small>Teh Reveal</small></p>
       </div>
     </div>
 
@@ -165,135 +215,184 @@
 
         <!-- 1–19 slides -->
         <div class="mySlides_canva">
-          <div class="numbertext">1 / 19</div>
+          <div class="numbertext">1 / 26</div>
           <img src="/images/Canva/Clay Scarlet World.jpg"
                alt="Clay Scarlet World: cosy planet introducing Scarlet’s universe."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">2 / 19</div>
+          <div class="numbertext">2 / 26</div>
           <img src="/images/Canva/Plush Scarlet World.jpg"
                alt="Plush Scarlet World: softer, plush toy version of the Scarlet planet."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">3 / 19</div>
+          <div class="numbertext">3 / 26</div>
           <img src="/images/Canva/Facebook Profile Photo (720 x 720px).png"
                alt="Scarlet profile icon: circular avatar for social platforms."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">4 / 19</div>
+          <div class="numbertext">4 / 26</div>
           <img src="/images/Canva/Scarlet Cover Photo (830 x 360 px).png"
                alt="Scarlet cover photo: banner artwork for social and site headers."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">5 / 19</div>
+          <div class="numbertext">5 / 26</div>
           <img src="/images/Canva/Scarlet Creative Software.png"
                alt="Scarlet Creative Software: clean brand graphic for the studio."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">6 / 19</div>
+          <div class="numbertext">6 / 26</div>
           <img src="/images/Canva/freedom_and_trust.png"
                alt="Freedom & Trust: gentle message piece about safety and openness."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">7 / 19</div>
+          <div class="numbertext">7 / 26</div>
           <img src="/images/Canva/Scarlet - Happy Divali.png"
                alt="Happy Divali: festive Scarlet greeting celebrating light."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">8 / 19</div>
+          <div class="numbertext">8 / 26</div>
           <img src="/images/Canva/Scarlet Beach.png"
                alt="Scarlet Beach: seaside scene with the Scarlet bird taking a break."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">9 / 19</div>
+          <div class="numbertext">9 / 26</div>
           <img src="/images/Canva/Scarlet Creative Let Go.gif"
                alt="Let Go: looping animation about release, flow, and softness."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">10 / 19</div>
+          <div class="numbertext">10 / 26</div>
           <img src="/images/Canva/Scarlet Most Creative.png"
                alt="Scarlet Most Creative – playful piece celebrating creativity."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">11 / 19</div>
+          <div class="numbertext">11 / 26</div>
           <img src="/images/Canva/Scarlet Republic Day 2025.gif"
                alt="Republic Day 2025 – celebratory Scarlet post for Trinidad & Tobago."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">12 / 19</div>
+          <div class="numbertext">12 / 26</div>
           <img src="/images/Canva/Scarlet_long_weekend.gif"
                alt="Long Weekend – playful loop for slower, rest-filled days."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">13 / 19</div>
+          <div class="numbertext">13 / 26</div>
           <img src="/images/Canva/Taking the first step.gif"
                alt="Taking the First Step – small encouragement to begin, even gently."
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">14 / 19</div>
+          <div class="numbertext">14 / 26</div>
+          <img src="/images/Canva/Scarlet_Christmas.gif"
+               alt="Christmas - Warm, cosy, connection with family, friends, pets."
+               class="gallery demo_canva" style="width:100%">
+        </div>
+
+        <div class="mySlides_canva">
+          <div class="numbertext">15 / 26</div>
           <img src="/images/Canva/Personal/Let_Go_Flow_Growth.gif"
                alt="Let Go and Flow like Water"
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">15 / 19</div>
+          <div class="numbertext">16 / 26</div>
           <img src="/images/Canva/Personal/its_ok_to_not_be_ok.gif"
                alt="It's Okay to not be Okay"
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">16 / 19</div>
+          <div class="numbertext">17 / 26</div>
           <img src="/images/Canva/Personal/Care_Compassion_Growth.jpg"
                alt="Care, Compassion & Growth, nurturing illustration about healing"
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">17 / 19</div>
+          <div class="numbertext">18 / 26</div>
           <img src="/images/Canva/Personal/Be_Kind.jpg"
                alt="Be Kind. A reminder piece centred on softness and compassion"
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">18 / 19</div>
+          <div class="numbertext">19 / 26</div>
           <img src="/images/Canva/Personal/Cosy_And_Warm.jpg"
                alt="Cosy & Warm, safe little world of blankets, light, and rest"
                class="gallery demo_canva" style="width:100%">
         </div>
 
         <div class="mySlides_canva">
-          <div class="numbertext">19 / 19</div>
+          <div class="numbertext">20 / 26</div>
           <img src="/images/Canva/Personal/Floating_Meditation.gif"
                alt="Floating in space, meditating"
+               class="gallery demo_canva" style="width:100%">
+        </div>
+
+        <div class="mySlides_canva">
+          <div class="numbertext">21 / 26</div>
+          <img src="/images/Canva/Personal/Let_The_Light_Shine_Through.gif"
+               alt="Let the light shine through - Woman blended with the moon and clouds"
+               class="gallery demo_canva" style="width:100%">
+        </div>
+
+        <div class="mySlides_canva">
+          <div class="numbertext">22 / 26</div>
+          <img src="/images/Canva/Personal/Space_Adventure.gif"
+               alt="Space Adventure"
+               class="gallery demo_canva" style="width:100%">
+        </div>
+
+        <div class="mySlides_canva">
+          <div class="numbertext">23 / 26</div>
+          <img src="/images/Canva/Personal/The_Meet_Up.gif"
+               alt="Two animals meeting by a tree, in a glazy forest"
+               class="gallery demo_canva" style="width:100%">
+        </div>
+
+        <div class="mySlides_canva">
+          <div class="numbertext">24 / 26</div>
+          <img src="/images/Canva/Personal/Where_Have_I_Ended_Up.gif"
+               alt="A pigeon with its head tilted, a mushroom at the top, in a forest with a river and a pathway. The backgroud is a void of static."
+               class="gallery demo_canva" style="width:100%">
+        </div>
+
+        <div class="mySlides_canva">
+          <div class="numbertext">25 / 26</div>
+          <img src="/images/Canva/Personal/You_Are_Enough.gif"
+               alt="A woman in a violet dress walking. Abstract background with pink and blue colours. A text: 'You Are Enough'"
+               class="gallery demo_canva" style="width:100%">
+        </div>
+
+        <div class="mySlides_canva">
+          <div class="numbertext">26 / 26</div>
+          <img src="/images/Canva/Personal/Reveal.gif"
+               alt="The Reveal"
                class="gallery demo_canva" style="width:100%">
         </div>
 
