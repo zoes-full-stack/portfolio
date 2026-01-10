@@ -1171,6 +1171,7 @@ img[src~="bordered"]:hover {
   z-index: 1;               /* behind bean (z=2) but above bg container (z=0) */
   pointer-events: none;
   opacity: 0.9;
+  transform: scaleX(1.01); transform-origin: left bottom;
 }
 
 .bean-waves svg{

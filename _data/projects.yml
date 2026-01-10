@@ -7,7 +7,7 @@
   img: /images/projects/taskbook/taskbook_cover.png
   category: product_ui
   featured: true
-  blurb: "Automatic scheduling, confirmations & reminders · User-friendly communication & feedback · Dashboard · Data Analytics · Admin & Technician's View"
+  blurb: "A scheduling assistant that turns messy installs into calm, confirmed plans."
   panel_label: "Saas"
   proof: "95% less manual scheduling"
   tags: ["Flutter", "Firebase", "Google Cloud Functions", "Twilio", "Gmail API"]
@@ -18,9 +18,9 @@
   img: /images/projects/formstudio/formstudio_cover.png
   category: product_ui
   featured: true
-  blurb: "A form builder designed for real workflows."
+  blurb: "Forms that turn submissions into action: assign, notify, approve, and track."
   panel_label: "Saas"
-  proof: "Drag-and-drop · Instant reporting · Signatures & Integrations"
+  proof: "Routing · alerts · dashboards"
   tags: ["Vue3", "Zapier", "Google Cloud Functions"]
 
 - title: MercadoBolt
@@ -29,9 +29,9 @@
   img: /images/projects/mercadoBolt/MercadoBolt.gif
   category: product_ui
   featured: true
-  blurb: "E-commerce ecosystem for trusted local delivery of goods & services."
+  blurb: "A trusted marketplace for local goods and services, designed to reduce scams and stress."
   panel_label: "Ecommerce"
-  proof: "Verified vendors · Escrow-ready flows"
+  proof: "KYC-ready · escrow flows · safer selling"
   tags: ["Flutter", "Firebase", "Google Cloud Functions"]
 
 - title: Apriltag Tracking
@@ -40,14 +40,11 @@
   img: /images/projects/apriltags/apriltags_cover.png
   category: engineering
   featured: true
-  blurb: "Apritag calibration + pose tracking with real-time visual feedback."
+  blurb: "High-accuracy AprilTag tracking with calibration tools and live pose feedback."
   panel_label: "Engineering"
-  proof: "Calibration workflows · Pose tracking pipeline"
+  proof: "Calibration + optical flow + pose refinement"
   tags: ["C#", "Python", "Go", "April Tags", "Pose Tracking"]
 
-# TODO: From Scarlet/FlowGenius - UnityStaff (not sure), NDA: Spartan, Top Broker Consulting, ELDT Nation, Simon Group USA
-# TODO: From SCG - Tatil, Beacon
-# Can handle design and math heavy coding - advertise me as that
 # --- Compact list projects ---
 - title: QuickRental
   slug: QuickRental
@@ -55,7 +52,7 @@
   img: /images/projects/quickrental/quickrental_icon.gif
   category: web
   featured: false
-  blurb: "Catering to all your apartment needs."
+  blurb: "A cozy, practical rental web app built end-to-end."
   panel_label: "Ecommerce"
   proof: "Full-stack student build"
   tags: ["Web", "UX"]
@@ -66,9 +63,9 @@
   img: /images/projects/antiplasti/antiplasti.jpg
   category: engineering
   featured: false
-  blurb: "AI powered plastic detection in the oceans"
+  blurb: "A computer vision concept for spotting ocean plastic from imagery."
   panel_label: "Machine Learning"
-  proof: "Detects plastic with [to_add]% accuracy"
+  proof: "Prototype detection pipeline"
   tags: ["AI", "Machine Learning", "Python"]
 
 - title: PiDronics
@@ -77,9 +74,9 @@
   img: /images/projects/pidronics/pidronics_about.gif
   category: engineering
   featured: false
-  blurb: "Autonomous hydroponics tracking system."
+  blurb: "A hydroponics system that watches plants and logs the details for you."
   panel_label: "Automomous Hydroponics"
-  proof: "Robotics + monitoring"
+  proof: "Sensors + automation + monitoring"
   tags: ["IoT", "Systems", "Python"]
 
 - title: DCIT Robotics Boot Camp
@@ -88,9 +85,9 @@
   img: /images/projects/dcit_bootcamp/dcit_curie_square.jpg
   category: mentoring
   featured: false
-  blurb: "Meet Curie :3"
+  blurb: "A robotics boot camp where I taught through building, testing, and play."
   panel_label: "Mentoring"
-  proof: "Teaching + robotics prototyping"
+  proof: "Hands-on teaching + prototypes"
   tags: ["Robotics", "Education", "Python"]
 
 - title: MetOracle
@@ -99,7 +96,7 @@
   img: /images/projects/metOracle/weather.gif
   category: engineering
   featured: false
-  blurb: "Weather prediction for smart-city resilience."
+  blurb: "A forecasting project exploring weather trends for smarter city planning."
   panel_label: "Machine Learning Prediction"
   proof: "Time-series forecasting"
   tags: ["Machine Learning", "Data", "Python"]

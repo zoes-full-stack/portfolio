@@ -454,19 +454,121 @@ $r: 16px;
   background: rgba(255,255,255,.9);
 }
 
+/* ===== Featured toggle (compact + cute + white-friendly) ===== */
 .featured-toggle{
-  display:flex;
-  align-items:center;
-  gap:.5rem;
-  border: 1px solid rgba(0,0,0,.12);
-  background: rgba(255,255,255,.75);
+  --blue: #4fb1ba;                 /* your accent */
+  --blue-deep: #163442;            /* your ink */
+  --border: rgba(22,52,66,.16);
+  --shadow: 0 8px 18px rgba(7,24,32,.08);
+
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+
+  padding: .35rem .7rem;
   border-radius: 999px;
-  padding: .45rem .75rem;
-  user-select:none;
-  cursor:pointer;
+  background: rgba(255,255,255,.92);
+  user-select: none;
+  cursor: pointer;
+
+  /* small, tidy type */
+  font-size: .9rem;
+  line-height: 1;
+  font-weight: 650;
+  color: rgba(22,52,66,.85);
+
+  transition: transform .15s ease, box-shadow .18s ease, border-color .18s ease;
 }
 
-.featured-toggle input{ accent-color: rgba(22,52,66,.85); }
+.featured-toggle:active{
+  transform: translateY(0px);
+  // box-shadow: 0 6px 16px rgba(7,24,32,.10);
+}
+
+/* Hide native checkbox but keep it accessible */
+.featured-toggle > input{
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* The “cute” box */
+.featured-toggle__box{
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+
+  background: linear-gradient(180deg, #ffffff 0%, #f3f6f8 100%);
+  border: 1px solid rgba(22,52,66,.18);
+
+  display: grid;
+  place-items: center;
+
+  transform: translateZ(0);
+  transition:
+    transform .18s cubic-bezier(.2,.9,.2,1.35),
+    // box-shadow .18s ease,
+    background .18s ease,
+    border-color .18s ease;
+}
+
+/* Check mark (simple + crisp) */
+.featured-toggle__box::after{
+  content: "";
+  width: 11px;
+  height: 7px;
+
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  transform: rotate(-45deg) scale(.6);
+  opacity: 0;
+
+  transition:
+    opacity .12s ease,
+    transform .22s cubic-bezier(.2,.9,.2,1.65);
+}
+
+/* Checked state */
+.featured-toggle > input:checked + .featured-toggle__box{
+  background: linear-gradient(180deg, rgba(79,177,186,.95) 0%, rgba(50,150,162,.95) 100%);
+  border-color: rgba(79,177,186,.55);
+
+  box-shadow:
+    0 10px 18px rgba(79,177,186,.22),
+    0 2px 10px rgba(7,24,32,.10),
+    0 -10px 18px rgba(0,0,0,.06) inset;
+  transform: scale(1.02);
+}
+
+.featured-toggle > input:checked + .featured-toggle__box::after{
+  opacity: 1;
+  transform: rotate(-45deg) scale(1);
+}
+
+/* Focus ring (keyboard) */
+.featured-toggle > input:focus-visible + .featured-toggle__box{
+  outline: none;
+  box-shadow:
+    0 0 0 4px rgba(79,177,186,.25),
+    0 2px 10px rgba(7,24,32,.10);
+}
+
+/* Text */
+.featured-toggle__text{
+  opacity: .9;
+  transform: translateY(0.5px);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .featured-toggle,
+  .featured-toggle__box,
+  .featured-toggle__box::after{
+    transition: none !important;
+  }
+}
 
 .filter-row{
   display:flex;
@@ -1047,7 +1149,7 @@ $r: 16px;
   border-radius: var(--card-r);
   border-bottom-right-radius: 0; /* key “cut” */
   overflow: hidden;
-  box-shadow: var(--shadow);
+  // box-shadow: var(--shadow);
   background: #fff;
   aspect-ratio: 16 / 10;       /* makes images consistent + larger */
 }
@@ -1081,8 +1183,8 @@ $r: 16px;
   position:absolute;
   right: -6px;
   bottom: -6px;
-  width: 52px;
-  height: 52px;
+  width: 72px;
+  height: 72px;
   background: #ffffff;
   border-top-left-radius: 50%;
   pointer-events:none;
@@ -1097,7 +1199,7 @@ $r: 16px;
   width: 20px;
   height: 20px;
   border-bottom-right-radius: 20px;
-  box-shadow: 5px 5px 0 5px #fff; /* makes a clean carve */
+  // box-shadow: 5px 5px 0 5px #fff; /* makes a clean carve */
 }
 .projects-wrap .p-corner::after{
   content:"";
@@ -1107,7 +1209,7 @@ $r: 16px;
   width: 20px;
   height: 20px;
   border-bottom-right-radius: 20px;
-  box-shadow: 5px 5px 0 5px #ffffff;
+  // box-shadow: 5px 5px 0 5px #ffffff;
 }
 
 /* Inner circle icon */
@@ -1121,7 +1223,6 @@ $r: 16px;
   background: rgba(20,20,20,.85);
   color:#fff;
   font-size: 18px;
-  box-shadow: var(--shadow2);
   transform: scale(1);
   transition: transform 220ms ease;
 }
@@ -1145,7 +1246,6 @@ $r: 16px;
 .projects-wrap .p-pill{
   font-weight: 700;
   font-size: 12px;
-  padding: 6px 10px;
   border-radius: 999px;
   background: rgba(0,0,0,.06);
   border: 1px solid rgba(0,0,0,.06);
@@ -1167,6 +1267,7 @@ $r: 16px;
   margin: 8px 0 12px;
   color: var(--muted);
   line-height: 1.5;
+  font-size: 14px;
 }
 
 /* Tags */
@@ -1272,7 +1373,6 @@ $r: 16px;
 .projects-wrap .p-tag{
   font-size: 12px;
   font-weight: 700;
-  padding: 8px 12px;
   border-radius: 10px;         /* more “clean label” than full-pill */
   background: rgba(0,0,0,.06);
   color: rgba(20,26,30,.85);
@@ -1285,7 +1385,7 @@ $r: 16px;
 
 .projects-wrap .projects-grid{
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
 }
 
