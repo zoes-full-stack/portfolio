@@ -9,7 +9,6 @@ sitemap: false
 ---
 
 <div class="projects" markdown="0">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <p class="note"><strong>Tip:</strong> Click any card to view more details</p>
 
