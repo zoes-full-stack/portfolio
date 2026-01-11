@@ -557,7 +557,7 @@ $r: 16px;
 
 /* Text */
 .featured-toggle__text{
-  opacity: .9;
+  opacity: .95;
   transform: translateY(0.5px);
 }
 
@@ -681,7 +681,7 @@ $r: 16px;
   font-weight: 750;
 }
 
-.p-proof{ font-size: .82rem; opacity: .75; }
+.p-proof{ font-size: .82rem; opacity: .95; }
 
 .p-card__title{ margin: 0 0 .35rem 0; }
 .p-card__blurb{ margin: 0 0 .75rem 0; opacity: .85; }
@@ -1253,7 +1253,7 @@ $r: 16px;
 
 .projects-wrap .p-proof{
   font-size: 12px;
-  color: var(--muted);
+  color: #202039;
 }
 
 /* Title + blurb */
@@ -1265,7 +1265,7 @@ $r: 16px;
 }
 .projects-wrap .p-card__blurb{
   margin: 8px 0 12px;
-  color: var(--muted);
+  color: #0a1320;
   line-height: 1.5;
   font-size: 14px;
 }
@@ -1334,7 +1334,7 @@ $r: 16px;
   padding: .65rem 1.05rem;
   outline: none;
 
-  color: rgba(22,52,66,.92);
+  color: rgb(22,52,66);
   box-shadow:
     0 1px 0 rgba(255,255,255,.70) inset,
     0 -1px 0 rgba(0,0,0,.03) inset;
@@ -1549,7 +1549,7 @@ $r: 16px;
 .projects-wrap .filter-label{
   font-weight: 700;
   font-size: 12px;
-  color: rgba(20,26,30,.70);
+  color: rgba(20,26,30,.90);
   padding-top: 8px;
   min-width: 70px;
 }
@@ -1587,7 +1587,7 @@ $r: 16px;
   padding: 8px 12px;
   position: relative;
   overflow: hidden; /* needed for the shimmer layer */
-  color: rgba(22,52,66,.92);
+  color: rgb(22,52,66);
 
   /* “water” depth + soft sheen */
   box-shadow:

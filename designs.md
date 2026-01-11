@@ -11,9 +11,9 @@ sitemap: false
 {% include desserts.md %}
 
 <div class="mobile-only" markdown="1">
-    <hr class="faded"/>
+<hr class="faded"/>
 
-    Continue with [Experience ↪](/experience/){:.heading.flip-title}
-    {:.page-next}
-    [↩ Back to Projects](/projects/){:.page-back}
+Continue with [Experience ↪](/experience/){:.heading.flip-title}
+{:.page-next}
+[↩ Back to Projects](/projects/){:.page-back}
 </div>
