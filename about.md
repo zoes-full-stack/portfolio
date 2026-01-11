@@ -120,5 +120,6 @@ Hydejack uses KaTeX to efficiently render math.
   &nbsp;
   <hr class="faded"/>
 
-  [↩ Back to CV](/cv/){:.page-back}
+  [↩ Back to CV](/cv/){:.page-back} <br>
+  [↩ Back to Home](/){:.page-back}
 </div>
