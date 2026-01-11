@@ -21,13 +21,15 @@ sitemap: false
 
 {% include skillset.md %}
 
-&nbsp;
-&nbsp;
-&nbsp;
+<div class="mobile-only" markdown="1">
+  &nbsp;
+  &nbsp;
+  &nbsp;
 
-<hr class="faded"/>
+  <hr class="faded"/>
 
-Continue with [CV ↪](/cv/){:.heading.flip-title}
-{:.page-next}
-[↩ Back to Experience](/experience/){:.page-back}
+  Continue with [CV ↪](/cv/){:.heading.flip-title}
+  {:.page-next}
+  [↩ Back to Experience](/experience/){:.page-back}
+</div>
 

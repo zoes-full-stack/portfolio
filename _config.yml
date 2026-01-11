@@ -31,7 +31,7 @@ description:           >
   Personal Porfolio to demonstrate experience, projects developed and skills.
 
 # A shorter description for the sidebar.
-tagline:               Design + Build + Mind
+tagline:               Empathetic Development & Design
 
 # A list of keywords for your blog
 keywords:              ["creative process","design mindset","gentle productivity","calm interfaces","emotional design","storytelling","micro moments","rhythm in design","neuroscience and design","psychology and design","meditation","ocean","botany","mycology"]
@@ -53,8 +53,10 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             Work
-    url:               /work/
+  - title:             Projects
+    url:               /projects/
+  - title:             Designs
+    url:               /designs/
   - title:             Experience
     url:               /experience/
   - title:             Skills
@@ -63,8 +65,6 @@ menu:
     url:               /cv/ 
   - title:             About
     url:               /about/
-  - title:             Experiments
-    url:               /experiments/
   # - title:             Baking
   #   url:               /baking/
     # /Resume/GabrielaSewdhan_Resume.pdf

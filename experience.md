@@ -40,12 +40,14 @@ Click me to view!
 
 </details> 
 
-&nbsp;
-&nbsp;
-&nbsp;
+<div class="mobile-only" markdown="1">
+  &nbsp;
+  &nbsp;
+  &nbsp;
 
-<hr class="faded"/>
+  <hr class="faded"/>
 
-Continue with [Skills ↪](/skills/){:.heading.flip-title}
-{:.page-next}
-[↩ Back to Work](/work/){:.page-back}
+  Continue with [Skills ↪](/skills/){:.heading.flip-title}
+  {:.page-next}
+  [↩ Back to Designs](/Designs/){:.page-back}
+</div>

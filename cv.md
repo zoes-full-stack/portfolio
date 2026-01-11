@@ -18,9 +18,11 @@ hide_description: true
 My CV :D
 {:.figcaption}
 
-<hr class="faded"/>
+<div class="mobile-only" markdown="1">
+  <hr class="faded"/>
 
-Continue with [About ↪](/about/){:.heading.flip-title}
-{:.page-next}
-[↩ Back to Skills](/skills/){:.page-back}
+  Continue with [About ↪](/about/){:.heading.flip-title}
+  {:.page-next}
+  [↩ Back to Skills](/skills/){:.page-back}
+</div>
 
