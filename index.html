@@ -49,8 +49,8 @@ https://github.com/hydecorp/hydejack/issues/63 -->
             <span class="lines line-3"></span>
           </label>
 
-          <a target="_blank" href="/work/" class="menu-item blue"><span class="menu-text">Work</span></a>
-          <a target="_blank" href="/experiments/" class="menu-item green"><span class="menu-text">Experiments</span></a>
+          <a target="_blank" href="/projects/" class="menu-item blue"><span class="menu-text">Projects</span></a>
+          <a target="_blank" href="/designs/" class="menu-item green"><span class="menu-text">Designs</span></a>
           <a target="_blank" href="/cv/" class="menu-item red"><span class="menu-text">CV</span></a>
           <a target="_blank" href="/about/" class="menu-item purple"><span class="menu-text">About</span></a>
           <a target="_blank" href="/skills/" class="menu-item orange"><span class="menu-text">Skills</span></a>
@@ -60,8 +60,35 @@ https://github.com/hydecorp/hydejack/issues/63 -->
     </div>
     <div id="magical-bean-container"></div>
 
-    <!-- Waves -->
     <div class="bean-waves" aria-hidden="true">
+      <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <defs>
+          <path id="w1" d="M0,160 C240,120 480,200 720,160 C960,120 1200,200 1440,160 L1440,320 L0,320 Z" />
+          <path id="w2" d="M0,170 C240,210 480,120 720,170 C960,220 1200,120 1440,170 L1440,320 L0,320 Z" />
+          <path id="w3" d="M0,180 C240,140 480,230 720,180 C960,140 1200,230 1440,180 L1440,320 L0,320 Z" />
+        </defs>
+
+        <!-- Each “wave layer” is a group that contains TWO copies -->
+        <g class="wave wave1">
+          <use href="#w1" x="0"></use>
+          <use href="#w1" x="1440"></use>
+        </g>
+
+        <g class="wave wave2">
+          <use href="#w2" x="0"></use>
+          <use href="#w2" x="1440"></use>
+        </g>
+
+        <g class="wave wave3">
+          <use href="#w3" x="0"></use>
+          <use href="#w3" x="1440"></use>
+        </g>
+      </svg>
+    </div>
+
+
+    <!-- Waves -->
+    <!-- <div class="bean-waves" aria-hidden="true">
       <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path class="wave wave1"
           d="M0,64 C150,16 350,16 500,64 C650,112 850,112 1000,64 C1100,32 1150,32 1200,64 L1200,120 L0,120 Z"></path>
@@ -70,16 +97,16 @@ https://github.com/hydecorp/hydejack/issues/63 -->
         <path class="wave wave3"
           d="M0,84 C180,40 360,120 540,78 C720,36 900,112 1200,82 L1200,120 L0,120 Z"></path>
       </svg>
-    </div>
+    </div> -->
 </div>
 
 <hr class="faded"/>
 
 <h3 style="margin-top:1.25rem;">What I've been up to</h3>
-<ul class="related-posts faded">
-  <li>- Exploring UI/UX + Graphic Design.</li>
-  <li>- Motion design and animations! (CSS + Rive + Three.js + WebGL experiments).</li>
-  <li>- Looking for impact-driven teams and NGOs to support through design + build.</li>
+<ul class="related-posts">
+  <li>- UI/UX & Graphic Design</li>
+  <li>- Motion design and animations! (CSS + Rive + Three.js + WebGL experiments)</li>
+  <li>- Supporting impact-driven teams and NGOs with my designs & development skills</li>
 </ul>
 
 
@@ -165,9 +192,11 @@ This is my personal portfolio! Feel free to browse! :relaxed:
       </li>
 </ul> -->
 
-<hr class="faded"/>
+<div class="mobile-only">
+  <hr class="faded"/>
 
-<p>Continue with <a class="heading flip-title page-next" href = "/work/">Work ↪</a></p>
+  <p>Continue with <a class="heading flip-title page-next" href = "/projects/">Projects ↪</a></p>
+</div>
 
 <!-- Mobile interaction for the bean (you can click on the bean to open the menu) -->
 <script src="{{ '/assets/js/bean-menu-interaction.js' | relative_url }}" defer></script>

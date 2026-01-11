@@ -637,7 +637,14 @@ img[src~="bordered"]:hover {
   position: relative;
 }
 
-// Hiding Navbar On Desktop (Keep on Mobile for Usability)
+/* Mobile-only helper */
+.mobile-only { display: none; }
+
+@media (max-width: 768px){
+  .mobile-only { display: block; }
+}
+
+// Hiding Navbar and Next and Back links On Desktop (Keep on Mobile for Usability)
 @media (min-width: 768px) {
   #_navbar { display: none; }
 }
@@ -1194,16 +1201,16 @@ img[src~="bordered"]:hover {
 
 .bean-waves .wave1{
   fill: rgba(255,255,255,0.10);
-  animation-duration: 14s;
+  animation-duration: 5s;
 }
 .bean-waves .wave2{
   fill: rgba(79,177,186,0.18); /* matches your accent */
-  animation-duration: 11s;
+  animation-duration: 2s;
   animation-direction: reverse;
 }
 .bean-waves .wave3{
   fill: rgba(255,255,255,0.06);
-  animation-duration: 18s;
+  animation-duration: 8s;
 }
 
 /* subtle horizontal drift */
@@ -1215,6 +1222,35 @@ img[src~="bordered"]:hover {
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce){
   .bean-waves .wave{ animation: none; }
+}
+
+.bean-waves svg { display:block; width:100%; height:100%; }
+
+/* Smooth infinite scroll: move left exactly one tile width */
+.bean-waves .wave{
+  will-change: transform;
+  transform: translate3d(0,0,0);
+  animation: waveMarquee linear infinite;
+}
+
+@keyframes waveMarquee{
+  from { transform: translate3d(0,0,0); }
+  to   { transform: translate3d(-1440px,0,0); } /* must match viewBox width */
+}
+
+/* Your palette + per-layer speeds */
+.bean-waves .wave1{
+  fill: rgba(255,255,255,0.10);
+  animation-duration: 8s;
+}
+.bean-waves .wave2{
+  fill: rgba(79,177,186,0.18);
+  animation-duration: 6s;
+  animation-direction: reverse;
+}
+.bean-waves .wave3{
+  fill: rgba(255,255,255,0.06);
+  animation-duration: 10s;
 }
 
 
@@ -1431,7 +1467,7 @@ img[src~="bordered"]:hover {
 .page-back{
   display:inline-block;
   margin-top:.75rem;
-  opacity:.85;
+  opacity:.95;
   text-decoration:none;
 }
 .page-back:hover{ opacity:1; text-decoration:underline; }

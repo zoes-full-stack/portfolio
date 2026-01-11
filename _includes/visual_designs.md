@@ -12,35 +12,35 @@
         <img src="/images/Canva/Clay Scarlet World.jpg"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(1)">
-        <p class="faded"><small>Clay Scarlet World: cosy planet introducing Scarlet’s universe</small></p>
+        <p class="faded"><small>Clay Scarlet World</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Plush Scarlet World.jpg"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(2)">
-        <p class="faded"><small>Plush Scarlet World: softer, plush toy version of the Scarlet planet</small></p>
+        <p class="faded"><small>Plush Scarlet World</small></p>
       </div>
 
     <div class="column_designs">
         <img src="/images/Canva/Facebook Profile Photo (720 x 720px).png"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(3)">
-        <p class="faded"><small>Scarlet profile icon: circular avatar for social platforms</small></p>
+        <p class="faded"><small>Scarlet Profile Icon</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Scarlet Cover Photo (830 x 360 px).png"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(4)">
-        <p class="faded"><small>Scarlet cover photo: banner artwork for social and site headers</small></p>
+        <p class="faded"><small>Scarlet Cover Photo</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Scarlet Creative Software.png"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(5)">
-        <p class="faded"><small>Scarlet Creative Software: clean brand graphic for our studio</small></p>
+        <p class="faded"><small>Scarlet Another Cover Photo</small></p>
       </div>
     </div>
 
@@ -53,21 +53,21 @@
         <img src="/images/Canva/freedom_and_trust.png"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(6)">
-        <p class="faded"><small>Freedom & Trust: gentle message piece about safety and openness</small></p>
+        <p class="faded"><small>Freedom & Trust</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Scarlet - Happy Divali.png"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(7)">
-        <p class="faded"><small>Happy Divali: festive Scarlet greeting celebrating light</small></p>
+        <p class="faded"><small>Happy Divali</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Scarlet Beach.png"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(8)">
-        <p class="faded"><small>Scarlet Beach: seaside scene with the Scarlet bird taking a break</small></p>
+        <p class="faded"><small>Scarlet Beach</small></p>
       </div>
     </div>
 
@@ -76,35 +76,35 @@
         <img src="/images/Canva/Scarlet Creative Let Go.gif"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(9)">
-        <p class="faded"><small>Let Go: looping animation about release, flow, and softness</small></p>
+        <p class="faded"><small>Let Go</small></p>
       </div>
 
       <div class="column_designs">
           <img src="/images/Canva/Scarlet Most Creative.png"
               class="gallery" style="width:100%" loading="lazy"
               onclick="openModal_canva();currentSlide_canva(10)">
-          <p class="faded"><small>Scarlet Creative: playful piece celebrating creativity</small></p>
+          <p class="faded"><small>Scarlet Celebrating Creativity</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Scarlet Republic Day 2025.gif"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(11)">
-        <p class="faded"><small>Republic Day 2025: celebratory Scarlet post for Trinidad & Tobago</small></p>
+        <p class="faded"><small>Republic Day 2025</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Scarlet_long_weekend.gif"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(12)">
-        <p class="faded"><small>Long Weekend: playful loop for slower, rest-filled days</small></p>
+        <p class="faded"><small>Long Weekend</small></p>
       </div>
 
         <div class="column_designs">
             <img src="/images/Canva/Taking the first step.gif"
                 class="gallery" style="width:100%" loading="lazy"
                 onclick="openModal_canva();currentSlide_canva(13)">
-            <p class="faded"><small>Taking the First Step, a small encouragement to begin, even gently</small></p>
+            <p class="faded"><small>Taking the First Step</small></p>
         </div>
         
         <div class="column_designs">
@@ -139,7 +139,7 @@
         <img src="/images/Canva/Personal/Care_Compassion_Growth.jpg"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(17)">
-        <p class="faded"><small>Care, Compassion & Growth, nurturing illustration about healing</small></p>
+        <p class="faded"><small>Care, Compassion & Growth</small></p>
       </div>
     </div>
 
@@ -148,28 +148,28 @@
         <img src="/images/Canva/Personal/Be_Kind.jpg"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(18)">
-        <p class="faded"><small>Be Kind. A reminder piece centred on softness and compassion</small></p>
+        <p class="faded"><small>Be Kind</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Personal/Cosy_And_Warm.jpg"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(19)">
-        <p class="faded"><small>Cosy & Warm, safe little world of blankets, light, and rest</small></p>
+        <p class="faded"><small>Cosy & Warm</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Personal/Floating_Meditation.gif"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(20)">
-        <p class="faded"><small>Floating In Space, Meditating using sounds and breathing. Colourful plasma at the top and bottom edges</small></p>
+        <p class="faded"><small>Floating in Space</small></p>
       </div>
 
       <div class="column_designs">
         <img src="/images/Canva/Personal/Let_The_Light_Shine_Through.gif"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(21)">
-        <p class="faded"><small>Let the light shine through</small></p>
+        <p class="faded"><small>Let the Light Shine Through</small></p>
       </div>
 
       <div class="column_designs">
@@ -204,7 +204,7 @@
         <img src="/images/Canva/Personal/Reveal.gif"
              class="gallery" style="width:100%" loading="lazy"
              onclick="openModal_canva();currentSlide_canva(26)">
-        <p class="faded"><small>Teh Reveal</small></p>
+        <p class="faded"><small>The Reveal</small></p>
       </div>
     </div>
 
@@ -431,8 +431,7 @@
           </h4>
           <p class="faded">
             <small>
-              A 60+ page, illustration-led portfolio sharing our story, values,
-              services, case studies, and team.
+              A 60+ page, illustration-led portfolio for Scarlet
             </small>
           </p>
           <p>
@@ -462,9 +461,7 @@
           </h4>
           <p class="faded">
             <small>
-              A concise 15-page profile introducing who we are, what we do,
-              key projects, our tech stack, and the sectors we serve across the
-              Caribbean and worldwide.
+              A 15-page profile introducing Scarlet
             </small>
           </p>
           <p>

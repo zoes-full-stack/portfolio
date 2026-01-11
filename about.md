@@ -23,10 +23,8 @@ hide_description: true
 <div markdown="0" class="interests-grid">
 
   <figure class="interest">
-    <a href="/experiments/" target="_blank">
-      <img src="/images/icons/designer.png" alt="Visual Experiments" loading="lazy">
-      <figcaption>Visual Experiments</figcaption>
-    </a>
+      <img src="/images/icons/design.png" alt="Visual Experiments" loading="lazy">
+      <figcaption>Design</figcaption>
   </figure>
 
   <figure class="interest">
@@ -40,8 +38,13 @@ hide_description: true
   </figure>
 
   <figure class="interest">
-    <img src="/images/icons/gaming.png" alt="Gaming and Game Dev" loading="lazy">
-    <figcaption>Gaming &amp; Game Dev</figcaption>
+    <img src="/images/icons/personal_development.png" alt="Personal Development" loading="lazy">
+    <figcaption>Personal Development</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/yoga.png" alt="Yoga" loading="lazy">
+    <figcaption>Yoga</figcaption>
   </figure>
 
   <figure class="interest">
@@ -50,20 +53,23 @@ hide_description: true
   </figure>
 
   <figure class="interest">
-    <img src="/images/icons/hiking.jpg" alt="Hiking" loading="lazy">
+    <img src="/images/icons/hiking.png" alt="Hiking" loading="lazy">
     <figcaption>Hiking</figcaption>
   </figure>
 
   <figure class="interest">
-    <a href="/baking/" target="_blank">
       <img src="/images/icons/baking.png" alt="Baking" loading="lazy">
       <figcaption>Baking</figcaption>
-    </a>
   </figure>
 
   <figure class="interest">
     <img src="/images/icons/ocean.png" alt="Ocean Conservation" loading="lazy">
     <figcaption>Ocean Conservation</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/gaming.png" alt="Gaming and Game Dev" loading="lazy">
+    <figcaption>Gaming &amp; Game Dev</figcaption>
   </figure>
 
   <figure class="interest">
@@ -74,11 +80,6 @@ hide_description: true
   <figure class="interest">
     <img src="/images/icons/coding.png" alt="Coding" loading="lazy">
     <figcaption>Coding</figcaption>
-  </figure>
-
-  <figure class="interest">
-    <img src="/images/icons/nasa2.png" alt="NASA" loading="lazy">
-    <figcaption>NASA</figcaption>
   </figure>
 
   <figure class="interest">
@@ -112,11 +113,12 @@ $$
 Hydejack uses KaTeX to efficiently render math.
 {:.figcaption} -->
 
-&nbsp;
-&nbsp;
-&nbsp;
-<hr class="faded"/>
 
-Continue with [Experiments ↪](/experiments/){:.heading.flip-title}
-{:.page-next}
-[↩ Back to CV](/cv/){:.page-back}
+<div class="mobile-only" markdown="1">
+  &nbsp;
+  &nbsp;
+  &nbsp;
+  <hr class="faded"/>
+
+  [↩ Back to CV](/cv/){:.page-back}
+</div>

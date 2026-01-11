@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Work
-guide: Work
+title: Projects
+guide: Projects
 description: >
-    Portfolio of work done in graphic design, UI/UX, web development, engineering and machine learning.
+    Portfolio of projects done in graphic design, UI/UX, web development, engineering and machine learning.
 hide_description: true
 sitemap: false
 ---
@@ -25,15 +25,15 @@ sitemap: false
   title="Portfolio in progress"
   date="2026-01-10"
   body="More Project Stories coming soon."
-  href="/experiments/"
-  cta="See Visual Experiments"
 %}
 {:/nomarkdown}
 
 <br>
 
-<hr class="faded"/>
-Continue with [Experience ↪](/experience/){:.heading.flip-title}
-{:.page-next}
-[↩ Back to Welcome](/){:.page-back}
+<div class="mobile-only" markdown="1">
+  <hr class="faded"/>
+  Continue with [Designs ↪](/designs/){:.heading.flip-title}
+  {:.page-next}
+  [↩ Back to Welcome](/){:.page-back}
+</div>
 
