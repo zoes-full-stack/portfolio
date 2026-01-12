@@ -9,8 +9,11 @@ hide_description: true
 ---
 
 :house_with_garden: **Trinidad & Tobago** &nbsp;
-:calling: **1 (868) 496-5529** &nbsp;
-:email: [**gabbysewdhan@gmail.com**](mailto:gabbysewdhan@gmail.com)
+
+<div class="mobile-only" markdown="1">
+  :calling: **1 (868) 496-5529** &nbsp;
+  :email: [**gabbysewdhan@gmail.com**](mailto:gabbysewdhan@gmail.com)
+</div>
 
 <!--author-->
 

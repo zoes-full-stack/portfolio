@@ -1,0 +1,37 @@
+<!-- Masonry Gallery (based on wakana-k BaxKKvE mechanics) -->
+
+<svg width="0" height="0" style="position:absolute">
+  <filter id="oceanWobble" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.01 0.02" numOctaves="2" seed="2" result="noise">
+      <animate attributeName="baseFrequency" dur="2.4s"
+        values="0.01 0.02; 0.015 0.03; 0.01 0.02" repeatCount="indefinite" />
+    </feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" xChannelSelector="R" yChannelSelector="G" />
+  </filter>
+</svg>
+
+<section class="scarlet-gallery" aria-label="Scarlet design gallery">
+
+  <main class="scarlet-gallery__main">
+    <ul class="scarlet-gallery__masonry" id="scarletMasonry"></ul>
+  </main>
+
+  <!-- Modal -->
+  <div id="lightbox" class="lb" aria-hidden="true">
+    <div class="lb__backdrop" data-lb-close></div>
+
+    <div class="lb__panel" role="dialog" aria-modal="true" aria-label="Media viewer">
+      <button class="lb__close" type="button" aria-label="Close" data-lb-close>✕</button>
+
+      <div class="lb__media" id="lbMedia"></div>
+
+      <div class="lb__controls">
+        <div class="lb__title" id="lbTitle"></div>
+
+        <button id="lbAudioToggle" class="lb__btn" type="button" aria-label="Toggle audio" hidden>
+          🔊 Audio: On
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -8,19 +8,14 @@ hide_description: true
 sitemap: false
 ---
 
-A list of all my experience to date.
+<div markdown="0">
+  <p class="note"><strong>Tip:</strong> Click any point to view more details</p>
+</div>
 
-<!-- 1. this list will be replaced by the table of contents
-{:toc} -->
-
-## Work Experience
-
-<details><summary markdown='span'> 
-Click me to view!
-</summary>
-{% include experience_all.md %}
-
-</details> 
+<div markdown="0">
+  {% include work_experience.html %}
+  {% include research_experience.html %}
+</div>
 
 <!-- ## Volunteer Experience
 
@@ -30,15 +25,6 @@ Click me to view!
 {% include volunteer.md %}
 
 </details>  -->
-
-## Research Experience
-
-<details><summary markdown='span'> 
-Click me to view!
-</summary>
-{% include research.md %}
-
-</details> 
 
 <div class="mobile-only" markdown="1">
   &nbsp;

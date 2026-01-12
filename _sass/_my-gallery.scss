@@ -1,0 +1,167 @@
+// Keep your font imports if you want; CodePen uses Montserrat.
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap");
+
+$shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
+
+.scarlet-gallery {
+  padding: 0.8rem 0;
+
+  // masonry
+  #scarletMasonry {
+    list-style: none;
+    padding: 0;
+    margin: 0.8rem auto;
+    width: min(1200px, 100%);
+    max-width: 100%;
+    box-sizing: border-box;
+
+    column-count: 3;
+    column-gap: 1.2rem;
+
+    // IMPORTANT: remove old “card look” from li itself
+    > li {
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 1.2rem;
+      break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    // section headers stay as-is
+    > li.section-header {
+      column-span: all;
+      -webkit-column-span: all;
+      display: block;
+      width: 100%;
+      margin: 0.9rem 0 0.35rem;
+      padding: 0;
+      background: transparent;
+      box-shadow: none;
+      cursor: default;
+
+      .section-header__inner {
+        display: block;
+        padding: 0.35rem 0.25rem 0.2rem;
+        text-align: left;
+        border-left: 4px solid rgba(220, 20, 60, 0.65);
+        padding-left: 0.75rem;
+
+        p { margin: 0; text-align: left; }
+        b, strong { font-size: 1.4rem; letter-spacing: 0.2px; }
+        .small { display: block; margin-top: 0.25rem; opacity: 0.8; font-size: 1.05rem; }
+      }
+    }
+
+    // “container” like CodePen (perspective wrapper)
+    .ocean-tilt {
+      display: flex;
+      perspective: 600px;
+    }
+
+    // the card itself: CodePen feel, but with white page background
+    .ocean-card {
+        aspect-ratio: var(--ar, 2 / 3);
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      box-shadow: $shadow-card;
+      overflow: hidden;
+
+      position: relative;
+      transform-style: preserve-3d;
+      transform-origin: 50% 50% -50px;
+
+      // subtle ocean glass gradient overlay like the pen
+      background-image: linear-gradient(to bottom, transparent, rgba(38, 167, 186, 0.18));
+      background-color: rgba(255, 255, 255, 0.02);
+
+      // the “inner border shrink” on hover (their :before)
+      &::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.95);
+        border-radius: 8px;
+        transform-origin: center;
+        transition: 0.2s ease;
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        &::before {
+          transform: scale(0.94, 0.96);
+          border-radius: 2px;
+        }
+
+        .headline {
+          transform: translateZ(20px);
+          text-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
+          opacity: 1;
+        }
+      }
+    }
+
+    .video-container {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 8px;
+
+        .card-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            display: block;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+
+        .card-bg.is-loaded {
+            opacity: 1;
+        }
+    }
+
+    // keep headline but don’t block the card
+    .headline {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 10px;
+      margin: 0;
+      text-align: center;
+
+      font-family: "Montserrat", sans-serif;
+      font-weight: 200;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+
+      transition: 0.2s ease;
+      transform-style: preserve-3d;
+
+      opacity: 0; // hidden by default
+      pointer-events: none;
+      color: #fff;
+      z-index: 3;
+    }
+  }
+
+  // responsive columns
+  @media (max-width: 520px) {
+    #scarletMasonry { column-count: 1; column-gap: 0.6rem; }
+  }
+  @media (min-width: 521px) and (max-width: 900px) {
+    #scarletMasonry { column-count: 2; column-gap: 0.9rem; }
+  }
+}

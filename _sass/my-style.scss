@@ -1476,5 +1476,11 @@ img[src~="bordered"]:hover {
   margin-top: 1.5rem;
 }
 
-// Projects (Portfolio) CSS 
+// Projects (Portfolio) SCSS 
 @import "my-projects";
+
+// Gallery SCSS
+@import "my-gallery";
+
+// // Work Experience SCSS
+@import "my_experience";
