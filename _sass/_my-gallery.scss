@@ -61,7 +61,7 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
 
     // the card itself: CodePen feel, but with white page background
     .ocean-card {
-        aspect-ratio: var(--ar, 2 / 3);
+      aspect-ratio: var(--ar, 2 / 3);
       width: 100%;
       border-radius: 8px;
       border: 1px solid rgba(255, 255, 255, 0.95);
@@ -71,6 +71,12 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
       position: relative;
       transform-style: preserve-3d;
       transform-origin: 50% 50% -50px;
+
+      will-change: transform;
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+
+      transition: box-shadow 0.8s ease;
 
       // subtle ocean glass gradient overlay like the pen
       background-image: linear-gradient(to bottom, transparent, rgba(38, 167, 186, 0.18));
@@ -108,31 +114,76 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
       }
     }
 
+    .ocean-tilt:hover .ocean-card {
+      box-shadow: 0 0 28px rgba(0,0,0,0.16);
+    }
+
     .video-container {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      border-radius: 8px;
+
+      img, video { pointer-events: none; }
+
+      .card-bg {
         position: absolute;
         inset: 0;
         width: 100%;
         height: 100%;
-        overflow: hidden;
-        border-radius: 8px;
-        opacity: 1;
+        object-fit: cover;
+        opacity: 0;                 // start hidden
+        transition: opacity 0.25s ease;
+      }
 
-        .card-bg {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+      .card-bg.is-loaded {
+          opacity: 1;
+      }
 
-            display: block;
-            opacity: 0;
-            transition: opacity 0.25s ease;
-        }
+      .grid-video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
 
-        .card-bg.is-loaded {
-            opacity: 1;
-        }
+        opacity: 0;
+        transition: opacity 0.25s ease;
+      }
+
+      &.is-video-active {
+        .grid-video { opacity: 1; }
+        // optional: keep poster slightly visible under the video for softness
+        // .card-bg { opacity: 0.9; }
+      }
     }
+
+
+    // .video-container {
+    //     position: absolute;
+    //     inset: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     overflow: hidden;
+    //     border-radius: 8px;
+    //     opacity: 1;
+
+    //     .card-bg {
+    //         position: absolute;
+    //         inset: 0;
+    //         width: 100%;
+    //         height: 100%;
+    //         object-fit: cover;
+
+    //         display: block;
+    //         opacity: 0;
+    //         transition: opacity 0.25s ease;
+    //     }
+
+    //     .card-bg.is-loaded {
+    //         opacity: 1;
+    //     }
+    // }
 
     // keep headline but don’t block the card
     .headline {
@@ -165,4 +216,80 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
   @media (min-width: 521px) and (max-width: 900px) {
     #scarletMasonry { column-count: 2; column-gap: 0.9rem; }
   }
+}
+
+/* LIGHTBOX - bulletproof */
+.lb {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;          /* higher than any header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
+}
+
+.lb[aria-hidden="false"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lb__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+}
+
+.lb__close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 5;
+}
+
+/* Panel sizes to content, but never exceeds viewport */
+.lb__panel {
+  position: relative;
+  z-index: 2;
+
+  width: auto;              /* let content decide */
+  height: auto;
+  max-width: 92vw;
+  max-height: 90vh;
+
+  display: inline-flex;     /* shrink-to-fit */
+  flex-direction: column;
+
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Media area should not force a fixed height */
+.lb__media {
+  display: grid;
+  place-items: center;
+  background: #000;
+
+  width: auto;
+  height: auto;
+
+  max-width: 92vw;
+  max-height: 90vh;
+  padding: 0;               /* no padding so it hugs the media */
+}
+
+/* Contain, never crop */
+.lb__media img,
+.lb__media video {
+  display: block;
+  object-fit: contain;
+
+  max-width: 92vw;
+  max-height: 90vh;
+
+  width: auto;
+  height: auto;
 }

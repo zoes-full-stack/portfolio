@@ -6,11 +6,40 @@ sitemap: false
 
 {% include gallery_of_designs.html %}
 
-<div class="mobile-only">
+<div class="mobile-only story-pager">
+  <div class="story-pager__card">
+    <!-- BIG tap target -->
+    <a class="story-pager__next" href="/experience/">
+      <span class="story-pager__kicker">KEEP SCROLLING</span>
+      <span class="story-pager__title">EXPERIENCE</span>
+
+      <span class="story-pager__row" aria-hidden="true">
+        <span class="story-pager__label">NEXT PAGE</span>
+        <span class="story-pager__line"></span>
+        <span class="story-pager__arrow">→</span>
+      </span>
+
+      <span class="story-pager__sr">Next page: Experience</span>
+    </a>
+
+    <!-- Divider inside the card -->
+    <div class="story-pager__divider" aria-hidden="true"></div>
+
+    <!-- Secondary link (smaller) -->
+    <a class="story-pager__back" href="/projects/">
+      <span class="story-pager__backArrow">↩</span>
+      <span>Back to Projects</span>
+    </a>
+  </div>
+</div>
+
+
+
+<!-- <div class="mobile-only">
   <hr class="faded"/>
 
   <p>Continue with <a class="heading flip-title" href="/experience/">Experience ↪</a></p>
   <p class="page-next"></p>
 
   <p><a class="page-back" href="/projects/">↩ Back to Projects</a></p>
-</div>
+</div> -->

@@ -1482,5 +1482,8 @@ img[src~="bordered"]:hover {
 // Gallery SCSS
 @import "my-gallery";
 
-// // Work Experience SCSS
+// Work Experience SCSS
 @import "my_experience";
+
+// Bottom Navigation (Mobile Only)
+@import "bottom_navigation_story"

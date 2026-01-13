@@ -1,0 +1,87 @@
+<section class="ocean-gallery" id="oceanGallery">
+  <!-- Local loading overlay (only covers this section) -->
+  <div class="ocean-gallery__loading" aria-live="polite" aria-label="Loading media">
+    <div class="ocean-gallery__loadingContainer">
+      <p class="ocean-gallery__counter">0%</p>
+      <div class="ocean-gallery__line" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <header class="ocean-gallery__header">
+    <h2 class="ocean-gallery__title">Gallery Example</h2>
+    <p class="ocean-gallery__subtitle">
+      Posters load first. Silent videos play on scroll. Audio pieces open in the modal.
+    </p>
+  </header>
+
+  <div class="ocean-gallery__masonry" role="list" data-masonry></div>
+
+  <!-- Modal (scoped; still fixed to viewport but styles are namespaced) -->
+  <div class="ocean-gallery__modal" aria-hidden="true" data-modal>
+    <div class="ocean-gallery__modalBackdrop" data-close="true"></div>
+
+    <div class="ocean-gallery__modalPanel" role="dialog" aria-modal="true" aria-label="Media viewer">
+      <button class="ocean-gallery__modalClose" type="button" data-close="true" aria-label="Close">✕</button>
+
+      <div class="ocean-gallery__modalMedia" data-modal-media></div>
+
+      <div class="ocean-gallery__modalMeta">
+        <div class="ocean-gallery__modalTitle" data-modal-title></div>
+
+        <div class="ocean-gallery__modalActions">
+          <button class="ocean-gallery__btn" type="button" data-modal-mute hidden>🔇 Muted</button>
+          <a class="ocean-gallery__btn ocean-gallery__btn--ghost" href="#" target="_blank" rel="noreferrer" data-modal-src hidden>
+            Open source
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script src="{{ '/assets/js/design_gallery_futuristic.js' | relative_url }}" defer></script>
+<script>
+    // ----------------------
+// Your media list
+// ----------------------
+    const MEDIA = [
+    { kind: "header", title: "<p class='small'>Soft stories and illustrations.</p>" },
+
+    { kind: "header", title: "<p><b>Scarlet World & Brand Art</b></p>" },
+    { kind: "image", title: "Clay Scarlet World", src: "/images/Canva/Clay Scarlet World.jpg" },
+    { kind: "image", title: "Plush Scarlet World", src: "/images/Canva/Plush Scarlet World.jpg" },
+    { kind: "image", title: "Scarlet Profile Icon", src: "/images/Canva/Facebook Profile Photo (720 x 720px).png" },
+    { kind: "image", title: "Scarlet Cover Photo", src: "/images/Canva/Scarlet Cover Photo (830 x 360 px).png" },
+    { kind: "image", title: "Scarlet Another Cover Photo", src: "/images/Canva/Scarlet Creative Software.png" },
+
+    { kind: "header", title: "<p><b>Scarlet Campaigns & Social Posts</b></p>" },
+    { kind: "image", title: "Freedom & Trust", src: "/images/Canva/freedom_and_trust.png" },
+    { kind: "image", title: "Happy Divali", src: "/images/Canva/Scarlet - Happy Divali.png" },
+    { kind: "image", title: "Scarlet Beach", src: "/images/Canva/Scarlet Beach.png" },
+
+    { kind: "video", title: "Let Go", thumb: "/images/Canva/thumbnail_images/Scarlet Creative Let Go.jpg", src: "/images/Canva/Scarlet Creative Let Go.mp4", hasAudio: false },
+    { kind: "image", title: "Scarlet Celebrating Creativity", src: "/images/Canva/Scarlet Most Creative.png" },
+    { kind: "video", title: "Republic Day 2025", thumb: "/images/Canva/thumbnail_images/Scarlet Republic Day 2025.jpg", src: "/images/Canva/Scarlet Republic Day 2025.mp4", hasAudio: false },
+    { kind: "video", title: "Long Weekend", thumb: "/images/Canva/thumbnail_images/Scarlet_long_weekend.jpg", src: "/images/Canva/Scarlet_long_weekend.mp4", hasAudio: false },
+    { kind: "video", title: "Taking the First Step", thumb: "/images/Canva/thumbnail_images/Taking the first step.jpg", src: "/images/Canva/Taking the first step.mp4", hasAudio: false },
+    { kind: "video", title: "Christmas!", thumb: "/images/Canva/thumbnail_images/Scarlet_Christmas.jpg", src: "/images/Canva/Scarlet_Christmas.mp4", hasAudio: false },
+
+    { kind: "header", title: "<p><b>Personal Illustrations & Mood Pieces</b></p>" },
+    { kind: "video", title: "Let Go and Flow like Water", thumb: "/images/Canva/thumbnail_images/Let_Go_Flow_Growth.jpg", src: "/images/Canva/Personal/Let_Go_Flow_Growth.mp4", hasAudio: false },
+    { kind: "video", title: "It's Okay to not be Okay", thumb: "/images/Canva/thumbnail_images/its_ok_to_not_be_ok.jpg", src: "/images/Canva/Personal/its_ok_to_not_be_ok.mp4", hasAudio: true },
+    { kind: "image", title: "Care, Compassion & Growth", src: "/images/Canva/Personal/Care_Compassion_Growth.jpg" },
+    { kind: "image", title: "Be Kind", src: "/images/Canva/Personal/Be_Kind.jpg" },
+    { kind: "image", title: "Cosy & Warm", src: "/images/Canva/Personal/Cosy_And_Warm.jpg" },
+    { kind: "video", title: "Floating In Space", thumb: "/images/Canva/thumbnail_images/Floating_Meditation.jpg", src: "/images/Canva/Personal/Floating_Meditation.mp4", hasAudio: true },
+    { kind: "video", title: "Let the Light Shine Through", thumb: "/images/Canva/thumbnail_images/Let_The_Light_Shine_Through.jpg", src: "/images/Canva/Personal/Let_The_Light_Shine_Through.mp4", hasAudio: false },
+    { kind: "video", title: "Space Adventure", thumb: "/images/Canva/thumbnail_images/Space_Adventure.jpg", src: "/images/Canva/Personal/Space_Adventure.mp4", hasAudio: false },
+    { kind: "video", title: "The Meet Up", thumb: "/images/Canva/thumbnail_images/The_Meet_Up.jpg", src: "/images/Canva/Personal/The_Meet_Up.mp4", hasAudio: true },
+    { kind: "video", title: "Where Have I Ended Up?", thumb: "/images/Canva/thumbnail_images/Where_Have_I_Ended_Up.jpg", src: "/images/Canva/Personal/Where_Have_I_Ended_Up.mp4", hasAudio: true },
+    { kind: "video", title: "You Are Enough <3", thumb: "/images/Canva/thumbnail_images/You_Are_Enough.jpg", src: "/images/Canva/Personal/You_Are_Enough.mp4", hasAudio: false },
+    { kind: "video", title: "The Reveal", thumb: "/images/Canva/thumbnail_images/Reveal.jpg", src: "/images/Canva/Personal/Reveal.mp4", hasAudio: false },
+    { kind: "video", title: "Cosy Penguin Family", thumb: "/images/Canva/thumbnail_images/Cosy_Penguin_Family.jpg", src: "/images/Canva/Personal/Cosy_Penguin_Family.mp4", hasAudio: true },
+    ];
+
+    initOceanGallery("#oceanGallery", MEDIA);
+</script>
