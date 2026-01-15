@@ -2,9 +2,11 @@
 
 .media-tabs {
     /* theme knobs */
-    --tab-text: rgba(255, 170, 185, 0.95); /* pink */
-    --tab-line: rgba(120, 195, 205, 0.85); /* teal */
-    --tab-line-active: rgba(120, 195, 205, 1);
+    // --tab-text: rgba(255, 170, 185, 0.95); /* pink */
+    --tab-text: #18485c;
+    // --tab-line: rgba(120, 195, 205, 0.85); /* teal */
+    --tab-line:rgba(120, 195, 205, 1);
+    --tab-line-active:#18485c;
 
     display: flex;
     justify-content: left;
@@ -129,7 +131,7 @@
 @supports (container-type: inline-size) {
   .media-tabs {
     container-type: inline-size;
-    container-name: mediaTabs;
+    // container-name: mediaTabs;
 
     /* when container queries are on, these become nicer than vw */
     gap: clamp(12px, 3cqi, 40px);

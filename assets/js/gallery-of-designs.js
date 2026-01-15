@@ -45,33 +45,33 @@
     ],
 
     baking: [
-      { kind: "image", title: "Dad Cake", src: "/images/baking/dad_cake.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Brownies", src: "/images/baking/brownies.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Chocolate Snow", src: "/images/baking/choc_snow.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Father's Day Red Velvet with Cream Cheese Icing Cake", src: "/images/baking/dad_cake.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Fudgy Brownies with Crackly Top", src: "/images/baking/brownies.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "White Chocolate Snow Men", src: "/images/baking/choc_snow.jpg", w: 1080, h: 1080 },
 
-      { kind: "image", title: "Cactus Cake", src: "/images/baking/cactus_cake.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Meringues", src: "/images/baking/meringues.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Brownies 2", src: "/images/baking/brownies2.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Cactus Chocolate Cupcake with Peanut Butter Icing", src: "/images/baking/cactus_cake.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Pink Meringues!", src: "/images/baking/meringues.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Fudgy Brownies with Semi-Sweet Chocolate Ganache", src: "/images/baking/brownies2.jpg", w: 1080, h: 1080 },
 
-      { kind: "image", title: "Mom Cake", src: "/images/baking/mom_cake.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Mom Cake 2", src: "/images/baking/mom_cake2.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Mom Cake 4", src: "/images/baking/mom_cake4.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Mom's Birthday Cake!", src: "/images/baking/mom_cake.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Mom's Birthday Cake", src: "/images/baking/mom_cake2.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Mom's Birthday Cake with Chocolate Ganache Side Drip", src: "/images/baking/mom_cake4.jpg", w: 1080, h: 1080 },
 
-      { kind: "image", title: "Dad Cake 3", src: "/images/baking/dad_cake3.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Birthday Cake", src: "/images/baking/bday_cake.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Birthday Cake 2", src: "/images/baking/bday_cake2.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Father's Day Red Velvet and Coffee Cake with Coffee Cream Cheese Icing", src: "/images/baking/dad_cake3.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Dark Soul's Themed Birthday Red Velvet with Cream Cheese Icing Cake for My S/O", src: "/images/baking/bday_cake.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Dark Soul's Themed Birthday Red Velvet with Cream Cheese Icing Cake for My S/O", src: "/images/baking/bday_cake2.jpg", w: 1080, h: 1080 },
 
-      { kind: "image", title: "Christmas New Year Cake", src: "/images/baking/christmas_newy_cake.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Ann Cake 3", src: "/images/baking/ann_cake3.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Ann Cake", src: "/images/baking/ann_cake.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Christmas/New Years Red Velvet with Cream Cheese Icing Cake", src: "/images/baking/christmas_newy_cake.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Anniversary Red Velvet Cake with Cream Cheese Icing", src: "/images/baking/ann_cake3.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Anniversary Red Velvet Cake with Cream Cheese Icing", src: "/images/baking/ann_cake.jpg", w: 1080, h: 1080 },
 
-      { kind: "image", title: "Dad Cake 2", src: "/images/baking/dad_cake2.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Mom Cake 3", src: "/images/baking/mom_cake3.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Ann Cake 2", src: "/images/baking/ann_cake2.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Father's Day Red Velvet Cake with Cream Cheese Icing", src: "/images/baking/dad_cake2.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Mother's Day Chocolate Cake with Chocolate Buttercream and Ganache", src: "/images/baking/mom_cake3.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Lord of the Rings Themed Birthday Cake for my S/O", src: "/images/baking/ann_cake2.jpg", w: 1080, h: 1080 },
 
-      { kind: "image", title: "Cupcake", src: "/images/baking/cupcake.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Cookies 2", src: "/images/baking/cookies2.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Cookies", src: "/images/baking/cookies.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Cute Red Velvet Cupcake", src: "/images/baking/cupcake.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Chewy Chocolate Chip Cookies", src: "/images/baking/cookies2.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Chewy Chocolate Chip and Cinnamon Cookies", src: "/images/baking/cookies.jpg", w: 1080, h: 1080 },
     ],
 
     documents: [
@@ -81,8 +81,8 @@
         desc: "A 60+ page, illustration-led portfolio sharing our story, values, services, case studies, and team.",
         thumb: "/assets/img/Scarlet_Creative_Company_Profile_Contact_Thumbnail.jpg",
         href: "/assets/docs/Scarlet_Creative_Company_Portfolio.pdf",
-        w: 1200,
-        h: 1600
+        w: 1414,
+        h: 2000
       },
       {
         kind: "doc",
@@ -90,8 +90,8 @@
         desc: "A concise 15-page profile introducing who we are, what we do, key projects, our tech stack, and the sectors we serve across the Caribbean and worldwide.",
         thumb: "/assets/img/Scarlet_Creative_Company_Profile_Thumbnail.jpg",
         href: "/assets/docs/Scarlet_Creative_Software_Company_Profile.pdf",
-        w: 1200,
-        h: 1600
+        w: 1414,
+        h: 2000
       }
     ],
 

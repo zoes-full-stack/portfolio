@@ -17,6 +17,11 @@ hide_description: true
   :email: [**gabbysewdhan@gmail.com**](mailto:gabbysewdhan@gmail.com)
 </div>
 
+
+<div markdown="0">
+{% include about.html %}
+</div>
+
 <!-- TODO: Get this to work -->
 {% include silly_worm.html %}
 
