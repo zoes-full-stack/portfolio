@@ -1481,9 +1481,21 @@ img[src~="bordered"]:hover {
 
 // Gallery SCSS
 @import "my-gallery";
+@import "media_tabs";
 
 // Work Experience SCSS
 @import "my_experience";
 
+// Gooey filter button
+@import "gooey-filter-button";
+
 // Bottom Navigation (Mobile Only)
-@import "bottom_navigation_story"
+@import "bottom_navigation_story";
+
+// Skills Complex Card
+@import "my_skills";
+
+// Silly Worm
+@import "silly_worm";
+
+

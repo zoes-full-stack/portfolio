@@ -61,8 +61,6 @@ menu:
     url:               /experience/
   - title:             Skills
     url:               /skills/ 
-  - title:             CV
-    url:               /cv/ 
   - title:             About
     url:               /about/
   # - title:             Baking

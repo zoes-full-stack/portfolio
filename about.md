@@ -9,13 +9,16 @@ hide_description: true
 ---
 
 :house_with_garden: **Trinidad & Tobago** &nbsp;
+> Download CV — [Here!](Resume/Gabriela_Sewdhan_Resume.pdf){:target="_blank"}{:.flip-title}
+{:.lead}
 
 <div class="mobile-only" markdown="1">
   :calling: **1 (868) 496-5529** &nbsp;
   :email: [**gabbysewdhan@gmail.com**](mailto:gabbysewdhan@gmail.com)
 </div>
 
-<!--author-->
+<!-- TODO: Get this to work -->
+{% include silly_worm.html %}
 
 ## Recent Technologies
 
@@ -88,6 +91,11 @@ hide_description: true
   <figure class="interest">
     <img src="/images/icons/astronomy.png" alt="Astronomy" loading="lazy">
     <figcaption>Astronomy</figcaption>
+  </figure>
+
+  <figure class="interest">
+    <img src="/images/icons/psychedelic_research.png" alt="Psychedelic Research" loading="lazy">
+    <figcaption>Psychedelic Research</figcaption>
   </figure>
 
 </div>
