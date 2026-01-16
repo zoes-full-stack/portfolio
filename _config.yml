@@ -63,10 +63,8 @@ menu:
     url:               /skills/ 
   - title:             About
     url:               /about/
-  - title:             Test
-    url:               /test/
-  # - title:             Baking
-  #   url:               /baking/
+  - title:             Labs
+    url:               /labs/
     # /Resume/GabrielaSewdhan_Resume.pdf
     # (https://gabrielasewdhan.github.io/portfolio/Resume/GabrielaSewdhan_Resume.pdf){:target="_blank"}
 

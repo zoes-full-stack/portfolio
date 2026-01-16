@@ -2,7 +2,7 @@
    Skills cards tilt (GSAP quickSetter)
    - Mouse-follow tilt on desktop hover
    - Smooth easing + gentle parallax
-   - Robust for Hydejack PJAX (waits for DOM insertion)
+   - Hydejack PJAX-safe (binds to #_pushState)
 */
 
 (function () {
@@ -125,7 +125,7 @@
   // Boot that waits for:
   // 1) GSAP to exist
   // 2) skill cards to be present (PJAX inserts content after events sometimes)
-  function boot(retries = 30) {
+  function boot(retries = 40) {
     if (!window.gsap) {
       if (retries <= 0) return;
       return setTimeout(() => boot(retries - 1), 60);
@@ -135,19 +135,24 @@
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         const ok = initSkillCardTilt(document);
-        if (!ok && retries > 0) setTimeout(() => boot(retries - 1), 80);
+        if (!ok && retries > 0) setTimeout(() => boot(retries - 1), 90);
       });
     });
   }
 
-  // Initial + safety nets
-  document.addEventListener("DOMContentLoaded", () => boot());
-  window.addEventListener("load", () => boot());
-  window.addEventListener("pageshow", () => boot());
+  function hookAllLoads(cb) {
+    document.addEventListener("DOMContentLoaded", cb, { passive: true });
+    window.addEventListener("load", cb, { passive: true });
+    window.addEventListener("pageshow", cb, { passive: true });
 
-  // Hydejack PJAX
-  document.addEventListener("hy-push-state-load", () => boot());
+    // Hydejack PJAX: bind to the element AND document (covers theme versions)
+    const ps = document.getElementById("_pushState");
+    if (ps) ps.addEventListener("hy-push-state-load", cb, { passive: true });
+    document.addEventListener("hy-push-state-load", cb, { passive: true });
 
-  // Turbo (if present)
-  document.addEventListener("turbo:load", () => boot());
+    // Turbo (if present)
+    document.addEventListener("turbo:load", cb, { passive: true });
+  }
+
+  hookAllLoads(() => boot());
 })();

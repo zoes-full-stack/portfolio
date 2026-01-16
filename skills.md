@@ -30,7 +30,7 @@ sitemap: false
 
   <hr class="faded"/>
 
-  Continue with [CV ↪](/cv/){:.heading.flip-title}
+  Continue with [About ↪](/about/){:.heading.flip-title}
   {:.page-next}
   [↩ Back to Experience](/experience/){:.page-back}
 </div>

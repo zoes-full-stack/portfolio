@@ -891,13 +891,23 @@
   // =========================
   // 11) Hooks for Hydejack / navigation
   // =========================
-  document.addEventListener("DOMContentLoaded", () => scheduleBoot(0));
-  window.addEventListener("load", () => scheduleBoot(0));
-  window.addEventListener("pageshow", () => scheduleBoot(0));
+  function hookAllLoads(cb) {
+    // normal load paths
+    document.addEventListener("DOMContentLoaded", cb, { passive: true });
+    window.addEventListener("load", cb, { passive: true });
+    window.addEventListener("pageshow", cb, { passive: true });
 
-  // Hydejack / PJAX
-  document.addEventListener("hy-push-state-load", () => scheduleBoot(0));
+    // Hydejack PJAX: prefer binding to the <hy-push-state> element
+    const ps = document.getElementById("_pushState");
+    if (ps) ps.addEventListener("hy-push-state-load", cb, { passive: true });
 
-  // Turbo (if present)
-  document.addEventListener("turbo:load", () => scheduleBoot(0));
+    // keep document listener too (harmless, helps if theme version dispatches there)
+    document.addEventListener("hy-push-state-load", cb, { passive: true });
+
+    // Turbo (if present)
+    document.addEventListener("turbo:load", cb, { passive: true });
+  }
+
+  hookAllLoads(() => scheduleBoot(0));
+
 })();

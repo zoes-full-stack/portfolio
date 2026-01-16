@@ -1490,9 +1490,6 @@ img[src~="bordered"]:hover {
 // Work Experience SCSS
 @import "my_experience";
 
-// Gooey filter button
-@import "gooey-filter-button";
-
 // Bottom Navigation (Mobile Only)
 @import "bottom_navigation_story";
 
@@ -1500,7 +1497,10 @@ img[src~="bordered"]:hover {
 @import "my_skills";
 
 // About Bean
-@import "about_bean";
+@import "about_deck";
+
+// Coming Soon 
+@import "coming_soon";
 
 // Silly Worm
 // @import "silly_worm";

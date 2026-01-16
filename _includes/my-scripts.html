@@ -8,31 +8,9 @@
 <script defer src="{{ '/assets/js/gallery-of-designs.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/skills-cards-tilt.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/experience.js' | relative_url }}"></script>
-<script defer src="{{ '/assets/js/bean-about-interaction.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/project-filters.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/labs-coming-soon.js' | relative_url }}"></script>
 
-
-<script>
-(function () {
-  function initTimelineOnce(selector, idPrefix) {
-    const el = document.querySelector(selector);
-    if (!el) return;
-
-    if (!window.CollapsibleTimeline) return;
-
-    if (el.dataset.timelineInit === "1") return;
-    el.dataset.timelineInit = "1";
-
-    new window.CollapsibleTimeline(selector, { idPrefix });
-  }
-
-  function runInits() {
-    initTimelineOnce("#experienceTimeline", "exp-item");
-    initTimelineOnce("#researchTimeline", "res-item");
-  }
-
-  window.addEventListener("DOMContentLoaded", runInits);
-
-  const ps = document.getElementById("_pushState");
-  if (ps) ps.addEventListener("hy-push-state-load", runInits);
-})();
-</script>
+{% if page.url contains '/about' %}
+  <script defer src="{{ '/assets/js/bean-about-interaction.js' | relative_url }}"></script>
+{% endif %}
