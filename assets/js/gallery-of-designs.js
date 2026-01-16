@@ -477,7 +477,13 @@
             <h4 class="doc-card__title">${title}</h4>
             <p class="doc-card__desc">${desc}</p>
             <p class="doc-card__link">
-              <a href="${href}" target="_blank" rel="noopener">View PDF →</a>
+              <a href="${href}" class="hover-partial-btn" target="_blank"  rel="noopener">
+                <span>View PDF</span>
+                <svg width="13px" height="10px" viewBox="0 0 13 10">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </a>
             </p>
           </div>
         </article>
