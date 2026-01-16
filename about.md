@@ -19,7 +19,7 @@ hide_description: true
 
 
 <div markdown="0">
-{% include about.html %}
+{% include about_test.html %}
 </div>
 
 <!-- TODO: Get this to work -->

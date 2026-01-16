@@ -19,8 +19,7 @@ sitemap: false
   </header>
   <hr> -->
 
-
-  {% include skills_test2.html %}
+  {% include skillset.html %}
 </div>
 
 

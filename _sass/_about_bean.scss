@@ -1,0 +1,575 @@
+
+// // Magical Bean holding menu
+
+// /* ================================
+//    Magical Bean (Card + Bean + Face)
+//    ================================ */
+
+// #about-bean-section.magical-bean-section {
+//   width: 100%;
+//   min-height: 50vh;
+//   background-color: #163442;
+//   display: flex;
+//   justify-content: center;
+//   align-items: flex-end;
+//   margin: 0;
+//   border-radius: 20px;
+//   position: relative;
+//   overflow: hidden; /* keeps rounded corners clean */
+// }
+
+// /* Optional helper class (recommended) to give room for menu bloom */
+// #about-bean-section.magical-bean-section.bean-stage{
+//   padding-top: 50px;
+//   padding-bottom: 320px; /* space for radial buttons so they don't overlap page text */
+//   // transition: padding-bottom 420ms ease;
+// }
+
+// #magical-about-bean-container {
+//   z-index: 0;
+//   position: absolute;
+//   inset: 0;
+//   background-color: transparent;
+//   transition: background-color 1.2s ease-in-out;
+// }
+
+// /* Bean body */
+// #magical-about-bean {
+//   cursor: pointer;
+//   margin: 0;
+//   background-color: #beecf4;
+//   width: min(250px, 50%);
+//   height: min(520px, 50%);
+//   aspect-ratio: 1 / 0.7;
+//   border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
+//   transition: background-color 600ms ease-in;
+//   position: relative; /* face + arms + holder anchor */
+//   z-index: 2;
+
+// /* Face parts */
+// #eye1, #eye2, #smile {
+//   border-width: 0.4vw;
+//   border-style: solid;
+//   position: absolute;
+//   box-sizing: border-box;
+//   transition: all 600ms ease-in;
+// }
+
+// /* Face (resting) */
+// #eye1, #eye2 {
+//   top: 38%;
+//   width: 10%;
+//   height: 2%;
+//   border-color: transparent transparent #3D550C transparent;
+//   border-radius: 40%;
+// }
+
+// #eye1 { left: 38%; }
+// #eye2 { left: 52%; }
+
+// #smile {
+//   top: 42%;
+//   left: 50%;
+//   width: 14%;
+//   height: 10%;
+//   transform: translateX(-50%);
+//   border-color: transparent transparent #30550C transparent;
+//   border-radius: 50%;
+// }
+
+// }
+
+// /* ================================
+//    Subtle blush cheeks
+//    ================================ */
+
+// /* Create two cheeks */
+// #magical-about-bean::marker { content: ""; } /* harmless, ignore if your editor nags */
+
+// #magical-about-bean .cheek { display:none; } /* in case you add later */
+
+// /* Use pseudo-elements so no HTML needed */
+// #magical-about-bean::before,
+// #magical-about-bean::after{
+//   /* (you already use ::before/::after for arms)
+//      so we CAN'T use them for cheeks here */
+// }
+
+// /* Cheeks live on the smile element */
+// #smile::before,
+// #smile::after{
+//   content:"";
+//   position:absolute;
+//   width: 40px;
+//   height: 22px;
+//   border-radius: 999px;
+//   opacity: 0;
+//   transform: translateY(6px);
+//   transition: opacity 450ms ease, transform 450ms ease, filter 450ms ease;
+
+//   /* blush color + softness */
+//   background: radial-gradient(circle at 40% 40%,
+//     rgba(255, 120, 150, 0.45),
+//     rgba(255, 120, 150, 0.10) 55%,
+//     rgba(255, 120, 150, 0) 75%);
+//   filter: blur(0.2px);
+//   pointer-events: none;
+// }
+
+// /* Position cheeks relative to the smile */
+// #smile::before{
+//   left: -54px;   /* tweak for spacing */
+//   top: 35px;
+// }
+
+// #smile::after{
+//   right: -54px;
+//   top: 35px;
+// }
+
+// /* On bean hover, cheeks appear */
+// #magical-about-bean:hover #smile::before,
+// #magical-about-bean:hover #smile::after{
+//   opacity: 1;
+//   transform: translateY(0);
+// }
+
+
+// /* Hover expression */
+// #magical-about-bean:hover {
+//   background-color: #ffb04c;
+// }
+
+// #magical-about-bean:hover #smile {
+//   top: 32%;
+//   width: 28%;
+//   height: 20%;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   border-radius: 50%;
+//   transition: all 650ms ease-out;
+// }
+
+// #magical-about-bean:hover #eye1,
+// #magical-about-bean:hover #eye2 {
+//   top: 30%;
+//   width: 10%;
+//   height: 18%;
+//   border-radius: 50%;
+//   transition: all 600ms ease-in;
+// }
+
+// #magical-about-bean:hover #eye1 { left: 36%; }
+// #magical-about-bean:hover #eye2 { left: 54%; }
+
+// /* Background tint on hover */
+// #magical-about-bean:hover + #magical-about-bean-container {
+//   background-color: #f5e9b7;
+// }
+
+
+// /* ================================
+//    Arms (pseudo-elements, click-safe)
+//    ================================ */
+
+// #magical-about-bean::before,
+// #magical-about-bean::after{
+//   content:"";
+//   position: absolute;
+//   bottom: -38px;
+//   width: 160px;
+//   height: 70px;
+//   background: inherit;
+//   border-radius: 999px;
+//   z-index: 20;                 /* visible above menu */
+//   pointer-events: none;        /* ✅ never block clicking */
+//   box-shadow: 0 14px 22px rgba(0,0,0,0.10);
+//   filter: brightness(0.98);
+//   pointer-events: none;
+// }
+
+// /* Left arm */
+// #magical-about-bean::before{
+//   left: 6%;
+//   transform: rotate(12deg);
+//   transform-origin: right center;
+//   clip-path: polygon(0 8%, 92% 0, 100% 50%, 92% 100%, 0 92%);
+//   background:
+//     radial-gradient(circle at 92% 55%, rgba(0,0,0,0.05) 0 22px, transparent 23px),
+//     inherit;
+// }
+
+// /* Right arm */
+// #magical-about-bean::after{
+//   right: 6%;
+//   transform: rotate(-12deg);
+//   transform-origin: left center;
+//   clip-path: polygon(8% 0, 100% 8%, 100% 92%, 8% 100%, 0 50%);
+//   background:
+//     radial-gradient(circle at 8% 55%, rgba(0,0,0,0.05) 0 22px, transparent 23px),
+//     inherit;
+// }
+
+
+// /* ================================
+//    Bean Menu Dock (inside bean)
+//    ================================ */
+
+// #magical-about-bean .bean-hold{
+//   position: absolute;
+//   left: 50%;
+//   top: 100%;                 /* anchor at the bean's bottom */
+//   bottom: auto;              /* important */
+//   transform: translateX(-50%) translateY(-64px); /* pull up into the hands */
+//   z-index: 6;
+//   width: 280px;
+//   height: 280px;
+//   pointer-events: none;      /* holder doesn't block clicks */
+// }
+
+/* =========================================
+   ABOUT BEAN (Scoped)
+   Light, clean, ocean themed
+   ========================================= */
+.about-bean{
+  --ink: rgba(12, 28, 38, .94);
+  --muted: rgba(12, 28, 38, .70);
+  --line: rgba(12, 28, 38, .14);
+
+  --glass: rgba(255, 255, 255, .72);
+  --glass2: rgba(255, 255, 255, .52);
+
+  --seaA: rgba(190, 236, 244, .95);
+  --seaB: rgba(210, 248, 242, .92);
+  --seaC: rgba(255, 255, 255, .35);
+
+  --beanA: #beecf4;
+  --beanB: #ffb04c; /* warm highlight used on certain modes */
+  --face: rgba(15, 60, 70, .88);
+
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: clamp(1rem, 2.4vw, 1.5rem);
+  background:
+    radial-gradient(900px 520px at 20% -10%, rgba(197,245,236,.55), transparent 60%),
+    radial-gradient(750px 460px at 90% 0%, rgba(255,255,255,.18), transparent 55%),
+    linear-gradient(180deg, rgba(10,38,52,.05), rgba(10,38,52,.01));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 50px rgba(0,0,0,.08);
+  color: var(--ink);
+}
+
+.about-bean__grid{
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) 1fr;
+  gap: 1.1rem;
+  align-items: center;
+}
+
+.about-bean__header{ margin-bottom: .85rem; }
+.about-bean__title{ margin: 0 0 .25rem; }
+.about-bean__hook{ margin: 0; color: var(--muted); line-height: 1.5; }
+
+.about-bean__card{
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(180deg, var(--glass), var(--glass2));
+  padding: 1rem;
+  min-height: 210px;
+}
+
+.about-bean__content p{ margin: .55rem 0; line-height: 1.65; }
+.about-bean__content ul{ margin: .65rem 0 0; padding-left: 1.1rem; }
+.about-bean__content li{ margin: .35rem 0; }
+
+/* Tabs */
+.about-bean__nav{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: .9rem;
+}
+
+.ab-tab{
+  border: 1px solid rgba(12,28,38,.16);
+  background: rgba(255,255,255,.45);
+  border-radius: 999px;
+  padding: .45rem .75rem;
+  font-size: .95rem;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.ab-tab:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(0,0,0,.08);
+}
+
+.ab-tab.is-active{
+  background: rgba(255,255,255,.72);
+  box-shadow: 0 10px 18px rgba(0,0,0,.10);
+}
+
+/* Stage */
+.about-bean__sea{
+  position: relative;
+  height: 340px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--seaA), var(--seaB));
+}
+
+.about-bean__ripples{
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,.40), transparent 42%),
+    radial-gradient(circle at 75% 40%, rgba(255,255,255,.30), transparent 45%),
+    radial-gradient(circle at 55% 75%, rgba(255,255,255,.24), transparent 44%);
+  opacity: .55;
+  filter: blur(1px);
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .about-bean__ripples{
+    animation: ab_ripple 8s ease-in-out infinite;
+  }
+  @keyframes ab_ripple{
+    0%,100%{ transform: translate(0,0) scale(1); }
+    50%{ transform: translate(2.5%, -1.5%) scale(1.03); }
+  }
+}
+
+.about-bean__beanwrap{
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 260px;
+}
+
+/* Bean shape (based on your welcome bean, but scoped + simplified) */
+.about-bean__bean{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 240px;
+  height: 165px;
+  transform: translate(-50%, -50%);
+  background: var(--beanA);
+  border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
+  box-shadow: 0 18px 32px rgba(0,0,0,.10);
+  border: 1px solid rgba(12,28,38,.10);
+  transition: background .45s ease, transform .45s ease, box-shadow .45s ease, filter .45s ease;
+}
+
+/* Arms (cute but subtle) */
+.about-bean__bean::before,
+.about-bean__bean::after{
+  content:"";
+  position:absolute;
+  bottom:-22px;
+  width: 86px;
+  height: 40px;
+  background: inherit;
+  border-radius: 999px;
+  opacity: .95;
+  box-shadow: 0 12px 18px rgba(0,0,0,.08);
+  border: 1px solid rgba(12,28,38,.08);
+  filter: brightness(.99);
+  pointer-events: none;
+}
+.about-bean__bean::before{ left: 12px; transform: rotate(10deg); }
+.about-bean__bean::after{ right: 12px; transform: rotate(-10deg); }
+
+/* Face */
+.about-bean__eye,
+.about-bean__smile{
+  position: absolute;
+  box-sizing: border-box;
+  transition: transform .35s ease, top .35s ease, width .35s ease, height .35s ease, border-color .35s ease;
+}
+
+.about-bean__eye{
+  top: 62px;
+  width: 18px;
+  height: 18px;
+  background: var(--face);
+  border-radius: 50%;
+  transform-origin: 50% 50%;
+}
+.about-bean__eye--l{ left: 92px; }
+.about-bean__eye--r{ left: 130px; }
+
+.about-bean__smile{
+  top: 82px;
+  left: 50%;
+  width: 40px;
+  height: 24px;
+  transform: translateX(-50%);
+  border: 3px solid transparent;
+  border-bottom-color: rgba(15,60,70,.82);
+  border-radius: 0 0 999px 999px;
+}
+
+/* Blush (minimal) */
+.about-bean__bean::marker{ content:""; } /* harmless */
+.about-bean__smile::before,
+.about-bean__smile::after{
+  content:"";
+  position:absolute;
+  width: 34px;
+  height: 18px;
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 350ms ease, transform 350ms ease;
+  background: radial-gradient(circle at 40% 40%,
+    rgba(255, 120, 150, .38),
+    rgba(255, 120, 150, .10) 55%,
+    rgba(255, 120, 150, 0) 75%);
+  pointer-events: none;
+}
+.about-bean__smile::before{ left: -62px; top: 8px; }
+.about-bean__smile::after{ right: -62px; top: 8px; }
+
+/* Bubbles */
+.about-bean__bubbles .bb{
+  position:absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(rgba(255,255,255,.75), rgba(255,255,255,.15));
+  border: 1px solid rgba(255,255,255,.65);
+  opacity: 0;
+  transform: translateY(10px) scale(.9);
+}
+.about-bean__bubbles .bb1{ left: 20%; top: 25%; }
+.about-bean__bubbles .bb2{ left: 76%; top: 30%; width: 8px; height: 8px; }
+.about-bean__bubbles .bb3{ left: 60%; top: 18%; width: 6px; height: 6px; }
+.about-bean__bubbles .bb4{ left: 30%; top: 10%; width: 12px; height: 12px; }
+.about-bean__bubbles .bb5{ left: 50%; top: 6%; width: 7px; height: 7px; }
+.about-bean__bubbles .bb6{ left: 86%; top: 16%; width: 9px; height: 9px; }
+.about-bean__bubbles .bb7{ left: 12%; top: 42%; width: 8px; height: 8px; }
+.about-bean__bubbles .bb8{ left: 74%; top: 52%; width: 6px; height: 6px; }
+.about-bean__bubbles .bb9{ left: 40%; top: 55%; width: 11px; height: 11px; }
+
+@media (prefers-reduced-motion: no-preference){
+  .about-bean__bean{
+    animation: ab_float 3.2s ease-in-out infinite;
+  }
+  @keyframes ab_float{
+    0%,100%{ transform: translate(-50%, -50%) translateY(0); }
+    50%{ transform: translate(-50%, -50%) translateY(-10px); }
+  }
+}
+
+/* Caption */
+.about-bean__caption{
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  right: 12px;
+  border: 1px solid rgba(255,255,255,.45);
+  background: rgba(255,255,255,.18);
+  border-radius: 16px;
+  padding: .7rem .8rem;
+  backdrop-filter: blur(8px);
+}
+.about-bean__captionTitle{
+  font-size: .95rem;
+  letter-spacing: .02em;
+  font-weight: 650;
+  color: rgba(10,28,38,.92);
+}
+.about-bean__captionSub{
+  margin-top: .15rem;
+  font-size: .9rem;
+  color: rgba(10,28,38,.75);
+}
+
+/* =========================================
+   Modes (triggered by buttons)
+   ========================================= */
+
+/* HELLO: happy + blush */
+.about-bean.mode-hello .about-bean__smile::before,
+.about-bean.mode-hello .about-bean__smile::after{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* NORTH STAR: eyes look up + subtle bright */
+.about-bean.mode-northstar .about-bean__eye{ transform: translateY(-2px) scale(1.02); }
+.about-bean.mode-northstar .about-bean__bean{ filter: brightness(1.03); }
+
+/* VALUES: calm “pulse” */
+@media (prefers-reduced-motion: no-preference){
+  .about-bean.mode-values .about-bean__bean{
+    animation: ab_float 3.2s ease-in-out infinite, ab_pulse 1.3s ease-in-out 2;
+  }
+  @keyframes ab_pulse{
+    0%,100%{ filter: brightness(1); }
+    50%{ filter: brightness(1.06); }
+  }
+}
+
+/* CURIOSITIES: tiny tilt */
+@media (prefers-reduced-motion: no-preference){
+  .about-bean.mode-curiosities .about-bean__bean{
+    animation: ab_float 3.2s ease-in-out infinite, ab_tilt 1.2s ease-in-out 1;
+  }
+  @keyframes ab_tilt{
+    0%{ transform: translate(-50%, -50%) rotate(0deg); }
+    100%{ transform: translate(-50%, -50%) rotate(4deg); }
+  }
+}
+
+/* BUILD: warm + bubbles */
+.about-bean.mode-build .about-bean__bean{ background: color-mix(in srgb, var(--beanA) 65%, var(--beanB) 35%); }
+.about-bean.mode-build .about-bean__smile{ border-bottom-color: rgba(15,60,70,.90); }
+
+@media (prefers-reduced-motion: no-preference){
+  .about-bean.mode-build .about-bean__bubbles .bb{
+    opacity: 1;
+    animation: ab_bubble 1.2s ease-out 1;
+  }
+  .about-bean.mode-build .about-bean__bubbles .bb2{ animation-delay: .05s; }
+  .about-bean.mode-build .about-bean__bubbles .bb3{ animation-delay: .10s; }
+  .about-bean.mode-build .about-bean__bubbles .bb4{ animation-delay: .12s; }
+  .about-bean.mode-build .about-bean__bubbles .bb5{ animation-delay: .18s; }
+  .about-bean.mode-build .about-bean__bubbles .bb6{ animation-delay: .22s; }
+  .about-bean.mode-build .about-bean__bubbles .bb7{ animation-delay: .14s; }
+  .about-bean.mode-build .about-bean__bubbles .bb8{ animation-delay: .26s; }
+  .about-bean.mode-build .about-bean__bubbles .bb9{ animation-delay: .30s; }
+
+  @keyframes ab_bubble{
+    0%{ transform: translateY(12px) scale(.85); opacity: 0; }
+    20%{ opacity: 1; }
+    100%{ transform: translateY(-38px) scale(1.15); opacity: 0; }
+  }
+}
+
+/* Reduced motion: stop all animations */
+@media (prefers-reduced-motion: reduce){
+  .about-bean__ripples,
+  .about-bean__bean,
+  .about-bean.mode-values .about-bean__bean,
+  .about-bean.mode-curiosities .about-bean__bean,
+  .about-bean.mode-build .about-bean__bubbles .bb{
+    animation: none !important;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .about-bean__grid{ grid-template-columns: 1fr; }
+  .about-bean__sea{ height: 320px; }
+  .about-bean__beanwrap{ width: 260px; height: 250px; }
+  .about-bean__bean{ width: 220px; height: 152px; }
+  .about-bean__eye--l{ left: 84px; }
+  .about-bean__eye--r{ left: 120px; }
+}
+
