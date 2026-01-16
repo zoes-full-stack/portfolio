@@ -5,12 +5,13 @@
   const state = {
     tl: null,
     bubbles: [],
-    cleanup: () => {}
+    cleanup: () => {},
+    scheduled: false
   };
 
+  // --- tiny SplitText replacement (wrap each character) ---
   function splitToSpans(el) {
     if (!el) return [];
-    // If already split, reuse
     const existing = el.querySelectorAll(".char");
     if (existing && existing.length) return Array.from(existing);
 
@@ -29,60 +30,107 @@
     return Array.from(el.querySelectorAll(".char"));
   }
 
-  function clearBubbles(canvas) {
+  function clearScene(canvas) {
     if (!canvas) return;
     canvas.querySelectorAll(".bubble").forEach((b) => b.remove());
+    canvas.querySelectorAll(".lume").forEach((n) => n.remove());
     state.bubbles = [];
   }
 
-  function killTweens() {
+  function resetText(canvas) {
+    if (!canvas) return;
+
+    const reefLetters = canvas.querySelectorAll(".reef-letter");
+    const brandLine = canvas.querySelector("#brandLine");
+    const soonLine = canvas.querySelector("#soonLine");
+
+    // Ensure baseline visibility even if GSAP got killed mid-"from"
+    reefLetters.forEach((el) => {
+      el.style.opacity = "";
+      el.style.transform = "";
+      el.style.letterSpacing = "";
+    });
+
+    if (brandLine) {
+      brandLine.style.opacity = "";
+      brandLine.style.transform = "";
+      brandLine.style.letterSpacing = "";
+      brandLine.querySelectorAll(".char").forEach((c) => {
+        c.style.opacity = "";
+        c.style.transform = "";
+        c.style.letterSpacing = "";
+      });
+    }
+
+    if (soonLine) {
+      soonLine.style.opacity = "";
+      soonLine.style.transform = "";
+      soonLine.style.letterSpacing = "";
+      soonLine.querySelectorAll(".char").forEach((c) => {
+        c.style.opacity = "";
+        c.style.transform = "";
+        c.style.letterSpacing = "";
+      });
+    }
+
+    // If GSAP exists, also clear inline props it may have set
+    if (window.gsap) {
+      try {
+        gsap.set([reefLetters, brandLine?.querySelectorAll(".char"), soonLine?.querySelectorAll(".char")], {
+          clearProps: "opacity,transform,letterSpacing"
+        });
+      } catch (_) {}
+    }
+  }
+
+  function killTweens(canvas) {
     if (!window.gsap) return;
+
+    // Kill timeline
     if (state.tl) state.tl.kill();
     state.tl = null;
 
-    // kill all bubble tweens too
+    // Kill bubble tweens
     state.bubbles.forEach((b) => gsap.killTweensOf(b));
+
+    // Important: if we killed mid-animation, restore visibility
+    resetText(canvas);
   }
 
   function init() {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
     const canvas = document.getElementById("oceanCanvas");
     if (!canvas) {
-      // Not on this page, do nothing, no errors
       state.cleanup = () => {};
       return;
     }
 
-    // Mark bound to prevent duplicate listeners
-    if (canvas.dataset.labsBound === "1") {
-      // still refresh sizes safely on PJAX (rebuild)
-    }
-    canvas.dataset.labsBound = "1";
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const streak = canvas.querySelector(".bubble-streak");
     const reefLetters = Array.from(canvas.querySelectorAll(".reef-letter"));
-    const brandLine = document.getElementById("brandLine");
-    const soonLine = document.getElementById("soonLine");
+    const brandLine = canvas.querySelector("#brandLine");
+    const soonLine = canvas.querySelector("#soonLine");
 
-    // Always split safely (prevents double splitting)
     const brandChars = splitToSpans(brandLine);
     const soonChars = splitToSpans(soonLine);
 
     // Cleanup any previous run
-    killTweens();
-    clearBubbles(canvas);
+    killTweens(canvas);
+    clearScene(canvas);
 
-    // If GSAP isn't present, show a static pretty scene with a few bubbles and exit
+    // If GSAP isn't present OR reduced motion, render a static scene and exit
     const hasGSAP = !!window.gsap && gsap.utils && gsap.timeline;
     if (!hasGSAP || reduceMotion) {
-      // Static bubble sprinkle (no animation)
+      // Make sure text is visible in static mode
+      resetText(canvas);
+
+      // Static sprinkle
       const rect = canvas.getBoundingClientRect();
       const W = rect.width || 800;
-      const H = rect.height || 500;
+      const H = rect.height || 600;
 
-      const count = reduceMotion ? 60 : 90;
-      for (let i = 0; i < count; i++) {
+      const bubbleCount = reduceMotion ? 60 : 90;
+      for (let i = 0; i < bubbleCount; i++) {
         const b = document.createElement("div");
         b.className = "bubble";
         const size = Math.random() * 6 + 2;
@@ -90,48 +138,52 @@
         b.style.height = `${size}px`;
         b.style.left = `${Math.random() * W}px`;
         b.style.top = `${Math.random() * H}px`;
-        b.style.opacity = (Math.random() * 0.5 + 0.2).toFixed(2);
+        b.style.opacity = (Math.random() * 0.45 + 0.25).toFixed(2);
         canvas.appendChild(b);
         state.bubbles.push(b);
       }
 
-      state.cleanup = () => {
-        clearBubbles(canvas);
-      };
+      // A few static “lumes”
+      for (let i = 0; i < 10; i++) {
+        const n = document.createElement("div");
+        n.className = "lume";
+        n.style.left = `${Math.random() * W}px`;
+        n.style.top = `${(Math.random() * 0.8 + 0.15) * H}px`;
+        n.style.opacity = (Math.random() * 0.4 + 0.25).toFixed(2);
+        canvas.appendChild(n);
+      }
+
+      state.cleanup = () => clearScene(canvas);
       return;
     }
 
-    // --- bubble field (plankton) ---
-    function makeBubbles(count = 220) {
+    // --- bubble field ---
+    function makeBubbles(count = 200) {
       const rect = canvas.getBoundingClientRect();
-      const W = rect.width;
-      const H = rect.height;
+      const W = rect.width || 800;
+      const H = rect.height || 600;
 
       for (let i = 0; i < count; i++) {
         const b = document.createElement("div");
         b.className = "bubble";
 
-        const size = gsap.utils.random(2, 8);
-        const x = gsap.utils.random(0, W);
-        const y = gsap.utils.random(0, H);
-        const o = gsap.utils.random(0.15, 0.9);
-
+        const size = gsap.utils.random(2, 7);
         b.style.width = `${size}px`;
         b.style.height = `${size}px`;
-        b.style.left = `${x}px`;
-        b.style.top = `${y}px`;
-        b.style.opacity = o;
+        b.style.left = `${gsap.utils.random(0, W)}px`;
+        b.style.top = `${gsap.utils.random(0, H)}px`;
+        b.style.opacity = gsap.utils.random(0.18, 0.75);
 
         canvas.appendChild(b);
         state.bubbles.push(b);
 
-        const dur = gsap.utils.random(6, 16);
+        const dur = gsap.utils.random(7, 18);
         const drift = gsap.utils.random(-60, 60);
 
         gsap.to(b, {
-          y: `-=${H + 120}`,
+          y: `-=${H + 140}`,
           x: `+=${drift}`,
-          opacity: gsap.utils.random(0.05, 0.5),
+          opacity: gsap.utils.random(0.06, 0.45),
           duration: dur,
           ease: "none",
           repeat: -1,
@@ -139,14 +191,14 @@
           modifiers: {
             y: gsap.utils.unitize((v) => {
               const n = parseFloat(v);
-              return n < -H ? n + H + 220 : n;
+              return n < -H ? n + H + 240 : n;
             })
           }
         });
 
         gsap.to(b, {
-          scale: gsap.utils.random(0.2, 1.2),
-          duration: gsap.utils.random(0.6, 1.4),
+          scale: gsap.utils.random(0.25, 1.15),
+          duration: gsap.utils.random(0.7, 1.6),
           ease: "sine.inOut",
           repeat: -1,
           yoyo: true,
@@ -155,22 +207,54 @@
       }
     }
 
-    // --- shooting bubble streak ---
+    // --- biolume critters (few, transform-only) ---
+    function makeLumes(count = 14) {
+      const rect = canvas.getBoundingClientRect();
+      const W = rect.width || 800;
+      const H = rect.height || 600;
+
+      for (let i = 0; i < count; i++) {
+        const n = document.createElement("div");
+        n.className = "lume";
+        n.style.left = `${gsap.utils.random(0, W)}px`;
+        n.style.top = `${gsap.utils.random(H * 0.15, H * 0.92)}px`;
+        canvas.appendChild(n);
+
+        const dur = gsap.utils.random(10, 18);
+
+        gsap.to(n, { opacity: gsap.utils.random(0.35, 0.75), duration: 1.1, ease: "sine.out" });
+
+        gsap.to(n, {
+          x: `+=${gsap.utils.random(-90, 90)}`,
+          y: `+=${gsap.utils.random(-60, 60)}`,
+          rotation: `+=${gsap.utils.random(-35, 35)}`,
+          duration: dur,
+          ease: "sine.inOut",
+          yoyo: true,
+          repeat: -1
+        });
+
+        gsap.to(n, {
+          scale: gsap.utils.random(0.75, 1.25),
+          duration: gsap.utils.random(1.4, 2.6),
+          ease: "sine.inOut",
+          yoyo: true,
+          repeat: -1
+        });
+      }
+    }
+
+    // --- shooting streak ---
     function shootingBubble() {
-      if (!streak) return gsap.timeline(); // no-op if missing
+      if (!streak) return gsap.timeline();
 
       const rect = canvas.getBoundingClientRect();
       const W = rect.width || 800;
 
-      gsap.set(streak, { x: W * 0.75, y: -180, scale: 0.0, opacity: 0 });
+      gsap.set(streak, { x: W * 0.75, y: -180, scale: 0, opacity: 0 });
 
       return gsap.timeline()
-        .to(streak, {
-          duration: 0.9,
-          opacity: 1,
-          scale: 1,
-          ease: "power2.out"
-        })
+        .to(streak, { duration: 0.9, opacity: 1, scale: 1, ease: "power2.out" })
         .to(streak, {
           duration: 1.2,
           x: `-=${W + 520}`,
@@ -181,8 +265,12 @@
         }, "<");
     }
 
-    // Build bubbles once
-    makeBubbles(220);
+    // Build scene
+    makeBubbles(200);
+    makeLumes(14);
+
+    // Ensure text is visible before animating "from"
+    resetText(canvas);
 
     // Loop timeline
     const loop = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 3 });
@@ -217,27 +305,33 @@
 
     state.tl = loop;
 
-    // Resize: rebuild bubbles + streak path without reloading
+    // Resize: rebuild scene cleanly
     let resizeTimer;
     const onResize = () => {
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        killTweens();
-        clearBubbles(canvas);
-        init(); // re-init cleanly
-      }, 200);
+      resizeTimer = setTimeout(() => scheduleInit(), 200);
     };
 
     window.addEventListener("resize", onResize, { passive: true });
 
     state.cleanup = () => {
       window.removeEventListener("resize", onResize);
-      killTweens();
-      clearBubbles(canvas);
+      killTweens(canvas);
+      clearScene(canvas);
     };
   }
 
-  // Hydejack-safe load hooks
+  // ✅ Batch multiple load events into a single init
+  function scheduleInit() {
+    if (state.scheduled) return;
+    state.scheduled = true;
+
+    requestAnimationFrame(() => {
+      state.scheduled = false;
+      init();
+    });
+  }
+
   function hookAllLoads(cb) {
     document.addEventListener("DOMContentLoaded", cb, { passive: true });
     window.addEventListener("load", cb, { passive: true });
@@ -250,7 +344,7 @@
     document.addEventListener("turbo:load", cb, { passive: true });
   }
 
-  hookAllLoads(init);
+  hookAllLoads(scheduleInit);
 
   window.__LabsComingSoon = {
     cleanup: () => state.cleanup()

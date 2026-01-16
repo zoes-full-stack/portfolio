@@ -22,9 +22,6 @@ hide_description: true
 {% include about.html %}
 </div>
 
-<!-- TODO: Get this to work -->
-{% include silly_worm.html %}
-
 ## Recent Technologies
 
 {% include tech.md %}

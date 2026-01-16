@@ -9,8 +9,8 @@
   --line: rgba(12, 28, 38, 0.14);
   --glass: rgba(255, 255, 255, 0.78);
   --glass2: rgba(255, 255, 255, 0.56);
-  --seaA: rgba(190, 236, 244, 0.95);
-  --seaB: rgba(210, 248, 242, 0.92);
+  --seaA:  #e3fff0;
+  --seaB: rgb(95 251 255 / 92%);
 
   position: relative;
   border-radius: 22px;
@@ -168,7 +168,7 @@
 /* Bean body */
 #magical-about-bean {
   cursor: default;
-  background-color: #beecf4;
+  background-color: #ccfffc;
   width: 220px;
   height: 152px;
   aspect-ratio: 1 / 0.7;
