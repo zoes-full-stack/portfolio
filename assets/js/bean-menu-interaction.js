@@ -1,6 +1,6 @@
 (() => {
   const bean = document.getElementById("magical-bean");
-  const toggle = document.getElementById("menu-open");
+  const toggle = document.getElementById("bean-menu-open");
   if (!bean || !toggle) return;
 
   const isTouch = window.matchMedia("(hover: none), (pointer: coarse)").matches;

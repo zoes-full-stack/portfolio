@@ -18,6 +18,16 @@
   --o404-radius: 22px;
 }
 
+body.ocean404-page,
+body.ocean404-page #_main,
+body.ocean404-page #_content {
+  background:
+    radial-gradient(1200px 700px at 25% 15%, rgba(120,255,240,.10), transparent 60%),
+    radial-gradient(900px 700px at 80% 25%, rgba(110,180,255,.10), transparent 62%),
+    radial-gradient(1200px 900px at 50% 90%, rgba(150,120,255,.08), transparent 70%),
+    linear-gradient(180deg, #061a24, #04070d) !important;
+}
+
 .o404{
   position: relative;
   min-height: 70vh;

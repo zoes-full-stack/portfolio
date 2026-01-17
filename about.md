@@ -1,6 +1,6 @@
 ---
 layout: about
-title: About
+title: Who Am I?
 guide: About
 image:
 description: >
@@ -8,18 +8,37 @@ description: >
 hide_description: true
 ---
 
-:house_with_garden: **Trinidad & Tobago** &nbsp;
-> Download CV — [Here!](Resume/Gabriela_Sewdhan_Resume.pdf){:target="_blank"}{:.flip-title}
-{:.lead}
-
-<div class="mobile-only" markdown="1">
-  :calling: **1 (868) 496-5529** &nbsp;
-  :email: [**gabbysewdhan@gmail.com**](mailto:gabbysewdhan@gmail.com)
-</div>
-
 
 <div markdown="0">
 {% include about.html %}
+</div>
+
+
+<div class="row-container" markdown="0">
+    <div class="two-column">
+      <div class="doc-card__link">
+
+        <a href="/Resume/Gabriela_Sewdhan_Resume.pdf" class="hover-partial-btn" target="_blank"  rel="noopener">
+          <span>Download CV</span>
+          <svg width="13px" height="10px" viewBox="0 0 13 10">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  <div class="two-column">
+    <div class="doc-card__link" markdown="0">
+
+      <a href="mailto:gabbysewdhan@gmail.com" class="hover-partial-btn" target="_blank"  rel="noopener">
+        <span>Email Me!</span>
+        <svg width="13px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
 </div>
 
 ## Recent Technologies

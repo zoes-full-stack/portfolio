@@ -67,7 +67,17 @@
 }
 
 
+.row-container {
+    display: grid;
+    /* Creates two columns of equal width */
+    grid-template-columns: 1fr 1fr;
+    /* Adds a gap between columns for spacing */
+    gap: 15px;
+}
 
+.two-column {
+    width: 100%;
+}
 
 span {
   content: "\2192";
@@ -698,7 +708,7 @@ img[src~="bordered"]:hover {
   border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
   transition: background-color 600ms ease-in;
   position: relative; /* face + arms + holder anchor */
-  z-index: 2;
+  z-index: 5;
 }
 
 /* Face parts */
@@ -912,6 +922,11 @@ img[src~="bordered"]:hover {
 //   }
 // }
 
+#magical-bean-container,
+.bean-waves,
+.bean-waves svg {
+  pointer-events: none;
+}
 
 /* ================================
    Radial Menu (Words version)
