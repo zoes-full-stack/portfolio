@@ -41,10 +41,6 @@ hide_description: true
   </div>
 </div>
 
-## Recent Technologies
-
-{% include tech.md %}
-
 ## Interests
 
 <div markdown="0" class="interests-grid">

@@ -74,12 +74,8 @@
       content.style.minHeight = Math.max(maxH + 24, 360) + "px";
       story.classList.add("deck-ready");
 
-      // Make first step visible immediately
-      gsap.set(steps[0], { autoAlpha: 1, y: 0 });
-      steps[0].classList.add("is-active");
-
-      // ---- Text: prepare hidden ----
-      steps.forEach((s) => gsap.set(s, { autoAlpha: 0, y: 20 }));
+      // ---- Initialize text steps hidden ----
+      steps.forEach((s) => gsap.set(s, { autoAlpha: 0, y: 0 }));
 
       // ---- Master timeline ----
       const motionTL = gsap.timeline({
@@ -113,7 +109,6 @@
           duration: 1,
           ease: "power1.inOut",
           onUpdate: () => {
-            // optional blush toggle
             const smile = bean.querySelector("#smile");
             if (smile) smile.classList.toggle("is-blush", !!s.blush);
           }
@@ -126,7 +121,7 @@
         }, i * 1);
       });
 
-      // ---- Currents: environmental drift ----
+      // ---- Currents: drift ----
       currents.forEach((c, i) => {
         motionTL.to(c, {
           x: () => gsap.utils.random(-20, 20),
@@ -136,64 +131,35 @@
         }, i * 0.15);
       });
 
-      // ---- Text reveal ----
-
-      steps.forEach((step, i) => {
-        gsap.fromTo(step,
-          { autoAlpha: 0, y: 20 },
-          {
-            autoAlpha: 1,
-            y: 0,
-            ease: "power1.out",
-            scrollTrigger: {
-              trigger: step,
-              scroller: scrollerOpt,
-              start: "top 85%",
-              end: "top 60%",
-              scrub: true
-            }
-          }
-        );
-      });
-
-
-      // steps.forEach((step, i) => {
-      //   motionTL.to(step, { autoAlpha: 1, y: 0, duration: 0.6, ease: "power1.out" }, i * 1);
-      // });
-
-      // Optional snap to cards
-      if (!prefersReduce) {
-
-        ScrollTrigger.create({
+      // ---- Text reveal: single timeline ----
+      const textTL = gsap.timeline({
+        scrollTrigger: {
           trigger: story,
           scroller: scrollerOpt,
           start: "top top+=24",
           end: () => "+=" + stepScroll * steps.length,
-          pin: content,   // pin only the text content, not the entire story
-          pinSpacing: true,
-          scrub: 0.6
-        });
+          scrub: prefersReduce ? false : 0.6,
+          pin: content,
+          pinSpacing: false
+        }
+      });
 
-        // ScrollTrigger.create({
-        //   trigger: story,
-        //   scroller: scrollerOpt,
-        //   start: "top top+=24",
-        //   end: () => "+=" + stepScroll * steps.length,
-        //   pin: story,
-        //   pinSpacing: true,
-        //   snap: {
-        //     snapTo: 1 / (steps.length - 1),
-        //     duration: { min: 0.12, max: 0.28 },
-        //     delay: 0.02,
-        //     ease: "power2.out"
-        //   }
-        // });
-      }
+      steps.forEach((step, i) => {
+        textTL.to(steps, {
+          autoAlpha: (idx) => idx === i ? 1 : 0,
+          duration: 0.6,
+          ease: "power1.out",
+          onStart: () => steps.forEach((s, j) => {
+            s.classList.toggle("is-active", j === i);
+          })
+        }, i * 1);
+      });
 
       // ---- PJAX cleanup ----
       story.__aboutDeckCleanup = () => {
         motionTL.kill();
-        steps.forEach((s) => gsap.set(s, { autoAlpha: 0, y: 20 }));
+        textTL.kill();
+        steps.forEach((s) => gsap.set(s, { autoAlpha: 0, y: 0 }));
         currents.forEach((c) => gsap.killTweensOf(c));
         story.classList.remove("deck-ready");
       };

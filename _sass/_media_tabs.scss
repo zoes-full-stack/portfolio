@@ -102,6 +102,14 @@
     }
 }
 
+.media-tabs::-webkit-scrollbar {
+  display: none;
+}
+.media-tabs {
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none;    /* Firefox */
+}
+
 /* hover polish */
 @media (hover: hover) and (pointer: fine) {
   .media-tabs > a[data-tab]:hover {
@@ -110,70 +118,118 @@
   }
 }
 
-/* mobile: stack if needed */
 @media (max-width: 560px) {
   .media-tabs {
-    flex-direction: column;
-    gap: 6px;
-    margin-top: 8px;
-
-    > a svg {
-      width: min(320px, 92vw);
-    }
-  }
-}
-
-/* ============================
-   Option B: Container Queries
-   (only runs where supported)
-   ============================ */
-@supports (container-type: inline-size) {
-  .media-tabs {
-    container-type: inline-size;
-    // container-name: mediaTabs;
-
-    /* when container queries are on, these become nicer than vw */
-    gap: clamp(12px, 3cqi, 40px);
-    max-width: none;  /* let the container be the limiter (your layout column) */
+    flex-direction: row;                  /* horizontal scroll */
+    overflow-x: auto;                     /* enable scroll */
+    -webkit-overflow-scrolling: touch;    /* smooth momentum scroll on iOS */
+    scroll-snap-type: x mandatory;        /* snap to each tab */
+    gap: 0;                               /* each tab full-width, no gap */
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
   }
 
   .media-tabs > a[data-tab] {
-    flex: 1 1 0; /* distribute evenly */
-    min-width: 0; /* allow true shrink inside container */
+    flex: 0 0 100%;                        /* each tab takes full width */
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
   }
 
   .media-tabs > a[data-tab] svg {
-    /* this is the magic: based on the nav's width (cqi), not the viewport */
-    width: clamp(150px, 33cqi, 260px);
-    max-width: none; /* clamp controls it now */
+    width: 80%;                             /* optional inner padding */
+    max-width: 300px;
   }
 
-  /* When it gets tight (sidebar open / narrow column), wrap into 2 rows cleanly */
-  @container mediaTabs (max-width: 720px) {
-    .media-tabs {
-      flex-wrap: wrap;
-    }
-
-    .media-tabs > a[data-tab] {
-      flex: 1 1 220px; /* encourages 2 + 1 layout */
-    }
-
-    .media-tabs > a[data-tab] svg {
-      width: clamp(160px, 45cqi, 280px);
-    }
+  /* prompt to scroll */
+  .media-tabs::after {
+    content: '→ swipe to see more';
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.5);
+    pointer-events: none;
+    white-space: nowrap;
+    opacity: 0.7;
   }
 
-  /* Very narrow: go vertical like your mobile rule, but based on container */
-  @container mediaTabs (max-width: 520px) {
-    .media-tabs {
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-    }
+  /* hide scrollbar */
+  .media-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .media-tabs {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 
-    .media-tabs > a[data-tab] svg {
-      width: min(320px, 92%);
-    }
+  /* optional: hide prompt when scrolled to end (needs JS) */
+  .media-tabs.scrolled-end::after {
+    display: none;
   }
 }
+
+
+
+// /* ============================
+//    Option B: Container Queries
+//    (only runs where supported)
+//    ============================ */
+// @supports (container-type: inline-size) {
+//   .media-tabs {
+//     container-type: inline-size;
+//     // container-name: mediaTabs;
+
+//     /* when container queries are on, these become nicer than vw */
+//     gap: clamp(12px, 3cqi, 40px);
+//     max-width: none;  /* let the container be the limiter (your layout column) */
+//   }
+
+//   .media-tabs > a[data-tab] {
+//     flex: 1 1 0; /* distribute evenly */
+//     min-width: 0; /* allow true shrink inside container */
+//   }
+
+//   .media-tabs > a[data-tab] svg {
+//     /* this is the magic: based on the nav's width (cqi), not the viewport */
+//     width: clamp(150px, 33cqi, 260px);
+//     max-width: none; /* clamp controls it now */
+//   }
+
+//   /* When it gets tight (sidebar open / narrow column), wrap into 2 rows cleanly */
+//   @container mediaTabs (max-width: 720px) {
+//     .media-tabs {
+//       flex-wrap: wrap;
+//     }
+
+//     .media-tabs > a[data-tab] {
+//       flex: 1 1 220px; /* encourages 2 + 1 layout */
+//     }
+
+//     .media-tabs > a[data-tab] svg {
+//       width: clamp(160px, 45cqi, 280px);
+//     }
+//   }
+
+//   /* Very narrow: go vertical like your mobile rule, but based on container */
+//   @container mediaTabs (max-width: 520px) {
+//     .media-tabs {
+//       flex-direction: row;       /* horizontal layout */
+//       overflow-x: auto;          /* enable horizontal scrolling */
+//       -webkit-overflow-scrolling: touch; /* smooth momentum scroll on iOS */
+//       scroll-snap-type: x mandatory;     /* enable snap */
+//       gap: 12px;                 /* space between tabs */
+//       padding: 8px 12px;
+//     }
+
+//     .media-tabs > a[data-tab] {
+//       flex: 0 0 auto;           /* prevent shrinking, keep natural width */
+//       scroll-snap-align: start; /* snap each tab to left */
+//     }
+//   }
+// }
 
