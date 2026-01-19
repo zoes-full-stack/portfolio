@@ -65,6 +65,8 @@ menu:
     url:               /about/
   - title:             Labs
     url:               /labs/
+  - title:             /test/
+    url:                Test
     # /Resume/GabrielaSewdhan_Resume.pdf
     # (https://gabrielasewdhan.github.io/portfolio/Resume/GabrielaSewdhan_Resume.pdf){:target="_blank"}
 

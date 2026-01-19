@@ -9,6 +9,13 @@
     scheduled: false
   };
 
+  function getViewport() {
+    return {
+      W: window.innerWidth,
+      H: window.innerHeight
+    };
+}
+
   // --- tiny SplitText replacement (wrap each character) ---
   function splitToSpans(el) {
     if (!el) return [];
@@ -99,6 +106,9 @@
 
   function init() {
     const canvas = document.getElementById("oceanCanvas");
+
+    const canvasRect = canvas.getBoundingClientRect();
+
     if (!canvas) {
       state.cleanup = () => {};
       return;
@@ -125,9 +135,11 @@
       resetText(canvas);
 
       // Static sprinkle
-      const rect = canvas.getBoundingClientRect();
-      const W = rect.width || 800;
-      const H = rect.height || 600;
+      // const rect = canvas.getBoundingClientRect();
+      // const W = rect.width || 800;
+      // const H = rect.height || 600;
+
+      const { W, H } = getViewport();
 
       const bubbleCount = reduceMotion ? 60 : 90;
       for (let i = 0; i < bubbleCount; i++) {
@@ -136,8 +148,8 @@
         const size = Math.random() * 6 + 2;
         b.style.width = `${size}px`;
         b.style.height = `${size}px`;
-        b.style.left = `${Math.random() * W}px`;
-        b.style.top = `${Math.random() * H}px`;
+        b.style.left = `${gsap.utils.random(-canvasRect.left, W - canvasRect.left)}px`;
+        b.style.top  = `${gsap.utils.random(-canvasRect.top, H - canvasRect.top)}px`;
         b.style.opacity = (Math.random() * 0.45 + 0.25).toFixed(2);
         canvas.appendChild(b);
         state.bubbles.push(b);
@@ -159,9 +171,11 @@
 
     // --- bubble field ---
     function makeBubbles(count = 200) {
-      const rect = canvas.getBoundingClientRect();
-      const W = rect.width || 800;
-      const H = rect.height || 600;
+      // const rect = canvas.getBoundingClientRect();
+      // const W = rect.width || 800;
+      // const H = rect.height || 600;
+
+      const { W, H } = getViewport();
 
       for (let i = 0; i < count; i++) {
         const b = document.createElement("div");

@@ -1,0 +1,98 @@
+<div class="water-cards">
+  <div class="water-card water-card--one">
+    <div class="water-content">
+      <div class="water-card-inner">
+        <p>7 years experience</p>
+      </div>
+    </div>
+  </div>
+  <div class="water-card water-card--two">
+        <div class="water-content">
+          <div class="water-card-inner">
+        <p>Something cool</p>
+      </div>
+    </div>
+  </div>
+  <div class="water-card water-card--three">
+        <div class="water-content">
+          <div class="water-card-inner">
+        <p>Don't bend your knees to the mind</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+    :root{
+        --color: 78, 230, 118;
+        --color: 219, 75, 207;
+        --color: 128, 110, 240;
+    }
+    .water-cards{
+        display: flex;
+        gap: 10px;
+    }
+    .water-cards .water-card{
+        position: relative;
+
+        box-shadow: 10px 10px 20px rgba(0,0,0,0.2),
+                    20px 20px 40px rgba(0,0,0,0.15),
+                    -10px -10px 20px rgba(255,255,255,0.4),
+                    -20px -20px 40px rgba(255,255,255,0.3),
+                inset 10px 10px 20px rgba(0,0,0,0.2),
+                inset 20px 20px 40px rgba(0,0,0,0.15),
+                inset -10px -10px 10px rgba(255,255,255,0.4),
+                inset -20px -20px 20px rgba(255,255,255,0.3);
+        transition: 0.3s ease;
+    }
+
+    .water-cards .water-card.water-card--one{
+        border-radius: 61% 39% 70% 30% / 38% 51% 49% 62% ;
+        --color: 78, 230, 118;
+        color: rgb(var(--color));
+    }
+    .water-cards .water-card.water-card--two{
+        border-radius: 64% 36% 60% 40% / 28% 71% 29% 72% ;
+        --color: 219, 75, 207;
+        color: rgb(var(--color));
+    }
+    .water-cards .water-card.water-card--three{
+        border-radius: 38% 62% 70% 30% / 58% 63% 37% 42%  ;
+        --color: 128, 110, 240;
+        color: rgb(var(--color));
+    } 
+    .water-cards .water-card:hover{
+        border-radius: 50%;
+    }
+
+    .water-content{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .water-cards .water-card::after{
+        width: 10px;
+        height: 10px;
+        top: 55px;
+        left: 55px;
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.1),
+                    -2px -2px 4px rgba(255,255,255,0.4),
+                    inset 2px 2px 4px rgba(0,0,0,0.1),
+                    inset -2px -2px 4px rgba(255,255,255,0.4);
+    }
+    .water-card-inner{
+        flex: 1;
+        padding-top: 10px;
+        text-align: center;
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+    }
+     ::selection {
+        color: #FFF;
+        background: rgb(var(--color));
+    }
+</style>
