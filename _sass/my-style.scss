@@ -685,9 +685,10 @@ img[src~="bordered"]:hover {
   justify-content: center;
   align-items: flex-end;
   margin: 0;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   position: relative;
   overflow: hidden; /* keeps rounded corners clean */
+  z-index: 2;
 }
 
 /* Optional helper class (recommended) to give room for menu bloom */
@@ -714,7 +715,7 @@ img[src~="bordered"]:hover {
   height: min(520px, 50%);
   aspect-ratio: 1 / 0.7;
   border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
-  transition: background-color 600ms ease-in;
+  transition: background-color 600ms ease-in, box-shadow 600ms ease-in;
   position: relative; /* face + arms + holder anchor */
   z-index: 5;
 }
@@ -809,6 +810,7 @@ img[src~="bordered"]:hover {
 /* Hover expression */
 #magical-bean:hover {
   background-color: #ffb04c;
+  box-shadow: 1px 1px 50px 10px #ffd59d;
 }
 
 #magical-bean:hover #smile {
@@ -834,9 +836,9 @@ img[src~="bordered"]:hover {
 #magical-bean:hover #eye2 { left: 54%; }
 
 /* Background tint on hover */
-#magical-bean:hover + #magical-bean-container {
-  background-color: #f5e9b7;
-}
+// #magical-bean:hover + #magical-bean-container {
+//   background-color: #f5e9b7;
+// }
 
 
 /* ================================
@@ -1509,6 +1511,10 @@ img[src~="bordered"]:hover {
 // Gallery SCSS
 @import "my-gallery";
 @import "media_tabs";
+@import "sound-toggle";
+@import "bottom-swipeable-navbar";
+
+@import "ocean-button";
 
 // Work Experience SCSS
 @import "my_experience";
@@ -1533,6 +1539,12 @@ img[src~="bordered"]:hover {
 
 // Recent Technologies Cards
 @import "recent_tech";
+
+// Brief Overview of what I Offer
+@import "brief_overview";
+
+// Submarine
+@import "submarine";
 
 // Silly Worm
 // @import "silly_worm";

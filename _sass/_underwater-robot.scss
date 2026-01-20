@@ -1,0 +1,26 @@
+$background-color_1: #203040;
+
+.underwater-robot {
+    position: relative;
+    z-index: 2;
+}
+
+.robot-stage {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.robot-stage canvas {
+  position: absolute;
+  left: 0;
+  bottom: -40px; // tweak until arms connect perfectly
+  pointer-events: none;
+}
+
+.robot-stage svg {
+  position: relative;
+  z-index: 2;
+}
+
+
