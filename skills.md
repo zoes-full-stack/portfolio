@@ -6,6 +6,8 @@ description: >
   Showcasing my skills
 hide_description: true
 sitemap: false
+page_scripts:
+  - /assets/js/skills-cards-tilt.js
 ---
 
 
@@ -35,3 +37,4 @@ sitemap: false
   [↩ Back to Experience](/experience/){:.page-back}
 </div>
 
+{% include my-scripts.html %}

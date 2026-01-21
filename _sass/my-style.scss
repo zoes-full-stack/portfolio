@@ -693,7 +693,7 @@ img[src~="bordered"]:hover {
 
 /* Optional helper class (recommended) to give room for menu bloom */
 .magical-bean-section.bean-stage{
-  padding-top: 50px;
+  padding-top: 120px;
   padding-bottom: 320px; /* space for radial buttons so they don't overlap page text */
   // transition: padding-bottom 420ms ease;
 }
@@ -1505,6 +1505,14 @@ img[src~="bordered"]:hover {
   margin-top: 1.5rem;
 }
 
+// Welcome Text
+
+.welcome-text {
+  margin: 30px 30px 30px 30px;
+  color: #ffffff;
+
+}
+
 // Projects (Portfolio) SCSS 
 @import "my-projects";
 
@@ -1514,7 +1522,9 @@ img[src~="bordered"]:hover {
 @import "sound-toggle";
 @import "bottom-swipeable-navbar";
 
+// Ocean Buttons!
 @import "ocean-button";
+@import "welcome-ocean-button";
 
 // Work Experience SCSS
 @import "my_experience";
@@ -1548,6 +1558,9 @@ img[src~="bordered"]:hover {
 
 // Ocean Under Construction (New Page being updated/maintained)
 @import "ocean-construction";
+
+// 3D Gradient Ocean
+@import "gradient-ocean";
 
 // Silly Worm
 // @import "silly_worm";

@@ -6,6 +6,8 @@ description: >
   Work, Volunteer and Research Experience
 hide_description: true
 sitemap: false
+page_scripts:
+  - /assets/js/experience.js
 ---
 
 <div markdown="0">
@@ -37,3 +39,5 @@ Click me to view!
   {:.page-next}
   [↩ Back to Designs](/Designs/){:.page-back}
 </div>
+
+{% include my-scripts.html %}

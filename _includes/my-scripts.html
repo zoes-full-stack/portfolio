@@ -1,20 +1,18 @@
 {% include gooey-filter.html %}
 
+<!-- Common JS -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
+<script defer src="https://cdn.jsdelivr.net/npm/three@0.152.0/build/three.min.js"></script>
 <script defer src="{{ '/assets/js/sidebar-biolume-vanilla.js' | relative_url }}"></script>
-<script defer src="{{ '/assets/js/gallery-of-designs.js' | relative_url }}"></script>
-<script defer src="{{ '/assets/js/sound-toggle.js' | relative_url }}"></script>
-<script defer src="{{ '/assets/js/bottom-swipeable-navbar.js' | relative_url }}"></script>
 
-<script defer src="{{ '/assets/js/skills-cards-tilt.js' | relative_url }}"></script>
-<script defer src="{{ '/assets/js/experience.js' | relative_url }}"></script>
-<script defer src="{{ '/assets/js/project-filters.js' | relative_url }}"></script>
-<!-- Only load on the specific pages to avoid error of not finding the getboundingrect -->
-<script defer src="{{ '/assets/js/labs-coming-soon.js' | relative_url }}"></script>
-<script defer src="{{ '/assets/js/ocean-404.js' | relative_url }}"></script>
-<script defer src="{{ '/assets/js/ocean-electric-being.js' | relative_url }}"></script>
+<!-- Page-specific scripts -->
+{% assign scripts = page.page_scripts | default: [] %}
+{% for script in scripts %}
+  <script defer src="{{ script | relative_url }}"></script>
+{% endfor %}
 
-<script defer src="{{ '/assets/js/bean-about-interaction.js' | relative_url }}"></script>
+<script>
+    console.log("page_scripts from front matter:", "{{ page.page_scripts | jsonify | default: 'null' }}");
+</script>
