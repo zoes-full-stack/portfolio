@@ -1,0 +1,105 @@
+<!-- =========================
+     ABOUT SCROLLY — Full HTML
+     Bean stays bottom, text stays top, fully viewable
+     (Pairs with your existing about-scrolly.js)
+     ========================= -->
+
+<div class="about-scrolly" id="aboutScrolly">
+  <div class="about-scrolly__grid">
+
+    <section class="about-scrolly__scene" aria-label="About scrollytelling scene">
+      <div class="about-porthole">
+
+        <!-- Water background (behind everything) -->
+        <div class="about-porthole__water" aria-hidden="true"></div>
+
+        <!-- Top caption -->
+        <div class="about-porthole__caption" aria-hidden="true">
+          <p class="porthole-kicker">About</p>
+          <p class="porthole-title">Diving deeper</p>
+        </div>
+
+        <!-- Depth gauge -->
+        <div class="about-depth" aria-hidden="true">
+          <div class="about-depth__track">
+            <div class="about-depth__fill"></div>
+          </div>
+        </div>
+
+        <!-- Story row (cards overlay INSIDE this row only) -->
+        <main class="about-scrolly__story" aria-label="About story">
+
+          <section class="about-step" data-state="intro">
+            <div class="about-step__card">
+              <p>
+                Hi! I’m Gabby 😊 A creator + developer (and co-owner of Scarlet Creative) based in Trinidad &amp; Tobago.
+                I’m deeply passionate about helping people feel less overwhelmed, more supported, and more able to do the work that matters to them.
+              </p>
+              <p class="about-step__hint">Scroll to dive ↡</p>
+            </div>
+          </section>
+
+          <section class="about-step" data-state="mission">
+            <div class="about-step__card">
+              <h3>Mission</h3>
+              <p>
+                A lot of my perspective comes from navigating my own hard seasons and wanting to make things gentler for others.
+                I care about giving a voice to the voiceless, raising awareness, and bringing communities together.
+              </p>
+            </div>
+          </section>
+
+          <section class="about-step" data-state="tidbits">
+            <div class="about-step__card">
+              <h3>Tidbits</h3>
+              <div class="about-chips" role="list">
+                <span class="about-chip" role="listitem">7 Years</span>
+                <span class="about-chip" role="listitem">UI/UX + Motion</span>
+                <span class="about-chip" role="listitem">Impact-driven teams</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="about-step" data-state="curiosities">
+            <div class="about-step__card">
+              <h3>Curiosities</h3>
+              <p>
+                I love diving into design (UI/UX, graphic, motion), human–computer interaction, art for storytelling, psychology,
+                software engineering, neuroscience, mycology and botany. I’m fascinated by how our brains process emotion and information,
+                and how we can design systems that feel kinder and more intuitive.
+              </p>
+              <p>Also: I’m a water-baby. I adore the ocean, its ecosystems, and the stories it holds.</p>
+            </div>
+          </section>
+
+          <section class="about-step" data-state="cta">
+            <div class="about-step__card">
+              <h3>Want to create something together?</h3>
+              <p><a class="about-cta" href="/contact/">Say hello ↪</a></p>
+            </div>
+          </section>
+
+        </main>
+
+        <!-- Bean row (always bottom, never overlaps story) -->
+        <div class="about-beanStage" aria-hidden="true">
+          <div id="magical-about-bean" class="bean bean--about">
+            <div id="eye1"></div>
+            <div id="eye2"></div>
+            <div id="smile"></div>
+
+            <div class="about-bubbles" aria-hidden="true">
+              <span class="b b1"></span><span class="b b2"></span><span class="b b3"></span>
+              <span class="b b4"></span><span class="b b5"></span><span class="b b6"></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<!-- GSAP: your JS already wired -->
+<script src="{{ '/assets/js/about-scrolly.js' | relative_url }}" defer></script>

@@ -25,6 +25,10 @@ html.no-scroll-anchor {
   overflow-anchor: none;
 }
 
+.layout-about {
+  padding-top: 0 !important;
+}
+
 @media screen and (min-width: 768px) {
   .content {
     padding-top: 4rem !important;
@@ -1643,6 +1647,8 @@ hr, .hr {
 
 
 // Silly Worm
-// @import "silly_worm";
+@import "silly_worm";
 
+// About scrolly story
+@import "about_scrolly";
 

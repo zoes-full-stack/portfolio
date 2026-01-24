@@ -1,0 +1,416 @@
+/* =========================================================
+   ABOUT SCROLLY — Full SCSS
+   - Bean bottom, story top, compact, fits all screens
+   - Designed to pair with your pinned GSAP timeline
+   ========================================================= */
+
+.about-scrolly {
+  width: 100%;
+  margin: 0;
+  max-width: none;
+  position: relative;
+  overflow: visible;
+
+  /* Theme vars (GSAP tweens these) */
+  --sea-0: #041823;
+  --sea-1: #062837;
+  --sea-2: #0b415a;
+  --accent: #beecf4;
+  --bean: #beecf4;
+  --glow: rgba(190, 236, 244, 0.25);
+
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.72);
+  --card: rgba(255, 255, 255, 0.06);
+  --cardBorder: rgba(190, 236, 244, 0.20);
+
+  /* Controls bean size so BOTH bean + text fit */
+  --beanH: clamp(200px, 34vh, 420px);
+
+  color: var(--text);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1.25rem, 4vw, 4rem);
+    align-items: start;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__scene {
+    width: 100%;
+  }
+
+  /* =========================
+     Porthole: 3 rows
+     caption | story | bean
+     ========================= */
+  .about-porthole {
+    position: relative;
+    height: min(75vh, 720px);
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+
+    /* Water behind everything */
+    &__water {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(90% 60% at 50% 18%, rgba(255,255,255,0.09), transparent 55%),
+        linear-gradient(180deg, var(--sea-2), var(--sea-1));
+    }
+
+    /* Caustics shimmer */
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      z-index: 1;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.07), transparent 40%),
+        radial-gradient(circle at 70% 30%, rgba(255,255,255,0.05), transparent 45%),
+        radial-gradient(circle at 40% 80%, rgba(255,255,255,0.04), transparent 50%);
+      opacity: 0.75;
+      transform: translate3d(0,0,0);
+      animation: caustics 10s ease-in-out infinite;
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+  }
+
+  @keyframes caustics {
+    0%, 100% { transform: translate3d(-2%, -1%, 0) scale(1.02); }
+    50%      { transform: translate3d( 2%,  1%, 0) scale(1.05); }
+  }
+
+  /* Keep content above water */
+  .about-porthole__caption,
+  .about-scrolly__story,
+  .about-beanStage,
+  .about-depth {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* =========================
+     Caption (top row)
+     ========================= */
+  .about-porthole__caption {
+    padding: 18px 18px 0 18px;
+    pointer-events: none;
+
+    .porthole-kicker {
+      margin: 0;
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.70);
+    }
+
+    .porthole-title {
+      margin: 0.2rem 0 0 0;
+      font-size: 1.1rem;
+      font-weight: 650;
+      color: rgba(255, 255, 255, 0.92);
+    }
+  }
+
+  /* Bonus: step-reactive label (no JS needed) */
+  &[data-active="intro"] .porthole-title::after       { content: " · surface"; opacity: 0.8; font-weight: 500; }
+  &[data-active="mission"] .porthole-title::after     { content: " · mission"; opacity: 0.8; font-weight: 500; }
+  &[data-active="tidbits"] .porthole-title::after     { content: " · tidbits"; opacity: 0.8; font-weight: 500; }
+  &[data-active="curiosities"] .porthole-title::after { content: " · curiosities"; opacity: 0.8; font-weight: 500; }
+  &[data-active="cta"] .porthole-title::after         { content: " · say hello"; opacity: 0.8; font-weight: 500; }
+
+  /* =========================
+     Depth gauge (top-right)
+     ========================= */
+  .about-depth {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 5;
+    width: 10px;
+    height: 120px;
+    opacity: 0.9;
+
+    &__track {
+      width: 100%;
+      height: 100%;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.10);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    &__fill {
+      width: 100%;
+      height: 100%;
+      transform-origin: bottom;
+      transform: scaleY(var(--scroll-progress, 0));
+      background: linear-gradient(180deg, rgba(255,255,255,0.0), var(--accent));
+    }
+  }
+
+  /* =========================
+     Story row (middle)
+     Cards overlay inside this area
+     ========================= */
+  &__story {
+    padding: 0 18px;
+    min-height: 0; /* important for grid 1fr row */
+    position: relative;
+  }
+
+  .about-step {
+    min-height: auto;
+    padding: 0;
+  }
+
+  .about-step__card {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    top: 0;
+    margin: 0 auto;
+    max-width: 62ch;
+
+    background: var(--card);
+    border: 1px solid var(--cardBorder);
+    border-radius: 16px;
+    padding: clamp(0.85rem, 1.6vw, 1.1rem);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+  }
+
+  .about-step__hint {
+    margin-top: 0.9rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .about-step.is-active .about-step__card {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* No-JS / first paint fallback */
+  .about-step:first-child .about-step__card {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* Chips */
+  .about-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.85rem;
+  }
+
+  .about-chip {
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(0,0,0,0.12);
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    color: var(--text);
+    user-select: none;
+  }
+
+  /* CTA */
+  .about-cta {
+    display: inline-block;
+    margin-top: 0.25rem;
+    text-decoration: none;
+    color: #062837;
+    background: var(--accent);
+    padding: 0.6rem 0.9rem;
+    border-radius: 999px;
+    font-weight: 650;
+    transition: transform 180ms ease;
+
+    &:hover { transform: translateY(-1px); }
+  }
+
+  /* =========================
+     Bean row (bottom)
+     ========================= */
+  .about-beanStage {
+    padding: 0 0 clamp(0.75rem, 2vh, 1.25rem) 0;
+    display: grid;
+    place-items: end center;
+  }
+
+  /* Bean size locks to --beanH */
+  #magical-about-bean.bean--about {
+    cursor: pointer;
+    height: var(--beanH);
+    width: auto;
+    aspect-ratio: 320 / 520; /* keeps proportions */
+
+    background-color: var(--bean);
+    border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
+    position: relative;
+    transition: background-color 600ms ease-in, box-shadow 600ms ease-in;
+    box-shadow:
+      0 26px 60px rgba(0,0,0,0.30),
+      0 0 0 2px rgba(255,255,255,0.06) inset,
+      0 0 40px var(--glow);
+
+    /* Face parts */
+    #eye1, #eye2, #smile {
+      border-width: 0.4vw;
+      border-style: solid;
+      position: absolute;
+      box-sizing: border-box;
+      transition: all 600ms ease-in;
+    }
+
+    /* Resting face */
+    #eye1, #eye2 {
+      top: 38%;
+      width: 10%;
+      height: 2%;
+      border-color: transparent transparent #3D550C transparent;
+      border-radius: 40%;
+    }
+
+    #eye1 { left: 38%; }
+    #eye2 { left: 52%; }
+
+    #smile {
+      top: 42%;
+      left: 50%;
+      width: 14%;
+      height: 10%;
+      transform: translateX(-50%);
+      border-color: transparent transparent #30550C transparent;
+      border-radius: 50%;
+    }
+
+    /* Hover expression */
+    &:hover { background-color: #ffb04c; }
+
+    &:hover #smile {
+      top: 32%;
+      width: 28%;
+      height: 20%;
+      border-radius: 50%;
+      transition: all 650ms ease-out;
+    }
+
+    &:hover #eye1,
+    &:hover #eye2 {
+      top: 30%;
+      width: 10%;
+      height: 18%;
+      border-radius: 50%;
+    }
+
+    &:hover #eye1 { left: 36%; }
+    &:hover #eye2 { left: 54%; }
+
+    /* Arms */
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -36px;
+      width: 150px;
+      height: 66px;
+      background: inherit;
+      border-radius: 999px;
+      z-index: 2;
+      pointer-events: none;
+      box-shadow: 0 14px 22px rgba(0,0,0,0.10);
+      filter: brightness(0.98);
+    }
+
+    &::before {
+      left: 6%;
+      transform: rotate(12deg);
+      transform-origin: right center;
+      clip-path: polygon(0 8%, 92% 0, 100% 50%, 92% 100%, 0 92%);
+    }
+
+    &::after {
+      right: 6%;
+      transform: rotate(-12deg);
+      transform-origin: left center;
+      clip-path: polygon(8% 0, 100% 8%, 100% 92%, 8% 100%, 0 50%);
+    }
+  }
+
+  /* Bubbles */
+  .about-bubbles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.55;
+    transition: opacity 450ms ease;
+
+    .b {
+      position: absolute;
+      bottom: 12%;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.32);
+      background: rgba(255,255,255,0.06);
+      animation: bubbleUp 3.8s linear infinite;
+      filter: blur(0.1px);
+    }
+
+    .b1 { left: 18%; animation-delay: 0.0s; transform: scale(0.85); }
+    .b2 { left: 30%; animation-delay: 0.9s; transform: scale(0.65); }
+    .b3 { left: 44%; animation-delay: 1.6s; transform: scale(0.95); }
+    .b4 { left: 58%; animation-delay: 0.5s; transform: scale(0.70); }
+    .b5 { left: 72%; animation-delay: 1.2s; transform: scale(0.90); }
+    .b6 { left: 82%; animation-delay: 2.0s; transform: scale(0.60); }
+  }
+
+  @keyframes bubbleUp {
+    0%   { transform: translateY(0) scale(1); opacity: 0; }
+    10%  { opacity: 0.75; }
+    100% { transform: translateY(-160px) scale(1.08); opacity: 0; }
+  }
+
+  /* Bubble intensity per step */
+  &[data-active="mission"] .about-bubbles { opacity: 0.45; }
+  &[data-active="tidbits"] .about-bubbles { opacity: 0.70; }
+  &[data-active="curiosities"] .about-bubbles { opacity: 0.80; }
+  &[data-active="cta"] .about-bubbles { opacity: 0.55; }
+
+  /* Tight screens: shrink bean + text slightly */
+  @media (max-height: 740px) {
+    --beanH: clamp(180px, 30vh, 360px);
+
+    .about-step__card {
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .about-porthole::before { animation: none; }
+    .about-bubbles .b { animation: none; opacity: 0.15; }
+  }
+}
