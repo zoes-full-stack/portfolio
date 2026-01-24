@@ -1,0 +1,123 @@
+$color_1: #fff;
+
+@keyframes animate {
+	0% {
+		transform: translate(-50%, -75%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -75%) rotate(360deg);
+	}
+}
+
+@keyframes liquid-vibrate {
+  0%   { transform: translateY(0) scale(1); }
+  25%  { transform: translateY(-0.5px) scale(1.002); }
+  50%  { transform: translateY(0.5px) scale(0.998); }
+  75%  { transform: translateY(-0.25px) scale(1.001); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+.water-button {
+	position: relative;
+	padding: 20px 50px;
+    margin-top: 20px;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 220px;
+	overflow: hidden;
+	border-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+	span {
+		position: relative;
+		color: $color_1;
+		font-size: 0.90rem;
+		letter-spacing: 4px;
+		z-index: 1;
+	}
+	.liquid {
+		position: absolute;
+		top: -60px;
+		left: 0;
+		width: 220px;
+		height: 220px;
+		background: #18485c;
+		box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+		transition: .5s;
+		&::after {
+			content: '';
+			width: 200%;
+			height: 200%;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -75%);
+			background: #000;
+			border-radius: 40%;
+			background: rgba(20, 20, 20, .5);
+			animation: animate 18s linear infinite;
+		}
+		&::before {
+			content: '';
+			width: 200%;
+			height: 200%;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -75%);
+			background: #000;
+			border-radius: 45%;
+			background: rgba(20, 20, 20, 1);
+			animation: animate 9s linear infinite;
+		}
+	}
+	&:hover {
+		.liquid {
+			top: -80px;
+            background: #3081a4;
+		}
+	}
+    &:active {
+        transform: translateY(1px) scale(0.98);
+    }
+    &.is-sound-on {
+        .liquid {
+            background: #3081a4;
+            animation: liquid-vibrate 0.35s infinite ease-in-out;
+        }
+
+        .liquid::before {
+            
+            animation-duration: 5s;
+        }
+
+        .liquid::after {
+            animation-duration: 10s;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .water-button {
+        width: 180px;
+        padding: 10px 40px;
+        
+        span {
+            font-size: 0.80rem;
+        }
+        .liquid {
+            width: 180px;
+            height: 180px;
+        }
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .water-button.is-sound-on .liquid {
+    animation: none;
+  }
+}

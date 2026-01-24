@@ -28,7 +28,7 @@ Click me to view!
 
 </details>  -->
 
-<div class="mobile-only" markdown="1">
+<!-- <div class="mobile-only" markdown="1">
   &nbsp;
   &nbsp;
   &nbsp;
@@ -38,6 +38,6 @@ Click me to view!
   Continue with [Skills ↪](/skills/){:.heading.flip-title}
   {:.page-next}
   [↩ Back to Designs](/Designs/){:.page-back}
-</div>
+</div> -->
 
-{% include my-scripts.html %}
+<script defer src="{{ '/assets/js/experience.js' | relative_url }}"></script>

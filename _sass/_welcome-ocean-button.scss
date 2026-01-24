@@ -94,7 +94,7 @@ $color_1: #fff;
 	--color_2: #49a3b3;
 	--color_3: #83ccd8;
 	--color_4: #beecf4;
-	--color_5: #163442;
+	--color_5: #083245;
 	--color_6: #0d232e;
 }
 
@@ -105,8 +105,8 @@ $color_1: #fff;
 	align-items: center;
 	position: relative;
 	width: 100%;
-	height: 90px;
-	border-radius: 20px;
+	height: 110px;
+	border-radius: 20px 20px 0 0;
 	text-decoration: none;
 	overflow: hidden;
 	background: var(--color_5);
@@ -119,9 +119,10 @@ $color_1: #fff;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient( rgba(0,25,85,0) 60% , rgba(0,25,85,.8));
+		background: linear-gradient(rgba(0, 25, 85, 0) 60%, rgb(6, 40, 55));
 	}
-	&:hover {
+	&:hover,
+	&.is-loaded{
 		background: var(--color_6);
 		box-shadow: 0 0 24px rgba(0,0,0,0) , 0 0 24px rgba(0,0,0,.8) inset;
 		.welcome-ocean-button-fish {
@@ -171,9 +172,9 @@ $color_1: #fff;
 				}
 			}
 		}
-		.welcome-ocean-button-button__text {
-			letter-spacing: 3px;
-			font-size: 24px;
+		.welcome-ocean-button__text {
+			letter-spacing: 4px;
+			font-size: 38px;
 		}
 		.welcome-ocean-button-bubble {
 			&::before {
@@ -217,9 +218,9 @@ $color_1: #fff;
 			animation: bubble linear .1s infinite alternate;
 		}
 	}
-	&:not(:last-child) {
-		margin-bottom: 40px;
-	}
+	// &:not(:last-child) {
+	// 	margin-bottom: 40px;
+	// }
 }
 .welcome-ocean-button-wave {
 	position: absolute;
@@ -355,8 +356,9 @@ $color_1: #fff;
 	position: relative;
 	z-index: 7;
 	display: inline-block;
-	font-size: 28px;
-	letter-spacing: 4px;
+	font-size: 34px;
+	font-weight: 500;
+	letter-spacing: 2px;
 	color: $color_1;
 	transition: all ease 1s;
 }

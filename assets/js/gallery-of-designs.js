@@ -4,6 +4,65 @@
    - Safe re-init on Hydejack/Turbo navigation events
 */
 
+// =========================
+// GLOBAL AUDIO CONTROLLER
+// =========================
+window.AudioController = {
+  muted: true,
+
+  setMuted(value) {
+    this.muted = !!value;
+
+    // Mute / unmute all media
+    if (window.currentMedia) {
+      window.currentMedia.muted = this.muted;
+      if (this.muted) window.currentMedia.volume = 0;
+    }
+
+    document.querySelectorAll("audio, video").forEach(media => {
+    if (media !== window.currentMedia) {
+        media.pause();
+        media.muted = true;
+      }
+    });
+
+    // document.querySelectorAll("audio, video").forEach(media => {
+    //   media.muted = this.muted;
+    //   if (this.muted) media.volume = 0;
+    // });
+
+    // Sync ALL sound buttons (global + modals)
+    document.querySelectorAll(".water-button").forEach(btn => {
+      btn.classList.toggle("is-sound-on", !this.muted);
+      btn.setAttribute("aria-pressed", String(!this.muted));
+
+      const label =
+        btn.querySelector("span");
+
+      if (label) {
+        label.textContent = this.muted ? "Audio Off" : "Audio On";
+      }
+    });
+  },
+
+  toggle() {
+    this.setMuted(!this.muted);
+  }
+};
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const globalToggle = document.querySelector(".water-button");
+
+  if (!globalToggle) return;
+
+  globalToggle.addEventListener("click", () => {
+    window.AudioController.toggle();
+  });
+});
+
+
+
 (function () {
   // =========================
   // 1) MEDIA SETS
@@ -588,6 +647,7 @@
     }
 
     function openLightbox(item, triggerEl) {
+
       ensureLightboxInBody();
       lastFocusedEl = triggerEl || document.activeElement;
       lbCurrentItem = item;
@@ -621,11 +681,17 @@
         v.style.height = "100%";
         v.style.objectFit = "contain";
 
+        window.currentMedia = v;
+        lbCurrentVideo = v;
+
         if (lbHasAudio) {
-          v.muted = false;
-          v.volume = 1;
+          v.muted = window.AudioController.muted;
+          v.volume = window.AudioController.muted ? 0 : 1;
+
           lbAudioToggle.hidden = false;
-          lbAudioToggle.textContent = "🔊 Audio: On";
+          lbAudioToggle.textContent = window.AudioController.muted
+            ? "🔇 Audio: Off"
+            : "🔊 Audio: On";
         } else {
           v.muted = true;
           v.volume = 0;
@@ -671,6 +737,7 @@
         lbCurrentVideo.removeAttribute("src");
         try { lbCurrentVideo.load(); } catch {}
         lbCurrentVideo = null;
+        window.currentMedia = null;
       }
 
       lbCurrentItem = null;
@@ -714,17 +781,13 @@
 
       lbAudioToggle.addEventListener("click", () => {
         if (!lbCurrentVideo || !lbHasAudio) return;
-        const isMuted = lbCurrentVideo.muted || lbCurrentVideo.volume === 0;
 
-        if (isMuted) {
-          lbCurrentVideo.muted = false;
-          lbCurrentVideo.volume = 1;
-          lbAudioToggle.textContent = "🔊 Audio: On";
-        } else {
-          lbCurrentVideo.muted = true;
-          lbCurrentVideo.volume = 0;
-          lbAudioToggle.textContent = "🔇 Audio: Off";
-        }
+        const nextMuted = !window.AudioController.muted;
+        window.AudioController.setMuted(nextMuted);
+
+        lbAudioToggle.textContent = nextMuted
+          ? "🔇 Audio: Off"
+          : "🔊 Audio: On";
       });
 
       window.addEventListener("resize", () => {

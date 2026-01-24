@@ -6,13 +6,3 @@
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/three@0.152.0/build/three.min.js"></script>
 <script defer src="{{ '/assets/js/sidebar-biolume-vanilla.js' | relative_url }}"></script>
-
-<!-- Page-specific scripts -->
-{% assign scripts = page.page_scripts | default: [] %}
-{% for script in scripts %}
-  <script defer src="{{ script | relative_url }}"></script>
-{% endfor %}
-
-<script>
-    console.log("page_scripts from front matter:", "{{ page.page_scripts | jsonify | default: 'null' }}");
-</script>

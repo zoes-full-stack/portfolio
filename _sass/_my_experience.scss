@@ -169,8 +169,9 @@
 
       &-content {
         background-color: var(--panel-bg);
-        border: 1px solid hsla(var(--hue), 18%, 70%, 0.35);
-        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+        // border: 1px solid hsla(var(--hue), 18%, 70%, 0.35);
+        border-radius: 20px;
+        // box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
         opacity: 0;
         padding: 0.9em 1em;
         visibility: hidden;

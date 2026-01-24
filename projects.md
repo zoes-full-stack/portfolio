@@ -30,10 +30,12 @@ sitemap: false
 
 <br>
 
-<div class="mobile-only" markdown="1">
+<!-- <div class="mobile-only" markdown="1">
   <hr class="faded"/>
   Continue with [Designs ↪](/designs/){:.heading.flip-title}
   {:.page-next}
   [↩ Back to Welcome](/){:.page-back}
-</div>
+</div> -->
+
+<script defer src="{{ '/assets/js/project-filters.js' | relative_url }}"></script>
 

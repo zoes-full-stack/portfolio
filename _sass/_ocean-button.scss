@@ -89,6 +89,15 @@ $color_1: #fff;
 		transform: translate(5px ,0);
 	}
 }
+
+.designs-row {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .button--3 {
 	--color_1: #1b70a1;
 	--color_2: #368cc1;

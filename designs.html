@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Designs
 sitemap: false
 page_scripts:
   - /assets/js/gallery-of-designs.js
@@ -9,18 +8,18 @@ page_scripts:
   - /assets/js/bottom-swipeable-navbar.js
 ---
 
-<div class="sound-toggle ocean-button button--3" role="button" aria-pressed="false" tabindex="0">
-      <div class="ocean-button-wave"></div>
-      <div class="ocean-button-wave"></div>
-      <div class="ocean-button-wave"></div>
-      <div class="ocean-button-wave"></div>
-      <div class="ocean-button-fish"></div>
-      <div class="ocean-button-bubble"></div>
-      <div class="ocean-button-bubble"></div>
-      <div class="ocean-button-bubble"></div>
-      <div class="ocean-button-bubble"></div>
-      <span class="ocean-button__text">Sound On</span>
+<div class="designs-row">
+  <h1>Designs</h1>
+
+  <div class="water-button"
+       role="button"
+       aria-pressed="false"
+       tabindex="0">
+      <span>Audio Off</span>
+      <div class="liquid"></div>
+  </div>
 </div>
+
 
 {% include gallery_of_designs.html %}
 
@@ -62,4 +61,6 @@ page_scripts:
   <p><a class="page-back" href="/projects/">↩ Back to Projects</a></p>
 </div> -->
 
-{% include my-scripts.html %}
+<script defer src="{{ '/assets/js/gallery-of-designs.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/project-filters.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/bottom-swipeable-navbar.js' | relative_url }}"></script>

@@ -9,7 +9,7 @@ $water-background: #3b606c;
     overflow: hidden;
 
     z-index: 10;
-    margin-top: -40px; /* pulls ocean up under the waves */
+    margin-top: -100px; /* pulls ocean up under the waves */
 
     background: linear-gradient(
         to bottom,
@@ -24,16 +24,15 @@ $water-background: #3b606c;
 }
 
 .submarine-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 220px;
-
-  background: linear-gradient(to bottom, rgb(59, 96, 108), rgba(59, 96, 108, 0.6), rgba(59, 96, 108, 0));
-  pointer-events: none;
-  z-index: 1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 220px;
+    background: linear-gradient(to bottom, #305864, rgba(59, 96, 108, 0.6), rgba(59, 96, 108, 0));
+    pointer-events: none;
+    z-index: 1;
 }
 
 
@@ -47,12 +46,18 @@ $water-background: #3b606c;
   animation: content-float 3s ease-in-out infinite;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 767px) {
+    .sea {
+        margin: 0px !important;
+    }
     .submarine-content {
+        margin-top: 30px;
         bottom: 8px;
         width: auto;
-        top: auto;
         right: 0;
+    }
+    .submarine-section {
+        margin-top: -40px;
     }
     .beam-content {
         background: radial-gradient(ellipse at bottom right, rgba(120,200,255,0.18), rgba(20,40,60,0.05) 60%, transparent 75%) !important;
@@ -64,19 +69,14 @@ $water-background: #3b606c;
   padding: 24px 28px;
 
   color: rgba(220, 240, 255, 0.95);
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.6;
 
   background:
-    radial-gradient(
-      ellipse at top left,
-      rgba(120, 200, 255, 0.18),
-      rgba(20, 40, 60, 0.05) 60%,
-      transparent 75%
-    );
+    radial-gradient(ellipse at top left, rgba(6, 40, 55, 61%), rgba(30, 48, 65, 60%) 60%, #00000000 75%);
 
   backdrop-filter: blur(2px);
-  border-radius: 12px;
+  border-radius: 50px;
 }
 
 .beam-content::after {
@@ -151,7 +151,7 @@ $water-background: #3b606c;
         position: relative;
         // background: linear-gradient(darken($color1, 3%), darken($color1, 12%));
         // width:300px;
-        height:470px;
+        height:460px;
         margin: 10px auto 0 auto;
         overflow: hidden;
         z-index: 0;

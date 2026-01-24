@@ -25,7 +25,7 @@ page_scripts:
 </div>
 
 
-<div class="mobile-only" markdown="1">
+<!-- <div class="mobile-only" markdown="1">
   &nbsp;
   &nbsp;
   &nbsp;
@@ -35,6 +35,6 @@ page_scripts:
   Continue with [About ↪](/about/){:.heading.flip-title}
   {:.page-next}
   [↩ Back to Experience](/experience/){:.page-back}
-</div>
+</div> -->
 
-{% include my-scripts.html %}
+<script defer src="{{ '/assets/js/skills-cards-tilt.js' | relative_url }}"></script>

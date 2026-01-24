@@ -5,6 +5,10 @@
    - No auto scroll/jump
 */
 
+function isDesktop() {
+  return window.matchMedia("(min-width: 1024px)").matches;
+}
+
 (function () {
   // ----------------------------
   // Hook all relevant load paths
@@ -73,7 +77,7 @@
         ctrld.style.height = "auto";
       }
 
-      openItem(button, ctrld) {
+      openItem(button, ctrld, shouldScroll = true) {
         if (!button || !ctrld) return;
 
         const expandedClass = "timeline__item-body--expanded";
@@ -98,8 +102,17 @@
         anim.onfinish = () => {
           this._ensureOpenStyles(ctrld);
           ctrld.__ctAnim = null;
+
+          if (shouldScroll && isDesktop()) {
+            const rect = button.getBoundingClientRect();
+            const offset = window.scrollY + rect.top - 120;
+
+            window.scrollTo({
+              top: offset,
+              behavior: "smooth"
+            });
+          }
         };
-        anim.oncancel = () => (ctrld.__ctAnim = null);
       }
 
       closeItem(button, ctrld) {
@@ -143,15 +156,24 @@
           const expand = action === "expand";
 
           const buttons = Array.from(this.el.querySelectorAll("[data-item]"));
+
           for (const button of buttons) {
             const item = button.getAttribute("data-item");
             const ctrld = this.el.querySelector(`#${this.idPrefix}${item}-ctrld`);
             if (!ctrld) continue;
 
             const isExpanded = button.getAttribute("aria-expanded") === "true";
-            if (expand && !isExpanded) this.openItem(button, ctrld);
-            if (!expand && isExpanded) this.closeItem(button, ctrld);
+
+            if (expand && !isExpanded) {
+              // 🚫 no scroll when Expand All
+              this.openItem(button, ctrld, false);
+            }
+
+            if (!expand && isExpanded) {
+              this.closeItem(button, ctrld);
+            }
           }
+
           return;
         }
 

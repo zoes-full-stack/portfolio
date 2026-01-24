@@ -21,13 +21,9 @@
 //     linear-gradient(180deg, var(--bg0), var(--bg1) 55%, var(--bg2));
 // }
 
-html.no-scroll-anchor {
-  overflow-anchor: none;
-}
-
 @media screen and (min-width: 768px) {
   .content {
-    padding-top: 4rem !important;
+    padding: 4rem 1rem 12rem !important;
   }
 }
 
@@ -734,7 +730,7 @@ hr, .hr {
 /* Bean body */
 #magical-bean {
   cursor: pointer;
-  margin-top: 30px;
+  margin: 0;
   background-color: #beecf4;
   width: min(320px, 45%);
   height: min(520px, 50%);
@@ -835,7 +831,7 @@ hr, .hr {
 /* Hover expression */
 #magical-bean:hover {
   background-color: #ffb04c;
-  // box-shadow: 1px 1px 15px 10px #ffd59d;
+  box-shadow: 1px 1px 50px 10px #ffd59d;
 }
 
 #magical-bean:hover #smile {
@@ -942,8 +938,6 @@ hr, .hr {
 
   .magical-bean-text-desktop {
     display: block;
-    padding: 25px;
-    color: #fff;
   }
 
   .magical-bean-text-mobile {
@@ -971,7 +965,7 @@ hr, .hr {
 
 .fab-menu {
   position: relative; /* ✅ REQUIRED for absolute children */
-  width: 102px;
+  width: 92px;
   height: 72px;
   margin: 0;
   text-align: center;
@@ -988,7 +982,7 @@ hr, .hr {
 .fab-menu .menu-open-button {
   background: #EEEEEE;
   border-radius: 40px 40px 60px 60px;
-  width: 102px;
+  width: 92px;
   height: 72px;
   position: absolute;
   left: 50%;
@@ -1000,7 +994,7 @@ hr, .hr {
   text-align: center;
 
   transform: translate3d(0, 0, 0);
-  transition: transform 1020ms cubic-bezier(.2,.9,.2,1);
+  transition: transform 520ms cubic-bezier(.2,.9,.2,1);
   will-change: transform;
   box-sizing: border-box;
 }
@@ -1012,7 +1006,7 @@ hr, .hr {
   cursor: pointer;
   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition-duration: 520ms;
+  transition-duration: 400ms;
   transform: scale(1.06) translate3d(0, 0, 0);
   position: absolute;
 }
@@ -1060,7 +1054,7 @@ hr, .hr {
 
 .fab-menu .menu-open:checked + .menu-open-button {
   transition-timing-function: linear;
-  transition-duration: 300ms;
+  transition-duration: 200ms;
   transform: scale(0.98) translate3d(0, 0, 0);
 }
 
@@ -1077,8 +1071,8 @@ hr, .hr {
 .fab-menu .menu-text {
   display: block;
   padding: 0 10px;
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-weight: 700;
+  font-size: 12px;
   line-height: 1.1;
   text-align: center;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -1087,13 +1081,13 @@ hr, .hr {
 
 /* Slight hover polish */
 .fab-menu .menu-item:hover {
-  filter: saturate(2);
+  filter: brightness(1.05);
 }
 
 /* Bloom easing */
 .fab-menu .menu-open:checked ~ .menu-item {
   transition-timing-function: cubic-bezier(.2,.9,.2,1);
-  transition-duration: 520ms;
+  transition-duration: 620ms;
 }
 
 /* Bloom UNDER the hub */
@@ -1104,12 +1098,12 @@ hr, .hr {
 .fab-menu .menu-open:checked ~ .menu-item:nth-child(7) { transform: translate3d(-220px, -190px, 0); }
 .fab-menu .menu-open:checked ~ .menu-item:nth-child(8) { transform: translate3d(-250px, -70px, 0); }
 
-.fab-menu .menu-open:checked ~ .menu-item:nth-child(3) { transition-delay: 80ms; }
-.fab-menu .menu-open:checked ~ .menu-item:nth-child(4) { transition-delay: 100ms; }
-.fab-menu .menu-open:checked ~ .menu-item:nth-child(5) { transition-delay: 120ms; }
-.fab-menu .menu-open:checked ~ .menu-item:nth-child(6) { transition-delay: 140ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(3) { transition-delay: 0ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(4) { transition-delay: 40ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(5) { transition-delay: 80ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(6) { transition-delay: 120ms; }
 .fab-menu .menu-open:checked ~ .menu-item:nth-child(7) { transition-delay: 160ms; }
-.fab-menu .menu-open:checked ~ .menu-item:nth-child(8) { transition-delay: 180ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(8) { transition-delay: 200ms; }
 
 /* Colors */
 .fab-menu .blue { background-color: #669AE1; }
@@ -1123,7 +1117,6 @@ hr, .hr {
 @media (max-width: 767px) {
     #magical-bean {
         width: min(200px, 85%);
-        margin-top: 20px;
     }
 
     .magical-bean-section.bean-stage{
@@ -1141,9 +1134,6 @@ hr, .hr {
 
     .magical-bean-text-mobile {
         display: block;
-        color: #fff;
-        padding: 20px 15px 20px 15px;
-        text-align: center;
     }
 
     /* Bloom UNDER the hub */
@@ -1603,7 +1593,6 @@ hr, .hr {
 // Ocean Buttons!
 @import "ocean-button";
 @import "welcome-ocean-button";
-@import "water-button";
 
 // Work Experience SCSS
 @import "my_experience";
@@ -1640,7 +1629,6 @@ hr, .hr {
 
 // 3D Gradient Ocean
 @import "gradient-ocean";
-
 
 // Silly Worm
 // @import "silly_worm";
