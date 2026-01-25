@@ -4,6 +4,19 @@
      (Pairs with your existing about-scrolly.js)
      ========================= -->
 
+<div id="welcome-ocean-button" class="welcome-ocean-button button--3">
+      <div class="welcome-ocean-button-wave"></div>
+      <div class="welcome-ocean-button-wave"></div>
+      <div class="welcome-ocean-button-wave"></div>
+      <div class="welcome-ocean-button-wave"></div>
+      <div class="welcome-ocean-button-fish"></div>
+      <div class="welcome-ocean-button-bubble"></div>
+      <div class="welcome-ocean-button-bubble"></div>
+      <div class="welcome-ocean-button-bubble"></div>
+      <div class="welcome-ocean-button-bubble"></div>
+      <span class="welcome-ocean-button__text">About</span>
+</div>
+
 <div class="about-scrolly" id="aboutScrolly">
   <div class="about-scrolly__grid">
 
@@ -14,10 +27,9 @@
         <div class="about-porthole__water" aria-hidden="true"></div>
 
         <!-- Top caption -->
-        <div class="about-porthole__caption" aria-hidden="true">
-          <p class="porthole-kicker">About</p>
+        <!-- <div class="about-porthole__caption" aria-hidden="true">
           <p class="porthole-title">Diving deeper</p>
-        </div>
+        </div> -->
 
         <!-- Depth gauge -->
         <div class="about-depth" aria-hidden="true">
@@ -30,19 +42,19 @@
         <main class="about-scrolly__story" aria-label="About story">
 
           <section class="about-step" data-state="intro">
-            <div class="about-step__card">
-              <p>
+            <p class="about-step__hint">Scroll to dive ↡</p>
+            <div class="thought">
+              <p class="dark-text">
                 Hi! I’m Gabby 😊 A creator + developer (and co-owner of Scarlet Creative) based in Trinidad &amp; Tobago.
                 I’m deeply passionate about helping people feel less overwhelmed, more supported, and more able to do the work that matters to them.
               </p>
-              <p class="about-step__hint">Scroll to dive ↡</p>
             </div>
           </section>
 
           <section class="about-step" data-state="mission">
-            <div class="about-step__card">
+            <div class="thought">
               <h3>Mission</h3>
-              <p>
+              <p class="dark-text"> 
                 A lot of my perspective comes from navigating my own hard seasons and wanting to make things gentler for others.
                 I care about giving a voice to the voiceless, raising awareness, and bringing communities together.
               </p>
@@ -50,7 +62,7 @@
           </section>
 
           <section class="about-step" data-state="tidbits">
-            <div class="about-step__card">
+            <div class="thought dark-text">
               <h3>Tidbits</h3>
               <div class="about-chips" role="list">
                 <span class="about-chip" role="listitem">7 Years</span>
@@ -61,7 +73,7 @@
           </section>
 
           <section class="about-step" data-state="curiosities">
-            <div class="about-step__card">
+            <div class="thought dark-text">
               <h3>Curiosities</h3>
               <p>
                 I love diving into design (UI/UX, graphic, motion), human–computer interaction, art for storytelling, psychology,
@@ -73,7 +85,7 @@
           </section>
 
           <section class="about-step" data-state="cta">
-            <div class="about-step__card">
+            <div class="thought dark-text">
               <h3>Want to create something together?</h3>
               <p><a class="about-cta" href="/contact/">Say hello ↪</a></p>
             </div>
@@ -83,10 +95,29 @@
 
         <!-- Bean row (always bottom, never overlaps story) -->
         <div class="about-beanStage" aria-hidden="true">
-          <div id="magical-about-bean" class="bean bean--about">
+          <div id="magical-about-story-bean" class="bean bean--about">
             <div id="eye1"></div>
             <div id="eye2"></div>
             <div id="smile"></div>
+
+              <!-- NEW: arms -->
+            <div class="bean-arm bean-arm--l"></div>
+            <div class="bean-arm bean-arm--r"></div>
+
+            <!-- NEW: props layer -->
+            <div class="bean-props" aria-hidden="true">
+                <div class="bean-heart"></div>
+
+                <div class="bean-portal">
+                <div class="portal-rim"></div>
+                <div class="portal-hand"></div>
+                </div>
+
+                <div class="bean-handshake">
+                <div class="shake-hand--mine"></div>
+                <div class="shake-hand--theirs"></div>
+                </div>
+            </div>
 
             <div class="about-bubbles" aria-hidden="true">
               <span class="b b1"></span><span class="b b2"></span><span class="b b3"></span>
@@ -94,6 +125,32 @@
             </div>
           </div>
         </div>
+
+            <div class="bean-waves" aria-hidden="true">
+      <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <defs>
+          <path id="w1" d="M0,160 C240,120 480,200 720,160 C960,120 1200,200 1440,160 L1440,320 L0,320 Z" />
+          <path id="w2" d="M0,170 C240,210 480,120 720,170 C960,220 1200,120 1440,170 L1440,320 L0,320 Z" />
+          <path id="w3" d="M0,180 C240,140 480,230 720,180 C960,140 1200,230 1440,180 L1440,320 L0,320 Z" />
+        </defs>
+
+        <!-- Each “wave layer” is a group that contains TWO copies -->
+        <g class="wave wave1">
+          <use href="#w1" x="0"></use>
+          <use href="#w1" x="1440"></use>
+        </g>
+
+        <g class="wave wave2">
+          <use href="#w2" x="0"></use>
+          <use href="#w2" x="1440"></use>
+        </g>
+
+        <g class="wave wave3">
+          <use href="#w3" x="0"></use>
+          <use href="#w3" x="1440"></use>
+        </g>
+      </svg>
+    </div>
 
       </div>
     </section>

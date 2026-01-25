@@ -1,7 +1,6 @@
 /* =========================================================
-   ABOUT SCROLLY — Full SCSS
-   - Bean bottom, story top, compact, fits all screens
-   - Designed to pair with your pinned GSAP timeline
+   ABOUT SCROLLY — Updated SCSS (with armWave + mirrored arms)
+   - Keeps your layout, adds clean pose vars + arm waving
    ========================================================= */
 
 .about-scrolly {
@@ -16,16 +15,14 @@
   --sea-1: #062837;
   --sea-2: #0b415a;
   --accent: #beecf4;
-  --bean: #beecf4;
+  --bean: #93f4f5;
   --glow: rgba(190, 236, 244, 0.25);
 
   --text: rgba(255, 255, 255, 0.92);
   --muted: rgba(255, 255, 255, 0.72);
-  --card: rgba(255, 255, 255, 0.06);
-  --cardBorder: rgba(190, 236, 244, 0.20);
 
   /* Controls bean size so BOTH bean + text fit */
-  --beanH: clamp(200px, 34vh, 420px);
+  --beanH: clamp(100px, 28vh, 200px);
 
   color: var(--text);
 
@@ -42,10 +39,6 @@
     width: 100%;
   }
 
-  /* =========================
-     Porthole: 3 rows
-     caption | story | bean
-     ========================= */
   .about-porthole {
     position: relative;
     height: min(75vh, 720px);
@@ -55,22 +48,20 @@
     grid-template-rows: auto 1fr auto;
     gap: 10px;
 
-    border-radius: 28px;
+    border-radius: 0 0 20px 20px;
     border: 1px solid rgba(255, 255, 255, 0.14);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
     box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
 
-    /* Water behind everything */
     &__water {
       position: absolute;
       inset: 0;
       z-index: 0;
       background:
-        radial-gradient(90% 60% at 50% 18%, rgba(255,255,255,0.09), transparent 55%),
-        linear-gradient(180deg, var(--sea-2), var(--sea-1));
+        radial-gradient(90% 60% at 50% 18%, rgba(147, 232, 255, 0.09), transparent 55%),
+        linear-gradient(180deg, #061b27, #021c27);
     }
 
-    /* Caustics shimmer */
     &::before {
       content: "";
       position: absolute;
@@ -93,8 +84,6 @@
     50%      { transform: translate3d( 2%,  1%, 0) scale(1.05); }
   }
 
-  /* Keep content above water */
-  .about-porthole__caption,
   .about-scrolly__story,
   .about-beanStage,
   .about-depth {
@@ -102,39 +91,6 @@
     z-index: 2;
   }
 
-  /* =========================
-     Caption (top row)
-     ========================= */
-  .about-porthole__caption {
-    padding: 18px 18px 0 18px;
-    pointer-events: none;
-
-    .porthole-kicker {
-      margin: 0;
-      font-size: 0.85rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.70);
-    }
-
-    .porthole-title {
-      margin: 0.2rem 0 0 0;
-      font-size: 1.1rem;
-      font-weight: 650;
-      color: rgba(255, 255, 255, 0.92);
-    }
-  }
-
-  /* Bonus: step-reactive label (no JS needed) */
-  &[data-active="intro"] .porthole-title::after       { content: " · surface"; opacity: 0.8; font-weight: 500; }
-  &[data-active="mission"] .porthole-title::after     { content: " · mission"; opacity: 0.8; font-weight: 500; }
-  &[data-active="tidbits"] .porthole-title::after     { content: " · tidbits"; opacity: 0.8; font-weight: 500; }
-  &[data-active="curiosities"] .porthole-title::after { content: " · curiosities"; opacity: 0.8; font-weight: 500; }
-  &[data-active="cta"] .porthole-title::after         { content: " · say hello"; opacity: 0.8; font-weight: 500; }
-
-  /* =========================
-     Depth gauge (top-right)
-     ========================= */
   .about-depth {
     position: absolute;
     top: 18px;
@@ -162,13 +118,9 @@
     }
   }
 
-  /* =========================
-     Story row (middle)
-     Cards overlay inside this area
-     ========================= */
   &__story {
     padding: 0 18px;
-    min-height: 0; /* important for grid 1fr row */
+    min-height: 0;
     position: relative;
   }
 
@@ -177,7 +129,8 @@
     padding: 0;
   }
 
-  .about-step__card {
+  /* You animate these with GSAP (autoAlpha/y), so keep CSS neutral */
+  .thought {
     position: absolute;
     left: 18px;
     right: 18px;
@@ -185,16 +138,21 @@
     margin: 0 auto;
     max-width: 62ch;
 
-    background: var(--card);
-    border: 1px solid var(--cardBorder);
-    border-radius: 16px;
-    padding: clamp(0.85rem, 1.6vw, 1.1rem);
-    box-shadow: 0 18px 50px rgba(0,0,0,0.25);
-    backdrop-filter: blur(10px);
-
     opacity: 0;
     pointer-events: none;
     transform: translateY(10px);
+  }
+
+  .about-step.is-active .thought {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .about-step:first-child .thought {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
   }
 
   .about-step__hint {
@@ -203,20 +161,6 @@
     font-size: 0.95rem;
   }
 
-  .about-step.is-active .about-step__card {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-
-  /* No-JS / first paint fallback */
-  .about-step:first-child .about-step__card {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-
-  /* Chips */
   .about-chips {
     display: flex;
     flex-wrap: wrap;
@@ -230,11 +174,9 @@
     padding: 0.35rem 0.6rem;
     border-radius: 999px;
     font-size: 0.92rem;
-    color: var(--text);
-    user-select: none;
+    color: #00141c;
   }
 
-  /* CTA */
   .about-cta {
     display: inline-block;
     margin-top: 0.25rem;
@@ -253,20 +195,21 @@
      Bean row (bottom)
      ========================= */
   .about-beanStage {
-    padding: 0 0 clamp(0.75rem, 2vh, 1.25rem) 0;
+    padding: 20px 60px 33px 20px;
     display: grid;
-    place-items: end center;
+    place-items: end right;
   }
 
-  /* Bean size locks to --beanH */
-  #magical-about-bean.bean--about {
+  /* Bean base */
+  #magical-about-story-bean.bean--about {
     cursor: pointer;
     height: var(--beanH);
     width: auto;
-    aspect-ratio: 320 / 520; /* keeps proportions */
+    aspect-ratio: 420 / 320;
 
     background-color: var(--bean);
-    border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
+    border-radius: 130% 70% 30% 20% / 150% 130% 30% 0%;
+    // border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
     position: relative;
     transition: background-color 600ms ease-in, box-shadow 600ms ease-in;
     box-shadow:
@@ -274,88 +217,122 @@
       0 0 0 2px rgba(255,255,255,0.06) inset,
       0 0 40px var(--glow);
 
+    /* Pose controls */
+    --lookX: 0px;
+    --eyeOpen: 0.12;
+    --eyeW: 12%;
+    --eyeH: 8%;
+    --eyeTilt: 0deg;
+
+    --smileW: 16%;
+    --smileH: 12%;
+    --smileY: 42%;
+    --smileCurve: 1;
+
+    --armLx: -6%;
+    --armRx: -6%;
+    --armY: 58%;
+    --armW: clamp(80px, 12vw, 140px);
+    --armH: clamp(40px, 7vh, 70px);
+    --armLrot: -55deg;
+    --armRrot: 55deg;
+    --armLift: 0px;
+    --handsY: 0px;
+
+    /* NEW: wave amount (GSAP animates this) */
+    --armWave: 0deg;
+
+    /* for subtle head look */
+    translate: var(--lookX) 0;
+
     /* Face parts */
     #eye1, #eye2, #smile {
-      border-width: 0.4vw;
+      border-width: 0.3vw;
       border-style: solid;
       position: absolute;
       box-sizing: border-box;
       transition: all 600ms ease-in;
     }
 
-    /* Resting face */
+    /* Eyes driven by vars */
     #eye1, #eye2 {
-      top: 38%;
-      width: 10%;
-      height: 2%;
+      top: 34%;
+      width: var(--eyeW);
+      height: calc(var(--eyeH) * var(--eyeOpen));
       border-color: transparent transparent #3D550C transparent;
-      border-radius: 40%;
+      border-radius: 999px;
+      transform: rotate(var(--eyeTilt));
     }
+    #eye1 { left: 30%; }
+    #eye2 { left: 44%; }
 
-    #eye1 { left: 38%; }
-    #eye2 { left: 52%; }
-
+    /* Smile driven by vars */
     #smile {
-      top: 42%;
-      left: 50%;
-      width: 14%;
-      height: 10%;
-      transform: translateX(-50%);
+      left: 42%;
+      top: var(--smileY);
+      width: var(--smileW);
+      height: var(--smileH);
       border-color: transparent transparent #30550C transparent;
       border-radius: 50%;
+      transform: translateX(-50%) scaleY(calc(0.75 + (var(--smileCurve) * 0.25)));
     }
 
-    /* Hover expression */
-    &:hover { background-color: #ffb04c; }
-
-    &:hover #smile {
-      top: 32%;
-      width: 28%;
-      height: 20%;
-      border-radius: 50%;
-      transition: all 650ms ease-out;
-    }
-
-    &:hover #eye1,
-    &:hover #eye2 {
-      top: 30%;
-      width: 10%;
-      height: 18%;
-      border-radius: 50%;
-    }
-
-    &:hover #eye1 { left: 36%; }
-    &:hover #eye2 { left: 54%; }
-
-    /* Arms */
-    &::before,
-    &::after {
-      content: "";
+    /* Arms (real elements) */
+    .bean-arm {
       position: absolute;
-      bottom: -36px;
-      width: 150px;
-      height: 66px;
+      width: var(--armW);
+      height: var(--armH);
       background: inherit;
       border-radius: 999px;
-      z-index: 2;
-      pointer-events: none;
-      box-shadow: 0 14px 22px rgba(0,0,0,0.10);
+    //   box-shadow: 0 14px 22px rgba(0,0,0,0.10);
       filter: brightness(0.98);
+      pointer-events: none;
+      top: calc(var(--armY) + var(--armLift));
+      translate: 0 -50%;
+      z-index: 1;
     }
 
-    &::before {
-      left: 6%;
-      transform: rotate(12deg);
-      transform-origin: right center;
-      clip-path: polygon(0 8%, 92% 0, 100% 50%, 92% 100%, 0 92%);
+    /* LEFT arm: add +armWave */
+    .bean-arm--l {
+      left: var(--armLx);
+      transform-origin: 26% 120%;
+      transform: rotate(calc(var(--armLrot) + var(--armWave)));
     }
 
-    &::after {
-      right: 6%;
-      transform: rotate(-12deg);
-      transform-origin: left center;
-      clip-path: polygon(8% 0, 100% 8%, 100% 92%, 8% 100%, 0 50%);
+    /* RIGHT arm: subtract armWave to mirror */
+    .bean-arm--r {
+      right: var(--armRx);
+      transform-origin: 65% 120%;
+      transform: rotate(calc(var(--armRrot) - var(--armWave)));
     }
+
+    /* Props layer */
+    .bean-props {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      transform: translateY(var(--handsY));
+    }
+
+    /* Default hide props */
+    .bean-heart,
+    .bean-portal,
+    .bean-handshake {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity .25s ease, transform .25s ease;
+    }
+
+    /* Show via data-prop */
+    &[data-prop="heart"] .bean-heart,
+    &[data-prop="portal"] .bean-portal,
+    &[data-prop="handshake"] .bean-handshake {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Hover still allowed */
+    &:hover { background-color: #ffb04c; }
   }
 
   /* Bubbles */
@@ -392,25 +369,73 @@
     100% { transform: translateY(-160px) scale(1.08); opacity: 0; }
   }
 
-  /* Bubble intensity per step */
   &[data-active="mission"] .about-bubbles { opacity: 0.45; }
   &[data-active="tidbits"] .about-bubbles { opacity: 0.70; }
   &[data-active="curiosities"] .about-bubbles { opacity: 0.80; }
   &[data-active="cta"] .about-bubbles { opacity: 0.55; }
 
-  /* Tight screens: shrink bean + text slightly */
   @media (max-height: 740px) {
-    --beanH: clamp(180px, 30vh, 360px);
-
-    .about-step__card {
-      font-size: 0.95rem;
-      line-height: 1.55;
-    }
+    --beanH: clamp(90px, 22vh, 160px);
   }
 
-  /* Reduced motion */
   @media (prefers-reduced-motion: reduce) {
     .about-porthole::before { animation: none; }
     .about-bubbles .b { animation: none; opacity: 0.15; }
+  }
+}
+
+/* =========================
+   PROPS (same as your versions)
+   ========================= */
+.bean-heart {
+  position: absolute;
+  left: 50%;
+  top: 58%;
+  width: 22px;
+  height: 22px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #ff6b8b;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #ff6b8b;
+    border-radius: 50%;
+  }
+
+  &::before { left: -11px; top: 0; }
+  &::after  { top: -11px; left: 0; }
+}
+
+.bean-portal {
+  position: absolute;
+  left: 10%;
+  top: 58%;
+  width: 110px;
+  height: 110px;
+
+  .portal-rim {
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    border: 3px solid rgba(190,236,244,0.75);
+    box-shadow: 0 0 0 6px rgba(190,236,244,0.08), 0 16px 28px rgba(0,0,0,0.22);
+  }
+
+  .portal-hand {
+    position: absolute;
+    width: 90px;
+    height: 44px;
+    left: 55%;
+    top: 55%;
+    transform: translate(-50%,-50%) rotate(-10deg);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.85);
+    opacity: 0.9;
   }
 }

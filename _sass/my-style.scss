@@ -35,6 +35,10 @@ html.no-scroll-anchor {
   }
 }
 
+.dark-text {
+  color: #000;
+}
+
 .bigger-p {
   font-size: 18px !important;
 }
@@ -1651,4 +1655,7 @@ hr, .hr {
 
 // About scrolly story
 @import "about_scrolly";
+
+// Thought bubble
+@import "thought_bubble";
 
