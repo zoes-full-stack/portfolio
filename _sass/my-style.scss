@@ -1726,3 +1726,20 @@ hr, .hr {
 // Relaxing by the beach - for 404?
 @import "relax-by-beach";
 
+// Scroll to the top button
+@import "scroll-top";
+
+// footer {
+//     display: none !important; /* Completely removes it from layout */
+// }
+
+.fixed-bottom-p {
+  position: fixed; /* positions relative to the browser window */
+  bottom: 0;   
+  right: 0;      
+  width: 80%;    
+  color: black;
+  text-align: center;
+  margin: 0;      /* remove default P margins */
+  padding: 10px 0; /* add some spacing */
+}
