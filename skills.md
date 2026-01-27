@@ -20,7 +20,7 @@ page_scripts:
     </div>
   </header>
   <hr> -->
-
+  <p class="note"><strong>*</strong> Means actively learning :D</p>
   {% include skillset.html %}
 </div>
 

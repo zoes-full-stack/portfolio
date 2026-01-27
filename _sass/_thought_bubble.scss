@@ -2,10 +2,9 @@ $background-color_1: orange;
 $background-color_2: #fff;
 
 .thought {
-	display: flex;
+	display: block;
 	background-color: $background-color_2;
 	padding: 20px;
-    margin: 10px 270px 10px 10px !important;
 	border-radius: 30px;
 	min-width: 40px;
 	max-width: 500px;

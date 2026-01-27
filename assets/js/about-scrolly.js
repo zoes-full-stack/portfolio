@@ -7,6 +7,7 @@
     const steps = Array.from(scrolly.querySelectorAll('.about-step'));
     const cards = steps.map(s => s.querySelector('.thought')).filter(Boolean);
     const bean = scrolly.querySelector('#magical-about-story-bean');
+    const scrolly_hint = document.querySelector('.about-step__hint');
 
     if (!window.gsap || !window.ScrollTrigger || steps.length === 0 || !bean) return;
 
@@ -21,6 +22,24 @@
       }
     }
     const stBase = scrollerEl ? { scroller: scrollerEl } : {};
+
+    function scrollToAboutStart() {
+      // Prefer scrolly element (pins from its top)
+      if (!scrolly) return;
+
+      // If ScrollSmoother is active, use it (scrollIntoView won't always play nice)
+      if (window.ScrollSmoother && typeof window.ScrollSmoother.get === "function") {
+        const smoother = window.ScrollSmoother.get();
+        if (smoother && typeof smoother.scrollTo === "function") {
+          smoother.scrollTo(scrolly, true, "top top");
+          return;
+        }
+      }
+
+      // Fallback
+      scrolly.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
 
     // Kill only OUR old triggers (Hydejack PJAX safe)
     ScrollTrigger.getAll()
@@ -124,7 +143,7 @@
 
     let poseLoop = null;
 
-    function applyPose(state){
+    function applyPose(state) {
       const pose = POSES[state] || POSES.intro;
 
       // clear prior loop
@@ -231,6 +250,13 @@
         scrub: 1,
         anticipatePin: 1,
         invalidateOnRefresh: true,
+        // onUpdate: self => {
+        //   const p = self.progress;
+        //   scrolly.style.setProperty('--scroll-progress', p.toFixed(4));
+        //   // move “depth” vibes down as you scroll
+        //   scrolly.style.setProperty('--depthY', `${p * 80}px`);
+        // }
+
         onUpdate: self => {
           const p = self.progress;
           scrolly.style.setProperty('--scroll-progress', p.toFixed(4));
@@ -254,9 +280,24 @@
     });
 
     setActiveIndex(0);
+    // Hide the hint on first scroll
+    // scrolly_hint.style.display = "none";
 
-    requestAnimationFrame(() => ScrollTrigger.refresh());
-    window.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
+
+    // requestAnimationFrame(() => ScrollTrigger.refresh());
+    // window.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
+
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh(true);
+      // Let layout settle 1 tick, then scroll
+      // requestAnimationFrame(scrollToAboutStart); TODO: DELETE IF NOT USING
+    });
+
+    // window.addEventListener("load", () => {
+    //   document.querySelector("#aboutScrolly")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    //   ScrollTrigger.refresh(), { once: true };
+    // });
+
   }
 
   document.addEventListener('DOMContentLoaded', init);

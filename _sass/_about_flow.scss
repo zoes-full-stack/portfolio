@@ -1,0 +1,322 @@
+/* =========================
+   ABOUT FLOW — Chapters + Bean Slot (no sticky stage)
+   - Each chapter has a 2-col layout: Thought | Bean
+   - JS moves the bean between .about-beanSlot elements
+   ========================= */
+
+.about-flow {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  overflow: visible;
+
+  /* Theme vars (GSAP can tween these on #aboutFlow) */
+  --sea-0: #041823;
+  --sea-1: #062837;
+  --sea-2: #0b415a;
+  --accent: #beecf4;
+  --bean: #beecf4;
+  --glow: rgba(190, 236, 244, 0.25);
+
+  /* Sizing */
+  --beanH: clamp(120px, 26vh, 220px);
+
+  /* Layout */
+  --gap: clamp(16px, 3vw, 32px);
+  --sidePad: clamp(16px, 4vw, 48px);
+
+  padding: clamp(24px, 6vh, 56px) 0;
+
+  /* simple underwater gradient */
+  background: linear-gradient(180deg, var(--sea-0), var(--sea-2));
+}
+
+/* Each chapter is normal document flow */
+.about-flow .about-chapter {
+  position: relative;
+  z-index: 1;
+
+  /* Give breathing room; you can re-enable min-height if you want “full scenes” */
+  padding: clamp(24px, 6vh, 64px) var(--sidePad);
+}
+
+/* The 2-column wrap: Thought | Bean */
+.about-flow .about-chapter__wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--gap);
+  align-items: start;
+
+  /* constrain overall text width without cramping the bean */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================
+   THOUGHT BUBBLE
+   - The most common “text clipped” issue is fixed heights or flex centering.
+   - So: allow wrapping, remove centering, keep bubble shape.
+   ========================= */
+
+.thought {
+  background: #fff;
+  color: #00141c;
+  border-radius: 30px;
+
+  padding: clamp(16px, 2vw, 22px);
+
+  /* Important: let content size the bubble */
+  display: block;
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+
+  /* keep bubble tail behind */
+  position: relative;
+}
+
+/* Bubble “tail” */
+.thought::before {
+  content: "";
+  background: #fff;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 44px;
+  height: 44px;
+  top: -12px;
+  left: 28px;
+  box-shadow: -50px 30px 0 -12px #fff;
+}
+
+.thought::after {
+  content: "";
+  background: #fff;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  bottom: -10px;
+  right: 26px;
+  width: 30px;
+  height: 30px;
+  box-shadow:
+    40px -34px 0 0 #fff,
+    -28px -6px 0 -2px #fff,
+    -24px 17px 0 -6px #fff,
+    -5px 25px 0 -10px #fff;
+}
+
+/* Ensure paragraphs wrap nicely inside bubble */
+.thought p {
+  margin: 0.65rem 0 0;
+  line-height: 1.5;
+}
+.thought p:first-child {
+  margin-top: 0;
+}
+
+/* Optional: your hint text */
+.about-step__hint {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  opacity: 0.7;
+}
+
+/* Optional reveal baseline (JS can tween opacity/y too) */
+.about-flow .about-chapter .thought {
+  opacity: 0;
+  transform: translateY(10px);
+  will-change: transform, opacity;
+}
+.about-flow .about-chapter.is-active .thought {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   BEAN SLOT
+   - Reserve space next to thought
+   - Keeps bean visible without overlap
+   ========================= */
+
+.about-flow .about-beanSlot {
+  position: relative;
+  width: clamp(180px, 22vw, 320px);
+  min-height: calc(var(--beanH) + 14px);
+
+  /* keep the bean aligned to top-ish of the thought */
+  display: grid;
+  align-items: start;
+  justify-items: end;
+
+  pointer-events: none; /* bean is decorative */
+}
+
+/* The movable wrapper (this is what Flip/JS should move) */
+.about-flow .about-beanMover {
+  position: relative;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Gentle idle drift layer (pure CSS, optional) */
+.about-flow .about-beanDrift {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+
+  /* Keep it subtle so it doesn’t feel “jumpy” */
+  animation: beanDrift 3.4s ease-in-out infinite;
+}
+
+@keyframes beanDrift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50%      { transform: translate3d(0, -6px, 0); }
+}
+
+/* =========================
+   BEAN (core styles you already had)
+   Keep your existing props/bubbles styles as-is
+   ========================= */
+
+#magical-about-story-bean.bean--about {
+  height: var(--beanH);
+  width: auto;
+  aspect-ratio: 420 / 320;
+
+  background: var(--bean);
+  border-radius: 130% 70% 30% 20% / 150% 130% 30% 0%;
+  position: relative;
+
+  box-shadow:
+    0 26px 60px rgba(0,0,0,0.30),
+    0 0 0 2px rgba(255,255,255,0.06) inset,
+    0 0 40px var(--glow);
+
+  /* pose vars (GSAP animates these) */
+  --lookX: 0px;
+  --eyeOpen: 0.12;
+  --eyeW: 12%;
+  --eyeH: 8%;
+  --eyeTilt: 0deg;
+
+  --smileW: 16%;
+  --smileH: 12%;
+  --smileY: 42%;
+  --smileCurve: 1;
+
+  --armLx: -6%;
+  --armRx: -6%;
+  --armY: 58%;
+  --armW: clamp(80px, 12vw, 140px);
+  --armH: clamp(40px, 7vh, 70px);
+  --armLrot: -55deg;
+  --armRrot: 55deg;
+  --armLift: 0px;
+  --handsY: 0px;
+  --armWave: 0deg;
+
+  translate: var(--lookX) 0;
+
+  #eye1, #eye2, #smile {
+    border-width: 0.3vw;
+    border-style: solid;
+    position: absolute;
+    box-sizing: border-box;
+  }
+
+  #eye1, #eye2 {
+    top: 34%;
+    width: var(--eyeW);
+    height: calc(var(--eyeH) * var(--eyeOpen));
+    border-color: transparent transparent #3D550C transparent;
+    border-radius: 999px;
+    transform: rotate(var(--eyeTilt));
+  }
+  #eye1 { left: 30%; }
+  #eye2 { left: 44%; }
+
+  #smile {
+    left: 42%;
+    top: var(--smileY);
+    width: var(--smileW);
+    height: var(--smileH);
+    border-color: transparent transparent #30550C transparent;
+    border-radius: 50%;
+    transform: translateX(-50%) scaleY(calc(0.75 + (var(--smileCurve) * 0.25)));
+  }
+
+  .bean-arm {
+    position: absolute;
+    width: var(--armW);
+    height: var(--armH);
+    background: inherit;
+    border-radius: 999px;
+    filter: brightness(0.98);
+    top: calc(var(--armY) + var(--armLift));
+    translate: 0 -50%;
+    z-index: 1;
+  }
+
+  .bean-arm--l {
+    left: var(--armLx);
+    transform-origin: 26% 120%;
+    transform: rotate(calc(var(--armLrot) + var(--armWave)));
+  }
+
+  .bean-arm--r {
+    right: var(--armRx);
+    transform-origin: 65% 120%;
+    transform: rotate(calc(var(--armRrot) - var(--armWave)));
+  }
+
+  .bean-props {
+    position: absolute;
+    inset: 0;
+    transform: translateY(var(--handsY, 0px));
+    pointer-events: none;
+
+    > * {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 200ms ease, transform 200ms ease;
+    }
+  }
+}
+
+/* Only show the active prop */
+#magical-about-story-bean[data-prop="heart"] .bean-heart,
+#magical-about-story-bean[data-prop="portal"] .bean-portal,
+#magical-about-story-bean[data-prop="handshake"] .bean-handshake {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* =========================
+   RESPONSIVE
+   - Stack bean under thought on small screens
+   ========================= */
+
+@media (max-width: 900px) {
+  .about-flow .about-chapter__wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .about-flow .about-beanSlot {
+    width: 100%;
+    min-height: 0;
+    justify-items: start;
+  }
+
+  .about-flow .about-beanDrift {
+    animation-duration: 3.0s;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .about-flow .about-beanDrift {
+    animation: none !important;
+  }
+}

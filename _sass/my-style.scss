@@ -25,9 +25,69 @@ html.no-scroll-anchor {
   overflow-anchor: none;
 }
 
-.layout-about {
-  padding-top: 0 !important;
+/* Use the body class Jekyll generates for this page */
+main.page-about {
+  background: #041823;
 }
+
+/* Remove the top gap / header spacing */
+main.page-about .content,
+main.page-about .content > .content-wrap {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* If Hydejack adds a hero/title area above content, hide it */
+main.page-about .page-title,
+main.page-about .content .title,
+main.page-about header {
+  display: none !important;
+}
+
+/* Make your scrolly flush */
+main.page-about .about-shell {
+  margin: 0;
+  padding: 0;
+}
+
+
+// 
+/* Body background only on About layout */
+// body:has(main.layout-about) {
+//   background: #041823 !important;
+// }
+
+// /* Ensure the actual page surface is the same color */
+// main.layout-about {
+//   // background: #041823 !important;
+//   min-height: 100vh;
+// }
+
+// /* page-level background */
+// body:has(main.layout-about) {
+//   background:
+//     radial-gradient(1200px 700px at 65% 35%, rgba(10, 60, 75, 0.55), transparent 60%),
+//     radial-gradient(900px 600px at 20% 25%, rgba(6, 40, 55, 0.55), transparent 65%),
+//     linear-gradient(180deg, #02111a 0%, #041823 50%, #02121a 100%) !important;
+// }
+
+// /* optional “dust/bubbles” overlay */
+// body:has(main.layout-about)::before {
+//   content:"";
+//   position: fixed;
+//   inset: 0;
+//   pointer-events: none;
+//   opacity: 0.35;
+//   background:
+//     radial-gradient(circle at 15% 25%, rgba(255,255,255,0.10) 0 2px, transparent 3px),
+//     radial-gradient(circle at 55% 45%, rgba(255,255,255,0.08) 0 1.5px, transparent 3px),
+//     radial-gradient(circle at 80% 30%, rgba(255,255,255,0.07) 0 2px, transparent 3px),
+//     radial-gradient(circle at 30% 75%, rgba(255,255,255,0.06) 0 1.5px, transparent 3px);
+//   mix-blend-mode: screen;
+//   filter: blur(0.2px);
+// }
+
+// 
 
 @media screen and (min-width: 768px) {
   .content {
@@ -1599,6 +1659,9 @@ hr, .hr {
   color: #ffffff;
 }
 
+// Sidebar intro
+@import "sidebar-intro";
+
 // Projects (Portfolio) SCSS 
 @import "my-projects";
 
@@ -1654,8 +1717,12 @@ hr, .hr {
 @import "silly_worm";
 
 // About scrolly story
-@import "about_scrolly";
+
+@import "about_flow";
 
 // Thought bubble
 @import "thought_bubble";
+
+// Relaxing by the beach - for 404?
+@import "relax-by-beach";
 

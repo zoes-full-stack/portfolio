@@ -1,0 +1,218 @@
+.relax-by-beach {
+    display: block;
+    width: 100%;
+    border-radius: 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 26px 80px rgba(0, 0, 0, 0.35);
+
+    /* Water haze */
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -25%;
+        // background:
+        //   radial-gradient(800px 520px at 30% 20%, rgba(100, 255, 232, 0.09) 0%, rgba(100, 255, 232, 0) 62%),
+        //   radial-gradient(700px 520px at 70% 30%, rgba(107, 182, 255, 0.08) 0%, rgba(107, 182, 255, 0) 68%),
+        //   radial-gradient(900px 700px at 50% 80%, rgba(123, 109, 255, 0.06) 0%, rgba(123, 109, 255, 0) 72%);
+        opacity: 0.9;
+        z-index: -2;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+#Reflections,
+#Sun {
+  animation: flicker 2s infinite;
+  animation-delay: -2s;
+  opacity: 0.8;
+}
+
+#_x3C_Leaf4_x3E_,
+#_x3C_Leaf3_x3E_,
+#_x3C_Leaf2_x3E_,
+#_x3C_Leaf1_x3E_ {
+  animation: sway2 4s infinite;
+  transition-timing-function: ease-in-out;
+}
+
+#_x3C_Leaf1_x3E_ {
+  animation-delay: -.6s;
+}
+
+#_x3C_Leaf2_x3E_ {
+  animation-delay: -.5s;
+}
+
+#_x3C_Leaf3_x3E_ {
+  animation-delay: -.3s;
+}
+
+#_x3C_Leaf4_x3E_ {
+  animation-delay: -.1s;
+}
+
+#_x3C_Leaf6_x3E_,
+#_x3C_Leaf5_x3E_,
+#_x3C_Leaf8_x3E_,
+#_x3C_Leaf7_x3E_ {
+  position: relative;
+  transform-origin: 0, 0;
+  animation: sway 5s infinite;
+  transition-timing-function: ease-in-out;
+  transform: translateY(-10px);
+}
+
+#_x3C_Leaf6_x3E_ {
+  animation-delay: -.25s;
+}
+
+#_x3C_Stem4_x3E__2_,
+#_x3C_Stem3_x3E_,
+#_x3C_Stem2_x3E_,
+#_x3C_Stem1_x3E_ {
+  animation: plant 4s infinite;
+  animation-delay: -2s;
+}
+
+#_x3C_Bush_x3E_ {
+  animation: bush 8s infinite;
+  animation-delay: -2s;
+}
+
+#_x3C_leaf_x3E__5_,
+#_x3C_leaf_x3E__3_,
+#_x3C_leaf_x3E__8_ {
+  animation: leaves 2s infinite;
+  animation-delay: -2s;
+}
+
+#_x3C_leaf_x3E__3_ {
+  animation-delay: -2.25s;
+}
+
+#_x3C_leaf_x3E__8_ {
+  animation-delay: -2.5s;
+}
+
+#_x3C_Stem4_x3E__2_ {
+  animation-delay: -2s;
+}
+
+#_x3C_Stem3_x3E_ {
+  animation-delay: -2.25s;
+}
+
+#_x3C_Stem3_x3E_ {
+  animation-delay: -2.5s;
+}
+
+#_x3C_Stem3_x3E_ {
+  animation-delay: -2.75s;
+}
+
+#Clouds_1_ {
+  position: relative;
+  transform-origin: 0, 0;
+  animation: clouds 15s 1;
+  transition-timing-function: ease-in;
+  animation-delay: -1s;
+}
+
+#_x3C_Hammock_x5F_Group_x3E_ {
+  position: relative;
+  animation: hammock 3s infinite;
+  transition-timing-function: ease-in-out;
+  animation-delay: -2s;
+  transform: rotateX(-10deg) translateX(-5px) translateY(-1px) skewX(-1deg);
+}
+
+#_x3C_FrontSarong_x3E_ {
+  transform: translateZ(300px) rotateX(0deg);
+}
+
+#_x3C_BackSarong_x3E_ {
+  transform: translateZ(-300px) rotateX(-30deg) translateY(20px);
+}
+
+#_x3C_UpArm_x3E_ {
+  transform: translateZ(100px);
+}
+
+@keyframes clouds {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes sway {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    transform-origin: 0%, 0%;
+  }
+  50% {
+    transform-origin: 50%, 50%;
+    transform: rotate(-5deg) translateY(30px) translateX(-5px);
+  }
+}
+
+@keyframes sway2 {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    transform-origin: 0%, 0%;
+  }
+  50% {
+    transform-origin: 50%, 50%;
+    transform: rotate(-5deg) translateY(10px) translateX(-5px);
+  }
+}
+
+@keyframes hammock {
+  0% {
+    transform: rotateX(-10deg) translateX(-5px) translateY(-1px) skewX(-1deg);
+  }
+  50% {
+    transform: rotateX(10deg) translateX(-5px) translateY(1px) skewX(1deg);
+  }
+}
+
+@keyframes plant {
+  0% {
+    transform: rotate(0deg) translateY(0px) skewX(0deg);
+  }
+  50% {
+    transform: rotate(5deg) translateX(10px) translateY(-9px) skewX(2deg);
+  }
+}
+
+@keyframes bush {
+  0% {
+    transform: rotate(0deg) translateY(0px) skewX(0deg);
+  }
+  50% {
+    transform: rotate(3deg) translateX(5px) translateY(0px) skewX(2deg);
+  }
+}
+
+@keyframes leaves {
+  0% {
+    transform: rotate(0deg) translateY(0px) skewX(0deg);
+  }
+  50% {
+    transform: rotate(-3deg) translateX(-14px) translateY(0px) skewX(1deg);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    transform: translateX(0px) skewX(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateX(-9px) skewX(1deg) scale(1.05, 1);
+    opacity: 1;
+  }
+}

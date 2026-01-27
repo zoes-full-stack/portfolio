@@ -2,10 +2,15 @@
    Tabbed Masonry Gallery (Illustrations / Baking / Documents)
    - No global MutationObserver (prevents blink/re-render loops)
    - Safe re-init on Hydejack/Turbo navigation events
+
+   OPTION A AUDIO UX: Global audio is the truth.
+   - Global button controls site-wide audio preference.
+   - Lightbox audio toggle is a TEMPORARY "preview audio" switch for the currently open lightbox only.
+   - Closing the lightbox reverts back to the global preference (since the video is destroyed anyway).
 */
 
 // =========================
-// GLOBAL AUDIO CONTROLLER
+// GLOBAL AUDIO CONTROLLER (Option A)
 // =========================
 window.AudioController = {
   muted: true,
@@ -13,36 +18,38 @@ window.AudioController = {
   setMuted(value) {
     this.muted = !!value;
 
-    // Mute / unmute all media
+    // Apply to current lightbox media if present
     if (window.currentMedia) {
       window.currentMedia.muted = this.muted;
-      if (this.muted) window.currentMedia.volume = 0;
+      window.currentMedia.volume = this.muted ? 0 : 1;
     }
 
-    document.querySelectorAll("audio, video").forEach(media => {
-    if (media !== window.currentMedia) {
-        media.pause();
+    // Stop any other media around the page (prevents multiple audio sources)
+    document.querySelectorAll("audio, video").forEach((media) => {
+      if (media !== window.currentMedia) {
+        try { media.pause(); } catch {}
         media.muted = true;
       }
     });
 
-    // document.querySelectorAll("audio, video").forEach(media => {
-    //   media.muted = this.muted;
-    //   if (this.muted) media.volume = 0;
-    // });
-
-    // Sync ALL sound buttons (global + modals)
-    document.querySelectorAll(".water-button").forEach(btn => {
+    // Sync ALL global sound buttons (NOT the lightbox button)
+    document.querySelectorAll(".water-button").forEach((btn) => {
       btn.classList.toggle("is-sound-on", !this.muted);
       btn.setAttribute("aria-pressed", String(!this.muted));
 
-      const label =
-        btn.querySelector("span");
-
-      if (label) {
-        label.textContent = this.muted ? "Audio Off" : "Audio On";
-      }
+      const label = btn.querySelector("span");
+      if (label) label.textContent = this.muted ? "Audio Off" : "Audio On";
     });
+
+    // If lightbox is open, reflect global state on the lightbox button too
+    const lb = document.getElementById("lightbox");
+    const lbAudioToggle = document.getElementById("lbAudioToggle");
+    const lbAudioHint = document.getElementById("lbAudioHint");
+    const isOpen = lb && lb.getAttribute("aria-hidden") === "false";
+    if (isOpen && lbAudioToggle) {
+      lbAudioToggle.textContent = this.muted ? "🔇 Preview Audio: Off" : "🔊 Preview Audio: On";
+      lbAudioToggle.setAttribute("aria-pressed", String(!this.muted));
+    }
   },
 
   toggle() {
@@ -50,18 +57,29 @@ window.AudioController = {
   }
 };
 
+// =========================
+// AUDIO BUTTON (delegated, Hydejack-safe)
+// =========================
+function bindAudioDelegationOnce() {
+  if (document.documentElement.dataset.audioBound === "1") return;
+  document.documentElement.dataset.audioBound = "1";
 
-document.addEventListener("DOMContentLoaded", () => {
-  const globalToggle = document.querySelector(".water-button");
+  document.addEventListener(
+    "click",
+    (e) => {
+      const btn = e.target.closest(".water-button");
+      if (!btn) return;
 
-  if (!globalToggle) return;
+      // in case it's an <a>
+      e.preventDefault();
 
-  globalToggle.addEventListener("click", () => {
-    window.AudioController.toggle();
-  });
-});
+      window.AudioController.toggle();
+    },
+    { passive: false }
+  );
+}
 
-
+bindAudioDelegationOnce();
 
 (function () {
   // =========================
@@ -69,15 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // =========================
   const MEDIA_SETS = {
     illustrations: [
-      // { kind: "header", title: "<p class='small'>Soft stories and illustrations.</p>" },
-
-      // { kind: "header", title: "<p><b>Scarlet World & Brand Art</b></p>" },
       { kind: "image", title: "Clay Scarlet World", src: "/images/Canva/Clay Scarlet World.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Plush Scarlet World", src: "/images/Canva/Plush Scarlet World.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Scarlet Profile Icon", src: "/images/Canva/Facebook Profile Photo (720 x 720px).png", w: 720, h: 720 },
       { kind: "image", title: "Scarlet Cover Photo", src: "/images/Canva/Scarlet Cover Photo (830 x 360 px).png", w: 830, h: 360 },
       { kind: "image", title: "Scarlet Another Cover Photo", src: "/images/Canva/Scarlet Creative Software.png", w: 1350, h: 500 },
-      // { kind: "header", title: "<p><b>Scarlet Campaigns & Social Posts</b></p>" },
       { kind: "image", title: "Freedom & Trust", src: "/images/Canva/freedom_and_trust.png", w: 1080, h: 1080 },
       { kind: "image", title: "Happy Divali", src: "/images/Canva/Scarlet - Happy Divali.png", w: 1080, h: 1080 },
       { kind: "image", title: "Scarlet Beach", src: "/images/Canva/Scarlet Beach.png", w: 1080, h: 1080 },
@@ -87,7 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
       { kind: "video", title: "Long Weekend", thumb: "/images/Canva/thumbnail_images/Scarlet_long_weekend.jpg", src: "/images/Canva/Scarlet_long_weekend.mp4", hasAudio: false, w: 1080, h: 1080 },
       { kind: "video", title: "Taking the First Step", thumb: "/images/Canva/thumbnail_images/Taking the first step.jpg", src: "/images/Canva/Taking the first step.mp4", hasAudio: false, w: 1080, h: 1080 },
       { kind: "video", title: "Christmas!", thumb: "/images/Canva/thumbnail_images/Scarlet_Christmas.jpg", src: "/images/Canva/Scarlet_Christmas.mp4", hasAudio: false, w: 1080, h: 1350 },
-      // { kind: "header", title: "<p><b>Personal Illustrations & Mood Pieces</b></p>" },
       { kind: "video", title: "Let Go and Flow like Water", thumb: "/images/Canva/thumbnail_images/Let_Go_Flow_Growth.jpg", src: "/images/Canva/Personal/Let_Go_Flow_Growth.mp4", hasAudio: false, w: 1080, h: 1350 },
       { kind: "video", title: "It's Okay to not be Okay", thumb: "/images/Canva/thumbnail_images/its_ok_to_not_be_ok.jpg", src: "/images/Canva/Personal/its_ok_to_not_be_ok.mp4", hasAudio: true, w: 1080, h: 1350 },
       { kind: "image", title: "Care, Compassion & Growth", src: "/images/Canva/Personal/Care_Compassion_Growth.jpg", w: 1080, h: 1350 },
@@ -107,30 +120,24 @@ document.addEventListener("DOMContentLoaded", () => {
       { kind: "image", title: "Father's Day Red Velvet with Cream Cheese Icing Cake", src: "/images/baking/dad_cake.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Fudgy Brownies with Crackly Top", src: "/images/baking/brownies.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "White Chocolate Snow Men", src: "/images/baking/choc_snow.jpg", w: 1080, h: 1080 },
-
       { kind: "image", title: "Cactus Chocolate Cupcake with Peanut Butter Icing", src: "/images/baking/cactus_cake.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Pink Meringues!", src: "/images/baking/meringues.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Fudgy Brownies with Semi-Sweet Chocolate Ganache", src: "/images/baking/brownies2.jpg", w: 1080, h: 1080 },
-
       { kind: "image", title: "Mom's Birthday Cake!", src: "/images/baking/mom_cake.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Mom's Birthday Cake", src: "/images/baking/mom_cake2.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Mom's Birthday Cake with Chocolate Ganache Side Drip", src: "/images/baking/mom_cake4.jpg", w: 1080, h: 1080 },
-
       { kind: "image", title: "Father's Day Red Velvet and Coffee Cake with Coffee Cream Cheese Icing", src: "/images/baking/dad_cake3.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Dark Soul's Themed Birthday Red Velvet with Cream Cheese Icing Cake for My S/O", src: "/images/baking/bday_cake.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Dark Soul's Themed Birthday Red Velvet with Cream Cheese Icing Cake for My S/O", src: "/images/baking/bday_cake2.jpg", w: 1080, h: 1080 },
-
       { kind: "image", title: "Christmas/New Years Red Velvet with Cream Cheese Icing Cake", src: "/images/baking/christmas_newy_cake.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Anniversary Red Velvet Cake with Cream Cheese Icing", src: "/images/baking/ann_cake3.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Anniversary Red Velvet Cake with Cream Cheese Icing", src: "/images/baking/ann_cake.jpg", w: 1080, h: 1080 },
-
       { kind: "image", title: "Father's Day Red Velvet Cake with Cream Cheese Icing", src: "/images/baking/dad_cake2.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Mother's Day Chocolate Cake with Chocolate Buttercream and Ganache", src: "/images/baking/mom_cake3.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Lord of the Rings Themed Birthday Cake for my S/O", src: "/images/baking/ann_cake2.jpg", w: 1080, h: 1080 },
-
       { kind: "image", title: "Cute Red Velvet Cupcake", src: "/images/baking/cupcake.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Chewy Chocolate Chip Cookies", src: "/images/baking/cookies2.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Chewy Chocolate Chip and Cinnamon Cookies", src: "/images/baking/cookies.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Chewy Chocolate Chip and Cinnamon Cookies", src: "/images/baking/cookies.jpg", w: 1080, h: 1080 }
     ],
 
     documents: [
@@ -152,8 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
         w: 1414,
         h: 2000
       }
-    ],
-
+    ]
   };
 
   // =========================
@@ -162,8 +168,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeTab = "illustrations";
   const tabCache = new Map(); // tabKey -> DocumentFragment
   let bootTimer = null;
-
-  // Prevent double-init loops
   let lastBootSignature = "";
 
   // lightbox uses window.MEDIA
@@ -186,98 +190,67 @@ document.addEventListener("DOMContentLoaded", () => {
     return "illustrations";
   }
 
-  function initWhimsicalTabs(tabsEl){
+  function initWhimsicalTabs(tabsEl) {
     if (!window.gsap) return;
     if (!tabsEl || tabsEl.dataset.whimsyBound === "1") return;
     tabsEl.dataset.whimsyBound = "1";
 
     const prefersReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const indicator = tabsEl.querySelector(".tab-indicator");
-    const links = Array.from(tabsEl.querySelectorAll('a[data-tab]'));
+    const links = Array.from(tabsEl.querySelectorAll("a[data-tab]"));
 
     if (!indicator || !links.length) return;
 
-    function rectOf(el){
+    function rectOf(el) {
       const r = el.getBoundingClientRect();
       const p = tabsEl.getBoundingClientRect();
-      return {
-        x: r.left - p.left,
-        y: r.top - p.top,
-        w: r.width,
-        h: r.height
-      };
+      return { x: r.left - p.left, y: r.top - p.top, w: r.width, h: r.height };
     }
 
-    function moveIndicatorTo(el, immediate=false){
-      const {x,y,w,h} = rectOf(el);
+    function moveIndicatorTo(el, immediate = false) {
+      const { x, y, w, h } = rectOf(el);
 
-      if (prefersReduce || immediate){
+      if (prefersReduce || immediate) {
         gsap.set(indicator, { x, y, width: w, height: h });
         return;
       }
 
-      // A little “squish then settle” feel
       const tl = gsap.timeline({ defaults: { overwrite: true } });
 
-      tl.to(indicator, {
-        duration: 0.18,
-        x, y,
-        ease: "power2.out"
-      }, 0);
-
-      tl.to(indicator, {
-        duration: 0.18,
-        width: w,
-        height: h,
-        ease: "power2.out"
-      }, 0);
-
-      // whimsical bounce (lightweight, only on click)
-      tl.to(indicator, {
-        duration: 0.70,
-        // micro wobble by scaling around center
-        scaleX: 1.02,
-        scaleY: 0.98,
-        ease: "elastic.out(1, 0.55)"
-      }, 0);
-
-      tl.to(indicator, {
-        duration: 0.55,
-        scaleX: 1,
-        scaleY: 1,
-        ease: "elastic.out(1, 0.55)"
-      }, 0.10);
+      tl.to(indicator, { duration: 0.18, x, y, ease: "power2.out" }, 0);
+      tl.to(indicator, { duration: 0.18, width: w, height: h, ease: "power2.out" }, 0);
+      tl.to(indicator, { duration: 0.7, scaleX: 1.02, scaleY: 0.98, ease: "elastic.out(1, 0.55)" }, 0);
+      tl.to(indicator, { duration: 0.55, scaleX: 1, scaleY: 1, ease: "elastic.out(1, 0.55)" }, 0.1);
     }
 
-    function popLabel(el){
+    function popLabel(el) {
       if (prefersReduce) return;
-      gsap.fromTo(el,
-        { scale: 0.98 },
-        { scale: 1, duration: 0.55, ease: "elastic.out(1, 0.65)" }
-      );
+      gsap.fromTo(el, { scale: 0.98 }, { scale: 1, duration: 0.55, ease: "elastic.out(1, 0.65)" });
     }
 
-    // initial placement
     const active = tabsEl.querySelector("a.is-active") || links[0];
     moveIndicatorTo(active, true);
 
-    // click animation (doesn't replace your gallery click handler, just adds motion)
-    tabsEl.addEventListener("click", (e) => {
-      const a = e.target.closest("a[data-tab]");
-      if (!a) return;
+    tabsEl.addEventListener(
+      "click",
+      (e) => {
+        const a = e.target.closest("a[data-tab]");
+        if (!a) return;
+        links.forEach((l) => l.classList.toggle("is-active", l === a));
+        moveIndicatorTo(a, false);
+        popLabel(a);
+      },
+      { passive: true }
+    );
 
-      // set UI classes here too (optional, if you already do it elsewhere)
-      links.forEach(l => l.classList.toggle("is-active", l === a));
-
-      moveIndicatorTo(a, false);
-      popLabel(a);
-    }, { passive: true });
-
-    // keep indicator aligned on resize
-    window.addEventListener("resize", () => {
-      const cur = tabsEl.querySelector("a.is-active") || links[0];
-      moveIndicatorTo(cur, true);
-    }, { passive: true });
+    window.addEventListener(
+      "resize",
+      () => {
+        const cur = tabsEl.querySelector("a.is-active") || links[0];
+        moveIndicatorTo(cur, true);
+      },
+      { passive: true }
+    );
   }
 
   function initSvgUnderlineWobbleTabs(tabsEl) {
@@ -289,11 +262,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const anchors = Array.from(tabsEl.querySelectorAll("a[data-tab]"));
     if (!anchors.length) return;
 
-    // Same values as the CodePen
     const initialD = "M 10,90 Q 100,90 190,90";
-    const hoverD   = "M 10,90 Q 100,125 190,90";
-    const activeD  = "M 10,90 Q 100,32 190,90";
-    const ease     = "elastic.out(1.4, 0.3)"; // :contentReference[oaicite:1]{index=1}
+    const hoverD = "M 10,90 Q 100,125 190,90";
+    const activeD = "M 10,90 Q 100,32 190,90";
+    const ease = "elastic.out(1.4, 0.3)";
 
     const getPath = (a) => a && a.querySelector("path");
 
@@ -308,12 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      gsap.to(path, {
-        attr: { d },
-        ease,
-        duration,
-        overwrite: true
-      });
+      gsap.to(path, { attr: { d }, ease, duration, overwrite: true });
     }
 
     function syncAllPaths(immediate = true) {
@@ -323,10 +290,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Initial state
     syncAllPaths(true);
 
-    // Hover wobble (only if NOT active)
     anchors.forEach((a) => {
       a.addEventListener("pointerenter", () => {
         if (a.classList.contains("is-active")) return;
@@ -339,34 +304,29 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Click bounce:
-    // - previous active collapses to initial
-    // - clicked tab lifts to active
-    tabsEl.addEventListener("click", (e) => {
-      const a = e.target.closest("a[data-tab]");
-      if (!a) return;
+    tabsEl.addEventListener(
+      "click",
+      (e) => {
+        const a = e.target.closest("a[data-tab]");
+        if (!a) return;
 
-      const prev = tabsEl.querySelector("a.is-active");
-      if (prev && prev !== a) tweenPath(prev, initialD, 0.9);
+        const prev = tabsEl.querySelector("a.is-active");
+        if (prev && prev !== a) tweenPath(prev, initialD, 0.9);
 
-      // If clicking same active tab, do a tiny “boing” anyway
-      if (a.classList.contains("is-active")) {
-        tweenPath(a, hoverD, 0.55);
-        tweenPath(a, activeD, 0.85);
-        return;
-      }
+        if (a.classList.contains("is-active")) {
+          tweenPath(a, hoverD, 0.55);
+          tweenPath(a, activeD, 0.85);
+          return;
+        }
 
-      tweenPath(a, activeD, 1.0);
-    }, { passive: true });
+        tweenPath(a, activeD, 1.0);
+      },
+      { passive: true }
+    );
 
-    // If tabs change via hashchange / code (not a click), keep paths correct
     window.addEventListener("resize", () => syncAllPaths(true), { passive: true });
-
-    // Expose a hook so your existing setActiveTabUI can force-sync paths
     tabsEl._syncUnderlinePaths = syncAllPaths;
   }
-
-
 
   function boot(retries = 40) {
     const masonry = document.querySelector("#scarletMasonry");
@@ -379,10 +339,8 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Create a signature so we don’t re-bind endlessly
     const sig = `${masonry.isConnected}-${tabs.isConnected}-${location.pathname}`;
     if (sig === lastBootSignature && masonry.dataset.booted === "1") {
-      // already booted for this page instance; just ensure correct tab
       const tab = getTabFromHash();
       if (tab !== activeTab) {
         setActiveTabUI(tabs, tab);
@@ -392,11 +350,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     lastBootSignature = sig;
 
-    // bind once
     bindTabsOnce(tabs, masonry);
     bindLightboxOnce(masonry);
 
-    // initial tab
     const initial = getTabFromHash();
     activeTab = initial;
     setActiveTabUI(tabs, initial);
@@ -415,7 +371,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tabsEl.addEventListener(
       "click",
       (e) => {
-        const a = e.composedPath?.().find(n => n?.matches?.("a[data-tab]")) || e.target.closest("a[data-tab]");
+        const a = e.composedPath?.().find((n) => n?.matches?.("a[data-tab]")) || e.target.closest("a[data-tab]");
         if (!a) return;
 
         e.preventDefault();
@@ -451,12 +407,10 @@ document.addEventListener("DOMContentLoaded", () => {
       a.setAttribute("aria-selected", isActive ? "true" : "false");
     });
 
-    // keep GSAP underline paths in sync even when switching tabs programmatically
     if (typeof tabsEl._syncUnderlinePaths === "function") {
       tabsEl._syncUnderlinePaths(true);
     }
   }
-
 
   // =========================
   // 5) Render (cache + no blinking)
@@ -464,15 +418,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderTab(tabKey, masonry, opts = {}) {
     const { immediate = false } = opts;
 
-    // stop heavy stuff tied to old DOM (observer + videos)
     deactivateEnhancements(masonry);
 
     activeTab = tabKey;
     window.MEDIA = MEDIA_SETS[tabKey];
 
     masonry.classList.toggle("is-docs", tabKey === "documents");
-
-    // IMPORTANT: don’t keep toggling opacity on every micro-event
     if (!immediate) masonry.classList.add("is-switching");
 
     const cached = tabCache.get(tabKey);
@@ -490,23 +441,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function postRender(masonry, immediate) {
-    // fade-in thumbs when loaded
     masonry.querySelectorAll(".card-bg").forEach((img) => {
       const mark = () => img.classList.add("is-loaded");
       if (img.complete) mark();
       img.addEventListener("load", mark, { once: true });
     });
 
-    // remove switch class once
     if (immediate) {
       masonry.classList.remove("is-switching");
     } else {
-      requestAnimationFrame(() => {
-        setTimeout(() => masonry.classList.remove("is-switching"), 140);
-      });
+      requestAnimationFrame(() => setTimeout(() => masonry.classList.remove("is-switching"), 140));
     }
 
-    // re-enable enhancements for current view
     initOceanTilt(masonry);
     initInViewVideos(masonry);
   }
@@ -518,49 +464,46 @@ document.addEventListener("DOMContentLoaded", () => {
       const li = document.createElement("li");
       li.dataset.idx = String(idx);
 
-    // ✅ Documents: card layout (no lightbox)
-    if (item.kind === "doc") {
-      const title = escapeHtml(item.title || "");
-      const desc = escapeHtml(item.desc || "");
-      const thumb = item.thumb || "";
-      const href = item.href || "#";
+      if (item.kind === "doc") {
+        const title = escapeHtml(item.title || "");
+        const desc = escapeHtml(item.desc || "");
+        const thumb = item.thumb || "";
+        const href = item.href || "#";
 
-      li.className = "doc-tile";
-      li.innerHTML = `
-        <article class="doc-card">
-          <a class="doc-card__media" href="${href}" target="_blank" rel="noopener">
-            <img src="${thumb}" alt="${title}" loading="lazy" decoding="async">
-          </a>
+        li.className = "doc-tile";
+        li.innerHTML = `
+          <article class="doc-card">
+            <a class="doc-card__media" href="${href}" target="_blank" rel="noopener">
+              <img src="${thumb}" alt="${title}" loading="lazy" decoding="async">
+            </a>
 
-          <div class="doc-card__body">
-            <h4 class="doc-card__title">${title}</h4>
-            <p class="doc-card__desc">${desc}</p>
-            <p class="doc-card__link">
-              <a href="${href}" class="hover-partial-btn" target="_blank"  rel="noopener">
-                <span>View PDF</span>
-                <svg width="13px" height="10px" viewBox="0 0 13 10">
-                  <path d="M1,5 L11,5"></path>
-                  <polyline points="8 1 12 5 8 9"></polyline>
-                </svg>
-              </a>
-            </p>
-          </div>
-        </article>
-      `;
-      frag.appendChild(li);
-      return;
-    }
+            <div class="doc-card__body">
+              <h4 class="doc-card__title">${title}</h4>
+              <p class="doc-card__desc">${desc}</p>
+              <p class="doc-card__link">
+                <a href="${href}" class="hover-partial-btn" target="_blank" rel="noopener">
+                  <span>View PDF</span>
+                  <svg width="13px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                  </svg>
+                </a>
+              </p>
+            </div>
+          </article>
+        `;
+        frag.appendChild(li);
+        return;
+      }
 
       const safeTitle = escapeHtml(item.title || "");
       const w = num(item.w);
       const h = num(item.h);
       const aspect = w && h ? `${w} / ${h}` : "";
 
-      const bgSrc = item.kind === "image" ? item.src : (item.thumb || item.src);
-
+      const bgSrc = item.kind === "image" ? item.src : item.thumb || item.src;
       const isVideoTile = item.kind === "video";
 
-      // small priority bump for the first couple items
       const eager = idx < 2 ? `loading="eager"` : `loading="lazy"`;
       const fetchPriority = idx < 3 ? `fetchpriority="high"` : "";
 
@@ -604,7 +547,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // =========================
-  // 7) Lightbox (bind once)
+  // 7) Lightbox (bind once) — Option A preview audio
   // =========================
   function bindLightboxOnce(masonry) {
     if (masonry.dataset.lbBound === "1") return;
@@ -622,6 +565,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let lbHasAudio = false;
     let lastFocusedEl = null;
     let lbCurrentItem = null;
+
+    // Option A: track ONLY the preview state for the currently open item
+    let lbPreviewMuted = null; // null means "follow global"; true/false means temporary override while open
 
     function isOpen() { return lb.getAttribute("aria-hidden") === "false"; }
     function ensureLightboxInBody() { if (lb.parentElement !== document.body) document.body.appendChild(lb); }
@@ -646,20 +592,52 @@ document.addEventListener("DOMContentLoaded", () => {
       mediaBox.style.height = Math.floor(h * scale) + "px";
     }
 
-    function openLightbox(item, triggerEl) {
+    function setLbButtonUI(muted) {
+      lbAudioToggle.textContent = muted ? "🔇 Preview Audio: Off" : "🔊 Preview Audio: On";
+      lbAudioToggle.setAttribute("aria-pressed", String(!muted));
+    }
 
+    function applyPreviewAudio(muted) {
+      if (!lbCurrentVideo || !lbHasAudio) return;
+      lbCurrentVideo.muted = !!muted;
+      lbCurrentVideo.volume = muted ? 0 : 1;
+      setLbButtonUI(!!muted);
+    }
+
+    function getEffectiveMutedForOpen() {
+      // If user has clicked preview toggle in THIS open session, use that.
+      if (lbPreviewMuted === true) return true;
+      if (lbPreviewMuted === false) return false;
+
+      // Otherwise follow global
+      return window.AudioController.muted;
+    }
+
+    function openLightbox(item, triggerEl) {
       ensureLightboxInBody();
       lastFocusedEl = triggerEl || document.activeElement;
       lbCurrentItem = item;
+
+      // Reset preview override each time lightbox opens (Option A)
+      lbPreviewMuted = null;
 
       lb.classList.toggle("is-video", item.kind === "video");
       lbTitle.textContent = item.title || "";
       lbMedia.innerHTML = "";
 
       lbAudioToggle.hidden = true;
-      lbAudioToggle.textContent = "🔊 Audio: On";
       lbHasAudio = !!item.hasAudio;
       lbCurrentVideo = null;
+
+      // show hint only for videos that have audio
+      if (lbAudioHint) {
+        lbAudioHint.hidden = !(item.kind === "video" && item.hasAudio);
+        if (!lbAudioHint.hidden) {
+          // optional: auto-hide after a moment
+          clearTimeout(lbAudioHint._t);
+          lbAudioHint._t = setTimeout(() => { lbAudioHint.hidden = true; }, 2600);
+        }
+      }
 
       if (item.kind === "image") {
         const img = document.createElement("img");
@@ -685,24 +663,21 @@ document.addEventListener("DOMContentLoaded", () => {
         lbCurrentVideo = v;
 
         if (lbHasAudio) {
-          v.muted = window.AudioController.muted;
-          v.volume = window.AudioController.muted ? 0 : 1;
+          const effMuted = getEffectiveMutedForOpen();
+          v.muted = effMuted;
+          v.volume = effMuted ? 0 : 1;
 
           lbAudioToggle.hidden = false;
-          lbAudioToggle.textContent = window.AudioController.muted
-            ? "🔇 Audio: Off"
-            : "🔊 Audio: On";
+          setLbButtonUI(effMuted);
         } else {
           v.muted = true;
           v.volume = 0;
         }
 
         lbMedia.appendChild(v);
-        lbCurrentVideo = v;
-        v.play().catch(() => {});
 
+        v.play().catch(() => {});
       } else if (item.kind === "pdf") {
-        // Most reliable: iframe viewer
         const frame = document.createElement("iframe");
         frame.src = item.src;
         frame.title = item.title || "PDF document";
@@ -711,9 +686,6 @@ document.addEventListener("DOMContentLoaded", () => {
         frame.style.border = "0";
         frame.loading = "eager";
         lbMedia.appendChild(frame);
-
-        // Optional: show caption/description if you want
-        lbTitle.textContent = item.title || "";
       }
 
       lb.setAttribute("aria-hidden", "false");
@@ -732,6 +704,8 @@ document.addEventListener("DOMContentLoaded", () => {
         try { restore.focus({ preventScroll: true }); } catch {}
       }
 
+      if (lbAudioHint) lbAudioHint.hidden = true;
+
       if (lbCurrentVideo) {
         try { lbCurrentVideo.pause(); } catch {}
         lbCurrentVideo.removeAttribute("src");
@@ -741,6 +715,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       lbCurrentItem = null;
+      lbPreviewMuted = null; // Option A: clear any preview state
       lbMedia.innerHTML = "";
       lbMedia.style.width = "";
       lbMedia.style.height = "";
@@ -759,11 +734,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const item = (window.MEDIA || [])[idx];
       if (!item) return;
 
-      if (item.kind === "pdf") {
-        window.open(item.src, "_blank", "noopener");
-        return;
-      }
-
       openLightbox(item, li);
     });
 
@@ -779,20 +749,26 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === "Escape" && isOpen()) closeLightbox();
       });
 
+      // ✅ Lightbox preview audio toggle (LOCAL ONLY, does NOT change global)
       lbAudioToggle.addEventListener("click", () => {
         if (!lbCurrentVideo || !lbHasAudio) return;
 
-        const nextMuted = !window.AudioController.muted;
-        window.AudioController.setMuted(nextMuted);
+        const currentlyMuted = lbCurrentVideo.muted;
+        const nextMuted = !currentlyMuted;
 
-        lbAudioToggle.textContent = nextMuted
-          ? "🔇 Audio: Off"
-          : "🔊 Audio: On";
+        // store temporary state only for this open session
+        lbPreviewMuted = nextMuted;
+
+        applyPreviewAudio(nextMuted);
       });
 
-      window.addEventListener("resize", () => {
-        if (isOpen() && lbCurrentItem) sizeLightboxToItem(lbCurrentItem);
-      }, { passive: true });
+      window.addEventListener(
+        "resize",
+        () => {
+          if (isOpen() && lbCurrentItem) sizeLightboxToItem(lbCurrentItem);
+        },
+        { passive: true }
+      );
 
       lb.setAttribute("aria-hidden", "true");
     }
@@ -961,22 +937,21 @@ document.addEventListener("DOMContentLoaded", () => {
   // 11) Hooks for Hydejack / navigation
   // =========================
   function hookAllLoads(cb) {
-    // normal load paths
     document.addEventListener("DOMContentLoaded", cb, { passive: true });
     window.addEventListener("load", cb, { passive: true });
     window.addEventListener("pageshow", cb, { passive: true });
 
-    // Hydejack PJAX: prefer binding to the <hy-push-state> element
     const ps = document.getElementById("_pushState");
     if (ps) ps.addEventListener("hy-push-state-load", cb, { passive: true });
 
-    // keep document listener too (harmless, helps if theme version dispatches there)
     document.addEventListener("hy-push-state-load", cb, { passive: true });
-
-    // Turbo (if present)
     document.addEventListener("turbo:load", cb, { passive: true });
   }
 
-  hookAllLoads(() => scheduleBoot(0));
+  hookAllLoads(() => {
+    scheduleBoot(0);
 
+    // Ensure global button visuals are synced after navigation
+    window.AudioController.setMuted(window.AudioController.muted);
+  });
 })();

@@ -298,7 +298,7 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
   top: 12px;
   left: 12px;
   z-index: 5;
-
+  font-size: 12px;
   border: 1px solid rgba(255,255,255,0.35);
   background: rgba(10, 25, 35, 0.35);
   color: rgba(240, 255, 255, 0.95);
@@ -366,6 +366,21 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
   transform: translate(-50%, 0);
 }
 
+// LightBox Audio Hint
+.lb-audio-hint{
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  line-height: 1.25;
+  opacity: 0.85;
+
+  /* nice “pill” look */
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(8px);
+}
 
 .lb__title {
   margin: 0;
