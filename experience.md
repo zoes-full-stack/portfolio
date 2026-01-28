@@ -6,21 +6,21 @@ description: >
   Work, Volunteer and Research Experience
 hide_description: true
 sitemap: false
+page_scripts:
+  - /assets/js/experience.js
 ---
 
-A list of all my experience to date.
+<div markdown="0">
+  <p class="note"><strong>Tip:</strong> Click any point to view more details</p>
+</div>
 
-<!-- 1. this list will be replaced by the table of contents
-{:toc} -->
+<div markdown="0">
+  {% include work_experience.html %}
+  {% include research_experience.html %}
 
-## Work Experience
-
-<details><summary markdown='span'> 
-Click me to view!
-</summary>
-{% include experience_all.md %}
-
-</details> 
+  <!-- Custom Footer -->
+  {% include custom_footer.html %}
+</div>
 
 <!-- ## Volunteer Experience
 
@@ -31,16 +31,7 @@ Click me to view!
 
 </details>  -->
 
-## Research Experience
-
-<details><summary markdown='span'> 
-Click me to view!
-</summary>
-{% include research.md %}
-
-</details> 
-
-<div class="mobile-only" markdown="1">
+<!-- <div class="mobile-only" markdown="1">
   &nbsp;
   &nbsp;
   &nbsp;
@@ -50,4 +41,6 @@ Click me to view!
   Continue with [Skills ↪](/skills/){:.heading.flip-title}
   {:.page-next}
   [↩ Back to Designs](/Designs/){:.page-back}
-</div>
+</div> -->
+
+<script defer src="{{ '/assets/js/experience.js' | relative_url }}"></script>

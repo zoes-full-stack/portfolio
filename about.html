@@ -1,0 +1,52 @@
+---
+layout: page
+guide: About
+image:
+description: >
+  More about me
+hide_description: true
+page_scripts:
+  - /assets/js/bean-about-interaction.js
+  - /assets/js/3d-gradient-ocean.js
+---
+
+{% include status-update.html
+  label="Status update"
+  tone="ocean"
+  title="Work in progress - The waves are still rolling in!"
+  date="2026-01-28"
+%}
+
+<br>
+
+<div id="welcome-ocean-button" class="welcome-ocean-button button--3">
+      <div class="welcome-ocean-button-wave"></div>
+      <div class="welcome-ocean-button-wave"></div>
+      <div class="welcome-ocean-button-wave"></div>
+      <div class="welcome-ocean-button-wave"></div>
+      <div class="welcome-ocean-button-fish"></div>
+      <div class="welcome-ocean-button-bubble"></div>
+      <div class="welcome-ocean-button-bubble"></div>
+      <div class="welcome-ocean-button-bubble"></div>
+      <div class="welcome-ocean-button-bubble"></div>
+      <span class="welcome-ocean-button__text">About</span>
+</div>
+
+{% include about_test3.html %}
+
+<!-- <div class="ocean-electric-being-container">
+  <canvas id="ocean-electric-being-canvas"></canvas>
+</div> -->
+<!-- 
+<div class="mobile-only">
+  <hr class="faded"/>
+
+  <p>↩ Back to <a class="heading flip-title page-next" href = "/skills/">Skills</a></p>
+  <p>↩ Back to <a class="heading flip-title page-next" href = "/">Home</a></p>
+</div> -->
+
+<!-- Custom Footer -->
+{% include custom_footer.html %}
+
+<script defer src="{{ '/assets/js/bean-about-interaction.js' | relative_url }}"></script>
+<!-- <script defer src="{{ '/assets/js/3d-gradient-ocean.js' | relative_url }}"></script> -->

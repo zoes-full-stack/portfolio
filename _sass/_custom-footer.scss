@@ -1,0 +1,33 @@
+footer { display: none !important; }
+
+/* Make the content column fill the viewport */
+.page-content {              // use your real wrapper class here
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer sits at the bottom when content is short, and scrolls normally */
+.custom-footer {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding: 10rem 1rem 0 1rem;
+  display: flex;
+  justify-content: center;
+
+  hr, .footer-line {
+    border-top: 10px !important;
+    display: block;
+  }
+}
+
+/* Keep footer aligned like the content column */
+.fixed-bottom-p {
+  margin: 0;
+  color: #777;
+  padding-top: 5px;
+  border-top: 0.7px solid #eaeaea;
+  font-size: 0.85rem;
+  text-align: center;
+  width: min(980px, 100%);
+}

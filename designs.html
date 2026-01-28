@@ -1,0 +1,73 @@
+---
+layout: page
+sitemap: false
+page_scripts:
+  - /assets/js/gallery-of-designs.js
+  - /assets/js/project-filters.js
+  - /assets/js/sound-toggle.js
+  - /assets/js/bottom-swipeable-navbar.js
+---
+
+<div class="designs-row">
+  <h1>Designs</h1>
+
+  <div class="water-button"
+       role="button"
+       aria-pressed="false"
+       tabindex="0">
+      <span>Audio Off</span>
+      <div class="liquid"></div>
+  </div>
+</div>
+
+<div>
+  <p class="note">Tap a card for fullscreen. Turn on Audio for videos with sound.</p>
+</div>
+
+
+{% include gallery_of_designs.html %}
+
+<!-- 
+<div class="mobile-only story-pager">
+  <div class="story-pager__card">
+    <a class="story-pager__next" href="/experience/">
+      <span class="story-pager__kicker">KEEP SCROLLING</span>
+      <span class="story-pager__title">EXPERIENCE</span>
+
+      <span class="story-pager__row" aria-hidden="true">
+        <span class="story-pager__label">NEXT PAGE</span>
+        <span class="story-pager__line"></span>
+        <span class="story-pager__arrow">→</span>
+      </span>
+
+      <span class="story-pager__sr">Next page: Experience</span>
+    </a>
+
+    <div class="story-pager__divider" aria-hidden="true"></div>
+
+    <a class="story-pager__back" href="/projects/">
+      <span class="story-pager__backArrow">↩</span>
+      <span>Back to Projects</span>
+    </a>
+  </div>
+</div> -->
+
+
+
+<!-- <div class="mobile-only">
+  <hr class="faded"/>
+
+  <p>Continue with <a class="heading flip-title" href="/experience/">Experience ↪</a></p>
+  <p class="page-next"></p>
+
+  <p><a class="page-back" href="/projects/">↩ Back to Projects</a></p>
+</div> -->
+
+<div id="audioToast" class="audio-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<!-- Custom Footer -->
+{% include custom_footer.html %}
+
+<script defer src="{{ '/assets/js/gallery-of-designs.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/project-filters.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/bottom-swipeable-navbar.js' | relative_url }}"></script>

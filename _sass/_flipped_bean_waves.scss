@@ -1,0 +1,91 @@
+.ocean-robot-section {
+  position: relative;
+  overflow: hidden;
+  background: #203040; // underwater backdrop
+}
+
+#ocean-robot-container,
+.ocean-robot-waves,
+.ocean-robot-waves svg {
+  pointer-events: none;
+}
+
+.ocean-robot-waves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.9;
+    transform: scaleX(1.01); transform-origin: left bottom;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+
+/* Use your palette: deep sea + lighter foam layers */
+.ocean-robot-waves .wave{
+  transform-origin: center;
+  animation: waveSlide 10s linear infinite;
+}
+
+.ocean-robot-waves .wave1{
+  fill: rgba(255,255,255,0.10);
+  animation-duration: 5s;
+}
+.ocean-robot-waves .wave2{
+  fill: rgba(79,177,186,0.18); /* matches your accent */
+  animation-duration: 2s;
+  animation-direction: reverse;
+}
+.ocean-robot-waves .wave3{
+  fill: rgba(255,255,255,0.06);
+  animation-duration: 8s;
+}
+
+/* subtle horizontal drift */
+@keyframes waveSlide{
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-4%); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .ocean-robot-waves .wave{ animation: none; }
+}
+
+.ocean-robot-waves svg { display:block; width:100%; height:100%; }
+
+/* Smooth infinite scroll: move left exactly one tile width */
+.ocean-robot-waves .wave{
+  will-change: transform;
+  transform: translate3d(0,0,0);
+  animation: waveMarquee linear infinite;
+}
+
+@keyframes waveMarquee{
+  from { transform: translate3d(0,0,0); }
+  to   { transform: translate3d(-1440px,0,0); } /* must match viewBox width */
+}
+
+/* Your palette + per-layer speeds */
+.ocean-robot-waves .wave1{
+  fill: rgba(255,255,255,0.10);
+  animation-duration: 8s;
+}
+.ocean-robot-waves .wave2{
+  fill: rgba(79,177,186,0.18);
+  animation-duration: 6s;
+  animation-direction: reverse;
+}
+.ocean-robot-waves .wave3{
+  fill: rgba(255,255,255,0.06);
+  animation-duration: 10s;
+}
+

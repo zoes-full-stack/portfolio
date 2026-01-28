@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --bg0: #02040a;
+  --bg1: #03121d;
+  --bg2: #062737;
+
+  --glow: #64ffe8;
+  --pale: #b7c2c8;
+
+  --reefA: #79fff0;
+  --reefB: #6bb6ff;
+  --reefC: #7b6dff;
+
+  --maxWidth: 980px;
+}
+
+/* Root wrapper */
+.labs-coming {
+  position: relative;
+  width: 100%;
+
+  /* ✅ ensure the section has a real height */
+  min-height: clamp(520px, 72vh, 900px);
+
+  padding: clamp(28px, 6vh, 70px) 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  isolation: isolate;
+  // overflow: hidden;
+  overflow: visible;
+  border-radius: 22px;
+
+  /* ✅ Deep sea base */
+  background:
+    radial-gradient(1200px 700px at 30% 10%, rgba(72, 255, 220, 0.06), transparent 60%),
+    radial-gradient(900px 600px at 80% 30%, rgba(120, 150, 255, 0.05), transparent 65%),
+    linear-gradient(180deg, var(--bg0), var(--bg1) 55%, var(--bg2));
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.35);
+
+  /* Water haze */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -25%;
+    // background:
+    //   radial-gradient(800px 520px at 30% 20%, rgba(100, 255, 232, 0.09) 0%, rgba(100, 255, 232, 0) 62%),
+    //   radial-gradient(700px 520px at 70% 30%, rgba(107, 182, 255, 0.08) 0%, rgba(107, 182, 255, 0) 68%),
+    //   radial-gradient(900px 700px at 50% 80%, rgba(123, 109, 255, 0.06) 0%, rgba(123, 109, 255, 0) 72%);
+    opacity: 0.9;
+    z-index: -2;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Caustic shimmer (very subtle) */
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -35%;
+    background: repeating-linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.03) 0px,
+      rgba(255, 255, 255, 0) 18px,
+      rgba(255, 255, 255, 0.025) 36px
+    );
+    mix-blend-mode: soft-light;
+    opacity: 0.18;
+    transform: rotate(-4deg);
+    z-index: -1;
+    animation: caustics 10s ease-in-out infinite;
+  }
+
+  /* Generated bubbles/plankton -> biolume specks */
+  .bubble {
+    position: absolute;
+    border-radius: 999px;
+    pointer-events: none;
+    will-change: transform, opacity;
+
+    background: radial-gradient(
+      circle at 35% 35%,
+      rgba(255, 255, 255, 0.92),
+      rgba(120, 255, 238, 0.14) 45%,
+      rgba(255, 255, 255, 0) 72%
+    );
+
+    box-shadow:
+      0 0 10px rgba(100, 255, 232, 0.16),
+      0 0 22px rgba(107, 182, 255, 0.06);
+
+    opacity: 0.6;
+  }
+
+  /* Little bioluminescent "critters" (few only) */
+  .lume {
+    position: absolute;
+    width: 12px;
+    height: 6px;
+    border-radius: 999px;
+    pointer-events: none;
+    will-change: transform, opacity;
+
+    background: radial-gradient(
+      circle at 30% 50%,
+      rgba(255, 255, 255, 0.9),
+      rgba(100, 255, 232, 0.35) 45%,
+      rgba(100, 255, 232, 0) 70%
+    );
+
+    box-shadow:
+      0 0 10px rgba(100, 255, 232, 0.22),
+      0 0 24px rgba(123, 109, 255, 0.10);
+
+    opacity: 0; /* JS will fade them in */
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  /* Shooting bubble streak */
+  .bubble-streak {
+    position: absolute;
+    width: 10px;
+    height: 180px;
+    border-radius: 999px;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(100, 255, 232, 0.35) 35%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.35);
+    transform: rotate(-135deg);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Reef logo */
+  .reef-logo {
+    width: min(var(--maxWidth), 100%);
+    display: flex;
+    justify-content: center;
+    gap: clamp(10px, 2.4vw, 20px);
+    margin-top: clamp(10px, 4vh, 44px);
+    z-index: 1;
+  }
+
+  .reef-letter {
+    font-weight: 600;
+    font-size: clamp(44px, 8vw, 92px);
+    letter-spacing: 0.02em;
+    background: linear-gradient(135deg, var(--reefA), var(--reefB), var(--reefC));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow:
+      0 0 14px rgba(100, 255, 232, 0.35),
+      0 0 28px rgba(107, 182, 255, 0.18);
+    filter: saturate(1.1);
+  }
+
+  /* Text lines */
+  .headline,
+  .subhead {
+    width: min(var(--maxWidth), 100%);
+    text-align: center;
+    z-index: 1;
+  }
+
+  .headline {
+    p {
+      margin: clamp(18px, 3vh, 26px) 0 0;
+      color: var(--pale);
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: clamp(6px, 1.6vw, 18px);
+      font-size: clamp(18px, 3vw, 36px);
+    }
+  }
+
+  .subhead {
+    p {
+      margin: 12px 0 0;
+      color: rgba(183, 194, 200, 0.82);
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: clamp(4px, 1.2vw, 14px);
+      font-size: clamp(14px, 2.3vw, 26px);
+    }
+  }
+
+  /* Split chars */
+  .char {
+    display: inline-block;
+    position: relative;
+    will-change: transform, opacity;
+  }
+
+  /* Optional FPS */
+  .fps {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 10px 12px;
+    border-radius: 10px;
+    font: 12px/1.2 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  }
+}
+
+@keyframes caustics {
+  0%   { transform: translate3d(-10px, -10px, 0) rotate(-4deg); opacity: 0.14; }
+  50%  { transform: translate3d(10px, 8px, 0) rotate(-2deg);   opacity: 0.22; }
+  100% { transform: translate3d(-10px, -10px, 0) rotate(-4deg); opacity: 0.14; }
+}
+
+/* Reduced motion: keep it pretty, stop the swimming */
+@media (prefers-reduced-motion: reduce) {
+  .labs-coming::after {
+    animation: none;
+  }
+}

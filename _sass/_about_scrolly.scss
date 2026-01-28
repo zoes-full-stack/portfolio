@@ -1,0 +1,745 @@
+/* =========================================================
+   ABOUT SCROLLY — Updated SCSS (with armWave + mirrored arms)
+   - Keeps your layout, adds clean pose vars + arm waving
+   ========================================================= */
+
+.about-scrolly {
+  width: 100%;
+  margin: 0;
+  max-width: none;
+  position: relative;
+  overflow: visible;
+
+  /* Theme vars (GSAP tweens these) */
+  --sea-0: #041823;
+  --sea-1: #062837;
+  --sea-2: #0b415a;
+  --accent: #beecf4;
+  --bean: #93f4f5;
+  --glow: rgba(190, 236, 244, 0.25);
+
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.72);
+
+  /* Controls bean size so BOTH bean + text fit */
+  --beanH: clamp(100px, 28vh, 200px);
+
+  color: var(--text);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1.25rem, 4vw, 4rem);
+    align-items: start;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__scene {
+    width: 100%;
+  }
+
+  .about-porthole {
+    position: relative;
+    height: min(75vh, 720px);
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+
+    border-radius: 0 0 20px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: transparent;
+    // background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    // box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+
+    &__water {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(90% 60% at 50% 18%, rgba(147, 232, 255, 0.09), transparent 55%),
+        linear-gradient(180deg, #061b27, #021c27);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      z-index: 1;
+      background: transparent;
+      // background:
+      //   radial-gradient(circle at 20% 20%, rgba(255,255,255,0.07), transparent 40%),
+      //   radial-gradient(circle at 70% 30%, rgba(255,255,255,0.05), transparent 45%),
+      //   radial-gradient(circle at 40% 80%, rgba(255,255,255,0.04), transparent 50%);
+      opacity: 0.75;
+      transform: translate3d(0,0,0);
+      animation: caustics 10s ease-in-out infinite;
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   inset: 0;
+    //   pointer-events: none;
+    //   z-index: 3;
+    //   background:
+    //     linear-gradient(180deg, rgba(255,255,255,0.10), transparent 18%),
+    //     linear-gradient(0deg, rgba(0,0,0,0.18), transparent 22%);
+    //   opacity: 0.9;
+    // }
+  }
+
+  @keyframes caustics {
+    0%, 100% { transform: translate3d(-2%, -1%, 0) scale(1.02); }
+    50%      { transform: translate3d( 2%,  1%, 0) scale(1.05); }
+  }
+
+  .about-scrolly__story,
+  .about-beanStage,
+  .about-depth {
+    position: relative;
+    z-index: 2;
+  }
+
+  .about-depth {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 5;
+    width: 10px;
+    height: 120px;
+    opacity: 0.9;
+
+    &__track {
+      width: 100%;
+      height: 100%;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.10);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    &__fill {
+      width: 100%;
+      height: 100%;
+      transform-origin: bottom;
+      transform: scaleY(var(--scroll-progress, 0));
+      background: linear-gradient(180deg, rgba(255,255,255,0.0), var(--accent));
+    }
+  }
+
+  &__story {
+    padding: 0 18px;
+    min-height: 0;
+    position: relative;
+  }
+
+  .about-step {
+    min-height: auto;
+    padding: 0;
+  }
+
+  /* You animate these with GSAP (autoAlpha/y), so keep CSS neutral */
+  .thought {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    margin: 0 auto;
+    max-width: 62ch;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+  }
+
+  .about-step.is-active .thought {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .about-step:first-child .thought {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .about-step__hint {
+    margin-top: 0.9rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+    display: block;
+  }
+
+  .about-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.85rem;
+  }
+
+  .about-chip {
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(0,0,0,0.12);
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    color: #00141c;
+  }
+
+  .about-cta {
+    display: inline-block;
+    margin-top: 0.25rem;
+    text-decoration: none;
+    color: #062837;
+    background: var(--accent);
+    padding: 0.6rem 0.9rem;
+    border-radius: 999px;
+    font-weight: 650;
+    transition: transform 180ms ease;
+
+    &:hover { transform: translateY(-1px); }
+  }
+
+  /* =========================
+     Bean row (bottom)
+     ========================= */
+  .about-beanStage {
+    padding: 20px 60px 33px 20px;
+    display: grid;
+    place-items: end right;
+  }
+
+  /* Bean base */
+  #magical-about-story-bean.bean--about {
+    cursor: pointer;
+    height: var(--beanH);
+    width: auto;
+    aspect-ratio: 420 / 320;
+
+    background-color: var(--bean);
+    border-radius: 130% 70% 30% 20% / 150% 130% 30% 0%;
+    // border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
+    position: relative;
+    transition: background-color 600ms ease-in, box-shadow 600ms ease-in;
+    box-shadow:
+      0 26px 60px rgba(0,0,0,0.30),
+      0 0 0 2px rgba(255,255,255,0.06) inset,
+      0 0 40px var(--glow);
+
+    /* Pose controls */
+    --lookX: 0px;
+    --eyeOpen: 0.12;
+    --eyeW: 12%;
+    --eyeH: 8%;
+    --eyeTilt: 0deg;
+
+    --smileW: 16%;
+    --smileH: 12%;
+    --smileY: 42%;
+    --smileCurve: 1;
+
+    --armLx: -6%;
+    --armRx: -6%;
+    --armY: 58%;
+    --armW: clamp(80px, 12vw, 140px);
+    --armH: clamp(40px, 7vh, 70px);
+    --armLrot: -55deg;
+    --armRrot: 55deg;
+    --armLift: 0px;
+    --handsY: 0px;
+
+    /* NEW: wave amount (GSAP animates this) */
+    --armWave: 0deg;
+
+    /* for subtle head look */
+    translate: var(--lookX) 0;
+
+    /* Face parts */
+    #eye1, #eye2, #smile {
+      border-width: 0.3vw;
+      border-style: solid;
+      position: absolute;
+      box-sizing: border-box;
+      transition: all 600ms ease-in;
+    }
+
+    /* Eyes driven by vars */
+    #eye1, #eye2 {
+      top: 34%;
+      width: var(--eyeW);
+      height: calc(var(--eyeH) * var(--eyeOpen));
+      border-color: transparent transparent #3D550C transparent;
+      border-radius: 999px;
+      transform: rotate(var(--eyeTilt));
+    }
+    #eye1 { left: 30%; }
+    #eye2 { left: 44%; }
+
+    /* Smile driven by vars */
+    #smile {
+      left: 42%;
+      top: var(--smileY);
+      width: var(--smileW);
+      height: var(--smileH);
+      border-color: transparent transparent #30550C transparent;
+      border-radius: 50%;
+      transform: translateX(-50%) scaleY(calc(0.75 + (var(--smileCurve) * 0.25)));
+    }
+
+    /* Arms (real elements) */
+    .bean-arm {
+      position: absolute;
+      width: var(--armW);
+      height: var(--armH);
+      background: inherit;
+      border-radius: 999px;
+    //   box-shadow: 0 14px 22px rgba(0,0,0,0.10);
+      filter: brightness(0.98);
+      pointer-events: none;
+      top: calc(var(--armY) + var(--armLift));
+      translate: 0 -50%;
+      z-index: 1;
+    }
+
+    /* LEFT arm: add +armWave */
+    .bean-arm--l {
+      left: var(--armLx);
+      transform-origin: 26% 120%;
+      transform: rotate(calc(var(--armLrot) + var(--armWave)));
+    }
+
+    /* RIGHT arm: subtract armWave to mirror */
+    .bean-arm--r {
+      right: var(--armRx);
+      transform-origin: 65% 120%;
+      transform: rotate(calc(var(--armRrot) - var(--armWave)));
+    }
+
+    /* Props layer */
+    .bean-props {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      transform: translateY(var(--handsY));
+    }
+
+    /* Default hide props */
+    .bean-heart,
+    .bean-portal,
+    .bean-handshake {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity .25s ease, transform .25s ease;
+    }
+
+    /* Show via data-prop */
+    &[data-prop="heart"] .bean-heart,
+    &[data-prop="portal"] .bean-portal,
+    &[data-prop="handshake"] .bean-handshake {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Hover still allowed */
+    &:hover { background-color: #ffb04c; }
+  }
+
+  /* Bubbles */
+  .about-bubbles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.55;
+    transition: opacity 450ms ease;
+
+    .b {
+      position: absolute;
+      bottom: 12%;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.32);
+      background: rgba(255,255,255,0.06);
+      animation: bubbleUp 3.8s linear infinite;
+      filter: blur(0.1px);
+    }
+
+    .b1 { left: 18%; animation-delay: 0.0s; transform: scale(0.85); }
+    .b2 { left: 30%; animation-delay: 0.9s; transform: scale(0.65); }
+    .b3 { left: 44%; animation-delay: 1.6s; transform: scale(0.95); }
+    .b4 { left: 58%; animation-delay: 0.5s; transform: scale(0.70); }
+    .b5 { left: 72%; animation-delay: 1.2s; transform: scale(0.90); }
+    .b6 { left: 82%; animation-delay: 2.0s; transform: scale(0.60); }
+  }
+
+  @keyframes bubbleUp {
+    0%   { transform: translateY(0) scale(1); opacity: 0; }
+    10%  { opacity: 0.75; }
+    100% { transform: translateY(-160px) scale(1.08); opacity: 0; }
+  }
+
+  &[data-active="mission"] .about-bubbles { opacity: 0.45; }
+  &[data-active="tidbits"] .about-bubbles { opacity: 0.70; }
+  &[data-active="curiosities"] .about-bubbles { opacity: 0.80; }
+  &[data-active="cta"] .about-bubbles { opacity: 0.55; }
+
+  @media (max-height: 740px) {
+    --beanH: clamp(90px, 22vh, 160px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .about-porthole::before { animation: none; }
+    .about-bubbles .b { animation: none; opacity: 0.15; }
+  }
+}
+
+/* =========================
+   PROPS (same as your versions)
+   ========================= */
+.bean-heart {
+  position: absolute;
+  left: 50%;
+  top: 58%;
+  width: 22px;
+  height: 22px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #ff6b8b;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #ff6b8b;
+    border-radius: 50%;
+  }
+
+  &::before { left: -11px; top: 0; }
+  &::after  { top: -11px; left: 0; }
+}
+
+.bean-portal {
+  position: absolute;
+  left: 10%;
+  top: 58%;
+  width: 110px;
+  height: 110px;
+
+  .portal-rim {
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    border: 3px solid rgba(190,236,244,0.75);
+    box-shadow: 0 0 0 6px rgba(190,236,244,0.08), 0 16px 28px rgba(0,0,0,0.22);
+  }
+
+  .portal-hand {
+    position: absolute;
+    width: 90px;
+    height: 44px;
+    left: 55%;
+    top: 55%;
+    transform: translate(-50%,-50%) rotate(-10deg);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.85);
+    opacity: 0.9;
+  }
+}
+
+// Fade in masks before and after the about
+.about-scrolly::before,
+.about-scrolly::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 80px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.about-scrolly::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(4,24,35,1), rgba(4,24,35,0));
+}
+
+.about-scrolly::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(4,24,35,1), rgba(4,24,35,0));
+}
+
+// // Vertical scroll
+
+// .about-scrolly {
+//   --depthY: 0px;
+
+//   .about-porthole__water {
+//     transform: translateY(var(--depthY));
+//     will-change: transform;
+//   }
+
+//   .bean-waves {
+//     transform: translateY(calc(var(--depthY) * 0.6));
+//     will-change: transform;
+//   }
+
+//   #magical-about-story-bean {
+//     transform: translateY(calc(var(--depthY) * 0.25)) translateX(var(--lookX));
+//     will-change: transform;
+//   }
+// }
+
+
+
+// underwater for about page
+
+/* =========================
+   ABOUT — Water Background
+   Scoped to Hydejack about layout
+   ========================= */
+
+/* If your <main> has class="content layout-about" (from your screenshot) */
+// main.layout-about {
+//   position: relative;
+//   z-index: 1; /* content above bg */
+// }
+
+// /* Page background fallback */
+// body:has(main.layout-about) {
+//   background: #041823;
+// }
+
+// /* fixed bg layer behind content */
+// body:has(main.layout-about) .about-water-bg {
+//   position: fixed;
+//   inset: 0;
+//   z-index: 0;              /* behind main (z=1) */
+//   pointer-events: none;
+//   overflow: hidden;
+// }
+
+// /* Optional overall tint/gradient (helps unify) */
+// body:has(main.layout-about) .about-water-bg__tint {
+//   position: absolute;
+//   inset: 0;
+//   background: radial-gradient(1200px 700px at 60% 30%, rgba(190,236,244,0.10), transparent 60%),
+//               linear-gradient(180deg, rgba(2,17,26,0.0), rgba(2,17,26,0.25));
+//   opacity: 0.55;
+// }
+
+// /* defs hidden */
+// body:has(main.layout-about) .about-water-bg__defs {
+//   position: absolute;
+//   width: 0;
+//   height: 0;
+// }
+
+// /* =========================
+//    SURFACE (moving texture)
+//    ========================= */
+// body:has(main.layout-about) .about-water-bg__surface {
+//   position: absolute;
+//   inset: 0;
+//   opacity: 0.55;
+//   mix-blend-mode: overlay;
+
+//   /* Both layers from the pen using pseudo elements */
+// }
+// body:has(main.layout-about) .about-water-bg__surface::before,
+// body:has(main.layout-about) .about-water-bg__surface::after {
+//   content: "";
+//   position: absolute;
+//   inset: 0;
+
+//   /* ⚠️ For performance + reliability, you should download these textures
+//      and serve locally instead of hotlinking unsplash.
+//      Replace URLs with your local assets. */
+//   background-image: url("https://images.unsplash.com/photo-1518837695005-2083093ee35b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400");
+//   background-repeat: repeat-x;
+
+//   --duration: 8s;
+//   --lowHeight: 30vh;
+//   --highHeight: 70vh;
+//   --layerNum: 2;
+//   --index: 0;
+//   --opacity: 0.35;
+
+//   animation: aboutSurface var(--duration) linear infinite;
+//   animation-delay: calc((var(--duration) / var(--layerNum)) * var(--index) * -1);
+
+//   opacity: 0;
+//   mask-image: linear-gradient(to top, white, transparent var(--lowHeight));
+// }
+
+// body:has(main.layout-about) .about-water-bg__surface::before {
+//   --index: 0;
+//   transform: scale3d(1, -1, 1);
+// }
+// body:has(main.layout-about) .about-water-bg__surface::after {
+//   --index: 1;
+//   transform: scale3d(-1, -1, 1);
+// }
+
+// /* =========================
+//    CAUSTICS (moving texture)
+//    ========================= */
+// body:has(main.layout-about) .about-water-bg__caustics {
+//   position: absolute;
+//   inset: 0;
+//   filter: url(#aboutNoise1);
+//   opacity: 0.35;
+//   mix-blend-mode: overlay;
+// }
+
+// body:has(main.layout-about) .about-water-bg__caustics::before,
+// body:has(main.layout-about) .about-water-bg__caustics::after {
+//   content: "";
+//   position: absolute;
+//   inset: 0;
+
+//   background-image: url("https://images.unsplash.com/photo-1568145675395-66a2eda0c6d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400");
+//   background-repeat: repeat;
+
+//   --duration: 10s;
+//   --gapY: 0px;
+
+//   background-size: 100vw 30vh;
+//   animation: aboutCaustics var(--duration) linear infinite;
+
+//   opacity: 0.30;
+//   mask-image: linear-gradient(to top, white, transparent, transparent, transparent);
+// }
+// body:has(main.layout-about) .about-water-bg__caustics::after {
+//   --duration: 11s;
+//   --gapY: 10vh;
+//   animation-delay: -2s;
+//   transform: scale3d(-1, 1, 1);
+// }
+
+// /* =========================
+//    SUN RAYS
+//    ========================= */
+// body:has(main.layout-about) .about-water-bg__sun {
+//   position: absolute;
+//   inset: 0;
+//   opacity: 0.28;
+//   mix-blend-mode: overlay;
+// }
+
+// body:has(main.layout-about) .about-water-bg__sun .sun_layer {
+//   position: absolute;
+//   inset: 0;
+//   transform-origin: 50vw 0;
+//   animation: aboutSun 7s ease infinite alternate;
+
+//   mask-image: linear-gradient(
+//     to bottom,
+//     transparent 15%,
+//     white 50%,
+//     white 55%,
+//     transparent 80%
+//   );
+// }
+
+// body:has(main.layout-about) .about-water-bg__sun .sun_layer1 {
+//   background: linear-gradient(
+//     to right,
+//     transparent 39%,
+//     rgba(255,255,255,0.9) 40%,
+//     transparent 41%,
+//     transparent 48.5%,
+//     rgba(255,255,255,0.9) 50%,
+//     transparent 51.5%,
+//     transparent 53%,
+//     rgba(255,255,255,0.9) 54%,
+//     transparent 55%,
+//     transparent 70%,
+//     rgba(255,255,255,0.9) 71%,
+//     transparent 72%
+//   );
+// }
+
+// body:has(main.layout-about) .about-water-bg__sun .sun_layer2 {
+//   animation-delay: -2s;
+//   animation-duration: 7.8s;
+//   animation-direction: alternate-reverse;
+//   background: linear-gradient(
+//     to right,
+//     transparent 32%,
+//     rgba(255,255,255,0.9) 33%,
+//     transparent 34%,
+//     transparent 38%,
+//     rgba(255,255,255,0.9) 39%,
+//     transparent 40%,
+//     transparent 53%,
+//     rgba(255,255,255,0.9) 54%,
+//     transparent 55%,
+//     transparent 63.5%,
+//     rgba(255,255,255,0.9) 65%,
+//     transparent 66.5%
+//   );
+// }
+
+// body:has(main.layout-about) .about-water-bg__sun .sun_layer3 {
+//   animation-delay: -5s;
+//   animation-duration: 8.5s;
+//   background: linear-gradient(
+//     to right,
+//     transparent 38.5%,
+//     rgba(255,255,255,0.9) 40%,
+//     transparent 41.5%,
+//     transparent 47%,
+//     rgba(255,255,255,0.9) 48%,
+//     transparent 49%,
+//     transparent 52%,
+//     rgba(255,255,255,0.9) 53%,
+//     transparent 54%,
+//     transparent 60%,
+//     rgba(255,255,255,0.9) 61%,
+//     transparent 62%
+//   );
+// }
+
+// /* Animations (renamed to avoid collisions) */
+// @keyframes aboutSurface {
+//   0% {
+//     opacity: 0;
+//     background-position: center bottom;
+//     background-size: 100% var(--highHeight);
+//   }
+//   20% { opacity: var(--opacity); }
+//   100% {
+//     opacity: 0;
+//     background-position: center bottom calc(-1 * var(--lowHeight));
+//     background-size: 100% var(--lowHeight);
+//   }
+// }
+
+// @keyframes aboutCaustics {
+//   0%   { background-position: bottom var(--gapY) left; }
+//   100% { background-position: bottom var(--gapY) left -100vw; }
+// }
+
+// @keyframes aboutSun {
+//   0%   { opacity: 0.10; transform: skew(5deg) scale3d(3, 1.5, 1); }
+//   50%  { opacity: 0.08; transform: skew(0deg) scale3d(1.5, 1, 1); }
+//   100% { opacity: 0.10; transform: skew(-5deg) scale3d(3, 1, 1); }
+// }
+
+// /* Reduced motion */
+// @media (prefers-reduced-motion: reduce) {
+//   body:has(main.layout-about) .about-water-bg__surface::before,
+//   body:has(main.layout-about) .about-water-bg__surface::after,
+//   body:has(main.layout-about) .about-water-bg__caustics::before,
+//   body:has(main.layout-about) .about-water-bg__caustics::after,
+//   body:has(main.layout-about) .about-water-bg__sun .sun_layer {
+//     animation: none !important;
+//   }
+// }
+

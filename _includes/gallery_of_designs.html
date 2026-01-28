@@ -1,0 +1,85 @@
+<!-- Masonry Gallery (based on wakana-k BaxKKvE mechanics) -->
+
+{% include bottom_swipeable_navbar.html %}
+
+<nav class="media-tabs" aria-label="Gallery categories" role="tablist">
+  <span class="tab-indicator" aria-hidden="true"></span>
+  
+  <a href="#illustrations" role="tab" aria-selected="true" data-tab="illustrations" class="is-active">
+    <svg viewBox="0 0 200 140" width="200" height="140" aria-hidden="true" focusable="false">
+      <path id="tab-path-ill" d="M 10,90 Q 100,90 190,90" />
+      <text class="path-text">
+        <textPath href="#tab-path-ill" startOffset="50%" text-anchor="middle">
+          <tspan dy="-12">Illustrations</tspan>
+        </textPath>
+      </text>
+    </svg>
+  </a>
+
+  <a href="#baking" role="tab" aria-selected="false" data-tab="baking">
+    <svg viewBox="0 0 200 140" width="200" height="140" aria-hidden="true" focusable="false">
+      <path id="tab-path-bake" d="M 10,90 Q 100,90 190,90" />
+      <text class="path-text">
+        <textPath href="#tab-path-bake" startOffset="50%" text-anchor="middle">
+          <tspan dy="-12">Sweet Treats</tspan>
+        </textPath>
+      </text>
+    </svg>
+  </a>
+
+  <a href="#flyers" role="tab" aria-selected="false" data-tab="flyers">
+    <svg viewBox="0 0 200 140" width="200" height="140" aria-hidden="true" focusable="false">
+      <path id="tab-path-flyer" d="M 10,90 Q 100,90 190,90" />
+      <text class="path-text">
+        <textPath href="#tab-path-flyer" startOffset="50%" text-anchor="middle">
+          <tspan dy="-12">Flyers</tspan>
+        </textPath>
+      </text>
+    </svg>
+  </a>
+
+  <a href="#documents" role="tab" aria-selected="false" data-tab="documents">
+    <svg viewBox="0 0 200 140" width="200" height="140" aria-hidden="true" focusable="false">
+      <path id="tab-path-doc" d="M 10,90 Q 100,90 190,90" />
+      <text class="path-text">
+        <textPath href="#tab-path-doc" startOffset="50%" text-anchor="middle">
+          <tspan dy="-12">White Papers</tspan>
+        </textPath>
+      </text>
+    </svg>
+  </a>
+</nav>
+
+<section class="scarlet-gallery" aria-label="Creative gallery">
+  <main class="scarlet-gallery__main">
+    <ul class="scarlet-gallery__masonry" id="scarletMasonry" role="tabpanel"></ul>
+  </main>
+
+  <!-- Lightbox (same as your existing one) -->
+  <div id="lightbox" class="lb" aria-hidden="true">
+    <button class="lb__backdrop" type="button" aria-label="Close" data-lb-close></button>
+    <div class="lb__panel" role="dialog" aria-modal="true" aria-label="Media viewer">
+      <div class="lb__stage" id="lbStage">
+        <div class="lb__topbar" aria-hidden="true">
+          <p class="lb__topbar-title" id="lbTitleTop"></p>
+          <button class="lb__topbar-close" type="button" aria-label="Close" data-lb-close>✕</button>
+        </div>
+        <div class="lb__media" id="lbMedia"></div>
+        <button class="lb__close" type="button" aria-label="Close" data-lb-close>✕</button>
+
+        <div class="lb__overlay" aria-hidden="true">
+          <div class="lb__caption">
+            <p class="lb__title" id="lbTitle"></p>
+          </div>
+        </div>
+
+        <button id="lbAudioToggle" class="lb__audio" type="button" aria-label="Toggle audio" hidden>
+          🔊 Preview Audio: On
+        </button>
+        <p id="lbAudioHint" class="lb-audio-hint" role="status" aria-live="polite">
+          Audio changes here resets when you close this lightbox.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

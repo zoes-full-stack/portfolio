@@ -23,17 +23,24 @@ sitemap: false
   label="Status update"
   tone="ocean"
   title="Portfolio in progress"
-  date="2026-01-10"
+  date="2026-01-28"
   body="More Project Stories coming soon."
 %}
 {:/nomarkdown}
 
 <br>
 
-<div class="mobile-only" markdown="1">
+<div markdown="0">
+  <!-- Custom Footer -->
+  {% include custom_footer.html %}
+</div>
+
+<!-- <div class="mobile-only" markdown="1">
   <hr class="faded"/>
   Continue with [Designs ↪](/designs/){:.heading.flip-title}
   {:.page-next}
   [↩ Back to Welcome](/){:.page-back}
-</div>
+</div> -->
+
+<script defer src="{{ '/assets/js/project-filters.js' | relative_url }}"></script>
 

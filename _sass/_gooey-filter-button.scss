@@ -1,0 +1,92 @@
+// Gooey buttons (scoped)
+.gooey-actions {
+  display: flex;
+  gap: 14px;
+
+  // The magic
+  filter: url("#gooey-filter");
+
+  // Optional: prevent weird selection feel
+  user-select: none;
+}
+
+.gooey-btn {
+  // Match your screenshot color
+  --btn-bg: #1b3846;
+  --btn-fg: #ffffff;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.2px;
+
+  color: var(--btn-fg);
+  background: var(--btn-bg);
+
+  padding: 0.95em 1.55em;
+  border-radius: 12px;
+  line-height: 1;
+
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+
+  // Nice subtle depth
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+
+  // Goo blobs
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    width: 4.4em;
+    height: 2.95em;
+
+    background: var(--btn-bg);
+    border-radius: 999px;
+
+    transform: scale(0);
+    transition: transform 0.9s ease;
+  }
+
+  &::before {
+    top: -30%;
+    left: 18%;
+  }
+
+  &::after {
+    bottom: -30%;
+    right: 18%;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    transform: scale(1);
+  }
+
+  // Keyboard accessibility
+  &:focus-visible {
+    outline: 2px solid rgba(3, 226, 231, 0.65);
+    outline-offset: 4px;
+  }
+
+  // Optional: press feel
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+// Hide the svg but keep it in the DOM
+.gooey-svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}

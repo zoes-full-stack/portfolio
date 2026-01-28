@@ -1,0 +1,214 @@
+/* ============================
+   Experience Timeline (SCSS)
+   LIGHT MODE ONLY (LibSass/SassC-safe)
+   ============================ */
+
+.experience-timeline {
+  $hue: 355;
+  $trans-dur: 0.3s;
+  $trans-timing: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* CSS vars (use comma syntax so SassC doesn't choke) */
+  --hue: #{$hue};
+  --bg: hsl(var(--hue), 15%, 98%);
+  --fg: rgba(22,52,66,.98);
+  --primary: rgba(22,52,66,.98);
+
+  /* alpha variants: use hsla() (Sass understands this) */
+  --btn-hover: rgba(42, 79, 96, .98);
+  --hover-bg: rgba(235,250,252,.95);
+  --panel-bg: rgba(235,250,252,.95);
+  --line: hsla(var(--hue), 10%, 25%, 0.35);
+
+  // font: 1em/1.5 "IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--fg);
+  padding: 1.25rem 0 0.5rem;
+
+  * { box-sizing: border-box; }
+
+  a {
+    color: var(--primary);
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.18em;
+    transition: color $trans-dur;
+  }
+
+  &__heading {
+    font-size: 1.5em;
+    margin: 0 0 1.25rem;
+    text-align: left;
+  }
+
+  .btn-group {
+    display: flex;
+    gap: 0.375em;
+    margin-bottom: 1.5em;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    background-color: var(--fg);
+    border: 0;
+    border-radius: 0.35em;
+    color: var(--bg);
+    cursor: pointer;
+    padding: 0.45em 0.9em;
+    -webkit-tap-highlight-color: transparent;
+
+    transition:
+      background-color calc(#{$trans-dur} / 2) linear,
+      color #{$trans-dur},
+      transform #{$trans-dur};
+
+    &:hover { background-color: var(--btn-hover); }
+    &:active { transform: translateY(1px); }
+  }
+
+  .timeline {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+
+    &__item {
+      position: relative;
+      padding-bottom: 2.25em;
+
+      &:not(:last-child)::before {
+        background-color: var(--line);
+        content: "";
+        display: block;
+        position: absolute;
+        top: 1em;
+        left: 2.625em;
+        width: 0.125em;
+        height: 100%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__item-header {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &__arrow {
+      background-color: transparent;
+      border-radius: 0.45em;
+      cursor: pointer;
+      flex-shrink: 0;
+      margin-inline-end: 0.25em;
+      outline: transparent;
+      width: 2em;
+      height: 2em;
+
+      -webkit-appearance: none;
+      appearance: none;
+      -webkit-tap-highlight-color: transparent;
+
+      transition:
+        background-color calc(#{$trans-dur} / 2) linear,
+        color #{$trans-dur};
+
+      &:hover,
+      &:focus-visible { background-color: var(--hover-bg); }
+
+      &-icon {
+        display: block;
+        pointer-events: none;
+        transform: rotate(-90deg);
+        transition: transform #{$trans-dur} #{$trans-timing};
+        width: 100%;
+        height: auto;
+      }
+
+      &[aria-expanded="true"] {
+        .timeline__arrow-icon { transform: rotate(0); }
+      }
+    }
+
+    &__dot {
+      background-color: var(--primary);
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+      margin: 0.62em 0;
+      margin-inline-end: 1em;
+      position: relative;
+      width: 0.75em;
+      height: 0.75em;
+
+      box-shadow: 0 0 0 0.25em hsla(var(--hue), 20%, 95%, 0.9);
+    }
+
+    &__meta { width: 100%; }
+
+    &__date {
+      font-size: 0.92em;
+      line-height: 1.6;
+      opacity: 0.85;
+    }
+
+    &__title {
+      font-size: 1.28em;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    &__org {
+      margin-top: 0.15rem;
+      font-size: 0.98em;
+      opacity: 0.82;
+    }
+
+    &__item-body {
+      border-radius: 0.55em;
+      overflow: hidden;
+      margin-top: 0.55em;
+      margin-inline-start: 4em;
+      height: 0;
+
+      &-content {
+        background-color: var(--panel-bg);
+        // border: 1px solid hsla(var(--hue), 18%, 70%, 0.35);
+        border-radius: 20px;
+        // box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+        opacity: 0;
+        padding: 0.9em 1em;
+        visibility: hidden;
+
+        transition:
+          opacity #{$trans-dur} #{$trans-timing},
+          visibility #{$trans-dur} steps(1, end);
+      }
+
+      &--expanded {
+        height: auto;
+
+        .timeline__item-body-content {
+          opacity: 1;
+          visibility: visible;
+          transition-delay: #{$trans-dur}, 0s;
+        }
+      }
+    }
+
+    &__list {
+      margin: 0;
+      // padding-left: 1.05em;
+
+      // li { margin: 0.35em 0; }
+    }
+
+    &__indent {
+      list-style: disc;
+      margin-left: 1.25em;
+      opacity: 0.95;
+    }
+
+    &__subhead {
+      margin: 0.35em 0 0.25em;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+    }
+  }
+}

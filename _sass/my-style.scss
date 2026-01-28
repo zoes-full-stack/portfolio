@@ -9,6 +9,105 @@
 
 // }
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Symbols:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=IBM+Plex+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+
+// body {
+//     background:
+//     radial-gradient(1200px 700px at 30% 10%, rgba(72, 255, 220, 0.06), transparent 60%),
+//     radial-gradient(900px 600px at 80% 30%, rgba(120, 150, 255, 0.05), transparent 65%),
+//     linear-gradient(180deg, var(--bg0), var(--bg1) 55%, var(--bg2));
+// }
+
+html.no-scroll-anchor {
+  overflow-anchor: none;
+}
+
+// Override the SCSS for HydeJack's current content (as we have a custom footer now)
+.content {
+  padding-bottom: 0 !important;
+}
+
+/* Use the body class Jekyll generates for this page */
+main.page-about {
+  background: #041823;
+}
+
+/* Remove the top gap / header spacing */
+main.page-about .content,
+main.page-about .content > .content-wrap {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* If Hydejack adds a hero/title area above content, hide it */
+main.page-about .page-title,
+main.page-about .content .title,
+main.page-about header {
+  display: none !important;
+}
+
+/* Make your scrolly flush */
+main.page-about .about-shell {
+  margin: 0;
+  padding: 0;
+}
+
+
+// 
+/* Body background only on About layout */
+// body:has(main.layout-about) {
+//   background: #041823 !important;
+// }
+
+// /* Ensure the actual page surface is the same color */
+// main.layout-about {
+//   // background: #041823 !important;
+//   min-height: 100vh;
+// }
+
+// /* page-level background */
+// body:has(main.layout-about) {
+//   background:
+//     radial-gradient(1200px 700px at 65% 35%, rgba(10, 60, 75, 0.55), transparent 60%),
+//     radial-gradient(900px 600px at 20% 25%, rgba(6, 40, 55, 0.55), transparent 65%),
+//     linear-gradient(180deg, #02111a 0%, #041823 50%, #02121a 100%) !important;
+// }
+
+// /* optional “dust/bubbles” overlay */
+// body:has(main.layout-about)::before {
+//   content:"";
+//   position: fixed;
+//   inset: 0;
+//   pointer-events: none;
+//   opacity: 0.35;
+//   background:
+//     radial-gradient(circle at 15% 25%, rgba(255,255,255,0.10) 0 2px, transparent 3px),
+//     radial-gradient(circle at 55% 45%, rgba(255,255,255,0.08) 0 1.5px, transparent 3px),
+//     radial-gradient(circle at 80% 30%, rgba(255,255,255,0.07) 0 2px, transparent 3px),
+//     radial-gradient(circle at 30% 75%, rgba(255,255,255,0.06) 0 1.5px, transparent 3px);
+//   mix-blend-mode: screen;
+//   filter: blur(0.2px);
+// }
+
+// 
+
+@media screen and (min-width: 768px) {
+  .content {
+    padding-top: 4rem !important;
+  }
+}
+
+.dark-text {
+  color: #000;
+}
+
+.bigger-p {
+  font-size: 18px !important;
+}
+
 .mt-30 {
   margin-top: 30px;
 }
@@ -63,7 +162,17 @@
 }
 
 
+.row-container {
+    display: grid;
+    /* Creates two columns of equal width */
+    grid-template-columns: 1fr 1fr;
+    /* Adds a gap between columns for spacing */
+    gap: 15px;
+}
 
+.two-column {
+    width: 100%;
+}
 
 span {
   content: "\2192";
@@ -637,11 +746,20 @@ img[src~="bordered"]:hover {
   position: relative;
 }
 
+// Override HydeJack CSS for hr
+hr, .hr {
+    border-top: none !important;
+}
+
 /* Mobile-only helper */
 .mobile-only { display: none; }
 
 @media (max-width: 768px){
   .mobile-only { display: block; }
+
+  .navbar>.content::before {
+    box-shadow: 0 0 2rem rgba(135, 249, 255, 25%) !important;
+  }
 }
 
 // Hiding Navbar and Next and Back links On Desktop (Keep on Mobile for Usability)
@@ -658,20 +776,23 @@ img[src~="bordered"]:hover {
 .magical-bean-section {
   width: 100%;
   min-height: 50vh;
-  background-color: #163442;
+  background-color: #062837;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   margin: 0;
-  border-radius: 20px;
+  padding-top: 2rem;
+  border-radius: 0 0 20px 20px;
+  border-top: 5px #beecf4 groove;
   position: relative;
   overflow: hidden; /* keeps rounded corners clean */
+  z-index: 2;
 }
 
 /* Optional helper class (recommended) to give room for menu bloom */
 .magical-bean-section.bean-stage{
-  padding-top: 50px;
-  padding-bottom: 320px; /* space for radial buttons so they don't overlap page text */
+  // padding-top: 120px;
+  padding-bottom: 200px; /* space for radial buttons so they don't overlap page text */
   // transition: padding-bottom 420ms ease;
 }
 
@@ -686,15 +807,15 @@ img[src~="bordered"]:hover {
 /* Bean body */
 #magical-bean {
   cursor: pointer;
-  margin: 0;
+  margin-top: 30px;
   background-color: #beecf4;
-  width: min(520px, 55%);
+  width: min(320px, 45%);
   height: min(520px, 50%);
   aspect-ratio: 1 / 0.7;
-  border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
-  transition: background-color 600ms ease-in;
+  border-radius: 60% 60% 20% 20% / 100% 100% 20% 20%;
+  transition: background-color 600ms ease-in, box-shadow 600ms ease-in;
   position: relative; /* face + arms + holder anchor */
-  z-index: 2;
+  z-index: 5;
 }
 
 /* Face parts */
@@ -787,6 +908,7 @@ img[src~="bordered"]:hover {
 /* Hover expression */
 #magical-bean:hover {
   background-color: #ffb04c;
+  // box-shadow: 1px 1px 15px 10px #ffd59d;
 }
 
 #magical-bean:hover #smile {
@@ -812,9 +934,9 @@ img[src~="bordered"]:hover {
 #magical-bean:hover #eye2 { left: 54%; }
 
 /* Background tint on hover */
-#magical-bean:hover + #magical-bean-container {
-  background-color: #f5e9b7;
-}
+// #magical-bean:hover + #magical-bean-container {
+//   background-color: #f5e9b7;
+// }
 
 
 /* ================================
@@ -893,6 +1015,8 @@ img[src~="bordered"]:hover {
 
   .magical-bean-text-desktop {
     display: block;
+    padding: 25px;
+    color: #fff;
   }
 
   .magical-bean-text-mobile {
@@ -908,6 +1032,11 @@ img[src~="bordered"]:hover {
 //   }
 // }
 
+#magical-bean-container,
+.bean-waves,
+.bean-waves svg {
+  pointer-events: none;
+}
 
 /* ================================
    Radial Menu (Words version)
@@ -915,8 +1044,8 @@ img[src~="bordered"]:hover {
 
 .fab-menu {
   position: relative; /* ✅ REQUIRED for absolute children */
-  width: 92px;
-  height: 92px;
+  width: 102px;
+  height: 72px;
   margin: 0;
   text-align: center;
   font-size: 14px;
@@ -931,12 +1060,12 @@ img[src~="bordered"]:hover {
 .fab-menu .menu-item,
 .fab-menu .menu-open-button {
   background: #EEEEEE;
-  border-radius: 999px;
-  width: 92px;
-  height: 92px;
+  border-radius: 40px 40px 60px 60px;
+  width: 102px;
+  height: 72px;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 90%;
   margin-left: 0;
   translate: -50% 0;
 
@@ -944,7 +1073,7 @@ img[src~="bordered"]:hover {
   text-align: center;
 
   transform: translate3d(0, 0, 0);
-  transition: transform 520ms cubic-bezier(.2,.9,.2,1);
+  transition: transform 1020ms cubic-bezier(.2,.9,.2,1);
   will-change: transform;
   box-sizing: border-box;
 }
@@ -956,7 +1085,7 @@ img[src~="bordered"]:hover {
   cursor: pointer;
   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition-duration: 400ms;
+  transition-duration: 520ms;
   transform: scale(1.06) translate3d(0, 0, 0);
   position: absolute;
 }
@@ -1004,7 +1133,7 @@ img[src~="bordered"]:hover {
 
 .fab-menu .menu-open:checked + .menu-open-button {
   transition-timing-function: linear;
-  transition-duration: 200ms;
+  transition-duration: 300ms;
   transform: scale(0.98) translate3d(0, 0, 0);
 }
 
@@ -1021,8 +1150,8 @@ img[src~="bordered"]:hover {
 .fab-menu .menu-text {
   display: block;
   padding: 0 10px;
-  font-weight: 700;
-  font-size: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
   line-height: 1.1;
   text-align: center;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -1031,29 +1160,29 @@ img[src~="bordered"]:hover {
 
 /* Slight hover polish */
 .fab-menu .menu-item:hover {
-  filter: brightness(1.05);
+  filter: saturate(2);
 }
 
 /* Bloom easing */
 .fab-menu .menu-open:checked ~ .menu-item {
   transition-timing-function: cubic-bezier(.2,.9,.2,1);
-  transition-duration: 620ms;
+  transition-duration: 520ms;
 }
 
 /* Bloom UNDER the hub */
-.fab-menu .menu-open:checked ~ .menu-item:nth-child(3) { transform: translate3d(0, 112px, 0); }
-.fab-menu .menu-open:checked ~ .menu-item:nth-child(4) { transform: translate3d(98px, 58px, 0); }
-.fab-menu .menu-open:checked ~ .menu-item:nth-child(5) { transform: translate3d(98px, 168px, 0); }
-.fab-menu .menu-open:checked ~ .menu-item:nth-child(6) { transform: translate3d(0, 224px, 0); }
-.fab-menu .menu-open:checked ~ .menu-item:nth-child(7) { transform: translate3d(-98px, 168px, 0); }
-.fab-menu .menu-open:checked ~ .menu-item:nth-child(8) { transform: translate3d(-98px, 58px, 0); }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(3) { transform: translate3d(-150px, 30px, 0); }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(4) { transform: translate3d(220px, -190px, 0); }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(5) { transform: translate3d(250px, -70px, 0); }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(6) { transform: translate3d(150px, 30px, 0); }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(7) { transform: translate3d(-220px, -190px, 0); }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(8) { transform: translate3d(-250px, -70px, 0); }
 
-.fab-menu .menu-open:checked ~ .menu-item:nth-child(3) { transition-delay: 0ms; }
-.fab-menu .menu-open:checked ~ .menu-item:nth-child(4) { transition-delay: 40ms; }
-.fab-menu .menu-open:checked ~ .menu-item:nth-child(5) { transition-delay: 80ms; }
-.fab-menu .menu-open:checked ~ .menu-item:nth-child(6) { transition-delay: 120ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(3) { transition-delay: 80ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(4) { transition-delay: 100ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(5) { transition-delay: 120ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(6) { transition-delay: 140ms; }
 .fab-menu .menu-open:checked ~ .menu-item:nth-child(7) { transition-delay: 160ms; }
-.fab-menu .menu-open:checked ~ .menu-item:nth-child(8) { transition-delay: 200ms; }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(8) { transition-delay: 180ms; }
 
 /* Colors */
 .fab-menu .blue { background-color: #669AE1; }
@@ -1064,23 +1193,67 @@ img[src~="bordered"]:hover {
 .fab-menu .lightblue { background-color: #62C2E4; }
 
 /* Mobile: keep it comfy */
-@media (max-width: 700px) {
-  .magical-bean-section.bean-stage{
-    padding-bottom: 320px;
-  }
-  #magical-bean .bean-hold{
-    width: 300px;
-    height: 300px;
-    bottom: -14px;
-  }
+@media (max-width: 767px) {
+    #magical-bean {
+        width: min(200px, 85%);
+        margin-top: 20px;
+    }
 
-  .magical-bean-text-desktop {
-    display: none;
-  }
+    .magical-bean-section.bean-stage{
+        padding-bottom: 320px;
+    }
+    #magical-bean .bean-hold{
+        width: 300px;
+        height: 300px;
+        bottom: -14px;
+    }
 
-  .magical-bean-text-mobile {
-    display: block;
-  }
+    .magical-bean-text-desktop {
+        display: none;
+    }
+
+    .magical-bean-text-mobile {
+        display: block;
+        color: #fff;
+        padding: 20px 15px 20px 15px;
+        text-align: center;
+    }
+
+    /* Bloom UNDER the hub */
+    .fab-menu .menu-open:checked ~ .menu-item:nth-child(3) { transform: translate3d(0, 112px, 0); }
+    .fab-menu .menu-open:checked ~ .menu-item:nth-child(4) { transform: translate3d(98px, 58px, 0); }
+    .fab-menu .menu-open:checked ~ .menu-item:nth-child(5) { transform: translate3d(98px, 168px, 0); }
+    .fab-menu .menu-open:checked ~ .menu-item:nth-child(6) { transform: translate3d(0, 224px, 0); }
+    .fab-menu .menu-open:checked ~ .menu-item:nth-child(7) { transform: translate3d(-98px, 168px, 0); }
+    .fab-menu .menu-open:checked ~ .menu-item:nth-child(8) { transform: translate3d(-98px, 58px, 0); }
+
+    
+    @media (hover: hover) and (pointer: fine) {
+        /* Bloom UNDER the hub */
+        .bean-ui:hover .fab-menu .menu-item:nth-child(3),
+        .bean-ui:focus-within .fab-menu .menu-item:nth-child(3),
+        .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(3) { transform: translate3d(0, 112px, 0); }
+
+        .bean-ui:hover .fab-menu .menu-item:nth-child(4),
+        .bean-ui:focus-within .fab-menu .menu-item:nth-child(4),
+        .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(4) { transform: translate3d(98px, 58px, 0); }
+
+        .bean-ui:hover .fab-menu .menu-item:nth-child(5),
+        .bean-ui:focus-within .fab-menu .menu-item:nth-child(5),
+        .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(5) { transform: translate3d(98px, 168px, 0); }
+
+        .bean-ui:hover .fab-menu .menu-item:nth-child(6),
+        .bean-ui:focus-within .fab-menu .menu-item:nth-child(6),
+        .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(6) { transform: translate3d(0, 224px, 0); }
+
+        .bean-ui:hover .fab-menu .menu-item:nth-child(7),
+        .bean-ui:focus-within .fab-menu .menu-item:nth-child(7),
+        .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(7) { transform: translate3d(-98px, 168px, 0); }
+
+        .bean-ui:hover .fab-menu .menu-item:nth-child(8),
+        .bean-ui:focus-within .fab-menu .menu-item:nth-child(8),
+        .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(8) { transform: translate3d(-98px, 58px, 0); }
+    }
 }
 
 /* ==========================================
@@ -1100,30 +1273,38 @@ img[src~="bordered"]:hover {
     transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
   }
 
+  .fab-menu .menu-open:checked ~ .menu-item:nth-child(3) { transform: translate3d(-150px, 30px, 0); }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(4) { transform: translate3d(220px, -190px, 0); }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(5) { transform: translate3d(250px, -70px, 0); }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(6) { transform: translate3d(150px, 30px, 0); }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(7) { transform: translate3d(-220px, -190px, 0); }
+.fab-menu .menu-open:checked ~ .menu-item:nth-child(8) { transform: translate3d(-250px, -70px, 0); }
+
+
   /* Bloom UNDER the hub */
   .bean-ui:hover .fab-menu .menu-item:nth-child(3),
   .bean-ui:focus-within .fab-menu .menu-item:nth-child(3),
-  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(3) { transform: translate3d(0, 112px, 0); }
+  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(3) { transform: translate3d(-150px, 30px, 0); }
 
   .bean-ui:hover .fab-menu .menu-item:nth-child(4),
   .bean-ui:focus-within .fab-menu .menu-item:nth-child(4),
-  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(4) { transform: translate3d(98px, 58px, 0); }
+  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(4) { transform: translate3d(220px, -190px, 0); }
 
   .bean-ui:hover .fab-menu .menu-item:nth-child(5),
   .bean-ui:focus-within .fab-menu .menu-item:nth-child(5),
-  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(5) { transform: translate3d(98px, 168px, 0); }
+  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(5) { transform: translate3d(250px, -70px, 0); }
 
   .bean-ui:hover .fab-menu .menu-item:nth-child(6),
   .bean-ui:focus-within .fab-menu .menu-item:nth-child(6),
-  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(6) { transform: translate3d(0, 224px, 0); }
+  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(6) { transform: translate3d(150px, 30px, 0); }
 
   .bean-ui:hover .fab-menu .menu-item:nth-child(7),
   .bean-ui:focus-within .fab-menu .menu-item:nth-child(7),
-  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(7) { transform: translate3d(-98px, 168px, 0); }
+  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(7) { transform: translate3d(-220px, -190px, 0); }
 
   .bean-ui:hover .fab-menu .menu-item:nth-child(8),
   .bean-ui:focus-within .fab-menu .menu-item:nth-child(8),
-  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(8) { transform: translate3d(-98px, 58px, 0); }
+  .bean-ui .bean-hold:hover .fab-menu .menu-item:nth-child(8) { transform: translate3d(-250px, -70px, 0); }
 
   /* Hub squash + turn into "X" while open */
   .bean-ui:hover .fab-menu .menu-open-button,
@@ -1476,5 +1657,82 @@ img[src~="bordered"]:hover {
   margin-top: 1.5rem;
 }
 
-// Projects (Portfolio) CSS 
+// Welcome Text
+
+.welcome-text {
+  margin: 30px 30px 30px 30px;
+  color: #ffffff;
+}
+
+// Sidebar intro
+@import "sidebar-intro";
+
+// Projects (Portfolio) SCSS 
 @import "my-projects";
+
+// Gallery SCSS
+@import "my-gallery";
+@import "media_tabs";
+@import "sound-toggle";
+@import "bottom-swipeable-navbar";
+
+// Ocean Buttons!
+@import "ocean-button";
+@import "welcome-ocean-button";
+@import "water-button";
+
+// Work Experience SCSS
+@import "my_experience";
+
+// Bottom Navigation (Mobile Only)
+@import "bottom_navigation_story";
+
+// Skills Complex Card
+@import "my_skills";
+
+// About Bean
+@import "about_deck";
+
+// Coming Soon 
+@import "coming_soon";
+
+// Ocean 404
+@import "ocean_404";
+
+// Hover Partial Button (currently used for View PDF ->)
+@import "hover_partial_button";
+
+// Recent Technologies Cards
+@import "recent_tech";
+
+// Brief Overview of what I Offer
+@import "brief_overview";
+
+// Submarine
+@import "submarine";
+
+// Ocean Under Construction (New Page being updated/maintained)
+@import "ocean-construction";
+
+// 3D Gradient Ocean
+@import "gradient-ocean";
+
+
+// Silly Worm
+@import "silly_worm";
+
+// About scrolly story
+
+@import "about_flow";
+
+// Thought bubble
+@import "thought_bubble";
+
+// Relaxing by the beach - for 404?
+@import "relax-by-beach";
+
+// Scroll to the top button
+@import "scroll-top";
+
+// Custom footer
+@import "custom-footer";
