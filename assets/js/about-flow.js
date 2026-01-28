@@ -46,14 +46,8 @@
     const bean = flow.querySelector("#magical-about-story-bean");
     const chapters = Array.from(flow.querySelectorAll(".about-chapter"));
 
-    // GSAP availability
     const hasGSAP = !!window.gsap;
     const hasST = !!window.ScrollTrigger;
-
-    // IMPORTANT:
-    // Your global tags currently do NOT include Flip.
-    // So Flip will often be missing unless you add it.
-    // We'll gracefully fall back without Flip.
     const hasFlip = !!window.Flip;
 
     if (!hasGSAP || !hasST || !mover || !bean || chapters.length === 0) {
@@ -65,10 +59,8 @@
     gsap.registerPlugin(ScrollTrigger);
     if (hasFlip) gsap.registerPlugin(Flip);
 
-    // Mark active JS state (use in CSS so content isn't "blank" if JS fails)
     flow.classList.add("is-js");
 
-    // Optional normalize
     try { ScrollTrigger.normalizeScroll(true); } catch (e) {}
 
     // Hydejack / ScrollSmoother support (optional)
@@ -84,16 +76,57 @@
       .filter(t => t?.vars?.id && String(t.vars.id).startsWith("about-"))
       .forEach(t => t.kill(true));
 
-    // Stop old tweens on bean
     gsap.killTweensOf(bean);
 
+    // ---------- SHORE PALETTE (CodePen vibe) ----------
+    const SHORE = {
+      shoreDeep: "#12486B",
+      shoreMid:  "#419197",
+      shoreLite: "#78D6C6",
+      sand:      "#F5FCCD"
+    };
+
+    // Apply shore vars once (CSS builds the full gradient from vars)
+    gsap.set(flow, {
+      "--shore-deep": SHORE.shoreDeep,
+      "--shore-mid":  SHORE.shoreMid,
+      "--shore-lite": SHORE.shoreLite,
+      "--sand":       SHORE.sand
+    });
+
     // ---------- THEMES ----------
+    // Bean + glow tuned for contrast against shore + sand
     const MOODS = {
-      intro:       { sea0:"#041823", sea1:"#062837", sea2:"#0b415a", accent:"#beecf4", bean:"#beecf4", glow:"rgba(190,236,244,0.25)" },
-      mission:     { sea0:"#031523", sea1:"#07354a", sea2:"#0c4f6c", accent:"#ffb04c", bean:"#d6f3f8", glow:"rgba(255,176,76,0.20)" },
-      tidbits:     { sea0:"#031b2a", sea1:"#0a3f3a", sea2:"#0d5a50", accent:"#9ef0d1", bean:"#bff7e3", glow:"rgba(158,240,209,0.22)" },
-      curiosities: { sea0:"#07081d", sea1:"#140b33", sea2:"#24124f", accent:"#c49bff", bean:"#e2d0ff", glow:"rgba(196,155,255,0.22)" },
-      cta:         { sea0:"#041823", sea1:"#062837", sea2:"#0b415a", accent:"#ffb04c", bean:"#ffb04c", glow:"rgba(255,176,76,0.24)" },
+      intro: {
+        sea0:"#041823", sea1:"#062837", sea2:"#0b415a",
+        accent:"#BFF6FF",        // brighter sea-foam highlight
+        bean:"#D7FAFF",
+        glow:"rgba(215,250,255,0.30)"
+      },
+      mission: {
+        sea0:"#031523", sea1:"#07354a", sea2:"#0c4f6c",
+        accent:"#FFC06A",        // warmer “sun / justice”
+        bean:"#FFB04C",
+        glow:"rgba(255,176,76,0.28)"
+      },
+      tidbits: {
+        sea0:"#031b2a", sea1:"#0a3f3a", sea2:"#0d5a50",
+        accent:"#7CF2D6",        // shoreline sparkle mint
+        bean:"#B6FFE8",
+        glow:"rgba(182,255,232,0.26)"
+      },
+      curiosities: {
+        sea0:"#07081d", sea1:"#140b33", sea2:"#24124f",
+        accent:"#cbffe7ff",        // warmed lilac so it plays nicer with shore greens
+        bean:"#44FFA7",
+        glow:"rgba(231,214,255,0.26)"
+      },
+      cta: {
+        sea0:"#041823", sea1:"#062837", sea2:"#0b415a",
+        accent:"#FFE09A",        // most “sunlit / sand”
+        bean:"#FFD08A",
+        glow:"rgba(255,208,138,0.30)"
+      },
     };
 
     const POSES = {
@@ -116,10 +149,16 @@
       mission: {
         vars: {
           "--lookX":"0px",
-          "--eyeOpen":0.55,
+
+          // pumped eyes
+          "--eyeOpen": 0.95,  
+          "--eyeH":"12%",        
+          "--eyeW":"12%",       
+
           "--eyeTilt":"0deg",
-          "--smileCurve":0.2,
-          "--smileY":"40%",
+          "--smileCurve": 1,
+          "--smileY":"39%",
+
           "--armY":"40%",
           "--armLift":"-18px",
           "--armLrot":"-92deg",
@@ -132,31 +171,56 @@
       },
       tidbits: {
         vars: {
-          "--lookX":"-14px",
-          "--eyeOpen":0.35,
-          "--eyeTilt":"-6deg",
+          // looking toward the thought bubble (left)
+          "--lookX":"-22px",
+
+          // “thinking” eyes: slightly open + a touch more tilt
+          "--eyeOpen":0.30,
+          "--eyeTilt":"-50deg",
+
+          // subtler smile (neutral/thinking)
           "--smileCurve":0.0,
           "--smileW":"14%",
-          "--smileY":"41%",
-          "--armY":"56%",
-          "--armLrot":"-18deg",
-          "--armRrot":"18deg",
-          "--armLift":"8px",
-          "--handsY":"-6px",
+          "--smileY":"42%",
+
+          // arms lower + more relaxed
+          "--armY":"76%",         
+          "--armLift":"10px",    
+          "--armLrot":"-10deg",
+          "--armRrot":"10deg",
+
+          // keep hands slightly “tucked”
+          "--handsY":"-4px",
         },
-        prop: null,
+        prop: "question",
         loop: "think"
       },
       curiosities: {
         vars: {
-          "--lookX":"0px",
-          "--eyeOpen":0.45,
-          "--smileCurve":0.8,
-          "--armY":"60%",
-          "--armLrot":"-20deg",
-          "--armRrot":"20deg",
-          "--armLift":"8px",
-          "--handsY":"6px",
+          // look toward thought bubble
+          "--lookX":"-18px",
+
+          // open + happy eyes
+          "--eyeOpen":0.85,
+          "--eyeH":"12%",
+          "--eyeW":"12%",
+          "--eyeTilt":"-4deg",
+
+          // kitty smile :3
+          "--smileW":"18%",
+          "--smileY":"39%",
+          "--smileCurve":1.15,
+
+          // arms UP + slightly inward to "hold it up"
+          "--armY":"44%",
+          "--armLift":"-14px",
+          "--armLx":"-2%",
+          "--armRx":"-2%",
+          "--armLrot":"-50deg",
+          "--armRrot":"50deg",
+
+          // nudge props/hands up a touch
+          "--handsY":"-6px",
         },
         prop: "heart",
         loop: "idle"
@@ -251,7 +315,6 @@
       });
     }
 
-    // Move the mover into the slot; Flip if available, otherwise a normal move
     function moveMoverToSlot(slotEl, animate = true) {
       if (!slotEl) return;
       if (mover.parentNode === slotEl) return;
@@ -271,7 +334,6 @@
       }
     }
 
-    // Slots
     const slots = chapters.map(ch => ch.querySelector(".about-beanSlot")).filter(Boolean);
     if (slots.length === 0) return false;
 
@@ -293,7 +355,6 @@
     if (firstThought) gsap.set(firstThought, { autoAlpha: 1, y: 0 });
     moveMoverToSlot(firstSlot, false);
 
-    // Ensure refresh happens after layout paints (critical on first load)
     requestAnimationFrame(() => {
       requestAnimationFrame(() => ScrollTrigger.refresh());
     });
@@ -346,7 +407,6 @@
   // Boot w/ retries
   // ----------------------------
   function boot(retries = 40) {
-    // Two RAFs gives Hydejack time to inject + browser time to layout
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         const ok = initAboutFlow(document);
