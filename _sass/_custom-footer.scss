@@ -1,0 +1,47 @@
+// Adding custom footer (as I re-did all the pages in my designs instead of HydeJacks)
+footer {
+    display: none !important; /* Completely removes it from layout */
+}
+
+/* Custom footer */
+.custom-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* center the inner element */
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem 2rem; /* keep your bottom spacing */
+  z-index: 20;
+}
+
+/* On desktop: only occupy the "content" side (exclude sidebar) */
+@media (min-width: 64em) { // adjust if your breakpoint differs
+  .custom-footer {
+    left: var(--hy-drawer-peek-width, 0px);
+    width: calc(100% - var(--hy-drawer-peek-width, 0px));
+    right: auto;
+  }
+}
+
+.fixed-bottom-p {
+  margin: 0;
+  color: #777;
+  font-size: 0.83rem;
+  text-align: center;
+
+  /* match your content column width */
+  width: min(980px, 100%);
+
+  // position: fixed; /* positions relative to the browser window */
+  // bottom: 0;   
+  // right: 0;      
+  // width: 80%;    
+  // font-size: 0.7rem;
+  // color: #777;
+  // text-align: center;
+  // margin: 0;      /* remove default P margins */
+  // padding: 10px 0; /* add some spacing */
+}

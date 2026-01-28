@@ -9,8 +9,28 @@
    - Closing the lightbox reverts back to the global preference (since the video is destroyed anyway).
 */
 
+function showAudioToast(msg, ms = 1600) {
+  const el = document.getElementById("audioToast");
+  if (!el) return;
+
+  el.textContent = msg;
+
+  // restart animation even if triggered rapidly
+  el.classList.remove("is-showing");
+  // force reflow so the class toggle re-triggers transitions
+  void el.offsetWidth;
+
+  el.classList.add("is-showing");
+
+  clearTimeout(el._t);
+  el._t = setTimeout(() => {
+    el.classList.remove("is-showing");
+  }, ms);
+}
+
+
 // =========================
-// GLOBAL AUDIO CONTROLLER (Option A)
+// GLOBAL AUDIO CONTROLLER
 // =========================
 window.AudioController = {
   muted: true,
@@ -74,6 +94,9 @@ function bindAudioDelegationOnce() {
       e.preventDefault();
 
       window.AudioController.toggle();
+
+      //Toast only on user action
+      showAudioToast("Audio preference saved for this gallery");
     },
     { passive: false }
   );
@@ -263,6 +286,15 @@ bindAudioDelegationOnce();
     );
   }
 
+  
+  function scrollToTopOnTabChange() {
+    // Mobile layout only (your bottom navbar only exists on mobile)
+    const nav = document.querySelector(".bottom-navbar");
+    if (!nav || getComputedStyle(nav).display === "none") return;
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   function initSvgUnderlineWobbleTabs(tabsEl) {
     if (!window.gsap) return;
     if (!tabsEl || tabsEl.dataset.svgWobbleBound === "1") return;
@@ -392,6 +424,7 @@ bindAudioDelegationOnce();
 
         history.replaceState(null, "", `#${tab}`);
         setActiveTabUI(tabsEl, tab);
+        scrollToTopOnTabChange();
         renderTab(tab, masonry);
       },
       { passive: false }
@@ -403,6 +436,7 @@ bindAudioDelegationOnce();
         const tab = getTabFromHash();
         if (tab !== activeTab) {
           setActiveTabUI(tabsEl, tab);
+          scrollToTopOnTabChange();
           renderTab(tab, masonry);
         }
       },
@@ -566,6 +600,8 @@ bindAudioDelegationOnce();
     const lb = document.getElementById("lightbox");
     const lbMedia = document.getElementById("lbMedia");
     const lbTitle = document.getElementById("lbTitle");
+    const lbTitleTop = document.getElementById("lbTitleTop");
+    const lbAudioHint = document.getElementById("lbAudioHint");
     const lbAudioToggle = document.getElementById("lbAudioToggle");
     const lbCloseBtn = lb ? lb.querySelector(".lb__close") : null;
 
@@ -633,6 +669,9 @@ bindAudioDelegationOnce();
 
       lb.classList.toggle("is-video", item.kind === "video");
       lbTitle.textContent = item.title || "";
+      lbTitle.textContent = item.title || "";
+      if (lbTitleTop) lbTitleTop.textContent = item.title || "";
+
       lbMedia.innerHTML = "";
 
       lbAudioToggle.hidden = true;
@@ -641,12 +680,7 @@ bindAudioDelegationOnce();
 
       // show hint only for videos that have audio
       if (lbAudioHint) {
-        lbAudioHint.hidden = !(item.kind === "video" && item.hasAudio);
-        if (!lbAudioHint.hidden) {
-          // optional: auto-hide after a moment
-          clearTimeout(lbAudioHint._t);
-          lbAudioHint._t = setTimeout(() => { lbAudioHint.hidden = true; }, 2600);
-        }
+        lbAudioHint.classList.remove("is-highlight");
       }
 
       if (item.kind === "image") {
@@ -714,8 +748,6 @@ bindAudioDelegationOnce();
         try { restore.focus({ preventScroll: true }); } catch {}
       }
 
-      if (lbAudioHint) lbAudioHint.hidden = true;
-
       if (lbCurrentVideo) {
         try { lbCurrentVideo.pause(); } catch {}
         lbCurrentVideo.removeAttribute("src");
@@ -763,13 +795,21 @@ bindAudioDelegationOnce();
       lbAudioToggle.addEventListener("click", () => {
         if (!lbCurrentVideo || !lbHasAudio) return;
 
-        const currentlyMuted = lbCurrentVideo.muted;
-        const nextMuted = !currentlyMuted;
+        const nextMuted = !lbCurrentVideo.muted;
 
         // store temporary state only for this open session
         lbPreviewMuted = nextMuted;
 
         applyPreviewAudio(nextMuted);
+
+        // show + highlight hint when toggled
+        if (lbAudioHint) {
+          lbAudioHint.classList.add("is-highlight");
+          clearTimeout(lbAudioHint._highlightT);
+          lbAudioHint._highlightT = setTimeout(() => {
+            lbAudioHint.classList.remove("is-highlight");
+          }, 3200);
+        }
       });
 
       window.addEventListener(

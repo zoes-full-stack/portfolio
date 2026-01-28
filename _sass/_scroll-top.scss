@@ -8,7 +8,7 @@
   position: fixed;
   right: 52px;
   bottom: 42px;
-  z-index: 9999;
+  z-index: 100;
 
   width: 60px;
   height: 60px;
@@ -96,6 +96,20 @@
 .scroll-top-arrow {
   position: absolute;
   inset: 0;
+}
+
+@media (max-width: 767px) {
+  .scroll-top {
+    right: 12px;
+    bottom: 82px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .scroll-top-round {
+    width: 45px;
+    height: 45px;
+  }
 }
 
 /* ✅ Pure CSS chevrons (no background images) */

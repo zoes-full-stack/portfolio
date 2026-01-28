@@ -115,6 +115,52 @@ $color_1: #fff;
     }
 }
 
+.audio-toast {
+  position: fixed;
+  right: 22px;
+  top: 70px; // sits near your button; tweak as needed
+  z-index: 999999;
+
+  padding: 10px 12px;
+  border-radius: 14px;
+
+  background: rgba(9, 29, 35, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(240, 255, 255, 0.96);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.2px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.audio-toast.is-showing {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 767px) {
+  .audio-toast {
+    right: 14px;
+    top: 86px; // a bit closer on mobile
+    font-size: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .audio-toast {
+    transition: none;
+  }
+}
+
 
 @media (prefers-reduced-motion: reduce) {
   .water-button.is-sound-on .liquid {

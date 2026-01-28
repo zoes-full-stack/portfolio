@@ -1,6 +1,5 @@
-
 /* Ocean variables */
-:root{
+:root {
   --ocean: rgba(38, 167, 186, 0.18);
   --ocean-2: rgba(38, 167, 186, 0.28);
   --ink: #052a33; /* dark teal */
@@ -9,6 +8,9 @@
 
 $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
 
+/* =========================
+   GALLERY
+========================= */
 .scarlet-gallery {
   padding: 0.8rem 0;
 
@@ -53,9 +55,21 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
         border-left: 4px solid rgba(42, 48, 110, 0.65);
         padding-left: 0.75rem;
 
-        p { margin: 0; text-align: left; }
-        b, strong { font-size: 1.4rem; letter-spacing: 0.2px; }
-        .small { display: block; margin-top: 0.25rem; opacity: 0.8; font-size: 1.05rem; }
+        p {
+          margin: 0;
+          text-align: left;
+        }
+        b,
+        strong {
+          font-size: 1.4rem;
+          letter-spacing: 0.2px;
+        }
+        .small {
+          display: block;
+          margin-top: 0.25rem;
+          opacity: 0.8;
+          font-size: 1.05rem;
+        }
       }
     }
 
@@ -79,7 +93,6 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
       transform-origin: 50% 50% -50px;
 
       will-change: transform;
-      transform-style: preserve-3d;
       backface-visibility: hidden;
 
       transition: box-shadow 0.8s ease;
@@ -121,7 +134,7 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
     }
 
     .ocean-tilt:hover .ocean-card {
-      box-shadow: 0 0 28px rgba(0,0,0,0.16);
+      box-shadow: 0 0 28px rgba(0, 0, 0, 0.16);
     }
 
     .video-container {
@@ -130,7 +143,10 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
       overflow: hidden;
       border-radius: 8px;
 
-      img, video { pointer-events: none; }
+      img,
+      video {
+        pointer-events: none;
+      }
 
       .card-bg {
         position: absolute;
@@ -138,12 +154,12 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
         width: 100%;
         height: 100%;
         object-fit: cover;
-        opacity: 0;                 // start hidden
+        opacity: 0; // start hidden
         transition: opacity 0.25s ease;
       }
 
       .card-bg.is-loaded {
-          opacity: 1;
+        opacity: 1;
       }
 
       .grid-video {
@@ -158,7 +174,9 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
       }
 
       &.is-video-active {
-        .grid-video { opacity: 1; }
+        .grid-video {
+          opacity: 1;
+        }
         // optional: keep poster slightly visible under the video for softness
         // .card-bg { opacity: 0.9; }
       }
@@ -190,245 +208,39 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
 
   // responsive columns
   @media (max-width: 520px) {
-    #scarletMasonry { column-count: 1; column-gap: 0.6rem; }
+    #scarletMasonry {
+      column-count: 1;
+      column-gap: 0.6rem;
+    }
   }
   @media (min-width: 521px) and (max-width: 900px) {
-    #scarletMasonry { column-count: 2; column-gap: 0.9rem; }
+    #scarletMasonry {
+      column-count: 2;
+      column-gap: 0.9rem;
+    }
   }
 }
-
-/* LIGHTBOX (ocean, minimal, caption-on-hover) */
-.lb {
-  position: fixed;
-  inset: 0;
-  z-index: 999999;
-  display: grid;
-  place-items: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.18s ease;
-}
-
-.lb[aria-hidden="false"] {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Not a full dark blanket: ocean tint + edge vignette */
-.lb__backdrop {
-  position: absolute;
-  inset: 0;
-  border: 0;
-  padding: 0;
-  background:
-    radial-gradient(circle at 50% 45%,
-      rgba(0, 0, 0, 0.00) 0%,
-      rgba(38, 167, 186, 0.10) 55%,
-      rgba(10, 25, 35, 0.25) 100%);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-}
-
-.lb__panel {
-  position: relative;
-  z-index: 2;
-  border-radius: 14px;
-  overflow: hidden;
-  /* subtle lift */
-  box-shadow: 0 18px 60px rgba(0,0,0,0.25);
-}
-
-.lb__stage {
-  position: relative;
-  overflow: hidden;
-  border-radius: 14px;
-
-  /* this is where your JS sizing lands */
-  display: grid;
-  place-items: center;
-  background: rgba(0,0,0,0.12);
-}
-
-/* Media fills the stage box, but never crops */
-.lb__media {
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
-
-.lb__media img,
-.lb__media video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-.lb__media iframe{
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-  background: rgba(255,255,255,0.02);
-  border-radius: 10px;
-}
-
-/* Close INSIDE media, top-right */
-.lb__close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  z-index: 5;
-
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.45);
-  background: rgba(10, 25, 35, 0.35);
-  color: rgba(240, 255, 255, 0.95);
-  cursor: pointer;
-
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-}
-
-/* Audio button floating */
-.lb__audio {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  z-index: 5;
-  font-size: 12px;
-  border: 1px solid rgba(255,255,255,0.35);
-  background: rgba(10, 25, 35, 0.35);
-  color: rgba(240, 255, 255, 0.95);
-  border-radius: 999px;
-  padding: 8px 10px;
-  cursor: pointer;
-
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-}
-
-/* --- CodePen-style hover caption --- */
-.lb__overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 4;
-
-  background: rgba(0,0,0,0); /* transparent by default */
-  transition: background 0.28s ease;
-  pointer-events: none; /* overlay doesn't block clicks */
-}
-
-/* default placement (images): bottom-left */
-.lb__caption {
-  position: absolute;
-  left: 18px;
-  bottom: 14px;
-
-  opacity: 0;
-  transform: translateY(18px);
-  transition: transform 0.28s ease, opacity 0.28s ease;
-
-  background: rgba(38, 167, 186, 0.18);
-  border: 1px solid rgba(255,255,255,0.28);
-  border-radius: 12px;
-  padding: 10px 12px;
-
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  /* nice for multiline titles */
-  max-width: min(70ch, 85%);
-}
-
-/* when lightbox is showing a video: move caption to top-center */
-.lb.is-video .lb__caption {
-  left: 50%;
-  top: 12px;
-  bottom: auto;
-  transform: translate(-50%, -6px); /* initial "hidden" offset */
-  text-align: center;
-
-  /* keep it between your floating buttons */
-  max-width: min(60ch, calc(100% - 140px)); /* leaves room for left+right buttons */
-}
-
-/* hover in (same behavior, but works for both positions) */
-.lb__stage:hover .lb__caption {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* override the transform for the video top-center variant on hover */
-.lb.is-video .lb__stage:hover .lb__caption {
-  transform: translate(-50%, 0);
-}
-
-// LightBox Audio Hint
-.lb-audio-hint{
-  margin: 8px 0 0;
-  font-size: 0.85rem;
-  line-height: 1.25;
-  opacity: 0.85;
-
-  /* nice “pill” look */
-  display: inline-block;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.18);
-  backdrop-filter: blur(8px);
-}
-
-.lb__title {
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.2px;
-
-  /* readable on ocean tint */
-  color: rgba(240, 255, 255, 0.96);
-  text-shadow: 0 6px 18px rgba(0,0,0,0.35);
-}
-
-/* Hover behavior like the pen */
-.lb__stage:hover .lb__overlay {
-  background: rgba(0, 0, 0, 0.20);
-}
-
-/* On touch/no-hover devices: caption is visible by default */
-@media (hover: none), (pointer: coarse) {
-  .lb__caption {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  /* keep it readable without feeling heavy */
-  .lb__caption {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-}
-
-#scarletMasonry .ocean-card { contain: layout paint; }
 
 /* ===== Gallery “buttery” hints ===== */
-.scarlet-gallery__masonry{
-  contain: layout paint;            /* isolates layout work */
-  content-visibility: auto;         /* browser can skip offscreen rendering */
-  contain-intrinsic-size: 900px;    /* avoids jump while it decides */
+.scarlet-gallery__masonry {
+  contain: layout paint; /* isolates layout work */
+  content-visibility: auto; /* browser can skip offscreen rendering */
+  contain-intrinsic-size: 900px; /* avoids jump while it decides */
 }
 
 /* optional: when switching tabs, prevent “flash” */
-.scarlet-gallery__masonry.is-switching{
+.scarlet-gallery__masonry.is-switching {
   opacity: 0.92;
-  transition: opacity .14s ease;
+  transition: opacity 0.14s ease;
 }
 
-/* Documents tab: switch masonry list to a clean 2-up grid */
+#scarletMasonry .ocean-card {
+  contain: layout paint;
+}
 
+/* =========================
+   DOCUMENTS TAB
+========================= */
 #scarletMasonry.is-docs {
   column-count: initial !important;
   column-gap: initial !important;
@@ -444,12 +256,11 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
 
   > li {
     display: block;
-    width: auto; 
+    width: auto;
     margin: 5px !important;
     break-inside: auto !important;
   }
 }
-
 
 @media (max-width: 900px) {
   #scarletMasonry.is-docs {
@@ -462,8 +273,8 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
   background: #fff;
   border-radius: 14px;
   overflow: hidden;
-  /*box-shadow: 0 18px 50px rgba(0,0,0,0.10);*/
-  border: 1px solid rgba(0,0,0,0.06);
+  /* box-shadow: 0 18px 50px rgba(0,0,0,0.10); */
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .doc-card__media {
@@ -499,3 +310,350 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
 .doc-card__link a {
   text-decoration: none;
 }
+
+/* =========================
+   LIGHTBOX (ocean, minimal, caption-on-hover)
+========================= */
+.lb {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
+}
+
+.lb[aria-hidden="false"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Not a full dark blanket: ocean tint + edge vignette */
+.lb__backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(38, 167, 186, 0.10) 55%,
+    rgba(10, 25, 35, 0.25) 100%
+  );
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.lb__panel {
+  position: relative;
+  z-index: 2;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.25);
+}
+
+.lb__stage {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+
+  /* ✅ change to 2-row layout */
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  justify-items: center;
+
+  background: rgba(0, 0, 0, 0.12);
+}
+
+/* topbar should occupy row 1 and stretch */
+.lb__topbar {
+  grid-row: 1;
+  justify-self: stretch;
+  width: 100%;
+
+  display: none; /* shown for videos only */
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 10px 12px;
+  border-radius: 12px;
+
+  background: rgba(9, 29, 35, 0.63);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  /* ✅ avoid pushing layout weirdly; instead give stage spacing */
+  margin: 10px 0 10px 0;
+}
+
+/* media row 2 */
+.lb__media {
+  grid-row: 2;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+#lightbox.is-video .lb__media {
+  padding-top: 6px;
+}
+
+/* show topbar only for videos */
+.lb.is-video .lb__topbar {
+  display: flex;
+}
+
+
+.lb__topbar-title {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: rgba(240, 255, 255, 0.96);
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+
+  font-size: 0.95rem;
+  line-height: 1.2;
+
+  max-width: 75ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lb__topbar-close {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(240, 255, 255, 0.95);
+
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.lb__topbar-close:hover {
+  transform: scale(1.03);
+  border-color: rgba(125, 211, 252, 0.6);
+  background: rgba(125, 211, 252, 0.10);
+}
+
+/* For videos: show topbar */
+#lightbox.is-video .lb__topbar {
+  display: flex;
+}
+
+
+.lb__media img,
+.lb__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.lb__media iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+}
+
+/* Close INSIDE media, top-right (kept for images) */
+.lb__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 5;
+
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(10, 25, 35, 0.35);
+  color: rgba(240, 255, 255, 0.95);
+  cursor: pointer;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* For videos, the close button should be in the topbar */
+#lightbox.is-video .lb__close {
+  display: none;
+}
+
+/* Audio button floating */
+/* Audio button floating INSIDE the stage (over the video) */
+.lb__audio {
+  position: absolute;
+
+  /* inside media area, not topbar */
+  top: 110px;   /* below the topbar */
+  left: 12px;
+
+  z-index: 12;
+  font-size: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(10, 25, 35, 0.35);
+  color: rgba(240, 255, 255, 0.95);
+
+  border-radius: 999px;
+  padding: 8px 10px;
+  cursor: pointer;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.lb__audio:hover {
+  transform: translateY(-1px);
+  border-color: rgba(125, 211, 252, 0.55);
+  background: rgba(125, 211, 252, 0.10);
+}
+
+
+/* --- CodePen-style hover caption --- */
+.lb__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+
+  background: rgba(0, 0, 0, 0); /* transparent by default */
+  transition: background 0.28s ease;
+  pointer-events: none; /* overlay doesn't block clicks */
+}
+
+/* default placement (images): bottom-left */
+.lb__caption {
+  position: absolute;
+  left: 18px;
+  bottom: 14px;
+
+  opacity: 0;
+  transform: translateY(18px);
+  transition: transform 0.28s ease, opacity 0.28s ease;
+
+  background: rgba(38, 167, 186, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 12px;
+  padding: 10px 12px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  max-width: min(70ch, 85%);
+}
+
+/* Hover in (same behavior) */
+.lb__stage:hover .lb__caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.lb__title {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+
+  color: rgba(240, 255, 255, 0.96);
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Hover behavior like the pen */
+.lb__stage:hover .lb__overlay {
+  background: rgba(0, 0, 0, 0.20);
+}
+
+/* For videos: hide overlay title (title is in topbar instead) */
+#lightbox.is-video .lb__overlay {
+  display: none;
+}
+
+/* =========================
+   Lightbox Audio Hint (hover + highlight)
+========================= */
+.lb-audio-hint {
+  position: absolute;
+  top: 152px; /* just under the audio button */
+  left: 12px;
+  z-index: 10;
+
+  margin: 0 10px 0 0;
+  padding: 8px 10px;
+  border-radius: 12px;
+
+  font-size: 0.85rem;
+  line-height: 1.25;
+  color: #fff;
+
+  background: rgba(27, 38, 43, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  pointer-events: none;
+
+  transition: opacity 200ms ease, transform 200ms ease, visibility 0s linear 200ms,
+    border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+/* show on hover/focus */
+.lb__audio:hover + .lb-audio-hint,
+.lb__audio:focus-visible + .lb-audio-hint {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 200ms ease, transform 200ms ease, visibility 0s;
+}
+
+/* highlight when toggled */
+.lb-audio-hint.is-highlight {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 200ms ease, transform 200ms ease, visibility 0s;
+
+  border-color: rgba(233, 248, 255, 0.95);
+  box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.18);
+  background: rgba(27, 38, 43, 0.8);
+}
+
+/* On touch/no-hover devices: caption is visible by default */
+@media (hover: none), (pointer: coarse) {
+  .lb__caption {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .lb__caption {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+#lightbox:not(.is-video) .lb__audio,
+#lightbox:not(.is-video) .lb-audio-hint {
+  display: none !important;
+}
+
