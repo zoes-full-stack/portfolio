@@ -3,6 +3,7 @@
    - Open: 0 -> px -> auto
    - Close: px -> 0
    - No auto scroll/jump
+   - ✅ First Work Experience item open by default
 */
 
 function isDesktop() {
@@ -202,6 +203,24 @@ function isDesktop() {
 
     if (el.dataset.timelineInit === "1") return true;
     el.dataset.timelineInit = "1";
+
+    // ✅ Open first item by default (only for work experience timeline)
+    if (selector === "#experienceTimeline") {
+      const firstBtn = el.querySelector("[data-item]");
+      if (firstBtn) {
+        const item = firstBtn.getAttribute("data-item");
+        const firstPanel = item ? el.querySelector(`#${idPrefix}${item}-ctrld`) : null;
+
+        firstBtn.setAttribute("aria-expanded", "true");
+
+        if (firstPanel) {
+          firstPanel.setAttribute("aria-hidden", "false");
+          firstPanel.classList.add("timeline__item-body--expanded");
+          firstPanel.style.overflow = "visible";
+          firstPanel.style.height = "auto";
+        }
+      }
+    }
 
     // ensure all panels are truly collapsed at first paint
     el.querySelectorAll(".timeline__item-body").forEach((panel) => {
