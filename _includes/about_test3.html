@@ -69,9 +69,14 @@
                   <div class="portal-hand"></div>
                 </div>
 
-                <div class="bean-handshake">
-                  <div class="shake-hand--mine"></div>
-                  <div class="shake-hand--theirs"></div>
+                <div class="bean-handshake" aria-hidden="true">
+                  <!-- the "mystery" arm coming from the left fog -->
+                  <div class="shake-grip">
+                    <div class="shake-arm"></div>
+                    <div class="shake-hand"></div>
+                  </div>
+                  <div class="shake-cloud"></div>
+                  <div class="shake-cloud-front"></div>
                 </div>
               </div>
 
@@ -118,7 +123,6 @@
 
   <section class="about-chapter" data-state="curiosities">
     <div class="about-chapter__wrap">
-      <div class="thoughts">
         <div class="thought dark-text">
           <h3>Curiosities</h3>
           <p>
@@ -126,7 +130,13 @@
             software engineering, neuroscience, mycology and botany.
           </p>
         </div>
+      <div class="about-beanSlot"></div>
+    </div>
+  </section>
 
+  <section class="about-chapter" data-state="curiosities2">
+    <div class="about-chapter__wrap">
+      <div class="thoughts">
         <div class="thought dark-text">
           <p>
             I’m fascinated by how our brains process emotion and information, and how we can design systems that feel kinder and more intuitive.
@@ -149,6 +159,22 @@
       <div class="about-beanSlot"></div>
     </div>
   </section>
+
+  <div class="shorelineFx" aria-hidden="true">
+    <svg class="shorelineFx__svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <g class="shorelineFx__wash shorelineFx__wash--back shorelineFx__wash--down">
+        <path class="shorelineFx__water" d="M0,40 C150,80 300,0 450,40 C600,80 750,0 900,40 C1050,80 1200,0 1350,40 V120 H0 Z" />
+        <path class="shorelineFx__foam" d="M0,55 C120,35 240,75 360,55 C480,35 600,75 720,55 C840,35 960,75 1080,55 C1200,35 1320,75 1440,55" />
+      </g>
+      <g class="shorelineFx__wash shorelineFx__wash--back shorelineFx__wash--down">
+        <path class="shorelineFx__water" d="M0,40 C150,80 300,0 450,40 C600,80 750,0 900,40 C1050,80 1200,0 1350,40 V120 H0 Z" />
+        <path class="shorelineFx__foam" d="M0,55 C120,35 240,75 360,55 C480,35 600,75 720,55 C840,35 960,75 1080,55 C1200,35 1320,75 1440,55" />
+      </g>
+    </svg>
+  <!-- extra soft foam blobs (adds that “popping” feel) -->
+  <div class="shorelineFx__foamBlobs"></div>
+</div>
+
 
 </div>
 

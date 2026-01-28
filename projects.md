@@ -30,6 +30,11 @@ sitemap: false
 
 <br>
 
+<div markdown="0">
+  <!-- Custom Footer -->
+  {% include custom_footer.html %}
+</div>
+
 <!-- <div class="mobile-only" markdown="1">
   <hr class="faded"/>
   Continue with [Designs ↪](/designs/){:.heading.flip-title}

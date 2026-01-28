@@ -121,6 +121,12 @@
         bean:"#44FFA7",
         glow:"rgba(231,214,255,0.26)"
       },
+      curiosities2: {
+        sea0:"#07081d", sea1:"#140b33", sea2:"#24124f",
+        accent:"#cbffe7ff",        // warmed lilac so it plays nicer with shore greens
+        bean:"#44FFA7",
+        glow:"rgba(231,214,255,0.26)"
+      },
       cta: {
         sea0:"#041823", sea1:"#062837", sea2:"#0b415a",
         accent:"#FFE09A",        // most “sunlit / sand”
@@ -201,6 +207,36 @@
           "--lookX":"-18px",
 
           // open + happy eyes
+          "--eyeOpen":0.5,
+          "--eyeH":"12%",
+          "--eyeW":"12%",
+          "--eyeTilt":"-4deg",
+
+          // kitty smile :3
+          "--smileW":"18%",
+          "--smileY":"39%",
+          "--smileCurve":1.5,
+
+          // arms UP + slightly inward to "hold it up"
+          "--armY":"44%",
+          "--armLift":"-14px",
+          "--armLx":"-2%",
+          "--armRx":"-2%",
+          "--armLrot":"-50deg",
+          "--armRrot":"50deg",
+
+          // nudge props/hands up a touch
+          "--handsY":"-5px",
+        },
+        prop: "heart",
+        loop: "idle"
+      },
+      curiosities2: {
+        vars: {
+          // look toward thought bubble
+          "--lookX":"-18px",
+
+          // open + happy eyes
           "--eyeOpen":0.85,
           "--eyeH":"12%",
           "--eyeW":"12%",
@@ -228,14 +264,19 @@
       cta: {
         vars: {
           "--lookX":"-10px",
-          "--eyeOpen":0.45,
-          "--smileCurve":0.6,
-          "--armY":"62%",
-          "--armLrot":"-22deg",
-          "--armRrot":"16deg",
-          "--armLift":"10px",
+          "--eyeOpen":0.55,
+          "--smileCurve":0.8,
+          "--smileY":"40%",
+
+          /* move arms to meet the handshake */
+          "--armY":"52%",
+          "--armLift":"-10px",
+          "--armLx":"-2%",
+          "--armRx":"-10%",
+          "--armLrot":"-35deg",   // left arm forward-ish
+          "--armRrot":"55deg",    // right arm relaxed / slightly up
         },
-        prop: "portal",
+        prop: "handshake",
         loop: "idle"
       }
     };

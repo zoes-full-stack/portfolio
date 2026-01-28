@@ -25,6 +25,11 @@ html.no-scroll-anchor {
   overflow-anchor: none;
 }
 
+// Override the SCSS for HydeJack's current content (as we have a custom footer now)
+.content {
+  padding-bottom: 0 !important;
+}
+
 /* Use the body class Jekyll generates for this page */
 main.page-about {
   background: #041823;
@@ -807,7 +812,7 @@ hr, .hr {
   width: min(320px, 45%);
   height: min(520px, 50%);
   aspect-ratio: 1 / 0.7;
-  border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
+  border-radius: 60% 60% 20% 20% / 100% 100% 20% 20%;
   transition: background-color 600ms ease-in, box-shadow 600ms ease-in;
   position: relative; /* face + arms + holder anchor */
   z-index: 5;

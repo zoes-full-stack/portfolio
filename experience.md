@@ -17,6 +17,9 @@ page_scripts:
 <div markdown="0">
   {% include work_experience.html %}
   {% include research_experience.html %}
+
+  <!-- Custom Footer -->
+  {% include custom_footer.html %}
 </div>
 
 <!-- ## Volunteer Experience

@@ -37,4 +37,9 @@ page_scripts:
   [↩ Back to Experience](/experience/){:.page-back}
 </div> -->
 
+<div markdown="0">
+  <!-- Custom Footer -->
+  {% include custom_footer.html %}
+</div>
+
 <script defer src="{{ '/assets/js/skills-cards-tilt.js' | relative_url }}"></script>
