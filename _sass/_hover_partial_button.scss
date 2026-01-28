@@ -1,5 +1,6 @@
 $color: #111;
-$primary: rgba(190, 255, 241, 0.7);
+$primary: rgb(255, 251, 229);
+$secondary: #ffc47e;
 
 .hover-partial-btn {
   text-decoration: none;
@@ -14,7 +15,7 @@ $primary: rgba(190, 255, 241, 0.7);
     left: 0;
     display: block;
     border-radius: 28px;
-    background: rgba($primary,.5);
+    background: $primary;
     width: 56px;
     height: 56px;
     transition: all .3s ease;
@@ -41,7 +42,7 @@ $primary: rgba(190, 255, 241, 0.7);
   &:hover {
     &:before {
       width: 100%;
-      background: rgba($primary,0.7);
+      background: $secondary;
     }
     svg {
       transform: translateX(0);

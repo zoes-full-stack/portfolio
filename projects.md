@@ -23,7 +23,7 @@ sitemap: false
   label="Status update"
   tone="ocean"
   title="Portfolio in progress"
-  date="2026-01-10"
+  date="2026-01-27"
   body="More Project Stories coming soon."
 %}
 {:/nomarkdown}

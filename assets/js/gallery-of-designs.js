@@ -1,5 +1,5 @@
 /* assets/js/gallery_of_designs.js
-   Tabbed Masonry Gallery (Illustrations / Baking / Documents)
+   Tabbed Masonry Gallery (Illustrations / Baking / Flyers / Documents)
    - No global MutationObserver (prevents blink/re-render loops)
    - Safe re-init on Hydejack/Turbo navigation events
 
@@ -138,6 +138,16 @@ bindAudioDelegationOnce();
       { kind: "image", title: "Cute Red Velvet Cupcake", src: "/images/baking/cupcake.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Chewy Chocolate Chip Cookies", src: "/images/baking/cookies2.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Chewy Chocolate Chip and Cinnamon Cookies", src: "/images/baking/cookies.jpg", w: 1080, h: 1080 }
+    ],
+
+    flyers: [
+      { kind: "image", title: "Scarlet Creative Programming Flyer", src: "/images/flyers/ScarletCreativeSoftware_Programming_Courses_Flyer_Design.png" , w: 1440, h: 2000 },
+      { kind: "image", title: "Wedding Menu - Desserts", src: "/images/flyers/wedding_menu_desserts.png", w: 1545, h: 2000 },
+      { kind: "image", title: "Wedding Menu - Drinks", src: "/images/flyers/wedding_menu_drinks.png", w: 1545, h: 2000 },
+      { kind: "image", title: "Wedding Programme - Front", src: "/images/flyers/wedding_programme_front.png", w: 1429, h: 2000 },
+      { kind: "image", title: "Wedding Programme - Back", src: "/images/flyers/wedding_programme_back.png", w: 1429, h: 2000 },
+      { kind: "image", title: "Wedding Invitation - Front", src: "/images/flyers/wedding_invitation_front.png", w: 1429, h: 2000 },
+      { kind: "image", title: "Wedding Invitation - Back", src: "/images/flyers/wedding_invitation_back.png", w: 1429, h: 2000 },
     ],
 
     documents: [
