@@ -60,10 +60,10 @@
   border-radius: 20px;
 
   // ✅ ocean button
-  background: radial-gradient(120% 120% at 30% 20%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.06) 28%, rgba(255, 255, 255, 0) 60%), linear-gradient(180deg, #0f1a1f 0%, #217a89 100%);
+  background: radial-gradient(120% 120% at 30% 20%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.06) 28%, rgba(255, 255, 255, 0) 60%), linear-gradient(180deg, #0f1a1f 0%, #062634 100%);
 
-  box-shadow:
-    0 3px 5px rgba(60, 161, 186, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.06) inset, 0 0 22px rgba(190, 236, 244, 0.12);
+  // box-shadow:
+  //   0 3px 5px rgba(60, 161, 186, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.06) inset, 0 0 22px rgba(190, 236, 244, 0.12);
 
   transition: transform 180ms ease, box-shadow 180ms ease;
 
@@ -101,7 +101,7 @@
 @media (max-width: 767px) {
   .scroll-top {
     right: 12px;
-    bottom: 82px;
+    bottom: 20px;
     width: 45px;
     height: 45px;
   }
