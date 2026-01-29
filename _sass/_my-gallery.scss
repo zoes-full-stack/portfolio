@@ -374,7 +374,7 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
   justify-self: stretch;
   width: 100%;
 
-  display: none; /* shown for videos only */
+  display: flex; 
   align-items: center;
   justify-content: space-between;
   gap: 12px;
@@ -401,11 +401,6 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
 
 #lightbox.is-video .lb__media {
   padding-top: 6px;
-}
-
-/* show topbar only for videos */
-.lb.is-video .lb__topbar {
-  display: flex;
 }
 
 
@@ -474,6 +469,8 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
 
 /* Close INSIDE media, top-right (kept for images) */
 .lb__close {
+  display: none; /* Don't show in media close button */
+
   position: absolute;
   top: 12px;
   right: 12px;
@@ -542,6 +539,8 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
 
 /* default placement (images): bottom-left */
 .lb__caption {
+  display: none; /* don't show as we are using top bar instead */
+
   position: absolute;
   left: 18px;
   bottom: 14px;
@@ -579,7 +578,7 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
 
 /* Hover behavior like the pen */
 .lb__stage:hover .lb__overlay {
-  background: rgba(0, 0, 0, 0.20);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 /* For videos: hide overlay title (title is in topbar instead) */

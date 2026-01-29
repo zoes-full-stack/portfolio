@@ -594,6 +594,13 @@ bindAudioDelegationOnce();
   // 7) Lightbox (bind once) — Option A preview audio
   // =========================
   function bindLightboxOnce(masonry) {
+
+    console.log("LB bind attempt", {
+      hasTopbarClose: !!document.querySelector(".lb__topbar-close"),
+      hasClose: !!document.querySelector(".lb__close"),
+      hasLb: !!document.querySelector("#lightbox"),
+    });
+
     if (masonry.dataset.lbBound === "1") return;
     masonry.dataset.lbBound = "1";
 
@@ -603,9 +610,14 @@ bindAudioDelegationOnce();
     const lbTitleTop = document.getElementById("lbTitleTop");
     const lbAudioHint = document.getElementById("lbAudioHint");
     const lbAudioToggle = document.getElementById("lbAudioToggle");
-    const lbCloseBtn = lb ? lb.querySelector(".lb__close") : null;
 
-    if (!lb || !lbMedia || !lbTitle || !lbAudioToggle || !lbCloseBtn) return;
+    if (!lb || !lbMedia || !lbTitle || !lbAudioToggle) return;
+
+    // prefer focusing whichever close exists
+    const focusClose =
+      lb.querySelector(".lb__topbar-close") ||
+      lb.querySelector(".lb__close") ||
+      lb.querySelector("[data-lb-close]");
 
     let lbCurrentVideo = null;
     let lbHasAudio = false;
@@ -736,7 +748,14 @@ bindAudioDelegationOnce();
       document.body.style.overflow = "hidden";
 
       requestAnimationFrame(() => sizeLightboxToItem(item));
-      requestAnimationFrame(() => lbCloseBtn.focus({ preventScroll: true }));
+      requestAnimationFrame(() => {
+        const btn =
+          lb.querySelector(".lb__topbar-close") ||
+          lb.querySelector(".lb__close") ||
+          lb.querySelector("[data-lb-close]");
+        if (btn) btn.focus({ preventScroll: true });
+      });
+
     }
 
     function closeLightbox() {

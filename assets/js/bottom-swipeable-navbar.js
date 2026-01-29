@@ -1,4 +1,6 @@
 const navbar = document.querySelector('.bottom-navbar');
+const navItems = document.querySelector('.bottom-navbar-items');
+
 let lastScrollY = window.scrollY;
 let scrollTimeout;
 
@@ -25,3 +27,36 @@ window.addEventListener('scroll', () => {
 
   lastScrollY = currentY;
 });
+
+// ------------------------------
+// Swipe hint behavior
+// ------------------------------
+(function initNavSwipeHint() {
+  if (!navbar || !navItems) return;
+
+  function isHorizontallyScrollable(el) {
+    return el.scrollWidth > el.clientWidth + 2;
+  }
+
+  function showHintIfNeeded() {
+    const shouldShow = isHorizontallyScrollable(navItems);
+    navbar.classList.toggle('hint-hidden', !shouldShow);
+  }
+
+  function hideHint() {
+    navbar.classList.add('hint-hidden');
+  }
+
+  // show/hide on load + resize
+  showHintIfNeeded();
+  window.addEventListener('resize', showHintIfNeeded, { passive: true });
+
+  // ✅ Hide only once they've actually scrolled the bar
+  navItems.addEventListener('scroll', () => {
+    if (navItems.scrollLeft > 8) hideHint();
+  }, { passive: true });
+
+  // Optional: hide if they click a link
+  navItems.addEventListener('click', hideHint, { passive: true });
+})();
+
