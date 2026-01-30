@@ -4,6 +4,7 @@
    - Works on first load + PJAX navigations
    - Retries until DOM + GSAP are ready
    - Prevents double-binding
+   - NEW: no re-parenting / Flip. Mover stays overlayed and animates to slot coords (no snapping).
 */
 
 (function () {
@@ -46,9 +47,26 @@
     const bean = flow.querySelector("#magical-about-story-bean");
     const chapters = Array.from(flow.querySelectorAll(".about-chapter"));
 
+    // Create / reuse an overlay layer so mover's absolute coords are stable
+    let overlay = flow.querySelector(".about-beanOverlay");
+    if (!overlay) {
+      overlay = document.createElement("div");
+      overlay.className = "about-beanOverlay";
+      flow.appendChild(overlay);
+    }
+
+    // Move mover into overlay ONCE (critical!)
+    overlay.appendChild(mover);
+
+    // Make mover absolute relative to overlay
+    mover.style.position = "absolute";
+    mover.style.left = "0px";
+    mover.style.top = "0px";
+    mover.style.willChange = "transform";
+    mover.style.zIndex = "10";
+
     const hasGSAP = !!window.gsap;
     const hasST = !!window.ScrollTrigger;
-    const hasFlip = !!window.Flip;
 
     if (!hasGSAP || !hasST || !mover || !bean || chapters.length === 0) {
       // allow retry
@@ -57,7 +75,6 @@
     }
 
     gsap.registerPlugin(ScrollTrigger);
-    if (hasFlip) gsap.registerPlugin(Flip);
 
     flow.classList.add("is-js");
 
@@ -76,9 +93,11 @@
       .filter(t => t?.vars?.id && String(t.vars.id).startsWith("about-"))
       .forEach(t => t.kill(true));
 
+    // Kill any running tweens we own
     gsap.killTweensOf(bean);
+    gsap.killTweensOf(mover);
 
-    // ---------- SHORE PALETTE (CodePen vibe) ----------
+    // ---------- SHORE PALETTE ----------
     const SHORE = {
       shoreDeep: "#12486B",
       shoreMid:  "#419197",
@@ -86,7 +105,6 @@
       sand:      "#F5FCCD"
     };
 
-    // Apply shore vars once (CSS builds the full gradient from vars)
     gsap.set(flow, {
       "--shore-deep": SHORE.shoreDeep,
       "--shore-mid":  SHORE.shoreMid,
@@ -95,41 +113,46 @@
     });
 
     // ---------- THEMES ----------
-    // Bean + glow tuned for contrast against shore + sand
     const MOODS = {
       intro: {
         sea0:"#041823", sea1:"#062837", sea2:"#0b415a",
-        accent:"#BFF6FF",        // brighter sea-foam highlight
+        accent:"#BFF6FF",
         bean:"#D7FAFF",
         glow:"rgba(215,250,255,0.30)"
       },
       mission: {
         sea0:"#031523", sea1:"#07354a", sea2:"#0c4f6c",
-        accent:"#FFC06A",        // warmer “sun / justice”
+        accent:"#FFC06A",
         bean:"#FFB04C",
         glow:"rgba(255,176,76,0.28)"
       },
       tidbits: {
         sea0:"#031b2a", sea1:"#0a3f3a", sea2:"#0d5a50",
-        accent:"#7CF2D6",        // shoreline sparkle mint
+        accent:"#7CF2D6",
         bean:"#B6FFE8",
         glow:"rgba(182,255,232,0.26)"
       },
       curiosities: {
         sea0:"#07081d", sea1:"#140b33", sea2:"#24124f",
-        accent:"#cbffe7ff",        // warmed lilac so it plays nicer with shore greens
+        accent:"#cbffe7ff",
         bean:"#44FFA7",
         glow:"rgba(231,214,255,0.26)"
       },
       curiosities2: {
         sea0:"#07081d", sea1:"#140b33", sea2:"#24124f",
-        accent:"#cbffe7ff",        // warmed lilac so it plays nicer with shore greens
+        accent:"#cbffe7ff",
+        bean:"#44FFA7",
+        glow:"rgba(231,214,255,0.26)"
+      },
+      curiosities3: {
+        sea0:"#07081d", sea1:"#140b33", sea2:"#24124f",
+        accent:"#cbffe7ff",
         bean:"#44FFA7",
         glow:"rgba(231,214,255,0.26)"
       },
       cta: {
         sea0:"#041823", sea1:"#062837", sea2:"#0b415a",
-        accent:"#FFE09A",        // most “sunlit / sand”
+        accent:"#FFE09A",
         bean:"#FFD08A",
         glow:"rgba(255,208,138,0.30)"
       },
@@ -155,16 +178,12 @@
       mission: {
         vars: {
           "--lookX":"0px",
-
-          // pumped eyes
-          "--eyeOpen": 0.95,  
-          "--eyeH":"12%",        
-          "--eyeW":"12%",       
-
+          "--eyeOpen": 0.95,
+          "--eyeH":"12%",
+          "--eyeW":"12%",
           "--eyeTilt":"0deg",
           "--smileCurve": 1,
           "--smileY":"39%",
-
           "--armY":"40%",
           "--armLift":"-18px",
           "--armLrot":"-92deg",
@@ -177,25 +196,16 @@
       },
       tidbits: {
         vars: {
-          // looking toward the thought bubble (left)
           "--lookX":"-22px",
-
-          // “thinking” eyes: slightly open + a touch more tilt
           "--eyeOpen":0.30,
           "--eyeTilt":"-50deg",
-
-          // subtler smile (neutral/thinking)
           "--smileCurve":0.0,
           "--smileW":"14%",
           "--smileY":"42%",
-
-          // arms lower + more relaxed
-          "--armY":"76%",         
-          "--armLift":"10px",    
+          "--armY":"76%",
+          "--armLift":"10px",
           "--armLrot":"-10deg",
           "--armRrot":"10deg",
-
-          // keep hands slightly “tucked”
           "--handsY":"-4px",
         },
         prop: "question",
@@ -203,29 +213,20 @@
       },
       curiosities: {
         vars: {
-          // look toward thought bubble
           "--lookX":"-18px",
-
-          // open + happy eyes
           "--eyeOpen":0.5,
           "--eyeH":"12%",
           "--eyeW":"12%",
           "--eyeTilt":"-4deg",
-
-          // kitty smile :3
           "--smileW":"18%",
           "--smileY":"39%",
           "--smileCurve":1.5,
-
-          // arms UP + slightly inward to "hold it up"
           "--armY":"44%",
           "--armLift":"-14px",
           "--armLx":"-2%",
           "--armRx":"-2%",
           "--armLrot":"-50deg",
           "--armRrot":"50deg",
-
-          // nudge props/hands up a touch
           "--handsY":"-5px",
         },
         prop: "heart",
@@ -233,29 +234,41 @@
       },
       curiosities2: {
         vars: {
-          // look toward thought bubble
           "--lookX":"-18px",
-
-          // open + happy eyes
           "--eyeOpen":0.85,
           "--eyeH":"12%",
           "--eyeW":"12%",
           "--eyeTilt":"-4deg",
-
-          // kitty smile :3
           "--smileW":"18%",
           "--smileY":"39%",
           "--smileCurve":1.15,
-
-          // arms UP + slightly inward to "hold it up"
           "--armY":"44%",
           "--armLift":"-14px",
           "--armLx":"-2%",
           "--armRx":"-2%",
           "--armLrot":"-50deg",
           "--armRrot":"50deg",
-
-          // nudge props/hands up a touch
+          "--handsY":"-6px",
+        },
+        prop: "heart",
+        loop: "idle"
+      },
+      curiosities3: {
+        vars: {
+          "--lookX":"-18px",
+          "--eyeOpen":0.85,
+          "--eyeH":"12%",
+          "--eyeW":"12%",
+          "--eyeTilt":"-4deg",
+          "--smileW":"18%",
+          "--smileY":"39%",
+          "--smileCurve":1.15,
+          "--armY":"44%",
+          "--armLift":"-14px",
+          "--armLx":"-2%",
+          "--armRx":"-2%",
+          "--armLrot":"-50deg",
+          "--armRrot":"50deg",
           "--handsY":"-6px",
         },
         prop: "heart",
@@ -267,19 +280,19 @@
           "--eyeOpen":0.55,
           "--smileCurve":0.8,
           "--smileY":"40%",
-
-          /* move arms to meet the handshake */
           "--armY":"52%",
           "--armLift":"-10px",
           "--armLx":"-2%",
           "--armRx":"-10%",
-          "--armLrot":"-35deg",   // left arm forward-ish
-          "--armRrot":"55deg",    // right arm relaxed / slightly up
+          "--armLrot":"-35deg",
+          "--armRrot":"55deg",
         },
         prop: "handshake",
         loop: "idle"
       }
     };
+
+    const prefersReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     let poseLoop = null;
     let activeIndex = 0;
@@ -334,7 +347,9 @@
         ...pose.vars
       });
 
-      if (pose.loop === "wave") {
+      if (prefersReduce) {
+        poseLoop = null;
+      } else if (pose.loop === "wave") {
         poseLoop = gsap.to(bean, { "--armWave": "12deg", duration: 0.9, ease: "sine.inOut", yoyo: true, repeat: -1 });
       } else if (pose.loop === "think") {
         poseLoop = gsap.to(bean, { y: -4, duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: -1 });
@@ -356,27 +371,104 @@
       });
     }
 
-    function moveMoverToSlot(slotEl, animate = true) {
-      if (!slotEl) return;
-      if (mover.parentNode === slotEl) return;
-
-      if (hasFlip && animate) {
-        const state = Flip.getState(mover, { props: "transform" });
-        slotEl.appendChild(mover);
-
-        Flip.from(state, {
-          duration: 0.55,
-          ease: "power2.out",
-          absolute: true,
-          prune: true
-        });
-      } else {
-        slotEl.appendChild(mover);
-      }
-    }
+    // ----------------------------
+    // NEW: Smooth mover positioning (no DOM moves)
+    // ----------------------------
 
     const slots = chapters.map(ch => ch.querySelector(".about-beanSlot")).filter(Boolean);
     if (slots.length === 0) return false;
+
+    // Create a spacer in each slot to preserve layout / provide target rect
+    const spacers = slots.map((slot) => {
+      let sp = slot.querySelector(".about-beanSpacer");
+      if (!sp) {
+        sp = document.createElement("div");
+        sp.className = "about-beanSpacer";
+        slot.appendChild(sp);
+      }
+      // ensure target has size (use mover's current box)
+      const r = mover.getBoundingClientRect();
+      sp.style.width = Math.max(1, Math.round(r.width)) + "px";
+      sp.style.height = Math.max(1, Math.round(r.height)) + "px";
+      return sp;
+    });
+
+    // Make mover an overlay inside flow (stable containing block)
+    // NOTE: relies on flow being position: relative in CSS (most layouts do). If not, this still works but relative to page.
+    const prevMoverPos = {
+      position: mover.style.position,
+      left: mover.style.left,
+      top: mover.style.top,
+      willChange: mover.style.willChange,
+      transform: mover.style.transform
+    };
+
+    mover.style.position = "absolute";
+    mover.style.left = "0px";
+    mover.style.top = "0px";
+    mover.style.willChange = "transform";
+    // keep it above content if needed (safe no-op if already)
+    if (!mover.style.zIndex) mover.style.zIndex = "10";
+
+    function moverXYForSpacer(spacerEl) {
+      const rootRect = overlay.getBoundingClientRect();
+      const targetRect = spacerEl.getBoundingClientRect();
+
+      const moverRect = mover.getBoundingClientRect();
+      const mW = moverRect.width || targetRect.width;
+      const mH = moverRect.height || targetRect.height;
+
+      const mx = (targetRect.left - rootRect.left) + (targetRect.width / 2);
+      const my = (targetRect.top - rootRect.top) + (targetRect.height / 2);
+
+      return { x: mx - (mW / 2), y: my - (mH / 2) };
+    }
+
+    function moverXYForChapter(i) {
+      const ch = chapters[i] || chapters[0];
+      const thought = ch.querySelector(".thought");
+      const slot = ch.querySelector(".about-beanSlot");
+
+      const rootRect = overlay.getBoundingClientRect();
+
+      // Fallback if thought missing: use slot
+      const targetEl = thought || slot;
+      if (!targetEl) return { x: 0, y: 0 };
+
+      const tRect = targetEl.getBoundingClientRect();
+      const mRect = mover.getBoundingClientRect();
+
+      // Horizontal padding (CSS var or fallback)
+      const pad = parseFloat(getComputedStyle(flow).getPropertyValue("--beanPad")) || 18;
+
+      // Put bean to the RIGHT of the bubble with padding
+      const x = (tRect.right - rootRect.left) + pad;
+
+      // Vertically center bean to the bubble
+      const y = (tRect.top - rootRect.top) + (tRect.height / 2) - (mRect.height / 2);
+
+      return { x, y };
+    }
+
+
+    let moveTween = null;
+    function moveMoverToIndex(i, animate = true) {
+      const { x, y } = moverXYForChapter(i);
+
+      if (moveTween) moveTween.kill();
+
+      if (!animate || prefersReduce) {
+        gsap.set(mover, { x, y });
+        return;
+      }
+
+      moveTween = gsap.to(mover, {
+        x, y,
+        duration: 0.7,
+        ease: "power2.out",
+        overwrite: "auto"
+      });
+    }
 
     // Baseline: hide all thoughts
     chapters.forEach(ch => {
@@ -384,62 +476,87 @@
       if (thought) gsap.set(thought, { autoAlpha: 0, y: 14 });
     });
 
-    // Init first
+    function activateChapter(i, animateMove = true) {
+      if (i === activeIndex) return;
+      activeIndex = i;
+
+      const ch = chapters[i] || chapters[0];
+      const state = ch.dataset.state || "intro";
+
+      chapters.forEach(x => x.classList.toggle("is-active", x === ch));
+
+      // hide all thoughts then show this one
+      chapters.forEach((c) => revealThought(c.querySelector(".thought"), false));
+      revealThought(ch.querySelector(".thought"), true);
+
+      applyState(state);
+      moveMoverToIndex(i, animateMove);
+    }
+
+    // Init first chapter without animation
     const first = chapters[0];
     const firstState = first.dataset.state || "intro";
-    const firstThought = first.querySelector(".thought");
-    const firstSlot = first.querySelector(".about-beanSlot");
-
     chapters.forEach(x => x.classList.toggle("is-active", x === first));
     applyState(firstState);
-
-    if (firstThought) gsap.set(firstThought, { autoAlpha: 1, y: 0 });
-    moveMoverToSlot(firstSlot, false);
+    revealThought(first.querySelector(".thought"), true);
+    gsap.set(mover, { x: 0, y: 0 });
+    moveMoverToIndex(0, false);
 
     requestAnimationFrame(() => {
       requestAnimationFrame(() => ScrollTrigger.refresh());
     });
 
     // Triggers
+    // Use onToggle so we only activate when a chapter is truly "active" (reduces boundary thrash).
     chapters.forEach((ch, i) => {
-      const state = ch.dataset.state || "intro";
-      const thought = ch.querySelector(".thought");
-      const slot = ch.querySelector(".about-beanSlot");
-
       ScrollTrigger.create({
         ...stBase,
         id: `about-chapter-${i}`,
         trigger: ch,
-        start: "top 60%",
-        end: "bottom 40%",
-
-        onEnter: () => {
-          activeIndex = i;
-          chapters.forEach(x => x.classList.toggle("is-active", x === ch));
-          applyState(state);
-          moveMoverToSlot(slot, true);
-          revealThought(thought, true);
-        },
-
-        onEnterBack: () => {
-          activeIndex = i;
-          chapters.forEach(x => x.classList.toggle("is-active", x === ch));
-          applyState(state);
-          moveMoverToSlot(slot, true);
-          revealThought(thought, true);
-        },
-
-        onLeave: () => revealThought(thought, false),
-        onLeaveBack: () => revealThought(thought, false),
+        start: "top center",
+        end: "bottom center",
+        onToggle: (self) => {
+          if (self.isActive) activateChapter(i, true);
+        }
       });
     });
 
     // Keep correct on refresh/resize (no animation)
-    ScrollTrigger.addEventListener("refresh", () => {
-      const active = chapters[activeIndex] || chapters[0];
-      const slot = active.querySelector(".about-beanSlot");
-      if (slot) moveMoverToSlot(slot, false);
-    });
+    const onRefresh = () => {
+      moveMoverToIndex(activeIndex, false);
+    };
+    ScrollTrigger.addEventListener("refresh", onRefresh);
+
+    // Also keep it correct on resize (sometimes refresh doesn't fire immediately in PJAX)
+    const onResize = () => ScrollTrigger.refresh();
+    window.addEventListener("resize", onResize, { passive: true });
+
+    // Cleanup hook for PJAX (optional but nice)
+    flow.__aboutCleanup = () => {
+      try {
+        ScrollTrigger.removeEventListener("refresh", onRefresh);
+      } catch (e) {}
+
+      try {
+        ScrollTrigger.getAll()
+          .filter(t => t?.vars?.id && String(t.vars.id).startsWith("about-"))
+          .forEach(t => t.kill(true));
+      } catch (e) {}
+
+      window.removeEventListener("resize", onResize);
+
+      if (poseLoop) { poseLoop.kill(); poseLoop = null; }
+      if (moveTween) { moveTween.kill(); moveTween = null; }
+
+      // restore mover inline styles
+      mover.style.position = prevMoverPos.position;
+      mover.style.left = prevMoverPos.left;
+      mover.style.top = prevMoverPos.top;
+      mover.style.willChange = prevMoverPos.willChange;
+      mover.style.transform = prevMoverPos.transform;
+
+      flow.dataset.aboutBound = "0";
+    };
 
     return true;
   }
