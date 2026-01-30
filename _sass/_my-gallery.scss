@@ -314,6 +314,14 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
 /* =========================
    LIGHTBOX (ocean, minimal, caption-on-hover)
 ========================= */
+/* =========================
+   LIGHTBOX
+========================= */
+
+$lb-bg: rgba(9, 29, 35, 0.63);
+$lb-border: rgba(255, 255, 255, 0.12);
+$lb-text: rgba(240, 255, 255, 0.96);
+
 .lb {
   position: fixed;
   inset: 0;
@@ -323,268 +331,158 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.18s ease;
+
+  &[aria-hidden="false"] {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__backdrop {
+    position: absolute;
+    inset: 0;
+    border: 0;
+    padding: 0;
+    background: radial-gradient(
+      circle at 50% 45%,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(38, 167, 186, 0.10) 55%,
+      rgba(10, 25, 35, 0.25) 100%
+    );
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  &__panel {
+    position: relative;
+    z-index: 2;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.25);
+  }
+
+  &__stage {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    justify-items: center;
+
+    background: rgba(0, 0, 0, 0.12);
+  }
+
+  /* ✅ Always show topbar (images + videos) */
+  &__topbar {
+    grid-row: 1;
+    justify-self: stretch;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 10px 12px;
+    margin: 10px 0;
+
+    background: $lb-bg;
+    border: 1px solid $lb-border;
+    border-radius: 12px;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  &__topbar-title {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    color: $lb-text;
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+
+    font-size: 0.95rem;
+    line-height: 1.2;
+
+    max-width: 75ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__topbar-close {
+    appearance: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    cursor: pointer;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(240, 255, 255, 0.95);
+
+    font-size: 20px;
+    line-height: 1;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+    transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+
+    &:hover {
+      transform: scale(1.03);
+      border-color: rgba(125, 211, 252, 0.6);
+      background: rgba(125, 211, 252, 0.10);
+    }
+  }
+
+  &__media {
+    grid-row: 2;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+
+    img,
+    video,
+    iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    img,
+    video {
+      object-fit: contain;
+    }
+
+    iframe {
+      border: 0;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 10px;
+    }
+  }
+
+  /* Optional: keep the old in-media close hidden */
+  &__close {
+    display: none;
+  }
+
+  /* Overlay/caption disabled since topbar is used */
+  &__overlay,
+  &__caption {
+    display: none;
+  }
 }
 
-.lb[aria-hidden="false"] {
-  opacity: 1;
-  pointer-events: auto;
+/* Audio controls only for videos */
+#lightbox:not(.is-video) .lb__audio,
+#lightbox:not(.is-video) .lb-audio-hint {
+  display: none !important;
 }
 
-/* Not a full dark blanket: ocean tint + edge vignette */
-.lb__backdrop {
-  position: absolute;
-  inset: 0;
-  border: 0;
-  padding: 0;
-  background: radial-gradient(
-    circle at 50% 45%,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(38, 167, 186, 0.10) 55%,
-    rgba(10, 25, 35, 0.25) 100%
-  );
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(5px);
-}
-
-.lb__panel {
-  position: relative;
-  z-index: 2;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.25);
-}
-
-.lb__stage {
-  position: relative;
-  overflow: hidden;
-  border-radius: 14px;
-
-  /* ✅ change to 2-row layout */
-  display: grid;
-  grid-template-rows: auto 1fr;
-  align-items: start;
-  justify-items: center;
-
-  background: rgba(0, 0, 0, 0.12);
-}
-
-/* topbar should occupy row 1 and stretch */
-.lb__topbar {
-  grid-row: 1;
-  justify-self: stretch;
-  width: 100%;
-
-  display: flex; 
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-
-  padding: 10px 12px;
-  border-radius: 12px;
-
-  background: rgba(9, 29, 35, 0.63);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-
-  /* ✅ avoid pushing layout weirdly; instead give stage spacing */
-  margin: 10px 0 10px 0;
-}
-
-/* media row 2 */
-.lb__media {
-  grid-row: 2;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
-
-#lightbox.is-video .lb__media {
-  padding-top: 6px;
-}
-
-
-.lb__topbar-title {
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.2px;
-  color: rgba(240, 255, 255, 0.96);
-  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-
-  font-size: 0.95rem;
-  line-height: 1.2;
-
-  max-width: 75ch;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.lb__topbar-close {
-  appearance: none;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(240, 255, 255, 0.95);
-
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
-  cursor: pointer;
-
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-
-  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
-}
-
-.lb__topbar-close:hover {
-  transform: scale(1.03);
-  border-color: rgba(125, 211, 252, 0.6);
-  background: rgba(125, 211, 252, 0.10);
-}
-
-/* For videos: show topbar */
-#lightbox.is-video .lb__topbar {
-  display: flex;
-}
-
-
-.lb__media img,
-.lb__media video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-.lb__media iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 10px;
-}
-
-/* Close INSIDE media, top-right (kept for images) */
-.lb__close {
-  display: none; /* Don't show in media close button */
-
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  z-index: 5;
-
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  background: rgba(10, 25, 35, 0.35);
-  color: rgba(240, 255, 255, 0.95);
-  cursor: pointer;
-
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-}
-
-/* For videos, the close button should be in the topbar */
-#lightbox.is-video .lb__close {
-  display: none;
-}
-
-/* Audio button floating */
-/* Audio button floating INSIDE the stage (over the video) */
-.lb__audio {
-  position: absolute;
-
-  /* inside media area, not topbar */
-  top: 110px;   /* below the topbar */
-  left: 12px;
-
-  z-index: 12;
-  font-size: 12px;
-
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  background: rgba(10, 25, 35, 0.35);
-  color: rgba(240, 255, 255, 0.95);
-
-  border-radius: 999px;
-  padding: 8px 10px;
-  cursor: pointer;
-
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-
-  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
-}
-
-.lb__audio:hover {
-  transform: translateY(-1px);
-  border-color: rgba(125, 211, 252, 0.55);
-  background: rgba(125, 211, 252, 0.10);
-}
-
-
-/* --- CodePen-style hover caption --- */
-.lb__overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 4;
-
-  background: rgba(0, 0, 0, 0); /* transparent by default */
-  transition: background 0.28s ease;
-  pointer-events: none; /* overlay doesn't block clicks */
-}
-
-/* default placement (images): bottom-left */
-.lb__caption {
-  display: none; /* don't show as we are using top bar instead */
-
-  position: absolute;
-  left: 18px;
-  bottom: 14px;
-
-  opacity: 0;
-  transform: translateY(18px);
-  transition: transform 0.28s ease, opacity 0.28s ease;
-
-  background: rgba(38, 167, 186, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 12px;
-  padding: 10px 12px;
-
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  max-width: min(70ch, 85%);
-}
-
-/* Hover in (same behavior) */
-.lb__stage:hover .lb__caption {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.lb__title {
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.2px;
-
-  color: rgba(240, 255, 255, 0.96);
-  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-}
-
-/* Hover behavior like the pen */
-.lb__stage:hover .lb__overlay {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-/* For videos: hide overlay title (title is in topbar instead) */
-#lightbox.is-video .lb__overlay {
-  display: none;
-}
 
 /* =========================
    Lightbox Audio Hint (hover + highlight)
