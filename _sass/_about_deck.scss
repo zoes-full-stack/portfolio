@@ -200,6 +200,8 @@
   background-color: transparent;
   transition: background-color 600ms ease;
   pointer-events: none;
+  transform: translateZ(0);
+  will-change: background-color;
 }
 
 /* Bean body */

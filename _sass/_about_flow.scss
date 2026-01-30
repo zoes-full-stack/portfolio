@@ -18,6 +18,8 @@
   --bean: #beecf4;
   --glow: rgba(190, 236, 244, 0.25);
 
+  --beanPad: 75px; 
+
     /* Shoreline vars (JS can set these too) */
   --shore-deep: #12486B;
   --shore-mid:  #419197;
@@ -274,7 +276,8 @@
 .thought li {
   margin-bottom: 6px;
   opacity: 0.85;
-  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  // border-top: 1px solid black;
 }
 
 /* Ensure paragraphs wrap nicely inside bubble */
@@ -295,14 +298,16 @@
 
 /* Optional reveal baseline (JS can tween opacity/y too) */
 .about-flow .about-chapter .thought {
-  opacity: 0;
-  transform: translateY(10px);
-  will-change: transform, opacity;
+    opacity: 1;
+    transform: none;
+  // opacity: 0;
+  // transform: translateY(10px);
+  // will-change: transform, opacity;
 }
-.about-flow .about-chapter.is-active .thought {
-  opacity: 1;
-  transform: translateY(0);
-}
+// .about-flow .about-chapter.is-active .thought {
+//   opacity: 1;
+//   transform: translateY(0);
+// }
 
 /* =========================
    BEAN SLOT
@@ -312,19 +317,37 @@
 
 .about-flow .about-beanSlot {
   position: relative;
-  width: clamp(180px, 22vw, 320px);
+  width: clamp(220px, 24vw, 360px);
   min-height: calc(var(--beanH) + 14px);
 
   /* keep the bean aligned to top-ish of the thought */
   display: grid;
   align-items: start;
-  justify-items: end;
+  justify-items: start;
 
   pointer-events: none; /* bean is decorative */
+
+  flex-shrink: 0;
+}
+
+.about-flow .about-beanSpacer {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.about-flow .about-beanOverlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5; /* above shoreline */
 }
 
 /* The movable wrapper (this is what Flip/JS should move) */
 .about-flow .about-beanMover {
+  z-index: 5;
+  pointer-events: none;
   position: relative;
   will-change: transform;
   transform: translate3d(0, 0, 0);
@@ -335,8 +358,10 @@
   transform: translate3d(0, 0, 0);
   will-change: transform;
 
+  animation: none;
+
   /* Keep it subtle so it doesn’t feel “jumpy” */
-  animation: beanDrift 3.4s ease-in-out infinite;
+  // animation: beanDrift 3.4s ease-in-out infinite;
 }
 
 @keyframes beanDrift {
