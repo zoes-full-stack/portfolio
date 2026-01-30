@@ -9,11 +9,12 @@
   width: 100%;
   max-width: none;
   overflow: visible;
+  border-radius: 20px;
 
   /* Theme vars (GSAP can tween these on #aboutFlow) */
   --sea-0: #041823;
-  --sea-1: #062837;
-  --sea-2: #0b415a;
+  --sea-1: #122e2c;
+  --sea-2: #0f4f6a;
   --accent: #beecf4;
   --bean: #beecf4;
   --glow: rgba(190, 236, 244, 0.25);
@@ -21,7 +22,7 @@
   --beanPad: 75px; 
 
     /* Shoreline vars (JS can set these too) */
-  --shore-deep: #12486B;
+  --shore-deep: #1b7385;
   --shore-mid:  #419197;
   --shore-lite: #78D6C6;
   --sand:       #F5FCCD;
@@ -42,8 +43,25 @@
     var(--sea-2) 56%,
     var(--shore-deep) 70%,
     var(--shore-mid) 82%,
-    var(--shore-lite) 100%,
+    var(--shore-lite) 90%,
+    var(--sand) 100%,
   );
+}
+
+// .about-flow .about-heading {
+//   text-align: center;
+//   color: #fff;
+//   font-size: 34px;
+//   font-weight: 500;
+//   letter-spacing: 2px;
+// }
+
+.about-heading {
+  text-align: center;
+  color: #041823;
+  font-size: 54px;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 /* Each chapter is normal document flow */
@@ -379,12 +397,14 @@
   width: auto;
   aspect-ratio: 420 / 320;
 
+  z-index: 2;
+  overflow: visible;
+
   background: var(--bean);
-  border-radius: 130% 70% 20% 20% / 150% 130% 40% 40%;
+  border-radius: 130% 70% 40% 40% / 150% 130% 60% 60%;
   position: relative;
 
   box-shadow:
-    0 26px 60px rgba(0,0,0,0.30),
     0 0 0 2px rgba(255,255,255,0.06) inset,
     0 0 40px var(--glow);
 
@@ -411,10 +431,45 @@
   --handsY: 0px;
   --armWave: 0deg;
 
+  --faceStroke: clamp(3px, 0.28vw, 5px);
+
+  --blush: 0;          /* 0 → 1 */
+  --blushY: 0px;
+
   translate: var(--lookX) 0;
 
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   left: 50%;
+  //   bottom: -62%;
+  //   transform: translateX(-50%) scaleY(-1);
+  //   width: 100%;
+  //   height: 90%;
+  //   pointer-events: none;
+  //   z-index: 0;
+  //   opacity: 1;
+  //   filter: blur(4px);
+
+  //   background: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Cpath%20fill='white'%20d='M14%2013c1.1%200%202-.9%202-2s-.9-2-2-2c0%200-.1%200-.1%200%200-.3.1-.6.1-1%200-2.2-1.8-4-4-4-.8%200-1.5.2-2.2.6-.3-.9-1.2-1.6-2.3-1.6-1.4%200-2.5%201.1-2.5%202.5%200%20.6.2%201.1.6%201.6-.2-.1-.4-.1-.6-.1-1.7%200-3%201.3-3%203s1.3%203%203%203h11z'/%3E%3C/svg%3E") center / cover no-repeat;
+  // }
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  //   top: calc(var(--armY) - 8px);
+  //   height: 26px;
+  //   background: inherit;
+  //   border-radius: 999px;
+  //   z-index: 2;          /* above arms, below face */
+  //   pointer-events: none;
+  //   opacity: 1;
+  // }
+
   #eye1, #eye2, #smile {
-    border-width: 0.3vw;
+    border-width: var(--faceStroke);
     border-style: solid;
     position: absolute;
     box-sizing: border-box;
@@ -441,6 +496,30 @@
     transform: translateX(-50%) scaleY(calc(0.75 + (var(--smileCurve) * 0.25)));
   }
 
+    /* cheeks */
+    #smile::before,
+    #smile::after {
+      content: "";
+      position: absolute;
+      width: 34px;
+      height: 18px;
+      border-radius: 999px;
+      opacity: var(--blush);
+      transform: translateY(var(--blushY));
+      transition: none; /* GSAP will drive it */
+      background: radial-gradient(
+        circle at 40% 40%,
+        rgba(255, 120, 150, 0.38),
+        rgba(255, 120, 150, 0.10) 55%,
+        rgba(255, 120, 150, 0) 75%
+      );
+      pointer-events: none;
+    }
+
+    #smile::before { left: -54px; top: 18px; }
+    #smile::after  { right: -54px; top: 18px; }
+
+
   .bean-arm {
     position: absolute;
     width: var(--armW);
@@ -451,6 +530,7 @@
     top: calc(var(--armY) + var(--armLift));
     translate: 0 -50%;
     z-index: 1;
+    margin-top: 6px;
   }
 
   .bean-arm--l {
@@ -482,8 +562,8 @@
 /* Only show the active prop */
 #magical-about-story-bean[data-prop="question"] .bean-question-mark,
 #magical-about-story-bean[data-prop="heart"] .bean-heart,
-#magical-about-story-bean[data-prop="portal"] .bean-portal,
-#magical-about-story-bean[data-prop="handshake"] .bean-handshake {
+#magical-about-story-bean[data-prop="fish"] .bean-fish,
+#magical-about-story-bean[data-prop="water"] .bean-water {
   opacity: 1;
   transform: scale(1);
 }
@@ -530,6 +610,134 @@
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
+
+#magical-about-story-bean .bean-email {
+  position: absolute;
+  left: 78%;   /* tweak */
+  top: -6%;    /* tweak */
+  z-index: 4;
+
+  /* hidden state (same pattern as heart) */
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: opacity 200ms ease, transform 200ms ease;
+
+  color: color-mix(in srgb, var(--accent) 55%, #ffde7c 75%);
+
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.25));
+}
+
+#magical-about-story-bean .bean-email svg {
+  width: clamp(80px, 10vw, 60px);
+  height: auto;
+  display: block;
+}
+
+#magical-about-story-bean[data-prop="cta"] .bean-email{
+  animation: emailFly 1.8s ease-in-out infinite;
+  transform-origin: 50% 60%;
+  opacity: 1;
+  // transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes emailFly {
+  0%, 100% { transform: translate(-50%, -50%) translate3d(0, 0, 0) rotate(-6deg) scale(1); }
+  50%      { transform: translate(-50%, -50%) translate3d(10px, -12px, 0) rotate(7deg)  scale(1.03); }
+}
+
+/* optional: tiny wing-flutter feel */
+#magical-about-story-bean[data-prop="email"] .bean-email svg {
+  animation: emailFlutter 0.55s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes emailFlutter {
+  0%, 100% { transform: rotate(0deg); }
+  50%      { transform: rotate(2deg); }
+}
+
+/* Only show when active */
+#magical-about-story-bean[data-prop="fish"] .bean-fish {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Base prop styling */
+#magical-about-story-bean .bean-fish {
+  position: absolute;
+  left: 78%;
+  top: 10%;
+  z-index: 4;
+  pointer-events: none;
+
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: opacity 200ms ease, transform 200ms ease;
+
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.22));
+}
+
+#magical-about-story-bean .bean-fish svg {
+  width: clamp(34px, 5vw, 70px);
+  height: auto;
+  display: block;
+}
+
+/* Optional: cute swim wiggle */
+@media (prefers-reduced-motion: no-preference) {
+  #magical-about-story-bean[data-prop="fish"] .bean-fish {
+    animation: fishSwim 2.2s ease-in-out infinite;
+    transform-origin: 40% 50%;
+  }
+  @keyframes fishSwim {
+    0%,100% { transform: translate(-50%, -50%) rotate(-6deg) translate3d(0,0,0) scale(1); }
+    50%     { transform: translate(-50%, -50%) rotate(8deg)  translate3d(8px,-6px,0) scale(1.03); }
+  }
+}
+
+/* Show when active */
+#magical-about-story-bean[data-prop="water"] .bean-water {
+  opacity: 1;
+  left: 18%;     /* near left side of bean */
+  top: 48%;      /* around arm height; tweak */
+  animation: none; /* stop flying, now it's being held */
+  transform: translate(-50%, -50%) rotate(-8deg) scale(1);
+}
+
+/* Droplet placement */
+#magical-about-story-bean .bean-water {
+  position: absolute;
+  left: 76%;
+  top: 6%;
+  z-index: 4;
+
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: opacity 200ms ease, transform 200ms ease;
+
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.22));
+  pointer-events: none;
+}
+
+#magical-about-story-bean .bean-water svg {
+  width: clamp(28px, 4.2vw, 56px);
+  height: auto;
+  display: block;
+}
+
+/* Floating “in water” feel */
+@media (prefers-reduced-motion: no-preference) {
+  #magical-about-story-bean[data-prop="water"] .bean-water {
+    animation: dropletFloat 1.9s ease-in-out infinite;
+    transform-origin: 50% 60%;
+  }
+
+  @keyframes dropletFloat {
+    0%,100% { transform: translate(-50%, -50%) translate3d(0, 0, 0) rotate(-6deg) scale(1); }
+    50%     { transform: translate(-50%, -50%) translate3d(6px, -10px, 0) rotate(7deg)  scale(1.03); }
+  }
+}
+
 
 /* Handshake prop container */
 #magical-about-story-bean .bean-handshake {
@@ -695,18 +903,101 @@
 
   .about-flow .about-beanSlot {
     width: 100%;
-    min-height: 0;
-    justify-items: end;
+    justify-items: center;
+    pointer-events: none;
   }
 
   .about-flow .about-beanDrift {
     animation-duration: 3.0s;
   }
+
+  #magical-about-story-bean.bean--about {
+    --faceStroke: 4px;          /* lock it in for mobile */
+    --armW: clamp(72px, 34vw, 110px);
+    --armH: clamp(34px, 16vw, 56px);
+
+    /* bring joints in + down slightly */
+    --armLx: -4%;
+    --armRx: -4%;
+    --armY: 60%;
+    --armLift: 2px;
+  }
 }
 
-/* Reduced motion */
+/* =========================
+   REDUCED MOTION — About Flow
+   - Stop ALL animations
+   - Keep props/bean positioned correctly (no “stuck mid-flight”)
+   - Avoid killing your Flip layout transforms
+========================= */
 @media (prefers-reduced-motion: reduce) {
+
+  /* 1) Global: no animations/transitions inside About Flow */
+  .about-flow,
+  .about-flow * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* 2) Shoreline: freeze and remove blur jitter */
+  .shorelineFx__svg,
+  .shorelineFx__wash,
+  .shorelineFx__wash--down,
+  .shorelineFx__wash--back,
+  .shorelineFx__wash--front,
+  .shorelineFx__foamBlobs {
+    animation: none !important;
+    transform: translate3d(0,0,0) !important;
+    filter: none !important;
+  }
+
+  /* 3) Bean drift: hard stop */
   .about-flow .about-beanDrift {
     animation: none !important;
+    transform: none !important;
+  }
+
+  /* 4) Props: stop “flying/swimming/wiggling” but keep placement */
+  #magical-about-story-bean .bean-email,
+  #magical-about-story-bean .bean-fish,
+  #magical-about-story-bean .bean-water,
+  #magical-about-story-bean .bean-question-mark,
+  #magical-about-story-bean .bean-heart,
+  #magical-about-story-bean .bean-handshake,
+  #magical-about-story-bean .bean-handshake * {
+    animation: none !important;
+  }
+
+  /* Email: keep it in its normal spot (not mid animation) */
+  #magical-about-story-bean[data-prop="cta"] .bean-email,
+  #magical-about-story-bean[data-prop="email"] .bean-email {
+    transform: translate(-50%, -50%) scale(1) !important;
+  }
+
+  /* Fish: keep it in its normal spot */
+  #magical-about-story-bean[data-prop="fish"] .bean-fish {
+    transform: translate(-50%, -50%) scale(1) !important;
+  }
+
+  /* Water droplet: if it's “held”, keep the held placement */
+  #magical-about-story-bean[data-prop="water"] .bean-water {
+    transform: translate(-50%, -50%) rotate(-8deg) scale(1) !important;
+  }
+
+  /* 5) Bean: remove extra filter/blur-ish effects; keep glow subtle */
+  #magical-about-story-bean.bean--about {
+    filter: none !important;
+    box-shadow:
+      0 0 0 2px rgba(255,255,255,0.06) inset,
+      0 0 24px rgba(190,236,244,0.18);
+  }
+
+  /* 6) Handshake: freeze grip/fog so it doesn't look like it's vibrating */
+  #magical-about-story-bean[data-prop="handshake"] .shake-grip,
+  #magical-about-story-bean .bean-handshake .shake-cloud,
+  #magical-about-story-bean .bean-handshake .shake-cloud-front {
+    transform: translateY(-50%) !important;
+    filter: none !important;
   }
 }

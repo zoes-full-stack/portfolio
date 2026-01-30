@@ -20,11 +20,11 @@ sitemap: false
 
 {::nomarkdown}
 {% include status-update.html
-  label="Status update"
+  label="Status Update"
   tone="ocean"
   title="Portfolio in progress"
-  date="2026-01-28"
-  body="More Project Stories coming soon."
+  date="2026-01-29"
+  body="More Project Stories coming soon"
 %}
 {:/nomarkdown}
 

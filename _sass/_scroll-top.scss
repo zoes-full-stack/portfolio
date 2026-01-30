@@ -58,9 +58,14 @@
   width: 60px;
   height: 60px;
   border-radius: 20px;
-
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.14) 0%,
+    rgba(255,255,255,0.06) 22%,
+    rgba(255,255,255,0) 55%
+  ),
+  linear-gradient(180deg, #0f1a1f 0%, #062634 100%);
   // ✅ ocean button
-  background: radial-gradient(120% 120% at 30% 20%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.06) 28%, rgba(255, 255, 255, 0) 60%), linear-gradient(180deg, #0f1a1f 0%, #062634 100%);
+  // background: radial-gradient(120% 120% at 30% 20%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.06) 28%, rgba(255, 255, 255, 0) 60%), linear-gradient(180deg, #0f1a1f 0%, #062634 100%);
 
   // box-shadow:
   //   0 3px 5px rgba(60, 161, 186, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.06) inset, 0 0 22px rgba(190, 236, 244, 0.12);
@@ -70,17 +75,9 @@
   // hover anim: bounce arrows + slight lift
   &:hover {
     transform: translateY(-1px);
-    box-shadow:
-      0 14px 30px rgba(60, 161, 186, 0.45),
-      0 0 0 1px rgba(134, 211, 230, 0.878) inset,
-      0 0 26px rgba(190, 236, 244, 0.18);
 
     .arrow {
-      animation: waveUp 1.8s ease-in-out infinite;
-
-      &.primera {
-        animation-delay: 0.2s;
-      }
+      animation: waveUp 1.3s ease-in-out infinite;
     }
   }
 
@@ -140,7 +137,7 @@
     opacity: 0.95;
   }
   50% {
-    transform: translate(-50%, -50%) translateY(-12px) rotate(-45deg); 
+    transform: translate(-50%, -50%) translateY(-6px) rotate(-45deg); 
     opacity: 1;
   }
 }
