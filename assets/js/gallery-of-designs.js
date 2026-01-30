@@ -682,7 +682,15 @@ bindAudioDelegationOnce();
 
     function openLightbox(item, triggerEl) {
       ensureLightboxInBody();
-      ensureTopbarClose(lb);
+
+      // open immediately (so CSS/layout applies)
+      lb.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+
+      // ✅ inject after the DOM has settled for this open
+      requestAnimationFrame(() => {
+        ensureTopbarClose(lb);
+      });
 
       lb.setAttribute("aria-hidden", "false");
       lb.inert = false; // nice if you use inert on close
