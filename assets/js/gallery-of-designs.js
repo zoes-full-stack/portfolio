@@ -673,6 +673,13 @@ bindAudioDelegationOnce();
 
     function openLightbox(item, triggerEl) {
       ensureLightboxInBody();
+
+      lb.setAttribute("aria-hidden", "false");
+      lb.inert = false; // nice if you use inert on close
+
+      // Ensure topbar isn't aria-hidden
+      lb.querySelector(".lb__topbar")?.removeAttribute("aria-hidden");
+
       lastFocusedEl = triggerEl || document.activeElement;
       lbCurrentItem = item;
 
@@ -776,12 +783,13 @@ bindAudioDelegationOnce();
       }
 
       lbCurrentItem = null;
-      lbPreviewMuted = null; // Option A: clear any preview state
+      lbPreviewMuted = null;
       lbMedia.innerHTML = "";
       lbMedia.style.width = "";
       lbMedia.style.height = "";
       lb.classList.remove("is-video");
       lb.setAttribute("aria-hidden", "true");
+      lb.inert = true;
       document.body.style.overflow = "";
     }
 
