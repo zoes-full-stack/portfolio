@@ -595,12 +595,6 @@ bindAudioDelegationOnce();
   // =========================
   function bindLightboxOnce(masonry) {
 
-    console.log("LB bind attempt", {
-      hasTopbarClose: !!document.querySelector(".lb__topbar-close"),
-      hasClose: !!document.querySelector(".lb__close"),
-      hasLb: !!document.querySelector("#lightbox"),
-    });
-
     if (masonry.dataset.lbBound === "1") return;
     masonry.dataset.lbBound = "1";
 
@@ -612,6 +606,21 @@ bindAudioDelegationOnce();
     const lbAudioToggle = document.getElementById("lbAudioToggle");
 
     if (!lb || !lbMedia || !lbTitle || !lbAudioToggle) return;
+
+    function ensureTopbarClose(lb) {
+      const topbar = lb.querySelector(".lb__topbar");
+      if (!topbar) return;
+
+      if (!topbar.querySelector(".lb__topbar-close")) {
+        const btn = document.createElement("button");
+        btn.className = "lb__topbar-close";
+        btn.type = "button";
+        btn.setAttribute("aria-label", "Close");
+        btn.setAttribute("data-lb-close", "");
+        btn.innerHTML = "&times;";
+        topbar.appendChild(btn);
+      }
+    }
 
     // prefer focusing whichever close exists
     const focusClose =
@@ -673,6 +682,7 @@ bindAudioDelegationOnce();
 
     function openLightbox(item, triggerEl) {
       ensureLightboxInBody();
+      ensureTopbarClose(lb);
 
       lb.setAttribute("aria-hidden", "false");
       lb.inert = false; // nice if you use inert on close
