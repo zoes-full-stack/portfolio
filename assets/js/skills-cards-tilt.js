@@ -1,11 +1,8 @@
-/* assets/js/skills-cards-tilt.js
-   Skills cards tilt (GSAP quickSetter)
-   - Mouse-follow tilt on desktop hover
-   - Smooth easing + gentle parallax
-   - Hydejack PJAX-safe (binds to #_pushState)
-*/
+/* assets/js/skills-cards-tilt.js */
 
 (function () {
+  let io = null; // keep one observer
+
   function canTilt() {
     if (!window.gsap) return false;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return false;
@@ -20,15 +17,18 @@
     const cards = Array.from(root.querySelectorAll(".skill-card"));
     if (!cards.length) return false;
 
+    // One resize handler for all cards in this init
+    const updateRects = [];
+    const onResize = () => updateRects.forEach((fn) => fn());
+    window.addEventListener("resize", onResize, { passive: true });
+
     cards.forEach((card) => {
-      // prevent double-binding on the same element
       if (card.dataset.tiltBound === "1") return;
       card.dataset.tiltBound = "1";
 
-      // Tunables
-      const strength = 7;     // tilt degrees
-      const parallax = 10;    // px shift
-      const smoothing = 0.12; // 0..1 (higher = snappier)
+      const strength = 7;
+      const parallax = 10;
+      const smoothing = 0.12;
 
       let r = null;
       let center = { x: 0, y: 0 };
@@ -41,15 +41,17 @@
       const setX  = gsap.quickSetter(card, "x", "px");
       const setY  = gsap.quickSetter(card, "y", "px");
 
+      function clamp(v, min, max) {
+        return Math.max(min, Math.min(max, v));
+      }
+
       function updateRect() {
         r = card.getBoundingClientRect();
         center.x = r.left + r.width / 2;
         center.y = r.top + r.height / 2;
       }
 
-      function clamp(v, min, max) {
-        return Math.max(min, Math.min(max, v));
-      }
+      updateRects.push(() => { if (rafId) updateRect(); });
 
       function setTargetFromEvent(e) {
         if (!r) updateRect();
@@ -73,11 +75,10 @@
 
       function enter(e) {
         updateRect();
-
         gsap.set(card, {
           willChange: "transform",
           transformPerspective: 900,
-          transformStyle: "preserve-3d"
+          transformStyle: "preserve-3d",
         });
 
         setTargetFromEvent(e);
@@ -104,40 +105,54 @@
           duration: 0.9,
           ease: "expo.out",
           overwrite: true,
-          onComplete: () => gsap.set(card, { willChange: "auto" })
+          onComplete: () => gsap.set(card, { willChange: "auto" }),
         });
       }
 
       card.addEventListener("pointerenter", enter, { passive: true });
       card.addEventListener("pointermove", move, { passive: true });
       card.addEventListener("pointerleave", leave, { passive: true });
-
-      window.addEventListener(
-        "resize",
-        () => { if (rafId) updateRect(); },
-        { passive: true }
-      );
     });
+
+    // Optional: remove resize listener when page swaps (Hydejack)
+    // If you have a push-state cleanup system, attach there.
 
     return true;
   }
 
-  // Boot that waits for:
-  // 1) GSAP to exist
-  // 2) skill cards to be present (PJAX inserts content after events sometimes)
   function boot(retries = 40) {
     if (!window.gsap) {
       if (retries <= 0) return;
       return setTimeout(() => boot(retries - 1), 60);
     }
 
-    // Let layout settle for a frame or two (helps with PJAX injection timing)
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
-        const ok = initSkillCardTilt(document);
-        if (!ok && retries > 0) setTimeout(() => boot(retries - 1), 90);
+        initSkillCardTilt(document);
       });
     });
+  }
+
+  function initWhenVisible() {
+    // clean up any previous observer
+    if (io) {
+      try { io.disconnect(); } catch (e) {}
+      io = null;
+    }
+
+    const section = document.querySelector(".skills-ocean-cards");
+    if (!section) return;
+
+    io = new IntersectionObserver((entries) => {
+      const e = entries[0];
+      if (e.isIntersecting) {
+        io.disconnect();
+        io = null;
+        boot();
+      }
+    }, { rootMargin: "200px" });
+
+    io.observe(section);
   }
 
   function hookAllLoads(cb) {
@@ -145,14 +160,12 @@
     window.addEventListener("load", cb, { passive: true });
     window.addEventListener("pageshow", cb, { passive: true });
 
-    // Hydejack PJAX: bind to the element AND document (covers theme versions)
     const ps = document.getElementById("_pushState");
     if (ps) ps.addEventListener("hy-push-state-load", cb, { passive: true });
     document.addEventListener("hy-push-state-load", cb, { passive: true });
 
-    // Turbo (if present)
     document.addEventListener("turbo:load", cb, { passive: true });
   }
 
-  hookAllLoads(() => boot());
+  hookAllLoads(initWhenVisible);
 })();

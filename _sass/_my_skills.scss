@@ -49,6 +49,9 @@
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
 
+  content-visibility: auto;
+  contain-intrinsic-size: 260px; /* approximate height to prevent jumps */
+
   /* make it behave nicely inside columns */
   display: inline-block;
   width: 100%;
@@ -209,8 +212,15 @@
   height: 100%;
   object-fit: contain;
   filter:
-    drop-shadow(0 14px 10px rgba(0,0,0,0.22))
-    drop-shadow(0 0 18px rgba(38,167,186,0.18));
+    none;
+}
+
+@media (hover:hover) and (pointer:fine){
+  .skill-card__emblem img{
+    filter:
+      drop-shadow(0 14px 10px rgba(0,0,0,0.22))
+      drop-shadow(0 0 18px rgba(38,167,186,0.18));
+  }
 }
 
 /* title placement */
