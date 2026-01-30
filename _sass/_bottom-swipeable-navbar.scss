@@ -106,8 +106,8 @@
     }
 
     @keyframes navSwipeHint {
-      0%, 100% { transform: translateX(0); opacity: 0.55; }
-      50%      { transform: translateX(-10px); opacity: 0.85; }
+      0%, 100% { transform: translateX(0); opacity: 0.45; }
+      50%      { transform: translateX(-12px); opacity: 0.9; }
     }
   }
 }
