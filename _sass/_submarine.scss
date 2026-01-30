@@ -178,29 +178,17 @@ $water-background: #3b606c;
            background-color: $color2;
            border-radius: 40px;
            background: linear-gradient($color2, darken($color2, 10%));
-
+           
            .light {
-                position: absolute;
-                top: 40px;
-                left: 99%;
-
-                /* your triangle stays as-is */
+                position:absolute;
                 width: 0;
                 height: 0;
                 border-style: solid;
                 border-width: 0px 42px 600px 260px;
                 border-color: transparent transparent #305060 transparent;
-
-                /* IMPORTANT: compositing hints */
-                will-change: transform;
-                transform: translate3d(0,0,0) rotate(-50deg);
-                transform-origin: 0 0;
-
-                pointer-events: none;
-                backface-visibility: hidden;
-
-                /* keep it cheap */
-                filter: none;
+                transform: rotate(-50deg);
+                top:40px;
+                left:99%;
                
                &:after {
                    content:"";
@@ -213,17 +201,6 @@ $water-background: #3b606c;
                }
 
            }
-
-                //       .light {
-                // position:absolute;
-                // width: 0;
-                // height: 0;
-                // border-style: solid;
-                // border-width: 0px 42px 600px 260px;
-                // border-color: transparent transparent #305060 transparent;
-                // transform: rotate(-50deg);
-                // top:40px;
-                // left:99%;
            
            .window {
                width: 37px;
@@ -389,6 +366,82 @@ $water-background: #3b606c;
         
     }
 }
+
+/* =========================
+   REDUCED MOTION — Submarine Section
+   - Stop all bobbing / spinning / bubble drift
+   - Keep layout stable on mobile + desktop
+========================= */
+@media (prefers-reduced-motion: reduce) {
+
+  /* 1) Hard stop: no CSS animations/transitions in the whole section */
+  .submarine-section,
+  .submarine-section * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* 2) Freeze content card (was floating) */
+  .submarine-content {
+    transform: none !important;
+  }
+
+  /* 3) Freeze the submarine (was diving + rotating) */
+  .sea .submarine-wrapper {
+    transform: none !important;
+    margin-top: 10px !important; /* pick a nice resting spot */
+  }
+
+  /* 4) Stop propeller / engine spin */
+  .sea .submarine-wrapper .submarine-body .engine::before,
+  .sea .submarine-wrapper .submarine-body .engine::after {
+    animation: none !important;
+    transform: none !important;
+    opacity: 0.8 !important; /* keep it readable */
+  }
+
+  /* 5) Stop helix stripe scrolling */
+  .sea .submarine-wrapper .helix::after {
+    animation: none !important;
+  }
+
+  /* 6) Stop LED blinking (keep a steady glow) */
+  .sea .submarine-wrapper .hat .leds-wrapper .leds,
+  .sea .submarine-wrapper .hat .leds-wrapper .leds::before,
+  .sea .submarine-wrapper .hat .leds-wrapper .leds::after {
+    animation: none !important;
+    opacity: 0.75 !important;
+  }
+
+  /* 7) Stop bubble movement (either freeze or hide)
+        Option A: freeze in place */
+  .sea .bubble {
+    animation: none !important;
+    transform: none !important;
+    opacity: 0.45 !important;
+  }
+  .sea .bubble::after {
+    animation: none !important;
+    transform: none !important;
+    opacity: 0.35 !important;
+  }
+
+  /* Option B (if you prefer): hide bubbles entirely */
+  /*
+  .sea .bubble,
+  .sea .bubble::after {
+    display: none !important;
+  }
+  */
+
+  /* 8) Freeze the “light cone” if you later animate it */
+  .sea .submarine-wrapper .submarine-body .light {
+    animation: none !important;
+    transform: rotate(-50deg) !important;
+  }
+}
+
 
 @keyframes content-float {
   0% { transform: translateY(0); }

@@ -146,8 +146,8 @@
       },
       curiosities3: {
         sea0:"#07081d", sea1:"#140b33", sea2:"#24124f",
-        accent:"#cbffe7ff",
-        bean:"#44FFA7",
+        accent:"#ffd7d6ff",
+        bean:"#ffb0aeff",
         glow:"rgba(231,214,255,0.26)"
       },
       cta: {
@@ -171,6 +171,8 @@
           "--armRrot":"120deg",
           "--armLx":"-10%",
           "--armRx":"-10%",
+          "--blush": 0.15,
+          "--blushY": "6px",
         },
         prop: null,
         loop: "wave"
@@ -190,6 +192,8 @@
           "--armRrot":"92deg",
           "--armLx":"-6%",
           "--armRx":"-6%",
+          "--blush": 0.0,
+          "--blushY": "6px",
         },
         prop: null,
         loop: "idle"
@@ -207,6 +211,8 @@
           "--armLrot":"-10deg",
           "--armRrot":"10deg",
           "--handsY":"-4px",
+          "--blush": 0.15,
+          "--blushY": "2px",
         },
         prop: "question",
         loop: "think"
@@ -228,6 +234,8 @@
           "--armLrot":"-50deg",
           "--armRrot":"50deg",
           "--handsY":"-5px",
+          "--blush": 0,
+          "--blushY": "0px",
         },
         prop: "heart",
         loop: "idle"
@@ -249,6 +257,8 @@
           "--armLrot":"-50deg",
           "--armRrot":"50deg",
           "--handsY":"-6px",
+          "--blush": 0.9,
+          "--blushY": "2px",
         },
         prop: "heart",
         loop: "idle"
@@ -263,33 +273,75 @@
           "--smileW":"18%",
           "--smileY":"39%",
           "--smileCurve":1.15,
-          "--armY":"44%",
-          "--armLift":"-14px",
-          "--armLx":"-2%",
-          "--armRx":"-2%",
-          "--armLrot":"-50deg",
-          "--armRrot":"50deg",
-          "--handsY":"-6px",
+
+          /* YAAAY arms */
+          "--armY":"34%",          // higher (was 44%)
+          "--armLift":"-26px",     // lift up more
+          "--armLx":"-12%",        // push left arm further left
+          "--armRx":"-12%",        // push right arm further right
+          "--armLrot":"-120deg",   // left arm up/out
+          "--armRrot":"120deg",    // right arm up/out
+
+          "--handsY":"-10px",
+
+          "--blush": 1,
+          "--blushY": "2px"
         },
-        prop: "heart",
+        prop: "fish",
         loop: "idle"
       },
       cta: {
         vars: {
-          "--lookX":"-10px",
-          "--eyeOpen":0.55,
-          "--smileCurve":0.8,
-          "--smileY":"40%",
-          "--armY":"52%",
-          "--armLift":"-10px",
-          "--armLx":"-2%",
+
+          "--lookX":"0px",
+          "--eyeOpen":0.85,
+          "--eyeW":"12%", "--eyeH":"12%",
+          "--eyeTilt":"-4deg",
+          "--smileCurve":1.15,
+          "--armY":"44%",
+          "--armLift":"-6px",
+          "--armLrot":"-150deg",
+          "--armRrot":"120deg",
+          "--armLx":"-10%",
           "--armRx":"-10%",
-          "--armLrot":"-35deg",
-          "--armRrot":"55deg",
+
+          // "--lookX":"-18px",
+          // "--eyeOpen":0.85,
+          // "--eyeH":"12%",
+          // "--eyeW":"12%",
+          // "--eyeTilt":"-4deg",
+          // "--smileW":"18%",
+          // "--smileY":"39%",
+          // "--smileCurve":1.15,
+          // "--armY":"44%",
+          // "--armLift":"-14px",
+          // "--armLx":"-2%",
+          // "--armRx":"-2%",
+          // "--armLrot":"-50deg",
+          // "--armRrot":"50deg",
+          "--handsY":"-6px",
+          "--blush": 0.25,
+          "--blushY": "2px"
         },
-        prop: "handshake",
-        loop: "idle"
-      }
+        prop: "cta",
+        loop: "wave"
+      },
+      // cta: {
+      //   vars: {
+      //     "--lookX":"-10px",
+      //     "--eyeOpen":0.55,
+      //     "--smileCurve":0.8,
+      //     "--smileY":"40%",
+      //     "--armY":"52%",
+      //     "--armLift":"-10px",
+      //     "--armLx":"-2%",
+      //     "--armRx":"-10%",
+      //     "--armLrot":"-35deg",
+      //     "--armRrot":"55deg",
+      //   },
+      //   prop: "handshake",
+      //   loop: "idle"
+      // }
     };
 
     const prefersReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -346,6 +398,14 @@
         overwrite: "auto",
         ...pose.vars
       });
+
+      const blush = Number(pose.vars?.["--blush"] ?? 0);
+      if (!prefersReduce && blush > 0) {
+        gsap.fromTo(bean,
+          { "--blush": Math.min(1, blush + 0.25) },
+          { "--blush": blush, duration: 0.35, ease: "sine.out", overwrite: "auto" }
+        );
+      }
 
       if (prefersReduce) {
         poseLoop = null;
@@ -428,28 +488,28 @@
       const ch = chapters[i] || chapters[0];
       const thought = ch.querySelector(".thought");
       const slot = ch.querySelector(".about-beanSlot");
-
       const rootRect = overlay.getBoundingClientRect();
 
-      // Fallback if thought missing: use slot
-      const targetEl = thought || slot;
-      if (!targetEl) return { x: 0, y: 0 };
+      const pad = parseFloat(getComputedStyle(flow).getPropertyValue("--beanPad")) || 18;
+      const mobile = window.matchMedia("(max-width: 900px)").matches;
 
-      const tRect = targetEl.getBoundingClientRect();
       const mRect = mover.getBoundingClientRect();
 
-      // Horizontal padding (CSS var or fallback)
-      const pad = parseFloat(getComputedStyle(flow).getPropertyValue("--beanPad")) || 18;
+      // Fallback target if thought missing
+      const tRect = (thought || slot).getBoundingClientRect();
 
-      // Put bean to the RIGHT of the bubble with padding
-      const x = (tRect.right - rootRect.left) + pad;
-
-      // Vertically center bean to the bubble
-      const y = (tRect.top - rootRect.top) + (tRect.height / 2) - (mRect.height / 2);
-
-      return { x, y };
+      if (mobile) {
+        // Center under the bubble + add vertical padding
+        const x = (tRect.left - rootRect.left) + (tRect.width / 2) - (mRect.width / 2);
+        const y = (tRect.bottom - rootRect.top) + pad; // below bubble
+        return { x, y };
+      } else {
+        // Desktop: to the right + vertically centered
+        const x = (tRect.right - rootRect.left) + pad;
+        const y = (tRect.top - rootRect.top) + (tRect.height / 2) - (mRect.height / 2);
+        return { x, y };
+      }
     }
-
 
     let moveTween = null;
     function moveMoverToIndex(i, animate = true) {
@@ -528,7 +588,10 @@
     ScrollTrigger.addEventListener("refresh", onRefresh);
 
     // Also keep it correct on resize (sometimes refresh doesn't fire immediately in PJAX)
-    const onResize = () => ScrollTrigger.refresh();
+    const onResize = () => {
+      ScrollTrigger.refresh();
+      moveMoverToIndex(activeIndex, false);
+    };
     window.addEventListener("resize", onResize, { passive: true });
 
     // Cleanup hook for PJAX (optional but nice)
