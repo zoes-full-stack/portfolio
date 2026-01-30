@@ -688,9 +688,7 @@ bindAudioDelegationOnce();
       document.body.style.overflow = "hidden";
 
       // ✅ inject after the DOM has settled for this open
-      requestAnimationFrame(() => {
-        ensureTopbarClose(lb);
-      });
+      queueMicrotask(() => requestAnimationFrame(() => ensureTopbarClose(lb)));
 
       lb.setAttribute("aria-hidden", "false");
       lb.inert = false; // nice if you use inert on close

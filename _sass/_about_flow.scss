@@ -265,6 +265,18 @@
     -5px 25px 0 -10px #fff;
 }
 
+.thought ul {
+  list-style: none;
+  padding: 0 0 0 12px;
+  margin: 0 0 18px;
+}
+
+.thought li {
+  margin-bottom: 6px;
+  opacity: 0.85;
+  border-top: 1px solid black;
+}
+
 /* Ensure paragraphs wrap nicely inside bubble */
 .thought p {
   margin: 0.65rem 0 0;
