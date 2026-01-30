@@ -1359,88 +1359,95 @@ hr, .hr {
 }
 
 /* ================================
-   Waves under the bean
+   Waves under the bean (SCSS)
+   - Desktop: smooth marquee drift (GPU-friendly)
+   - Mobile (<= 767px): no movement, subtle opacity breathing
+   - Reduced motion: no animation
    ================================ */
 
-/* sits at the bottom of the section */
-.bean-waves{
+.bean-waves {
   position: absolute;
   left: -42px;
   right: -42px;
-  bottom: 0;             /* hides any seam */
+  bottom: 0; // hides any seam
   width: auto;
-  height: 280px;            /* controls how “tall” the waves feel */
+  height: 280px;
   overflow: hidden;
-  z-index: 1;               /* behind bean (z=2) but above bg container (z=0) */
+  z-index: 1; // behind bean (z=2) but above bg (z=0)
   pointer-events: none;
   opacity: 0.9;
-  transform: scaleX(1.01); transform-origin: left bottom;
+
+  transform: scaleX(1.01);
+  transform-origin: left bottom;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  // Base wave layers (desktop defaults)
+  .wave {
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    transform-origin: center;
+    animation: waveMarquee linear infinite;
+  }
+
+  // Palette + per-layer speeds
+  .wave1 {
+    fill: rgba(255, 255, 255, 0.10);
+    animation-duration: 8s;
+  }
+
+  .wave2 {
+    fill: rgba(79, 177, 186, 0.18); // accent
+    animation-duration: 6s;
+    animation-direction: reverse;
+  }
+
+  .wave3 {
+    fill: rgba(255, 255, 255, 0.06);
+    animation-duration: 10s;
+  }
+
+  /* Mobile perf: stop marquee movement, add subtle breathing */
+  @media (max-width: 767px) {
+    .wave {
+      // stop horizontal movement (biggest win for mobile)
+      animation: none !important;
+      transform: translate3d(0, 0, 0);
+      will-change: auto;
+    }
+
+    // Gentle opacity breathing on the whole group (cheaper than transform)
+    // You can tweak min/max opacity here.
+    opacity: 0.92;
+    animation: beanWavesBreath 3.8s ease-in-out infinite;
+  }
+
+  /* Reduced motion: kill all animation */
+  @media (prefers-reduced-motion: reduce) {
+    animation: none !important;
+    .wave {
+      animation: none !important;
+      transform: translate3d(0, 0, 0) !important;
+      will-change: auto;
+    }
+  }
 }
 
-.bean-waves svg{
-  width: 100%;
-  height: 100%;
-  display: block;
+/* Smooth infinite scroll: move left exactly one tile width
+   IMPORTANT: -1440px must match your SVG viewBox width */
+@keyframes waveMarquee {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-1440px, 0, 0); }
 }
 
-/* Use your palette: deep sea + lighter foam layers */
-.bean-waves .wave{
-  transform-origin: center;
-  animation: waveSlide 10s linear infinite;
-}
-
-.bean-waves .wave1{
-  fill: rgba(255,255,255,0.10);
-  animation-duration: 5s;
-}
-.bean-waves .wave2{
-  fill: rgba(79,177,186,0.18); /* matches your accent */
-  animation-duration: 2s;
-  animation-direction: reverse;
-}
-.bean-waves .wave3{
-  fill: rgba(255,255,255,0.06);
-  animation-duration: 8s;
-}
-
-/* subtle horizontal drift */
-@keyframes waveSlide{
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-4%); }
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce){
-  .bean-waves .wave{ animation: none; }
-}
-
-.bean-waves svg { display:block; width:100%; height:100%; }
-
-/* Smooth infinite scroll: move left exactly one tile width */
-.bean-waves .wave{
-  will-change: transform;
-  transform: translate3d(0,0,0);
-  animation: waveMarquee linear infinite;
-}
-
-@keyframes waveMarquee{
-  from { transform: translate3d(0,0,0); }
-  to   { transform: translate3d(-1440px,0,0); } /* must match viewBox width */
-}
-
-/* Your palette + per-layer speeds */
-.bean-waves .wave1{
-  fill: rgba(255,255,255,0.10);
-  animation-duration: 8s;
-}
-.bean-waves .wave2{
-  fill: rgba(79,177,186,0.18);
-  animation-duration: 6s;
-  animation-direction: reverse;
-}
-.bean-waves .wave3{
-  fill: rgba(255,255,255,0.06);
-  animation-duration: 10s;
+/* Mobile-only: subtle opacity breathing */
+@keyframes beanWavesBreath {
+  0%, 100% { opacity: 0.70; }
+  50%      { opacity: 0.98; }
 }
 
 
