@@ -751,6 +751,11 @@ hr, .hr {
     border-top: none !important;
 }
 
+/* Desktop-only helper */
+.desktop-only {
+  display: block;
+}
+
 /* Mobile-only helper */
 .mobile-only { display: none; }
 
@@ -759,6 +764,10 @@ hr, .hr {
 
   .navbar>.content::before {
     box-shadow: 0 0 2rem rgba(135, 249, 255, 25%) !important;
+  }
+
+  .desktop-only {
+    display: none;
   }
 }
 
@@ -1200,7 +1209,7 @@ hr, .hr {
     }
 
     .magical-bean-section.bean-stage{
-        padding-bottom: 320px;
+        padding-bottom: 290px;
     }
     #magical-bean .bean-hold{
         width: 300px;
@@ -1729,7 +1738,10 @@ hr, .hr {
 @import "thought_bubble";
 
 // Relaxing by the beach - for 404?
-@import "relax-by-beach";
+// @import "relax-by-beach";
+
+// Ocean Gradient Card
+@import "ocean-gradient-card";
 
 // Scroll to the top button
 @import "scroll-top";
