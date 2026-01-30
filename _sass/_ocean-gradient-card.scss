@@ -1,0 +1,48 @@
+.ocean-gradient-card {
+  position: relative;
+  padding: 24px 28px;
+  margin-top: 20px;
+
+  color: rgba(220, 240, 255, 0.95);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  background:
+    radial-gradient(ellipse at bottom right, rgb(44, 84, 112), rgb(20, 40, 60) 60%, #0b303e 75%) !important;
+
+  border-radius: 20px;
+}
+
+.ocean-gradient-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px);
+  background-size: 18px 18px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.ocean-gradient-card h3 {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9affed;
+}
+
+.ocean-gradient-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+}
+
+.ocean-gradient-card li {
+  margin-bottom: 6px;
+  opacity: 0.85;
+}
+
+.ocean-gradient-card p {
+  margin: 0;
+  opacity: 0.8;
+}
