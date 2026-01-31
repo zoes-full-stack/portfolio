@@ -602,6 +602,9 @@
   color: #ff4d6d; /* heart color */
 
   svg {
+    width: 64px;
+    height: 64px;
+    display: block;
     color: #ff3b3b;
   }
 }
@@ -922,63 +925,59 @@
     --armY: 60%;
     --armLift: 2px;
   }
+
+  #magical-about-story-bean .bean-heart svg{
+    width: 42px;
+    height: 42px;
+  }
 }
 
 /* =========================
-   MOBILE: Minimal stack
-   Bean above Thought bubble
+   MOBILE (<= 900px)
+   - Bean is DOCKED onto the Thought bubble (top-right)
+   - Bean moves WITH the bubble (because JS appends it into .thought)
+   - No separate beanSlot spacing
    ========================= */
+
 @media (max-width: 900px) {
 
   /* one column */
   .about-flow .about-chapter__wrap {
     grid-template-columns: 1fr;
-    gap: 14px;                 /* tighter */
+    gap: 14px;
     align-items: start;
   }
 
-  /* Put bean first (above thought) */
+  /* We don't need the slot on mobile (bean lives inside .thought) */
   .about-flow .about-beanSlot {
-    order: -1;
-    width: 100%;
-    min-height: 0;             /* don’t reserve big space */
-    justify-items: center;
-    align-items: start;
-    margin-top: 4px;
-    margin-bottom: -10px;
-    pointer-events: none;
-    z-index: 2;
+    display: none;
   }
 
-
-  /* Center the bean mover */
-  .about-flow .about-beanMover {
-    justify-self: center;
+  /* Mobile dock tuning knobs */
+  #aboutFlow.about-flow {
+    --beanDockSize: clamp(64px, 14vw, 92px);          /* smaller */
+    --beanDockInset: clamp(-14px, -2.4vw, -8px);      /* push OUT to the right */
+    --beanDockLift:  clamp(34px, 7vw, 52px); 
   }
 
-  /* Make the bean smaller + consistent */
-  .about-flow {
-    --beanH: clamp(92px, 18vh, 140px);   /* smaller bean */
-  }
+  /* Thought bubble becomes the docking parent */
+  #aboutFlow.about-flow .thought {
+    position: relative;
+    overflow: visible;
 
-  /* Optional: reduce glow on mobile for a cleaner look */
-  #magical-about-story-bean.bean--about {
-    box-shadow:
-      0 0 0 2px rgba(255,255,255,0.05) inset,
-      0 0 18px rgba(190, 236, 244, 0.16);
-  }
-
-  /* Thought bubble: slightly tighter + centered */
-  .about-flow .thought {
     border-radius: 26px;
-    padding: 16px 16px;
     max-width: 640px;
     margin: 0 auto;
-    z-index: 1;
+
+    /* Reserve space so the bean never overlaps text */
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    padding-right: calc(16px + (var(--beanDockSize) * 0.35));
   }
 
-  /* Optional: shrink the tail a bit so it feels cleaner on mobile */
-  .about-flow .thought::before {
+  /* Optional: slightly smaller/cleaner tail on mobile */
+  #aboutFlow.about-flow .thought::before {
     width: 34px;
     height: 34px;
     top: -10px;
@@ -986,7 +985,7 @@
     box-shadow: -38px 24px 0 -10px #fff;
   }
 
-  .about-flow .thought::after {
+  #aboutFlow.about-flow .thought::after {
     width: 24px;
     height: 24px;
     bottom: -8px;
@@ -998,18 +997,54 @@
       -4px 20px 0 -10px #fff;
   }
 
-  /* If you want a super minimal “badge” feel:
-     keep bean near top of the bubble */
-  .about-flow .about-beanSlot {
-    position: relative;
+  /* The mover becomes an absolute badge in the top-right of the thought bubble */
+  #aboutFlow.about-flow[data-dock="1"] .about-beanMover {
+    position: absolute !important;
+    top: calc(-1 * var(--beanDockLift));
+    right: var(--beanDockInset);
+    left: auto !important;
+
+    transform: translate(6px, -2px) !important; /* nudge outside */
+
+    z-index: 3;
+    pointer-events: none;
   }
 
-  /* make sure props still look good when smaller */
+  /* Make the bean smaller + a bit sleeker when docked */
+  #aboutFlow.about-flow[data-dock="1"] {
+    --beanH: var(--beanDockSize);
+  }
+  
+
+  #aboutFlow.about-flow[data-dock="1"] #magical-about-story-bean.bean--about {
+    box-shadow:
+      0 0 0 2px rgba(255,255,255,0.05) inset,
+      0 0 14px rgba(190, 236, 244, 0.14);
+
+    transform: rotate(10deg);
+    transform-origin: 70% 30%;
+
+    /* "hanging on" pose */
+    --faceStroke: 4px;
+
+    --armW: clamp(56px, 22vw, 90px);
+    --armH: clamp(24px, 10vw, 44px);
+
+    --armY: 30%;
+    --armLift: -18px;
+
+    --armLx: -20%;
+    --armRx: -20%;
+
+    --armLrot: -120deg;
+    --armRrot: 120deg;
+  }
+
+  /* keep props scaling tidy when smaller */
   #magical-about-story-bean .bean-question-mark svg { width: clamp(18px, 5vw, 32px); }
   #magical-about-story-bean .bean-fish svg          { width: clamp(22px, 6vw, 46px); }
   #magical-about-story-bean .bean-water svg         { width: clamp(18px, 5vw, 38px); }
 }
-
 
 /* =========================
    REDUCED MOTION — About Flow

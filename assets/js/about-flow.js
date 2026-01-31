@@ -1,10 +1,9 @@
 /* global gsap, ScrollTrigger, Flip, ScrollSmoother */
 /* assets/js/about-flow.js
    About Flow (Hydejack-safe)
-   - Works on first load + PJAX navigations
-   - Retries until DOM + GSAP are ready
-   - Prevents double-binding
-   - NEW: no re-parenting / Flip. Mover stays overlayed and animates to slot coords (no snapping).
+   - Desktop: bean moves via overlay coords (smooth, no snapping)
+   - Mobile: bean is docked into the active .thought (top-right) so it moves with the bubble
+   - PJAX safe: prevents double-binding + kills only our triggers
 */
 
 (function () {
@@ -32,6 +31,10 @@
     }, delay);
   }
 
+  function isMobile() {
+    return window.matchMedia("(max-width: 900px)").matches;
+  }
+
   // ----------------------------
   // Init (bind once per page DOM)
   // ----------------------------
@@ -47,35 +50,15 @@
     const bean = flow.querySelector("#magical-about-story-bean");
     const chapters = Array.from(flow.querySelectorAll(".about-chapter"));
 
-    // Create / reuse an overlay layer so mover's absolute coords are stable
-    let overlay = flow.querySelector(".about-beanOverlay");
-    if (!overlay) {
-      overlay = document.createElement("div");
-      overlay.className = "about-beanOverlay";
-      flow.appendChild(overlay);
-    }
-
-    // Move mover into overlay ONCE (critical!)
-    overlay.appendChild(mover);
-
-    // Make mover absolute relative to overlay
-    mover.style.position = "absolute";
-    mover.style.left = "0px";
-    mover.style.top = "0px";
-    mover.style.willChange = "transform";
-    mover.style.zIndex = "10";
-
     const hasGSAP = !!window.gsap;
     const hasST = !!window.ScrollTrigger;
 
     if (!hasGSAP || !hasST || !mover || !bean || chapters.length === 0) {
-      // allow retry
       flow.dataset.aboutBound = "0";
       return false;
     }
 
     gsap.registerPlugin(ScrollTrigger);
-
     flow.classList.add("is-js");
 
     try { ScrollTrigger.normalizeScroll(true); } catch (e) {}
@@ -97,251 +80,104 @@
     gsap.killTweensOf(bean);
     gsap.killTweensOf(mover);
 
-    // ---------- SHORE PALETTE ----------
-    const SHORE = {
-      shoreDeep: "#12486B",
-      shoreMid:  "#419197",
-      shoreLite: "#78D6C6",
-      sand:      "#F5FCCD"
-    };
-
-    gsap.set(flow, {
-      "--shore-deep": SHORE.shoreDeep,
-      "--shore-mid":  SHORE.shoreMid,
-      "--shore-lite": SHORE.shoreLite,
-      "--sand":       SHORE.sand
-    });
-
     // ---------- THEMES ----------
     const MOODS = {
       intro: {
         sea0:"#041823", sea1:"#062837", sea2:"#0b415a",
-        accent:"#BFF6FF",
-        bean:"#D7FAFF",
-        glow:"rgba(215,250,255,0.30)"
+        accent:"#BFF6FF", bean:"#D7FAFF", glow:"rgba(215,250,255,0.30)"
       },
       mission: {
         sea0:"#031523", sea1:"#07354a", sea2:"#0c4f6c",
-        accent:"#FFC06A",
-        bean:"#FFB04C",
-        glow:"rgba(255,176,76,0.28)"
+        accent:"#FFC06A", bean:"#FFB04C", glow:"rgba(255,176,76,0.28)"
       },
       tidbits: {
         sea0:"#031b2a", sea1:"#0a3f3a", sea2:"#0d5a50",
-        accent:"#7CF2D6",
-        bean:"#B6FFE8",
-        glow:"rgba(182,255,232,0.26)"
+        accent:"#7CF2D6", bean:"#B6FFE8", glow:"rgba(182,255,232,0.26)"
       },
       curiosities: {
         sea0:"#07081d", sea1:"#140b33", sea2:"#24124f",
-        accent:"#cbffe7ff",
-        bean:"#44FFA7",
-        glow:"rgba(231,214,255,0.26)"
+        accent:"#cbffe7ff", bean:"#44FFA7", glow:"rgba(231,214,255,0.26)"
       },
       curiosities2: {
         sea0:"#07081d", sea1:"#140b33", sea2:"#24124f",
-        accent:"#cbffe7ff",
-        bean:"#44FFA7",
-        glow:"rgba(231,214,255,0.26)"
+        accent:"#cbffe7ff", bean:"#44FFA7", glow:"rgba(231,214,255,0.26)"
       },
       curiosities3: {
         sea0:"#07081d", sea1:"#140b33", sea2:"#24124f",
-        accent:"#ffd7d6ff",
-        bean:"#ffb0aeff",
-        glow:"rgba(231,214,255,0.26)"
+        accent:"#ffd7d6ff", bean:"#ffb0aeff", glow:"rgba(231,214,255,0.26)"
       },
       cta: {
         sea0:"#041823", sea1:"#062837", sea2:"#0b415a",
-        accent:"#FFE09A",
-        bean:"#FFD08A",
-        glow:"rgba(255,208,138,0.30)"
+        accent:"#FFE09A", bean:"#FFD08A", glow:"rgba(255,208,138,0.30)"
       },
     };
 
     const POSES = {
       intro: {
         vars: {
-          "--lookX":"0px",
-          "--eyeOpen":0.10,
-          "--eyeW":"12%", "--eyeH":"10%",
-          "--smileCurve":1,
-          "--armY":"44%",
-          "--armLift":"-6px",
-          "--armLrot":"-150deg",
-          "--armRrot":"120deg",
-          "--armLx":"-10%",
-          "--armRx":"-10%",
-          "--blush": 0.15,
-          "--blushY": "6px",
+          "--lookX":"0px","--eyeOpen":0.10,"--eyeW":"12%","--eyeH":"10%",
+          "--smileCurve":1,"--armY":"44%","--armLift":"-6px",
+          "--armLrot":"-150deg","--armRrot":"120deg","--armLx":"-10%","--armRx":"-10%",
+          "--blush": 0.15,"--blushY":"6px",
         },
-        prop: null,
-        loop: "wave"
+        prop: null, loop: "wave"
       },
       mission: {
         vars: {
-          "--lookX":"0px",
-          "--eyeOpen": 0.95,
-          "--eyeH":"12%",
-          "--eyeW":"12%",
-          "--eyeTilt":"0deg",
-          "--smileCurve": 1,
-          "--smileY":"39%",
-          "--armY":"40%",
-          "--armLift":"-18px",
-          "--armLrot":"-92deg",
-          "--armRrot":"92deg",
-          "--armLx":"-6%",
-          "--armRx":"-6%",
-          "--blush": 0.0,
-          "--blushY": "6px",
+          "--lookX":"0px","--eyeOpen":0.95,"--eyeH":"12%","--eyeW":"12%",
+          "--eyeTilt":"0deg","--smileCurve":1,"--smileY":"39%",
+          "--armY":"40%","--armLift":"-18px","--armLrot":"-92deg","--armRrot":"92deg",
+          "--armLx":"-6%","--armRx":"-6%","--blush":0,"--blushY":"6px"
         },
-        prop: null,
-        loop: "idle"
+        prop: null, loop: "idle"
       },
       tidbits: {
         vars: {
-          "--lookX":"-22px",
-          "--eyeOpen":0.30,
-          "--eyeTilt":"-50deg",
-          "--smileCurve":0.0,
-          "--smileW":"14%",
-          "--smileY":"42%",
-          "--armY":"76%",
-          "--armLift":"10px",
-          "--armLrot":"-10deg",
-          "--armRrot":"10deg",
-          "--handsY":"-4px",
-          "--blush": 0.15,
-          "--blushY": "2px",
+          "--lookX":"-22px","--eyeOpen":0.30,"--eyeTilt":"-50deg",
+          "--smileCurve":0,"--smileW":"14%","--smileY":"42%",
+          "--armY":"76%","--armLift":"10px","--armLrot":"-10deg","--armRrot":"10deg",
+          "--handsY":"-4px","--blush":0.15,"--blushY":"2px",
         },
-        prop: "question",
-        loop: "think"
+        prop: "question", loop: "think"
       },
       curiosities: {
         vars: {
-          "--lookX":"-18px",
-          "--eyeOpen":0.5,
-          "--eyeH":"12%",
-          "--eyeW":"12%",
-          "--eyeTilt":"-4deg",
-          "--smileW":"18%",
-          "--smileY":"39%",
-          "--smileCurve":1.5,
-          "--armY":"44%",
-          "--armLift":"-14px",
-          "--armLx":"-2%",
-          "--armRx":"-2%",
-          "--armLrot":"-50deg",
-          "--armRrot":"50deg",
-          "--handsY":"-5px",
-          "--blush": 0,
-          "--blushY": "0px",
+          "--lookX":"-18px","--eyeOpen":0.5,"--eyeH":"12%","--eyeW":"12%","--eyeTilt":"-4deg",
+          "--smileW":"18%","--smileY":"39%","--smileCurve":1.5,
+          "--armY":"44%","--armLift":"-14px","--armLx":"-2%","--armRx":"-2%",
+          "--armLrot":"-50deg","--armRrot":"50deg","--handsY":"-5px","--blush":0,"--blushY":"0px"
         },
-        prop: "heart",
-        loop: "idle"
+        prop: "heart", loop: "idle"
       },
       curiosities2: {
         vars: {
-          "--lookX":"-18px",
-          "--eyeOpen":0.85,
-          "--eyeH":"12%",
-          "--eyeW":"12%",
-          "--eyeTilt":"-4deg",
-          "--smileW":"18%",
-          "--smileY":"39%",
-          "--smileCurve":1.15,
-          "--armY":"44%",
-          "--armLift":"-14px",
-          "--armLx":"-2%",
-          "--armRx":"-2%",
-          "--armLrot":"-50deg",
-          "--armRrot":"50deg",
-          "--handsY":"-6px",
-          "--blush": 0.9,
-          "--blushY": "2px",
+          "--lookX":"-18px","--eyeOpen":0.85,"--eyeH":"12%","--eyeW":"12%","--eyeTilt":"-4deg",
+          "--smileW":"18%","--smileY":"39%","--smileCurve":1.15,
+          "--armY":"44%","--armLift":"-14px","--armLx":"-2%","--armRx":"-2%",
+          "--armLrot":"-50deg","--armRrot":"50deg","--handsY":"-6px",
+          "--blush":0.9,"--blushY":"2px"
         },
-        prop: "heart",
-        loop: "idle"
+        prop: "heart", loop: "idle"
       },
       curiosities3: {
         vars: {
-          "--lookX":"-18px",
-          "--eyeOpen":0.85,
-          "--eyeH":"12%",
-          "--eyeW":"12%",
-          "--eyeTilt":"-4deg",
-          "--smileW":"18%",
-          "--smileY":"39%",
-          "--smileCurve":1.15,
-
-          /* YAAAY arms */
-          "--armY":"34%",          // higher (was 44%)
-          "--armLift":"-26px",     // lift up more
-          "--armLx":"-12%",        // push left arm further left
-          "--armRx":"-12%",        // push right arm further right
-          "--armLrot":"-120deg",   // left arm up/out
-          "--armRrot":"120deg",    // right arm up/out
-
-          "--handsY":"-10px",
-
-          "--blush": 1,
-          "--blushY": "2px"
+          "--lookX":"-18px","--eyeOpen":0.85,"--eyeH":"12%","--eyeW":"12%","--eyeTilt":"-4deg",
+          "--smileW":"18%","--smileY":"39%","--smileCurve":1.15,
+          "--armY":"34%","--armLift":"-26px","--armLx":"-12%","--armRx":"-12%",
+          "--armLrot":"-120deg","--armRrot":"120deg","--handsY":"-10px",
+          "--blush":1,"--blushY":"2px"
         },
-        prop: "fish",
-        loop: "idle"
+        prop: "fish", loop: "idle"
       },
       cta: {
         vars: {
-
-          "--lookX":"0px",
-          "--eyeOpen":0.85,
-          "--eyeW":"12%", "--eyeH":"12%",
-          "--eyeTilt":"-4deg",
-          "--smileCurve":1.15,
-          "--armY":"44%",
-          "--armLift":"-6px",
-          "--armLrot":"-150deg",
-          "--armRrot":"120deg",
-          "--armLx":"-10%",
-          "--armRx":"-10%",
-
-          // "--lookX":"-18px",
-          // "--eyeOpen":0.85,
-          // "--eyeH":"12%",
-          // "--eyeW":"12%",
-          // "--eyeTilt":"-4deg",
-          // "--smileW":"18%",
-          // "--smileY":"39%",
-          // "--smileCurve":1.15,
-          // "--armY":"44%",
-          // "--armLift":"-14px",
-          // "--armLx":"-2%",
-          // "--armRx":"-2%",
-          // "--armLrot":"-50deg",
-          // "--armRrot":"50deg",
-          "--handsY":"-6px",
-          "--blush": 0.25,
-          "--blushY": "2px"
+          "--lookX":"0px","--eyeOpen":0.85,"--eyeW":"12%","--eyeH":"12%","--eyeTilt":"-4deg",
+          "--smileCurve":1.15,"--armY":"4%","--armLift":"-6px",
+          "--armLrot":"-150deg","--armRrot":"120deg","--armLx":"-10%","--armRx":"-10%",
+          "--handsY":"-6px","--blush":0.25,"--blushY":"2px"
         },
-        prop: "cta",
-        loop: "wave"
-      },
-      // cta: {
-      //   vars: {
-      //     "--lookX":"-10px",
-      //     "--eyeOpen":0.55,
-      //     "--smileCurve":0.8,
-      //     "--smileY":"40%",
-      //     "--armY":"52%",
-      //     "--armLift":"-10px",
-      //     "--armLx":"-2%",
-      //     "--armRx":"-10%",
-      //     "--armLrot":"-35deg",
-      //     "--armRrot":"55deg",
-      //   },
-      //   prop: "handshake",
-      //   loop: "idle"
-      // }
+        prop: "cta", loop: "wave"
+      }
     };
 
     const prefersReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -432,30 +268,17 @@
     }
 
     // ----------------------------
-    // NEW: Smooth mover positioning (no DOM moves)
+    // Desktop overlay layer (stable absolute coords)
     // ----------------------------
+    let overlay = flow.querySelector(".about-beanOverlay");
+    if (!overlay) {
+      overlay = document.createElement("div");
+      overlay.className = "about-beanOverlay";
+      flow.appendChild(overlay);
+    }
 
-    const slots = chapters.map(ch => ch.querySelector(".about-beanSlot")).filter(Boolean);
-    if (slots.length === 0) return false;
-
-    // Create a spacer in each slot to preserve layout / provide target rect
-    const spacers = slots.map((slot) => {
-      let sp = slot.querySelector(".about-beanSpacer");
-      if (!sp) {
-        sp = document.createElement("div");
-        sp.className = "about-beanSpacer";
-        slot.appendChild(sp);
-      }
-      // ensure target has size (use mover's current box)
-      const r = mover.getBoundingClientRect();
-      sp.style.width = Math.max(1, Math.round(r.width)) + "px";
-      sp.style.height = Math.max(1, Math.round(r.height)) + "px";
-      return sp;
-    });
-
-    // Make mover an overlay inside flow (stable containing block)
-    // NOTE: relies on flow being position: relative in CSS (most layouts do). If not, this still works but relative to page.
     const prevMoverPos = {
+      parent: mover.parentNode,
       position: mover.style.position,
       left: mover.style.left,
       top: mover.style.top,
@@ -463,57 +286,51 @@
       transform: mover.style.transform
     };
 
-    mover.style.position = "absolute";
-    mover.style.left = "0px";
-    mover.style.top = "0px";
-    mover.style.willChange = "transform";
-    // keep it above content if needed (safe no-op if already)
-    if (!mover.style.zIndex) mover.style.zIndex = "10";
+    function ensureDesktopHome() {
+      flow.dataset.dock = "0";
+      if (mover.parentNode !== overlay) overlay.appendChild(mover);
 
-    function moverXYForSpacer(spacerEl) {
-      const rootRect = overlay.getBoundingClientRect();
-      const targetRect = spacerEl.getBoundingClientRect();
-
-      const moverRect = mover.getBoundingClientRect();
-      const mW = moverRect.width || targetRect.width;
-      const mH = moverRect.height || targetRect.height;
-
-      const mx = (targetRect.left - rootRect.left) + (targetRect.width / 2);
-      const my = (targetRect.top - rootRect.top) + (targetRect.height / 2);
-
-      return { x: mx - (mW / 2), y: my - (mH / 2) };
+      mover.style.position = "absolute";
+      mover.style.left = "0px";
+      mover.style.top = "0px";
+      mover.style.willChange = "transform";
+      mover.style.zIndex = "10";
     }
 
-    function moverXYForChapter(i) {
+    function ensureMobileDock(i) {
+      flow.dataset.dock = "1";
+
+      const ch = chapters[i] || chapters[0];
+      const thought = ch.querySelector(".thought");
+      if (!thought) return;
+
+      // Move mover INTO the thought so it naturally scrolls with it
+      if (mover.parentNode !== thought) thought.appendChild(mover);
+
+      // Clear any overlay transforms so CSS absolute top/right wins
+      gsap.set(mover, { clearProps: "x,y,transform" });
+    }
+
+    // Desktop position calc (right of thought, vertically centered)
+    function moverXYForDesktop(i) {
       const ch = chapters[i] || chapters[0];
       const thought = ch.querySelector(".thought");
       const slot = ch.querySelector(".about-beanSlot");
-      const rootRect = overlay.getBoundingClientRect();
 
+      const rootRect = overlay.getBoundingClientRect();
       const pad = parseFloat(getComputedStyle(flow).getPropertyValue("--beanPad")) || 18;
-      const mobile = window.matchMedia("(max-width: 900px)").matches;
 
       const mRect = mover.getBoundingClientRect();
-
-      // Fallback target if thought missing
       const tRect = (thought || slot).getBoundingClientRect();
 
-      if (mobile) {
-        // Center under the bubble + add vertical padding
-        const x = (tRect.left - rootRect.left) + (tRect.width / 2) - (mRect.width / 2);
-        const y = (tRect.bottom - rootRect.top) + pad; // below bubble
-        return { x, y };
-      } else {
-        // Desktop: to the right + vertically centered
-        const x = (tRect.right - rootRect.left) + pad;
-        const y = (tRect.top - rootRect.top) + (tRect.height / 2) - (mRect.height / 2);
-        return { x, y };
-      }
+      const x = (tRect.right - rootRect.left) + pad;
+      const y = (tRect.top - rootRect.top) + (tRect.height / 2) - (mRect.height / 2);
+      return { x, y };
     }
 
     let moveTween = null;
-    function moveMoverToIndex(i, animate = true) {
-      const { x, y } = moverXYForChapter(i);
+    function moveMoverDesktop(i, animate = true) {
+      const { x, y } = moverXYForDesktop(i);
 
       if (moveTween) moveTween.kill();
 
@@ -530,7 +347,7 @@
       });
     }
 
-    // Baseline: hide all thoughts
+    // Baseline: hide all thoughts (JS reveals active)
     chapters.forEach(ch => {
       const thought = ch.querySelector(".thought");
       if (thought) gsap.set(thought, { autoAlpha: 0, y: 14 });
@@ -545,29 +362,41 @@
 
       chapters.forEach(x => x.classList.toggle("is-active", x === ch));
 
-      // hide all thoughts then show this one
       chapters.forEach((c) => revealThought(c.querySelector(".thought"), false));
       revealThought(ch.querySelector(".thought"), true);
 
       applyState(state);
-      moveMoverToIndex(i, animateMove);
+
+      if (isMobile()) {
+        // Dock to thought (moves together)
+        ensureMobileDock(i);
+      } else {
+        // Overlay move
+        ensureDesktopHome();
+        moveMoverDesktop(i, animateMove);
+      }
     }
 
-    // Init first chapter without animation
+    // Init first chapter
     const first = chapters[0];
     const firstState = first.dataset.state || "intro";
     chapters.forEach(x => x.classList.toggle("is-active", x === first));
     applyState(firstState);
     revealThought(first.querySelector(".thought"), true);
-    gsap.set(mover, { x: 0, y: 0 });
-    moveMoverToIndex(0, false);
+
+    if (isMobile()) {
+      ensureMobileDock(0);
+    } else {
+      ensureDesktopHome();
+      gsap.set(mover, { x: 0, y: 0 });
+      moveMoverDesktop(0, false);
+    }
 
     requestAnimationFrame(() => {
       requestAnimationFrame(() => ScrollTrigger.refresh());
     });
 
     // Triggers
-    // Use onToggle so we only activate when a chapter is truly "active" (reduces boundary thrash).
     chapters.forEach((ch, i) => {
       ScrollTrigger.create({
         ...stBase,
@@ -581,24 +410,44 @@
       });
     });
 
-    // Keep correct on refresh/resize (no animation)
+    // Keep correct on refresh/resize
     const onRefresh = () => {
-      moveMoverToIndex(activeIndex, false);
+      if (isMobile()) {
+        ensureMobileDock(activeIndex);
+      } else {
+        ensureDesktopHome();
+        moveMoverDesktop(activeIndex, false);
+      }
     };
     ScrollTrigger.addEventListener("refresh", onRefresh);
 
-    // Also keep it correct on resize (sometimes refresh doesn't fire immediately in PJAX)
+    // Handle resize crossing breakpoint (mobile <-> desktop)
+    let lastMobile = isMobile();
     const onResize = () => {
+      const nowMobile = isMobile();
+      if (nowMobile !== lastMobile) {
+        lastMobile = nowMobile;
+
+        if (nowMobile) {
+          // switch to dock mode
+          if (moveTween) { moveTween.kill(); moveTween = null; }
+          ensureMobileDock(activeIndex);
+        } else {
+          // switch to overlay mode
+          ensureDesktopHome();
+          gsap.set(mover, { x: 0, y: 0 });
+          moveMoverDesktop(activeIndex, false);
+        }
+      }
+
       ScrollTrigger.refresh();
-      moveMoverToIndex(activeIndex, false);
+      onRefresh();
     };
     window.addEventListener("resize", onResize, { passive: true });
 
     // Cleanup hook for PJAX (optional but nice)
     flow.__aboutCleanup = () => {
-      try {
-        ScrollTrigger.removeEventListener("refresh", onRefresh);
-      } catch (e) {}
+      try { ScrollTrigger.removeEventListener("refresh", onRefresh); } catch (e) {}
 
       try {
         ScrollTrigger.getAll()
@@ -611,7 +460,10 @@
       if (poseLoop) { poseLoop.kill(); poseLoop = null; }
       if (moveTween) { moveTween.kill(); moveTween = null; }
 
-      // restore mover inline styles
+      // restore mover inline styles + parent
+      if (prevMoverPos.parent && prevMoverPos.parent.appendChild) {
+        try { prevMoverPos.parent.appendChild(mover); } catch (e) {}
+      }
       mover.style.position = prevMoverPos.position;
       mover.style.left = prevMoverPos.left;
       mover.style.top = prevMoverPos.top;
