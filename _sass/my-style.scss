@@ -1236,6 +1236,11 @@ hr, .hr {
     .fab-menu .menu-open:checked ~ .menu-item:nth-child(7) { transform: translate3d(-98px, 168px, 0); }
     .fab-menu .menu-open:checked ~ .menu-item:nth-child(8) { transform: translate3d(-98px, 58px, 0); }
 
+    .fab-menu .menu-item,
+    .fab-menu .menu-open-button {
+      transition-duration: 280ms !important;
+    }
+
     
     @media (hover: hover) and (pointer: fine) {
         /* Bloom UNDER the hub */
