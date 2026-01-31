@@ -1416,20 +1416,20 @@ hr, .hr {
     animation-duration: 10s;
   }
 
-  /* Mobile perf: stop marquee movement, add subtle breathing */
-  @media (max-width: 767px) {
-    .wave {
-      // stop horizontal movement (biggest win for mobile)
-      animation: none !important;
-      transform: translate3d(0, 0, 0);
-      will-change: auto;
-    }
+  // /* Mobile perf: stop marquee movement, add subtle breathing */
+  // @media (max-width: 767px) {
+  //   .wave {
+  //     // stop horizontal movement (biggest win for mobile)
+  //     animation: none !important;
+  //     transform: translate3d(0, 0, 0);
+  //     will-change: auto;
+  //   }
 
-    // Gentle opacity breathing on the whole group (cheaper than transform)
-    // You can tweak min/max opacity here.
-    opacity: 0.92;
-    animation: beanWavesBreath 3.8s ease-in-out infinite;
-  }
+  //   // Gentle opacity breathing on the whole group (cheaper than transform)
+  //   // You can tweak min/max opacity here.
+  //   opacity: 0.92;
+  //   animation: beanWavesBreath 3.8s ease-in-out infinite;
+  // }
 
   /* Reduced motion: kill all animation */
   @media (prefers-reduced-motion: reduce) {

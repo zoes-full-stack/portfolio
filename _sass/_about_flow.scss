@@ -925,6 +925,93 @@
 }
 
 /* =========================
+   MOBILE: Minimal stack
+   Bean above Thought bubble
+   ========================= */
+@media (max-width: 900px) {
+
+  /* one column */
+  .about-flow .about-chapter__wrap {
+    grid-template-columns: 1fr;
+    gap: 14px;                 /* tighter */
+    align-items: start;
+  }
+
+  /* Put bean first (above thought) */
+  .about-flow .about-beanSlot {
+    order: -1;
+    width: 100%;
+    min-height: 0;             /* don’t reserve big space */
+    justify-items: center;
+    align-items: start;
+    margin-top: 4px;
+    margin-bottom: -10px;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+
+  /* Center the bean mover */
+  .about-flow .about-beanMover {
+    justify-self: center;
+  }
+
+  /* Make the bean smaller + consistent */
+  .about-flow {
+    --beanH: clamp(92px, 18vh, 140px);   /* smaller bean */
+  }
+
+  /* Optional: reduce glow on mobile for a cleaner look */
+  #magical-about-story-bean.bean--about {
+    box-shadow:
+      0 0 0 2px rgba(255,255,255,0.05) inset,
+      0 0 18px rgba(190, 236, 244, 0.16);
+  }
+
+  /* Thought bubble: slightly tighter + centered */
+  .about-flow .thought {
+    border-radius: 26px;
+    padding: 16px 16px;
+    max-width: 640px;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  /* Optional: shrink the tail a bit so it feels cleaner on mobile */
+  .about-flow .thought::before {
+    width: 34px;
+    height: 34px;
+    top: -10px;
+    left: 18px;
+    box-shadow: -38px 24px 0 -10px #fff;
+  }
+
+  .about-flow .thought::after {
+    width: 24px;
+    height: 24px;
+    bottom: -8px;
+    right: 18px;
+    box-shadow:
+      32px -26px 0 0 #fff,
+      -20px -6px 0 -2px #fff,
+      -18px 14px 0 -6px #fff,
+      -4px 20px 0 -10px #fff;
+  }
+
+  /* If you want a super minimal “badge” feel:
+     keep bean near top of the bubble */
+  .about-flow .about-beanSlot {
+    position: relative;
+  }
+
+  /* make sure props still look good when smaller */
+  #magical-about-story-bean .bean-question-mark svg { width: clamp(18px, 5vw, 32px); }
+  #magical-about-story-bean .bean-fish svg          { width: clamp(22px, 6vw, 46px); }
+  #magical-about-story-bean .bean-water svg         { width: clamp(18px, 5vw, 38px); }
+}
+
+
+/* =========================
    REDUCED MOTION — About Flow
    - Stop ALL animations
    - Keep props/bean positioned correctly (no “stuck mid-flight”)
