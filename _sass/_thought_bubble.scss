@@ -11,6 +11,8 @@ $background-color_2: #fff;
 	margin: 0;
 	width: min(500px, 100%);
 
+	overflow: visible;
+
 	background-color: $background-color_2;
 	padding: 20px;
 	border-radius: 30px;
@@ -57,3 +59,69 @@ $background-color_2: #fff;
   gap: 1.5rem; // spacing between bubbles
   align-items: center; // full width (or center if you prefer)
 }
+
+
+/* MOBILE: bean becomes a small attached badge */
+@media (max-width: 900px) {
+  /* Give the bubble a little room so text doesn't collide with the badge */
+  .thought {
+    padding-right: 86px; // space for the docked bean
+    padding-top: 26px;   // keeps text comfy if badge overlaps the top edge
+  }
+
+  /* When JS docks mover into .thought, it becomes an absolute child */
+  .thought .about-beanMover {
+    position: absolute !important;
+
+    /* top-right latch */
+    top: -14px;
+    right: -10px;
+    left: auto !important;
+    bottom: auto !important;
+
+    /* smaller + sleek */
+    transform: none !important;
+    width: 86px;     // badge footprint
+    height: auto;
+    pointer-events: none;
+    z-index: 2;      // above bubble fill
+
+    /* subtle "badge" feel */
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.12));
+  }
+
+  /* Scale down the actual bean */
+  .thought .about-beanMover #magical-about-story-bean.bean--about {
+    height: 70px; // small and minimal
+    width: auto;
+    box-shadow:
+      0 0 0 2px rgba(255,255,255,0.10) inset,
+      0 0 20px rgba(190,236,244,0.16);
+  }
+
+  /* Optional: reduce prop sizes so they don't look huge on the tiny bean */
+  .thought .about-beanMover #magical-about-story-bean .bean-question-mark svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .thought .about-beanMover #magical-about-story-bean .bean-fish svg {
+    width: 28px;
+  }
+
+  .thought .about-beanMover #magical-about-story-bean .bean-water svg {
+    width: 24px;
+  }
+
+  .thought .about-beanMover #magical-about-story-bean .bean-email svg {
+    width: 34px;
+  }
+
+  /* Optional: turn down arm thickness visually by shrinking the arms a bit */
+  .thought .about-beanMover #magical-about-story-bean.bean--about {
+    --armW: 48px;
+    --armH: 22px;
+    --faceStroke: 3px;
+  }
+}
+
