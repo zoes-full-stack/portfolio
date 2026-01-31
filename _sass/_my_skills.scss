@@ -87,8 +87,6 @@
     radial-gradient(1200px 360px at 18% 0%, rgba(38,167,186,0.12), transparent 55%),
     linear-gradient(to bottom, transparent, rgba(38,167,186,0.06));
 
-  box-shadow: var(--shadow-soft);
-
   /* helps JS tilt feel “real” */
   transform-style: preserve-3d;
   transform-origin: center;
@@ -144,12 +142,7 @@
 }
 
 @media (hover:hover) and (pointer:fine){
-  .skill-card{
-    transition: box-shadow .5s ease, filter .5s ease;
-  }
-
   .skill-card:hover{
-    box-shadow: var(--shadow), 0 0 0 1px rgba(255,255,255,0.30) inset;
     filter: saturate(1.03);
   }
 
