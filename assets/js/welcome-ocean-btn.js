@@ -1,11 +1,9 @@
 const oceanBtn = document.querySelector('.welcome-ocean-button');
 
 window.addEventListener('load', () => {
+    const isSmall = window.matchMedia('(max-width: 767px)').matches;
+    console.log(isSmall);
+    if (isSmall) return; // skip auto animation on mobile
     oceanBtn.classList.add('is-loaded');
-    
-    // Remove the class after 4s (the length of your fish animation)
-    // This resets the button so the :hover trigger still works perfectly later!
-    setTimeout(() => {
-        oceanBtn.classList.remove('is-loaded');
-    }, 2700); 
+    setTimeout(() => oceanBtn.classList.remove('is-loaded'), 2700);
 });
