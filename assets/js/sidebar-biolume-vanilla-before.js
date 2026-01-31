@@ -1,20 +1,14 @@
 (() => {
   // ====== Hydejack Sidebar Biolume (Pure JS Canvas) ======
-  // Desktop: keep behavior/feel basically identical to your original.
-  // Mobile-only: performance sprucing (lower DPR, fewer particles, 30fps cap, lighter eddies, throttles)
+  // - Deep sea gradient + haze + depth specks
+  // - Flow-field phytoplankton with hover glow
+  // - Sparse dev.to-inspired jellyfish (squish + tentacle beads) + gentle trails
+  // - Slow sperm whale on dblclick / press-hold
+  // - Collision avoidance vs per-line text rects (no full-width blocks)
+  // - NEW: Eddy flow around text (tangential swirl + gentle repulsion)
+  // - Spawn-safe: phyto + jellies spawn outside text/icon bounds
 
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-  // ----------------- Mobile detection (iPhone/Android/iPad etc.) -----------------
-  const ua = navigator.userAgent || "";
-  const uaMobile =
-    /Android|iPhone|iPad|iPod|Mobile|Silk|Kindle|BlackBerry|IEMobile|Opera Mini/i.test(ua);
-
-  const mqCoarse = window.matchMedia?.("(pointer: coarse)")?.matches ?? false;
-  const mqSmall = window.matchMedia?.("(max-width: 900px)")?.matches ?? false;
-
-  // Treat iPad/tablets as "mobile perf" too if coarse pointer OR UA says mobile/tablet
-  const isMobile = uaMobile || mqCoarse || mqSmall;
 
   // ----------------- Tunables -----------------
   const CFG = {
@@ -78,19 +72,19 @@
     // FLOW AROUND TEXT (soft current)
     repulsion: {
       enabled: true,
-      radius: 95,
-      strength: 0.90,
-      power: 2.2,
-      maxPush: 2.3,
-      swirlStrength: 0.95,
-      swirlTime: 0.35,
-      swirlScale: 260,
+      radius: 95,          // how far the text "pressure field" reaches
+      strength: 0.90,      // radial push away
+      power: 2.2,          // falloff curve
+      maxPush: 2.3,        // clamp per-frame push
+      swirlStrength: 0.95, // tangential eddy amount
+      swirlTime: 0.35,     // how fast eddy direction drifts
+      swirlScale: 260,     // noise scale for swirl direction
     },
 
     // Spawn safety
     spawn: {
       tries: 60,
-      padExtra: 10,
+      padExtra: 10,        // extra padding beyond obstaclePadding
     },
 
     debug: {
@@ -101,26 +95,6 @@
       label: "rgba(255,255,255,0.85)",
     },
   };
-
-  // ----------------- Mobile-only perf overrides (desktop untouched) -----------------
-  // These DO NOT run on desktop.
-  const MOBILE = {
-    fpsCap: 30,            // cap draw loop (keeps motion but reduces work)
-    halfRateEddy: true,    // compute eddies every other frame
-    cheapGlow: true,       // skip some radial gradients when not needed
-  };
-
-  if (isMobile) {
-    CFG.dprCap = 1.25;            // biggest win (GPU fill rate)
-    CFG.phytoDensity *= 0.55;     // fewer glow particles
-    CFG.depthDensity *= 0.65;     // fewer depth specks
-    CFG.wakeMax = 22;             // fewer gradients
-    CFG.hazeCountMax = 6;         // fewer big gradients
-    CFG.obstacleRefreshMs = 900;  // measure less often
-    CFG.repulsion.radius *= 0.90; // tiny save
-  }
-
-  const MOBILE_FRAME_MS = (isMobile && MOBILE.fpsCap) ? (1000 / MOBILE.fpsCap) : 0;
 
   // ----------------- Utils -----------------
   const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
@@ -202,6 +176,10 @@
     const sidebarTagline = document.querySelector(".sidebar-about p");
     if (sidebarTagline) nodes.push({ el: sidebarTagline, mode: "text" });
 
+    // Avatar (uncomment if you want particles to avoid the avatar too)
+    // const avatar = document.querySelector(".sidebar-about img");
+    // if (avatar) nodes.push({ el: avatar, mode: "box" });
+
     // Nav items
     const navA =
       document.querySelectorAll(".sidebar-nav ul li a.sidebar-nav-item").length
@@ -272,7 +250,10 @@
         if (x + rr.width < 0 || y + rr.height < 0 || x > W || y > H) continue;
 
         rects.push(
-          padRect({ x, y, w: rr.width, h: rr.height }, CFG.obstaclePadding)
+          padRect(
+            { x, y, w: rr.width, h: rr.height },
+            CFG.obstaclePadding
+          )
         );
       }
     }
@@ -438,11 +419,6 @@
     host.addEventListener("pointercancel", onPointerUpForHold, { passive: true });
     host.addEventListener("dblclick", onDblClick, { passive: true });
 
-    // (Mobile-only) pause when tab hidden – avoids background battery drain
-    let running = true;
-    const onVis = () => { if (isMobile) running = !document.hidden; };
-    if (isMobile) document.addEventListener("visibilitychange", onVis, { passive: true });
-
     // Colors
     const SEA_TOP = "rgba(5, 22, 36, 1)";
     const SEA_MID = "rgba(6, 44, 60, 1)";
@@ -461,7 +437,6 @@
 
     let sceneBuilt = false;
     let bootToken = 0;
-    let frameId = 0;
 
     const scalePoints = (arr, sx, sy) => {
       for (const p of arr) {
@@ -495,102 +470,116 @@
         const y = rand(0, H);
         if (!isInsideAnyObstacle(x, y, pad)) return { x, y };
       }
+      // fallback: outer edge
       return { x: rand(0, W), y: rand(H * 0.85, H) };
     };
 
+    // --- Corner-weighted eddy flow around obstacles (soft current) ---
     const closestPointRect = (x, y, r) => {
-      const cx = clamp(x, r.x, r.x + r.w);
-      const cy = clamp(y, r.y, r.y + r.h);
-      return { cx, cy };
+        const cx = clamp(x, r.x, r.x + r.w);
+        const cy = clamp(y, r.y, r.y + r.h);
+        return { cx, cy };
     };
 
     const cornerInfluence = (r, cx, cy) => {
-      const corners = [
-        [r.x, r.y],
-        [r.x + r.w, r.y],
-        [r.x, r.y + r.h],
-        [r.x + r.w, r.y + r.h],
-      ];
+        // Influence grows as the closest point approaches a corner.
+        const corners = [
+            [r.x, r.y],
+            [r.x + r.w, r.y],
+            [r.x, r.y + r.h],
+            [r.x + r.w, r.y + r.h],
+        ];
 
-      let minD = Infinity;
-      for (const [px, py] of corners) {
-        const dx = cx - px;
-        const dy = cy - py;
-        minD = Math.min(minD, Math.hypot(dx, dy));
-      }
+        let minD = Infinity;
+        for (const [px, py] of corners) {
+            const dx = cx - px;
+            const dy = cy - py;
+            minD = Math.min(minD, Math.hypot(dx, dy));
+        }
 
-      const cornerR = Math.max(14, Math.min(r.w, r.h) * 0.22);
-      return clamp(1 - minD / cornerR, 0, 1); // 0..1
+        // Corner radius: scales with rect size, with a small floor
+        const cornerR = Math.max(14, Math.min(r.w, r.h) * 0.22);
+        return clamp(1 - minD / cornerR, 0, 1); // 0..1
     };
 
     const applyObstacleEddy = (obj, effectiveRadius, dt, mult = 1) => {
-      const Rbase = CFG.repulsion?.radius ?? 90;
-      if (!CFG.repulsion?.enabled || !obstacles?.length) return;
+        const Rbase = CFG.repulsion?.radius ?? 90;
+        if (!CFG.repulsion?.enabled || !obstacles?.length) return;
 
-      const R = (Rbase + effectiveRadius) || 90;
-      const R2 = R * R;
+        const R = (Rbase + effectiveRadius) || 90;
+        const R2 = R * R;
 
-      let pushX = 0;
-      let pushY = 0;
+        let pushX = 0;
+        let pushY = 0;
 
-      swirlT += (CFG.repulsion.swirlTime ?? 0.35) * dt;
+        // slow drift in swirl direction
+        swirlT += (CFG.repulsion.swirlTime ?? 0.35) * dt;
 
-      for (const o of obstacles) {
-        const pad = CFG.obstaclePadding + (CFG.spawn?.padExtra || 0);
-        const r = { x: o.x - pad, y: o.y - pad, w: o.w + pad * 2, h: o.h + pad * 2 };
+        for (const o of obstacles) {
+            const pad = CFG.obstaclePadding + (CFG.spawn?.padExtra || 0);
+            const r = { x: o.x - pad, y: o.y - pad, w: o.w + pad * 2, h: o.h + pad * 2 };
 
-        const { cx, cy } = closestPointRect(obj.x, obj.y, r);
-        const dx = obj.x - cx;
-        const dy = obj.y - cy;
-        const d2 = dx * dx + dy * dy;
+            const { cx, cy } = closestPointRect(obj.x, obj.y, r);
+            const dx = obj.x - cx;
+            const dy = obj.y - cy;
+            const d2 = dx * dx + dy * dy;
 
-        if (d2 < R2) {
-          const d = Math.max(0.001, Math.sqrt(d2));
-          const ux = dx / d;
-          const uy = dy / d;
+            if (d2 < R2) {
+            const d = Math.max(0.001, Math.sqrt(d2));
+            const ux = dx / d;
+            const uy = dy / d;
 
-          const t = 1 - d / R;
-          const eased = Math.pow(t, CFG.repulsion.power ?? 2);
+            const t = 1 - d / R; // 0..1
+            const eased = Math.pow(t, CFG.repulsion.power ?? 2);
 
-          const radial = eased * (CFG.repulsion.strength ?? 0.9) * mult;
+            // Radial push (keeps things readable)
+            const radial = eased * (CFG.repulsion.strength ?? 0.9) * mult;
 
-          const ci = cornerInfluence(r, cx, cy);
-          const edgeSwirlMul = 0.55;
-          const cornerSwirlMul = 1.35;
-          const swirlMul = lerp(edgeSwirlMul, cornerSwirlMul, ci);
+            // Corner weighting:
+            // - along long edges: swirl is gentler
+            // - near corners: swirl ramps up (looks like flowing around text blocks)
+            const ci = cornerInfluence(r, cx, cy); // 0..1
+            const edgeSwirlMul = 0.55;
+            const cornerSwirlMul = 1.35;
+            const swirlMul = lerp(edgeSwirlMul, cornerSwirlMul, ci);
 
-          const ns = CFG.repulsion.swirlScale ?? 260;
-          const n = valueNoise((obj.x + o.x) / ns + swirlT, (obj.y + o.y) / ns - swirlT);
-          const dir = (n < 0.5) ? -1 : 1;
+            // CW/CCW choice via noise (organic variation)
+            const ns = CFG.repulsion.swirlScale ?? 260;
+            const n = valueNoise((obj.x + o.x) / ns + swirlT, (obj.y + o.y) / ns - swirlT);
+            const dir = (n < 0.5) ? -1 : 1;
 
-          const tx = -uy * dir;
-          const ty =  ux * dir;
+            const tx = -uy * dir;
+            const ty =  ux * dir;
 
-          const swirl = eased * (CFG.repulsion.swirlStrength ?? 0.9) * swirlMul * mult;
+            const swirl = eased * (CFG.repulsion.swirlStrength ?? 0.9) * swirlMul * mult;
 
-          pushX += ux * radial + tx * swirl;
-          pushY += uy * radial + ty * swirl;
+            pushX += ux * radial + tx * swirl;
+            pushY += uy * radial + ty * swirl;
+            }
         }
-      }
 
-      const mag = Math.hypot(pushX, pushY);
-      const maxPush = CFG.repulsion.maxPush ?? 2.2;
-      if (mag > maxPush) {
-        pushX = (pushX / mag) * maxPush;
-        pushY = (pushY / mag) * maxPush;
-      }
+        // Clamp for stability
+        const mag = Math.hypot(pushX, pushY);
+        const maxPush = CFG.repulsion.maxPush ?? 2.2;
+        if (mag > maxPush) {
+            pushX = (pushX / mag) * maxPush;
+            pushY = (pushY / mag) * maxPush;
+        }
 
-      obj.x += pushX * dt * 60;
-      obj.y += pushY * dt * 60;
+        // Apply as gentle position nudge + slight velocity steering
+        obj.x += pushX * dt * 60;
+        obj.y += pushY * dt * 60;
 
-      if (typeof obj.vx === "number") obj.vx += pushX * 0.18;
-      if (typeof obj.vy === "number") obj.vy += pushY * 0.18;
+        if (typeof obj.vx === "number") obj.vx += pushX * 0.18;
+        if (typeof obj.vy === "number") obj.vy += pushY * 0.18;
     };
 
     // ----------------- Builders -----------------
     const buildScene = () => {
+      // Update obstacles BEFORE spawning so we spawn safe
       refreshObstacles(mountEl, W, H, true);
 
+      // Haze blobs
       const hazeCount = clamp(Math.floor((W * H) / 130000), CFG.hazeCountMin, CFG.hazeCountMax);
       haze = Array.from({ length: hazeCount }, () => ({
         x: rand(-W * 0.2, W * 1.2),
@@ -603,6 +592,7 @@
         tw: rand(0.0012, 0.0035),
       }));
 
+      // Far depth specks
       const depthCount = clamp(Math.floor(((W * H) / 3800) * CFG.depthDensity), 120, 520);
       depth = Array.from({ length: depthCount }, () => ({
         x: rand(0, W),
@@ -616,6 +606,7 @@
         p: rand(0.7, 1.2),
       }));
 
+      // Phytoplankton (near)
       const base = (W * H) / 2150;
       const count = clamp(Math.floor(base * CFG.phytoDensity), 280, 1400);
 
@@ -638,9 +629,11 @@
         return p;
       });
 
+      // Jellyfish
       const jellyN = clamp(Math.round(Math.min(W, H) / 280), CFG.jellyCount[0], CFG.jellyCount[1]);
       jellies = Array.from({ length: jellyN }, () => makeJelly());
 
+      // Wake reset
       wake = [];
       pointer.lastWakeX = pointer.lastWakeY = null;
 
@@ -696,6 +689,7 @@
       canvas.height = Math.floor(H * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
+      // refresh obstacle boxes on resize
       refreshObstacles(mountEl, W, H, true);
 
       if (!sceneBuilt) {
@@ -713,6 +707,7 @@
 
         if (Array.isArray(obstacles)) scaleObstacles(obstacles, sx, sy);
 
+        // After scaling, ensure nothing sits inside obstacles
         for (const p of phyto) {
           const c = { x: p.x, y: p.y, r: p.r + 2, vx: p.vx, vy: p.vy };
           resolveCircleAABB(c);
@@ -770,6 +765,7 @@
     };
 
     const updateWake = (dt) => {
+      // pointer wake
       if (pointer.active) {
         if (pointer.lastWakeX == null) {
           pointer.lastWakeX = pointer.x;
@@ -798,6 +794,7 @@
         pointer.lastWakeX = pointer.lastWakeY = null;
       }
 
+      // age + drift
       for (let i = wake.length - 1; i >= 0; i--) {
         const w = wake[i];
         w.age += dt;
@@ -908,8 +905,6 @@
       const hoverR = CFG.phytoHoverRadius;
       const hoverR2 = hoverR * hoverR;
 
-      const doEddy = !isMobile || !MOBILE.halfRateEddy || (frameId % 2 === 0);
-
       for (const p of phyto) {
         const ang = flowAngle(p.x, p.y, flowT, CFG.flowScale);
         const fx = Math.cos(ang) * CFG.flowStrength;
@@ -925,6 +920,7 @@
         p.x += (p.vx + wig) * dt * 60 * speed;
         p.y += (p.vy + 0.10) * dt * 60 * speed;
 
+        // wrap
         if (p.y > H + 6) {
           const pt = randomPointOutsideObstacles(CFG.obstaclePadding + CFG.spawn.padExtra + p.r * 6);
           p.y = -6; p.x = pt.x;
@@ -932,6 +928,7 @@
         if (p.x < -6) p.x = W + 6;
         if (p.x > W + 6) p.x = -6;
 
+        // hover heat
         if (pointer.active) {
           const dx = p.x - pointer.x;
           const dy = p.y - pointer.y;
@@ -943,35 +940,30 @@
         }
         p.heat *= Math.pow(0.90, dt * 60);
 
-        if (doEddy) applyObstacleEddy(p, p.r * 3.0, dt, 1.0);
+        // NEW: eddy flow around text (soft current)
+        applyObstacleEddy(p, p.r * 3.0, dt, 1.0);
 
+        // Hard contact bounce as last resort
         const c = { x: p.x, y: p.y, r: p.r + 1.6, vx: p.vx, vy: p.vy };
         resolveCircleAABB(c);
         p.x = c.x; p.y = c.y; p.vx = c.vx; p.vy = c.vy;
 
+        // brightness
         const shimmer = 0.55 + 0.45 * Math.sin(p.t * 2.6);
         const baseA = p.a * shimmer;
         const a = baseA * (1 + p.heat * 0.7);
 
-        // Mobile-only: skip some expensive radial gradients while keeping the “feel”
-        const drawGlow =
-          !isMobile ||
-          !MOBILE.cheapGlow ||
-          (p.heat > 0.08) ||
-          (p.r > 2.3 && (p.t % 1.0) < 0.12);
+        const glowR = p.r * (2.8 + p.heat * 2.7) * CFG.phytoGlowBoost;
 
-        if (drawGlow) {
-          const glowR = p.r * (2.8 + p.heat * 2.7) * CFG.phytoGlowBoost;
-          const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, glowR);
-          g.addColorStop(0, `rgba(230, 255, 255, ${a * (0.34 + p.heat * 0.18)})`);
-          g.addColorStop(0.35, `rgba(110, 235, 255, ${a * 0.45})`);
-          g.addColorStop(1, "rgba(0,0,0,0)");
+        const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, glowR);
+        g.addColorStop(0, `rgba(230, 255, 255, ${a * (0.34 + p.heat * 0.18)})`);
+        g.addColorStop(0.35, `rgba(110, 235, 255, ${a * 0.45})`);
+        g.addColorStop(1, "rgba(0,0,0,0)");
 
-          ctx.fillStyle = g;
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, glowR, 0, Math.PI * 2);
-          ctx.fill();
-        }
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, glowR, 0, Math.PI * 2);
+        ctx.fill();
 
         ctx.fillStyle = `rgba(235, 255, 255, ${clamp(a * 0.55, 0, 0.86)})`;
         ctx.beginPath();
@@ -1010,17 +1002,17 @@
     const updateAndDrawJellies = (dt) => {
       ctx.globalCompositeOperation = "lighter";
 
-      const doEddy = !isMobile || !MOBILE.halfRateEddy || (frameId % 2 === 0);
-
       for (const j of jellies) {
         j.t += dt;
         j.pulse += dt * j.pulseSpd;
         const pulse = Math.sin(j.pulse);
 
+        // squish (X/Y opposite)
         const squish = pulse * 0.09;
         const sx = 1 + squish;
         const sy = 1 - squish * 0.7;
 
+        // motion
         const ang = flowAngle(j.x, j.y, flowT * 0.85, CFG.flowScale * 1.15);
         const fx = Math.cos(ang) * 0.6;
         const fy = Math.sin(ang) * 0.6;
@@ -1029,6 +1021,7 @@
         j.x += (j.vx * swim + fx * 18) * dt * 0.38;
         j.y += (j.vy + Math.sin(j.t * j.wiggleSpd) * 6 + fy * 12) * dt * 0.22;
 
+        // wrap with spawn-safe re-entry
         if (j.x < -j.r * 3 || j.x > W + j.r * 3 || j.y < -j.r * 3 || j.y > H + j.r * 3) {
           const pt = randomPointOutsideObstacles(CFG.obstaclePadding + CFG.spawn.padExtra + j.r * 3.2);
           j.x = pt.x;
@@ -1036,6 +1029,7 @@
           j.lastTrailX = j.lastTrailY = null;
         }
 
+        // hover heat
         if (pointer.active) {
           const dx = j.x - pointer.x;
           const dy = j.y - pointer.y;
@@ -1048,13 +1042,16 @@
         }
         j.heat *= Math.pow(0.92, dt * 60);
 
-        if (doEddy) applyObstacleEddy(j, j.r * 3.8, dt, 1.25);
+        // NEW: eddy flow around text (stronger than phyto)
+        applyObstacleEddy(j, j.r * 3.8, dt, 1.25);
 
+        // Hard contact correction only (keep glide)
         const bellR = j.r * 1.15 + CFG.jellyAvoidPad;
         const c = { x: j.x, y: j.y, r: bellR, vx: j.vx * 0.02, vy: j.vy * 0.02 };
         resolveCircleAABB(c);
         j.x = c.x; j.y = c.y;
 
+        // trail
         maybeJellyTrail(j);
 
         // glow halo
@@ -1197,19 +1194,10 @@
     // ----------------- Loop -----------------
     let raf = 0;
     let last = performance.now();
-    let lastRender = last;
 
     const loop = (now) => {
       raf = requestAnimationFrame(loop);
       if (!W || !H) return;
-
-      if (isMobile && !running) return;
-
-      // Mobile-only FPS cap (desktop unchanged)
-      if (MOBILE_FRAME_MS && (now - lastRender) < MOBILE_FRAME_MS) return;
-      lastRender = now;
-
-      frameId++;
 
       const dt = clamp((now - last) / 1000, 0, 0.033);
       last = now;
@@ -1249,8 +1237,6 @@
       host.removeEventListener("pointerup", onPointerUpForHold);
       host.removeEventListener("pointercancel", onPointerUpForHold);
       host.removeEventListener("dblclick", onDblClick);
-
-      if (isMobile) document.removeEventListener("visibilitychange", onVis);
 
       clearTimeout(holdTimer);
     };
