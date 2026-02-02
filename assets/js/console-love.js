@@ -8,26 +8,26 @@
     window.__gabbyConsoleLoveShown = true;
 
     const titleStyle = [
-      "font-size:16px",
+      "font-size:22px",
       "font-weight:700",
       "color:#0DCCD1",
       "text-shadow:0 1px 0 rgba(0,0,0,0.25)"
     ].join(";");
 
     const bodyStyle = [
-      "font-size:12px",
+      "font-size:22px",
       "color:#F6FDFF"
     ].join(";");
 
     const accentStyle = [
-      "font-size:12px",
+      "font-size:22px",
       "color:#FF8A73",
       "font-weight:600"
     ].join(";");
 
-    console.log("%cHello 👋", titleStyle);
-    console.log("%cThis site was made with %clove %c(and lots of custom work).", bodyStyle, accentStyle, bodyStyle);
-    console.log("%cHydejack powers some plumbing (sidebar + config), and most pages/sections are custom.", bodyStyle);
+    console.log("%cHello 🌊", titleStyle);
+    console.log("%cThis site was made with lots of %clove %cand custom work.", bodyStyle, accentStyle, bodyStyle);
+    console.log("%cHydejack powers the plumbing (sidebar + config), and all visible pages/sections are custom 💕", bodyStyle);
   };
 
   // Run on normal load
