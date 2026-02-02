@@ -85,7 +85,7 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
       width: 100%;
       border-radius: 8px;
       border: 1px solid rgba(255, 255, 255, 0.95);
-      box-shadow: $shadow-card;
+      // box-shadow: $shadow-card;
       overflow: hidden;
 
       position: relative;
@@ -95,7 +95,7 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
       will-change: transform;
       backface-visibility: hidden;
 
-      transition: box-shadow 0.8s ease;
+      // transition: box-shadow 0.8s ease;
 
       // subtle ocean glass gradient overlay like the pen
       background-image: linear-gradient(to bottom, transparent, rgba(38, 167, 186, 0.18));
@@ -133,9 +133,9 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
       }
     }
 
-    .ocean-tilt:hover .ocean-card {
-      box-shadow: 0 0 28px rgba(0, 0, 0, 0.16);
-    }
+    // .ocean-tilt:hover .ocean-card {
+    //   box-shadow: 0 0 28px rgba(0, 0, 0, 0.16);
+    // }
 
     .video-container {
       position: absolute;
