@@ -23,7 +23,7 @@
 **[TTLAB](https://lab.tt/)**
 
 - [Soft-Churn: Optimal Switching between Prepaid Data Subscription on E-SIM Support Smartphones](/Research/soft_churn_optimal_switching_between_prepaid_data_subscription_on_ESIM_support_smartphones.pdf){:target="_blank"}{:.flip-title} &nbsp; [_May 2020_] <br>
-- [Research Poster](https://i.imgur.com/2harbr1.jpg){:target="_blank"} <br>
+<!-- - [Research Poster](https://i.imgur.com/2harbr1.jpg){:target="_blank"} <br> -->
 **Supervisor**: Professor Patrick Hosein  
 &nbsp;  
 
