@@ -165,6 +165,8 @@ bindAudioDelegationOnce();
 
     flyers: [
       { kind: "image", title: "Scarlet Creative Programming Flyer", src: "/images/flyers/ScarletCreativeSoftware_Programming_Courses_Flyer_Design.png" , w: 1440, h: 2000 },
+      { kind: "image", title: "Christmas Eve Party Ad", src: "/images/flyers/Christmas_Eve_Party.png" , w: 1428, h: 2000 },
+      { kind: "image", title: "Drinks Ad", src: "/images/flyers/drinks_ad.png" , w: 1414, h: 2000 },
       { kind: "image", title: "Wedding Menu - Desserts", src: "/images/flyers/wedding_menu_desserts.png", w: 1545, h: 2000 },
       { kind: "image", title: "Wedding Menu - Drinks", src: "/images/flyers/wedding_menu_drinks.png", w: 1545, h: 2000 },
       { kind: "image", title: "Wedding Programme - Front", src: "/images/flyers/wedding_programme_front.png", w: 1429, h: 2000 },
