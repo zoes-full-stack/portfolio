@@ -34,6 +34,17 @@
 #   proof: "KYC-ready · escrow flows · safer selling"
 #   tags: ["Flutter", "Firebase", "Google Cloud Functions"]
 
+- title: FAAIR – AI for Agriculture & Climate Resilience
+  slug: FAAIR_AgricultureClimateResilience
+  url: /projectlist/FAAIR/
+  img: /images/infographs/FAAIR_Conference_Poster.jpg
+  category: software_engineering
+  featured: true
+  blurb: "Using drones and AI-driven vegetation indices to help small-island farms adapt to climate change."
+  panel_label: "AI for Agriculture"
+  proof: "UAV imagery + vegetation indices + machine learning for weeds, crop health, and land-use mapping"
+  tags: ["Python", "Computer Vision", "UAV", "NDVI", "Agriculture AI"]
+
 - title: Apriltag Tracking
   slug: RigidAprilTagBundleTracking
   url: /projectlist/RigidAprilTagBundleTracking/
