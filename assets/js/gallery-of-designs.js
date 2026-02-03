@@ -203,7 +203,6 @@ bindAudioDelegationOnce();
         desc: "I made this poster to represent the work I did on FAAIR’s using drones and AI-driven vegetation indices to generate landscape-level insights that help small-island farming systems adapt and build resilience to climate change.",
         thumb: "/images/infographs/FAAIR_Conference_Poster.jpg",
         href: "/assets/docs/infographs/FAAIR_Conference_Poster.pdf",
-        href2: "https://www.dropbox.com/scl/fi/xdd3sw417480cskvwc1g3/AI-for-Agriculture-brief.pdf?rlkey=c9g1hwdh3uido8vn1xvbeyvil&e=1&dl=0",
         w: 7200,
         h: 5400
       }
@@ -532,17 +531,17 @@ bindAudioDelegationOnce();
 
         li.className = "doc-tile";
 
-      const secondBtn = href2
-        ? `
-          <a href="${href2}" class="hover-partial-btn" target="_blank" rel="noopener">
-            <span>View Brief</span>
-            <svg width="13px" height="10px" viewBox="0 0 13 10">
-              <path d="M1,5 L11,5"></path>
-              <polyline points="8 1 12 5 8 9"></polyline>
-            </svg>
-          </a>
-        `
-        : "";
+      // const secondBtn = href2
+      //   ? `
+      //     <a href="${href2}" class="hover-partial-btn" target="_blank" rel="noopener">
+      //       <span>View Brief</span>
+      //       <svg width="13px" height="10px" viewBox="0 0 13 10">
+      //         <path d="M1,5 L11,5"></path>
+      //         <polyline points="8 1 12 5 8 9"></polyline>
+      //       </svg>
+      //     </a>
+      //   `
+      //   : "";
 
       li.innerHTML = `
         <article class="doc-card">
@@ -555,7 +554,6 @@ bindAudioDelegationOnce();
             <p class="doc-card__desc">${desc}</p>
 
             <p class="doc-card__link">
-              <span class="doc-card__btnrow">
                 <a href="${href}" class="hover-partial-btn" target="_blank" rel="noopener">
                   <span>View PDF</span>
                   <svg width="13px" height="10px" viewBox="0 0 13 10">
@@ -563,8 +561,6 @@ bindAudioDelegationOnce();
                     <polyline points="8 1 12 5 8 9"></polyline>
                   </svg>
                 </a>
-                ${secondBtn}
-              </span>
             </p>
           </div>
         </article>

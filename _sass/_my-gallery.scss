@@ -305,9 +305,9 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
 
 .doc-card__link{
   padding-top: 25px;
-  width: 100%;
-  display: flex;                 /* ✅ becomes the layout container */
-  justify-content: flex-start;
+  // width: 100%;
+  // display: flex;                 /* ✅ becomes the layout container */
+  // justify-content: flex-start;
 }
 
 .doc-card__link a {
@@ -326,10 +326,10 @@ $shadow-card: 0 0 20px rgba(0, 0, 0, 0.12);
   text-decoration: none;
 }
 
-/* common culprit: button centering itself */
-.doc-card__btnrow .hover-partial-btn{
-  margin: 0 !important;          /* ✅ kills margin:auto centering */
-}
+// /* common culprit: button centering itself */
+// .doc-card__btnrow .hover-partial-btn{
+//   margin: 0 !important;          /* ✅ kills margin:auto centering */
+// }
 
 /* =========================
    LIGHTBOX (ocean, minimal, caption-on-hover)
