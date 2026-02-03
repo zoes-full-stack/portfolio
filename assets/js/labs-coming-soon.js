@@ -107,12 +107,15 @@
   function init() {
     const canvas = document.getElementById("oceanCanvas");
 
-    const canvasRect = canvas.getBoundingClientRect();
-
+    // bail if we’re not on the labs page (or canvas is missing)
     if (!canvas) {
+      // if we had an old scene, clean it up once
+      state.cleanup?.();
       state.cleanup = () => {};
       return;
     }
+
+    const canvasRect = canvas.getBoundingClientRect();
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -335,13 +338,17 @@
     };
   }
 
-  // ✅ Batch multiple load events into a single init
+  // Batch multiple load events into a single init
   function scheduleInit() {
     if (state.scheduled) return;
     state.scheduled = true;
 
     requestAnimationFrame(() => {
       state.scheduled = false;
+
+      // only try to init if the labs canvas exists on this page
+      if (!document.getElementById("oceanCanvas")) return;
+
       init();
     });
   }
