@@ -9,7 +9,7 @@ sitemap: false
     <div class ="row_project">
       <div class="column_project_l">
         <div class="post-date"> 
-          <time datetime="2021-05-31T00:00:00+00:00">May 2021</time> in <a href="/work/" class="flip-title">Work</a>
+          <time datetime="2021-05-31T00:00:00+00:00">May 2021</time> in <a href="/projects/" class="flip-title">Projects</a>
         </div>
       </div>
       <div class="column_project_l2">
@@ -173,6 +173,9 @@ Fixes:
   <aside class="related mb4" role="complementary">
     <h2 class="hr-bottom">Other Projects</h2>
     <ul class="related-posts">
+      <li class="h4"> 
+        <a href="/projectlist/FAAIR/" class="flip-title"><span>FAAIR</span></a> <time class="faded fine" datetime="2021-05-30T00:00:00+00:00">2023 - 2025</time>
+      </li>
       <li class="h4"> 
         <a href="/projectlist/QuickRental/" class="flip-title"><span>QuickRental</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">31 May 2019</time>
       </li>

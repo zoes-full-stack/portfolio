@@ -74,7 +74,10 @@ This will notify the government and community where the pollution occurs and res
     <h2 class="hr-bottom">Other Projects</h2>
     <ul class="related-posts">
       <li class="h4"> 
-        <a href="/projectlist/AccurateAprilGroupTracking/" class="flip-title"><span>Accurate AprilGroup Tracking</span></a> <time class="faded fine" datetime="2021-05-30T00:00:00+00:00">May 2021</time>
+        <li class="h4"> 
+        <a href="/projectlist/FAAIR/" class="flip-title"><span>FAAIR</span></a> <time class="faded fine" datetime="2021-05-30T00:00:00+00:00">2023 - 2025</time>
+      </li>
+        <a href="/projectlist/RigidAprilTagBundleTracking//" class="flip-title"><span>Accurate AprilGroup Tracking</span></a> <time class="faded fine" datetime="2021-05-30T00:00:00+00:00">May 2021</time>
       </li>
       <li class="h4"> 
         <a href="/projectlist/QuickRental/" class="flip-title"><span>QuickRental</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">31 May 2019</time>
