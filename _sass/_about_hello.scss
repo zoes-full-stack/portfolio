@@ -1,0 +1,23 @@
+.about-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Aligns all children (text and image) to the start (left) by default */
+    align-items: flex-start; 
+  }
+  
+  /* Keeps text left-aligned explicitly */
+  .about-container h1,
+  .about-container p {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  
+  .hello-mascot {
+    padding-top: 2rem;
+    width: 90%;
+    height: auto; /* Changed from 100% to prevent image distortion */
+    object-fit: cover;
+    /* Overrides container alignment to center only the image horizontally */
+    align-self: center; 
+  }
