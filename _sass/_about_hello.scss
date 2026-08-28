@@ -11,26 +11,29 @@ $theme-color: rgba(22, 52, 66, 0.98); // Deep teal for the industry pills
 
 // --- The Flexbox Container ---
 .about-intro-action {
-  display: flex;
-  align-items: center; 
-  flex-wrap: wrap; 
-  gap: 0.5rem; 
+  display: block; 
   text-align: left;
+  line-height: 2.2;
 }
 
 // --- The Button & Shadow Wrapper ---
 .portfolio-btn-wrapper {
   position: relative;
   display: inline-block;
-  margin: 0; 
-  cursor: pointer; // Ensures the whole wrapper feels clickable
+  margin: 0 0 0 0.25rem; 
+  vertical-align: middle;
+  cursor: pointer; 
 
-  // ✨ THE FIX: We trigger the animation when hovering the static wrapper ✨
   &:hover {
     .portfolio-bounce-btn {
-      background-color: #ffa65c;
+      background-color: #fd9d4e;
       color: white;
       animation: hoverBounce 0.8s cubic-bezier(0.28, 0.84, 0.42, 1) forwards;
+    }
+
+    // ✨ Triggers the dot explosion on hover
+    .portfolio-bounce-btn::after {
+      animation: glowExplosion 1.5s ease-out forwards;
     }
 
     .shadow {
@@ -39,19 +42,31 @@ $theme-color: rgba(22, 52, 66, 0.98); // Deep teal for the industry pills
   }
 }
 
-// --- The Sleek Button ---
 .portfolio-bounce-btn {
+  position: relative; // CRITICAL: Keeps the invisible dot centered inside the button
   display: inline-block;
   font-size: 0.95rem;
-  padding: 0rem 1.25rem; 
+  padding: 0.5rem 1.25rem; 
   background-color: #2b8a8e; // Ocean Teal
   color: white;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 20px 20px 5px 5px;
   transform-origin: 100% 100%; 
-  
-  // Notice we removed the &:hover from here! 
-  // It is now safely handled by the parent wrapper.
+
+  // The Invisible Dot Base (used to generate the shadow dots)
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    border-radius: 50%; // Makes the shadows perfectly round
+    transform: translate(-50%, -50%);
+    pointer-events: none; // Prevents the dots from blocking clicks
+    opacity: 0;
+  }
 }
 
 // --- The Floor Shadow ---
@@ -83,6 +98,34 @@ $theme-color: rgba(22, 52, 66, 0.98); // Deep teal for the industry pills
   30%  { opacity: 1; transform: scale(1.1); }
   50%  { opacity: 0; transform: scale(1); }
   100% { opacity: 0; transform: scale(1); }
+}
+
+// ✨ The Glow Dots Animation
+@keyframes glowExplosion {
+  0% {
+    opacity: 0;
+    // All shadows start tightly packed in the center
+    box-shadow:
+      0 0 0 0 rgba(253, 157, 78, 0.8),
+      0 0 0 0 rgba(253, 157, 78, 0.8),
+      0 0 0 0 rgba(253, 157, 78, 0.8),
+      0 0 0 0 rgba(253, 157, 78, 0.8);
+  }
+  15% {
+    opacity: 1; // Fades in quickly as the button jumps
+  }
+  80% {
+    opacity: 0; // Fades out smoothly before the animation ends
+    // The dots shoot out in 4 different directions! (X-axis, Y-axis, Blur, Spread, Color)
+    box-shadow:
+      -35px -35px 8px 1px rgba(253, 157, 78, 0.9), // Top Left
+      35px -45px 6px 2px rgba(253, 157, 78, 0.7),  // Top Right
+      45px -15px 10px 1px rgba(253, 157, 78, 0.6), // Far Right
+      -40px -5px 6px 3px rgba(253, 157, 78, 0.8);  // Far Left
+  }
+  100% {
+    opacity: 0; // Ensures it stays hidden
+  }
 }
 
 // TODO: SEE WHAT TO REMOVE FROM THIS FILE
