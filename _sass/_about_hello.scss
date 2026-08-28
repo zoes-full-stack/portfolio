@@ -12,9 +12,9 @@ $theme-color: rgba(22, 52, 66, 0.98); // Deep teal for the industry pills
 // --- The Flexbox Container ---
 .about-intro-action {
   display: flex;
-  align-items: center; // Vertically centers text and button perfectly!
-  flex-wrap: wrap; // Allows it to stack cleanly on tiny mobile screens
-  gap: 0.5rem; // Adds a natural space between the text and button
+  align-items: center; 
+  flex-wrap: wrap; 
+  gap: 0.5rem; 
   text-align: left;
 }
 
@@ -22,7 +22,21 @@ $theme-color: rgba(22, 52, 66, 0.98); // Deep teal for the industry pills
 .portfolio-btn-wrapper {
   position: relative;
   display: inline-block;
-  margin: 0; // Removes default browser margins from <figure>
+  margin: 0; 
+  cursor: pointer; // Ensures the whole wrapper feels clickable
+
+  // ✨ THE FIX: We trigger the animation when hovering the static wrapper ✨
+  &:hover {
+    .portfolio-bounce-btn {
+      background-color: #ffa65c;
+      color: white;
+      animation: hoverBounce 0.8s cubic-bezier(0.28, 0.84, 0.42, 1) forwards;
+    }
+
+    .shadow {
+      animation: shadowPulse 0.8s cubic-bezier(0.28, 0.84, 0.42, 1) forwards;
+    }
+  }
 }
 
 // --- The Sleek Button ---
@@ -34,35 +48,24 @@ $theme-color: rgba(22, 52, 66, 0.98); // Deep teal for the industry pills
   color: white;
   text-decoration: none;
   border-radius: 10px;
-  transform-origin: 100% 100%; // Anchors the tilt to the bottom right
+  transform-origin: 100% 100%; 
   
-  &:hover {
-    background-color: darken(#2b8a8e, 5%);
-    color: white;
-    // Triggers the bounce on hover
-    animation: hoverBounce 0.8s cubic-bezier(0.28, 0.84, 0.42, 1) forwards;
-  }
+  // Notice we removed the &:hover from here! 
+  // It is now safely handled by the parent wrapper.
 }
 
 // --- The Floor Shadow ---
 .portfolio-btn-wrapper .shadow {
   position: absolute;
-  bottom: -6px; // Sits just below the button
+  bottom: -6px; 
   left: 10%;
   width: 80%;
   height: 6px;
   background: radial-gradient(closest-side, rgba(0, 0, 0, 0.15), transparent);
-  opacity: 0; // Hidden by default
-}
-
-.portfolio-bounce-btn:hover + .shadow {
-  // Triggers the shadow pulse alongside the button bounce
-  animation: shadowPulse 0.8s cubic-bezier(0.28, 0.84, 0.42, 1) forwards;
+  opacity: 0; 
 }
 
 // --- Pure CSS Keyframe Animations ---
-
-// Mimics the Velocity.js tilt and elastic bounce
 @keyframes hoverBounce {
   0%   { transform: translateY(0) rotate(0deg); }
   15%  { transform: translateY(-12px) rotate(-6deg); }
@@ -74,7 +77,6 @@ $theme-color: rgba(22, 52, 66, 0.98); // Deep teal for the industry pills
   100% { transform: translateY(0) rotate(0deg); }
 }
 
-// Pulses the shadow opacity and size as the button jumps
 @keyframes shadowPulse {
   0%   { opacity: 0; transform: scale(1); }
   15%  { opacity: 1; transform: scale(1.1); }
@@ -98,8 +100,7 @@ $theme-color: rgba(22, 52, 66, 0.98); // Deep teal for the industry pills
 
   // 1. The Inline Call to Action
   .about-intro-action {
-    text-align: center;
-    line-height: 2.5;
+    line-height: 2;
   }
 
   // 2. The Mascot Image 
