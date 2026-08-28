@@ -1,23 +1,197 @@
+// --- Variables ---
+$button-bg: #222; // The default dark state
+$action-color: #2b8a8e; // Ocean Teal for the hover state
+$bubble-darken: 10%; // How much darker the bubbles get on hover
+$theme-color: rgba(22, 52, 66, 0.98); // Deep teal for the industry pills
+
+// --- Global Utilities ---
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+// --- Main About Section ---
 .about-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* Aligns all children (text and image) to the start (left) by default */
-    align-items: flex-start; 
-  }
-  
-  /* Keeps text left-aligned explicitly */
-  .about-container h1,
-  .about-container p {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; // Aligns children to the start by default
+
+  h1, p {
     text-align: left;
-    margin-bottom: 1rem;
+  }
+
+  // 1. The Inline Call to Action
+  .about-intro-action {
+    text-align: center;
+    line-height: 2.5;
+  }
+
+  // 2. The Mascot Image 
+  .hello-mascot-wrapper {
+    margin-top: 2rem;
+    width: 80%;
+    align-self: center;
+    position: relative; 
+    cursor: pointer;
+
+    .hello-mascot-base {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block; 
+      transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+    }
+
+    .hello-mascot-hover {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0; 
+      transform: scale(0.97) translateY(4px); 
+      transition: opacity 0.7s ease-in-out, transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1); 
+    }
+
+    // Mascot Hover State
+    &:hover {
+      .hello-mascot-base {
+        opacity: 0; 
+        transform: scale(1.03); 
+      }
+      
+      .hello-mascot-hover {
+        opacity: 1; 
+        transform: scale(1) translateY(0); 
+      }
+    }
+  }
+
+  // 3. The Industry Pill List
+  .industry-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; // Standardized from 'left'
+    gap: 12px;
+    margin: 2rem 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      color: #4b5563; 
+      background: white;
+      border: 1px solid rgba(235, 250, 252, 0.95); 
+      padding: 0.5rem 1.2rem;
+      border-radius: 2rem; 
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: all 0.3s ease;
+      cursor: default;
+
+      // Pill Hover State
+      &:hover {
+        background: $theme-color;
+        color: white;
+        border-color: $theme-color;
+      }
+    }
+  }
+}
+
+// --- Bubble Button Components ---
+// Kept outside of .about-container so you can reuse this button anywhere on the site!
+
+.button--bubble__container {
+  position: relative;
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.button {
+  -webkit-font-smoothing: antialiased;
+  background-color: $button-bg;
+  border: none;
+  border-radius: 50px; 
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  user-select: none;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  transition: all 0.1s ease-out;
+
+  &:hover {
+    background-color: $action-color;
+    color: #fff;
   }
   
-  .hello-mascot {
-    padding-top: 2rem;
-    width: 90%;
-    height: auto; /* Changed from 100% to prevent image distortion */
-    object-fit: cover;
-    /* Overrides container alignment to center only the image horizontally */
-    align-self: center; 
+  &:active {
+    transform: scale(0.95);
   }
+
+  // Bubble Specific Modifier (BEM architecture)
+  &--bubble {
+    position: relative;
+    z-index: 2;
+    background: $button-bg;
+
+    &:hover + .button--bubble__effect-container .circle,
+    &:hover + .button--bubble__effect-container .button {
+      background: darken($action-color, $bubble-darken); 
+    }
+
+    &:active + .button--bubble__effect-container {
+      transform: scale(0.95);
+    }
+  }
+}
+
+// The Gooey Effect Container 
+.button--bubble__effect-container {
+  position: absolute;
+  display: block;
+  width: 200%;
+  height: 400%;
+  top: -150%;
+  left: -50%;
+  -webkit-filter: url("#goo");
+  filter: url("#goo");
+  transition: all 0.1s ease-out;
+  pointer-events: none;
+
+  .circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    background: $button-bg;
+    transition: background 0.1s ease-out;
+
+    &.top-left {
+        top: 40%;
+        left: 27%;
+    }
+
+    &.bottom-right {
+        bottom: 40%;
+        right: 27%;
+    }
+  }
+
+  .effect-button {
+    position: absolute;
+    width: 50%;
+    height: 25%;
+    top: 50%;
+    left: 25%;
+    z-index: 1;
+    transform: translateY(-50%);
+    background: $button-bg;
+    transition: background 0.1s ease-out;
+  }
+}

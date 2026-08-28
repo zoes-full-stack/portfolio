@@ -56,14 +56,14 @@ menu:
     url:               /portfolio/
   # - title:             Designs
   #   url:               /designs/
-  # - title:             Experience
-  #   url:               /experience/
+  - title:             Experience
+    url:               /experience/
   # - title:             Skills
   #   url:               /skills/ 
   - title:             About
     url:               /
-  - title:             Playground
-    url:               /playground/
+  - title:             Labs
+    url:               /labs/
   # - title:             /test/
   #   url:                Test
     # /Resume/GabrielaSewdhan_Resume.pdf
