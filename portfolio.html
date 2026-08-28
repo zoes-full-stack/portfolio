@@ -1,10 +1,12 @@
 ---
 layout: page
 sitemap: false
+page_scripts:
+  - /assets/js/gallery-of-designs.js
+  - /assets/js/project-filters.js
+  - /assets/js/sound-toggle.js
+  - /assets/js/bottom-swipeable-navbar.js
 ---
-
-
-
 
 <div class="magical-bean-pill-section">
     <div id="magical-bean">
@@ -12,14 +14,96 @@ sitemap: false
         <div id="eye2"></div>
         <div id="smile"></div>
 
-        <!-- Permanently Open Pills -->
-        <a target="_blank" href="/designs/" class="bean-pill pill-left">Designs</a>
-        <a target="_blank" href="/projects/" class="bean-pill pill-right">Projects</a>
-
+        <!-- Changed from links (<a>) to buttons so they act as toggles! -->
+        <button id="btn-designs" class="bean-pill pill-left" onclick="togglePortfolio('designs')">Designs</button>
+        <button id="btn-projects" class="bean-pill pill-right" onclick="togglePortfolio('projects')">Projects</button>
     </div>
 </div>
 
-<!-- Custom Footer -->
-{% include custom_footer.html %}
+<!-- ========================================== -->
+<!-- PROJECTS CONTENT (Visible by Default)      -->
+<!-- ========================================== -->
+<div id="content-projects" style="display: block;">
+  <div class="projects" markdown="0">
+    <p class="note"><strong>Tip:</strong> Click any card to view more details</p>
+    {% include project-grid.html %}
+  </div>
 
-<script src="{{ '/assets/js/bean-menu-interaction.js' | relative_url }}" defer></script>
+  <br>
+
+  {::nomarkdown}
+  {% include status-update.html
+    label="Status Update"
+    tone="ocean"
+    title="Portfolio in progress"
+    date="2026-08-25"
+    body="More Portfolio Stories coming soon"
+  %}
+  {:/nomarkdown}
+</div>
+
+<!-- ========================================== -->
+<!-- DESIGNS CONTENT (Hidden by Default)        -->
+<!-- ========================================== -->
+<div id="content-designs" style="display: none;">
+  <div class="designs-row">
+    <h1>Designs</h1>
+    <div class="water-button" role="button" aria-pressed="false" tabindex="0">
+        <span>Audio Off</span>
+        <div class="liquid"></div>
+    </div>
+  </div>
+
+  <div>
+    <p class="note">Tap a card for fullscreen. Turn on Audio for videos with sound.</p>
+  </div>
+
+  {% include gallery_of_designs.html %}
+
+  <div id="audioToast" class="audio-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</div>
+
+<br>
+
+<div markdown="0">
+  <!-- Custom Footer -->
+  {% include custom_footer.html %}
+</div>
+
+<!-- Required Scripts -->
+<script defer src="{{ '/assets/js/gallery-of-designs.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/project-filters.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/bottom-swipeable-navbar.js' | relative_url }}"></script>
+
+<script>
+    function togglePortfolio(section) {
+      const projectsContent = document.getElementById('content-projects');
+      const designsContent = document.getElementById('content-designs');
+      const btnProjects = document.getElementById('btn-projects');
+      const btnDesigns = document.getElementById('btn-designs');
+  
+      if (section === 'projects') {
+        // Show Projects, Hide Designs
+        projectsContent.style.display = 'block';
+        designsContent.style.display = 'none';
+        
+        // Optional: Add a CSS class to dim the inactive button
+        btnProjects.style.opacity = '1';
+        btnDesigns.style.opacity = '0.6';
+      } else if (section === 'designs') {
+        // Show Designs, Hide Projects
+        designsContent.style.display = 'block';
+        projectsContent.style.display = 'none';
+        
+        // Optional: Add a CSS class to dim the inactive button
+        btnDesigns.style.opacity = '1';
+        btnProjects.style.opacity = '0.6';
+      }
+    }
+  
+    // Set the initial state when the page loads
+    document.addEventListener("DOMContentLoaded", () => {
+      togglePortfolio('projects'); // Start with projects open!
+    });
+  </script>
+  

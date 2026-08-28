@@ -1194,6 +1194,7 @@ hr, .hr {
 
 /* Menu items with WORDS */
 .fab-menu .menu-item {
+  cursor: default; // change to pointer when ready for a link (this is for just text)
   display: flex;
   align-items: center;
   justify-content: center;
