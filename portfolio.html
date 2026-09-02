@@ -77,31 +77,8 @@ page_scripts:
 </div>
 
 <!-- Required Scripts -->
+<script defer src="{{ '/assets/js/portfolio-tabs.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/gallery-of-designs.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/project-filters.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/bottom-swipeable-navbar.js' | relative_url }}"></script>
 
-<script>
-  function switchArtTab(section) {
-    const btnProjects = document.getElementById('btn-projects');
-    const btnDesigns = document.getElementById('btn-designs');
-    
-    const projectsContent = document.getElementById('content-projects');
-    const designsContent = document.getElementById('content-designs');
-
-    if (section === 'projects') {
-      btnProjects.classList.add('active');
-      btnDesigns.classList.remove('active');
-
-      projectsContent.style.display = 'block';
-      designsContent.style.display = 'none';
-
-    } else if (section === 'designs') {
-      btnDesigns.classList.add('active');
-      btnProjects.classList.remove('active');
-
-      designsContent.style.display = 'block';
-      projectsContent.style.display = 'none';
-    }
-  }
-</script>
