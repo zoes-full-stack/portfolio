@@ -14,12 +14,19 @@ function switchArtTab(section) {
         projectsContent.style.display = 'block';
         designsContent.style.display = 'none';
 
+        // CLEANS THE URL: Removes the #hash without reloading the page
+        history.replaceState(null, null, window.location.pathname + window.location.search);
+
     } else if (section === 'designs') {
         btnDesigns.classList.add('active');
         btnProjects.classList.remove('active');
 
         designsContent.style.display = 'block';
         projectsContent.style.display = 'none';
+
+        // RESTORES THE URL: Looks at the user's saved tab, or defaults to illustrations
+        const savedTab = localStorage.getItem('lastDesignTab') || 'illustrations';
+        history.replaceState(null, null, '#' + savedTab);
     }
 }
 
