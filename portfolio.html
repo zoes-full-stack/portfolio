@@ -8,16 +8,24 @@ page_scripts:
   - /assets/js/bottom-swipeable-navbar.js
 ---
 
-<div class="magical-bean-pill-section">
-    <div id="magical-bean">
-        <div id="eye1"></div>
-        <div id="eye2"></div>
-        <div id="smile"></div>
+<div class="art-toggle-wrapper">
+  
+  <!-- 1. Left: Projects Button -->
+  <button id="btn-projects" class="art-toggle-btn active" onclick="switchArtTab('projects')">
+    <div class="art-img projects-img"></div>
+  </button>
+  
+  <!-- 2. Center: The Anchor Heading -->
+  <div class="portfolio-center-anchor">
+    <h1>Portfolio</h1>
+    <p>Choose a path to explore</p> <!-- Optional gentle subtitle -->
+  </div>
+  
+  <!-- 3. Right: Designs Button -->
+  <button id="btn-designs" class="art-toggle-btn" onclick="switchArtTab('designs')">
+    <div class="art-img designs-img"></div>
+  </button>
 
-        <!-- Changed from links (<a>) to buttons so they act as toggles! -->
-        <button id="btn-designs" class="bean-pill pill-left" onclick="togglePortfolio('designs')">Designs</button>
-        <button id="btn-projects" class="bean-pill pill-right" onclick="togglePortfolio('projects')">Projects</button>
-    </div>
 </div>
 
 <!-- ========================================== -->
@@ -45,16 +53,16 @@ page_scripts:
 <!-- ========================================== -->
 <div id="content-designs" style="display: none;">
   <div class="designs-row">
-    <h1>Designs</h1>
+    <p class="note">Tap a card for fullscreen. Turn on Audio for videos with sound.</p>
     <div class="water-button" role="button" aria-pressed="false" tabindex="0">
         <span>Audio Off</span>
         <div class="liquid"></div>
     </div>
   </div>
 
-  <div>
+  <!-- <div>
     <p class="note">Tap a card for fullscreen. Turn on Audio for videos with sound.</p>
-  </div>
+  </div> -->
 
   {% include gallery_of_designs.html %}
 
@@ -74,33 +82,26 @@ page_scripts:
 <script defer src="{{ '/assets/js/bottom-swipeable-navbar.js' | relative_url }}"></script>
 
 <script>
-    function togglePortfolio(section) {
-      const projectsContent = document.getElementById('content-projects');
-      const designsContent = document.getElementById('content-designs');
-      const btnProjects = document.getElementById('btn-projects');
-      const btnDesigns = document.getElementById('btn-designs');
-  
-      if (section === 'projects') {
-        // Show Projects, Hide Designs
-        projectsContent.style.display = 'block';
-        designsContent.style.display = 'none';
-        
-        // Optional: Add a CSS class to dim the inactive button
-        btnProjects.style.opacity = '1';
-        btnDesigns.style.opacity = '0.6';
-      } else if (section === 'designs') {
-        // Show Designs, Hide Projects
-        designsContent.style.display = 'block';
-        projectsContent.style.display = 'none';
-        
-        // Optional: Add a CSS class to dim the inactive button
-        btnDesigns.style.opacity = '1';
-        btnProjects.style.opacity = '0.6';
-      }
+  function switchArtTab(section) {
+    const btnProjects = document.getElementById('btn-projects');
+    const btnDesigns = document.getElementById('btn-designs');
+    
+    const projectsContent = document.getElementById('content-projects');
+    const designsContent = document.getElementById('content-designs');
+
+    if (section === 'projects') {
+      btnProjects.classList.add('active');
+      btnDesigns.classList.remove('active');
+
+      projectsContent.style.display = 'block';
+      designsContent.style.display = 'none';
+
+    } else if (section === 'designs') {
+      btnDesigns.classList.add('active');
+      btnProjects.classList.remove('active');
+
+      designsContent.style.display = 'block';
+      projectsContent.style.display = 'none';
     }
-  
-    // Set the initial state when the page loads
-    document.addEventListener("DOMContentLoaded", () => {
-      togglePortfolio('projects'); // Start with projects open!
-    });
-  </script>
+  }
+</script>

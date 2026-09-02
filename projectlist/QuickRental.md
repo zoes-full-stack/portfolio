@@ -91,7 +91,7 @@ View Our:
         <a href="/projectlist/FAAIR/" class="flip-title"><span>FAAIR</span></a> <time class="faded fine" datetime="2021-05-30T00:00:00+00:00">2023 - 2025</time>
       </li>
       <li class="h4"> 
-        <a href="/projectlist/RigidAprilTagBundleTracking//" class="flip-title"><span>Accurate AprilGroup Tracking</span></a> <time class="faded fine" datetime="2021-05-30T00:00:00+00:00">May 2021</time>
+        <a href="/projectlist/RigidAprilTagBundleTracking//" class="flip-title"><span>Rigid AprilTag Bundle Tracking</span></a> <time class="faded fine" datetime="2021-05-30T00:00:00+00:00">May 2021</time>
       </li>
       <li class="h4">
         <a href="/projectlist/AntiPlasti/" class="flip-title"><span>AntiPlasti</span></a> <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">10 Feb 2019</time>

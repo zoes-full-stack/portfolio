@@ -26,14 +26,9 @@ $theme-color: rgba(22, 52, 66, 0.98); // Deep teal for the industry pills
 
   &:hover {
     .portfolio-bounce-btn {
-      background-color: #fd9d4e;
-      color: white;
+      background-color: #9affed;
+      color: #062837;
       animation: hoverBounce 0.8s cubic-bezier(0.28, 0.84, 0.42, 1) forwards;
-    }
-
-    // ✨ Triggers the dot explosion on hover
-    .portfolio-bounce-btn::after {
-      animation: glowExplosion 1.5s ease-out forwards;
     }
 
     .shadow {
@@ -47,10 +42,11 @@ $theme-color: rgba(22, 52, 66, 0.98); // Deep teal for the industry pills
   display: inline-block;
   font-size: 0.95rem;
   padding: 0.5rem 1.25rem; 
-  background-color: #2b8a8e; // Ocean Teal
-  color: white;
+  background-color: #062837; 
+  color: #fff;
   text-decoration: none;
-  border-radius: 20px 20px 5px 5px;
+  border-radius: 60px 20px 60px 20px;
+  border: 1px solid #062837 !important;
   transform-origin: 100% 100%; 
 
   // The Invisible Dot Base (used to generate the shadow dots)
@@ -100,31 +96,28 @@ $theme-color: rgba(22, 52, 66, 0.98); // Deep teal for the industry pills
   100% { opacity: 0; transform: scale(1); }
 }
 
-// ✨ The Glow Dots Animation
-@keyframes glowExplosion {
-  0% {
-    opacity: 0;
-    // All shadows start tightly packed in the center
-    box-shadow:
-      0 0 0 0 rgba(253, 157, 78, 0.8),
-      0 0 0 0 rgba(253, 157, 78, 0.8),
-      0 0 0 0 rgba(253, 157, 78, 0.8),
-      0 0 0 0 rgba(253, 157, 78, 0.8);
+@media (max-width: 768px) {
+  .about-intro-action {
+    // 1. The Card Styling (Matches the Industry Pills)
+    background-color: white; 
+    border-radius: 20px;
+    border: 1px solid #062837;
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(43, 138, 142, 0.15); // Soft teal glow
+    margin: 0.5rem 0 2.5rem 0; // Gives it breathing room from the surrounding text
+
+    // 2. The Layout Inside the Card
+    display: flex; 
+    flex-direction: column; // Stacks everything vertically
+    align-items: center;    // Centers items horizontally
+    text-align: center;
+    line-height: 1.6;
   }
-  15% {
-    opacity: 1; // Fades in quickly as the button jumps
-  }
-  80% {
-    opacity: 0; // Fades out smoothly before the animation ends
-    // The dots shoot out in 4 different directions! (X-axis, Y-axis, Blur, Spread, Color)
-    box-shadow:
-      -35px -35px 8px 1px rgba(253, 157, 78, 0.9), // Top Left
-      35px -45px 6px 2px rgba(253, 157, 78, 0.7),  // Top Right
-      45px -15px 10px 1px rgba(253, 157, 78, 0.6), // Far Right
-      -40px -5px 6px 3px rgba(253, 157, 78, 0.8);  // Far Left
-  }
-  100% {
-    opacity: 0; // Ensures it stays hidden
+
+  // 3. Fixes the button spacing inside the card
+  .portfolio-btn-wrapper {
+    margin-top: 1rem; // Adds a nice gap above the button
+    margin-left: 0;   // Resets the desktop margin so it centers perfectly
   }
 }
 
@@ -149,7 +142,7 @@ $theme-color: rgba(22, 52, 66, 0.98); // Deep teal for the industry pills
   // 2. The Mascot Image 
   .hello-mascot-wrapper {
     margin-top: 2rem;
-    width: 80%;
+    width: 100%;
     align-self: center;
     position: relative; 
     cursor: pointer;
@@ -188,36 +181,63 @@ $theme-color: rgba(22, 52, 66, 0.98); // Deep teal for the industry pills
     }
   }
 
-  // 3. The Industry Pill List
+  // --- Base List Styles (Desktop) ---
   .industry-pill-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; // Standardized from 'left'
-    gap: 12px;
-    margin: 1rem 0 2rem 0;
-    padding: 0;
+    gap: 0.75rem; 
     list-style: none;
+    padding: 0;
+    margin: 1rem 0 2rem 0;
 
     li {
-      color: #4b5563; 
-      background: white;
-      border: 1px solid rgba(235, 250, 252, 0.95); 
-      padding: 0.3rem 1.2rem;
-      border-radius: 10px; 
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      transition: all 0.3s ease;
-      cursor: default;
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
 
-      // Pill Hover State
       &:hover {
-        background: $theme-color;
-        color: white;
-        border-color: $theme-color;
+        transform: translateY(-2px);
       }
     }
   }
+
+  // --- The Ocean Depth Gradient ---
+  // Starts bright cyan, descends into deep navy
+  .industry-pill-list li:nth-child(1) { background-color: #9affed; color: #062837; } 
+  .industry-pill-list li:nth-child(2) { background-color: #84e6d9; color: #062837; }
+  .industry-pill-list li:nth-child(3) { background-color: #6dccc4; color: #062837; }
+  .industry-pill-list li:nth-child(4) { background-color: #57b3b0; color: #ffffff; } // Text flips to white for contrast!
+  .industry-pill-list li:nth-child(5) { background-color: #40999b; color: #ffffff; }
+  .industry-pill-list li:nth-child(6) { background-color: #2a8087; color: #ffffff; }
+  .industry-pill-list li:nth-child(7) { background-color: #15545f; color: #ffffff; }
+  .industry-pill-list li:nth-child(8) { background-color: #062837; color: #ffffff; }
+
+
+  // --- Mobile Styling ---
+  @media (max-width: 768px) {
+    .industry-card {
+      background-color: white; 
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 25px rgba(43, 138, 142, 0.15); // A soft teal glow
+      margin: 2rem 0;
+    }
+
+    .industry-pill-list {
+      justify-content: center; // Centers the pills
+      gap: 0.4rem; // Brings them much closer together
+      
+      li {
+        font-size: 0.85rem; // Slightly smaller text for mobile
+        padding: 0.4rem 1rem;
+      }
+    }
+  }
+
 }
 
 // --- Bubble Button Components ---
