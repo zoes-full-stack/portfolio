@@ -18,6 +18,13 @@
   outline: none;
   transition: transform 0.2s ease; // Adds a tiny physical click feeling
 
+  -webkit-tap-highlight-color: transparent;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
   // A tiny "squish" effect when physically clicking down
   &:active {
     transform: scale(0.97);
@@ -41,7 +48,7 @@
 
 // 1. Neutral (Default)
 .projects-img {
-  background-image: url('/images/Projects_Designs/Project_Neutral.png');
+  background-image: url('/images/Projects_Designs/Projects_Neutral.png');
 }
 
 // 2. Hover (Only triggers if NOT active)
