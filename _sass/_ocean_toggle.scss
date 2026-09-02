@@ -101,3 +101,25 @@
     font-style: italic; // Gives it a gentle, storybook feel
   }
 }
+
+@media (max-width: 768px) {
+  .art-toggle-wrapper {
+    flex-wrap: wrap; // Allows items to wrap to a new line
+    justify-content: space-evenly; // Distributes the two buttons perfectly
+    gap: 1rem; // Adds breathing room
+    margin: 1.5rem 0; // Slightly tighter margins for mobile
+  }
+
+  // ✨ Magic Trick: Forces the heading to the top row
+  .portfolio-center-anchor {
+    width: 100%; 
+    order: -1; // Tells Flexbox to put this item first, before the buttons!
+    margin-bottom: 0.5rem; 
+  }
+
+  // Scales down the artwork so both fit side-by-side on small screens
+  .art-img {
+    width: 145px;  // Scaled down from 220px
+    height: 105px; // Scaled down to maintain the aspect ratio
+  }
+}
