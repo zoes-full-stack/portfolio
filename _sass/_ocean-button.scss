@@ -98,6 +98,22 @@ $color_1: #fff;
   width: 100%;
 }
 
+@media (max-width: 768px) {
+	.designs-row {
+	  display: flex;
+	  flex-direction: column; // Stacks the text and button vertically
+	  align-items: center; 
+	  text-align: center;   
+	  gap: 1rem;             
+	  margin-bottom: 1.5rem; 
+	}
+	
+	// Removes default paragraph margins so it centers perfectly with the gap
+	.designs-row .note {
+	  margin: 0; 
+	}
+  }
+
 .button--3 {
 	--color_1: #1b70a1;
 	--color_2: #368cc1;
