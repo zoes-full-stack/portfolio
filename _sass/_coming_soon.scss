@@ -23,7 +23,7 @@
   /* ✅ ensure the section has a real height */
   min-height: clamp(520px, 72vh, 900px);
 
-  padding: clamp(28px, 6vh, 70px) 16px;
+  padding: clamp(28px, 6vh, 70px) 46px;
 
   display: flex;
   flex-direction: column;
@@ -173,12 +173,15 @@
 
   .headline {
     p {
-      margin: clamp(18px, 3vh, 26px) 0 0;
+      // Scaled down the top margin slightly to match the smaller text
+      margin: clamp(11px, 2vh, 16px) 0 0;
       color: var(--pale);
       font-weight: 300;
       text-transform: uppercase;
-      letter-spacing: clamp(6px, 1.6vw, 18px);
-      font-size: clamp(28px, 5vw, 36px);
+      
+      // The new 40% smaller clamps!
+      letter-spacing: clamp(4px, 1vw, 11px);
+      font-size: clamp(18px, 3vw, 30px);
     }
   }
 
@@ -188,8 +191,8 @@
       color: rgba(183, 194, 200, 0.82);
       font-weight: 300;
       text-transform: uppercase;
-      letter-spacing: clamp(4px, 1.2vw, 14px);
-      font-size: clamp(22px, 3vw, 26px);
+      letter-spacing: clamp(4px, 1vw, 11px);
+      font-size: clamp(16px, 2vw, 24px);
     }
   }
 

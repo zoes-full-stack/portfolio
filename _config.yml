@@ -62,8 +62,8 @@ menu:
   #   url:               /skills/ 
   - title:             About
     url:               /
-  - title:             Labs
-    url:               /labs/
+  - title:             The Lab
+    url:               /the-lab/
   # - title:             /test/
   #   url:                Test
     # /Resume/GabrielaSewdhan_Resume.pdf
