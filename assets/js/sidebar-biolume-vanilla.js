@@ -673,6 +673,7 @@
 
         tentacles: Math.floor(rand(7, 12)),
         beads: Math.floor(rand(10, 16)),
+        spawnT: 0, // Tracks how long the jelly has been alive
       };
     };
 
@@ -981,7 +982,7 @@
     };
 
     // ----------------- Jellyfish -----------------
-    const maybeJellyTrail = (j) => {
+    const maybeJellyTrail = (j, fade) => {
       if (j.lastTrailX == null) {
         j.lastTrailX = j.x;
         j.lastTrailY = j.y;
@@ -998,7 +999,7 @@
           addWakePoint(
             j.lastTrailX + dx * t,
             j.lastTrailY + dy * t,
-            CFG.jellyTrailStrength,
+            CFG.jellyTrailStrength * fade, // Fades the trail in alongside the jelly
             0.9
           );
         }
@@ -1015,8 +1016,9 @@
       for (const j of jellies) {
         j.t += dt;
         j.pulse += dt * j.pulseSpd;
-        const pulse = Math.sin(j.pulse);
+        j.spawnT += dt; // Increase life timer
 
+        const pulse = Math.sin(j.pulse);
         const squish = pulse * 0.09;
         const sx = 1 + squish;
         const sy = 1 - squish * 0.7;
@@ -1029,11 +1031,13 @@
         j.x += (j.vx * swim + fx * 18) * dt * 0.38;
         j.y += (j.vy + Math.sin(j.t * j.wiggleSpd) * 6 + fy * 12) * dt * 0.22;
 
+        // Reset spawn timer when they respawn
         if (j.x < -j.r * 3 || j.x > W + j.r * 3 || j.y < -j.r * 3 || j.y > H + j.r * 3) {
           const pt = randomPointOutsideObstacles(CFG.obstaclePadding + CFG.spawn.padExtra + j.r * 3.2);
           j.x = pt.x;
           j.y = pt.y;
           j.lastTrailX = j.lastTrailY = null;
+          j.spawnT = 0; // Starts the fade-in over again!
         }
 
         if (pointer.active) {
@@ -1055,7 +1059,13 @@
         resolveCircleAABB(c);
         j.x = c.x; j.y = c.y;
 
-        maybeJellyTrail(j);
+        // Calculate fade (0 to 1 over 3.0 seconds)
+        const fade = clamp(j.spawnT / 3.0, 0, 1);
+        maybeJellyTrail(j, fade);
+
+        // Wrap ALL drawing in one save() block to apply the transparency fade
+        ctx.save();
+        ctx.globalAlpha = fade; 
 
         // glow halo
         const heat = j.heat;
@@ -1070,7 +1080,6 @@
         ctx.fill();
 
         // bell
-        ctx.save();
         ctx.translate(j.x, j.y);
         ctx.scale(sx, sy);
 
