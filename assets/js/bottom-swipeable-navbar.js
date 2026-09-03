@@ -1,10 +1,13 @@
-(function initBottomNavbar() {
-  // Now these are safely trapped inside this function!
+function initBottomNavbar() {
   const navbar = document.querySelector('.bottom-navbar');
   const navItems = document.querySelector('.bottom-navbar-items');
 
   // Safety check: if there's no navbar on this page, stop right here
   if (!navbar || !navItems) return;
+
+  // Safety check 2: Prevent attaching the events multiple times if the page re-renders
+  if (navbar.dataset.navBound === "1") return;
+  navbar.dataset.navBound = "1";
 
   let lastScrollY = window.scrollY;
   let scrollTimeout;
@@ -60,5 +63,11 @@
 
   // Optional: hide if they click a link
   navItems.addEventListener('click', hideHint, { passive: true });
+}
 
-})(); // <-- These empty brackets tell the function to run itself instantly
+// ==========================================
+// The Magic Hooks (Ensures it runs on SPA navigation)
+// ==========================================
+document.addEventListener("DOMContentLoaded", initBottomNavbar, { passive: true });
+document.addEventListener("hy-push-state-load", initBottomNavbar, { passive: true });
+document.addEventListener("turbo:load", initBottomNavbar, { passive: true });
