@@ -9,7 +9,7 @@ sitemap: false
     <div class ="row_project">
       <div class="column_project_l">
         <div class="post-date">
-          <time datetime="2025-12-01T00:00:00+00:00">Dec 2025</time> in <a href="/projects/" class="flip-title">Projects</a>
+          <time datetime="2025-12-01T00:00:00+00:00">Dec 2025</time>
         </div>
       </div>
       <div class="column_project_l2">
