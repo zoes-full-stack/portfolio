@@ -10,8 +10,8 @@ sitemap: false
   label="Status update"
   tone="ocean"
   title="WiseOceans update"
-  date="2026-01-10"
-  body='My team and I have picked this project back up with <a href="https://wiseoceans.com/" target="_blank" rel="noopener">WiseOceans</a>. Updates coming soon ✅'
+  date="2026-09-03"
+  body='This project is on hold atm. We will be working with  <a href="https://wiseoceans.com/" target="_blank" rel="noopener">WiseOceans</a>.'
 %}
 {:/nomarkdown}
 
@@ -20,7 +20,7 @@ sitemap: false
     <div class ="row_project">
       <div class="column_project_l">
         <div class="post-date"> 
-          <time datetime="2020-05-31T00:00:00+00:00">10 Feb 2019</time> in <a href="/projects/" class="flip-title">Projects</a>
+          <time datetime="2020-05-31T00:00:00+00:00">10 Feb 2019</time>
         </div>
       </div>
       <div class="column_project_l2">
@@ -74,9 +74,9 @@ This will notify the government and community where the pollution occurs and res
     <h2 class="hr-bottom">Other Projects</h2>
     <ul class="related-posts">
       <li class="h4"> 
-        <li class="h4"> 
         <a href="/projectlist/FAAIR/" class="flip-title"><span>FAAIR</span></a> <time class="faded fine" datetime="2021-05-30T00:00:00+00:00">2023 - 2025</time>
       </li>
+      <li class="h4"> 
         <a href="/projectlist/RigidAprilTagBundleTracking//" class="flip-title"><span>Rigid AprilTag Bundle Tracking</span></a> <time class="faded fine" datetime="2021-05-30T00:00:00+00:00">May 2021</time>
       </li>
       <li class="h4"> 
