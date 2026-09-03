@@ -140,7 +140,7 @@ bindAudioDelegationOnce();
     ],
 
     baking: [
-      { kind: "image", title: "My Sweet, Beautiful Soulmate and His Birthday Cake!", src: "/images/baking/soulmate_cake.png", w: 1080, h: 1080 },
+      { kind: "image", title: "My Sweet, Beautiful Soulmate and his Birthday Cake!", src: "/images/baking/soulmate_cake.png", w: 1080, h: 1080 },
       { kind: "image", title: "Father's Day Red Velvet with Cream Cheese Icing Cake", src: "/images/baking/dad_cake.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Fudgy Brownies with Crackly Top", src: "/images/baking/brownies.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "White Chocolate Snow Men", src: "/images/baking/choc_snow.jpg", w: 1080, h: 1080 },
