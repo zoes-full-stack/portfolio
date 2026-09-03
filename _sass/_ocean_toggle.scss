@@ -48,17 +48,17 @@
 
 // 1. Neutral (Default)
 .projects-img {
-  background-image: url('/images/Projects_Designs/Projects_Neutral.png');
+  background-image: url('/images/Projects_Designs/Projects_Neutral.webp');
 }
 
 // 2. Hover (Only triggers if NOT active)
 .art-toggle-btn:hover:not(.active) .projects-img {
-  background-image: url('/images/Projects_Designs/Projects_Hover.png');
+  background-image: url('/images/Projects_Designs/Projects_Hover.webp');
 }
 
 // 3. Active (Clicked)
 .art-toggle-btn.active .projects-img {
-  background-image: url('/images/Projects_Designs/Projects_Active.png');
+  background-image: url('/images/Projects_Designs/Projects_Active.webp');
 }
 
 
@@ -68,17 +68,17 @@
 
 // 1. Neutral (Default)
 .designs-img {
-  background-image: url('/images/Projects_Designs/Designs_Neutral.png');
+  background-image: url('/images/Projects_Designs/Designs_Neutral.webp');
 }
 
 // 2. Hover (Only triggers if NOT active)
 .art-toggle-btn:hover:not(.active) .designs-img {
-  background-image: url('/images/Projects_Designs/Designs_Hover.png');
+  background-image: url('/images/Projects_Designs/Designs_Hover.webp');
 }
 
 // 3. Active (Clicked)
 .art-toggle-btn.active .designs-img {
-  background-image: url('/images/Projects_Designs/Designs_Active.png');
+  background-image: url('/images/Projects_Designs/Designs_Active.webp');
 }
 
 .portfolio-center-anchor {
