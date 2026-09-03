@@ -26,8 +26,8 @@ $theme-color: rgba(22, 52, 66, 0.98); // Deep teal for the industry pills
 
   &:hover {
     .portfolio-bounce-btn {
-      background-color: #9affed;
-      color: #062837;
+      background-color: #135e7e;
+      color: #fff;
       animation: hoverBounce 0.8s cubic-bezier(0.28, 0.84, 0.42, 1) forwards;
     }
 
