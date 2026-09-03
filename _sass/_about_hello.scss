@@ -1,0 +1,336 @@
+// --- Variables ---
+$button-bg: #222; // The default dark state
+$action-color: #2b8a8e; // Ocean Teal for the hover state
+$bubble-darken: 10%; // How much darker the bubbles get on hover
+$theme-color: rgba(22, 52, 66, 0.98); // Deep teal for the industry pills
+
+// --- Global Utilities ---
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+// --- The Flexbox Container ---
+.about-intro-action {
+  display: block; 
+  text-align: left;
+  line-height: 2.2;
+}
+
+// --- The Button & Shadow Wrapper ---
+.portfolio-btn-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 0 0.25rem; 
+  vertical-align: middle;
+  cursor: pointer; 
+
+  &:hover {
+    .portfolio-bounce-btn {
+      background-color: #9affed;
+      color: #062837;
+      animation: hoverBounce 0.8s cubic-bezier(0.28, 0.84, 0.42, 1) forwards;
+    }
+
+    .shadow {
+      animation: shadowPulse 0.8s cubic-bezier(0.28, 0.84, 0.42, 1) forwards;
+    }
+  }
+}
+
+.portfolio-bounce-btn {
+  position: relative; // CRITICAL: Keeps the invisible dot centered inside the button
+  display: inline-block;
+  font-size: 0.95rem;
+  padding: 0.5rem 1.25rem; 
+  background-color: #062837; 
+  color: #fff;
+  text-decoration: none;
+  border-radius: 60px 20px 60px 20px;
+  border: 1px solid #062837 !important;
+  transform-origin: 100% 100%; 
+
+  // The Invisible Dot Base (used to generate the shadow dots)
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    border-radius: 50%; // Makes the shadows perfectly round
+    transform: translate(-50%, -50%);
+    pointer-events: none; // Prevents the dots from blocking clicks
+    opacity: 0;
+  }
+}
+
+// --- The Floor Shadow ---
+.portfolio-btn-wrapper .shadow {
+  position: absolute;
+  bottom: -6px; 
+  left: 10%;
+  width: 80%;
+  height: 6px;
+  background: radial-gradient(closest-side, rgba(0, 0, 0, 0.15), transparent);
+  opacity: 0; 
+}
+
+// --- Pure CSS Keyframe Animations ---
+@keyframes hoverBounce {
+  0%   { transform: translateY(0) rotate(0deg); }
+  15%  { transform: translateY(-12px) rotate(-6deg); }
+  30%  { transform: translateY(-12px) rotate(4deg); }
+  50%  { transform: translateY(0) rotate(0deg); }
+  65%  { transform: translateY(-5px) rotate(0deg); }
+  80%  { transform: translateY(0) rotate(0deg); }
+  90%  { transform: translateY(-2px) rotate(0deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes shadowPulse {
+  0%   { opacity: 0; transform: scale(1); }
+  15%  { opacity: 1; transform: scale(1.1); }
+  30%  { opacity: 1; transform: scale(1.1); }
+  50%  { opacity: 0; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .about-intro-action {
+    // 1. The Card Styling (Matches the Industry Pills)
+    background-color: white; 
+    border-radius: 20px;
+    border: 1px solid #062837;
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(43, 138, 142, 0.15); // Soft teal glow
+    margin: 0.5rem 0 2.5rem 0; // Gives it breathing room from the surrounding text
+
+    // 2. The Layout Inside the Card
+    display: flex; 
+    flex-direction: column; // Stacks everything vertically
+    align-items: center;    // Centers items horizontally
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  // 3. Fixes the button spacing inside the card
+  .portfolio-btn-wrapper {
+    margin-top: 1rem; // Adds a nice gap above the button
+    margin-left: 0;   // Resets the desktop margin so it centers perfectly
+  }
+}
+
+// TODO: SEE WHAT TO REMOVE FROM THIS FILE
+
+// --- Main About Section ---
+.about-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; // Aligns children to the start by default
+
+  h1, p {
+    text-align: left;
+  }
+
+  // 1. The Inline Call to Action
+  .about-intro-action {
+    line-height: 2;
+  }
+
+  // 2. The Mascot Image 
+  .hello-mascot-wrapper {
+    margin-top: 2rem;
+    width: 100%;
+    align-self: center;
+    position: relative; 
+    cursor: pointer;
+
+    .hello-mascot-base {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block; 
+      transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+    }
+
+    .hello-mascot-hover {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0; 
+      transform: scale(0.97) translateY(4px); 
+      transition: opacity 0.7s ease-in-out, transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1); 
+    }
+
+    // Mascot Hover State
+    &:hover {
+      .hello-mascot-base {
+        opacity: 0; 
+        transform: scale(1.03); 
+      }
+      
+      .hello-mascot-hover {
+        opacity: 1; 
+        transform: scale(1) translateY(0); 
+      }
+    }
+  }
+
+  // --- Base List Styles (Desktop) ---
+  .industry-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem; 
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 2rem 0;
+
+    li {
+      padding: 0.5rem 1.25rem;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-align: center;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  // --- The Ocean Depth Gradient ---
+  // Starts bright cyan, descends into deep navy
+  .industry-pill-list li:nth-child(1) { background-color: #9affed; color: #062837; } 
+  .industry-pill-list li:nth-child(2) { background-color: #84e6d9; color: #062837; }
+  .industry-pill-list li:nth-child(3) { background-color: #6dccc4; color: #062837; }
+  .industry-pill-list li:nth-child(4) { background-color: #57b3b0; color: #ffffff; } // Text flips to white for contrast!
+  .industry-pill-list li:nth-child(5) { background-color: #40999b; color: #ffffff; }
+  .industry-pill-list li:nth-child(6) { background-color: #2a8087; color: #ffffff; }
+  .industry-pill-list li:nth-child(7) { background-color: #15545f; color: #ffffff; }
+  .industry-pill-list li:nth-child(8) { background-color: #062837; color: #ffffff; }
+
+
+  // --- Mobile Styling ---
+  @media (max-width: 768px) {
+    .industry-card {
+      background-color: white; 
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 15px rgba(43,138,142,0.15); // A soft teal glow
+      margin: 2rem 0;
+    }
+
+    .industry-pill-list {
+      justify-content: center; // Centers the pills
+      gap: 0.4rem; // Brings them much closer together
+      
+      li {
+        font-size: 0.85rem; // Slightly smaller text for mobile
+        padding: 0.4rem 1rem;
+      }
+    }
+  }
+
+}
+
+// --- Bubble Button Components ---
+// Kept outside of .about-container so you can reuse this button anywhere on the site!
+
+.button--bubble__container {
+  position: relative;
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.button {
+  -webkit-font-smoothing: antialiased;
+  background-color: $button-bg;
+  border: none;
+  border-radius: 50px; 
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  user-select: none;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  transition: all 0.1s ease-out;
+
+  &:hover {
+    background-color: $action-color;
+    color: #fff;
+  }
+  
+  &:active {
+    transform: scale(0.95);
+  }
+
+  // Bubble Specific Modifier (BEM architecture)
+  &--bubble {
+    position: relative;
+    z-index: 2;
+    background: $button-bg;
+
+    &:hover + .button--bubble__effect-container .circle,
+    &:hover + .button--bubble__effect-container .button {
+      background: darken($action-color, $bubble-darken); 
+    }
+
+    &:active + .button--bubble__effect-container {
+      transform: scale(0.95);
+    }
+  }
+}
+
+// The Gooey Effect Container 
+.button--bubble__effect-container {
+  position: absolute;
+  display: block;
+  width: 200%;
+  height: 400%;
+  top: -150%;
+  left: -50%;
+  -webkit-filter: url("#goo");
+  filter: url("#goo");
+  transition: all 0.1s ease-out;
+  pointer-events: none;
+
+  .circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    background: $button-bg;
+    transition: background 0.1s ease-out;
+
+    &.top-left {
+        top: 40%;
+        left: 27%;
+    }
+
+    &.bottom-right {
+        bottom: 40%;
+        right: 27%;
+    }
+  }
+
+  .effect-button {
+    position: absolute;
+    width: 50%;
+    height: 25%;
+    top: 50%;
+    left: 25%;
+    z-index: 1;
+    transform: translateY(-50%);
+    background: $button-bg;
+    transition: background 0.1s ease-out;
+  }
+}

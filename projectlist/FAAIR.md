@@ -92,7 +92,7 @@ See our:
     <h2 class="hr-bottom">Other Projects</h2>
     <ul class="related-posts">
       <li class="h4"> 
-        <a href="/projectlist/RigidAprilTagBundleTracking/" class="flip-title"><span>Accurate AprilGroup Tracking</span></a> <time class="faded fine" datetime="2021-05-30T00:00:00+00:00">May 2021</time>
+        <a href="/projectlist/RigidAprilTagBundleTracking/" class="flip-title"><span>Rigid AprilTag Bundle Tracking</span></a> <time class="faded fine" datetime="2021-05-30T00:00:00+00:00">May 2021</time>
       </li>
         <li class="h4"> 
         <a href="/projectlist/PiDronics/" class="flip-title"><span>PiDronics</span></a> <time class="faded fine" datetime="2018-12-22T00:00:00+00:00">22 Dec 2018</time>

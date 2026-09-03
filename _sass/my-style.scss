@@ -791,8 +791,9 @@ hr, .hr {
   align-items: flex-end;
   margin: 0;
   padding-top: 2rem;
-  border-radius: 0 0 20px 20px;
-  border-top: 5px #beecf4 groove;
+  border-radius: 20px;
+  // border-radius: 0 0 20px 20px;
+  // border-top: 5px #beecf4 groove;
   position: relative;
   overflow: hidden; /* keeps rounded corners clean */
   z-index: 2;
@@ -990,6 +991,51 @@ hr, .hr {
     inherit;
 }
 
+// Magical Bean PILL (Permanently Open - Designs and Projects)
+// --- The Clean Bean Container ---
+.magical-bean-pill-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 250px; // Ensures there is enough vertical space for the bean
+  background: transparent; // No background colors!
+  margin: 3rem 0; // Gives it nice breathing room above and below the section
+  position: relative;
+
+  // --- The Permanently Open Pills ---
+  .bean-pill {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); // Perfectly centers them vertically against the bean
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-50%) scale(1.05); // Smooth squish/lift
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .pill-left {
+    right: 100%; // Pushes it completely outside the left edge of the bean
+    margin-right: 20px; 
+    background-color: #2b8a8e; // Ocean Teal
+  }
+
+  .pill-right {
+    left: 100%; // Pushes it completely outside the right edge of the bean
+    margin-left: 20px; 
+    background-color: #ff0081; // Accent Pink
+  }
+}
+
 
 /* ================================
    Bean Menu Dock (inside bean)
@@ -1070,8 +1116,8 @@ hr, .hr {
 .fab-menu .menu-open-button {
   background: #EEEEEE;
   border-radius: 40px 40px 60px 60px;
-  width: 102px;
-  height: 72px;
+  width: 112px;
+  height: 82px;
   position: absolute;
   left: 50%;
   top: 90%;
@@ -1148,6 +1194,7 @@ hr, .hr {
 
 /* Menu items with WORDS */
 .fab-menu .menu-item {
+  cursor: default; // change to pointer when ready for a link (this is for just text)
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1160,7 +1207,7 @@ hr, .hr {
   display: block;
   padding: 0 10px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.1;
   text-align: center;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -1754,6 +1801,10 @@ hr, .hr {
 
 // Ocean Gradient Card
 @import "ocean-gradient-card";
+
+@import "about_hello";
+
+@import "ocean_toggle";
 
 // Contact Form
 @import "contact";

@@ -1,0 +1,84 @@
+---
+layout: page
+sitemap: false
+page_scripts:
+  - /assets/js/gallery-of-designs.js
+  - /assets/js/project-filters.js
+  - /assets/js/sound-toggle.js
+  - /assets/js/bottom-swipeable-navbar.js
+---
+
+<div class="art-toggle-wrapper">
+  
+  <!-- 1. Left: Projects Button -->
+  <button id="btn-projects" class="art-toggle-btn active" onclick="switchArtTab('projects')">
+    <div class="art-img projects-img"></div>
+  </button>
+  
+  <!-- 2. Center: The Anchor Heading -->
+  <div class="portfolio-center-anchor">
+    <h1>Portfolio</h1>
+    <p>Choose a path to explore</p> <!-- Optional gentle subtitle -->
+  </div>
+  
+  <!-- 3. Right: Designs Button -->
+  <button id="btn-designs" class="art-toggle-btn" onclick="switchArtTab('designs')">
+    <div class="art-img designs-img"></div>
+  </button>
+
+</div>
+
+<!-- ========================================== -->
+<!-- PROJECTS CONTENT (Visible by Default)      -->
+<!-- ========================================== -->
+<div id="content-projects" style="display: block;">
+  <div class="projects" markdown="0">
+    <p class="note"><strong>Tip:</strong> Click any card to view more details</p>
+    {% include project-grid.html %}
+  </div>
+
+  <br>
+
+  {% include status-update.html
+    label="Status Update"
+    tone="ocean"
+    title="Portfolio in progress"
+    date="2026-08-25"
+    body="More Portfolio Stories coming soon"
+  %}
+</div>
+
+<!-- ========================================== -->
+<!-- DESIGNS CONTENT (Hidden by Default)        -->
+<!-- ========================================== -->
+<div id="content-designs" style="display: none;">
+  <div class="designs-row">
+    <p class="note">Tap a card for fullscreen. Turn on Audio for videos with sound.</p>
+    <div class="water-button" role="button" aria-pressed="false" tabindex="0">
+        <span>Audio Off</span>
+        <div class="liquid"></div>
+    </div>
+  </div>
+
+  <!-- <div>
+    <p class="note">Tap a card for fullscreen. Turn on Audio for videos with sound.</p>
+  </div> -->
+
+  {% include gallery_of_designs.html %}
+
+  <div id="audioToast" class="audio-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</div>
+
+<br>
+
+<div markdown="0">
+  <!-- Custom Footer -->
+  {% include custom_footer.html %}
+</div>
+
+<!-- Required Scripts -->
+<script defer src="{{ '/assets/js/portfolio-tabs.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/gallery-of-designs.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/project-filters.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/bottom-swipeable-navbar.js' | relative_url }}"></script>
+

@@ -23,7 +23,7 @@ baseurl:               ''
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Gabriela Sewdhan
+title:                 Zoe's Full Stack
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
@@ -31,7 +31,7 @@ description:           >
   Personal Porfolio to demonstrate experience, projects developed and skills.
 
 # A shorter description for the sidebar.
-tagline:               Designer • Software Engineer • Visual Storytelling
+tagline:               Designer • Software Engineer
 
 # A list of keywords for your blog
 keywords:              ["creative process","design mindset","gentle productivity","calm interfaces","emotional design","storytelling","micro moments","rhythm in design","neuroscience and design","psychology and design","meditation","ocean","botany","mycology"]
@@ -39,8 +39,7 @@ keywords:              ["creative process","design mindset","gentle productivity
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  /assets/icons/gicon-512x512.png 
-# /images/gabie-artic.png
+logo:                  /images/ZFS_logo.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
@@ -53,16 +52,16 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             Projects
-    url:               /projects/
-  - title:             Designs
-    url:               /designs/
+  - title:             Portfolio
+    url:               /portfolio/
+  # - title:             Designs
+  #   url:               /designs/
   - title:             Experience
     url:               /experience/
-  - title:             Skills
-    url:               /skills/ 
+  # - title:             Skills
+  #   url:               /skills/ 
   - title:             About
-    url:               /about/
+    url:               /
   - title:             Labs
     url:               /labs/
   # - title:             /test/
@@ -83,7 +82,7 @@ menu:
 #     url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:            © 2026 Gabriela Sewdhan. Made with tea, curiosity, and a lot of tabs open ☕
+copyright:            © 2026 Gabriela Zoe Sewdhan. Made with play, curiosity, and a lot of tabs open ˶ᵔ ᵕ ᵔ˶
 
 # Format of the permalinks
 permalink:             /:categories/:year-:month-:day-:title/

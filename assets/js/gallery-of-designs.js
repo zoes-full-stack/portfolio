@@ -1,5 +1,5 @@
 /* assets/js/gallery_of_designs.js
-   Tabbed Masonry Gallery (Illustrations / Baking / Flyers / Documents)
+   Tabbed Masonry Gallery (Illustrations / Sweet Treats / Print / Editorial)
    - No global MutationObserver (prevents blink/re-render loops)
    - Safe re-init on Hydejack/Turbo navigation events
 
@@ -140,6 +140,7 @@ bindAudioDelegationOnce();
     ],
 
     baking: [
+      { kind: "image", title: "My Sweet, Beautiful Soulmate and our Wedding Anniversary Cake!", src: "/images/baking/soulmate_cake.png", w: 1080, h: 1080 },
       { kind: "image", title: "Father's Day Red Velvet with Cream Cheese Icing Cake", src: "/images/baking/dad_cake.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "Fudgy Brownies with Crackly Top", src: "/images/baking/brownies.jpg", w: 1080, h: 1080 },
       { kind: "image", title: "White Chocolate Snow Men", src: "/images/baking/choc_snow.jpg", w: 1080, h: 1080 },
@@ -163,7 +164,7 @@ bindAudioDelegationOnce();
       { kind: "image", title: "Chewy Chocolate Chip and Cinnamon Cookies", src: "/images/baking/cookies.jpg", w: 1080, h: 1080 }
     ],
 
-    flyers: [
+    print: [
       { kind: "image", title: "Scarlet Creative Programming Flyer", src: "/images/flyers/ScarletCreativeSoftware_Programming_Courses_Flyer_Design.png" , w: 1440, h: 2000 },
       { kind: "image", title: "Christmas Eve Party Ad", src: "/images/flyers/Christmas_Eve_Party.png" , w: 1428, h: 2000 },
       { kind: "image", title: "Drinks Ad", src: "/images/flyers/drinks_ad.png" , w: 1414, h: 2000 },
@@ -178,7 +179,7 @@ bindAudioDelegationOnce();
       { kind: "image", title: "GreenScrub Business Card Front", src: "/images/Canva/Businesses/GreenScrub_Business_Card_Front.png", w: 1004, h: 590 }
     ],
 
-    documents: [
+    editorial: [
       {
         kind: "doc",
         title: "Scarlet Creative – Company Portfolio",
@@ -234,6 +235,11 @@ bindAudioDelegationOnce();
   function getTabFromHash() {
     const h = (location.hash || "").replace("#", "");
     if (h && MEDIA_SETS[h]) return h;
+    
+    // Fallback to the saved tab in localStorage!
+    const saved = localStorage.getItem('lastDesignTab');
+    if (saved && MEDIA_SETS[saved]) return saved;
+    
     return "illustrations";
   }
 
@@ -436,6 +442,9 @@ bindAudioDelegationOnce();
         if (!tab || !MEDIA_SETS[tab]) return;
         if (tab === activeTab) return;
 
+        // SAVES THE CHOICE TO MEMORY!
+        localStorage.setItem('lastDesignTab', tab);
+
         history.replaceState(null, "", `#${tab}`);
         setActiveTabUI(tabsEl, tab);
         scrollToTopOnTabChange();
@@ -481,7 +490,7 @@ bindAudioDelegationOnce();
     activeTab = tabKey;
     window.MEDIA = MEDIA_SETS[tabKey];
 
-    masonry.classList.toggle("is-docs", tabKey === "documents");
+    masonry.classList.toggle("is-docs", tabKey === "editorial");
     if (!immediate) masonry.classList.add("is-switching");
 
     const cached = tabCache.get(tabKey);

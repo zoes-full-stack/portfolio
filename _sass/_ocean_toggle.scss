@@ -1,0 +1,125 @@
+// --- The Toggle Container ---
+.art-toggle-wrapper {
+  display: flex;
+  justify-content: space-between; // ✨ Pushes the buttons to opposite ends!
+  align-items: flex-end; 
+  width: 100%; // Ensures the container stretches across the screen
+  // max-width: 800px; // Optional: prevents them from getting *too* far apart on massive desktop monitors
+  margin: 1.5rem 0;
+  // padding: 0 1rem; // Adds a little breathing room on mobile screens
+}
+
+// --- The Invisible Button Wrapper ---
+.art-toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s ease; // Adds a tiny physical click feeling
+
+  -webkit-tap-highlight-color: transparent;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  // A tiny "squish" effect when physically clicking down
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+// --- The Base Image Container ---
+.art-img {
+  // ⚠️ Adjust these dimensions based on how big you want the art!
+  width: 220px; 
+  height: 160px; 
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  transition: background-image 0.15s ease; // Smoothly fades between states
+}
+
+// =====================================
+// 🎨 PROJECTS BUTTON STATES
+// =====================================
+
+// 1. Neutral (Default)
+.projects-img {
+  background-image: url('/images/Projects_Designs/Projects_Neutral.png');
+}
+
+// 2. Hover (Only triggers if NOT active)
+.art-toggle-btn:hover:not(.active) .projects-img {
+  background-image: url('/images/Projects_Designs/Projects_Hover.png');
+}
+
+// 3. Active (Clicked)
+.art-toggle-btn.active .projects-img {
+  background-image: url('/images/Projects_Designs/Projects_Active.png');
+}
+
+
+// =====================================
+// 🎨 DESIGNS BUTTON STATES
+// =====================================
+
+// 1. Neutral (Default)
+.designs-img {
+  background-image: url('/images/Projects_Designs/Designs_Neutral.png');
+}
+
+// 2. Hover (Only triggers if NOT active)
+.art-toggle-btn:hover:not(.active) .designs-img {
+  background-image: url('/images/Projects_Designs/Designs_Hover.png');
+}
+
+// 3. Active (Clicked)
+.art-toggle-btn.active .designs-img {
+  background-image: url('/images/Projects_Designs/Designs_Active.png');
+}
+
+.portfolio-center-anchor {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 2rem; // Adjust to align vertically with the artwork
+
+  h1 {
+    font-size: 2.5rem;
+    color: #2b8a8e; // Ocean Teal
+    margin: 0;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+    font-style: italic; // Gives it a gentle, storybook feel
+  }
+}
+
+@media (max-width: 768px) {
+  .art-toggle-wrapper {
+    flex-wrap: wrap; // Allows items to wrap to a new line
+    justify-content: space-evenly; // Distributes the two buttons perfectly
+    gap: 1rem; // Adds breathing room
+    margin: 1.5rem 0; // Slightly tighter margins for mobile
+  }
+
+  // ✨ Magic Trick: Forces the heading to the top row
+  .portfolio-center-anchor {
+    width: 100%; 
+    order: -1; // Tells Flexbox to put this item first, before the buttons!
+    margin-bottom: 0.5rem; 
+  }
+
+  // Scales down the artwork so both fit side-by-side on small screens
+  .art-img {
+    width: 145px;  // Scaled down from 220px
+    height: 105px; // Scaled down to maintain the aspect ratio
+  }
+}
