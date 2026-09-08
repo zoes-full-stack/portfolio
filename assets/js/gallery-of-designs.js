@@ -447,7 +447,7 @@ bindAudioDelegationOnce();
 
         history.replaceState(null, "", `#${tab}`);
         setActiveTabUI(tabsEl, tab);
-        scrollToTopOnTabChange();
+        // scrollToTopOnTabChange();
         renderTab(tab, masonry);
       },
       { passive: false }
@@ -459,7 +459,7 @@ bindAudioDelegationOnce();
         const tab = getTabFromHash();
         if (tab !== activeTab) {
           setActiveTabUI(tabsEl, tab);
-          scrollToTopOnTabChange();
+          // scrollToTopOnTabChange();
           renderTab(tab, masonry);
         }
       },
