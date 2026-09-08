@@ -1,0 +1,84 @@
+/* Card Container */
+.lab-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    width: 100%;
+    max-width: 440px; /* Limits width on desktop so text wraps nicely */
+    margin: 0 auto;
+    padding: 32px 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Headings Styling */
+  .lab-card__title {
+    font-size: clamp(1.6rem, 5vw, 2.2rem); /* Fluid scaling on mobile */
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+  }
+  
+  .lab-card__subtitle {
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
+    font-weight: 400;
+    color: #333333;
+    margin: 0 0 24px 0;
+    line-height: 1.4;
+  }
+  
+  /* Mascot Wrapper */
+  .lab-mascot-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 320px; /* Adjust based on preferred image size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+  }
+  
+  /* Image behavior */
+  .lab-mascot-base,
+  .lab-mascot-hover {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Optional Image Hover Swap Logic */
+  .lab-mascot-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  .lab-mascot-wrapper:hover .lab-mascot-hover {
+    opacity: 1;
+  }
+  
+  .lab-mascot-wrapper:hover .lab-mascot-base {
+    opacity: 0;
+  }
+  
+  /* Bottom Description */
+  .lab-card__description {
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+    color: #222222;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 340px; /* Keeps bottom text grouped into neat lines */
+  }
+  
+  /* Optional line break tweaks */
+  @media (max-width: 480px) {
+    .desktop-only {
+      display: none; /* Allows natural line wrapping on very small phones */
+    }
+  }
