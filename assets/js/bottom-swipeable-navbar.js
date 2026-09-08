@@ -1,73 +1,221 @@
-function initBottomNavbar() {
-  const navbar = document.querySelector('.bottom-navbar');
-  const navItems = document.querySelector('.bottom-navbar-items');
+// ==========================================
+// Bottom Navbar
+// SPA-safe initialization + cleanup
+// ==========================================
 
-  // Safety check: if there's no navbar on this page, stop right here
-  if (!navbar || !navItems) return;
+(function () {
 
-  // Safety check 2: Prevent attaching the events multiple times if the page re-renders
-  if (navbar.dataset.navBound === "1") return;
-  navbar.dataset.navBound = "1";
+  let cleanupBottomNavbar = null;
 
-  let lastScrollY = window.scrollY;
-  let scrollTimeout;
+  function initBottomNavbar() {
 
-  window.addEventListener('scroll', () => {
-    const currentY = window.scrollY;
+    const navbar = document.querySelector('.bottom-navbar');
+    const navItems = document.querySelector('.bottom-navbar-items');
 
-    // Shrink if scrolling down
-    if (currentY > lastScrollY && currentY > 50) {
-      navbar.classList.add('shrink');
+    // No navbar on this page
+    if (!navbar || !navItems) {
+      return;
     }
 
-    // Expand if scrolling up
-    if (currentY < lastScrollY) {
-      navbar.classList.remove('shrink');
+    // ------------------------------------------
+    // Clean up the previous navbar instance
+    // ------------------------------------------
+
+    if (typeof cleanupBottomNavbar === 'function') {
+      cleanupBottomNavbar();
+      cleanupBottomNavbar = null;
     }
 
-    // Clear previous timeout
-    clearTimeout(scrollTimeout);
+    // ------------------------------------------
+    // State
+    // ------------------------------------------
 
-    // Expand after user pauses for 1 second
-    scrollTimeout = setTimeout(() => {
-      navbar.classList.remove('shrink');
-    }, 1000);
+    let lastScrollY = window.scrollY;
+    let scrollTimeout = null;
 
-    lastScrollY = currentY;
-  });
+    // ------------------------------------------
+    // Window scroll
+    // ------------------------------------------
 
-  // ------------------------------
-  // Swipe hint behavior
-  // ------------------------------
-  function isHorizontallyScrollable(el) {
-    return el.scrollWidth > el.clientWidth + 2;
+    function handleWindowScroll() {
+
+      const currentY = window.scrollY;
+
+      // Scrolling down
+      if (currentY > lastScrollY && currentY > 50) {
+        navbar.classList.add('shrink');
+      }
+
+      // Scrolling up
+      if (currentY < lastScrollY) {
+        navbar.classList.remove('shrink');
+      }
+
+      // Reset previous timeout
+      if (scrollTimeout !== null) {
+        clearTimeout(scrollTimeout);
+      }
+
+      // Expand navbar after scrolling stops
+      scrollTimeout = setTimeout(function () {
+
+        // Make sure this navbar still belongs to the current page
+        if (document.body.contains(navbar)) {
+          navbar.classList.remove('shrink');
+        }
+
+      }, 1000);
+
+      lastScrollY = currentY;
+    }
+
+    // ------------------------------------------
+    // Horizontal scrolling / swipe hint
+    // ------------------------------------------
+
+    function isHorizontallyScrollable(el) {
+
+      return el.scrollWidth > el.clientWidth + 2;
+
+    }
+
+    function showHintIfNeeded() {
+
+      // Make sure the elements still exist
+      if (!document.body.contains(navbar)) {
+        return;
+      }
+
+      if (!document.body.contains(navItems)) {
+        return;
+      }
+
+      const shouldShow = isHorizontallyScrollable(navItems);
+
+      navbar.classList.toggle('hint-hidden', !shouldShow);
+    }
+
+    function hideHint() {
+
+      if (!document.body.contains(navbar)) {
+        return;
+      }
+
+      navbar.classList.add('hint-hidden');
+    }
+
+    // ------------------------------------------
+    // Nav items horizontal scroll
+    // ------------------------------------------
+
+    function handleNavScroll() {
+
+      if (navItems.scrollLeft > 8) {
+        hideHint();
+      }
+
+    }
+
+    // ------------------------------------------
+    // Nav item click
+    // ------------------------------------------
+
+    function handleNavClick() {
+
+      hideHint();
+
+    }
+
+    // ------------------------------------------
+    // Initial state
+    // ------------------------------------------
+
+    showHintIfNeeded();
+
+    // ------------------------------------------
+    // Event listeners
+    // ------------------------------------------
+
+    window.addEventListener(
+      'scroll',
+      handleWindowScroll,
+      { passive: true }
+    );
+
+    window.addEventListener(
+      'resize',
+      showHintIfNeeded,
+      { passive: true }
+    );
+
+    navItems.addEventListener(
+      'scroll',
+      handleNavScroll,
+      { passive: true }
+    );
+
+    navItems.addEventListener(
+      'click',
+      handleNavClick
+    );
+
+    // ------------------------------------------
+    // Cleanup function
+    // ------------------------------------------
+
+    cleanupBottomNavbar = function () {
+
+      // Stop pending timeout
+      if (scrollTimeout !== null) {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = null;
+      }
+
+      // Remove window listeners
+      window.removeEventListener(
+        'scroll',
+        handleWindowScroll
+      );
+
+      window.removeEventListener(
+        'resize',
+        showHintIfNeeded
+      );
+
+      // Remove navbar listeners
+      navItems.removeEventListener(
+        'scroll',
+        handleNavScroll
+      );
+
+      navItems.removeEventListener(
+        'click',
+        handleNavClick
+      );
+
+    };
+
   }
 
-  function showHintIfNeeded() {
-    const shouldShow = isHorizontallyScrollable(navItems);
-    navbar.classList.toggle('hint-hidden', !shouldShow);
-  }
 
-  function hideHint() {
-    navbar.classList.add('hint-hidden');
-  }
+  // ==========================================
+  // SPA / Page-load hooks
+  // ==========================================
 
-  // show/hide on load + resize
-  showHintIfNeeded();
-  window.addEventListener('resize', showHintIfNeeded, { passive: true });
+  document.addEventListener(
+    'DOMContentLoaded',
+    initBottomNavbar
+  );
 
-  // Hide only once they've actually scrolled the bar
-  navItems.addEventListener('scroll', () => {
-    if (navItems.scrollLeft > 8) hideHint();
-  }, { passive: true });
+  document.addEventListener(
+    'hy-push-state-load',
+    initBottomNavbar
+  );
 
-  // Optional: hide if they click a link
-  navItems.addEventListener('click', hideHint, { passive: true });
-}
+  document.addEventListener(
+    'turbo:load',
+    initBottomNavbar
+  );
 
-// ==========================================
-// The Magic Hooks (Ensures it runs on SPA navigation)
-// ==========================================
-document.addEventListener("DOMContentLoaded", initBottomNavbar, { passive: true });
-document.addEventListener("hy-push-state-load", initBottomNavbar, { passive: true });
-document.addEventListener("turbo:load", initBottomNavbar, { passive: true });
+
+})();
