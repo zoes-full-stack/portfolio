@@ -44,8 +44,8 @@ logo:                  /images/ZFS_logo.png
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:                <Gabriela> <Sewdhan>
-  email:               <gabbysewdhan@gmail.com>
+  name:                "Gabriela Sewdhan"
+  email:               "gabbysewdhan@gmail.com"
   # github:              <zoes-full-stack>
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
