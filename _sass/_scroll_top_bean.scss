@@ -1,0 +1,386 @@
+/* =========================================================
+   Tiny Flying Bean
+   Used exclusively by the scroll-to-top button.
+
+   IMPORTANT:
+   This is intentionally independent from the large
+   #magical-bean component.
+   ========================================================= */
+
+   .scroll-top-bean {
+    position: absolute;
+  
+    left: 50%;
+    top: -27px;
+  
+    width: 40px;
+    height: 32px;
+  
+    transform: translateX(-50%);
+  
+    z-index: 10;
+  
+    pointer-events: none;
+  }
+  
+  
+  /* =========================================================
+     BODY
+     ========================================================= */
+  
+  .scroll-top-bean-body {
+    position: absolute;
+  
+    left: 50%;
+    top: 0;
+  
+    width: 40px;
+    height: 32px;
+  
+    transform: translateX(-50%);
+  
+    background: #beecf4;
+  
+    border-radius:
+      58% 58% 42% 42%
+      / 72% 72% 45% 45%;
+  
+    box-shadow:
+      0 3px 7px rgba(0, 0, 0, 0.14);
+  
+    transition:
+      background-color 300ms ease,
+      transform 300ms ease,
+      box-shadow 300ms ease;
+  }
+  
+  
+  /* =========================================================
+     FACE
+     ========================================================= */
+  
+  .scroll-top-bean-eye {
+    position: absolute;
+  
+    top: 39%;
+  
+    width: 6px;
+    height: 3px;
+  
+    background: #3d550c;
+  
+    border-radius: 50%;
+  
+    transition:
+      width 220ms ease,
+      height 220ms ease,
+      top 220ms ease,
+      transform 220ms ease;
+  }
+  
+  .scroll-top-bean-eye.eye-left {
+    left: 10px;
+  }
+  
+  .scroll-top-bean-eye.eye-right {
+    right: 10px;
+  }
+  
+  
+  /* Smile */
+  
+  .scroll-top-bean-smile {
+    position: absolute;
+  
+    left: 50%;
+    top: 48%;
+  
+    width: 11px;
+    height: 6px;
+  
+    transform: translateX(-50%);
+  
+    border-bottom: 2px solid #30550c;
+  
+    border-radius: 0 0 50% 50%;
+  
+    transition:
+      width 260ms ease,
+      height 260ms ease,
+      top 260ms ease;
+  }
+  
+  
+  /* =========================================================
+     LITTLE ARMS
+     ========================================================= */
+  
+  .scroll-top-bean-arm {
+    position: absolute;
+  
+    top: 19px;
+  
+    width: 19px;
+    height: 6px;
+  
+    background: #beecf4;
+  
+    border-radius: 999px;
+  
+    z-index: -1;
+  
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.10);
+  
+    transition:
+      top 380ms cubic-bezier(.22, 1, .36, 1),
+      transform 380ms cubic-bezier(.22, 1, .36, 1),
+      background-color 260ms ease;
+  }
+  
+  .scroll-top-bean-arm-left {
+    left: -9px;
+  
+    transform: rotate(18deg);
+  
+    transform-origin: right center;
+  }
+  
+  .scroll-top-bean-arm-right {
+    right: -9px;
+  
+    transform: rotate(-18deg);
+  
+    transform-origin: left center;
+  }
+  
+  
+  /* =========================================================
+     HOVER — HAPPY BEAN
+     ========================================================= */
+  
+  .scroll-top:hover .scroll-top-bean-body {
+    background: #ffb04c;
+  
+    transform:
+      translateX(-50%)
+      translateY(-1px);
+  
+    box-shadow:
+      0 4px 9px rgba(0, 0, 0, 0.15);
+  }
+  
+  
+  /* Happy eyes */
+  
+  .scroll-top:hover .scroll-top-bean-eye {
+    width: 5px;
+    height: 6px;
+  
+    top: 34%;
+  }
+  
+  .scroll-top:hover .scroll-top-bean-eye.eye-left {
+    transform: rotate(-8deg);
+  }
+  
+  .scroll-top:hover .scroll-top-bean-eye.eye-right {
+    transform: rotate(8deg);
+  }
+  
+  
+  /* Happy smile */
+  
+  .scroll-top:hover .scroll-top-bean-smile {
+    width: 14px;
+    height: 8px;
+  
+    top: 44%;
+  }
+
+  /* Arms become orange with the bean */
+
+    .scroll-top:hover .scroll-top-bean-arm {
+        background: #ffb04c;
+    }
+  
+  
+  /* =========================================================
+     FLYING STATE
+     ========================================================= */
+  
+  .scroll-top.is-flying .scroll-top-bean {
+    animation:
+      beanFlyUp
+      700ms
+      cubic-bezier(.22, 1, .36, 1)
+      forwards;
+  }
+  
+  
+  
+  @keyframes beanFlyUp {
+  
+    0% {
+      transform:
+        translateX(-50%)
+        translateY(0)
+        rotate(0deg);
+    }
+  
+    22% {
+      transform:
+        translateX(-50%)
+        translateY(-5px)
+        rotate(-4deg);
+    }
+  
+    48% {
+      transform:
+        translateX(-50%)
+        translateY(-18px)
+        rotate(4deg);
+    }
+  
+    72% {
+      transform:
+        translateX(-50%)
+        translateY(-34px)
+        rotate(-3deg);
+    }
+  
+    100% {
+      transform:
+        translateX(-50%)
+        translateY(-52px)
+        rotate(0deg);
+    }
+  
+  }
+  
+  
+  /* =========================================================
+     ARMS UP — "FLYING!"
+     ========================================================= */
+  
+  .scroll-top.is-flying .scroll-top-bean-arm-left {
+    top: 4px;
+  
+    transform:
+      rotate(-48deg);
+  }
+  
+  .scroll-top.is-flying .scroll-top-bean-arm-right {
+    top: 4px;
+  
+    transform:
+      rotate(48deg);
+  }
+  
+  .scroll-top.is-flying .scroll-top-bean-arm {
+    background: #ffb04c;
+  }
+  
+  /* =========================================================
+     FLYING EXPRESSION
+     ========================================================= */
+  
+  .scroll-top.is-flying .scroll-top-bean-body {
+    background: #ffb04c;
+  }
+  
+  .scroll-top.is-flying .scroll-top-bean-smile {
+    width: 15px;
+    height: 8px;
+  }
+  
+  
+  /* =========================================================
+     ARROW DURING FLIGHT
+     ========================================================= */
+  
+  .scroll-top.is-flying .scroll-top-arrow {
+    opacity: 0;
+    animation: none !important;
+  }
+  
+  
+  /* =========================================================
+     MOBILE
+     ========================================================= */
+  
+  @media (max-width: 767px) {
+  
+    .scroll-top-bean {
+      top: -23px;
+  
+      width: 32px;
+      height: 26px;
+    }
+  
+    .scroll-top-bean-body {
+      width: 32px;
+      height: 26px;
+    }
+  
+    .scroll-top-bean-eye {
+      width: 5px;
+      height: 2px;
+    }
+  
+    .scroll-top-bean-eye.eye-left {
+      left: 8px;
+    }
+  
+    .scroll-top-bean-eye.eye-right {
+      right: 8px;
+    }
+  
+    .scroll-top-bean-smile {
+      width: 9px;
+      height: 5px;
+    }
+  
+    .scroll-top-bean-arm {
+      width: 15px;
+      height: 5px;
+  
+      top: 15px;
+    }
+  
+    .scroll-top-bean-arm-left {
+      left: -7px;
+    }
+  
+    .scroll-top-bean-arm-right {
+      right: -7px;
+    }
+  
+    .scroll-top.is-flying .scroll-top-bean-arm-left {
+      top: 2px;
+    }
+  
+    .scroll-top.is-flying .scroll-top-bean-arm-right {
+      top: 2px;
+    }
+  }
+  
+  
+  /* =========================================================
+     REDUCED MOTION
+     ========================================================= */
+  
+  @media (prefers-reduced-motion: reduce) {
+  
+    .scroll-top-bean-body,
+    .scroll-top-bean-eye,
+    .scroll-top-bean-smile,
+    .scroll-top-bean-arm {
+      transition: none !important;
+    }
+  
+    .scroll-top.is-flying .scroll-top-bean {
+      animation: none !important;
+    }
+  
+  }

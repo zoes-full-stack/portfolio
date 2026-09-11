@@ -778,10 +778,6 @@ hr, .hr {
 
 // Magical Bean holding menu
 
-/* ================================
-   Magical Bean (Card + Bean + Face)
-   ================================ */
-
 .magical-bean-section {
   width: 100%;
   min-height: 50vh;
@@ -909,19 +905,23 @@ hr, .hr {
 
 /* On bean hover, cheeks appear */
 #magical-bean:hover #smile::before,
-#magical-bean:hover #smile::after{
+#magical-bean:has(#bean-menu-open:checked) #smile::before,
+#magical-bean:hover #smile::after,
+#magical-bean:has(#bean-menu-open:checked) #smile::after {
   opacity: 1;
   transform: translateY(0);
 }
 
 
 /* Hover expression */
-#magical-bean:hover {
+#magical-bean:hover,
+#magical-bean:has(#bean-menu-open:checked) {
   background-color: #ffb04c;
   // box-shadow: 1px 1px 15px 10px #ffd59d;
 }
 
-#magical-bean:hover #smile {
+#magical-bean:hover #smile,
+#magical-bean:has(#bean-menu-open:checked) #smile {
   top: 32%;
   width: 28%;
   height: 20%;
@@ -932,7 +932,9 @@ hr, .hr {
 }
 
 #magical-bean:hover #eye1,
-#magical-bean:hover #eye2 {
+#magical-bean:has(#bean-menu-open:checked) #eye1,
+#magical-bean:hover #eye2,
+#magical-bean:has(#bean-menu-open:checked) #eye2 {
   top: 30%;
   width: 10%;
   height: 18%;
@@ -940,8 +942,10 @@ hr, .hr {
   transition: all 600ms ease-in;
 }
 
-#magical-bean:hover #eye1 { left: 36%; }
-#magical-bean:hover #eye2 { left: 54%; }
+#magical-bean:hover #eye1,
+#magical-bean:has(#bean-menu-open:checked) #eye1 { left: 36%; }
+#magical-bean:hover #eye2,
+#magical-bean:has(#bean-menu-open:checked) #eye2 { left: 54%; }
 
 /* Background tint on hover */
 // #magical-bean:hover + #magical-bean-container {
@@ -1809,8 +1813,9 @@ hr, .hr {
 // Contact Form
 @import "contact";
 
-// Scroll to the top button
+// Scroll to the top button with tiny bean
 @import "scroll-top";
+@import "scroll_top_bean";
 
 // Custom footer
 @import "custom-footer";

@@ -20,22 +20,20 @@
   position: relative;
   width: 100%;
 
-  /* ✅ ensure the section has a real height */
+  /* Ensure the section has a real height */
   min-height: clamp(520px, 72vh, 900px);
-
   padding: clamp(28px, 6vh, 70px) 46px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center; /* Centers Benji & bubble vertically */
 
   isolation: isolate;
-  // overflow: hidden;
   overflow: visible;
   border-radius: 22px;
 
-  /* ✅ Deep sea base */
+  /* Deep sea base */
   background:
     radial-gradient(1200px 700px at 30% 10%, rgba(72, 255, 220, 0.06), transparent 60%),
     radial-gradient(900px 600px at 80% 30%, rgba(120, 150, 255, 0.05), transparent 65%),
@@ -49,10 +47,6 @@
     content: "";
     position: absolute;
     inset: -25%;
-    // background:
-    //   radial-gradient(800px 520px at 30% 20%, rgba(100, 255, 232, 0.09) 0%, rgba(100, 255, 232, 0) 62%),
-    //   radial-gradient(700px 520px at 70% 30%, rgba(107, 182, 255, 0.08) 0%, rgba(107, 182, 255, 0) 68%),
-    //   radial-gradient(900px 700px at 50% 80%, rgba(123, 109, 255, 0.06) 0%, rgba(123, 109, 255, 0) 72%);
     opacity: 0.9;
     z-index: -2;
     transform: translate3d(0, 0, 0);
@@ -75,6 +69,52 @@
     z-index: -1;
     animation: caustics 10s ease-in-out infinite;
   }
+
+  /* =======================================================
+     BENJI & SPEECH BUBBLE STYLES
+     ======================================================= */
+     .bean-speaker-container {
+      display: flex;
+      flex-direction: column; /* Benji on top, bubble on bottom */
+      align-items: center;   
+      gap: 16px;              /* Spacing between Benji and bubble */
+      z-index: 2;
+      max-width: 340px;       /* Keeps it tidy on mobile and desktop */
+      width: 100%;
+      margin: auto;
+    }
+  
+    .bean-character img {
+      width: 250px;          
+      object-fit: contain;
+    }
+  
+    .speech-bubble {
+      background: rgba(15, 23, 42, 0.75); /* Dark translucent glassmorphism */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 20px 24px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      text-align: center;
+    }
+  
+    .bubble-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #7dd3fc;         /* Aquatic accent blue */
+      margin: 0 0 8px 0;
+      letter-spacing: 2px;
+    }
+  
+    .speech-bubble p {
+      margin: 6px 0;
+      color: #f1f5f9;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
 
   /* Generated bubbles/plankton -> biolume specks */
   .bubble {
@@ -221,9 +261,22 @@
   100% { transform: translate3d(-10px, -10px, 0) rotate(-4deg); opacity: 0.14; }
 }
 
-/* Reduced motion: keep it pretty, stop the swimming */
+/* Reduced motion: keep it pretty, stop the swimming and floating */
 @media (prefers-reduced-motion: reduce) {
-  .labs-coming::after {
-    animation: none;
+  .labs-coming {
+    &::after {
+      animation: none;
+    }
+
+    /* Keep Benji static instead of floating */
+    .bean-speaker-container {
+      transform: none !important;
+      animation: none !important;
+    }
+
+    /* Stop/hide the shooting bubble streak */
+    .bubble-streak {
+      display: none !important;
+    }
   }
 }
