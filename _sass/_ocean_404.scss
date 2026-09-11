@@ -245,11 +245,11 @@ body.ocean404-page #_content {
   color: rgba(235,245,250,.92);
   text-decoration: none;
 
+  transition: background 0.7s ease-in-out;
   animation: softFloat 3s ease-in-out infinite alternate;
   backdrop-filter: blur(10px);
 
   &:hover{
-    // transform: translate(50px, 0) rotate(45deg) scale(0.8);
     background: var(--o404-btnH);
   }
 }
