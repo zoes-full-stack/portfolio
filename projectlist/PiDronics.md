@@ -40,7 +40,7 @@ Our main goals are:
 - To help farmers better understand the needs of their crops
 - To encourage more people to get involved in hydroponics
 
-This project was developed alongside team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/){:target="_blank"}{:.heading.flip-title}, [Qarun Bissoondial](https://www.linkedin.com/in/qarun-qadir-bissoondial/){:target="_blank"}{:.heading.flip-title} and [Kristan Birbalsingh](https://www.linkedin.com/in/kristan-birbalsingh/){:target="_blank"}{:.heading.flip-title}.
+This project was developed alongside team members [Michael Ali](https://www.linkedin.com/in/michael-a-79531932/){:target="_blank"}{:.heading.flip-title}, [Qarun Bissoondial](https://www.linkedin.com/in/qarun-qadir-bissoondial/){:target="_blank"}{:.heading.flip-title} and [Kristan Birbalsingh](https://www.linkedin.com/in/kristan-birbalsingh/){:target="_blank"}{:.heading.flip-title}.
 
 - Table of Contents
 {:toc .large-only}

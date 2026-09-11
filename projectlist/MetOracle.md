@@ -32,7 +32,7 @@ sitemap: false
 
 **MET-Oracle** is a tool to improve the lives of citizens and increase infrastructure's resilience, in Trinidad and Tobago, by helping us predict and prepare for adverse weather conditions brought on by Global Warming, and quantifying the effect it will have on our country's climate. It is a linear regression model built in Python using Tensorflow and our web interface uses the Google Maps API.
 
-This project was developed alongside team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/){:target="_blank"}{:.heading.flip-title} and [Qarun Bissoondial](https://www.linkedin.com/in/qarun-qadir-bissoondial/){:target="_blank"}{:.heading.flip-title}.
+This project was developed alongside team members [Michael Ali](https://www.linkedin.com/in/michael-a-79531932/){:target="_blank"}{:.heading.flip-title} and [Qarun Bissoondial](https://www.linkedin.com/in/qarun-qadir-bissoondial/){:target="_blank"}{:.heading.flip-title}.
 
 
 ## Background 

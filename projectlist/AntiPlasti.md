@@ -37,7 +37,7 @@ sitemap: false
 Reducing the plastics surrounding islands, along with weather prediction, resulting in climate change resilience and environment well-being, one step at a time.
 {:.lead}
 
-This project was developed alongside team members [Michael Ali](https://www.linkedin.com/in/michael-ali-79531932/){:target="_blank"}{:.heading.flip-title} and [Qarun Bissoondial](https://www.linkedin.com/in/qarun-qadir-bissoondial/){:target="_blank"}{:.heading.flip-title} for the DadliHack 2.0 Hackathon.
+This project was developed alongside team members [Michael Ali](https://www.linkedin.com/in/michael-a-79531932/){:target="_blank"}{:.heading.flip-title} and [Qarun Bissoondial](https://www.linkedin.com/in/qarun-qadir-bissoondial/){:target="_blank"}{:.heading.flip-title} for the DadliHack 2.0 Hackathon.
 
 
 ## Technologies and Hardware Used
