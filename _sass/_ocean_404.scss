@@ -73,9 +73,6 @@ body.ocean404-page #_content {
     50%{ transform: translate3d(1.5%, 1.2%, 0) rotate(2deg); opacity: .72; }
   }
 }
-@media (prefers-reduced-motion: reduce){
-  .o404__haze{ animation: none; }
-}
 
 .o404__wrap{
   position: relative;
@@ -88,6 +85,18 @@ body.ocean404-page #_content {
 /* =========================
    Centered hero stack
    ========================= */
+
+/* Container that locks the canvas and the 404 text together */
+.o404__visual-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: clamp(10px, 2vh, 20px);
+  margin-bottom: clamp(14px, 3vh, 24px);
+  width: min(420px, 82vw);
+  height: min(420px, 82vw);
+}
 
 .o404__wrap{
   position: relative;
@@ -141,19 +150,20 @@ body.ocean404-page #_content {
   padding-bottom: clamp(18px, 4vh, 36px);
 }
 
-/* 404 code centered at top, no pill */
-.o404__code{
-  font-weight: 600;
-  letter-spacing: .18em;
-  font-size: 1.5rem;
-  color: rgba(235,245,250,.80);
+/* 404 code centered directly on top of the canvas */
+.o404__code {
+  position: relative;
+  z-index: 2;
+  font-weight: 200;
+  letter-spacing: .1em;
+  font-size: clamp(1rem, 5vw, 4rem); 
+  color: rgba(52, 88, 120, 0.9);
   text-transform: uppercase;
-
-  margin-bottom: clamp(10px, 2vh, 16px);
+  pointer-events: none;
 
   text-shadow:
-    0 10px 26px rgba(0,0,0,.55),
-    0 0 16px rgba(120,255,240,.10);
+    0 10px 26px rgba(0,0,0,.7),
+    0 0 20px rgba(120,255,240,.25);
 }
 
 /* Content centered */
@@ -169,7 +179,7 @@ body.ocean404-page #_content {
   color: var(--o404-ink);
   font-weight: 760;
   line-height: 1.08;
-  font-size: clamp(1.55rem, 4.6vw, 2.75rem);
+  font-size: clamp(0.7rem, 4vw, 2.75rem);
 
   text-shadow:
     0 10px 30px rgba(0,0,0,.55),
@@ -192,17 +202,15 @@ body.ocean404-page #_content {
   margin-top: .75rem;
 }
 
-/* Breathing canvas centered under text */
-.o404__breathe{
-  position: relative;
-  z-index: 1;
-  margin-top: clamp(18px, 5vh, 40px);
-
-  width: min(420px, 82vw);
-  height: min(420px, 82vw);
-
+/* Breathing canvas centered */
+.o404__breathe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   opacity: .92;
   pointer-events: none;
+  z-index: 1;
 }
 
 /* Small screens: tighten spacing */
@@ -215,6 +223,10 @@ body.ocean404-page #_content {
   .o404__code {
     font-size: 3.5rem;
   };
+  .o404__visual-container {
+    width: min(360px, 86vw);
+    height: min(360px, 86vw);
+  }
   .o404__breathe{
     width: min(360px, 86vw);
     height: min(360px, 86vw);
@@ -228,19 +240,26 @@ body.ocean404-page #_content {
   justify-content: center;
 
   padding: .65rem .95rem;
-  border-radius: 999px;
-  border: 1px solid var(--o404-line);
+  border-radius: 15px;
   background: var(--o404-btn);
   color: rgba(235,245,250,.92);
   text-decoration: none;
 
-  transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+  animation: softFloat 3s ease-in-out infinite alternate;
   backdrop-filter: blur(10px);
 
   &:hover{
-    transform: translateY(-1px);
+    // transform: translate(50px, 0) rotate(45deg) scale(0.8);
     background: var(--o404-btnH);
-    box-shadow: 0 18px 44px rgba(0,0,0,.35);
+  }
+}
+
+@keyframes softFloat {
+  0% {
+    translate: 0 0;
+  }
+  100% {
+    translate: 0 -5px;  /* Peak height of the float */
   }
 }
 
@@ -269,3 +288,23 @@ body.ocean404-page #_content {
   }
 }
 
+/* =======================================================
+   Reduced Motion 
+   ======================================================= */
+   @media (prefers-reduced-motion: reduce) {
+    /* Stop the background haze caustic shimmer */
+    .o404__haze {
+      animation: none !important;
+    }
+  
+    /* Stop the buttons from floating */
+    .o404__btn {
+      animation: none !important;
+      translate: 0 0 !important; 
+    }
+  
+    /* Hide JS-injected plankton to ensure zero background movement */
+    .o404__plankton {
+      display: none !important;
+    }
+  }
