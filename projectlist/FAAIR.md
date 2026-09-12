@@ -20,7 +20,7 @@ sitemap: false
 
     <div class="lead aspect-ratio flip-project-img"> 
       <a href="/assets/docs/infographs/FAAIR_Conference_Poster.pdf" target="_blank" rel="noopener">
-        <img src="/images/infographs/FAAIR_Conference_Poster.jpg" alt="FAAIR Conference Poster">
+        <img src="/images/infographs/FAAIR_Conference_Poster.webp" alt="FAAIR Conference Poster">
       </a>
     </div>
     <p class="note-sm" title="FAAIR – AI for Agriculture & Climate Resilience">

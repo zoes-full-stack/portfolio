@@ -37,7 +37,7 @@
 - title: FAAIR – AI for Agriculture & Climate Resilience
   slug: FAAIR_AgricultureClimateResilience
   url: /projectlist/FAAIR/
-  img: /images/infographs/FAAIR_Conference_Poster.jpg
+  img: /images/infographs/FAAIR_Conference_Poster.webp
   category: software_engineering
   featured: true
   blurb: "Using drones and AI-driven vegetation indices to help small-island farms adapt to climate change."
@@ -48,7 +48,7 @@
 - title: Apriltag Tracking
   slug: RigidAprilTagBundleTracking
   url: /projectlist/RigidAprilTagBundleTracking/
-  img: /images/projects/apriltags/apriltags_cover.jpg
+  img: /images/projects/apriltags/apriltags_cover.webp
   category: software_engineering
   featured: true 
   blurb: "High-accuracy AprilTag tracking with calibration tools and live pose feedback."
@@ -60,7 +60,7 @@
 - title: QuickRental
   slug: QuickRental
   url: /projectlist/QuickRental/
-  img: /images/projects/quickrental/apartmentapp2.png
+  img: /images/projects/quickrental/apartmentapp2.webp
   category: product_engineering
   featured: false
   blurb: "A cosy, practical rental web app built end-to-end."
@@ -71,7 +71,7 @@
 - title: AntiPlasti
   slug: AntiPlasti
   url: /projectlist/AntiPlasti/
-  img: /images/projects/antiplasti/antiplasti.jpg
+  img: /images/projects/antiplasti/antiplasti.webp
   category: software_engineering
   featured: true
   blurb: "A computer vision concept for spotting ocean plastic from imagery."
@@ -82,7 +82,7 @@
 - title: PiDronics
   slug: PiDronics
   url: /projectlist/PiDronics/
-  img: /images/projects/pidronics/pidronics_img.png
+  img: /images/projects/pidronics/pidronics_img.webp
   category: product_engineering
   featured: true
   blurb: "A hydroponics system that watches plants and logs the details for you."
@@ -93,7 +93,7 @@
 - title: DCIT Robotics Boot Camp
   slug: dcitCamp-2017-2018
   url: /projectlist/dcitCamp-2017-2018/
-  img: /images/projects/dcit_bootcamp/dcit_curie_square.jpg
+  img: /images/projects/dcit_bootcamp/dcit_curie_square.webp
   category: mentoring
   featured: false
   blurb: "A robotics boot camp where I taught through building, testing, and play."
