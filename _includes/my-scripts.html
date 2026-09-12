@@ -17,37 +17,3 @@
 <script defer src="{{ '/assets/js/sidebar-biolume-vanilla.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/scroll-top.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/console-love.js' | relative_url }}"></script>
-
-<!-- Hydejack SPA Video Autoplay Fix -->
-<script>
-  function triggerAutoplayVideos() {
-    // Add a tiny delay to let the SPA router finish swapping the DOM
-    setTimeout(() => {
-      const videos = document.querySelectorAll('video[autoplay]');
-      
-      videos.forEach(video => {
-        if (video.paused) {
-          const playPromise = video.play();
-          
-          if (playPromise !== undefined) {
-            playPromise.catch(err => {
-              // Ignore AbortErrors (caused by fast page navigation)
-              if (err.name !== 'AbortError') {
-                console.warn("Autoplay blocked by browser policy:", err);
-              }
-            });
-          }
-        }
-      });
-    }, 100); // 100ms delay
-  }
-
-  // Run on initial, direct page load
-  document.addEventListener("DOMContentLoaded", triggerAutoplayVideos);
-
-  // Run on subsequent SPA page loads
-  const pushStateEl = document.getElementById('_pushState');
-  if (pushStateEl) {
-    pushStateEl.addEventListener('hy-push-state-load', triggerAutoplayVideos);
-  }
-</script>
