@@ -37,7 +37,7 @@
 - title: FAAIR – AI for Agriculture & Climate Resilience
   slug: FAAIR_AgricultureClimateResilience
   url: /projectlist/FAAIR/
-  img: /images/infographs/FAAIR_Conference_Poster.webp
+  img: /images/infographs/FAAIR_Conference_Poster.jpg
   category: software_engineering
   featured: true
   blurb: "Using drones and AI-driven vegetation indices to help small-island farms adapt to climate change."
@@ -48,7 +48,7 @@
 - title: Apriltag Tracking
   slug: RigidAprilTagBundleTracking
   url: /projectlist/RigidAprilTagBundleTracking/
-  img: /images/projects/apriltags/apriltags_cover.webp
+  img: /images/projects/apriltags/apriltags_cover.jpg
   category: software_engineering
   featured: true 
   blurb: "High-accuracy AprilTag tracking with calibration tools and live pose feedback."
@@ -71,7 +71,7 @@
 - title: AntiPlasti
   slug: AntiPlasti
   url: /projectlist/AntiPlasti/
-  img: /images/projects/antiplasti/antiplasti.webp
+  img: /images/projects/antiplasti/antiplasti.jpg
   category: software_engineering
   featured: true
   blurb: "A computer vision concept for spotting ocean plastic from imagery."
@@ -82,7 +82,7 @@
 - title: PiDronics
   slug: PiDronics
   url: /projectlist/PiDronics/
-  img: /images/projects/pidronics/pidronics_img.webp
+  img: /images/projects/pidronics/pidronics_img.png
   category: product_engineering
   featured: true
   blurb: "A hydroponics system that watches plants and logs the details for you."
@@ -93,7 +93,7 @@
 - title: DCIT Robotics Boot Camp
   slug: dcitCamp-2017-2018
   url: /projectlist/dcitCamp-2017-2018/
-  img: /images/projects/dcit_bootcamp/dcit_curie_square.webp
+  img: /images/projects/dcit_bootcamp/dcit_curie_square.jpg
   category: mentoring
   featured: false
   blurb: "A robotics boot camp where I taught through building, testing, and play."

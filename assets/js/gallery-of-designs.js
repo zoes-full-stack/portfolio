@@ -110,25 +110,25 @@ bindAudioDelegationOnce();
   // =========================
   const MEDIA_SETS = {
     illustrations: [
-      { kind: "image", title: "Clay Scarlet World", src: "/images/Canva/Clay Scarlet World.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Plush Scarlet World", src: "/images/Canva/Plush Scarlet World.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Scarlet Profile Icon", src: "/images/Canva/Facebook Profile Photo (720 x 720px).png", w: 720, h: 720 },
-      { kind: "image", title: "Scarlet Cover Photo", src: "/images/Canva/Scarlet Cover Photo (830 x 360 px).png", w: 830, h: 360 },
-      { kind: "image", title: "Scarlet Another Cover Photo", src: "/images/Canva/Scarlet Creative Software.png", w: 1350, h: 500 },
-      { kind: "image", title: "Freedom & Trust", src: "/images/Canva/freedom_and_trust.png", w: 1080, h: 1080 },
-      { kind: "image", title: "Happy Divali", src: "/images/Canva/Scarlet - Happy Divali.png", w: 1080, h: 1080 },
-      { kind: "image", title: "Scarlet Beach", src: "/images/Canva/Scarlet Beach.png", w: 1080, h: 1080 },
+      { kind: "image", title: "Clay Scarlet World", thumb: "/images/Canva/thumbnails/Clay Scarlet World_thumb.webp", src: "/images/Canva/Clay Scarlet World.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Plush Scarlet World", thumb: "/images/Canva/thumbnails/Plush Scarlet World_thumb.webp", src: "/images/Canva/Plush Scarlet World.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Scarlet Profile Icon", thumb: "/images/Canva/thumbnails/Facebook Profile Photo (720 x 720px)_thumb.webp", src: "/images/Canva/Facebook Profile Photo (720 x 720px).png", w: 720, h: 720 },
+      { kind: "image", title: "Scarlet Cover Photo", thumb: "/images/Canva/thumbnails/Scarlet Cover Photo (830 x 360 px)_thumb.webp", src: "/images/Canva/Scarlet Cover Photo (830 x 360 px).png", w: 830, h: 360 },
+      { kind: "image", title: "Scarlet Another Cover Photo", thumb: "/images/Canva/thumbnails/Scarlet Creative Software_thumb.webp", src: "/images/Canva/Scarlet Creative Software.png", w: 1350, h: 500 },
+      { kind: "image", title: "Freedom & Trust", thumb: "/images/Canva/thumbnails/freedom_and_trust_thumb.webp", src: "/images/Canva/freedom_and_trust.png", w: 1080, h: 1080 },
+      { kind: "image", title: "Happy Divali", thumb: "/images/Canva/thumbnails/Scarlet - Happy Divali_thumb.webp", src: "/images/Canva/Scarlet - Happy Divali.png", w: 1080, h: 1080 },
+      { kind: "image", title: "Scarlet Beach", thumb: "/images/Canva/thumbnails/Scarlet Beach_thumb.webp", src: "/images/Canva/Scarlet Beach.png", w: 1080, h: 1080 },
       { kind: "video", title: "Let Go", thumb: "/images/Canva/thumbnail_images/Scarlet Creative Let Go.jpg", src: "/images/Canva/Scarlet Creative Let Go.mp4", hasAudio: false, w: 1080, h: 1080 },
-      { kind: "image", title: "Scarlet Celebrating Creativity", src: "/images/Canva/Scarlet Most Creative.png", w: 1080, h: 1080 },
+      { kind: "image", title: "Scarlet Celebrating Creativity", thumb: "/images/Canva/thumbnails/Scarlet Most Creative_thumb.webp", src: "/images/Canva/Scarlet Most Creative.png", w: 1080, h: 1080 },
       { kind: "video", title: "Republic Day 2025", thumb: "/images/Canva/thumbnail_images/Scarlet Republic Day 2025.jpg", src: "/images/Canva/Scarlet Republic Day 2025.mp4", hasAudio: false, w: 1080, h: 1080 },
       { kind: "video", title: "Long Weekend", thumb: "/images/Canva/thumbnail_images/Scarlet_long_weekend.jpg", src: "/images/Canva/Scarlet_long_weekend.mp4", hasAudio: false, w: 1080, h: 1080 },
       { kind: "video", title: "Taking the First Step", thumb: "/images/Canva/thumbnail_images/Taking the first step.jpg", src: "/images/Canva/Taking the first step.mp4", hasAudio: false, w: 1080, h: 1080 },
       { kind: "video", title: "Christmas!", thumb: "/images/Canva/thumbnail_images/Scarlet_Christmas.jpg", src: "/images/Canva/Scarlet_Christmas.mp4", hasAudio: false, w: 1080, h: 1350 },
       { kind: "video", title: "Let Go and Flow like Water", thumb: "/images/Canva/thumbnail_images/Let_Go_Flow_Growth.jpg", src: "/images/Canva/Personal/Let_Go_Flow_Growth.mp4", hasAudio: false, w: 1080, h: 1350 },
       { kind: "video", title: "It's Okay to not be Okay", thumb: "/images/Canva/thumbnail_images/its_ok_to_not_be_ok.jpg", src: "/images/Canva/Personal/its_ok_to_not_be_ok.mp4", hasAudio: true, w: 1080, h: 1350 },
-      { kind: "image", title: "Care, Compassion & Growth", src: "/images/Canva/Personal/Care_Compassion_Growth.jpg", w: 1080, h: 1350 },
-      { kind: "image", title: "Be Kind", src: "/images/Canva/Personal/Be_Kind.jpg", w: 1080, h: 1350 },
-      { kind: "image", title: "Cosy & Warm", src: "/images/Canva/Personal/Cosy_And_Warm.jpg", w: 1080, h: 1350 },
+      { kind: "image", title: "Care, Compassion & Growth", thumb: "/images/Canva/Personal/thumbnails/Care_Compassion_Growth_thumb.webp", src: "/images/Canva/Personal/Care_Compassion_Growth.jpg", w: 1080, h: 1350 },
+      { kind: "image", title: "Be Kind", thumb: "/images/Canva/Personal/thumbnails/Be_Kind_thumb.webp", src: "/images/Canva/Personal/Be_Kind.jpg", w: 1080, h: 1350 },
+      { kind: "image", title: "Cosy & Warm", thumb: "/images/Canva/Personal/thumbnails/Cosy_And_Warm_thumb.webp", src: "/images/Canva/Personal/Cosy_And_Warm.jpg", w: 1080, h: 1350 },
       { kind: "video", title: "Floating In Space", thumb: "/images/Canva/thumbnail_images/Floating_Meditation.jpg", src: "/images/Canva/Personal/Floating_Meditation.mp4", hasAudio: true, w: 1080, h: 1350 },
       { kind: "video", title: "Let the Light Shine Through", thumb: "/images/Canva/thumbnail_images/Let_The_Light_Shine_Through.jpg", src: "/images/Canva/Personal/Let_The_Light_Shine_Through.mp4", hasAudio: false, w: 1080, h: 1350 },
       { kind: "video", title: "Space Adventure", thumb: "/images/Canva/thumbnail_images/Space_Adventure.jpg", src: "/images/Canva/Personal/Space_Adventure.mp4", hasAudio: false, w: 1080, h: 1350 },
@@ -140,43 +140,43 @@ bindAudioDelegationOnce();
     ],
 
     baking: [
-      { kind: "image", title: "My Sweet, Beautiful Soulmate and his Birthday Cake!", src: "/images/baking/soulmate_cake.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Father's Day Red Velvet with Cream Cheese Icing Cake", src: "/images/baking/dad_cake.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Fudgy Brownies with Crackly Top", src: "/images/baking/brownies.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "White Chocolate Snow Men", src: "/images/baking/choc_snow.jpg", w: 1080, h: 1080 },
-      { kind: "image", title: "Cactus Chocolate Cupcake with Peanut Butter Icing", src: "/images/baking/cactus_cake.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Pink Meringues!", src: "/images/baking/meringues.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Fudgy Brownies with Semi-Sweet Chocolate Ganache", src: "/images/baking/brownies2.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Mom's Birthday Cake!", src: "/images/baking/mom_cake.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Mom's Birthday Cake", src: "/images/baking/mom_cake2.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Mom's Birthday Cake with Chocolate Ganache Side Drip", src: "/images/baking/mom_cake4.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Father's Day Red Velvet and Coffee Cake with Coffee Cream Cheese Icing", src: "/images/baking/dad_cake3.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Dark Soul's Themed Birthday Red Velvet with Cream Cheese Icing Cake for My S/O", src: "/images/baking/bday_cake.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Dark Soul's Themed Birthday Red Velvet with Cream Cheese Icing Cake for My S/O", src: "/images/baking/bday_cake2.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Christmas/New Years Red Velvet with Cream Cheese Icing Cake", src: "/images/baking/christmas_newy_cake.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Anniversary Red Velvet Cake with Cream Cheese Icing", src: "/images/baking/ann_cake3.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Anniversary Red Velvet Cake with Cream Cheese Icing", src: "/images/baking/ann_cake.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Father's Day Red Velvet Cake with Cream Cheese Icing", src: "/images/baking/dad_cake2.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Mother's Day Chocolate Cake with Chocolate Buttercream and Ganache", src: "/images/baking/mom_cake3.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Lord of the Rings Themed Birthday Cake for my S/O", src: "/images/baking/ann_cake2.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Cute Red Velvet Cupcake", src: "/images/baking/cupcake.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Chewy Chocolate Chip Cookies", src: "/images/baking/cookies2.webp", w: 1080, h: 1080 },
-      { kind: "image", title: "Chewy Chocolate Chip and Cinnamon Cookies", src: "/images/baking/cookies.webp", w: 1080, h: 1080 }
+      { kind: "image", title: "My Sweet, Beautiful Soulmate and his Birthday Cake!", thumb: "/images/baking/thumbnails/soulmate_cake_thumb.webp", src: "/images/baking/soulmate_cake.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Father's Day Red Velvet with Cream Cheese Icing Cake", thumb: "/images/baking/thumbnails/dad_cake_thumb.webp", src: "/images/baking/dad_cake.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Fudgy Brownies with Crackly Top", thumb: "/images/baking/thumbnails/brownies_thumb.webp", src: "/images/baking/brownies.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "White Chocolate Snow Men", thumb: "/images/baking/thumbnails/choc_snow_thumb.webp", src: "/images/baking/choc_snow.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Cactus Chocolate Cupcake with Peanut Butter Icing", thumb: "/images/baking/thumbnails/cactus_cake_thumb.webp", src: "/images/baking/cactus_cake.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Pink Meringues!", thumb: "/images/baking/thumbnails/meringues_thumb.webp", src: "/images/baking/meringues.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Fudgy Brownies with Semi-Sweet Chocolate Ganache", thumb: "/images/baking/thumbnails/brownies2_thumb.webp", src: "/images/baking/brownies2.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Mom's Birthday Cake!", thumb: "/images/baking/thumbnails/mom_cake_thumb.webp", src: "/images/baking/mom_cake.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Mom's Birthday Cake", thumb: "/images/baking/thumbnails/mom_cake2_thumb.webp", src: "/images/baking/mom_cake2.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Mom's Birthday Cake with Chocolate Ganache Side Drip", thumb: "/images/baking/thumbnails/mom_cake4_thumb.webp", src: "/images/baking/mom_cake4.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Father's Day Red Velvet and Coffee Cake with Coffee Cream Cheese Icing", thumb: "/images/baking/thumbnails/dad_cake3_thumb.webp", src: "/images/baking/dad_cake3.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Dark Soul's Themed Birthday Red Velvet with Cream Cheese Icing Cake for My S/O", thumb: "/images/baking/thumbnails/bday_cake_thumb.webp", src: "/images/baking/bday_cake.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Dark Soul's Themed Birthday Red Velvet with Cream Cheese Icing Cake for My S/O", thumb: "/images/baking/thumbnails/bday_cake2_thumb.webp", src: "/images/baking/bday_cake2.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Christmas/New Years Red Velvet with Cream Cheese Icing Cake", thumb: "/images/baking/thumbnails/christmas_newy_cake_thumb.webp", src: "/images/baking/christmas_newy_cake.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Anniversary Red Velvet Cake with Cream Cheese Icing", thumb: "/images/baking/thumbnails/ann_cake3_thumb.webp", src: "/images/baking/ann_cake3.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Anniversary Red Velvet Cake with Cream Cheese Icing", thumb: "/images/baking/thumbnails/ann_cake_thumb.webp", src: "/images/baking/ann_cake.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Father's Day Red Velvet Cake with Cream Cheese Icing", thumb: "/images/baking/thumbnails/dad_cake2_thumb.webp", src: "/images/baking/dad_cake2.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Mother's Day Chocolate Cake with Chocolate Buttercream and Ganache", thumb: "/images/baking/thumbnails/mom_cake3_thumb.webp", src: "/images/baking/mom_cake3.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Lord of the Rings Themed Birthday Cake for my S/O", thumb: "/images/baking/thumbnails/ann_cake2_thumb.webp", src: "/images/baking/ann_cake2.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Cute Red Velvet Cupcake", thumb: "/images/baking/thumbnails/cupcake_thumb.webp", src: "/images/baking/cupcake.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Chewy Chocolate Chip Cookies", thumb: "/images/baking/thumbnails/cookies2_thumb.webp", src: "/images/baking/cookies2.jpg", w: 1080, h: 1080 },
+      { kind: "image", title: "Chewy Chocolate Chip and Cinnamon Cookies", thumb: "/images/baking/thumbnails/cookies_thumb.webp", src: "/images/baking/cookies.jpg", w: 1080, h: 1080 }
     ],
 
     print: [
-      { kind: "image", title: "Scarlet Creative Programming Flyer", src: "/images/flyers/ScarletCreativeSoftware_Programming_Courses_Flyer_Design.webp" , w: 1440, h: 2000 },
-      { kind: "image", title: "Christmas Eve Party Ad", src: "/images/flyers/Christmas_Eve_Party.webp" , w: 1428, h: 2000 },
-      { kind: "image", title: "Drinks Ad", src: "/images/flyers/drinks_ad.webp" , w: 1414, h: 2000 },
-      { kind: "image", title: "GreenScrub Car Wash Ad", src: "/images/flyers/GreenScrub_Car_Wash_Flyer.webp" , w: 1500, h: 1500 },
-      { kind: "image", title: "GreenScrub Car Wash Ad", src: "/images/flyers/Greenscrub_CarWash_Flyer.webp" , w: 1768, h: 2500 },
-      { kind: "image", title: "Wedding Menu - Desserts", src: "/images/flyers/wedding_menu_desserts.webp", w: 1545, h: 2000 },
-      { kind: "image", title: "Wedding Menu - Drinks", src: "/images/flyers/wedding_menu_drinks.webp", w: 1545, h: 2000 },
-      { kind: "image", title: "Wedding Programme - Front", src: "/images/flyers/wedding_programme_front.webp", w: 1429, h: 2000 },
-      { kind: "image", title: "Wedding Programme - Back", src: "/images/flyers/wedding_programme_back.webp", w: 1429, h: 2000 },
-      { kind: "image", title: "Wedding Invitation - Front", src: "/images/flyers/wedding_invitation_front.webp", w: 1429, h: 2000 },
-      { kind: "image", title: "Wedding Invitation - Back", src: "/images/flyers/wedding_invitation_back.webp", w: 1429, h: 2000 },
-      { kind: "image", title: "GreenScrub Business Card Front", src: "/images/Canva/Businesses/GreenScrub_Business_Card_Front.webp", w: 1004, h: 590 }
+      { kind: "image", title: "Scarlet Creative Programming Flyer", thumb: "/images/flyers/thumbnails/ScarletCreativeSoftware_Programming_Courses_Flyer_Design_thumb.webp", src: "/images/flyers/ScarletCreativeSoftware_Programming_Courses_Flyer_Design.png", w: 1440, h: 2000 },
+      { kind: "image", title: "Christmas Eve Party Ad", thumb: "/images/flyers/thumbnails/Christmas_Eve_Party_thumb.webp", src: "/images/flyers/Christmas_Eve_Party.png", w: 1428, h: 2000 },
+      { kind: "image", title: "Drinks Ad", thumb: "/images/flyers/thumbnails/drinks_ad_thumb.webp", src: "/images/flyers/drinks_ad.png", w: 1414, h: 2000 },
+      { kind: "image", title: "GreenScrub Car Wash Ad", thumb: "/images/flyers/thumbnails/GreenScrub_Car_Wash_Flyer_thumb.webp", src: "/images/flyers/GreenScrub_Car_Wash_Flyer.png", w: 1500, h: 1500 },
+      { kind: "image", title: "GreenScrub Car Wash Ad", thumb: "/images/flyers/thumbnails/Greenscrub_CarWash_Flyer_thumb.webp", src: "/images/flyers/Greenscrub_CarWash_Flyer.jpg", w: 1768, h: 2500 },
+      { kind: "image", title: "Wedding Menu - Desserts", thumb: "/images/flyers/thumbnails/wedding_menu_desserts_thumb.webp", src: "/images/flyers/wedding_menu_desserts.png", w: 1545, h: 2000 },
+      { kind: "image", title: "Wedding Menu - Drinks", thumb: "/images/flyers/thumbnails/wedding_menu_drinks_thumb.webp", src: "/images/flyers/wedding_menu_drinks.png", w: 1545, h: 2000 },
+      { kind: "image", title: "Wedding Programme - Front", thumb: "/images/flyers/thumbnails/wedding_programme_front_thumb.webp", src: "/images/flyers/wedding_programme_front.png", w: 1429, h: 2000 },
+      { kind: "image", title: "Wedding Programme - Back", thumb: "/images/flyers/thumbnails/wedding_programme_back_thumb.webp", src: "/images/flyers/wedding_programme_back.png", w: 1429, h: 2000 },
+      { kind: "image", title: "Wedding Invitation - Front", thumb: "/images/flyers/thumbnails/wedding_invitation_front_thumb.webp", src: "/images/flyers/wedding_invitation_front.png", w: 1429, h: 2000 },
+      { kind: "image", title: "Wedding Invitation - Back", thumb: "/images/flyers/thumbnails/wedding_invitation_back_thumb.webp", src: "/images/flyers/wedding_invitation_back.png", w: 1429, h: 2000 },
+      { kind: "image", title: "GreenScrub Business Card Front", thumb: "/images/Canva/Businesses/thumbnails/GreenScrub_Business_Card_Front_thumb.webp", src: "/images/Canva/Businesses/GreenScrub_Business_Card_Front.png", w: 1004, h: 590 }
     ],
 
     editorial: [
@@ -184,7 +184,7 @@ bindAudioDelegationOnce();
         kind: "doc",
         title: "Scarlet Creative – Company Portfolio",
         desc: "A 60+ page, illustration-led portfolio sharing our story, values, services, case studies, and team.",
-        thumb: "/assets/img/Scarlet_Creative_Company_Profile_Contact_Thumbnail.webp",
+        thumb: "/assets/img/thumbnails/Scarlet_Creative_Company_Profile_Contact_thumb.webp",
         href: "/assets/docs/Scarlet_Creative_Company_Portfolio.pdf",
         w: 1414,
         h: 2000
@@ -193,7 +193,7 @@ bindAudioDelegationOnce();
         kind: "doc",
         title: "Scarlet Creative – Company Profile",
         desc: "A concise 15-page profile introducing who we are, what we do, key projects, our tech stack, and the sectors we serve across the Caribbean and worldwide.",
-        thumb: "/assets/img/Scarlet_Creative_Company_Profile_Thumbnail.webp",
+        thumb: "/assets/img/thumbnails/Scarlet_Creative_Company_Profile_thumb.webp",
         href: "/assets/docs/Scarlet_Creative_Software_Company_Profile.pdf",
         w: 1414,
         h: 2000
@@ -202,7 +202,7 @@ bindAudioDelegationOnce();
         kind: "doc",
         title: "FAAIR Conference Poster",
         desc: "I made this poster to represent the work I did on FAAIR’s using drones and AI-driven vegetation indices to generate landscape-level insights that help small-island farming systems adapt and build resilience to climate change.",
-        thumb: "/images/infographs/FAAIR_Conference_Poster.webp",
+        thumb: "/images/infographs/thumbnails/FAAIR_Conference_Poster_thumb.webp",
         href: "/assets/docs/infographs/FAAIR_Conference_Poster.pdf",
         w: 7200,
         h: 5400
@@ -587,25 +587,37 @@ bindAudioDelegationOnce();
       const h = num(item.h);
       const aspect = w && h ? `${w} / ${h}` : "";
 
-      const bgSrc = item.kind === "image" ? item.src : item.thumb || item.src;
+      // Prefer thumbnails first for EVERYTHING
+      const bgSrc = item.thumb || item.src; 
       const isVideoTile = item.kind === "video";
 
       const eager = idx < 2 ? `loading="eager"` : `loading="lazy"`;
       const fetchPriority = idx < 3 ? `fetchpriority="high"` : "";
+      
+      // Auto-generate a fallback source assuming your originals are .jpg/.png 
+      // (Modify this logic if your base files are named differently)
+      const fallbackSrc = bgSrc.replace(/\.webp$/i, '.jpg');
 
       li.innerHTML = `
         <div class="ocean-tilt">
           <div class="ocean-card" ${aspect ? `style="aspect-ratio:${aspect}"` : ""}>
             <div class="video-container ${isVideoTile ? "js-inview-video" : ""}"
                  ${isVideoTile ? `data-video-src="${item.src}"` : ""}>
-              <img class="card-bg"
-                   src="${bgSrc}"
-                   alt="${safeTitle}"
-                   ${eager}
-                   decoding="async"
-                   ${fetchPriority}
-                   ${w ? `width="${w}"` : ""}
-                   ${h ? `height="${h}"` : ""}>
+                 
+              <picture>
+                <!-- Browser tries webp first -->
+                <source srcset="${bgSrc}" type="image/webp">
+                <!-- Fallback to jpg/png if webp fails -->
+                <img class="card-bg"
+                     src="${fallbackSrc}"
+                     alt="${safeTitle}"
+                     ${eager}
+                     decoding="async"
+                     ${fetchPriority}
+                     ${w ? `width="${w}"` : ""}
+                     ${h ? `height="${h}"` : ""}>
+              </picture>
+              
             </div>
             <h1 class="headline" aria-hidden="true"></h1>
           </div>
@@ -768,6 +780,21 @@ bindAudioDelegationOnce();
         img.style.width = "100%";
         img.style.height = "100%";
         img.style.objectFit = "contain";
+
+        // Use the grid thumbnail as a blurred background while the full resolution image loads
+        if (item.thumb) {
+          lbMedia.style.backgroundImage = `url('${item.thumb}')`;
+          lbMedia.style.backgroundSize = "contain";
+          lbMedia.style.backgroundPosition = "center";
+          lbMedia.style.backgroundRepeat = "no-repeat";
+          // Blur the background to indicate it's loading
+          lbMedia.style.filter = "blur(10px)"; 
+          
+          img.onload = () => {
+             lbMedia.style.filter = "none";
+          };
+        }
+
         lbMedia.appendChild(img);
 
       } else if (item.kind === "video") {
