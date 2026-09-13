@@ -1,32 +1,55 @@
-
 <div markdown="0">
     <div class ="border_img">
         <div class="row_img">
             <div class="column_img">
-                <img src="/images/projects/dcit_bootcamp/project_page/dcit.webp" class="gallery" style="width:100%" loading="lazy" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                <picture onclick="openModal();currentSlide(1)" class="hover-shadow cursor" style="display:block; width:100%;">
+                    <source srcset="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit_thumb.webp" type="image/webp">
+                    <img src="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit_thumb.jpg" class="gallery" alt="Curie the Bot!" style="width:100%" loading="lazy" decoding="async">
+                </picture>
             </div>
             <div class="column_img">
-                <img src="/images/projects/dcit_bootcamp/project_page/dcit16.webp" class="gallery" style="width:100%" loading="lazy" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                <picture onclick="openModal();currentSlide(2)" class="hover-shadow cursor" style="display:block; width:100%;">
+                    <source srcset="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit16_thumb.webp" type="image/webp">
+                    <img src="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit16_thumb.jpg" class="gallery" alt="Bob the Bot!" style="width:100%" loading="lazy" decoding="async">
+                </picture>
             </div>
             <div class="column_img">
-                <img src="/images/projects/dcit_bootcamp/dcit_hi.webp" class="gallery" style="width:100%" loading="lazy" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                <picture onclick="openModal();currentSlide(3)" class="hover-shadow cursor" style="display:block; width:100%;">
+                    <source srcset="/images/projects/dcit_bootcamp/thumbnails/dcit_hi_thumb.webp" type="image/webp">
+                    <img src="/images/projects/dcit_bootcamp/thumbnails/dcit_hi_thumb.jpg" class="gallery" alt="Curie the Curious Bot :)" style="width:100%" loading="lazy" decoding="async">
+                </picture>
             </div>
             <div class="column_img">
-                <img src="/images/projects/dcit_bootcamp/project_page/dcit10.webp" class="gallery" style="width:100%" loading="lazy" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                <picture onclick="openModal();currentSlide(4)" class="hover-shadow cursor" style="display:block; width:100%;">
+                    <source srcset="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit10_thumb.webp" type="image/webp">
+                    <img src="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit10_thumb.jpg" class="gallery" alt="Oh Hi Mark!" style="width:100%" loading="lazy" decoding="async">
+                </picture>
             </div>
         </div>
         <div class="row_img">
             <div class="column_img">
-                <img src="/images/projects/dcit_bootcamp/project_page/dcit14.webp" class="gallery" style="width:100%" loading="lazy" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+                <picture onclick="openModal();currentSlide(5)" class="hover-shadow cursor" style="display:block; width:100%;">
+                    <source srcset="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit14_thumb.webp" type="image/webp">
+                    <img src="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit14_thumb.jpg" class="gallery" alt="Bots ready for battle!" style="width:100%" loading="lazy" decoding="async">
+                </picture>
             </div>
             <div class="column_img">
-                <img src="/images/projects/dcit_bootcamp/project_page/bob.webp" class="gallery" style="width:100%" loading="lazy" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+                <picture onclick="openModal();currentSlide(6)" class="hover-shadow cursor" style="display:block; width:100%;">
+                    <source srcset="/images/projects/dcit_bootcamp/project_page/thumbnails/bob_thumb.webp" type="image/webp">
+                    <img src="/images/projects/dcit_bootcamp/project_page/thumbnails/bob_thumb.jpg" class="gallery" alt="Make way for the first Bot for the BootCamp, Bob!" style="width:100%" loading="lazy" decoding="async">
+                </picture>
             </div>
             <div class="column_img">
-                <img src="/images/projects/dcit_bootcamp/project_page/dcit8.webp" class="gallery" style="width:100%" loading="lazy" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+                <picture onclick="openModal();currentSlide(7)" class="hover-shadow cursor" style="display:block; width:100%;">
+                    <source srcset="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit8_thumb.webp" type="image/webp">
+                    <img src="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit8_thumb.jpg" class="gallery" alt="Make way for the Bot King" style="width:100%" loading="lazy" decoding="async">
+                </picture>
             </div>
             <div class="column_img">
-                <img src="/images/projects/dcit_bootcamp/project_page/dcit15.webp" class="gallery" style="width:100%" loading="lazy" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+                <picture onclick="openModal();currentSlide(8)" class="hover-shadow cursor" style="display:block; width:100%;">
+                    <source srcset="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit15_thumb.webp" type="image/webp">
+                    <img src="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit15_thumb.jpg" class="gallery" alt="Bot Army!" style="width:100%" loading="lazy" decoding="async">
+                </picture>
             </div>
         </div>
         <div id="myModal" class="modal">
@@ -34,35 +57,59 @@
         <div class="modal-content">
             <div class="mySlides">
             <div class="numbertext">1 / 8</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit.webp" alt="Curie the Bot!" class="gallery demo" style="width:100%">
+            <picture class="gallery demo" style="display:block; width:100%;">
+                <source srcset="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit_thumb.webp" type="image/webp">
+                <img src="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit_thumb.jpg" alt="Curie the Bot!" style="width:100%">
+            </picture>
             </div>
             <div class="mySlides">
             <div class="numbertext">2 / 8</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit16.webp" alt="Bob the Bot!" class="gallery demo" style="width:100%">
+            <picture class="gallery demo" style="display:block; width:100%;">
+                <source srcset="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit16_thumb.webp" type="image/webp">
+                <img src="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit16_thumb.jpg" alt="Bob the Bot!" style="width:100%">
+            </picture>
             </div>
             <div class="mySlides">
             <div class="numbertext">3 / 8</div>
-            <img src="/images/projects/dcit_bootcamp/dcit_hi.webp" alt="Curie the Curious Bot :)" class="gallery demo" style="width:100%">
+            <picture class="gallery demo" style="display:block; width:100%;">
+                <source srcset="/images/projects/dcit_bootcamp/thumbnails/dcit_hi_thumb.webp" type="image/webp">
+                <img src="/images/projects/dcit_bootcamp/thumbnails/dcit_hi_thumb.jpg" alt="Curie the Curious Bot :)" style="width:100%">
+            </picture>
             </div>
             <div class="mySlides">
             <div class="numbertext">4 / 8</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit10.webp" alt="Oh Hi Mark!" class="gallery demo" style="width:100%">
+            <picture class="gallery demo" style="display:block; width:100%;">
+                <source srcset="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit10_thumb.webp" type="image/webp">
+                <img src="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit10_thumb.jpg" alt="Oh Hi Mark!" style="width:100%">
+            </picture>
             </div>
             <div class="mySlides">
             <div class="numbertext">5 / 8</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit14.webp" alt="Bots ready for battle!" class="gallery demo" style="width:100%">
+            <picture class="gallery demo" style="display:block; width:100%;">
+                <source srcset="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit14_thumb.webp" type="image/webp">
+                <img src="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit14_thumb.jpg" alt="Bots ready for battle!" style="width:100%">
+            </picture>
             </div>
             <div class="mySlides">
             <div class="numbertext">6 / 8</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/bob.webp" alt="Make way for the first Bot for the BootCamp, Bob!" class="gallery demo" style="width:100%, height:100%">
+            <picture class="gallery demo" style="display:block; width:100%;">
+                <source srcset="/images/projects/dcit_bootcamp/project_page/thumbnails/bob_thumb.webp" type="image/webp">
+                <img src="/images/projects/dcit_bootcamp/project_page/thumbnails/bob_thumb.jpg" alt="Make way for the first Bot for the BootCamp, Bob!" style="width:100%">
+            </picture>
             </div>
             <div class="mySlides">
             <div class="numbertext">7 / 8</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit8.webp" alt="Make way for the Bot King" class="gallery demo" style="width:100%">
+            <picture class="gallery demo" style="display:block; width:100%;">
+                <source srcset="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit8_thumb.webp" type="image/webp">
+                <img src="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit8_thumb.jpg" alt="Make way for the Bot King" style="width:100%">
+            </picture>
             </div>
             <div class="mySlides">
             <div class="numbertext">8 / 8</div>
-            <img src="/images/projects/dcit_bootcamp/project_page/dcit15.webp" alt="Bot Army!" class="gallery demo" style="width:100%">
+            <picture class="gallery demo" style="display:block; width:100%;">
+                <source srcset="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit15_thumb.webp" type="image/webp">
+                <img src="/images/projects/dcit_bootcamp/project_page/thumbnails/dcit15_thumb.jpg" alt="Bot Army!" style="width:100%">
+            </picture>
             </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -109,7 +156,10 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+  
+  // Extract alt text safely from the inner img tag
+  var activeImg = dots[slideIndex-1].querySelector("img");
+  captionText.innerHTML = activeImg ? activeImg.alt : "";
 }
 </script>
 
