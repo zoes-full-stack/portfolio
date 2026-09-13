@@ -28,7 +28,15 @@ sitemap: false
       </div>
     </div>
     <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
-      <img src="/images/projects/antiplasti/antiplasti_large.webp" alt="AntiPlasti" width="864" height="486" loading="lazy">
+     <picture>
+        <source srcset="/images/projects/antiplasti/thumbnails/antiplasti_large_thumb.webp" type="image/webp">
+        <img src="/images/projects/antiplasti/thumbnails/antiplasti_large_thumb.jpg" 
+            alt="AntiPlasti" 
+            width="864" 
+            height="486" 
+            loading="lazy" 
+            decoding="async">
+      </picture>
     </div>
     <p class="note-sm" title="AntiPlasti"> AntiPlasti: Reducing Oceanic Pollutants</p>
   </header>

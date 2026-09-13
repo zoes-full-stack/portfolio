@@ -104,7 +104,29 @@
       >
         <a class="p-card__link" href="{{ p.url | relative_url }}">
           <div class="p-card__media">
-            <img src="{{ p.img | relative_url }}" alt="{{ p.title }} cover" loading="lazy">
+            {% assign ext = p.img | split: '.' | last | downcase %}
+            
+            {% if ext == 'gif' %}
+              <img src="{{ p.img | relative_url }}" 
+                   alt="{{ p.title }} cover" 
+                   loading="lazy" 
+                   decoding="async">
+            {% else %}
+              {% assign dir_part = p.img | split: '/' | pop | join: '/' %}
+              {% assign file_name = p.img | split: '/' | last | split: '.' | first %}
+              
+              {% assign thumb_webp = dir_part | append: '/thumbnails/' | append: file_name | append: '_thumb.webp' %}
+              {% assign thumb_jpg = dir_part | append: '/thumbnails/' | append: file_name | append: '_thumb.jpg' %}
+            
+              <picture>
+                <source srcset="{{ thumb_webp | relative_url }}" type="image/webp">
+                <img src="{{ thumb_jpg | relative_url }}" 
+                     alt="{{ p.title }} cover" 
+                     loading="lazy" 
+                     decoding="async">
+              </picture>
+            {% endif %}
+          
             {% if p.featured %}
               <span class="p-badge">Featured</span>
             {% endif %}

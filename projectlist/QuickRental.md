@@ -18,7 +18,15 @@ sitemap: false
       </div>
     </div>
     <div class="lead aspect-ratio sixteen-nine flip-project-img"> 
-      <img src="/images/projects/quickrental/apartmentapp2.webp" alt="QuickRental" width="864" height="486" loading="lazy">
+    <picture>
+      <source srcset="/images/projects/quickrental/thumbnails/apartmentapp2_thumb.webp" type="image/webp">
+      <img src="/images/projects/quickrental/thumbnails/apartmentapp2_thumb.jpg" 
+          alt="QuickRental" 
+          width="864" 
+          height="486" 
+          loading="lazy" 
+          decoding="async">
+    </picture>
     </div>
     <p class="note-sm" title="QuickRental"> QuickRental: All-Inclusive Apartment Rental Application </p>
   </header>

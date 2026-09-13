@@ -20,7 +20,13 @@ sitemap: false
     </div>
 
     <div class="lead aspect-ratio flip-project-img"> 
-      <img src="/images/projects/apriltags/apriltags_cover.jpg" alt="Apriltag Tracking cover" loading="lazy">
+      <picture>
+        <source srcset="/images/projects/apriltags/thumbnails/apriltags_cover_thumb.webp" type="image/webp">
+        <img src="/images/projects/apriltags/thumbnails/apriltags_cover_thumb.jpg" 
+            alt="Apriltag Tracking cover" 
+            loading="lazy" 
+            decoding="async">
+      </picture>
     </div>
 
     <p class="note-sm" title="Apriltag Tracking">Accurate AprilGroup Tracking: pose estimation + optical flow + calibration workflows</p>
