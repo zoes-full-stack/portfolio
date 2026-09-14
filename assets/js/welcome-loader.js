@@ -1,18 +1,21 @@
 /* =========================================================
    Welcome / Ocean Preloader
    Hydejack-safe
-
+   ---------------------------------------------------------
    - First full page load only
    - Preloads critical images
-   - Shows simple progress
+   - Shows progress
+   - Uses image decoding when available
    - Has a hard timeout
+   - Smooth underwater exit
    - Does NOT run on PJAX navigation
    ========================================================= */
 
    (() => {
     "use strict";
   
-    const loader = document.getElementById("welcome-loader");
+    const loader =
+      document.getElementById("welcome-loader");
   
     if (!loader) return;
 
@@ -22,75 +25,150 @@
     //     return; 
     // }
   
+  
+    /* =======================================================
+       Elements
+       ======================================================= */
+  
     const progressBar =
-      document.getElementById("welcome-progress-bar");
+      document.getElementById(
+        "welcome-progress-bar"
+      );
   
     const progressNumber =
-      document.getElementById("welcome-progress-number");
+      document.getElementById(
+        "welcome-progress-number"
+      );
   
     const message =
-      document.getElementById("welcome-loader-message");
+      document.getElementById(
+        "welcome-loader-message"
+      );
   
     const progressContainer =
-      loader.querySelector(".welcome-progress");
+      loader.querySelector(
+        ".welcome-progress"
+      );
+  
+  
+    /* =======================================================
+       Critical images
+       ======================================================= */
+  
+    /*
+     * IMPORTANT:
+     *
+     * Only include images that are genuinely important
+     * for the first screen of the site.
+     *
+     * If PNG and WebP are alternative versions of the
+     * same image, preload ONLY the format your site actually
+     * uses.
+     */
   
     const criticalImages = [
-      "/images/ZFS_logo.png",
+  
       "/images/ZFS_logo.webp",
-      "/images/AboutMe.png",
+  
       "/images/AboutMe.webp",
-      "/images/AboutMe_Hover.png",
       "/images/AboutMe_Hover.webp",
-      "/images/Projects_Designs/Projects_Neutral.png",
+  
       "/images/Projects_Designs/Projects_Neutral.webp",
-      "/images/Projects_Designs/Projects_Hover.png",
       "/images/Projects_Designs/Projects_Hover.webp",
-      "/images/Projects_Designs/Projects_Active.png",
       "/images/Projects_Designs/Projects_Active.webp",
-      "/images/Projects_Designs/Designs_Neutral.png",
+  
       "/images/Projects_Designs/Designs_Neutral.webp",
-      "/images/Projects_Designs/Designs_Hover.png",
       "/images/Projects_Designs/Designs_Hover.webp",
-      "/images/Projects_Designs/Designs_Active.png",
       "/images/Projects_Designs/Designs_Active.webp"
+  
     ];
+  
+  
+    /* =======================================================
+       Timing
+       ======================================================= */
   
     const MAX_WAIT = 4000;
+  
+    /*
+     * Prevents the loader from flashing away instantly
+     * when everything is already cached.
+     */
     const MIN_DISPLAY = 650;
   
+  
+    /* =======================================================
+       Messages
+       ======================================================= */
+  
     const messages = [
-      "Preparing the ocean...",
-      "Finding my little beans...",
-      "Gathering the good stuff...",
-      "Almost ready..."
+      "Please hold my bubble...",
+      "Oops, there goes another one.",
+      "Bean is working very hard.",
+      "Okay okay, almost there..."
     ];
+  
+  
+    /* =======================================================
+       State
+       ======================================================= */
   
     let completed = 0;
     let finished = false;
   
-    const startTime = performance.now();
+    const startTime =
+      performance.now();
   
-    document.body.classList.add("welcome-loading");
+  
+    /*
+     * Lets the rest of the site know that the welcome
+     * screen is currently covering the page.
+     */
+    document.body.classList.add(
+      "welcome-loading"
+    );
   
   
-    /* -------------------------------------------------------
+    /* =======================================================
        Progress
-       ------------------------------------------------------- */
+       ======================================================= */
   
     function updateProgress() {
-      const total = criticalImages.length;
   
-      const percent = Math.round(
-        (completed / total) * 100
-      );
+      const total =
+        criticalImages.length;
+  
+      const percent =
+        total === 0
+          ? 100
+          : Math.round(
+              (completed / total) * 100
+            );
+  
+  
+      /* -----------------------------------------------
+         Progress bar
+         ----------------------------------------------- */
   
       if (progressBar) {
-        progressBar.style.width = `${percent}%`;
+        progressBar.style.width =
+          `${percent}%`;
       }
   
+  
+      /* -----------------------------------------------
+         Percentage text
+         ----------------------------------------------- */
+  
       if (progressNumber) {
-        progressNumber.textContent = `${percent}%`;
+        progressNumber.textContent =
+          `${percent}%`;
       }
+  
+  
+      /* -----------------------------------------------
+         Accessibility
+         ----------------------------------------------- */
   
       if (progressContainer) {
         progressContainer.setAttribute(
@@ -99,147 +177,287 @@
         );
       }
   
-      if (message && percent < 100) {
-        const index = Math.min(
-          Math.floor((percent / 100) * messages.length),
-          messages.length - 1
-        );
   
-        message.textContent = messages[index];
+      /* -----------------------------------------------
+         Loading message
+         ----------------------------------------------- */
+  
+      if (
+        message &&
+        percent < 100 &&
+        messages.length
+      ) {
+  
+        const index =
+          Math.min(
+            Math.floor(
+              (percent / 100) *
+              messages.length
+            ),
+            messages.length - 1
+          );
+  
+        message.textContent =
+          messages[index];
       }
     }
   
   
-    /* -------------------------------------------------------
+    /* =======================================================
        Preload one image
-       ------------------------------------------------------- */
+       ======================================================= */
   
     function preloadImage(src) {
+  
       return new Promise((resolve) => {
-        const img = new Image();
+  
+        const img =
+          new Image();
   
         let done = false;
   
-        const finish = () => {
+  
+        function finish() {
+  
           if (done) return;
   
           done = true;
+  
           completed++;
   
           updateProgress();
   
           resolve();
-        };
+        }
+  
+  
+        /* -----------------------------------------------
+           Image successfully loaded
+           ----------------------------------------------- */
   
         img.onload = async () => {
+  
           /*
-           * decode() lets the browser finish decoding the image
-           * before we declare it ready, when supported.
+           * decode() waits for the browser to finish
+           * decoding the image where supported.
            */
-          if (typeof img.decode === "function") {
+          if (
+            typeof img.decode ===
+            "function"
+          ) {
+  
             try {
               await img.decode();
             } catch {
-              // Some image types/browsers may reject decode().
-              // The image has still successfully loaded.
+              /*
+               * Decode can fail even though the image
+               * loaded successfully. That's okay.
+               */
             }
           }
   
           finish();
         };
   
+  
+        /* -----------------------------------------------
+           Image failed
+           ----------------------------------------------- */
+  
         img.onerror = () => {
+  
           /*
-           * Don't let one broken image keep the website stuck
-           * behind the preloader.
+           * Don't let one missing image trap
+           * the entire website behind the loader.
            */
           finish();
         };
   
+  
+        /* -----------------------------------------------
+           Start loading
+           ----------------------------------------------- */
+  
         img.src = src;
   
-        /*
-         * Cached images can already be complete before onload
-         * fires in some situations.
-         */
+  
+        /* -----------------------------------------------
+           Cached image
+           ----------------------------------------------- */
+  
         if (img.complete) {
-          Promise.resolve()
-            .then(async () => {
-              if (typeof img.decode === "function") {
+  
+          Promise.resolve().then(
+            async () => {
+  
+              if (
+                typeof img.decode ===
+                "function"
+              ) {
+  
                 try {
                   await img.decode();
-                } catch {}
+                } catch {
+                  // Already handled by finish().
+                }
               }
   
               finish();
-            });
+            }
+          );
         }
       });
     }
   
   
-    /* -------------------------------------------------------
+    /* =======================================================
        Finish loader
-       ------------------------------------------------------- */
+       ======================================================= */
   
-    function finishLoader() {
+    function finishLoader({
+      timedOut = false
+    } = {}) {
+  
       if (finished) return;
   
       finished = true;
   
-      completed = criticalImages.length;
+  
+      /* -----------------------------------------------
+         Complete progress visually
+         ----------------------------------------------- */
+  
+      completed =
+        criticalImages.length;
   
       updateProgress();
   
+  
+      /* -----------------------------------------------
+         Final message
+         ----------------------------------------------- */
+  
       if (message) {
-        message.textContent = "Welcome 🌊";
+  
+        message.textContent =
+          timedOut
+            ? "Found everything I could — dive in! 🫧"
+            : "All clear — dive in! 🫧";
       }
   
+  
+      /* -----------------------------------------------
+         Keep loader on screen for minimum duration
+         ----------------------------------------------- */
+  
       const elapsed =
-        performance.now() - startTime;
+        performance.now() -
+        startTime;
   
       const remaining =
-        Math.max(0, MIN_DISPLAY - elapsed);
+        Math.max(
+          0,
+          MIN_DISPLAY - elapsed
+        );
+  
   
       setTimeout(() => {
-        loader.classList.add("fade-out");
   
+        /*
+         * Add the exit animation.
+         */
+        loader.classList.add(
+          "slide-up"
+        );
+  
+  
+        /*
+         * Stop blocking the page.
+         *
+         * The loader is still visually present
+         * during its 850ms exit animation.
+         */
         document.body.classList.remove(
           "welcome-loading"
         );
   
+  
+        /*
+         * Remove the loader after the animation.
+         */
         setTimeout(() => {
-          if (loader && loader.parentNode) {
-            loader.parentNode.removeChild(loader);
+  
+          if (
+            loader &&
+            loader.parentNode
+          ) {
+  
+            loader.parentNode.removeChild(
+              loader
+            );
           }
-        }, 550);
+  
+        }, 1450);
   
       }, remaining);
     }
   
   
-    /* -------------------------------------------------------
+    /* =======================================================
        Start
-       ------------------------------------------------------- */
+       ======================================================= */
   
     updateProgress();
   
+  
+    /*
+     * Start all image requests simultaneously.
+     */
     const preloadPromise =
       Promise.all(
-        criticalImages.map(preloadImage)
+        criticalImages.map(
+          preloadImage
+        )
       );
   
+  
+    /*
+     * Absolute safety timeout.
+     *
+     * The user will never be trapped on the
+     * preloader indefinitely.
+     */
     const timeoutPromise =
       new Promise((resolve) => {
-        setTimeout(resolve, MAX_WAIT);
+  
+        setTimeout(() => {
+  
+          resolve({
+            timedOut: true
+          });
+  
+        }, MAX_WAIT);
       });
   
   
+    /*
+     * Whichever happens first wins:
+     *
+     *   all images loaded
+     *          OR
+     *   4 second timeout
+     */
     Promise.race([
-      preloadPromise,
+      preloadPromise.then(() => ({
+        timedOut: false
+      })),
+  
       timeoutPromise
-    ]).then(() => {
-      finishLoader();
+  
+    ]).then((result) => {
+  
+      finishLoader(result);
+  
     });
   
   })();
