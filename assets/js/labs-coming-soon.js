@@ -115,24 +115,18 @@
     makeBubbles(150);
     resetScene(canvas);
 
-    // 1. One-time entrance animation
-    state.tl = gsap.timeline();
-    state.tl.from(beanSpeaker, {
-      duration: 1.2,
-      opacity: 0,
-      scale: 0.6,
-      y: 25,
-      ease: "back.out(1.5)",
-      onComplete: () => {
-        // 2. Start continuous floating loop seamlessly after entrance finishes
-        gsap.to(beanSpeaker, {
-          y: "-=10",
-          duration: 2,
-          ease: "sine.inOut",
-          repeat: -1,
-          yoyo: true
-        });
-      }
+    gsap.set(beanSpeaker, {
+      opacity: 1,
+      scale: 1,
+      y: 0
+    });
+    
+    gsap.to(beanSpeaker, {
+      y: "-=10",
+      duration: 2,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true
     });
 
     let resizeTimer;

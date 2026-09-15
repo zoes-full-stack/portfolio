@@ -11,7 +11,7 @@ page_scripts:
 <div class="art-toggle-wrapper">
   
   <!-- 1. Left: Projects Button -->
-  <button id="btn-projects" class="art-toggle-btn active" onclick="switchArtTab('projects')">
+  <button id="btn-projects" class="art-toggle-btn" onclick="switchArtTab('projects')">
     <div class="art-img projects-img"></div>
   </button>
   
@@ -22,7 +22,7 @@ page_scripts:
   </div>
   
   <!-- 3. Right: Designs Button -->
-  <button id="btn-designs" class="art-toggle-btn" onclick="switchArtTab('designs')">
+  <button id="btn-designs" class="art-toggle-btn active" onclick="switchArtTab('designs')">
     <div class="art-img designs-img"></div>
   </button>
 
@@ -31,7 +31,7 @@ page_scripts:
 <!-- ========================================== -->
 <!-- PROJECTS CONTENT (Visible by Default)      -->
 <!-- ========================================== -->
-<div id="content-projects" style="display: block;">
+<div id="content-projects" style="display: none;">
   <div class="projects" markdown="0">
     <p class="note"><strong>Tip:</strong> Click any card to view more details</p>
     {% include project-grid.html %}
@@ -51,7 +51,7 @@ page_scripts:
 <!-- ========================================== -->
 <!-- DESIGNS CONTENT (Hidden by Default)        -->
 <!-- ========================================== -->
-<div id="content-designs" style="display: none;">
+<div id="content-designs" style="display: block;">
   <div class="designs-row">
     <p class="note">Tap a card for fullscreen. Turn on Audio for videos with sound.</p>
     <div class="water-button" role="button" aria-pressed="false" tabindex="0">
