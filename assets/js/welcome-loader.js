@@ -103,8 +103,8 @@
   
     const messages = [
       "Please hold my bubble...",
-      "Oops, there goes another one.",
-      "Bean is working very hard.",
+      "Oops, there goes another one",
+      "Bean is working very hard",
       "Okay okay, almost there..."
     ];
   
